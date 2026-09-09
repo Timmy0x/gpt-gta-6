@@ -3,6 +3,7 @@ import { WorldBuilder, type AuthoringSink } from '../../src/world/authoring/Worl
 import type { ColliderRecord, StreamingStats, WorldDetail } from '../../src/world/ChunkResidency';
 import type { WorldManifest, ChunkPackage } from '../../src/world/packages';
 import surfaceManifest from '../../public/surfaces/manifest.json';
+import { batchStreetObjects } from '../../src/world/authoring/batchStreetObjects';
 
 declare global { interface Window { writeWorldAsset: (name:string,text:string,kind:'json'|'png')=>Promise<{bytes:number;sha256:string}>; } }
 export async function exportWorld() {
@@ -22,9 +23,13 @@ export async function exportWorld() {
   const world = new WorldBuilder({scene,shadows},sink);
   const seen = new Set(meshes.map(r=>r.mesh));
   for (const mesh of scene.meshes) if(mesh instanceof Mesh && mesh.isEnabled()&&!seen.has(mesh)) sink.registerMesh(mesh,'global',false);
+  const streetMeshes = meshes.filter(record => record.mesh.metadata?.streetObjectId).map(record => record.mesh);
+  const streetBatches = batchStreetObjects(streetMeshes, world.getAuthoringMetadata().streetObjects);
+  for (let i = meshes.length - 1; i >= 0; i--) if (streetMeshes.includes(meshes[i].mesh)) meshes.splice(i, 1);
+  for (const mesh of streetBatches) sink.registerMesh(mesh, 'detail', true);
   const usedMaterials = [...new Set(meshes.map(r=>r.mesh.material).filter(Boolean))] as Material[];
   usedMaterials.forEach((m,index)=>m.id=`material-${index.toString().padStart(3,'0')}`);
-  const manifest:WorldManifest={version:1,build:'authored-860409-v7-inner-city',seed:860409,format:'babylon-json+gzip',chunks:[],materials:[],colliders,...world.getAuthoringMetadata(),totals:{meshes:meshes.length,cpuGeometryBytes:0,compressedBytes:0,textureBytes:0}};
+  const manifest:WorldManifest={version:1,build:'authored-860409-v8-street-objects',seed:860409,format:'babylon-json+gzip',chunks:[],materials:[],colliders,...world.getAuthoringMetadata(),totals:{meshes:meshes.length,cpuGeometryBytes:0,compressedBytes:0,textureBytes:0}};
   const textures=new Map<string,string>();
   const photoTextures = new Set<string>();
   async function externalize(value:any):Promise<void>{
@@ -58,7 +63,7 @@ export async function exportWorld() {
   const groups=new Map<string,typeof meshes>();
   for(const record of meshes){
     const mesh=record.mesh;mesh.computeWorldMatrix(true);const b=mesh.getBoundingInfo().boundingBox;
-    const x=(b.minimumWorld.x+b.maximumWorld.x)/2,z=(b.minimumWorld.z+b.maximumWorld.z)/2;
+    const x=mesh.metadata?.streetAnchor?.[0] ?? (b.minimumWorld.x+b.maximumWorld.x)/2,z=mesh.metadata?.streetAnchor?.[2] ?? (b.minimumWorld.z+b.maximumWorld.z)/2;
     const id=record.detail==='global'?'global':`${Math.floor((x+72)/144)}_${Math.floor((z+72)/144)}_${record.detail}`;
     const group=groups.get(id)||[];group.push(record);groups.set(id,group);
   }

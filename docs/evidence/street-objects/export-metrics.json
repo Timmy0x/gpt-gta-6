@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-09",
+  "worldBuild": "authored-860409-v8-street-objects",
+  "manifestSha256": "e1b2b23b25a33b11a701c34f120cdbe683ddb70fd7c429e7bd291d92495490af",
+  "previousWorldBuild": "authored-860409-v7-inner-city",
+  "previous": {
+    "meshes": 1970,
+    "cpuGeometryBytes": 75149512,
+    "compressedBytes": 17740840,
+    "textureBytes": 5387386
+  },
+  "current": {
+    "meshes": 1920,
+    "cpuGeometryBytes": 75149512,
+    "compressedBytes": 17456841,
+    "textureBytes": 5387386
+  },
+  "objects": {
+    "lamppost": 264,
+    "palm": 291
+  },
+  "physicalChildren": 4839,
+  "batches": 350,
+  "source": "Existing authored lamp and palm geometry from WorldBuilder; same source vertices rebatched by chunk/material, no downloaded or generated replacement art. Project decisions, not measured Rockstar specifications."
+}

@@ -1,0 +1,10 @@
+{
+  "base": ".local-builds/street-v16-source",
+  "candidate": ".local-builds/street-v17-source",
+  "reason": "Native query exclusion fix for default single-hit collector hiding thin physical targets behind the own character capsule. Optional cameraOptions signature from root is preserved; callers in this old-weapons cohort retain the default.",
+  "overlay": {
+    "src/gameplay/combat/queries.ts": "d1ffbda06be272f0efdb6a3c660cad3ded3f643e62ee2ff7eb29ebf053d56089",
+    "tests/combat-query-exclusions.test.ts": "f0c0c324971693a6fc503dde30aca23a74fedf5dc5cf6e36b5b559c233661a0a",
+    "tests/street-objects-audit.mjs": "c7cc7c309d0c0ab5514b48172ccd7151c77e9487cbaeeccdfd8255d8ba3d3f1f"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "base": ".local-builds/coastal-v15-source",
+  "candidate": ".local-builds/street-v16-source",
+  "overlay": {
+    "src/world/StreetObjectRecords.ts": "97f24efa98542027c20c4514257e99f763f6d977080cb28c2b15206e9f8b7f85",
+    "src/world/StreetObjectSystem.ts": "d39846a3ad8b8a37194456f56c0cf7a0ed9b4e464cd1220deb5abef1b2f9ded4",
+    "src/world/StreetObjectGeometry.ts": "36ff12c5de468aeb258f2c09b40f118a5eac80968f1458f7392a3c2b69b7345c",
+    "src/world/authoring/StreetObjectAuthoring.ts": "a67997c8240d391862fe68517c3da4dfe19455e5891260c07c9ea220b8b08e03",
+    "src/world/authoring/batchStreetObjects.ts": "8b7ece7b4a93aa3b3154dd3f8928f239367d09a73bc09b9e939269bed11d5947",
+    "src/world/authoring/WorldBuilder.ts": "463d1b73bdeb5e0bd2c07222b238e3dd11c1106e8524a1ad4e9434aa9ee3f793",
+    "scripts/world/export-browser.ts": "e5626b15acb85d7e415c262465cbf12ba267a7ce5d0fa570e3c79d05ebe2230f",
+    "src/world/packages.ts": "fb8e7f7db076d60312973a43eac642f8a046de105d894fa79b8cd21ca0c5c85c",
+    "src/world/PackageResidency.ts": "2c85e4630ca061e6b42536d3d422bb2817d6e33a225f039ae7b300e9e8ede973",
+    "src/world/World.ts": "4e2a67b279b71c2fdddcb9209e6a276d5331464367358275d59da5dd66cfb239",
+    "src/core/contracts.ts": "ff2b8c36899340fc452d159ddc33c49242cad37111d6256c382eda0918989028",
+    "src/gameplay/Damage.ts": "7cc2e4b41bfd4f50007a17d112b68dc39820e109920901e9f2fd8ded9f15fe79",
+    "tests/street-objects.test.ts": "86f5033a02cea72b3d58dd6507282399ab84eef641dea92f0ed1febcc775c2cd",
+    "tests/street-object-export.test.ts": "0bc7dd1bc992ff73d6f085c9bad3f69fbc1a05b0653a6a71e4bcdbd6ce3afbd2",
+    "src/main.ts": "049e3d15d84c74c22e5e03ff8ef35a9da836c3d7f88e39d2b478127ab70ac510",
+    "src/gameplay/Combat.ts": "c77fbb71c86c76b0172d7d8f6303e1ec9f3427acb349f143dc8d0105c06fa8ab",
+    "src/core/Persistence.ts": "aba12bfab615f76e1cb0c3d69f40f2d71d66c1f47dcd99d872666b1cc3439d74",
+    "public/world/manifest.json": "e1b2b23b25a33b11a701c34f120cdbe683ddb70fd7c429e7bd291d92495490af"
+  },
+  "exclusions": [
+    "later shared-source character/entry animation edits",
+    "in-flight weapon inventory, wheel, handling and catalog changes"
+  ],
+  "auditHarness": {
+    "tests/street-objects-audit.mjs": "16efee30e71e7b290ee593281351b881724781a29de7b2f52f3f2f8e0feca966"
+  }
+}

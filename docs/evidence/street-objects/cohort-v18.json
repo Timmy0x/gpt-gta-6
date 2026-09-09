@@ -1,0 +1,11 @@
+{
+  "base": ".local-builds/street-v17-source",
+  "candidate": ".local-builds/street-v18-source",
+  "reason": "Prioritize fallen-body retirement before static eviction; preserve last supported pose. Normal audit reprojects precise map pins after zoom and captures actual driving samples.",
+  "overlay": {
+    "src/world/StreetObjectSystem.ts": "f56be003cf56a901fe94f51150025379da50fdd19f0823acdbc582387805c396",
+    "tests/street-objects.test.ts": "0b476c49ab8fabe1cee872602adb263378f06ce884745794dff53b357d98620a",
+    "tests/street-object-export.test.ts": "92ccfd9bbc0cdf648ae5020f2d6c34acbea77e5fe3f3f8a7ef436afe05c776d4",
+    "tests/street-objects-audit.mjs": "42364a6dd5dd7431b9aa22f6556b093bbe2dcd88891150541879be1694b759a5"
+  }
+}

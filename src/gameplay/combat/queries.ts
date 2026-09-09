@@ -5,6 +5,7 @@ import {
   Vector3,
   type PhysicsBody,
   type PhysicsEngineV2,
+  type HavokPlugin,
   type Scene,
   type TransformNode,
 } from "@babylonjs/core";
@@ -15,6 +16,28 @@ export interface CombatHit {
   distance: number;
   mesh: AbstractMesh | null;
   body: PhysicsBody | null;
+}
+
+const collectorCapacity = new WeakMap<HavokPlugin, number>();
+/** Filtering after Havok's default single hit would hide targets behind an excluded capsule. */
+function physicsHits(physics: PhysicsEngineV2, from: Vector3, to: Vector3, options: QueryExclusions): PhysicsRaycastResult[] {
+  const ignored = physics.getBodies().filter(body => !body.isDisposed && (
+    options.bodies?.has(body) || excluded(body.transformNode, options) || options.bodyFilter?.(body) === false
+  ));
+  const query = { shouldHitTriggers: false, ignoreBody: ignored[0] };
+  if (ignored.length <= 1) return [physics.raycast(from, to, query)];
+  // Multiple exclusions can share a shape with visible bodies. Collect native
+  // hits rather than changing shared shape filters during the query.
+  const plugin = physics.getPhysicsPlugin() as HavokPlugin;
+  let capacity = collectorCapacity.get(plugin) ?? 32;
+  if (!collectorCapacity.has(plugin)) { plugin.setMaxQueryCollectorHits(capacity); collectorCapacity.set(plugin, capacity); }
+  const hits: PhysicsRaycastResult[] = [];
+  while (true) {
+    hits.length = 0; physics.raycastToRef(from, to, hits, query);
+    if (hits.length < capacity) return hits;
+    // A full collector may have omitted a valid target behind excluded bodies.
+    capacity *= 2; plugin.setMaxQueryCollectorHits(capacity); collectorCapacity.set(plugin, capacity);
+  }
 }
 export interface QueryExclusions {
   roots?: readonly TransformNode[];
@@ -68,8 +91,7 @@ export function castSegment(
       : null;
   const physics = scene.getPhysicsEngine() as PhysicsEngineV2 | null;
   if (physics) {
-    const hits: PhysicsRaycastResult[] = [];
-    physics.raycastToRef(from, to, hits, { shouldHitTriggers: false });
+    const hits = physicsHits(physics, from, to, options);
     for (const hit of hits) {
       const body = hit.body;
       if (
@@ -125,9 +147,10 @@ export function muzzleShot(
   muzzle: Vector3,
   range: number,
   options: QueryExclusions = {},
+  cameraOptions: QueryExclusions = options,
 ): { target: Vector3; hit: CombatHit | null; end: Vector3 } {
   const far = cameraOrigin.add(cameraDirection.normalizeToNew().scale(range));
-  const aimed = castSegment(scene, cameraOrigin, far, options),
+  const aimed = castSegment(scene, cameraOrigin, far, cameraOptions),
     target = aimed?.point ?? far;
   const hit = castSegment(scene, muzzle, target, options);
   return { target, hit: hit ?? aimed, end: hit?.point ?? target };

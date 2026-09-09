@@ -26,6 +26,7 @@ import {
 } from "./combat/materials";
 import { blastFalloff, obstructed } from "./combat/queries";
 import { FireEffects } from "./combat/FireEffects";
+import type { StreetObjectState } from "../world/StreetObjectSystem";
 export type PropKind = "street" | "fence" | "gate";
 export interface SerializableProp extends SavedProp {
   kind?: PropKind;
@@ -64,6 +65,10 @@ export class DamageSystem {
     seedStreetProps = true,
   ) {
     this.fire = new FireEffects(scene);
+    if (world.streetObjects) {
+      world.streetObjects.onBreak = position => this.onBreak(position);
+      world.streetObjects.onFire = (id, position) => { if (position) this.fire.set(id, position); else this.fire.remove(id); };
+    }
     if (seedStreetProps)
       for (let i = 0; i < 18; i++)
         this.spawn(
@@ -573,6 +578,7 @@ export class DamageSystem {
     return parts;
   }
   explosion(position: Vector3, power = 240): void {
+    this.world.streetObjects?.explosion(position, power);
     // Resolve every exposure before destroying cover; one blast cannot propagate through a wall it just broke.
     const exposed = this.props.filter(
       (prop) =>
@@ -588,6 +594,7 @@ export class DamageSystem {
       .filter(
         (body) =>
           !body.isDisposed &&
+          !body.transformNode.metadata?.streetObject &&
           body.getMotionType() === PhysicsMotionType.DYNAMIC,
       )
       .map((body) => ({
@@ -635,7 +642,7 @@ export class DamageSystem {
     this.fire.remove(prop.id);
   }
   heatAt(position: Vector3): number {
-    let heat = 0;
+    let heat = this.world.streetObjects?.heatAt(position) ?? 0;
     for (const prop of this.props)
       if (prop.burning > 0) {
         const d = Vector3.Distance(prop.mesh.position, position);
@@ -653,6 +660,7 @@ export class DamageSystem {
     return heat;
   }
   update(dt: number, weather: string): void {
+    this.world.streetObjects?.update(dt, weather);
     const pending = this.pendingHits.splice(0);
     for (const hit of pending)
       this.hit(hit.prop, hit.amount, hit.point, "impact");
@@ -678,6 +686,9 @@ export class DamageSystem {
     item.physics.dispose();
     item.mesh.dispose();
     this.debris.splice(index, 1);
+  }
+  hitStreetObject(object: StreetObjectState, amount: number, point: Vector3, kind: DamageKind, direction?: Vector3): void {
+    this.world.streetObjects?.hit(object, amount, point, kind, direction);
   }
   private removeObstacle(prop: Prop): void {
     if (!prop.obstacle) return;

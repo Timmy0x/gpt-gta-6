@@ -1,0 +1,29 @@
+✔ production export gives every lamp and palm disjoint exact geometry ranges inside shared native chunk batches (652.342917ms)
+ℹ {"objects":555,"batches":350,"children":4839,"manifestBytes":3153513,"manifestGzipBytes":380972,"meshes":1920,"cpuGeometryBytes":75149512,"compressedBytes":17456841,"textureBytes":5387386}
+BJS - [22:24:24]: Babylon.js v9.25.0 - Null engine
+✔ production native packages extract the actual lamp, preserve damage across travel, and release all physics/render resources (2089.645834ms)
+ℹ {"initial":{"objects":555,"residentBodies":167,"fallen":0,"colliderLoads":167,"colliderDisposals":0,"batches":42,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":1169568,"meshes":653,"geometries":486,"bodies":271},"afterReload":{"objects":555,"residentBodies":238,"fallen":1,"colliderLoads":643,"colliderDisposals":405,"batches":91,"extractedMeshes":2,"extractedGeometryBytes":6096,"indexBackupBytes":1810752},"simulatedSteps":360,"nullEnginePhysicsAndDamageMs":23.2329579999996,"savedBytes":359,"lamp":"street-object/lamppost/-9.000/-18.000"}
+BJS - [22:24:23]: Babylon.js v9.25.0 - Null engine
+✔ intact street objects keep shared batches while native collision stops a body at the actual lamp (64.276292ms)
+ℹ {"objects":3,"residentBodies":3,"fallen":0,"colliderLoads":3,"colliderDisposals":0,"batches":3,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":4176}
+BJS - [22:24:23]: Babylon.js v9.25.0 - Null engine
+✔ projectile destruction extracts the same visible object, clears only its intact spans, and preserves fall/light/nav state through reload (30.715042ms)
+ℹ Physical fallen quaternion 0.3643687665462494,0.60764080286026,-0.6024781465530396,0.36746177077293396; compact saved delta 349 bytes.
+BJS - [22:24:23]: Babylon.js v9.25.0 - Null engine
+✔ actual vehicle impact breaks an authored lamppost and blast/fire affect a palm through the shared damage path (123.298958ms)
+✔ street-object save validation rejects malformed or duplicated authored deltas (0.215542ms)
+BJS - [22:24:23]: Babylon.js v9.25.0 - Null engine
+✔ solid cover blocks blast and fire exposure; a burning fallen palm keeps pose and heat across save/load, then rain extinguishes it (27.622292ms)
+BJS - [22:24:23]: Babylon.js v9.25.0 - Null engine
+✔ eight real geometry eviction/reload cycles retain damage without duplicate meshes or leaking native shapes (18.885833ms)
+ℹ {"cycles":8,"meshes":9,"geometry":6,"bodies":4,"shapes":6,"objects":3,"residentBodies":3,"fallen":1,"colliderLoads":27,"colliderDisposals":24,"batches":3,"extractedMeshes":2,"extractedGeometryBytes":6240,"indexBackupBytes":4176}
+BJS - [22:24:23]: Babylon.js v9.25.0 - Null engine
+✔ fallen bodies unload before the static cleanup queue can drop their streamed support (19.285958ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5705.497708

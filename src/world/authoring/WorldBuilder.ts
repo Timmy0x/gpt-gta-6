@@ -12,6 +12,7 @@ import {
 } from "@babylonjs/core";
 import { COAST, seabedSlabs } from "../Coast";
 import { mergeAuthoredBatch } from './mergeBatch';
+import { StreetObjectAuthoring } from './StreetObjectAuthoring';
 import { applyMetreUVs } from './metreUVs';
 import type { Material, Scene } from "@babylonjs/core";
 import type {
@@ -80,6 +81,7 @@ export class WorldBuilder implements WorldContract {
   private readonly textures: Texture[] = [];
   private readonly batches = new Map<string, Batch>();
   private readonly residency: AuthoringSink;
+  private readonly authoredStreetObjects: StreetObjectAuthoring;
   private colliderSequence = 0;
   private readonly looseMeshes: Mesh[] = [];
   private readonly litMaterials: {
@@ -105,6 +107,7 @@ export class WorldBuilder implements WorldContract {
     this.ctx = ctx;
     this.scene = ctx.scene;
     this.residency = sink;
+    this.authoredStreetObjects = new StreetObjectAuthoring(sink);
     this.boxTemplate = MeshBuilder.CreateBox(
       "world/box-template",
       { size: 1 },
@@ -293,6 +296,7 @@ export class WorldBuilder implements WorldContract {
     detail: Detail = "detail",
     casts = false,
   ): Mesh {
+    if (this.authoredStreetObjects.add(mesh, material)) return mesh;
     if (
       [
         "urban-ground",
@@ -1797,6 +1801,7 @@ export class WorldBuilder implements WorldContract {
   }
 
   private streetLamp(x: number, z: number, beach = false): void {
+    this.authoredStreetObjects.begin("lamppost", x, z);
     const metal = this.mat("lamp-bronze", "#596461", 0.54, 0.56);
     this.cylinder("lamp-base", x, 0.46, z, 0.38, 0.62, metal, 0.23);
     this.cylinder("lamp-post", x, 3.76, z, 0.15, 6.9, metal, 0.105);
@@ -1829,6 +1834,7 @@ export class WorldBuilder implements WorldContract {
       0.31,
       this.lightMat("street-light", "#ffdfa0", 2.2),
     );
+    this.authoredStreetObjects.end();
   }
 
   private trafficSignal(x: number, z: number, rotation: number): void {
@@ -2041,6 +2047,7 @@ export class WorldBuilder implements WorldContract {
   }
 
   private palm(x: number, z: number, height: number): void {
+    this.authoredStreetObjects.begin("palm", x, z);
     const trunk = this.mat("palm-trunk", "#92836a");
     const foliage = this.mat("palm-fronds", "#507b56", 0.83);
     const young = this.mat("palm-frond-light", "#81955d", 0.87);
@@ -2110,6 +2117,7 @@ export class WorldBuilder implements WorldContract {
       );
       this.queue(coconut, this.mat("coconut", "#796649"));
     }
+    this.authoredStreetObjects.end();
   }
 
   private buildBeach(): void {
@@ -3468,6 +3476,7 @@ export class WorldBuilder implements WorldContract {
       litMaterials: this.litMaterials.map(({material,color,intensity}) => ({id:material.id,color:color.asArray(),intensity})),
       waterMaterial: this.waterMaterial.id, asphaltMaterial: this.asphalt.id,
       foam: this.foamMeshes.map(mesh => mesh.id),
+      streetObjects: this.authoredStreetObjects.records,
     };
   }
 

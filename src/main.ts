@@ -275,6 +275,7 @@ async function boot() {
         destroyed: [...damage.destroyed],
         props: damage.serialize(),
         casualties: population.serializeCasualties(),
+        streetObjects: world.streetObjects.serialize(),
         civilians: population.pedestrians
           .filter((p) => p.creative)
           .map((p) => ({
@@ -312,6 +313,7 @@ async function boot() {
     if (s.vehicles.filter(v => v.kind === "concept").length > DETAILED_CAR_LIMIT) { ui.toast("Saved sandbox exceeds the six detailed-car limit."); return false; }
     if (!await prepareVehicleModels(s.vehicles.map(v => v.kind as VehicleKind))) return false;
     if (!await prepareTravel(new Vector3(s.player.x, s.player.y, s.player.z))) return false;
+    world.streetObjects.restore(s.streetObjects ?? []);
     combat.reactions.reset();
     player.exit(true);
     for (const v of [...vehicles.list])

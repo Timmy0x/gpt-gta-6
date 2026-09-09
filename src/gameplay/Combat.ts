@@ -292,6 +292,8 @@ export class Combat {
     } else if (meta?.officer) this.population.hurtOfficer(meta.officer, amount, kind);
     else if (meta?.prop)
       this.damage.hit(meta.prop, amount, hit.point, kind, direction);
+    else if (meta?.streetObject)
+      this.damage.hitStreetObject(meta.streetObject, amount, hit.point, kind, direction);
     else {
       const vehicle = this.vehicles.list.find(
         (v) =>

@@ -1,4 +1,6 @@
 import type { ColliderRecord, BoundsXZ, StreamingStats, WorldDetail } from './ChunkResidency';
+import type { StreetObjectDefinition } from './StreetObjectRecords';
+import type { StreetObjects } from './StreetObjectSystem';
 export interface ChunkPackage {
   id: string; url: string; bounds: BoundsXZ; detail: WorldDetail;
   meshes: number; vertices: number; cpuBytes: number; compressedBytes: number;
@@ -9,11 +11,13 @@ export interface WorldManifest {
   version: 1; build: string; seed: number; format: 'babylon-json+gzip';
   chunks: ChunkPackage[]; materials: MaterialPackage[];
   colliders: ColliderRecord[];
+  streetObjects?: StreetObjectDefinition[];
   lights: number[][]; litMaterials: {id:string;color:number[];intensity:number}[];
   waterMaterial: string; asphaltMaterial: string; foam: string[];
   totals: { meshes:number; cpuGeometryBytes:number; compressedBytes:number; textureBytes:number; };
 }
 export interface NetworkStreamingStats extends StreamingStats {
+  streetObjects?: ReturnType<StreetObjects['getStats']>;
   loadedPackages: number; totalPackages: number; pendingPackages: number;
   failedPackages: number; retries: number; requests: number; fetchedBytes: number;
   residentMaterials: number; totalCpuGeometryBytes: number; ready: boolean;

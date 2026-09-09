@@ -44,6 +44,7 @@ export interface RoadNode {
   next: number[];
 }
 export interface WorldContract {
+  readonly streetObjects?: import("../world/StreetObjectSystem").StreetObjects;
   spawn: Vector3;
   obstacles: Obstacle[];
   roads: RoadNode[];

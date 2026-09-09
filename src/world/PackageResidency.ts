@@ -1,4 +1,4 @@
-import { LoadAssetContainerAsync, Material, Mesh, PBRMaterial, Vector3, type AssetContainer, type Scene, type ShadowGenerator } from '@babylonjs/core';
+import { LoadAssetContainerAsync, Material, Mesh, PBRMaterial, Vector3, type AbstractMesh, type AssetContainer, type Scene, type ShadowGenerator } from '@babylonjs/core';
 import '@babylonjs/core/Loading/Plugins/babylonFileLoader';
 import { distanceToBounds } from './ChunkResidency';
 import { PACKAGE_LIMITS, type ChunkPackage, type WorldManifest } from './packages';
@@ -7,6 +7,8 @@ type Fetcher = typeof fetch;
 type PackageState = { asset:ChunkPackage; container?:AssetContainer; promise?:Promise<void>; attempts:number; retryAt:number; error:string; pinned:number; materials:string[]; };
 type MaterialState = { refs:number; promise:Promise<Material>; material?:Material; };
 export class PackageResidency {
+  onMeshesLoaded?: (meshes: readonly AbstractMesh[]) => void;
+  onMeshesUnloading?: (meshes: readonly AbstractMesh[]) => void;
   private readonly states = new Map<string,PackageState>();
   private readonly materialStates = new Map<string,MaterialState>();
   private position = Vector3.Zero();
@@ -87,8 +89,10 @@ export class PackageResidency {
         }
         container.addAllToScene();
         for(const mesh of container.meshes){mesh.isPickable=false;mesh.receiveShadows=true;if(mesh.metadata?.worldCasts)this.shadows.addShadowCaster(mesh,false);if(mesh.name!=='Atlantic Ocean'&&!mesh.name.startsWith('shore-break'))mesh.freezeWorldMatrix();}
+        this.onMeshesLoaded?.(container.meshes);
         state.container=container;state.materials=acquired;state.attempts=0;state.retryAt=0;state.error='';this.loaded++;this.meshLoads+=state.asset.meshes;
       }catch(error){
+        if(container)this.onMeshesUnloading?.(container.meshes);
         container?.dispose();for(const id of acquired)this.releaseMaterial(id);
         state.attempts++;state.error=error instanceof Error?error.message:String(error);this.lastError=state.error;
         state.retryAt=Date.now()+Math.min(PACKAGE_LIMITS.maxRetryMs,PACKAGE_LIMITS.retryBaseMs*2**Math.min(6,state.attempts-1));
@@ -99,6 +103,7 @@ export class PackageResidency {
   }
   private release(state:PackageState){
     if(!state.container)return;
+    this.onMeshesUnloading?.(state.container.meshes);
     for(const mesh of state.container.meshes)if(mesh.metadata?.worldCasts)this.shadows.removeShadowCaster(mesh,false);
     state.container.dispose();state.container=undefined;
     for(const id of state.materials)this.releaseMaterial(id);state.materials=[];

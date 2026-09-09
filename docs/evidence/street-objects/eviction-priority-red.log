@@ -1,0 +1,26 @@
+BJS - [22:25:45]: Babylon.js v9.25.0 - Null engine
+✖ fallen bodies unload before the static cleanup queue can drop their streamed support (57.756708ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2235.050291
+
+✖ failing tests:
+
+test at .local-builds/street-eviction-repro/tests/street-objects.test.ts:1:12416
+✖ fallen bodies unload before the static cleanup queue can drop their streamed support (57.756708ms)
+  AssertionError [ERR_ASSERTION]: dynamic fallen object has priority over the24 static-body eviction budget
+      at TestContext.<anonymous> (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/street-eviction-repro/tests/street-objects.test.ts:186:10)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

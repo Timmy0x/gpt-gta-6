@@ -1,0 +1,26 @@
+BJS - [22:17:31]: Babylon.js v9.25.0 - Null engine
+✔ normal reticle ray ignores its real character capsule before native collection and still stops at a thin pole or close cover (40.61225ms)
+BJS - [22:17:31]: Babylon.js v9.25.0 - Null engine
+✔ many excluded bodies cannot saturate the collector or hide an allowed body sharing their shape (11.691042ms)
+BJS - [22:17:31]: Babylon.js v9.25.0 - Null engine
+✔ intact street objects keep shared batches while native collision stops a body at the actual lamp (59.603333ms)
+ℹ {"objects":3,"residentBodies":3,"fallen":0,"colliderLoads":3,"colliderDisposals":0,"batches":3,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":4176}
+BJS - [22:17:31]: Babylon.js v9.25.0 - Null engine
+✔ projectile destruction extracts the same visible object, clears only its intact spans, and preserves fall/light/nav state through reload (26.345917ms)
+ℹ Physical fallen quaternion 0.3643687665462494,0.60764080286026,-0.6024781465530396,0.36746177077293396; compact saved delta 349 bytes.
+BJS - [22:17:31]: Babylon.js v9.25.0 - Null engine
+✔ actual vehicle impact breaks an authored lamppost and blast/fire affect a palm through the shared damage path (99.871ms)
+✔ street-object save validation rejects malformed or duplicated authored deltas (0.258916ms)
+BJS - [22:17:31]: Babylon.js v9.25.0 - Null engine
+✔ solid cover blocks blast and fire exposure; a burning fallen palm keeps pose and heat across save/load, then rain extinguishes it (24.676542ms)
+BJS - [22:17:31]: Babylon.js v9.25.0 - Null engine
+✔ eight real geometry eviction/reload cycles retain damage without duplicate meshes or leaking native shapes (24.052917ms)
+ℹ {"cycles":8,"meshes":9,"geometry":6,"bodies":4,"shapes":6,"objects":3,"residentBodies":3,"fallen":1,"colliderLoads":27,"colliderDisposals":24,"batches":3,"extractedMeshes":2,"extractedGeometryBytes":6240,"indexBackupBytes":4176}
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2531.007833

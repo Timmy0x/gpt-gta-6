@@ -1,0 +1,7 @@
+{"browser":"152.0.7977.83","pid":81752,"backend":"webgpu","origin":"http://127.0.0.1:4207"}
+{"label":"central-lamp-intact","player":[-34,1.0499926754832267,-55],"vehicle":null,"fallen":[],"stats":{"objects":555,"residentBodies":222,"fallen":0,"colliderLoads":308,"colliderDisposals":86,"batches":133,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":2480544}}
+{"target":"street-object/lamppost/-9.000/-18.000","shot":0,"health":140}
+{"target":"street-object/lamppost/-9.000/-18.000","shot":1,"health":140}
+{"target":"street-object/lamppost/-9.000/-18.000","shot":2,"health":140}
+{"target":"street-object/lamppost/-9.000/-18.000","shot":3,"health":140}
+{"checks":2,"errors":["AssertionError [ERR_ASSERTION]: ordinary muzzle hits route into the authored object\n    at shootObject (file:///Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/street-v16-source/tests/street-objects-audit.mjs:60:28)\n    at async file:///Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/street-v16-source/tests/street-objects-audit.mjs:86:71"],"warnings":[]}
