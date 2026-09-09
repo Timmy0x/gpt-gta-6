@@ -65,6 +65,13 @@ test('headlight budget stays fixed, broken lenses extinguish beams and brake/sir
     f.system.equipment.update(0.05, cars, Vector3.Zero());
     assert.equal(f.system.equipment.beams.length, 4);
     assert.equal(f.system.equipment.beams.filter(l => l.isEnabled()).length, 4);
+    cars[11].occupied = true;
+    f.system.equipment.update(0.05, cars, Vector3.Zero());
+    assert.ok(f.system.equipment.beams[0].position.x > 60, 'occupied vehicle keeps its beams when other cars are nearer the camera');
+    cars[11].root.setEnabled(false);
+    f.system.equipment.update(0.05, cars, Vector3.Zero());
+    assert.ok(f.system.equipment.beams[0].position.x < 10, 'hidden vehicles cannot occupy the beam pool');
+    cars[11].occupied = false; cars[11].root.setEnabled(true);
     f.system.equipment.update(0.05, [car], Vector3.Zero());
     assert.equal(f.system.equipment.beams.filter(l => l.isEnabled()).length, 2);
     const front = car.model.lights.find(m => m.name.startsWith('headlight'))!;

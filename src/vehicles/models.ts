@@ -11,6 +11,7 @@ import {
 } from "@babylonjs/core";
 import type { BuildContext, VehicleKind } from "../core/contracts";
 import { VEHICLE_TUNING } from "./handling";
+import type { LatticeDeformation } from "./LatticeDeformation";
 
 export interface WheelVisual {
   pivot: TransformNode;
@@ -19,6 +20,8 @@ export interface WheelVisual {
   local: Vector3;
   front: boolean;
   damaged: boolean;
+  /** Imported wheels rotate the complete tire/rim/disc hierarchy in this neutral axle frame. */
+  rolling?: TransformNode;
 }
 export interface VehicleModel {
   root: Mesh;
@@ -30,6 +33,8 @@ export interface VehicleModel {
   doors: DoorVisual[];
   rotor?: TransformNode;
   materials: PBRMaterial[];
+  deformation?: LatticeDeformation;
+  seat?: Vector3;
 }
 export interface DoorVisual {
   /** Geometry is offset behind this front hinge; detached copies retain their actual shape. */

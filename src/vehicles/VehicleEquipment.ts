@@ -42,8 +42,8 @@ export class VehicleEquipment {
         }
       }
     }
-    const candidates = vehicles.filter(v => v.headlights && v.health > 0 && Vector3.DistanceSquared(v.root.position, focus) < 110 ** 2)
-      .sort((a, b) => Vector3.DistanceSquared(a.root.position, focus) - Vector3.DistanceSquared(b.root.position, focus));
+    const candidates = vehicles.filter(v => v.root.isEnabled() && v.headlights && v.health > 0 && Vector3.DistanceSquared(v.root.position, focus) < 110 ** 2)
+      .sort((a, b) => Number(b.occupied) - Number(a.occupied) || Vector3.DistanceSquared(a.root.position, focus) - Vector3.DistanceSquared(b.root.position, focus));
     let slot = 0;
     for (const v of candidates) {
       for (const lamp of v.model.lights.filter(m => m.name.startsWith("headlight-") && m.isEnabled())) {

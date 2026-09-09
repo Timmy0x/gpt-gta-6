@@ -1,5 +1,6 @@
 import type { VehicleKind } from "../core/contracts";
 import { VEHICLE_TUNING } from "./handling";
+import { DEFORMATION_COORDINATES } from "./LatticeDeformation";
 
 export type VectorTuple = [number, number, number];
 export type QuaternionTuple = [number, number, number, number];
@@ -13,6 +14,8 @@ export interface VehicleDamageState {
   lightsEnabled: boolean[];
   bumpersEnabled: boolean[];
   doors?: { enabled: boolean; angle: number }[];
+  /** Detailed models retain a bounded lattice instead of serializing dense mesh vertices. */
+  deformation?: number[];
 }
 
 /** Flat pose fields intentionally retain compatibility with the original sandbox save format. */
@@ -205,6 +208,10 @@ export function validateVehicleSnapshot(
         if (angle < 0) throw new TypeError("Invalid vehicle door angle");
         return { enabled: entry.enabled, angle };
       });
+    }
+    if (damage.deformation !== undefined) {
+      if (!Array.isArray(damage.deformation) || damage.deformation.length !== DEFORMATION_COORDINATES) throw new TypeError("Invalid vehicle deformation lattice");
+      out.damage.deformation = damage.deformation.map(n => finite(n, "deformation offset", 0.651));
     }
   }
   return out;

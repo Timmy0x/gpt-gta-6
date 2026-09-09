@@ -808,11 +808,11 @@ export class Character {
   }
 
   /** Authored overlays on the same skin rig; call after locomotion animation. */
-  pose(kind: "seated" | "mount" | "climb" | "swim" | "hit", phase = 1, seating: "low" | "upright" | "rider" = "upright"): void {
+  pose(kind: "seated" | "mount" | "climb" | "swim" | "hit", phase = 1, seating: "low" | "upright" | "rider" | "reclined" = "upright"): void {
     const seated = kind === "seated" || kind === "mount";
     const amount = kind === "mount" ? Math.max(0, Math.min(1, phase)) : 1;
     if (seated) {
-      const rider = seating === "rider", thigh = rider ? -0.85 : -1.6, calf = rider ? 1.95 : seating === "low" ? 0.25 : 1.15;
+      const rider = seating === "rider", reclined = seating === "reclined", thigh = rider ? -0.85 : reclined ? -1.75 : -1.6, calf = rider ? 1.95 : seating === "low" || reclined ? 0.25 : 1.15;
       this.rotate("leftThigh", thigh * amount, 0, rider ? -0.32 * amount : 0);
       this.rotate("rightThigh", thigh * amount, 0, rider ? 0.32 * amount : 0);
       this.rotate("leftCalf", calf * amount);
@@ -823,7 +823,7 @@ export class Character {
       this.rotate("rightArm", (rider ? -1.1 : -1.35) * amount);
       this.rotate("leftForearm", (rider ? -0.3 : -0.1) * amount);
       this.rotate("rightForearm", (rider ? -0.3 : -0.1) * amount);
-      this.rotate("spine", 0.1 * amount);
+      this.rotate("spine", (reclined ? -0.38 : 0.1) * amount);
     } else if (kind === "climb") {
       this.rotate("leftArm", -2.65);
       this.rotate("rightArm", -2.65);

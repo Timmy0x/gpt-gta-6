@@ -326,3 +326,12 @@ This addendum updates the named subsets; it does not mark the broader goal or an
 | Licensed detailed vehicle candidate | Debranded Car Concept GLB prepared with reproducible script, attribution, payload removal, exact bounds and CPU Babylon import verification | Not yet drivable; no GPU visual/LOD/performance, wheel/seat, damage or component adapter acceptance |
 
 See `verification-facility-checkpoint.md`, `facility-design.md`, `geodata.md` and `car-concept-adapter.md`. Prior ledger phrases such as “no network asset partition/loading” or “door opening missing” describe the second checkpoint and are superseded only to the extent documented here.
+
+## Detailed-car checkpoint addendum
+
+| Subset | Verified behavior | Remaining gap |
+|---|---|---|
+| Aster Concept licensed vehicle | Lazy verified GLB, detailed cabin/PBR body and wheels, Havok driving, hinged and detachable components, damage lattice, compact save/load, fresh continuation and paid paint; both renderer audits pass 13 normal-control stages | No LOD derivatives or detailed ambient traffic; generic concept design, not VI identity; full hand/seat contacts remain open |
+| Long-run baseline | 1805-second third-checkpoint run with zero browser errors and no transport recoveries | Performance failed: 59.52 median / 19.45 slowest-1% FPS, max stall 1026.3 ms; bounded memory unproven; see performance-stability.md |
+
+The latest user reports aircraft staying grounded and widespread rapid respawning. These remain active defects requiring normal-interface reproduction; fixture flight tests do not dismiss them. Character and broader vehicle/world realism remain priority work.

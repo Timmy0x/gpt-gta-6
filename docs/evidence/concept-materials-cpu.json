@@ -1,0 +1,404 @@
+{
+  "errors": [],
+  "method": "Chrome with --disable-gpu and Babylon NullEngine; actual embedded PNG decoding and glTF materials, no GPU render",
+  "meshes": 120,
+  "triangles": 213347,
+  "wheels": 4,
+  "doors": 2,
+  "windows": 6,
+  "lights": 4,
+  "covers": 2,
+  "materials": [
+    {
+      "name": "concept-1-Mechanical",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Mechanical (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Mechanical (Metallic Roughness)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Mechanical (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Glass",
+      "alpha": 0.3,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": []
+    },
+    {
+      "name": "concept-1-material2",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "material2 (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Interior 1",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Interior 1 (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Interior 1 (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Interior 3 Carmine",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Interior 3 Carmine (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Interior 3 Carmine (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Floormat",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Floormat (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Floormat (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Panel Sides",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Panel Sides (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Panel Sides (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Hardware",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Hardware (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Interior 2",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Interior 2 (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Interior 2 (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Dashboard",
+      "alpha": 1,
+      "emissiveIntensity": 3,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Dashboard (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Dashboard (Emissive)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-License",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "License (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Paint 2 Carmine",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Paint 2 Carmine (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Paint 2 Carmine (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "paint-1-Paint 1 Carmine",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Paint 1 Carmine (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Paint 1 Carmine (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Signallight",
+      "alpha": 1,
+      "emissiveIntensity": 2,
+      "refraction": false,
+      "textures": []
+    },
+    {
+      "name": "taillight-1-Brakelight",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": []
+    },
+    {
+      "name": "headlight-1-Headlight",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": []
+    },
+    {
+      "name": "concept-1-Mirror",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Mirror (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Rim2",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Rim2 (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Rim1",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Rim1 (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Brake",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Brake (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Disc",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Disc (Base Color)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Disc (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Disc (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Tireside",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Tireside (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    },
+    {
+      "name": "concept-1-Tiretread",
+      "alpha": 1,
+      "emissiveIntensity": 1,
+      "refraction": false,
+      "textures": [
+        {
+          "name": "Tiretread (Occlusion)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        },
+        {
+          "name": "Tiretread (Normal)",
+          "width": 512,
+          "height": 512,
+          "ready": true
+        }
+      ]
+    }
+  ],
+  "mutableMaterialsIndependent": true,
+  "sharedTextureCount": 32,
+  "repeatedCreateRemove": {
+    "cycles": 8,
+    "before": [
+      242,
+      46,
+      3,
+      140,
+      16
+    ],
+    "after": [
+      242,
+      46,
+      3,
+      140,
+      16
+    ]
+  }
+}

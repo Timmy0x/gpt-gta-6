@@ -1,0 +1,1881 @@
+{
+  "metadata": {
+    "commit": "1387665",
+    "mode": "30-minute stability baseline",
+    "targetSeconds": 1800,
+    "url": "http://127.0.0.1:4176",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "deviceScaleFactor": 1,
+    "quality": "high",
+    "requestedBackend": "WebGPU",
+    "hardware": {
+      "model": "MacBook Pro",
+      "modelId": "Mac17,9",
+      "chip": "Apple M5 Pro",
+      "memory": "24 GB",
+      "cpuCores": "proc 15:5:0:10",
+      "gpu": "Apple M5 Pro",
+      "gpuCores": "16"
+    },
+    "os": {
+      "platform": "darwin",
+      "release": "25.5.0",
+      "arch": "arm64"
+    },
+    "startedFingerprint": {
+      "htmlSha256": "4ba417b00c2a663a409ee12493db8bb606b650b95e3ba95c4f31004c061b2b2f",
+      "assets": [
+        {
+          "url": "/assets/index-CwvbjD5c.js",
+          "bytes": 6909164,
+          "sha256": "7b0db4f5bdbfda882d69783a7d3c56d04528768835ce5096d5c9024824751657"
+        },
+        {
+          "url": "/assets/math.scalar.functions-BWXNux-o.js",
+          "bytes": 2197,
+          "sha256": "93af6a709051859ad9c2cb2e062213f9e2006e05387edd346cb7f2d36a7a4737"
+        },
+        {
+          "url": "/assets/observable.pure-H-M_hi7F.js",
+          "bytes": 3207,
+          "sha256": "08c0e04c1857138331e86c1b0c907ad4425ece8fa34628c2eca4c6666c798cee"
+        },
+        {
+          "url": "/assets/performanceConfigurator-UtxC_Odd.js",
+          "bytes": 500,
+          "sha256": "18ac183db602e06e8f22bb36ef5a1b0127170dfa0401d3e6aff4f81dc5d76b26"
+        },
+        {
+          "url": "/assets/engineStore-B_7KzytD.js",
+          "bytes": 364,
+          "sha256": "dc389a6ff7fd747f3b269d90d3c4b734321104633e79ef27f7ea133d75f0857e"
+        },
+        {
+          "url": "/assets/math.vector.pure-BAJs8R8E.js",
+          "bytes": 64080,
+          "sha256": "148fb2b5381af672590de8dcda264dd7787b463428ed4580c8e902a986cd9188"
+        },
+        {
+          "url": "/assets/logger-CuBYPcDK.js",
+          "bytes": 1881,
+          "sha256": "30a999582eace71f2e78a479182e71e943508bbda9574b17e5b29575c49a3b9e"
+        },
+        {
+          "url": "/assets/tools.functions-CGAPgMh0.js",
+          "bytes": 13974,
+          "sha256": "f38bef6bb5810dbaadeae7cf5eb119e4ba200660c2fa20cc88a4021941ae39cc"
+        },
+        {
+          "url": "/assets/webRequest-dqz0dHXK.js",
+          "bytes": 2941,
+          "sha256": "d4a0d83706cc2f7681ca2895f9b827fbadfe11ed77025bc19fbf9ef40dd9d01d"
+        },
+        {
+          "url": "/assets/precisionDate-CfCevjl-.js",
+          "bytes": 390,
+          "sha256": "ca81e6b450810d0472b8ea1d02e169f7c206f21994ba8fd557a0fdde51bb1e67"
+        },
+        {
+          "url": "/assets/halfFloat-Ce77JD5z.js",
+          "bytes": 1290,
+          "sha256": "e364d38c88e676a0e9ced31660c08e156b244af07b1729fb8ea38e1ad6cffbb7"
+        },
+        {
+          "url": "/assets/tools.pure-yXf9W3Ut.js",
+          "bytes": 30774,
+          "sha256": "a30d8f132307bcf10f7627b53c5a78640960b4450577adf0d5b62d990c38d9ce"
+        },
+        {
+          "url": "/assets/math.color.pure-CaHjkGe9.js",
+          "bytes": 12230,
+          "sha256": "f1a3a98b3cc66a7a77d49aeaa3d5f44ae2c5dc91ed8edb45c921e4559c3b2200"
+        },
+        {
+          "url": "/assets/decorators-D3kDnvNy.js",
+          "bytes": 3885,
+          "sha256": "c169e42a47e2dcf0d743239a7d3dc7bc0ec303fcf1c01b2bd18c41673d2de332"
+        },
+        {
+          "url": "/assets/shaderStore-D-XQlhUT.js",
+          "bytes": 469,
+          "sha256": "db600316439f2fedb7bfd3bcbc61b24d30c2b2646828dcea1c7c778cd07d5e3e"
+        },
+        {
+          "url": "/assets/webAudioBaseSubGraph-D0ajKcgP.js",
+          "bytes": 12389,
+          "sha256": "38e6ace9c2ae896a5ef43aa7f0664dd16f461bb8b1fcc35a696d2bc97ce15dbf"
+        },
+        {
+          "url": "/assets/abstractSoundSource-B3SG6se2.js",
+          "bytes": 1484,
+          "sha256": "372f20c05cce5d8e90434ff5e0eb73185a0d81ffd29346bf8abd91b857afcf7e"
+        },
+        {
+          "url": "/assets/meshUboDeclaration-BATNZvmb.js",
+          "bytes": 279,
+          "sha256": "66ede90e05d64026782d6c0998c9bc9b447b02f6baf420a4146000ef8472b534"
+        },
+        {
+          "url": "/assets/sceneUboDeclaration-B96Tfx7b.js",
+          "bytes": 436,
+          "sha256": "5d5d6cd518aad42a92783140733752058aa59cb9526ce525f8714eaca6a7ebd2"
+        },
+        {
+          "url": "/assets/sceneUboDeclaration-B5VhSG0v.js",
+          "bytes": 364,
+          "sha256": "bb44727afcb0fe70461ca9bdb0d212901fa0a18067c8a62d1577506c6d347b95"
+        },
+        {
+          "url": "/assets/meshUboDeclaration-BmNu2KU_.js",
+          "bytes": 345,
+          "sha256": "1729108f883e17bb71137bfb06a700c8c073d1d7825d37d8beec06a2fc00a6a0"
+        },
+        {
+          "url": "/assets/clusteredLightingFunctions-BFCOODPn.js",
+          "bytes": 764,
+          "sha256": "aa95a24bca0029895482fcb2699fcd9c91d0f34662ca4ef1ca3782c0af067b32"
+        },
+        {
+          "url": "/assets/clusteredLightingFunctions-DNqaoQCj.js",
+          "bytes": 792,
+          "sha256": "b921a6f820ecbc181b383ddcbf92894f83a6707c1855680d4cfa6c802f847512"
+        },
+        {
+          "url": "/assets/ltcHelperFunctions-D8BySwCQ.js",
+          "bytes": 6631,
+          "sha256": "26e912aedbd5871f89d3cc7995843715ae9373f97ae98a7355d82af4c9a1cd41"
+        },
+        {
+          "url": "/assets/ltcHelperFunctions-DS3Utz6C.js",
+          "bytes": 6040,
+          "sha256": "5432fdc54860588913266cde48a725a3e39adc6888f49d6106b4cb956607d885"
+        },
+        {
+          "url": "/assets/mainUVVaryingDeclaration-B_7d0nc3.js",
+          "bytes": 239,
+          "sha256": "b1dca32192a0bc13a46420375ec010bebb6608aebd70baec9ad21d24e9cdcb4e"
+        },
+        {
+          "url": "/assets/samplerFragmentDeclaration-CEHqUfAO.js",
+          "bytes": 729,
+          "sha256": "a982bce45409d46f76d23173d8cc700fbab4a61d10d4ae0482ccc7d782d8f647"
+        },
+        {
+          "url": "/assets/mainUVVaryingDeclaration-BBamQlxR.js",
+          "bytes": 229,
+          "sha256": "f458b4a817df909582f5973c0ebf23a740ad2d30da10c307e991a1628b26d688"
+        },
+        {
+          "url": "/assets/samplerFragmentDeclaration-3yaLawFX.js",
+          "bytes": 675,
+          "sha256": "3cde581ea44c741f48e406bba1d74b38c5f15534255898bcf752bc5afad4bfdf"
+        },
+        {
+          "url": "/assets/index-BdFcW67w.css",
+          "bytes": 8971,
+          "sha256": "7de07bea63825694138332eecffc2abef9050bc6ac5c2a6668410f59290ec11d"
+        },
+        {
+          "url": "/world/manifest.json",
+          "bytes": 162073,
+          "sha256": "6980f3452182f76c5931a83879f88b3293104164a8b91997367dce21e67f9ded"
+        },
+        {
+          "url": "/assets/HavokPhysics-BqNY-4N9.wasm",
+          "bytes": 2094563,
+          "sha256": "026917766f534c156286f07975850978dabf17c42e742bbfaaebbcb2215e4e11"
+        },
+        {
+          "url": "/assets/glslang-G7Yt_-32.wasm",
+          "bytes": 943680,
+          "sha256": "d79453e0803ebcdf3753c6b1d8d51543b52fed96f7f0d4aec94acd847e225169"
+        },
+        {
+          "url": "/assets/twgsl-CB--yrSG.wasm",
+          "bytes": 1702916,
+          "sha256": "a434c2decdbb38caadf5f486d806384a1543554828c983c77922b2d92579914c"
+        },
+        {
+          "url": "/world/chunks/-1_-1_detail.babylon.gz",
+          "bytes": 816388,
+          "sha256": "d893ea86909a647c098785f1a8dde61d72d60321aa333f436b5ea82f2d575765"
+        },
+        {
+          "url": "/world/chunks/-1_0_detail.babylon.gz",
+          "bytes": 877821,
+          "sha256": "8a43d8a60c6e4023ef4c76bea3ad690915bf43bd2b76a45f94cc4373213107d2"
+        },
+        {
+          "url": "/world/chunks/-1_1_detail.babylon.gz",
+          "bytes": 1046069,
+          "sha256": "0291bb94dabf474893721801fc75fc65c724f85fcef1acc93650d2269186a263"
+        },
+        {
+          "url": "/world/chunks/0_0_detail.babylon.gz",
+          "bytes": 815134,
+          "sha256": "f0988f9bd7d5ddb0bf8e758a87e0a100db5efc72d0450e51fa2403834d9d227e"
+        },
+        {
+          "url": "/world/chunks/0_1_detail.babylon.gz",
+          "bytes": 949507,
+          "sha256": "238659a2dbb13ede1d866f2986f41bf43c9eb12109ac85b2e8faf6e6a374e72a"
+        },
+        {
+          "url": "/world/chunks/1_-1_detail.babylon.gz",
+          "bytes": 676759,
+          "sha256": "578f2bbd305d97687d1f67ca4e66c70ff33696433a0c81698e0d3697dfcf817b"
+        },
+        {
+          "url": "/world/chunks/1_0_detail.babylon.gz",
+          "bytes": 792002,
+          "sha256": "395b9a11b06f24b1d4fba4fb907be533e25aa5dddb1c0975932e50d597fdd15d"
+        },
+        {
+          "url": "/world/chunks/1_1_detail.babylon.gz",
+          "bytes": 653962,
+          "sha256": "33f0be71337495ce0bf109bbf6c9dba443bc0dfd8cc28ce331bd7cb234a695ba"
+        },
+        {
+          "url": "/world/chunks/-3_-2_detail.babylon.gz",
+          "bytes": 54972,
+          "sha256": "ceea2c7c73cc1c3adc3a46a889a1dedd135edf9ffe993576c8a79b305ed9b20c"
+        },
+        {
+          "url": "/world/chunks/-3_1_detail.babylon.gz",
+          "bytes": 434425,
+          "sha256": "6102046222f986e59db5672a29e029b818f6b1d16cdac92de5f87d1af442b370"
+        },
+        {
+          "url": "/world/chunks/-2_-2_detail.babylon.gz",
+          "bytes": 177902,
+          "sha256": "20650b72c6e76b9bdbdf3068779785ded42049db6d2bbb8fdb85be39a933b292"
+        },
+        {
+          "url": "/world/chunks/-2_-1_detail.babylon.gz",
+          "bytes": 722975,
+          "sha256": "3120c05d8e6bca221f94833c633cc8a4d9d6359e68135b1b21b71f58f29356bd"
+        },
+        {
+          "url": "/world/chunks/-2_0_detail.babylon.gz",
+          "bytes": 859932,
+          "sha256": "d830e14b634db7afc9661d42cbf9b70018dd6f94570d145f874e303e90dbac65"
+        },
+        {
+          "url": "/world/chunks/-2_1_detail.babylon.gz",
+          "bytes": 743575,
+          "sha256": "6564afeb4969326defc8119bff4b9151477050ba99756203d4cf0af443449a19"
+        },
+        {
+          "url": "/world/chunks/-1_-2_detail.babylon.gz",
+          "bytes": 178729,
+          "sha256": "6946158866915e2e5b0e5a95d9d639f2b28ed5d6e0be927884a4d438038831b2"
+        },
+        {
+          "url": "/world/chunks/0_-2_detail.babylon.gz",
+          "bytes": 178848,
+          "sha256": "bd09a00a8d9e0d61f28e7d5aaf846eb7a2650b4065e3224cfbaa3265c67fcfb2"
+        },
+        {
+          "url": "/world/chunks/1_-2_detail.babylon.gz",
+          "bytes": 246827,
+          "sha256": "020985b04065f9f4ac652939346b6661ae016c659adb67f0fb76a2b564465f0c"
+        },
+        {
+          "url": "/world/chunks/global.babylon.gz",
+          "bytes": 23336,
+          "sha256": "031838dc4daaf23b27e168e42407c3b7ed54aab672d91833f34f97d206c23470"
+        },
+        {
+          "url": "/world/chunks/-3_-1_detail.babylon.gz",
+          "bytes": 368474,
+          "sha256": "ba7a7ba3c8b45451d83e10c9d8ade43e5eb14099a54c8567d379c5fb83442826"
+        },
+        {
+          "url": "/world/chunks/-3_0_detail.babylon.gz",
+          "bytes": 458322,
+          "sha256": "63fa80f4fb64a5004fdbf7bfebc56cf99749534b6501deb583199ac0b34138d4"
+        },
+        {
+          "url": "/world/chunks/-3_2_detail.babylon.gz",
+          "bytes": 6578,
+          "sha256": "914fa525af02b934432aea904d79d8e1b0b9ea45ed3d4659179a02316abd3072"
+        },
+        {
+          "url": "/world/chunks/-2_2_detail.babylon.gz",
+          "bytes": 8738,
+          "sha256": "701827256c3e1d447f823001cb1a8883a582ac4b0f1fa0b701daa78bce11278b"
+        },
+        {
+          "url": "/world/chunks/-1_2_detail.babylon.gz",
+          "bytes": 8764,
+          "sha256": "fc1009bb4f7bf176d0819efd003e29cd836ba1271d95d683227352979df789bf"
+        },
+        {
+          "url": "/world/chunks/0_-1_detail.babylon.gz",
+          "bytes": 1062061,
+          "sha256": "1a1cabeea655d583ae7ed5fb1bea6bd56f916cf4b23c3afa01bd53e7896c1165"
+        },
+        {
+          "url": "/world/chunks/0_2_detail.babylon.gz",
+          "bytes": 8686,
+          "sha256": "d505a715c23eb5915fbf7d87d45868478460cf018e5cd3798d955d5cef6faa25"
+        },
+        {
+          "url": "/world/chunks/1_2_detail.babylon.gz",
+          "bytes": 38031,
+          "sha256": "8804db6e6e922dc813a26a0b8bc1f5d7746c53036d43e45b61fb9f295903ee73"
+        },
+        {
+          "url": "/world/chunks/-3_-2_structure.babylon.gz",
+          "bytes": 1221,
+          "sha256": "bcc0907ab2b64224264f300fcfe9adf2d8f0f0ed35528ce233c2979b80bca938"
+        },
+        {
+          "url": "/world/chunks/-3_-1_structure.babylon.gz",
+          "bytes": 4112,
+          "sha256": "a3dfe59f447f3062a2fb4b696a5ac086573372e08a491b3e72fc5445ebc00dbd"
+        },
+        {
+          "url": "/world/chunks/-3_0_structure.babylon.gz",
+          "bytes": 4086,
+          "sha256": "ed5535a553d214fe91d7fc1dc2ac1a04a23e48a4848b14489a7bc88e3054f6d1"
+        },
+        {
+          "url": "/world/chunks/-3_1_structure.babylon.gz",
+          "bytes": 6081,
+          "sha256": "3307277832c88ffb0672f4a9ef3e8bdb3386a6243166278ff517c9eaed6689c6"
+        },
+        {
+          "url": "/world/chunks/-2_-2_structure.babylon.gz",
+          "bytes": 1469,
+          "sha256": "c1d74a8edd530c0e5f3398bac3dea0604b1992abbd885a344f3f83e63902ffb6"
+        },
+        {
+          "url": "/world/chunks/-2_-1_structure.babylon.gz",
+          "bytes": 5835,
+          "sha256": "ecb2b87ce711c135f6f97d0049201d45a70d10a6fad223e6bb571451647b69a3"
+        },
+        {
+          "url": "/world/chunks/-2_0_structure.babylon.gz",
+          "bytes": 6566,
+          "sha256": "d04207140fde1f6b6bde122128554386bdf2160a26221ec1d2b08d2a7ebf2702"
+        },
+        {
+          "url": "/world/chunks/-2_1_structure.babylon.gz",
+          "bytes": 6654,
+          "sha256": "a15a2dd716017b947e96b5c9fa08fc0b5988e9175a0dd2792164571fdd0a55f7"
+        },
+        {
+          "url": "/world/chunks/-1_-2_structure.babylon.gz",
+          "bytes": 1469,
+          "sha256": "1efa513fd622fe3b714bbb7910e818a9e350ae7826949f2ddd1b93ce20afe2ca"
+        },
+        {
+          "url": "/world/chunks/-1_-1_structure.babylon.gz",
+          "bytes": 8072,
+          "sha256": "a86dc42a36816f71e70148e4c13dc9df8b699089897299d992cc96f2100e6608"
+        },
+        {
+          "url": "/world/chunks/-1_0_structure.babylon.gz",
+          "bytes": 8128,
+          "sha256": "495d05a986c79006fee1f7a9e6b9c5118c8e0d49835f2de852df4e7e1b86d51f"
+        },
+        {
+          "url": "/world/chunks/-1_1_structure.babylon.gz",
+          "bytes": 9196,
+          "sha256": "12247cad3b08f709bdec9e374eafb6e87777f9e909fbc5d1b49c65ce18c1292c"
+        },
+        {
+          "url": "/world/chunks/0_-2_structure.babylon.gz",
+          "bytes": 1435,
+          "sha256": "69b9b9ab67533c4775fc3b4b5d410c6bcd08c74690999f203304bd6cd6e14abc"
+        },
+        {
+          "url": "/world/chunks/0_-1_structure.babylon.gz",
+          "bytes": 10268,
+          "sha256": "db7070605de713613536b5965c7f2aa31e292975d4b5b08df2eaaccff2607cee"
+        },
+        {
+          "url": "/world/chunks/0_0_structure.babylon.gz",
+          "bytes": 6913,
+          "sha256": "617466c65b838cd23614026952613b92932b1301a9665cce4879b6be240a5cf8"
+        },
+        {
+          "url": "/world/chunks/0_1_structure.babylon.gz",
+          "bytes": 8144,
+          "sha256": "d9d17bdbf5734ec2638e41a3e5188a485b5a62e76221c04bf6bf444efa6c0273"
+        },
+        {
+          "url": "/world/chunks/1_-2_structure.babylon.gz",
+          "bytes": 2670,
+          "sha256": "c6f9372a7c9816eb3f3ad64efa277f354dad8a6f5f27721a51c10061d5c48126"
+        },
+        {
+          "url": "/world/chunks/1_-1_structure.babylon.gz",
+          "bytes": 3783,
+          "sha256": "25ee9ceec045b419e5b85c8a11dfebf88f83b0676654fc5b2c5068c17f8fee0e"
+        },
+        {
+          "url": "/world/chunks/1_0_structure.babylon.gz",
+          "bytes": 3742,
+          "sha256": "b991abec5c20c9f267800971232e176654c4c458695378bec9d969785ded135d"
+        },
+        {
+          "url": "/world/chunks/1_1_structure.babylon.gz",
+          "bytes": 3703,
+          "sha256": "efec0c7a641d6158c8616f08ab32c90fd7f4e28948ed54807209acdc91de53a9"
+        },
+        {
+          "url": "/world/chunks/-4_1_detail.babylon.gz",
+          "bytes": 14031,
+          "sha256": "1f0d40a6f7bccd7020faca0218073149926d736fd3e6452abdff35e9bc06257f"
+        },
+        {
+          "url": "/world/chunks/-4_1_structure.babylon.gz",
+          "bytes": 1557,
+          "sha256": "de93288df312a40ccd7c8bdef9105ad457be633ecdb59e923268c2e7216ee27f"
+        },
+        {
+          "url": "/world/chunks/2_-1_structure.babylon.gz",
+          "bytes": 1064,
+          "sha256": "c1c73233de56abc0e7c5828246c3de684a191d60d54b69cba6084bf1fe7e37c2"
+        },
+        {
+          "url": "/world/chunks/2_-2_structure.babylon.gz",
+          "bytes": 889,
+          "sha256": "5aa19894a21d71b21009d30eb4132154b415be25937a1c1c2e552db4038215b6"
+        },
+        {
+          "url": "/world/chunks/2_-1_detail.babylon.gz",
+          "bytes": 4606,
+          "sha256": "9a16fbfde23b6739d3e827afbcf9bde1908899d26b9f6fcb739de80843dd73fe"
+        },
+        {
+          "url": "/world/chunks/2_-2_detail.babylon.gz",
+          "bytes": 3131,
+          "sha256": "590be25f55f8cabd5ef8bcd3b5c37f920f3dc95e982fde6d2e26a5a565d4ba84"
+        },
+        {
+          "url": "/world/chunks/-3_10_structure.babylon.gz",
+          "bytes": 3621,
+          "sha256": "e748d757dc2ab61470ebd4d5b9df13cb803b338089a2a40456e519ce62b7fb66"
+        },
+        {
+          "url": "/world/chunks/-6_10_structure.babylon.gz",
+          "bytes": 3312,
+          "sha256": "4e165973dc633ab5a788589f02ae71dac973e79cc3785269dffa3e1ecacdaed5"
+        },
+        {
+          "url": "/world/chunks/-4_9_structure.babylon.gz",
+          "bytes": 12596,
+          "sha256": "7b7ef52aafb967cb098ea656445a8a060af0c302f3af1af1babe379116df21e7"
+        },
+        {
+          "url": "/world/chunks/-3_7_structure.babylon.gz",
+          "bytes": 5237,
+          "sha256": "7371222084d6d2cb7bdb41a1ed5dd41aa470c8f320f56d2b05996100260435a3"
+        },
+        {
+          "url": "/world/chunks/-5_8_structure.babylon.gz",
+          "bytes": 16159,
+          "sha256": "e6dfa69db29128b0e136cec2e8baa441ebe0d2137b818c4cd81b3ad7f0543050"
+        },
+        {
+          "url": "/world/chunks/-6_5_structure.babylon.gz",
+          "bytes": 7003,
+          "sha256": "c64bfcc6d3d99d955724f1bbc504a8e24f547cb6ca855ea2c8ab5bd63cd4ebff"
+        },
+        {
+          "url": "/world/chunks/-4_5_structure.babylon.gz",
+          "bytes": 5362,
+          "sha256": "3606673c054e43d3732218dbc7c0ed2710f14089d84a7524180548ffa5b55f23"
+        },
+        {
+          "url": "/world/chunks/-4_7_structure.babylon.gz",
+          "bytes": 12356,
+          "sha256": "08a5ac66b9c5f4dacd769d37a47eadead7e3e08430a28246efbbdaa766743113"
+        },
+        {
+          "url": "/world/chunks/-3_9_structure.babylon.gz",
+          "bytes": 6642,
+          "sha256": "b7a15be8fea60bf7b9f43d779c30d002e8c37c3b85edfdec3f93c84fa6848d04"
+        },
+        {
+          "url": "/world/chunks/-4_6_structure.babylon.gz",
+          "bytes": 4274,
+          "sha256": "12226e85462f59b77dc0a0283e296305443506749edbd9b2e2cb78ae3246790e"
+        },
+        {
+          "url": "/world/chunks/-6_6_structure.babylon.gz",
+          "bytes": 4287,
+          "sha256": "8d9096b3828f9ea5780efd986c20c5a9d305cacde98730c2f14ee4df6be3d90a"
+        },
+        {
+          "url": "/world/chunks/-5_9_structure.babylon.gz",
+          "bytes": 5846,
+          "sha256": "434e1c3ef30cdb1f5f841be0179d52698d4e5ebe50ad38b83678faae6c6db2a9"
+        },
+        {
+          "url": "/world/chunks/-5_6_structure.babylon.gz",
+          "bytes": 6484,
+          "sha256": "e1eb06b8b6f7794ddf6c54b52dc590b4da8e505dbe45a0e5cc5a24e7ddd1be5d"
+        },
+        {
+          "url": "/world/chunks/-3_4_structure.babylon.gz",
+          "bytes": 4954,
+          "sha256": "5c013cd15bd8950438d4bee491771e2f2afb03ac98a4405ac3d378e2dcf0dc8f"
+        },
+        {
+          "url": "/world/chunks/-5_10_structure.babylon.gz",
+          "bytes": 3951,
+          "sha256": "82c7093210a738d6b59105d06cb7deb3698a0c4f948126927158ca83523e8d76"
+        },
+        {
+          "url": "/world/chunks/-6_9_structure.babylon.gz",
+          "bytes": 5719,
+          "sha256": "97dd8c36af125f0400bd34e4f0bfeaba7efd348af39effefb1d5f22e1d1ae38a"
+        },
+        {
+          "url": "/world/chunks/-4_10_structure.babylon.gz",
+          "bytes": 6717,
+          "sha256": "754c8bb0d5edc6defb45d2d1272b4ea0da1eec0305c68a10e6bbde99d049a696"
+        },
+        {
+          "url": "/world/chunks/-3_5_structure.babylon.gz",
+          "bytes": 3119,
+          "sha256": "2115ef56c5c5f35ea6caa776b668b44d3768f4cde7c3c9bd2f51abd17dd7c970"
+        },
+        {
+          "url": "/world/chunks/-6_4_structure.babylon.gz",
+          "bytes": 5731,
+          "sha256": "09a894a58d7242456591519681d4f51e339712682ed2a02fb62d29d3cf4c100b"
+        },
+        {
+          "url": "/world/chunks/0_-3_structure.babylon.gz",
+          "bytes": 3329,
+          "sha256": "88e4aa376fccd4cb1c5678bc30583c402478353693aa47c85b0ed100fd8653da"
+        },
+        {
+          "url": "/world/chunks/1_-3_detail.babylon.gz",
+          "bytes": 72748,
+          "sha256": "de3c6ff7fbc3b34d0af8ab93e74f6abd47b263e9256bf68243fcd3ccffd63ab1"
+        },
+        {
+          "url": "/world/chunks/1_-3_structure.babylon.gz",
+          "bytes": 4402,
+          "sha256": "6b69800291f2313fbd98262ad677a33df6fdffa0aa173017b6053c6903ed40ef"
+        },
+        {
+          "url": "/world/chunks/0_-4_structure.babylon.gz",
+          "bytes": 4064,
+          "sha256": "8adc896ab8fc1f298c98691cad1f6d63f9c50965d7d749074a2f78038dd8e8b3"
+        },
+        {
+          "url": "/world/chunks/1_-4_detail.babylon.gz",
+          "bytes": 49835,
+          "sha256": "faa4973181341726f9fdd53846444cf3b28a441167349988dd0c7e440129f4ce"
+        },
+        {
+          "url": "/world/chunks/0_-5_structure.babylon.gz",
+          "bytes": 1918,
+          "sha256": "df456a117b6113ee4600fcf4ed586dafa66bf00ddc30106d8f2657e00813c6b1"
+        },
+        {
+          "url": "/world/chunks/1_-5_detail.babylon.gz",
+          "bytes": 26867,
+          "sha256": "e9015ed71d56cee0d84e248ef4642274fbbb4f2878cf7e75219394731811d8f2"
+        },
+        {
+          "url": "/world/chunks/1_3_structure.babylon.gz",
+          "bytes": 6318,
+          "sha256": "6ff8b6d2d0f379073ee53b5711ce536c9ea6b478caa1edbb5e05fae3c5414985"
+        },
+        {
+          "url": "/world/chunks/1_3_detail.babylon.gz",
+          "bytes": 72778,
+          "sha256": "a7860122dfc52c51a0130f6befb5242596db34873cb3396ba43e56bcfaf9891c"
+        },
+        {
+          "url": "/world/chunks/1_4_structure.babylon.gz",
+          "bytes": 4443,
+          "sha256": "51eab34c5666fcf3b2e6d402af026dbddf23473c4f154113c2a5f96aa8bf233f"
+        },
+        {
+          "url": "/world/chunks/1_4_detail.babylon.gz",
+          "bytes": 49727,
+          "sha256": "a3d6f507a1c84809836cd038ff328b3b802db88363db9424091159f0f11caf67"
+        },
+        {
+          "url": "/world/chunks/1_5_structure.babylon.gz",
+          "bytes": 3200,
+          "sha256": "66a1b76f387a7673f63ce51da1af7b3f589c4f05e16af323b5039311791925f4"
+        },
+        {
+          "url": "/world/chunks/1_5_detail.babylon.gz",
+          "bytes": 26877,
+          "sha256": "e09da823b69c14634afe4cf6cd06d97ad3805af63ce1d73e730d860d8651e44e"
+        },
+        {
+          "url": "/world/materials/material-000.json.gz",
+          "bytes": 2197,
+          "sha256": "65807d95faf01a0e570449509acaf0a6631088df55256ef917e2da43b99e264f"
+        },
+        {
+          "url": "/world/materials/material-001.json.gz",
+          "bytes": 2203,
+          "sha256": "37946233ffb8d22315d525e8fda9587c4540571764d1e41154e04127ea7cc49d"
+        },
+        {
+          "url": "/world/materials/material-002.json.gz",
+          "bytes": 2222,
+          "sha256": "89c9639cfd426c81e5c4ea6b8f27f5ebdf682f5db6680fa6f8655a7dcdedb73c"
+        },
+        {
+          "url": "/world/materials/material-003.json.gz",
+          "bytes": 2197,
+          "sha256": "1e2e0c6f846f38e9a14906584d4f31a6cd107f3e0251a807dcbcfd19bae0124d"
+        },
+        {
+          "url": "/world/materials/material-004.json.gz",
+          "bytes": 2198,
+          "sha256": "e5098a856bdeb5a22a5fb100d1e53a6073155846d639ded2d2b077357b40de79"
+        },
+        {
+          "url": "/world/materials/material-005.json.gz",
+          "bytes": 2200,
+          "sha256": "0b8879d59b7b60cfd29c43761c23b160667392bee0a83a409224ee83c9c10c8c"
+        },
+        {
+          "url": "/world/materials/material-006.json.gz",
+          "bytes": 2204,
+          "sha256": "fc79d2a798763bd01c3222ea8f410bb8f0a34c102288a5d33e02831ac1b4fdfb"
+        },
+        {
+          "url": "/world/materials/material-007.json.gz",
+          "bytes": 2202,
+          "sha256": "48c47204cb28a6f471ae1bf18b59452b51d01560b83f4e43cbf506f476b2fb2d"
+        },
+        {
+          "url": "/world/materials/material-008.json.gz",
+          "bytes": 2202,
+          "sha256": "bb6416cca9701e4bde5f85dfc45167bbf2066669867a3ed6eff1edeb06059e64"
+        },
+        {
+          "url": "/world/materials/material-009.json.gz",
+          "bytes": 2219,
+          "sha256": "ec225fda1047aea64ca20678ade76fb4b3be62c6b2ce47b55394c484e25153dc"
+        },
+        {
+          "url": "/world/materials/material-010.json.gz",
+          "bytes": 2201,
+          "sha256": "ac94c237be147f7c9ed28650e4a4c4113d9e3c7b754d2475c5bdaa4001cb03b9"
+        },
+        {
+          "url": "/world/materials/material-011.json.gz",
+          "bytes": 2217,
+          "sha256": "a969cd1d16cfc41ca8236aabfc2904b9d82f782e39dd4f31a1e5de5f3110fac9"
+        },
+        {
+          "url": "/world/materials/material-012.json.gz",
+          "bytes": 2195,
+          "sha256": "d2ec0c0f16065ed740b6d1e2b8b8cab0018ab676b422bfd7d70a155b0db52d89"
+        },
+        {
+          "url": "/world/materials/material-013.json.gz",
+          "bytes": 2199,
+          "sha256": "2e6b112cb6429c350bce38204f9a4a44901017d8d0049b2424e02cf8ba964d41"
+        },
+        {
+          "url": "/world/materials/material-014.json.gz",
+          "bytes": 2201,
+          "sha256": "4d66dd1cd12e7173c14b308852c5009c8af680edb08311c56fa8356df4881077"
+        },
+        {
+          "url": "/world/materials/material-015.json.gz",
+          "bytes": 2197,
+          "sha256": "6f2722fefcebf686030b2d91e95959c7c763aa33bd71739def777b10baa9ab8e"
+        },
+        {
+          "url": "/world/materials/material-016.json.gz",
+          "bytes": 2201,
+          "sha256": "8a3361280ef797b4d5ff7cdac963ccdebb97ee27fa4280c6c8ae8aa211b28e70"
+        },
+        {
+          "url": "/world/materials/material-017.json.gz",
+          "bytes": 2193,
+          "sha256": "aeffb7ba068acdd874ad2058ee4ac4cd4bf8535dfaf47147e38edbc43a94c2c1"
+        },
+        {
+          "url": "/world/materials/material-018.json.gz",
+          "bytes": 2195,
+          "sha256": "236af91a676a9d1d7d596d04faf31275d9f13556ebef8939202a37c9b63d2149"
+        },
+        {
+          "url": "/world/materials/material-019.json.gz",
+          "bytes": 2218,
+          "sha256": "952861705df401ac5efd56659f196fbbeee95e48e998907773bcc392315bb231"
+        },
+        {
+          "url": "/world/materials/material-020.json.gz",
+          "bytes": 2197,
+          "sha256": "26b01d611310765271cd68364fc9e3603c88ade17e256efdb20b633073ced051"
+        },
+        {
+          "url": "/world/materials/material-021.json.gz",
+          "bytes": 2217,
+          "sha256": "6c20b71fbeac5623244722669b5e8faa9f655a311c8f92eec011a991ddee21cf"
+        },
+        {
+          "url": "/world/materials/material-022.json.gz",
+          "bytes": 2191,
+          "sha256": "f625e8c0f9ea63fed71e249c96916a806a8e07fc916a9d4caab0bdbc3a1c08c5"
+        },
+        {
+          "url": "/world/materials/material-023.json.gz",
+          "bytes": 2218,
+          "sha256": "f85293649e38f60d994f95810548cdd8b8cc34c5fb3d8292f8ea2e15ba190908"
+        },
+        {
+          "url": "/world/materials/material-024.json.gz",
+          "bytes": 2197,
+          "sha256": "5be98927b8b6d9a1d1648e03cc177912aa72e0b7a95c178a4ebb740c88456576"
+        },
+        {
+          "url": "/world/materials/material-025.json.gz",
+          "bytes": 2218,
+          "sha256": "07473d0720fb4c1e82b9a28d75d92e6d37381009d73b2bdd97db5c1ca787f3b9"
+        },
+        {
+          "url": "/world/materials/material-026.json.gz",
+          "bytes": 2199,
+          "sha256": "a8f9fff530ca98b5eb096b6d4af4041e64dca7a636a6dc0010927b3c7c5e3eb8"
+        },
+        {
+          "url": "/world/materials/material-027.json.gz",
+          "bytes": 2218,
+          "sha256": "e71e489d27d9d1d4162e0d402ae43042db408695dac17bddfa707ab350b3520f"
+        },
+        {
+          "url": "/world/materials/material-028.json.gz",
+          "bytes": 2192,
+          "sha256": "6d71ca6d7461d94bccd434c5b87e267c92ad24487dacca1e5e3581486cefe25d"
+        },
+        {
+          "url": "/world/materials/material-029.json.gz",
+          "bytes": 2218,
+          "sha256": "3bf86b4fa83bb36b1ab899b1ca87238c498c54426ebf955764c0d09c3743b5e5"
+        },
+        {
+          "url": "/world/materials/material-030.json.gz",
+          "bytes": 2202,
+          "sha256": "ebbcc8ba249861c850f807495e84b36e988f452fb390cc77ae192ea84d96e723"
+        },
+        {
+          "url": "/world/materials/material-031.json.gz",
+          "bytes": 2197,
+          "sha256": "f1de6fa4595fdaf1190c46916a63a8dbec3294cacfc1836409a2dbddf2426fea"
+        },
+        {
+          "url": "/world/materials/material-032.json.gz",
+          "bytes": 2207,
+          "sha256": "db09d280a4d251c071cd499924e7be26ffb0218aba34e896cbf7ef1d865e4d2c"
+        },
+        {
+          "url": "/world/materials/material-033.json.gz",
+          "bytes": 2200,
+          "sha256": "a0791ca9b0a828fcfee5cbc47a919a9bd3b601f0db4dd1b6d3f54a1452ad674d"
+        },
+        {
+          "url": "/world/materials/material-034.json.gz",
+          "bytes": 2205,
+          "sha256": "0992c2d85c4894e2ca564c481c431be92261de8faa0aa35afbacd725778e58f7"
+        },
+        {
+          "url": "/world/materials/material-035.json.gz",
+          "bytes": 2200,
+          "sha256": "cf79c785b09af6b268e062d3ea04d6ada384397ae3d8ab39beb6c43a4e5dfb11"
+        },
+        {
+          "url": "/world/materials/material-036.json.gz",
+          "bytes": 2215,
+          "sha256": "97ccbb132f4c3785915588c4a564cd59d84569b16ee50d0067925314580c1141"
+        },
+        {
+          "url": "/world/materials/material-037.json.gz",
+          "bytes": 2207,
+          "sha256": "decebc5c67a115cb01b27871022f9655cdc0be99f523859e0d285e2a95527dbd"
+        },
+        {
+          "url": "/world/materials/material-038.json.gz",
+          "bytes": 2209,
+          "sha256": "063d6b67ead50c262e1d47ebad897bc31b846050f50476a401de16efec3e2d96"
+        },
+        {
+          "url": "/world/materials/material-039.json.gz",
+          "bytes": 2216,
+          "sha256": "87a7a2b951196d9b2001defe51e7af19cda5e4ed802f7a730feafed460c06104"
+        },
+        {
+          "url": "/world/materials/material-040.json.gz",
+          "bytes": 2200,
+          "sha256": "5eb44316b683ab395691dc1cac9e5dac025fae60d0aa7a3cff6d8bfc04e66a89"
+        },
+        {
+          "url": "/world/materials/material-041.json.gz",
+          "bytes": 2215,
+          "sha256": "5f409c35f776893f1b4d2a0e763d4e0c9a4fa87da12553066073598ff5950618"
+        },
+        {
+          "url": "/world/materials/material-042.json.gz",
+          "bytes": 2205,
+          "sha256": "32886f16761cd485df3daa55dccb21f097901aa8b0b5d4731d31bccbea3ec4e9"
+        },
+        {
+          "url": "/world/materials/material-043.json.gz",
+          "bytes": 2202,
+          "sha256": "ca3a39e537317441d3b419cc704facf5bbbb9223fa7d663715aae164ee6e1194"
+        },
+        {
+          "url": "/world/materials/material-044.json.gz",
+          "bytes": 2198,
+          "sha256": "8b74df5da61a654af7d2c52e965e09584bd14d85ccf8af3c0e8111e3d9760bbf"
+        },
+        {
+          "url": "/world/materials/material-045.json.gz",
+          "bytes": 2200,
+          "sha256": "121592d2dad358e3068f62eb1ba70f4c3501d83588a65d0530e56464dc6887b3"
+        },
+        {
+          "url": "/world/materials/material-046.json.gz",
+          "bytes": 2199,
+          "sha256": "141b0860b00d5251bd7b355b816e3eae93b01d1926dd3754cf6ea6f64a7fb43d"
+        },
+        {
+          "url": "/world/materials/material-047.json.gz",
+          "bytes": 2217,
+          "sha256": "8047a5d01a959aed2d173cdcceb718850ffd25e023bc1ef1e9c4ceb6e7561793"
+        },
+        {
+          "url": "/world/materials/material-048.json.gz",
+          "bytes": 2201,
+          "sha256": "fe5f59947614d08d5ff660c6ccd399b9cf6e1ba566ad5c6eaaeb67d8013ffc33"
+        },
+        {
+          "url": "/world/materials/material-049.json.gz",
+          "bytes": 2224,
+          "sha256": "9a6552ad8524f781fcdd4435f60c466cf9e98525fd9a9434a3868b19dd255f8e"
+        },
+        {
+          "url": "/world/materials/material-050.json.gz",
+          "bytes": 2207,
+          "sha256": "4a61d5a9b1c1078ff0fc304c77d37eb86494685e529c1bfc506d2dde8a9e2510"
+        },
+        {
+          "url": "/world/materials/material-051.json.gz",
+          "bytes": 2198,
+          "sha256": "d0d3d3460c66138a439388650ff953b079e2f4476997c47e26752d13c4359e85"
+        },
+        {
+          "url": "/world/materials/material-052.json.gz",
+          "bytes": 2199,
+          "sha256": "67a69625bf7198c6bf4dc6f875134984302440c9bb8cbb9e831335f6ef0feeab"
+        },
+        {
+          "url": "/world/materials/material-053.json.gz",
+          "bytes": 2199,
+          "sha256": "42e9e60f072338fbe3b43c2f74b6f0a389aff3db054f125aa37fd554af1fdc7d"
+        },
+        {
+          "url": "/world/materials/material-054.json.gz",
+          "bytes": 2193,
+          "sha256": "bf4539ed38182dbf6153409e6d32c823f4afc90592a27b2c96721e4b0a01c824"
+        },
+        {
+          "url": "/world/materials/material-055.json.gz",
+          "bytes": 2200,
+          "sha256": "bfad279fbd55241bb087755b5381870b0181361161dd2e3104092a76ec4aaa33"
+        },
+        {
+          "url": "/world/materials/material-056.json.gz",
+          "bytes": 1936,
+          "sha256": "69c46b15cf9d68198da27df5f96f775d5c080316562fd76e397f956796cc9d9f"
+        },
+        {
+          "url": "/world/materials/material-057.json.gz",
+          "bytes": 2219,
+          "sha256": "f92c7c45ee045ab26e9d7900c0a1344d7b0f4d31e0db8bde1af5b9e00f02203e"
+        },
+        {
+          "url": "/world/materials/material-058.json.gz",
+          "bytes": 1909,
+          "sha256": "bce0d698c5abd937af7b617438f7474309a619fda2ffc3da8b6b4622278e936c"
+        },
+        {
+          "url": "/world/materials/material-059.json.gz",
+          "bytes": 1934,
+          "sha256": "2711a13feda613cf883a2be9021946f92ad457690ad2892196eeeb5a09737169"
+        },
+        {
+          "url": "/world/materials/material-060.json.gz",
+          "bytes": 2202,
+          "sha256": "1e32d910f5e997caa00583ef44249108316807c07971e51ac41e2f76d6c9db59"
+        },
+        {
+          "url": "/world/materials/material-061.json.gz",
+          "bytes": 1919,
+          "sha256": "7c9aa0590455519da668db62e75796eb45297de3cd4b789aaa06e1bdef444deb"
+        },
+        {
+          "url": "/world/materials/material-062.json.gz",
+          "bytes": 1910,
+          "sha256": "ef3850519cc8aa6ca6f82f95f5da96c32d873b11e84f159f5f5db4bd8828af2a"
+        },
+        {
+          "url": "/world/materials/material-063.json.gz",
+          "bytes": 1915,
+          "sha256": "cc08c71b6fdd06ad5dca39e9ed4fc538c0655b2af70c2db40f1f711687ac734c"
+        },
+        {
+          "url": "/world/materials/material-064.json.gz",
+          "bytes": 1949,
+          "sha256": "229769bd7d7e493f9763cc2a40877be6598e4c00ceec1db81e8c4835ae9bfd41"
+        },
+        {
+          "url": "/world/materials/material-065.json.gz",
+          "bytes": 1953,
+          "sha256": "09a13046607bd8d295ec9d1fc3bbe16003f37e24b9091799d2c18b1262d1dac7"
+        },
+        {
+          "url": "/world/materials/material-066.json.gz",
+          "bytes": 1940,
+          "sha256": "10f68d60fa7a533bfaae27983724ad44e20e5fce0afecb04ff2e3d045d488b56"
+        },
+        {
+          "url": "/world/materials/material-067.json.gz",
+          "bytes": 1918,
+          "sha256": "97b7e3e18a7be4b34b378f302c05cead7bdd5238760e6cd934302717280c835a"
+        },
+        {
+          "url": "/world/materials/material-068.json.gz",
+          "bytes": 1935,
+          "sha256": "bb2566f402ac43fb7d2320b5b56cb36c1882114279736fa54002545d7b6690f2"
+        },
+        {
+          "url": "/world/materials/material-069.json.gz",
+          "bytes": 1932,
+          "sha256": "c4d2f6e05d7dde0701aaed16c16b77a524c4fef0a74140ee50cb137ddb71cd99"
+        },
+        {
+          "url": "/world/materials/material-070.json.gz",
+          "bytes": 1915,
+          "sha256": "5864ac7fc4e23b06a717ba902bc967946f6e64aedd1748a1fb3d8b97b15de1ae"
+        },
+        {
+          "url": "/world/materials/material-071.json.gz",
+          "bytes": 1920,
+          "sha256": "970e923e3da81e98002aada98eae63d92299c81fb5afa539da5937b2ddd34a90"
+        },
+        {
+          "url": "/world/materials/material-072.json.gz",
+          "bytes": 1933,
+          "sha256": "1f3cf24c08b3280e6efe08b922917f77be9705f6434308c82f8b78d0f24c63b5"
+        },
+        {
+          "url": "/world/materials/material-073.json.gz",
+          "bytes": 1923,
+          "sha256": "a174605c4d7096ee6fcd338f4a5d54d48df476c76b533d51c7e91e5d97680843"
+        },
+        {
+          "url": "/world/materials/material-074.json.gz",
+          "bytes": 1930,
+          "sha256": "fc2219a83c6099ddf8e5228ef12dacf8b393360e21ef951fb3a7fd70a5e1ae41"
+        },
+        {
+          "url": "/world/materials/material-075.json.gz",
+          "bytes": 1915,
+          "sha256": "44817a8a12528f30ad12e38793a038dee17c6ce5a48e9d1fe25f22f1fb5517b3"
+        },
+        {
+          "url": "/world/materials/material-076.json.gz",
+          "bytes": 1919,
+          "sha256": "8a7e2271fcaad557c4e7933c142db05ad2426549a00c98d3d090a37611cbe997"
+        },
+        {
+          "url": "/world/materials/material-077.json.gz",
+          "bytes": 1916,
+          "sha256": "6ab57eb07e1825340ff8a92c4befd7bc18a4266ce0a72b9202ae548e58448760"
+        },
+        {
+          "url": "/world/materials/material-078.json.gz",
+          "bytes": 1934,
+          "sha256": "ac9f251f6c96340b482bf736d9e37e89dc1cd4dd71da59c66624484c3a14b953"
+        },
+        {
+          "url": "/world/materials/material-079.json.gz",
+          "bytes": 1931,
+          "sha256": "8244ba7cd9f5cb3779c494ded0f3e6831e5e1374548fb647e27a5f8f8f974671"
+        },
+        {
+          "url": "/world/materials/material-080.json.gz",
+          "bytes": 1901,
+          "sha256": "eae75c1153a655d5c67bc77b4328f1db86e1da9f8e4c7d0f3d4fb1be67b1bdfe"
+        },
+        {
+          "url": "/world/materials/material-081.json.gz",
+          "bytes": 1935,
+          "sha256": "5944fb5eefa462f78312277be055554275cda6db5ae652628751d0e0208b750c"
+        },
+        {
+          "url": "/world/materials/material-082.json.gz",
+          "bytes": 1933,
+          "sha256": "a3cf029941fa82e17c3df820a1c7d2f7f8b82bf450c94ea1fbe59f62e5c3fa7a"
+        },
+        {
+          "url": "/world/materials/material-083.json.gz",
+          "bytes": 1938,
+          "sha256": "a6f2ca85519f7a32e9f9ea2eb0abf39c6e9449c9df1309e872a4596d18fa5109"
+        },
+        {
+          "url": "/world/materials/material-084.json.gz",
+          "bytes": 1929,
+          "sha256": "19016ef273becb60729e6c41c2c9b4046e47227712df2783571ef9e9e393945a"
+        },
+        {
+          "url": "/world/materials/material-085.json.gz",
+          "bytes": 1915,
+          "sha256": "5e72fcb87613873fe6e6d5f2ae659964f7d3019ed66951e8ff23cfad61b81c42"
+        },
+        {
+          "url": "/world/materials/material-086.json.gz",
+          "bytes": 1934,
+          "sha256": "1541a80333e51766762d2b335df12093faf8f69cb96999fb2f49c5a78d24a07c"
+        },
+        {
+          "url": "/world/materials/material-087.json.gz",
+          "bytes": 1957,
+          "sha256": "cf7d8a16b3c8588a7517c0f7ccb433c8a8eacfd29ecefb0846bc201bcc05b3ed"
+        },
+        {
+          "url": "/world/materials/material-088.json.gz",
+          "bytes": 1936,
+          "sha256": "ea84be367b6a54b5d550cd545ac17b1806bf2de5610eb79f90279f215b771554"
+        },
+        {
+          "url": "/world/materials/material-089.json.gz",
+          "bytes": 1916,
+          "sha256": "4f905614dda4caadee615f29246712366d6a3995aa571a673fcbba0781a89d00"
+        },
+        {
+          "url": "/world/materials/material-090.json.gz",
+          "bytes": 1923,
+          "sha256": "4534fa926086a567228810e74323d3b9f5e825cf7e6eb7aecd6684779266113c"
+        },
+        {
+          "url": "/world/materials/material-091.json.gz",
+          "bytes": 1935,
+          "sha256": "c00becbe7a5ddd1b6b907201a3494109cf628571491129a27db794731f36abad"
+        },
+        {
+          "url": "/world/materials/material-092.json.gz",
+          "bytes": 1911,
+          "sha256": "b9c6f4cdf85fb563116395ac0c5b2d8422562c523e32cc583aebf8913b41bd13"
+        },
+        {
+          "url": "/world/materials/material-093.json.gz",
+          "bytes": 1915,
+          "sha256": "3f275eb08a7dbf0b95c4a7bb264031f69d43afc9c4a45e8296fa6b872b1ee5c4"
+        },
+        {
+          "url": "/world/materials/material-094.json.gz",
+          "bytes": 1916,
+          "sha256": "99764519a01dbef963ec7531e63fa09c85bb70a13850b63840cbc74bcef0e0ae"
+        },
+        {
+          "url": "/world/materials/material-095.json.gz",
+          "bytes": 1934,
+          "sha256": "91616b20becf9a0d4a1f393b2a032226a62ae4763525f243e7ea74c7f8fc3221"
+        },
+        {
+          "url": "/world/materials/material-096.json.gz",
+          "bytes": 1933,
+          "sha256": "942eb5adb9e4074c3f9120dd5834702d23dc5134557bfd2ee92ae543f4c46fda"
+        },
+        {
+          "url": "/world/materials/material-097.json.gz",
+          "bytes": 1915,
+          "sha256": "d734ae29d724aa6d310d34000596eda7fd829b3e2370daf2d54bd98658e2902e"
+        },
+        {
+          "url": "/world/materials/material-098.json.gz",
+          "bytes": 1937,
+          "sha256": "29632dcfc47216766cdab2e100b4609ea1294f250eba51805f5f2c217551eb8c"
+        },
+        {
+          "url": "/world/materials/material-099.json.gz",
+          "bytes": 1935,
+          "sha256": "41f64b88591d008359f9fd872e6edea6f1146004b547d061edf292355233fd8b"
+        },
+        {
+          "url": "/world/materials/material-100.json.gz",
+          "bytes": 1935,
+          "sha256": "e8ff92e022f23b56ab1057d6da50358058fbdfdae6ea39d19821249432f1966a"
+        },
+        {
+          "url": "/world/materials/material-101.json.gz",
+          "bytes": 1936,
+          "sha256": "113deb429ab5dbe09111ded73ca6393f5f2b9556e67a8ae98b91412e491930c3"
+        },
+        {
+          "url": "/world/materials/material-102.json.gz",
+          "bytes": 1934,
+          "sha256": "0617b88db72ad17ac177dde7bd32bc848b5ba585a50e7c86746f18145786c4c7"
+        },
+        {
+          "url": "/world/materials/material-103.json.gz",
+          "bytes": 1924,
+          "sha256": "28f11d19129f87531e5cd3acd4451a8bcd4bf0c05d2f6f9cd2fd215fa909b098"
+        },
+        {
+          "url": "/world/materials/material-104.json.gz",
+          "bytes": 1957,
+          "sha256": "75a706b69c3545d8cd9073bd6b4b5b1f25c7832c3ac9361f1789773332753ce7"
+        },
+        {
+          "url": "/world/materials/material-105.json.gz",
+          "bytes": 1910,
+          "sha256": "d85665bbfcdf66e379a62f45fd70e3600afd49e38d1dcd5b39006dff2a4dfb47"
+        },
+        {
+          "url": "/world/materials/material-106.json.gz",
+          "bytes": 1929,
+          "sha256": "235f3cef7293a27a95350c2afa0f3f7ff35abc8ff24d01d24a034090b0e5965a"
+        },
+        {
+          "url": "/world/materials/material-107.json.gz",
+          "bytes": 1936,
+          "sha256": "216933c6970dca7b0348a9dbe6a7b2d66c46b965804171cf7751c14a62bec02b"
+        },
+        {
+          "url": "/world/materials/material-108.json.gz",
+          "bytes": 1915,
+          "sha256": "790ff88b12f48b420d78ce8041ad1b71647d9b9e19d23b1d5830419aa9a78eab"
+        },
+        {
+          "url": "/world/materials/material-109.json.gz",
+          "bytes": 1914,
+          "sha256": "df86ed9e9b089f489af853bfa70872d14c7773ebc9685371ba88a541cad0b635"
+        },
+        {
+          "url": "/world/materials/material-110.json.gz",
+          "bytes": 1914,
+          "sha256": "e8da45bb8ea30a4544129801c5d3295e11cd94a0cea1b07014d4bdb059eac592"
+        },
+        {
+          "url": "/world/materials/material-111.json.gz",
+          "bytes": 1915,
+          "sha256": "b5ed11ad4ab42b12e7251f1663f69b0c16b4accf67927e419925b3cd0bf446d8"
+        },
+        {
+          "url": "/world/materials/material-112.json.gz",
+          "bytes": 1914,
+          "sha256": "f6489860b6531d2530fd16fa14c004a3c06fc5dd9299e1c325aee55f8e37c8f8"
+        },
+        {
+          "url": "/world/materials/material-113.json.gz",
+          "bytes": 1924,
+          "sha256": "1b18e2838214d99d604a46fbf30b3bfd5aae88dfb61436e1f04ea50aa96037e6"
+        },
+        {
+          "url": "/world/materials/material-114.json.gz",
+          "bytes": 1934,
+          "sha256": "a73ecd6470c01a91390326a6f639f06de74ec7ba4ef41087220829f36c2fd496"
+        },
+        {
+          "url": "/world/materials/material-115.json.gz",
+          "bytes": 1935,
+          "sha256": "bb573f9b7f79f777857cf88b14f324ad5fc2a9bceb3bc147f5fc970e143fb6d0"
+        },
+        {
+          "url": "/world/materials/material-116.json.gz",
+          "bytes": 1933,
+          "sha256": "b2e03e3a9564192ff2685b485d6d602afa6eb95726343a014ebe4f590afa75ab"
+        },
+        {
+          "url": "/world/materials/material-117.json.gz",
+          "bytes": 1936,
+          "sha256": "e42bce79a59966ba7ce854eac28e82cd35e47b1bcfb2c2850b8117d883deb31e"
+        },
+        {
+          "url": "/world/materials/material-118.json.gz",
+          "bytes": 1915,
+          "sha256": "a921bdea612540d6d2f6a359f3e35521374f464c0c3e828ec1ca64babe8521d8"
+        },
+        {
+          "url": "/world/materials/material-119.json.gz",
+          "bytes": 1927,
+          "sha256": "b582fb676215171c4913a06a45aab1f006046dc62cc60e87817ee95b9f6e9873"
+        },
+        {
+          "url": "/world/materials/material-120.json.gz",
+          "bytes": 1918,
+          "sha256": "bb2141b8bacc5b364dca3a531425abdb0a0a821a2bde5f0e3cbdf3b18f7bd7fa"
+        },
+        {
+          "url": "/world/materials/material-121.json.gz",
+          "bytes": 1960,
+          "sha256": "75c7215d4d3bcad0398000f8281cf043f4632dadcfbdeebcc32f6cc781b02559"
+        },
+        {
+          "url": "/world/materials/material-122.json.gz",
+          "bytes": 2213,
+          "sha256": "8dc9d4ad016205057690898ad48001e64a41746c984d91291bcd981f7a1994fe"
+        },
+        {
+          "url": "/world/materials/material-123.json.gz",
+          "bytes": 1917,
+          "sha256": "a0cc259cf5def5e6cf05fccf40b14704edb347f81cdb485f74029007cd7769c2"
+        },
+        {
+          "url": "/world/materials/material-124.json.gz",
+          "bytes": 1942,
+          "sha256": "0577b493fa3af7be42750c7ced95f05428b6403d3e19cab663d623d6d5adbda9"
+        },
+        {
+          "url": "/world/materials/material-125.json.gz",
+          "bytes": 1925,
+          "sha256": "b34d21ad0151ca0bb090f9fde209ae24c70a6cca8238e7b977a667becd283d9d"
+        },
+        {
+          "url": "/world/materials/material-126.json.gz",
+          "bytes": 1927,
+          "sha256": "5c22ea0ae2396eb7232175511b3ac1516d2b358255f6aca2a0a21b8ac7aef72d"
+        },
+        {
+          "url": "/world/materials/material-127.json.gz",
+          "bytes": 1943,
+          "sha256": "27d80a8874ba401948d4dab32822617a26fa0620058f3aa52790e52725fd68b4"
+        },
+        {
+          "url": "/world/materials/material-128.json.gz",
+          "bytes": 1918,
+          "sha256": "703820be600700933a5c2f6569c6400326075f114969a3c3d1035f6d2c157ae3"
+        },
+        {
+          "url": "/world/materials/material-129.json.gz",
+          "bytes": 1940,
+          "sha256": "49bd39fb1bfdbc534795fb5d12c17c0cd8471eec0b1ed35eec85f231caf084b3"
+        },
+        {
+          "url": "/world/materials/material-130.json.gz",
+          "bytes": 1919,
+          "sha256": "63e501f5b70b95ba8de3401e2abfdbb04bf4e578ea764230fe75e03d7ed0bd4a"
+        },
+        {
+          "url": "/world/materials/material-131.json.gz",
+          "bytes": 1943,
+          "sha256": "c824e75881fb601d905aebc4b790a490650d41cc91e31937b30a75cc334f2587"
+        },
+        {
+          "url": "/world/materials/material-132.json.gz",
+          "bytes": 1922,
+          "sha256": "4a5fae623f0ba85a2e348b2a028b982abe77011008474369b696584eefb4022f"
+        },
+        {
+          "url": "/world/materials/material-133.json.gz",
+          "bytes": 1917,
+          "sha256": "67ee9fd5d18262acb7986d87a640ff4d4b5ae3af2eb8ef8a7cd6546958c71342"
+        },
+        {
+          "url": "/world/materials/material-134.json.gz",
+          "bytes": 1928,
+          "sha256": "4dfe6807d9f30104e95e9ffabdc9d733eeee06dc5979f3ee5562a09bed2de394"
+        },
+        {
+          "url": "/world/materials/material-135.json.gz",
+          "bytes": 1940,
+          "sha256": "07e12f983fb122913d8a83a01283f6438dd70c1a2557f0a3accc9adc6cc16c8b"
+        },
+        {
+          "url": "/world/materials/material-136.json.gz",
+          "bytes": 1929,
+          "sha256": "00c9b69f52c660ffbb728acbf596e10e2ca4a68ff9eb79664890e37b761ca14f"
+        },
+        {
+          "url": "/world/materials/material-137.json.gz",
+          "bytes": 1941,
+          "sha256": "6f335d45dcbf0e174a20a4cf829db5bbf558e2e2bcbc1febcb1c899316fd3a50"
+        },
+        {
+          "url": "/world/materials/material-138.json.gz",
+          "bytes": 1919,
+          "sha256": "131acef1b8f655b3542d8d587de1485ae5d1e2b364d4c1631f1f99c2754c0dc8"
+        },
+        {
+          "url": "/world/materials/material-139.json.gz",
+          "bytes": 1939,
+          "sha256": "38a3bfa5a96ab911ad166c108a0005f3b7c23f57aad59ef7535237bdb344687c"
+        },
+        {
+          "url": "/world/materials/material-140.json.gz",
+          "bytes": 1930,
+          "sha256": "26a73ca09641faa372ac87e73888ed258fef583672dd26ec5bd1f3041a2914d0"
+        },
+        {
+          "url": "/world/materials/material-141.json.gz",
+          "bytes": 1930,
+          "sha256": "e6a552e5ae5a89d9f82b299a1ec2bb06482391b1626fb0a2834bfd7d211a51c6"
+        },
+        {
+          "url": "/world/materials/material-142.json.gz",
+          "bytes": 1936,
+          "sha256": "fa0f27fb7493781fe9273b2687626304ec222b61f719f0995299d35b46011273"
+        },
+        {
+          "url": "/world/materials/material-143.json.gz",
+          "bytes": 1920,
+          "sha256": "10ba26d5b3d195be1ae9f523bf35df1fbea72d791888bf917f5dac849b0ca892"
+        },
+        {
+          "url": "/world/materials/material-144.json.gz",
+          "bytes": 1939,
+          "sha256": "541636e59e0bcf084bb9456eebe3681c16f7cff8084decb784625b199b37cc19"
+        },
+        {
+          "url": "/world/materials/material-145.json.gz",
+          "bytes": 1937,
+          "sha256": "723135635bd76d86e4d03e06461406174aa29664aea8980b0ead17b791e9e7ab"
+        },
+        {
+          "url": "/world/materials/material-146.json.gz",
+          "bytes": 1918,
+          "sha256": "367b65e504125bcc38fd9e4bcdb081b1ef6b4d5d655a7405ef596cede2731ef7"
+        },
+        {
+          "url": "/world/materials/material-147.json.gz",
+          "bytes": 1928,
+          "sha256": "35bf66c212e6971570559097fd0b90b8d418115f5e04208ec8db336204ed292e"
+        },
+        {
+          "url": "/world/materials/material-148.json.gz",
+          "bytes": 1918,
+          "sha256": "8fe476d2fb5751269325203d2c0282fc223c8961404a28dd968383ea6c65e5ff"
+        },
+        {
+          "url": "/world/materials/material-149.json.gz",
+          "bytes": 1920,
+          "sha256": "0337576fbe62c409a9c658fa20607a023b56c59cf7de90c8c5188e0ef1899a66"
+        },
+        {
+          "url": "/world/materials/material-150.json.gz",
+          "bytes": 1927,
+          "sha256": "d4b3e0a2336870581112144a0e5d3b946e1a8bba3b25c9916aa4f036d83397b1"
+        },
+        {
+          "url": "/world/materials/material-151.json.gz",
+          "bytes": 1935,
+          "sha256": "2fedded59b5157d02c51fce100b679fc1132af73d292ed3c5aa763f6aa731752"
+        },
+        {
+          "url": "/world/materials/material-152.json.gz",
+          "bytes": 1930,
+          "sha256": "d616f2bffca1ba83661d0692f05bb64d6592f520d1c38037649514c6372a8996"
+        },
+        {
+          "url": "/world/materials/material-153.json.gz",
+          "bytes": 1920,
+          "sha256": "fcaab8e5f8f334c1c408d4d79fe5acd632745db650eaa9aac91e08234a5b936a"
+        },
+        {
+          "url": "/world/materials/material-154.json.gz",
+          "bytes": 1940,
+          "sha256": "e0cd2bb1e362ed74d1d2458e134f03c1246cc6bd6c6b33607e0c38913555034b"
+        },
+        {
+          "url": "/world/materials/material-155.json.gz",
+          "bytes": 1917,
+          "sha256": "3d5d9fc3c39c4ee318fda8799da2807f3ff7e14ec9d9fad18b41d7cf556ea68d"
+        },
+        {
+          "url": "/world/materials/material-156.json.gz",
+          "bytes": 1931,
+          "sha256": "b738bea716fb3da00a1636d7cf0ba8d79ae623945254b6a8af078eaf49da470c"
+        },
+        {
+          "url": "/world/materials/material-157.json.gz",
+          "bytes": 1928,
+          "sha256": "01805728ba7ff9c4177341f2914ccddc8ad933ac63e21518e49a45eb5ebbd3bc"
+        },
+        {
+          "url": "/world/materials/material-158.json.gz",
+          "bytes": 1922,
+          "sha256": "0404120cdb264c2618bc1d8064662eceee69bd9ab959c4bbfcf7237e085163f7"
+        },
+        {
+          "url": "/world/materials/material-159.json.gz",
+          "bytes": 1920,
+          "sha256": "4c310ab6625f6415f80882d8b6f55e1aa40910bb16d6c8b379e5ce38c35b3309"
+        },
+        {
+          "url": "/world/materials/material-160.json.gz",
+          "bytes": 1917,
+          "sha256": "657f5231f86555fe6ed2291d201138754abc5b6c5970dc005f7ad256550abc02"
+        },
+        {
+          "url": "/world/materials/material-161.json.gz",
+          "bytes": 1915,
+          "sha256": "805dc7b7b0f397fe63095c014943f7478ece288663880b5076dee3959cb32b62"
+        },
+        {
+          "url": "/world/materials/material-162.json.gz",
+          "bytes": 1926,
+          "sha256": "1c0ccdc3aeff06a486a9e758e472521942cd631b31ee20531fc1c600553c6ca5"
+        },
+        {
+          "url": "/world/materials/material-163.json.gz",
+          "bytes": 1915,
+          "sha256": "fd34c83f87c919a39368f5af6e2dd0748e74accc2fa596bbad589a0256440233"
+        },
+        {
+          "url": "/world/materials/material-164.json.gz",
+          "bytes": 1925,
+          "sha256": "c4aeb42fe43c18304d158fb60eb5b1bad3bf61c8359d4fc68fc246eb9f9c8712"
+        },
+        {
+          "url": "/world/materials/material-165.json.gz",
+          "bytes": 1914,
+          "sha256": "cd6da36ca8dcf5fc3d995d0ea7e7b59e980af82dbcc696a04dd544b5129e4c78"
+        },
+        {
+          "url": "/world/materials/material-166.json.gz",
+          "bytes": 1932,
+          "sha256": "048f6e51b5fb3c21762b0067856259e45d013df9e0d194886b775763d891bab0"
+        },
+        {
+          "url": "/world/materials/material-167.json.gz",
+          "bytes": 1936,
+          "sha256": "e821470f34343c6c0cabb458f64ed2f6fe4ea87df1795d1180705baaf0b0b668"
+        },
+        {
+          "url": "/world/materials/material-168.json.gz",
+          "bytes": 1941,
+          "sha256": "1fbc544e12d2e0acc6221a91ac37818da9d0b8095671097eb0c1bd940ee20890"
+        },
+        {
+          "url": "/world/materials/material-169.json.gz",
+          "bytes": 1930,
+          "sha256": "805cd315a41d14b4f67169cfceff56159f71c7dce0e06779a09e88f004a0349f"
+        },
+        {
+          "url": "/world/materials/material-170.json.gz",
+          "bytes": 1129,
+          "sha256": "aa8624c96a48086cf4f6327efc74d0b73f89a6088d83b10fdfe53a63472baff7"
+        },
+        {
+          "url": "/world/textures/texture-000.png",
+          "bytes": 10083,
+          "sha256": "c52a83c996656aa55f015bf6250a3175db52744d919a94fba64c7f7c931c4f0b"
+        },
+        {
+          "url": "/world/textures/texture-001.png",
+          "bytes": 12949,
+          "sha256": "7a0b2fe0c7d819dc284d6fda52c758c24e3e407f8cc31d83339dee9b7d46cfb0"
+        },
+        {
+          "url": "/world/textures/texture-002.png",
+          "bytes": 13798,
+          "sha256": "a4a0b9bcc38639a338631295a36d2b7e7e757399cbaeaf1a8af99089943ad12a"
+        },
+        {
+          "url": "/world/textures/texture-003.png",
+          "bytes": 11456,
+          "sha256": "5a13d074688613591a25504a063adf7b94e9b9be7afa39fa148f852c835a767a"
+        },
+        {
+          "url": "/world/textures/texture-004.png",
+          "bytes": 10555,
+          "sha256": "efc07f2e2f7b1c8de9be72acb8dcc27b788d8242e6568b60b092290d63519031"
+        },
+        {
+          "url": "/world/textures/texture-005.png",
+          "bytes": 14826,
+          "sha256": "ac8ed300d5755e48461d00a2f1ba9280f048c05fe9a85799cf7570048994dfb6"
+        },
+        {
+          "url": "/world/textures/texture-006.png",
+          "bytes": 13724,
+          "sha256": "6df7743df0b0babe5673a69b6b207d28a73925f1f32aec78baa0c07ed01d78a9"
+        },
+        {
+          "url": "/world/textures/texture-007.png",
+          "bytes": 14548,
+          "sha256": "9b2f20527a58579ebd1ffa997d4a4a52c86cf1e32b403cac48132673e3644ddf"
+        },
+        {
+          "url": "/world/textures/texture-008.png",
+          "bytes": 18260,
+          "sha256": "a86f685a4c2224faa12c5b78487e0a6a6df255b43dd1ca1922969e26ea3cb5ee"
+        },
+        {
+          "url": "/world/textures/texture-009.png",
+          "bytes": 17401,
+          "sha256": "e84cfbca38f3f86ecf2cf2d88c8ab1263235c2ad564e0fde37f1c24ce425ffd7"
+        },
+        {
+          "url": "/world/textures/texture-010.png",
+          "bytes": 16785,
+          "sha256": "2b357e56441b544a0d3e5275c9ea34dd1e799f5d471419ef3bee25a94a2f726e"
+        },
+        {
+          "url": "/world/textures/texture-011.png",
+          "bytes": 8035,
+          "sha256": "ff8a28628ecb2bc710c020ca4b9ba02630f1b560485314e406c374eb21071df2"
+        },
+        {
+          "url": "/world/textures/texture-012.png",
+          "bytes": 11057,
+          "sha256": "8f5502e4e857143c50e238e2fe0a1d98e13fa5d295653e4dbd3ace745fbda866"
+        },
+        {
+          "url": "/world/textures/texture-013.png",
+          "bytes": 15220,
+          "sha256": "27b9420d84f30a960ad3d832ee018b25b7e1aff8a5fe0320e1baf70be75ec9c3"
+        },
+        {
+          "url": "/world/textures/texture-014.png",
+          "bytes": 12749,
+          "sha256": "6937f6a0f682f414589273df6083d60632ea5e7d2b02d96f893b7f33d015d3e3"
+        },
+        {
+          "url": "/world/textures/texture-015.png",
+          "bytes": 9557,
+          "sha256": "261462beb292264710d544cf83a4c62137790711819307fbf23f3d44be3e18d1"
+        },
+        {
+          "url": "/world/textures/texture-016.png",
+          "bytes": 7693,
+          "sha256": "ad4998148e49f9bba1a56e4646209e4127f8de55e12fd7bb260612cd59c3f5c6"
+        },
+        {
+          "url": "/world/textures/texture-017.png",
+          "bytes": 15326,
+          "sha256": "7b21954895d088bab4bed6bd95d4dc83ca285404b635c87d178048d826fcf6a8"
+        },
+        {
+          "url": "/world/textures/texture-018.png",
+          "bytes": 10631,
+          "sha256": "3c9a409132f89d349961013081dba6e1c38087bec3e021f629a32a32585200db"
+        },
+        {
+          "url": "/world/textures/texture-019.png",
+          "bytes": 8965,
+          "sha256": "fffb75198fe5953647a629cec31632b0c577e2512628158150137117efac8493"
+        },
+        {
+          "url": "/world/textures/texture-020.png",
+          "bytes": 8472,
+          "sha256": "f38115e38b471d046c4f71e5e22c20d249c08f629ef52b96dd2c013ce1320dc8"
+        },
+        {
+          "url": "/world/textures/texture-021.png",
+          "bytes": 6564,
+          "sha256": "329723d27b6df82090a51fb5cdf5110dce792692a7f733dd0bf441c53ffd1ac8"
+        },
+        {
+          "url": "/world/textures/texture-022.png",
+          "bytes": 10455,
+          "sha256": "480b1634216a2f50e68a9ed52b360d7d4b010bff83648a5758855d28d927a0df"
+        },
+        {
+          "url": "/world/textures/texture-023.png",
+          "bytes": 16381,
+          "sha256": "5e4753433796799fccbf740377187d4afcb3ef6b5128a85250895ada42f83a7e"
+        },
+        {
+          "url": "/world/textures/texture-024.png",
+          "bytes": 20435,
+          "sha256": "b559eadd2372225378103d8c0abaa5776aa97da1e799c6275cec20db04caee90"
+        },
+        {
+          "url": "/world/textures/texture-025.png",
+          "bytes": 12769,
+          "sha256": "280d214334f1c5cf61c7c2550be9b02dbcafb752ee4ccb0f0bcaa91450f616e6"
+        },
+        {
+          "url": "/world/textures/texture-026.png",
+          "bytes": 14854,
+          "sha256": "1e9316e3b08682c0839b0a64f5cd8836933174808b52b983b7777c67d9d80d57"
+        },
+        {
+          "url": "/world/textures/texture-027.png",
+          "bytes": 15333,
+          "sha256": "83fe0b1aa2404fdeb77c812dd48356385746c538dc6324d69e86dc7da891d969"
+        },
+        {
+          "url": "/world/textures/texture-028.png",
+          "bytes": 14644,
+          "sha256": "f1b5be1039d242c9036068be6672e87d1e8ada50fd134619e644a1099d43980f"
+        },
+        {
+          "url": "/world/textures/texture-029.png",
+          "bytes": 13018,
+          "sha256": "4b972e27320b68013e5421d0edaa7177eff9b8ad566eb00253e7c6fe04f92595"
+        },
+        {
+          "url": "/world/textures/texture-030.png",
+          "bytes": 16151,
+          "sha256": "a5c7124683be654a176221ff37fcaaa115b7e310499ef1e3ce65e9f62bd6aa5e"
+        },
+        {
+          "url": "/world/textures/texture-031.png",
+          "bytes": 16935,
+          "sha256": "d15cb365ecc08bda60acb144f2636a2a762407d1d96572f76624211e6e4b2c14"
+        },
+        {
+          "url": "/world/textures/texture-032.png",
+          "bytes": 21873,
+          "sha256": "2dc3c58f5489e81e03cfabcc4b9d984350863316d0323b9c1ec1590dc72370cb"
+        },
+        {
+          "url": "/world/textures/texture-033.png",
+          "bytes": 16852,
+          "sha256": "e84a439c7ae72e7b00423350219d6ecca2d3c90f3bd60c2de9316b36af9fe814"
+        },
+        {
+          "url": "/world/textures/texture-034.png",
+          "bytes": 13386,
+          "sha256": "66425cfb97b2f0f26dc83b593549b48e8ae536663268e67daf76e2dab1c107bc"
+        },
+        {
+          "url": "/world/textures/texture-035.png",
+          "bytes": 17777,
+          "sha256": "20f38c5c65af29ce52af981bac73202f5051997e97c5a087e7cc9b0f15cad1c2"
+        },
+        {
+          "url": "/world/textures/texture-036.png",
+          "bytes": 11333,
+          "sha256": "416c24a73d37cacdb8793d9d98b1841eb6845ff83d2cfecf2223483ac774a4c2"
+        },
+        {
+          "url": "/world/textures/texture-037.png",
+          "bytes": 17125,
+          "sha256": "6ace3b9aaae06e752e1b3b8af4114a28e88a88ba9407798da0981a10999720ba"
+        },
+        {
+          "url": "/world/textures/texture-038.png",
+          "bytes": 18085,
+          "sha256": "15f519bd3d14febbdd5704ba1a57d0af653a88ee6e19354a3194d9fc62c3b50c"
+        },
+        {
+          "url": "/world/textures/texture-039.png",
+          "bytes": 15789,
+          "sha256": "c8c07c3872227fd4bd8ac94b7f6b35c2c61fede5ad8013b4a7eff407be2ec75d"
+        },
+        {
+          "url": "/world/textures/texture-040.png",
+          "bytes": 14850,
+          "sha256": "8add2ff8bc9f88b4bf1fa312e6ddaa8ed27e64e69c68b771fc9da24c65dccb87"
+        },
+        {
+          "url": "/world/textures/texture-041.png",
+          "bytes": 11798,
+          "sha256": "3d5e9622939fa4dc982731e12c4bdb08c201b2f87c25c93e8abc7379025ec3fe"
+        },
+        {
+          "url": "/world/textures/texture-042.png",
+          "bytes": 15547,
+          "sha256": "8d50b5321f90f7a382b3abf5ba726b6069e68f66f925485b58f035014452a773"
+        },
+        {
+          "url": "/world/textures/texture-043.png",
+          "bytes": 27459,
+          "sha256": "690f7ada0456d8619cb68c76d08a004b30440b48653dd547afd4aacb67010cb9"
+        },
+        {
+          "url": "/world/textures/texture-044.png",
+          "bytes": 29136,
+          "sha256": "c9f8cb8e69a9a5968318352d71ad1ca0b0b9d2a7887780b63ac2279af472e60e"
+        },
+        {
+          "url": "/world/textures/texture-045.png",
+          "bytes": 71636,
+          "sha256": "4511a49695581d4d279eb426b654281aec95790d52b1466cc3fca78db97a9d3b"
+        }
+      ]
+    },
+    "methods": {
+      "control": "Physical keyboard/mouse events; closed-loop steering reads live vehicle state. Phase transitions place a vehicle with explicit test hooks; creative controls set weather/wanted/invulnerability, save/load and fast travel. Every hook placement/recovery is logged.",
+      "frameTimes": "Raw milliseconds between Babylon onAfterRender observer callbacks. Includes running creative overlay rendering; map/pause rendering also retained and marked paused in resource samples. This measures delivered render callbacks, not display presentation or GPU execution time.",
+      "memory": "CDP Performance JSHeapUsedSize/TotalSize and DOM counters; Babylon live mesh/body/material/multiMaterial/texture/geometry counts. No forced GC. GPU allocation and whole-process RSS unavailable in this sandbox.",
+      "concurrency": "One harness GPU browser at a time; other agents may edit source or run CPU checks. Served build stays frozen."
+    },
+    "browser": "152.0.7977.83",
+    "gpu": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": "",
+      "description": ""
+    },
+    "measurementStartedUTC": "2026-09-09T15:52:54.610Z"
+  },
+  "sample": {
+    "utc": "2026-09-09T16:22:59.657Z",
+    "elapsed": 1804.988147083,
+    "phase": "chunk-travel-save-load-character-switch",
+    "snapshot": {
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        208,
+        1.7850499162356086,
+        -196.37666666666644
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 208,
+          "z": -196.37666666666644
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 81,
+      "shots": 30,
+      "props": 53,
+      "destroyed": [
+        "creative-prop-1788970375240-1",
+        "creative-prop-1788970395460-4",
+        "creative-prop-1788970435859-10",
+        "creative-prop-1788970456292-13",
+        "creative-prop-1788970496857-19",
+        "creative-prop-1788970517457-22",
+        "creative-prop-1788970517766-23",
+        "creative-prop-1788970559738-28",
+        "creative-prop-1788970580287-31",
+        "creative-prop-1788970580488-32",
+        "creative-prop-1788970621237-37",
+        "creative-prop-1788970642069-40"
+      ],
+      "paused": false,
+      "simTime": 1806.0499999986862,
+      "meshes": 2488,
+      "activeMeshes": 421,
+      "physicsBodies": 269,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1093,
+        "totalColliders": 249,
+        "residentColliders": 150,
+        "cpuGeometryBytes": 55986064,
+        "meshLoads": 13415,
+        "meshDisposals": 12322,
+        "colliderLoads": 26839,
+        "colliderDisposals": 26689,
+        "pendingMeshes": 0,
+        "activeAnchors": 5,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 1976,
+        "fetchedBytes": 157630040,
+        "residentMaterials": 168,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 693,
+        "packagesEvicted": 642,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 8.931152832300927e-27,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 40.01600640160738,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": []
+    },
+    "counts": {
+      "meshes": 2488,
+      "activeMeshes": 421,
+      "bodies": 269,
+      "materials": 450,
+      "multiMaterials": 1,
+      "textures": 160,
+      "geometries": 2471,
+      "skeletons": 35,
+      "transformNodes": 94,
+      "observers": 1,
+      "props": 53,
+      "debris": 60,
+      "grenades": 0,
+      "ragdolls": 0,
+      "vehicles": 16,
+      "peds": 30,
+      "officers": 4
+    },
+    "pageMemory": {
+      "used": 905751267,
+      "total": 986182039,
+      "limit": 4395630592
+    },
+    "cdp": {
+      "heapUsed": 697246652,
+      "heapTotal": 777617408,
+      "nodes": 1072,
+      "documents": 1,
+      "listeners": 176,
+      "taskDuration": 1501.196362,
+      "layoutCount": 6724
+    }
+  },
+  "events": 80,
+  "frames": 102400
+}

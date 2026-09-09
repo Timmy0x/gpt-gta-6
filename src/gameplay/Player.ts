@@ -130,6 +130,7 @@ export class Player {
   }
   private seatOffset() {
     const v = this.vehicle!;
+    if (v.model.seat) return v.model.seat.clone();
     if (v.kind === "motorcycle") return new Vector3(0, -0.7, -0.18);
     if (v.kind === "boat") return new Vector3(-0.42, -0.3, -0.28);
     if (v.kind === "plane") return new Vector3(-v.tuning.width * 0.21, -0.78, -0.03);
@@ -231,7 +232,7 @@ export class Player {
       this.model.pose(
         this.transitioning ? "mount" : "seated",
         this.mountTime / 0.65,
-        this.vehicle.kind === "motorcycle" ? "rider" : ["coupe", "sedan", "police", "boat"].includes(this.vehicle.kind) ? "low" : "upright",
+        this.vehicle.kind === "motorcycle" ? "rider" : this.vehicle.kind === "concept" ? "reclined" : ["coupe", "sedan", "police", "boat"].includes(this.vehicle.kind) ? "low" : "upright",
       );
       if (this.mountTime >= 0.65 && this.transitioning) {
         this.transitioning = false;

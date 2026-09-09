@@ -33,6 +33,7 @@ import {
 } from "./handling";
 import { createVehicleModel, type VehicleModel } from "./models";
 import { VehicleEquipment } from "./VehicleEquipment";
+import { ConceptCarAssets } from "./ConceptCar";
 import {
   validVehicleId,
   validateVehicleSnapshot,
@@ -105,6 +106,7 @@ interface PendingImpact {
 export class VehicleSystem {
   readonly list: Vehicle[] = [];
   readonly equipment: VehicleEquipment;
+  readonly concept: ConceptCarAssets;
   waterLevel = -0.35;
   wetness = 0;
   onCrash?: (vehicle: Vehicle, severity: number, point: Vector3) => void;
@@ -115,9 +117,15 @@ export class VehicleSystem {
   private ray = new PhysicsRaycastResult();
   private physics: PhysicsEngineV2;
 
-  constructor(private ctx: BuildContext) {
+  constructor(private ctx: BuildContext, conceptSource?: Uint8Array, skipAssetMaterials = false) {
     this.physics = ctx.scene.getPhysicsEngine() as PhysicsEngineV2;
     this.equipment = new VehicleEquipment(ctx.scene);
+    this.concept = new ConceptCarAssets(ctx, conceptSource, skipAssetMaterials);
+  }
+
+  async prepareModel(kind: VehicleKind): Promise<void> {
+    if (!Object.hasOwn(VEHICLE_TUNING, kind)) throw new TypeError("Unknown vehicle kind");
+    if (kind === "concept") await this.concept.prepare();
   }
 
   spawn(
@@ -159,7 +167,7 @@ export class VehicleSystem {
     } while (this.runtime.has(id));
     const seed = appearanceSeed ?? this.sequence,
       t = VEHICLE_TUNING[kind],
-      model = createVehicleModel(this.ctx, kind, this.sequence, seed),
+      model = kind === "concept" ? this.concept.create(this.sequence) : createVehicleModel(this.ctx, kind, this.sequence, seed),
       root = model.root;
     root.name = id;
     root.metadata.vehicleId = id;
@@ -215,6 +223,7 @@ export class VehicleSystem {
         ),
       );
     }
+    if (kind === "concept") addShape(new Vector3(0, 0.36, -0.16), new Vector3(1.5, 0.38, 1.9));
     if (kind === "plane") {
       addShape(new Vector3(0, 0.1, -0.15), new Vector3(10.5, 0.15, 1.0));
       addShape(new Vector3(0, 0.2, -2.55), new Vector3(0.65, 0.35, 2.9));
@@ -260,7 +269,7 @@ export class VehicleSystem {
       forwardSpeed: 0,
     };
     const originals = new Map<Mesh, number[]>();
-    for (const panel of model.panels) {
+    for (const panel of model.deformation ? [] : model.panels) {
       const positions = panel.getVerticesData(VertexBuffer.PositionKind);
       if (positions) originals.set(panel, Array.from(positions));
     }
@@ -328,7 +337,7 @@ export class VehicleSystem {
         Quaternion.FromEulerVector(v.root.rotation);
     const damage: VehicleDamageState = {
       schemaVersion: 1,
-      panels: v.model.panels.map((panel, slot) => ({
+      panels: (v.model.deformation ? [] : v.model.panels).map((panel, slot) => ({
         slot,
         vertices: Array.from(
           panel.getVerticesData(VertexBuffer.PositionKind) ?? [],
@@ -340,6 +349,7 @@ export class VehicleSystem {
       lightsEnabled: v.model.lights.map((mesh) => mesh.isEnabled()),
       bumpersEnabled: v.model.bumpers.map((mesh) => mesh.isEnabled()),
       doors: v.model.doors.map(door => ({ enabled: door.mesh.isEnabled(), angle: door.angle })),
+      ...(v.model.deformation ? { deformation: v.model.deformation.serialize() } : {}),
     };
     return {
       schemaVersion: 1,
@@ -415,7 +425,8 @@ export class VehicleSystem {
   private restoreDamage(v: Vehicle, state: VehicleDamageState): void {
     const m = v.model;
     if (
-      state.panels.length !== m.panels.length ||
+      state.panels.length !== (m.deformation ? 0 : m.panels.length) ||
+      (state.deformation !== undefined && !m.deformation) ||
       state.tiresDamaged.length !== m.wheels.length ||
       state.windowsEnabled.length !== m.windows.length ||
       (state.lightsEnabled.length !== m.lights.length && !(v.kind === "motorcycle" && state.lightsEnabled.length === 0)) ||
@@ -423,6 +434,7 @@ export class VehicleSystem {
       (state.doors !== undefined && state.doors.length !== m.doors.length)
     )
       throw new TypeError("Vehicle damage layout does not match its model");
+    if (m.deformation && state.deformation) m.deformation.restore(state.deformation);
     for (const part of state.panels) {
       const mesh = m.panels[part.slot];
       if (
@@ -447,7 +459,7 @@ export class VehicleSystem {
     state.tiresDamaged.forEach((damaged, i) => {
       const wheel = m.wheels[i];
       wheel.damaged = damaged;
-      wheel.tire.scaling.set(damaged ? 0.68 : 1, 1, damaged ? 0.75 : 1);
+      wheel.tire.scaling.set(wheel.rolling ? 1 : damaged ? 0.68 : 1, wheel.rolling && damaged ? 0.68 : 1, damaged ? 0.75 : 1);
     });
     state.windowsEnabled.forEach((enabled, i) =>
       m.windows[i].setEnabled(enabled),
@@ -648,8 +660,11 @@ export class VehicleSystem {
         v.skidding,
         Math.abs(lateralSpeed) + (input.handbrake ? v.speed * 0.2 : 0),
       );
-      wheel.tire.rotation.x += (longSpeed * dt) / t.wheelRadius;
-      wheel.rim.rotation.x = wheel.tire.rotation.x;
+      if (wheel.rolling) wheel.rolling.rotation.x += (longSpeed * dt) / t.wheelRadius;
+      else {
+        wheel.tire.rotation.x += (longSpeed * dt) / t.wheelRadius;
+        wheel.rim.rotation.x = wheel.tire.rotation.x;
+      }
     }
     // Parking friction is an axle force, not a velocity/position override.
     if (
@@ -829,7 +844,8 @@ export class VehicleSystem {
       impact,
       Matrix.Invert(v.root.getWorldMatrix()),
     );
-    for (const panel of v.model.panels) {
+    if (v.model.deformation) v.model.deformation.damage(amount, local);
+    for (const panel of v.model.deformation ? [] : v.model.panels) {
       if (!panel.isEnabled()) continue;
       const positions = panel.getVerticesData(VertexBuffer.PositionKind),
         indices = panel.getIndices();
@@ -889,7 +905,7 @@ export class VehicleSystem {
       !closestWheel.damaged
     ) {
       closestWheel.damaged = true;
-      closestWheel.tire.scaling.set(0.68, 1, 0.75);
+      closestWheel.tire.scaling.set(closestWheel.rolling ? 1 : 0.68, closestWheel.rolling ? 0.68 : 1, 0.75);
     }
     if (v.health < 58 && amount > 9) {
       const bumper = v.model.bumpers
@@ -923,7 +939,8 @@ export class VehicleSystem {
     clone.rotationQuaternion = rotation;
     clone.scaling.copyFrom(scaling);
     clone.metadata = { debris: true };
-    for (const child of clone.getChildMeshes()) child.metadata = { debris: true };
+    clone.makeGeometryUnique();
+    for (const child of clone.getChildMeshes()) { child.metadata = { debris: true }; if (child instanceof Mesh) child.makeGeometryUnique(); }
     part.setEnabled(false);
     clone.setEnabled(true);
     clone.computeWorldMatrix(true);
@@ -958,6 +975,7 @@ export class VehicleSystem {
     if (!runtime || runtime.vehicle !== v) return;
     v.health = 100;
     v.engineRunning = true;
+    v.model.deformation?.reset();
     for (const [panel, original] of runtime.originals) {
       panel.updateVerticesData(VertexBuffer.PositionKind, original);
       const normals: number[] = [];
@@ -1049,6 +1067,7 @@ export class VehicleSystem {
   dispose(): void {
     this.equipment.dispose();
     for (const v of [...this.list]) this.remove(v);
+    this.concept.dispose();
     for (const d of this.debris) {
       d.aggregate.dispose();
       d.mesh.dispose();

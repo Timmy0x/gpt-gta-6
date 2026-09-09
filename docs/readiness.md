@@ -1,4 +1,4 @@
-# Third playable checkpoint
+# Detailed-car playable checkpoint
 
 **Ready for further playtesting; the full requested goal remains incomplete.** The user authorized frequent commits and pushes on 2026-09-09. Tested checkpoints are committed and pushed to origin/main. Hosting and deployment remain unconfigured.
 
@@ -12,7 +12,7 @@ Creative controls add material/barrier placement, ignition/extinction and comple
 
 ## Verification
 
-- **94 tests pass**, including actual Havok movement, vehicles, officers, grenades, barrier/destruction/navigation, ragdoll recovery/reset, streaming lifecycle and resource limits; input, interpolation, routing and malformed-save tests also pass.
+- **97 tests pass**, including actual Havok movement, vehicles, officers, grenades, barrier/destruction/navigation, ragdoll recovery/reset, streaming lifecycle and resource limits; input, interpolation, routing and malformed-save tests also pass.
 - TypeScript and production build pass. The large initial JS bundle still triggers a size warning.
 - Combined normal-control WebGPU audit at1920×1080 verifies visible seated driving (~23m/s), service braking/safe exit, map search/road route, pistol destruction of a physics crate, grenade flight/detonation, conserved ammunition, saved barrier/civilian/inventory restoration and night rain. Both final WebGPU and WebGL2 combined audits pass eight stages with zero errors, including grenade timers while creative is open. Consult `combined-webgpu.json`, `combined-webgl.json` and their logs.
 - Independent WebGL2 police audits verify physical arrival, visible dismount and compliant BUSTED/recovery at all five levels. A separate normal threat run verifies officer gunfire (health100→59.5), four tactical officers and a helicopter reaching58.27m. Initial failed mouse attempts are preserved; the first-press compatibility issue has since been fixed with pointer events. The third checkpoint adds production-world Havok regressions and fixes for the observed corner blockage and foot-route oscillation; wider traffic/pursuit behavior still needs work.
@@ -24,7 +24,7 @@ Browser evidence is under `docs/evidence/`. Initial harness mistakes (wrong proj
 
 Only a small part of the planned Leonida map is built. The other five regions and most of Vice City remain unbuilt. Procedural assets remain visibly stylized and do not satisfy the requested final realism. Current police/tactical, weapon, melee/reload/door/passenger, swimming/water-region, service/activity and acoustic systems remain partial implementations, not GTA VI parity.
 
-Native Babylon world packages now load on demand, releasing their CPU and GPU geometry and unused materials when evicted. Immediate readiness loads 12 of 84 packages in the CPU HTTP harness; background loading and active traffic bring in additional local packages. The original procedural authoring code runs at export time. The initial application JavaScript remains large. Browser localStorage is still quota-limited. The 30-minute mixed traversal/pursuit/destruction stability and memory gate has not run to completion. Short near60FPS observations cannot establish that gate or the1080p median60/slowest1%30FPS target.
+Native Babylon world packages now load on demand, releasing their CPU and GPU geometry and unused materials when evicted. Immediate readiness loads 12 of 84 packages in the CPU HTTP harness; background loading and active traffic bring in additional local packages. The original procedural authoring code runs at export time. The initial application JavaScript remains large. Browser localStorage is still quota-limited. The third-checkpoint 30-minute mixed traversal/pursuit/destruction run completed without browser errors or transport recoveries, but failed the performance target: 59.52 median FPS, 19.45 slowest-1% FPS, and a 1026.3 ms maximum stall. Heap ranged 188–984 MB and ended at 697 MB; bounded long-run retention remains unproven. Concurrent CPU work is a recorded confounder. Profile the save/load stalls and retention, then repeat the target gate without competing work.
 
 Read `goal-objective.md`, `feature-index.md`, the dedicated implementation design documents and `continuation.md` before continuing. This checkpoint preserves a playable base for the full outstanding scope.
 
@@ -38,8 +38,14 @@ The creative Coastal Reserve annex has four military-marked guards, an animated 
 
 The parent checkpoint-3 audits each pass 12 stages on WebGPU and WebGL2 at 1920×1080 with zero unexpected errors, including entry/exit doors, lights, paid garage paint, failed-destination preservation, visitor entry, warning and three-star response. Final WebGL2 captures also verify visible annex scenery and nighttime lighting. Earlier independent WebGL review found the export and seated-pose defects, and its failures remain preserved.
 
-A 15m51s mixed baseline on ce382f3 retained 57,006 frame samples with no browser errors, but stopped on an invalid aircraft recovery loop. Its 59.88 median FPS and 45.55 slowest-1% FPS do not establish a completed 30-minute gate or the performance of this changed renderer. The harness and evidence are documented in performance-stability.md. A fresh 30-minute run remains outstanding.
+A 15m51s mixed baseline on ce382f3 retained 57,006 frame samples with no browser errors, but stopped on an invalid aircraft recovery loop. Its 59.88 median FPS and 45.55 slowest-1% FPS do not establish a completed 30-minute gate or the performance of this changed renderer. The harness and evidence are documented in performance-stability.md. A later complete third-checkpoint run is recorded above and in performance-stability.md; it failed the performance targets.
 
-Licensed source artifacts now include an ODbL Miami Beach extract (1,028 building and 1,305 road/path features) with conversion/validation, plus a prepared CC-BY detailed concept-car GLB with excluded logos removed and attribution. Neither replaces runtime geography/vehicles yet; see geodata.md and car-concept-adapter.md.
+Licensed source artifacts now include an ODbL Miami Beach extract (1,028 building and 1,305 road/path features) with conversion/validation, plus a prepared CC-BY detailed concept-car GLB with excluded logos removed and attribution. The detailed car is now a drivable runtime option; OSM data does not yet replace runtime geography. See geodata.md and concept-vehicle-design.md.
 
 The existing combined normal-control combat/save/load loop was rerun against the final third-checkpoint production build on both WebGPU and WebGL2: all eight stages pass on each backend with zero browser errors. The harness now waits for asynchronous fast travel and saved-world preparation. Evidence is preserved separately as `checkpoint-3-combined-*`. These functional checks do not establish the long-run performance target.
+
+## Detailed-car integration
+
+Aster Concept is available through the Sandbox vehicle selector. Its verified 11.27 MB GLB loads on demand, with retry feedback and saved-game preparation. The adapted car retains a detailed cabin, glass, tire/rim/brake geometry, curved bodywork and PBR materials. Four-wheel Havok suspension, neutral steering/rolling frames, animated detachable doors and covers, headlight priority, paid garage paint/repair and bounded lattice deformation are integrated. Both character variants use a reclined seat pose. In-game credits retain the source author, CC BY 4.0 license and modification disclosure.
+
+Parent normal-control audits on WebGPU and WebGL2 each pass 13 stages at 1920×1080 with zero unexpected errors: failed download preservation/retry, entry and character switching, actual driving, night lights, physical crash/deformation, repair and save restoration, fresh continuation, paid garage paint and credits. CPU material verification covers eight stable instance creation/removal cycles with shared immutable textures. Evidence is in concept-*.json and screenshots. This car has no LOD yet and is limited to four explicit instances; it is not used by ambient traffic. Character/world realism and the user-reported aircraft and respawn problems remain active work.

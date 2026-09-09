@@ -152,6 +152,21 @@ export const VEHICLE_TUNING: Record<VehicleKind, VehicleTuning> = {
     suspensionTravel: 0.52,
     suspensionCompression: 0.15,
   },
+  concept: {
+    label: "Aster Concept",
+    mass: 1630,
+    width: 2.23,
+    length: 4.61,
+    height: 0.54,
+    wheelbase: 2.8,
+    wheelRadius: 0.384,
+    engineForce: 15800,
+    topSpeed: 66,
+    grip: 1.38,
+    steering: 0.48,
+    suspensionTravel: 0.55,
+    suspensionCompression: 0.2,
+  },
 };
 
 export const clamp = (value: number, min: number, max: number) =>

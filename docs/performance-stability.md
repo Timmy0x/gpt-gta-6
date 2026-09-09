@@ -98,3 +98,27 @@ For positive raw frame intervals sorted ascending: median FPS is 1000 divided by
 - The corrected [121.99-second all-phase smoke](evidence/stability/smoke-2026-09-09T12-20-57-630Z/) recorded 7,119 intervals and no browser errors. Its median was 59.88 FPS and 1% low was 13.91 FPS, including a maximum 2,013.9 ms interval. It establishes that the short workload can execute, not the long stability target.
 
 A fresh 30-minute measurement will use the final tested production artifact on port 4176 after the sustained-flight check and after other GPU browsers close. Its fingerprint, exact start/end, complete workload and final resource trends must be reported separately; this old baseline must not be relabeled as evidence for later source changes.
+
+
+## Completed 30-minute baseline on 1387665
+
+The frozen third checkpoint completed at 2026-09-09T16:22:59Z. Evidence is in `evidence/stability/baseline-2026-09-09T15-52-42-401Z/`. The run retained 102,400 raw frame intervals and 181 resource samples over 1,805.53 seconds, with zero browser errors and unchanged served-build fingerprints. The six phases covered driving/pursuit, boat navigation, helicopter traversal, fixed-wing flight, grenades/fire/five-star response, then repeated fast travel/save/load/character changes. All four transport phases completed without recovery hooks; their initial placement remains explicitly recorded as a test fixture.
+
+**The performance gate failed:** 59.52 FPS median, 19.45 FPS slowest-1% mean, 56.73 FPS overall mean and 1,026.3 ms maximum frame interval. Targets remain 60 FPS median and 30 FPS slowest-1% at 1920×1080/high. The reciprocal-p99 figure of 32.47 FPS is not the slowest-1% result and must not be substituted for it.
+
+| Phase | Median FPS | Slowest 1% FPS | Worst frame, ms |
+|---|---:|---:|---:|
+| Ground traversal and pursuit | 58.82 | 17.42 | 269.7 |
+| Boat/coast | 59.88 | 30.40 | 130.6 |
+| Helicopter | 59.52 | 25.00 | 120.0 |
+| Fixed wing | 59.52 | 20.88 | 135.2 |
+| Destruction and pursuit | 59.52 | 23.91 | 155.2 |
+| Travel and save/load | 59.52 | 12.00 | 1,026.3 |
+
+The largest stall occurred immediately before the save/load completion event at approximately 1,610 seconds. Many other 200–417 ms intervals also coincide with saved-state restoration. This is timing correlation, not yet a CPU-profile attribution. Geometry package parsing, resource reconstruction, physics replacement and shader warmup need separate profiling before assigning causes.
+
+Observed JS heap ranged from 188 to 984 MB, starting near 190 MB and ending near 697 MB. Natural collections occurred; no forced GC was used. The final workload also retained 53 props (18 initially), 60 short-lived debris pieces, 16 vehicles, 30 civilians and four annex guards. Counts remained under the configured safety limits, but the higher post-collection heap across later phases does not prove a settled long-run memory bound. Further repeated-workload retention checks remain required. Whole-process RSS and GPU memory were not measured.
+
+Hardware/browser/backend were Apple M5 Pro (15 CPU/16 GPU cores), 24 GB RAM, macOS 26.5.1, Chrome 152.0.7977.83, WebGPU at 1920×1080/high. Exactly one game GPU browser ran. The parent edited code and ran CPU tests/builds and a CPU-only NullEngine asset loader during parts of the session; those activities are a host-load confounder. Preserve this failed measurement and rerun final performance checks without competing build/test jobs after the identified stalls are addressed.
+
+This baseline predates the detailed Aster Concept runtime integration. It demonstrates completion of the mixed stability route on 1387665, not final visual fidelity, full regional coverage, the performance target, or the detailed car's long-run behavior.

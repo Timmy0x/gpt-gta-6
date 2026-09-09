@@ -1,0 +1,33 @@
+# Aster Concept runtime vehicle
+
+Aster Concept is a licensed, adapted concept-car model. It is not a verified GTA VI vehicle replica. The underlying Car Concept asset, authorship, CC BY 4.0 terms, excluded-logo removal and exact binary hashes are documented in `car-concept-adapter.md` and `public/vehicles/concept/ATTRIBUTION.md`. In-game Asset Credits provides the author, license, source and modification disclosure.
+
+## Loading and ownership
+
+The 11,271,376-byte prepared GLB loads only when the player explicitly spawns this class or continues a save containing it. The first normal neighborhood launch does not require that download. The loader verifies its SHA-256, registers the installed Babylon glTF loader lazily, and shares one asset cache. Failed downloads leave the live sandbox unchanged and permit another attempt. Loading feedback remains visible while input and simulation are paused. Saved worlds prepare required vehicle assets before replacing entities. The creative interface permits at most four detailed cars; ambient traffic continues using its existing lighter models.
+
+`ConceptCarAssets` normalizes the glTF hierarchy once, preserving the loader's coordinate conversion and negative-determinant winding correction. World-space source transforms are captured before flattening. Doors and front/rear clamshell covers retain their complete child hierarchies. Four wheel frames remove the source's 30-degree steering pose while preserving spoke orientation, then steer around Y and roll the full tire/rim/disc assembly around X. Brake calipers steer with the wheel and do not roll.
+
+Body parts share cached geometry until deformation needs a private copy. Paint, headlight and brake-light materials are independent per vehicle. All immutable texture channels, including PBR extensions, are rebound to the source cache; temporary wrappers created by Babylon material cloning are disposed. Removing a vehicle releases its private meshes, materials and deformation buffers without deleting the shared textures. The fixed cache is released with the vehicle system. Unused source material variants are not cloned into each car.
+
+## Physics and interactions
+
+Project-authored tuning uses 1,630 kg mass, a 2.8 m wheelbase, approximately 1.96 m track, 0.384 m tire radius, 15,800 N engine force, 66 m/s governed forward speed and 0.55 m suspension travel. These are game defaults rather than specifications of an actual production vehicle. The body origin is rebased by (0, -0.6, -0.085) metres. Compound box shapes represent the chassis and cabin; the render mesh does not become a dynamic triangle-mesh collider.
+
+The existing Havok ray suspension, friction circle, longitudinal/lateral forces, braking, skidding, impact damage and recovery drive this class. Two door hinges open during entry/exit. Severe local damage can detach a complete door, and sufficiently damaged front/rear covers detach with their attached lamps and glazing. Detached components receive independent Havok collision and copied geometry so later repair cannot alter the fragments. Six glazing components and four individual lamp lenses retain separate save slots. Punctures flatten the imported tire in its radial plane and reduce grip. Headlight beams and brake emission use the existing bounded equipment system.
+
+Jason and Lucia use a reclined overlay: thighs -1.75 radians, calves 0.25 radians, spine -0.38 radians, with the driver root at (-0.50, -1.30, 0.10) metres. CPU skinning checks place the full visible body above Y=-0.49 m and the head below Y=0.51 m within the roof's longitudinal span. These bounds do not establish a complete hand-to-control, seat-contact or entry-animation match.
+
+## Bounded deformation state
+
+Dense exterior body parts use a 5×3×9 chassis-space deformation lattice. Impact proximity changes its 405 scalar displacement coordinates; trilinear interpolation deforms the original mesh vertices and normals are recalculated. Each coordinate is clamped to ±0.65 m. This is authored rigid-chassis deformation, not full soft-body simulation. Attached door and body collision proxies do not dynamically match every dent.
+
+Saves contain that small lattice plus component states rather than all dense vertices. Procedural vehicle saves retain their original vertex-array format. Invalid lattice size or values are rejected before replacing an existing live vehicle. Repair restores the original lattice, components and mechanical health while keeping custom paint.
+
+## Verification status
+
+All 97 current behavior tests and the production build pass. The real Havok concept-car tests verify neutral wheel bounds, four-wheel suspension, acceleration (25.90 m/s in the final driving/turn sample), right steering, animated glazing, independent physical door fragments, isolated dents, a damaged-car save of approximately 6 KB, five stable restore cycles, malformed-state rejection and full repair. Both character variants pass the reclined skinning clearance test.
+
+A separate Chrome run with `--disable-gpu` and Babylon NullEngine loads actual embedded textures and glTF materials. It reports 120 child meshes, 213,347 triangles, 23 used materials, 32 shared active texture references, and eight create/remove cycles with unchanged scene mesh/material/texture/geometry/transform counts. The first development attempt discovered a Vite lazy-dependency reload; explicit dependency prebundling resolves it with a fresh cache. The initial material-clone attempt revealed separate texture wrappers; explicit immutable-channel sharing resolves their ownership and disposal. This is CPU loader evidence, not a GPU visual or performance claim.
+
+Parent normal-control audits on WebGPU and WebGL2 each pass 13 stages at 1920×1080, with zero unexpected browser errors. Normal input verifies download failure/retry, entry, both seated characters, driving at 23.83/23.58 m/s, headlights, actual building impact with saved lattice damage, repair and save reload, fresh continuation, paid paint and credits. Screenshots and JSON are retained under docs/evidence/concept-*. A first continuation check exposed premature welcome dismissal before loading completed; awaiting restoration resolves it. The occupied car now receives priority in the fixed headlight pool. Earlier harness/input-timing failures remain separately preserved. The new asset still needs measured LOD derivatives before wider population, more exact seat/hand alignment, full attached-door contacts and broader damage-state art. Its realistic source geometry does not resolve the world's remaining procedural character, architecture or regional-fidelity gaps.

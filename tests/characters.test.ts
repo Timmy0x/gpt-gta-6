@@ -89,6 +89,21 @@ test("low driving pose keeps both character variants' skinned feet above the cab
   }
 });
 
+test("reclined driving pose clears the detailed concept car's floor and roof", context => {
+  const { scene, shadows } = fixture(context);
+  for (const female of [false, true]) {
+    const character = new Character(scene, shadows, female ? "Lucia" : "Jason", "#ffffff", female);
+    character.animate(1 / 60, 0); character.pose("seated", 1, "reclined");
+    const matrices = transforms(character);
+    const vertices = Array.from({ length: character.parts[0].getTotalVertices() }, (_, i) => skinVertex(character, i, matrices));
+    assert.ok(Math.min(...vertices.map(v => v.y)) - 1.30 >= -0.49, "body and shoes clear the imported cabin floor");
+    assert.ok(Math.max(...vertices.map(v => v.y)) - 1.30 <= 0.51, "head clears the imported roof underside");
+    const head = vertices.filter(v => v.y > 1.6);
+    assert.ok(head.every(v => v.z + 0.1 >= -0.44 && v.z + 0.1 <= 0.20), "reclined head remains under the roof span");
+    character.dispose();
+  }
+});
+
 test("both character variants have valid skinned geometry and one render submesh", (context) => {
   const { scene, shadows } = fixture(context);
   for (const female of [false, true]) {

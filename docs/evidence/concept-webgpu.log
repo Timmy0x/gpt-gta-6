@@ -1,0 +1,14 @@
+failed-load-preserves-game {"vehicle":null,"cars":[],"errors":0}
+spawned {"vehicle":null,"cars":[{"id":"vehicle-16","health":100,"meshes":120}],"errors":0}
+entry-door {"vehicle":{"id":"vehicle-16","kind":"concept","health":100,"speed":0.00002914530064203691,"grounded":4},"cars":[{"id":"vehicle-16","health":100,"meshes":120}],"errors":0}
+seated-jason {"vehicle":{"id":"vehicle-16","kind":"concept","health":100,"speed":0.00002925050658635203,"grounded":4},"cars":[{"id":"vehicle-16","health":100,"meshes":121}],"errors":0}
+seated-lucia {"vehicle":{"id":"vehicle-16","kind":"concept","health":100,"speed":0.0000293369683572005,"grounded":4},"cars":[{"id":"vehicle-16","health":100,"meshes":121}],"errors":0}
+driving {"vehicle":{"id":"vehicle-16","kind":"concept","health":100,"speed":23.82591820254722,"grounded":4},"cars":[{"id":"vehicle-16","health":100,"meshes":121}],"errors":0}
+night-headlights {"vehicle":{"id":"vehicle-16","kind":"concept","health":100,"speed":0.000028612011334822312,"grounded":4},"cars":[{"id":"vehicle-16","health":100,"meshes":121}],"errors":0}
+night-lights-off {"vehicle":{"id":"vehicle-16","kind":"concept","health":100,"speed":0.00002902840259282903,"grounded":4},"cars":[{"id":"vehicle-16","health":100,"meshes":121}],"errors":0}
+physical-crash {"vehicle":{"id":"vehicle-16","kind":"concept","health":25.406683393672978,"speed":4.275726895652297,"grounded":4},"cars":[{"id":"vehicle-16","health":25.406683393672978,"meshes":121}],"errors":0}
+damage-save-restored {"vehicle":null,"cars":[{"id":"vehicle-16","health":25.406683393672978,"meshes":120}],"errors":0}
+fresh-continue {"vehicle":null,"cars":[{"id":"vehicle-16","health":25.406683393672978,"meshes":120}],"errors":0}
+garage-paint {"vehicle":{"id":"vehicle-20","kind":"concept","health":100,"speed":0.000029235349340995653,"grounded":4},"cars":[{"id":"vehicle-16","health":25.406683393672978,"meshes":120},{"id":"vehicle-20","health":100,"meshes":121}],"errors":0}
+credits {"vehicle":null,"cars":[{"id":"vehicle-16","health":25.406683393672978,"meshes":120},{"id":"vehicle-20","health":100,"meshes":120}],"errors":0}
+RESULT {"backend":"webgpu","errors":[],"checks":13,"assetRequests":3}

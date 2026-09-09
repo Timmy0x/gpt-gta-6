@@ -167,14 +167,25 @@ async function boot() {
     closest: Vehicle | null = null,
     crashCount = 0;
   let loadingWorld = false;
+  async function prepareVehicleModels(kinds: VehicleKind[]): Promise<boolean> {
+    if (!kinds.includes("concept") || vehicles.concept.ready) return true;
+    if (loadingWorld) return false;
+    loadingWorld = true;
+    const previousPause = paused;
+    setPause(true);
+    ui.toast("Loading Aster Concept…", true);
+    try { await vehicles.prepareModel("concept"); ui.toast(""); return true; }
+    catch (error) { console.error("Vehicle loading failed", error); ui.toast("This vehicle could not load. Check your connection and try again."); return false; }
+    finally { loadingWorld = false; setPause(previousPause); }
+  }
   async function prepareTravel(destination: Vector3): Promise<boolean> {
     if (loadingWorld) return false;
     loadingWorld = true;
     const previousPause = paused, origin = player.position.clone();
     input.clear();
     setPause(true);
-    ui.toast("Loading nearby streets…");
-    try { await world.preparePosition(destination); return true; }
+    ui.toast("Loading nearby streets…", true);
+    try { await world.preparePosition(destination); ui.toast(""); return true; }
     catch (error) {
       console.error("Destination loading failed", error);
       world.ensureCollision(origin);
@@ -306,6 +317,8 @@ async function boot() {
       ui.toast("No compatible saved sandbox in this browser.");
       return false;
     }
+    if (s.vehicles.filter(v => v.kind === "concept").length > 4) { ui.toast("Saved sandbox exceeds the four detailed-car limit."); return false; }
+    if (!await prepareVehicleModels(s.vehicles.map(v => v.kind as VehicleKind))) return false;
     if (!await prepareTravel(new Vector3(s.player.x, s.player.y, s.player.z))) return false;
     combat.reactions.reset();
     player.exit(true);
@@ -483,20 +496,20 @@ async function boot() {
       return;
     }
     if (action === "play" || action === "continue") {
+      audio.start();
+      if (action === "continue" && !await load()) return;
       started = true;
       ui.start();
       ui.showPanel("");
       setPause(false);
-      audio.start();
-      if (action === "continue" && !await load()) return;
       canvas.focus();
-      ui.toast("Walk to the sports coupe ahead. Press E to get in.");
+      ui.toast(action === "continue" ? "Saved sandbox restored." : "Walk to the sports coupe ahead. Press E to get in.");
       return;
     }
-    if (["creative", "map", "pause"].includes(action)) {
+    if (["creative", "map", "pause", "credits"].includes(action)) {
       const panel = ui.panel === action ? "" : action;
       ui.showPanel(panel);
-      setPause(panel === "pause" || panel === "map");
+      setPause(panel === "pause" || panel === "map" || panel === "credits");
       input.clear();
       if (panel && player.vehicle)
         vehicles.control(player.vehicle, {
@@ -523,6 +536,8 @@ async function boot() {
       }
       const kind = (document.querySelector<HTMLSelectElement>("#spawn-kind")
         ?.value || "coupe") as VehicleKind;
+      if (kind === "concept" && vehicles.list.filter(v => v.kind === "concept").length >= 4) { ui.toast("Four detailed cars are already in the sandbox. Remove one first."); return; }
+      if (!await prepareVehicleModels([kind])) return;
       let p = player.position.add(
         new Vector3(Math.sin(player.yaw) * 6, 1, Math.cos(player.yaw) * 6),
       );

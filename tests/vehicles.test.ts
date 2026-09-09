@@ -694,7 +694,7 @@ test("stable IDs reject collisions; invalid restoration leaves existing body int
       128,
       new DirectionalLight("sun", new Vector3(0, -1, 0), scene),
     ),
-    system = new VehicleSystem({ scene, shadows });
+    system = new VehicleSystem({ scene, shadows }, new Uint8Array(await readFile(new URL("../public/vehicles/concept/car.glb", import.meta.url))), true);
   const original = system.spawn("sedan", new Vector3(0, 2, 0), 0, "vehicle-2"),
     other = system.spawn("suv", new Vector3(5, 2, 0));
   assert.notEqual(original.id, other.id, "generated IDs skip explicit IDs");
@@ -750,6 +750,7 @@ test("stable IDs reject collisions; invalid restoration leaves existing body int
   for (const kind of Object.keys(
     VEHICLE_TUNING,
   ) as (keyof typeof VEHICLE_TUNING)[]) {
+    await system.prepareModel(kind);
     const sample = system.spawn(
       kind,
       new Vector3(100, 10, 100),

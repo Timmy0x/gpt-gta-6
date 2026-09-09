@@ -6,6 +6,7 @@ import type {
 } from "@babylonjs/core";
 export type VehicleKind =
   | "coupe"
+  | "concept"
   | "sedan"
   | "suv"
   | "police"

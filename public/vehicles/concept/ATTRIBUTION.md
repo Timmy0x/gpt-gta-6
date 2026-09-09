@@ -4,4 +4,6 @@ Model and textures by **Eric Chadwick**, © 2024 **Darmstadt Graphics Group GmbH
 
 Modified for Leonida: Khronos and 3DCommerce logo texture references and image payloads removed; generic tire sidewalls and blank license plate; logo emissive contributions removed. Door, wheel, cabin and body geometry/hierarchy retained. No endorsement by the original creators or Khronos is implied. Original licensing notices and exact source/output hashes are retained beside this file.
 
+Runtime adapter modifications: transforms rebased to the physics chassis; front wheel steering neutralized; movable component groups rebuilt; lamp/glazing slots separated; PBR textures shared with per-vehicle paint and lamp materials; bounded body deformation and mechanical controls added. The prepared GLB bytes remain unchanged by this runtime adaptation.
+
 Reproduce: `node scripts/assets/prepare-car-concept.mjs`. Optionally pass `--source /path/to/original.glb`; the source SHA-256 is always checked.
