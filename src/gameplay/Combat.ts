@@ -91,8 +91,9 @@ export class Combat {
     this.impactMaterial.albedoColor = Color3.FromHexString("#c8b59e");
     this.projectiles.onDetonate = (position) => this.explode(position);
     this.projectiles.onBounce = (position) => this.onSound("impact", position);
-    this.population.onCharacterHit = (model, impulse, fatal) =>
-      this.reactions.hit(model, impulse.scale(5), fatal);
+    this.population.onCharacterHit = (model, impulse, fatal, impact) =>
+      this.reactions.hit(model, impulse.scale(5), fatal, impact);
+    this.population.onCharacterRestored = model => this.reactions.restore(model);
     scene.onDisposeObservable.addOnce(() => this.dispose());
   }
   select(index: number): void {
@@ -108,7 +109,9 @@ export class Combat {
     return (
       this.player.deadTimer <= 0 &&
       !this.player.vehicle &&
-      !this.player.transitioning
+      !this.player.transitioning &&
+      !this.player.swimming &&
+      !this.player.climbing
     );
   }
   private ownBody = (body: PhysicsBody): boolean =>
@@ -159,19 +162,20 @@ export class Combat {
         const value = this.damage.heatAt(
           ped.model.root.position.add(new Vector3(0, 0.9, 0)),
         );
-        if (value > 0) this.population.hurtPed(ped, value);
+        if (value > 0) this.population.hurtPed(ped, value, "fire");
       }
       for (const officer of this.population.officers) {
         if (officer.health <= 0) continue;
         const value = this.damage.heatAt(
           officer.model.root.position.add(new Vector3(0, 0.9, 0)),
         );
-        if (value > 0) this.population.hurtOfficer(officer, value);
+        if (value > 0) this.population.hurtOfficer(officer, value, "fire");
       }
     }
   }
   fire(): void {
     if (!this.available() || this.cooldown > 0 || this.reloadTime > 0) return;
+    if (this.player.weaponFacingReady === false) return;
     if (!this.inventory.consume()) return;
     const spec = this.weapons[this.weapon],
       p = this.player.position;
@@ -279,13 +283,13 @@ export class Combat {
   ): void {
     const meta = hit.mesh?.metadata ?? hit.body?.transformNode.metadata;
     if (meta?.ped) {
-      this.population.hurtPed(meta.ped, amount);
+      this.population.hurtPed(meta.ped, amount, kind);
       this.wanted.crime(
         80,
         this.player.position,
         this.population.witness(this.player.position),
       );
-    } else if (meta?.officer) this.population.hurtOfficer(meta.officer, amount);
+    } else if (meta?.officer) this.population.hurtOfficer(meta.officer, amount, kind);
     else if (meta?.prop)
       this.damage.hit(meta.prop, amount, hit.point, kind, direction);
     else {
@@ -350,6 +354,7 @@ export class Combat {
         ped,
         150 *
           blastFalloff(Vector3.Distance(ped.model.root.position, position), 12),
+        "explosion",
       );
     for (const officer of officers)
       this.population.hurtOfficer(
@@ -359,6 +364,7 @@ export class Combat {
             Vector3.Distance(officer.model.root.position, position),
             12,
           ),
+        "explosion",
       );
     if (playerExposed)
       this.player.hurt(
@@ -401,6 +407,7 @@ export class Combat {
     if (this.disposed) return;
     this.disposed = true;
     this.population.onCharacterHit = null;
+    this.population.onCharacterRestored = null;
     this.held.dispose();
     this.projectiles.dispose();
     this.reactions.dispose();

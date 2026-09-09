@@ -9,7 +9,9 @@ import type { WantedSystem } from "./Wanted";
 import { PoliceDirector, type Driver } from "./police/PoliceDirector";
 import type { Officer } from "./police/Officer";
 import { RestrictedFacility } from "./RestrictedFacility";
-import { restoreCorpse, snapshotCasualty, validateCasualties, type PopulationCasualties } from "./police/casualties";
+import { VehicleOccupancy } from './VehicleOccupancy';
+import { isDown, restoreCorpse, snapshotCasualty, validateCasualties, type PopulationCasualties } from "./police/casualties";
+import type { CharacterDamageKind, CharacterImpact } from "./combat/injuries";
 export interface Pedestrian {
   id: string;
   model: Character;
@@ -20,6 +22,9 @@ export interface Pedestrian {
   activity: string;
   home: Vector3;
   creative: boolean;
+  /** Visible civilian crew remain hittable; occupancy owns their pose until dismount. */
+  vehicleId?: string;
+  formerDriver?: boolean;
 }
 export class Population {
   drivers: Driver[] = [];
@@ -31,10 +36,12 @@ export class Population {
   private ticks = 0;
   readonly police: PoliceDirector;
   readonly facility: RestrictedFacility;
+  readonly occupancy: VehicleOccupancy;
   private nextPedId = 0;
   onCharacterHit:
-    | ((model: Character, impulse: Vector3, fatal: boolean) => void)
+    | ((model: Character, impulse: Vector3, fatal: boolean, impact: CharacterImpact) => void)
     | null = null;
+  onCharacterRestored: ((model: Character) => void) | null = null;
   onArrest = () => {};
   onMessage = (s: string) => {};
   constructor(
@@ -45,6 +52,8 @@ export class Population {
     public player: Player,
     public wanted: WantedSystem,
   ) {
+    // Simulation fixtures may provide only a lightweight Player view.
+    this.occupancy = player.occupancy ?? new VehicleOccupancy();
     this.police = new PoliceDirector(
       scene,
       shadows,
@@ -129,7 +138,29 @@ export class Population {
     if (detailed) this.vehicles.setPaint(v, i < 6 ? "#51677D" : "#D9D9D2");
     const d = { v, target: next.id, previous: node.id, police, stuck: 0 };
     this.drivers.push(d);
+    if (!police) {
+      const ped = this.spawnPed(v.root.position, 100 + i, false, `driver-${v.id}`);
+      ped.vehicleId = v.id;
+      ped.activity = 'driving';
+      this.occupancy.register(v, ped.model,
+        () => ped.health > 0 && !ped.model.dead && !ped.model.root.metadata?.ragdollActive,
+        position => this.adoptFormerDriver(ped, v, position));
+    }
     return d;
+  }
+  private adoptFormerDriver(ped: Pedestrian, vehicle: Vehicle, position: Vector3) {
+    this.drivers = this.drivers.filter(driver => driver.v !== vehicle);
+    delete ped.vehicleId;
+    ped.formerDriver = true;
+    if (ped.health <= 0 || ped.model.root.metadata?.ragdollActive) return;
+    ped.model.position(position);
+    ped.home.copyFrom(position);
+    ped.panic = 18;
+    ped.activity = 'fleeing';
+    const away = position.subtract(vehicle.root.position); away.y = 0;
+    if (away.lengthSquared() < .1) away.copyFrom(vehicle.root.right.scale(-1));
+    ped.target = position.add(away.normalize().scale(35));
+    this.wanted.crime(40, vehicle.root.position, true);
   }
   witness(p: Vector3, range = 75) {
     return (
@@ -150,6 +181,7 @@ export class Population {
     );
   }
   frighten(p: Vector3) {
+    this.occupancy.frighten(p);
     for (const ped of this.pedestrians)
       if (ped.health > 0 && distance(p, ped.model.root.position) < 70) {
         ped.panic = 12;
@@ -159,7 +191,7 @@ export class Population {
         );
       }
   }
-  hurtPed(ped: Pedestrian, damage: number) {
+  hurtPed(ped: Pedestrian, damage: number, kind: CharacterDamageKind = "impact") {
     if (ped.health <= 0 || !Number.isFinite(damage) || damage <= 0) return;
     ped.health = Math.max(0, ped.health - damage);
     if(ped.health<=0){ped.model.dead=true;ped.activity="dead";ped.report=0;}
@@ -169,7 +201,7 @@ export class Population {
       .normalize()
       .scale(Math.min(10, damage * 0.15));
     impulse.y = 1.4;
-    this.onCharacterHit?.(ped.model, impulse, ped.health <= 0);
+    this.onCharacterHit?.(ped.model, impulse, ped.health <= 0, { kind, damage, health: ped.health });
     if (ped.health <= 0 && !this.onCharacterHit) {
       ped.model.root.rotation.z = Math.PI / 2;
       ped.model.root.position.y = 0.35;
@@ -180,12 +212,19 @@ export class Population {
   update(dt: number) {
     this.ticks += dt;
     const position = this.player.position;
+    this.occupancy.update(dt);
     this.police.onCharacterHit = this.onCharacterHit;
     this.facility.onCharacterHit=this.onCharacterHit;
     this.facility.update(dt,this.policeEnabled);
     this.police.update(dt, this.drivers, this.policeEnabled,this.facility.observesSuspect);
+    const trafficPeople = this.pedestrians.filter(ped => !ped.vehicleId && ped.health > 0 && ped.model.root.isEnabled()).map(ped => ped.model.root.position);
+    if (!this.player.vehicle && this.player.deadTimer <= 0) trafficPeople.push(this.player.position);
     for (const d of this.drivers) {
       if (d.police || d.v.occupied) continue;
+      if (!this.occupancy.canDrive(d.v)) {
+        this.vehicles.control(d.v, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
+        continue;
+      }
       if (
         !d.police &&
         this.drivers.indexOf(d) > Math.floor(12 * this.trafficDensity)
@@ -214,7 +253,8 @@ export class Population {
       const heading = Math.atan2(d.v.root.forward.x, d.v.root.forward.z);
       const error = angleDelta(heading, Math.atan2(tx - p.x, tz - p.z));
       const steer = clamp(error * 1.8, -1, 1);
-      let cruise = 9 + (this.drivers.indexOf(d) % 5);
+      const frightened = (this.occupancy.get(d.v)?.panic ?? 0) > 0;
+      let cruise = frightened ? 17 : 9 + (this.drivers.indexOf(d) % 5);
       if (Math.abs(error) > 0.4) cruise = Math.min(cruise, 5);
       for (const other of this.vehicles.list) {
         if (other === d.v) continue;
@@ -228,9 +268,14 @@ export class Population {
           break;
         }
       }
+      // A person stepping into a slow traffic lane can stop a car and reach its door.
+      for (const person of trafficPeople) {
+        const delta = person.subtract(p), ahead = Vector3.Dot(delta, d.v.root.forward), across = Math.abs(Vector3.Dot(delta, d.v.root.right));
+        if (ahead > 0 && ahead < Math.max(7, Math.abs(d.v.speed) * 1.15) && across < d.v.tuning.width / 2 + .65) { cruise = 0; break; }
+      }
       // Deterministic alternating 10 second signal phases on the authored orthogonal grid.
       if (
-        distance(p, target) < 21 &&
+        !frightened && distance(p, target) < 21 &&
         Math.abs(tx - p.x) > Math.abs(tz - p.z) !==
           (Math.floor(this.ticks / 10) % 2 === 0)
       )
@@ -247,9 +292,19 @@ export class Population {
     }
     for (let i = 0; i < this.pedestrians.length; i++) {
       const ped = this.pedestrians[i];
+      // A driver is already animated by occupancy; combat still sees the same Pedestrian.
+      if (ped.vehicleId) {
+        const vehicle = this.vehicles.list.find(v => v.id === ped.vehicleId);
+        if (vehicle) { ped.model.root.setEnabled(true); continue; }
+        delete ped.vehicleId;
+        ped.formerDriver = true;
+        ped.activity = ped.health > 0 ? 'walking' : 'dead';
+        ped.home.copyFrom(ped.model.root.position);
+        ped.target.copyFrom(ped.home);
+      }
       // Older saves recorded health without a corpse pose/ledger.
       if(ped.health<=0&&!ped.model.dead){restoreCorpse(ped.model,snapshotCasualty(ped.id,ped.model));ped.activity="dead";ped.report=0;}
-      const active = ped.creative || i < 30 * this.density;
+      const active = ped.creative || ped.formerDriver || i < 30 * this.density;
       ped.model.root.setEnabled(active);
       if (!active || ped.health <= 0 || ped.model.root.metadata?.ragdollActive)
         continue;
@@ -306,7 +361,7 @@ export class Population {
       p.panic = 0;
       p.report = 0;
       if(revive){
-        p.health = 100;p.model.dead=false;p.activity="walking";
+        p.health = 100;p.model.dead=false;p.model.injury=null;p.activity="walking";
         p.model.root.metadata={...p.model.root.metadata,ragdollActive:false,ragdollRecovering:false};
         p.model.skeleton.returnToRest();p.model.root.rotationQuaternion=null;p.model.root.rotation.z = 0;
         p.model.position(p.home);p.target=p.home.add(new Vector3(0,0,24));
@@ -314,20 +369,20 @@ export class Population {
     }
   }
   serializeCasualties():PopulationCasualties {
-    return {version:1,civilians:this.pedestrians.filter(p=>p.health<=0).slice(0,60).map(p=>snapshotCasualty(p.id,p.model)),guards:this.facility.guards.filter(g=>g.health<=0).map(g=>snapshotCasualty(g.id,g.model)),...this.police.serializeCasualties()};
+    return {version:2,civilians:this.pedestrians.filter(p=>isDown(p.model,p.health)).slice(0,60).map(p=>snapshotCasualty(p.id,p.model,p.health)),guards:this.facility.guards.filter(g=>isDown(g.model,g.health)).map(g=>snapshotCasualty(g.id,g.model,g.health)),...this.police.serializeCasualties()};
   }
   restoreCasualties(value:unknown):boolean {
     if(!validateCasualties(value))return false;
-    for(const entry of value.civilians){const p=this.pedestrians.find(p=>p.id===entry.id);if(!p)continue;p.health=0;p.activity="dead";p.panic=0;p.report=0;restoreCorpse(p.model,entry);}
-    this.facility.restoreCasualties(value.guards);this.police.restoreCasualties(value.police,value.nextOfficerId);return true;
+    for(const entry of value.civilians){const p=this.pedestrians.find(p=>p.id===entry.id);if(!p)continue;p.health=entry.health??0;p.activity=p.health>0?"injured":"dead";p.panic=0;p.report=0;restoreCorpse(p.model,entry);this.onCharacterRestored?.(p.model);}
+    this.facility.restoreCasualties(value.guards);this.police.restoreCasualties(value.police,value.nextOfficerId);for(const o of this.officers)if(o.model.injury)this.onCharacterRestored?.(o.model);return true;
   }
   get officers() {
     return [...this.police.officers,...this.facility.guards];
   }
-  hurtOfficer(officer: Officer, damage: number) {
-    if(this.facility.guards.includes(officer)){this.facility.onCharacterHit=this.onCharacterHit;this.facility.hurtGuard(officer,damage);return;}
+  hurtOfficer(officer: Officer, damage: number, kind: CharacterDamageKind = "impact") {
+    if(this.facility.guards.includes(officer)){this.facility.onCharacterHit=this.onCharacterHit;this.facility.hurtGuard(officer,damage,kind);return;}
     this.police.onCharacterHit = this.onCharacterHit;
-    this.police.hurtOfficer(officer, damage);
+    this.police.hurtOfficer(officer, damage, kind);
   }
   resist(seconds = 12) {
     this.police.resist(seconds);

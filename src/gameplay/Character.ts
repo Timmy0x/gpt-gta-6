@@ -14,6 +14,7 @@ import {
   type ShadowGenerator,
 } from "@babylonjs/core";
 import { RocketboxSkin, type CivilianSkin } from './characters/RocketboxSkin';
+import type { CharacterInjury } from './combat/injuries';
 
 type Joint =
   | "pelvis"
@@ -49,6 +50,7 @@ export class Character {
   readonly skeleton: Skeleton;
   phase = 0;
   dead = false;
+  injury: CharacterInjury | null = null;
   private readonly bones = new Map<Joint, Bone>();
   private readonly boneIndex = new Map<Joint, number>();
   private readonly material: SharedMaterial;
@@ -751,6 +753,7 @@ export class Character {
   }
 
   animate(dt: number, speed: number, aim = false, crouch = false): void {
+    if (this.dead || this.root.metadata?.ragdollActive) return;
     this.elapsed += dt;
     const smooth = 1 - Math.exp(-dt * 11);
     this.movement +=
@@ -849,6 +852,7 @@ export class Character {
 
   /** Authored overlays on the same skin rig; call after locomotion animation. */
   pose(kind: "seated" | "mount" | "climb" | "swim" | "hit", phase = 1, seating: "low" | "upright" | "rider" | "reclined" = "upright"): void {
+    if (this.dead || this.root.metadata?.ragdollActive) return;
     const seated = kind === "seated" || kind === "mount";
     const amount = kind === "mount" ? Math.max(0, Math.min(1, phase)) : 1;
     if (seated) {

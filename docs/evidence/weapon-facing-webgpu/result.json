@@ -1,0 +1,2526 @@
+{
+  "origin": "http://127.0.0.1:4201",
+  "backend": "webgpu",
+  "method": "Normal mouse 180-degree turns, hip fire, aimed fire and character switching. Physics observer only reads shot/facing diagnostics.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-DSBrBJ_2.js",
+      "sha256": "e95167f3234ae901af6966d2bccf8dfa386d340f3474ca60f14533750caaec65",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "jason-idle",
+      "backend": "WebGPU",
+      "character": "Jason",
+      "heading": 0,
+      "aim": false,
+      "raised": false,
+      "ready": false,
+      "shots": 0,
+      "bodyError": 0,
+      "barrelAngle": 70.88608851311906
+    },
+    {
+      "label": "camera-behind-body",
+      "backend": "WebGPU",
+      "character": "Jason",
+      "heading": 0,
+      "aim": false,
+      "raised": false,
+      "ready": false,
+      "shots": 0,
+      "bodyError": 3.1391468066535384,
+      "barrelAngle": 80.01646677688043
+    },
+    {
+      "label": "jason-hipfire",
+      "backend": "WebGPU",
+      "character": "Jason",
+      "heading": 3.1400000001329507,
+      "aim": false,
+      "raised": true,
+      "ready": true,
+      "shots": 8,
+      "bodyError": 2.2041879432777023e-10,
+      "barrelAngle": 0.5729573098539347
+    },
+    {
+      "label": "hipfire-recoil-settled",
+      "backend": "WebGPU",
+      "character": "Jason",
+      "heading": 3.1400000001530803,
+      "aim": false,
+      "raised": true,
+      "ready": true,
+      "shots": 10,
+      "bodyError": 6.586020617760369e-11,
+      "barrelAngle": 0
+    },
+    {
+      "label": "weapon-lowered",
+      "backend": "WebGPU",
+      "character": "Jason",
+      "heading": 3.140000000023855,
+      "aim": false,
+      "raised": false,
+      "ready": false,
+      "shots": 10,
+      "bodyError": 8.629008618754597e-11,
+      "barrelAngle": 74.48741214001916
+    },
+    {
+      "label": "lucia-aimed-fire",
+      "backend": "WebGPU",
+      "character": "Lucia",
+      "heading": 5.979402684721301,
+      "aim": true,
+      "raised": true,
+      "ready": true,
+      "shots": 18,
+      "bodyError": 0.000060102159738594654,
+      "barrelAngle": 3.1512696337684587
+    },
+    {
+      "label": "per-step-facing-gate",
+      "fired": 21,
+      "turning": 32,
+      "samples": [
+        {
+          "t": 6587.299999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6603.399999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6636.5,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6637.299999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6653.299999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6669.5999999996275,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6687,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6703.799999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6719.700000000186,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6736.399999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6753.0999999996275,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6769.5999999996275,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6786.5,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6803,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6820.299999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 6837.200000000186,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.0004737006482807433
+        },
+        {
+          "t": 6854,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.0016288123261049702
+        },
+        {
+          "t": 6870.5999999996275,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.008342263649932409
+        },
+        {
+          "t": 6886.399999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.133575749252895
+        },
+        {
+          "t": 6915.799999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.137799371299974
+        },
+        {
+          "t": 6951.899999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1391468066535384
+        },
+        {
+          "t": 6952.899999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1391468066535384
+        },
+        {
+          "t": 6953.700000000186,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1391468066535384
+        },
+        {
+          "t": 6972,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1395988601984794
+        },
+        {
+          "t": 6989.299999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.139715540298562
+        },
+        {
+          "t": 7004.899999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1397837045743455
+        },
+        {
+          "t": 7020.299999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.139828079182057
+        },
+        {
+          "t": 7036.299999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.139862691151247
+        },
+        {
+          "t": 7053.799999999814,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1398898413496354
+        },
+        {
+          "t": 7070,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1399128712302944
+        },
+        {
+          "t": 7086.700000000186,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1399296247236546
+        },
+        {
+          "t": 7103.399999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.139943387001297
+        },
+        {
+          "t": 7120.0999999996275,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.139954142151704
+        },
+        {
+          "t": 7136.700000000186,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1399629049390376
+        },
+        {
+          "t": 7153.399999999441,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1399698581974893
+        },
+        {
+          "t": 7170.200000000186,
+          "shots": 0,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.139975500533242
+        },
+        {
+          "t": 7187.299999999814,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 2.973313394171848
+        },
+        {
+          "t": 7203.799999999814,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 2.8066504817807214
+        },
+        {
+          "t": 7219.5999999996275,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 2.6399868028999025
+        },
+        {
+          "t": 7236.399999999441,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 2.4733224467847563
+        },
+        {
+          "t": 7253.799999999814,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 2.3066577897337304
+        },
+        {
+          "t": 7269.5999999996275,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 2.139992811087129
+        },
+        {
+          "t": 7287.200000000186,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.9733274024626222
+        },
+        {
+          "t": 7302.899999999441,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.8066618660249174
+        },
+        {
+          "t": 7320.399999999441,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.6399960324647433
+        },
+        {
+          "t": 7337.0999999996275,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.4733301165297579
+        },
+        {
+          "t": 7354,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.3066640360078137
+        },
+        {
+          "t": 7371.399999999441,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.139997848526038
+        },
+        {
+          "t": 7388.200000000186,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.9733315921193584
+        },
+        {
+          "t": 7404.5999999996275,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.8066652389152464
+        },
+        {
+          "t": 7420.799999999814,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.6399988290249681
+        },
+        {
+          "t": 7437.700000000186,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.47333237072791245
+        },
+        {
+          "t": 7454.0999999996275,
+          "shots": 0,
+          "raised": true,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.3066658808583007
+        },
+        {
+          "t": 7476.899999999441,
+          "shots": 1,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0.13999935563825752
+        },
+        {
+          "t": 7509.299999999814,
+          "shots": 1,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7510.799999999814,
+          "shots": 1,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7529.200000000186,
+          "shots": 1,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7548.700000000186,
+          "shots": 1,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7566.799999999814,
+          "shots": 1,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7595.200000000186,
+          "shots": 2,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7596.5,
+          "shots": 2,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7621.399999999441,
+          "shots": 2,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7622.5999999996275,
+          "shots": 2,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7641.200000000186,
+          "shots": 2,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7657.5999999996275,
+          "shots": 2,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7678.299999999814,
+          "shots": 3,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7695.399999999441,
+          "shots": 3,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7712.200000000186,
+          "shots": 3,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7729.299999999814,
+          "shots": 3,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7745.700000000186,
+          "shots": 3,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7762.700000000186,
+          "shots": 3,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7783.700000000186,
+          "shots": 4,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7800.5999999996275,
+          "shots": 4,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7801.799999999814,
+          "shots": 4,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7818.700000000186,
+          "shots": 4,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7836,
+          "shots": 4,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7852.299999999814,
+          "shots": 4,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7874.0999999996275,
+          "shots": 5,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7891.5,
+          "shots": 5,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7908.700000000186,
+          "shots": 5,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7925.5,
+          "shots": 5,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7943.299999999814,
+          "shots": 5,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7959.200000000186,
+          "shots": 5,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7979,
+          "shots": 6,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 7995.0999999996275,
+          "shots": 6,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8011.5,
+          "shots": 6,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8027.5999999996275,
+          "shots": 6,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8043.700000000186,
+          "shots": 6,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8059.5999999996275,
+          "shots": 6,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8080.700000000186,
+          "shots": 7,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8097.5,
+          "shots": 7,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8115.0999999996275,
+          "shots": 7,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8131.799999999814,
+          "shots": 7,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8149.299999999814,
+          "shots": 7,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8166.200000000186,
+          "shots": 7,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8186.399999999441,
+          "shots": 8,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8203.700000000186,
+          "shots": 8,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8205.099999999627,
+          "shots": 8,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8223,
+          "shots": 8,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8239.799999999814,
+          "shots": 8,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8256.099999999627,
+          "shots": 8,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8277.700000000186,
+          "shots": 9,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8294.099999999627,
+          "shots": 9,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8310.599999999627,
+          "shots": 9,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8326.700000000186,
+          "shots": 9,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8342.799999999814,
+          "shots": 9,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8359.899999999441,
+          "shots": 9,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8379.899999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8395.5,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8411,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8426.599999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8444,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8460.099999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8476.599999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8493.5,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8509.599999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8525.799999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8542.099999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8558.799999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8574.099999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8589.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8606.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8621.899999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8637.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8653.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8669.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8686.099999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8703.799999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8720.399999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8736.200000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8753,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8769.599999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8786.599999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8803.299999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8820,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8836.299999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8852.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8870.299999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8886.899999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8903.599999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8920.299999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8937,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8953.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8970.200000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 8986.899999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 9003.099999999627,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 9020.5,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 9037,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 9053.700000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 9070.299999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 0
+        },
+        {
+          "t": 9087.099999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.1688561230016603e-10
+        },
+        {
+          "t": 9103.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 7.374056920639305e-11
+        },
+        {
+          "t": 9119.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 7.374056920639305e-11
+        },
+        {
+          "t": 9136.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 1.6003109948314886e-10
+        },
+        {
+          "t": 9153.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 7.374056920639305e-11
+        },
+        {
+          "t": 9169.599999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 6.471756464065948e-11
+        },
+        {
+          "t": 9187,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 6.471756464065948e-11
+        },
+        {
+          "t": 9203.599999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9220.399999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9236.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 5.2168047659506556e-11
+        },
+        {
+          "t": 9253.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 5.2168047659506556e-11
+        },
+        {
+          "t": 9270.299999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 5.2168047659506556e-11
+        },
+        {
+          "t": 9286.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9303.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9320.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9336.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9353.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9370.299999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9386.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9403.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9420.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.0595526112620064e-11
+        },
+        {
+          "t": 9437,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9453.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9470.299999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9487,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9502.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9519.299999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9536.099999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9553.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9598.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9599.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9616.099999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9631.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9647.5,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9664.399999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9680.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9706.399999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9746.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9747.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9748.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9766.599999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9817.599999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9818.599999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9819.299999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9820.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9844.399999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9860.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9875.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9890.5,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9906,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9920.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9936.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9953.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9969.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 9986.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10002.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10020.5,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10036.299999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10053.399999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10069.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10087.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10102.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10120.299999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10136.899999999441,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10153.700000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10170.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10186.099999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10204,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 8.629008618754597e-11
+        },
+        {
+          "t": 10219.5,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.0004896798591884631
+        },
+        {
+          "t": 10237,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.0015599342057757148
+        },
+        {
+          "t": 10253.799999999814,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 0.008342263543979624
+        },
+        {
+          "t": 10270.200000000186,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1335757503970925
+        },
+        {
+          "t": 10287,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.137867083150281
+        },
+        {
+          "t": 10303.599999999627,
+          "shots": 10,
+          "raised": false,
+          "ready": false,
+          "aim": false,
+          "bodyError": 3.1388186165708305
+        },
+        {
+          "t": 10320.200000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 2.9725716791587384
+        },
+        {
+          "t": 10336.200000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 2.7588589676769684
+        },
+        {
+          "t": 10353.5,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 2.552061063388446
+        },
+        {
+          "t": 10371.399999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 2.3485394894256895
+        },
+        {
+          "t": 10389.200000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 2.1500474490733406
+        },
+        {
+          "t": 10405.200000000186,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 1.9572269595278666
+        },
+        {
+          "t": 10421,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 1.7706146270478123
+        },
+        {
+          "t": 10437.5,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 1.5879220648633086
+        },
+        {
+          "t": 10453.899999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 1.4068372273858663
+        },
+        {
+          "t": 10469.799999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 1.2284404301780925
+        },
+        {
+          "t": 10486.899999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 1.0523828909201385
+        },
+        {
+          "t": 10503.5,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 0.8773153655189854
+        },
+        {
+          "t": 10520.399999999441,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 0.7039136704403532
+        },
+        {
+          "t": 10536.5,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 0.5317407578993196
+        },
+        {
+          "t": 10553.799999999814,
+          "shots": 10,
+          "raised": true,
+          "ready": false,
+          "aim": true,
+          "bodyError": 0.36059589073937404
+        },
+        {
+          "t": 10586.899999999441,
+          "shots": 11,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 0.19011872689626433
+        },
+        {
+          "t": 10603.599999999627,
+          "shots": 11,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 0.020352344416968895
+        },
+        {
+          "t": 10604.5,
+          "shots": 11,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10622.799999999814,
+          "shots": 11,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10639.299999999814,
+          "shots": 11,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10655.799999999814,
+          "shots": 11,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10677.899999999441,
+          "shots": 12,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10694.299999999814,
+          "shots": 12,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10711.700000000186,
+          "shots": 12,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10728.099999999627,
+          "shots": 12,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10743.899999999441,
+          "shots": 12,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10759.799999999814,
+          "shots": 12,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10781.299999999814,
+          "shots": 13,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10797.5,
+          "shots": 13,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10814.599999999627,
+          "shots": 13,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10830.299999999814,
+          "shots": 13,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10845.899999999441,
+          "shots": 13,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10861.700000000186,
+          "shots": 13,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10882.599999999627,
+          "shots": 14,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10898.399999999441,
+          "shots": 14,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10914.299999999814,
+          "shots": 14,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10929.799999999814,
+          "shots": 14,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10945.299999999814,
+          "shots": 14,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10961.200000000186,
+          "shots": 14,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 10985.099999999627,
+          "shots": 15,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11048,
+          "shots": 15,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11049,
+          "shots": 15,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11050,
+          "shots": 15,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11050.700000000186,
+          "shots": 15,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11068.299999999814,
+          "shots": 15,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11075.599999999627,
+          "shots": 16,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11122.099999999627,
+          "shots": 16,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11123.5,
+          "shots": 16,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11125.099999999627,
+          "shots": 16,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11143.799999999814,
+          "shots": 16,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11162,
+          "shots": 16,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11194.299999999814,
+          "shots": 17,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11195.299999999814,
+          "shots": 17,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11212,
+          "shots": 17,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11228.200000000186,
+          "shots": 17,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11244.700000000186,
+          "shots": 17,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11261,
+          "shots": 17,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11287.5,
+          "shots": 18,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11318.700000000186,
+          "shots": 18,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11319.799999999814,
+          "shots": 18,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11320.899999999441,
+          "shots": 18,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11343.399999999441,
+          "shots": 18,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11359.5,
+          "shots": 18,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11384.099999999627,
+          "shots": 19,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11418.5,
+          "shots": 19,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11419.5,
+          "shots": 19,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11420.5,
+          "shots": 19,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11437.099999999627,
+          "shots": 19,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11454,
+          "shots": 19,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11477,
+          "shots": 20,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11493.299999999814,
+          "shots": 20,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11510.200000000186,
+          "shots": 20,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11526.399999999441,
+          "shots": 20,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11543.099999999627,
+          "shots": 20,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11560,
+          "shots": 20,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11582.700000000186,
+          "shots": 21,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11598.799999999814,
+          "shots": 21,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11615.5,
+          "shots": 21,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11631.899999999441,
+          "shots": 21,
+          "raised": true,
+          "ready": true,
+          "aim": true,
+          "bodyError": 2.4492935982947064e-16
+        },
+        {
+          "t": 11648.299999999814,
+          "shots": 21,
+          "raised": true,
+          "ready": true,
+          "aim": false,
+          "bodyError": 2.4492935982947064e-16
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

@@ -14,6 +14,8 @@ import { Character } from "./Character";
 import type { Vehicle } from "../vehicles/VehicleSystem";
 import { openVehicleDoor } from "../vehicles/VehicleEquipment";
 import { MovementQueries } from "./MovementQueries";
+import { turnWeaponHeading, WEAPON_ARM_CONE, WEAPON_FIRE_CONE } from "./WeaponFacing";
+import { EJECTION_SECONDS, VehicleOccupancy, parkedVehicleInput, vehicleSeatOffset, vehicleSeatPose } from "./VehicleOccupancy";
 export class Player {
   controller: PhysicsCharacterController;
   model: Character;
@@ -32,12 +34,21 @@ export class Player {
   noclip = false;
   deadTimer = 0;
   aim = false;
+  weaponRaised = false;
+  weaponFacingReady = false;
+  private weaponHold = 0;
   queries: MovementQueries;
   interactionMessage = "";
   transitioning = false;
+  readonly occupancy = new VehicleOccupancy();
+  vehiclePhase: 'on-foot' | 'approaching' | 'ejecting-driver' | 'entering' | 'seated' | 'exiting' = 'on-foot';
   climbing = false;
   private mountTime = 0;
   private mountStart = Vector3.Zero();
+  private mountDoor = Vector3.Zero();
+  private exitDestination: Vector3 | null = null;
+  private ejectDestination: Vector3 | null = null;
+  private mountSide: -1 | 1 = -1;
   private climbPath: Vector3[] = [];
   private climbTime = 0;
   private hitTime = 0;
@@ -106,6 +117,21 @@ export class Player {
       return false;
     }
     const from = this.position.clone();
+    const driver = this.occupancy.get(v);
+    this.mountSide = Vector3.Dot(from.subtract(v.root.position), v.root.right) < 0 ? -1 : 1;
+    if (driver && this.mountSide !== -1) {
+      this.interactionMessage = "Approach the driver's door on the left.";
+      return false;
+    }
+    if (driver && (!driver.alive() || driver.model.root.metadata?.ragdollActive)) {
+      this.interactionMessage = "The driver is incapacitated. Use another vehicle.";
+      return false;
+    }
+    this.ejectDestination = driver ? this.safeExit(v, -1) : null;
+    if (driver && !this.ejectDestination) {
+      this.interactionMessage = "The driver's door is blocked.";
+      return false;
+    }
     const destination = v.root.position.add(new Vector3(0, 0.8, 0));
     const obstruction = this.scene
       .getPhysicsEngine()!
@@ -119,11 +145,19 @@ export class Player {
       return false;
     }
     this.vehicle = v;
-    openVehicleDoor(v, Vector3.Dot(from.subtract(v.root.position), v.root.right) < 0 ? -1 : 1);
+    openVehicleDoor(v, this.mountSide, driver ? 2.5 : 1.3);
     v.occupied = true;
+    v.controlLocked = true;
+    v.input = parkedVehicleInput(v);
     this.mountStart.copyFrom(this.model.root.position);
+    const entry = v.root.position.add(v.root.right.scale(this.mountSide * (v.tuning.width / 2 + .48)));
+    entry.y = this.mountStart.y;
+    // The entrant stays just ahead of the door while the former driver steps out behind it.
+    entry.addInPlace(v.root.forward.scale(.45));
+    this.mountDoor.copyFrom(entry);
     this.mountTime = 0;
     this.transitioning = true;
+    this.vehiclePhase = 'approaching';
     this.crouched = false;
     this.controller.setPosition(new Vector3(0, -100, 0));
     this.controller.setVelocity(Vector3.Zero());
@@ -131,21 +165,7 @@ export class Player {
     return true;
   }
   private seatOffset() {
-    const v = this.vehicle!;
-    if (v.model.seat) return v.model.seat.clone();
-    if (v.kind === "motorcycle") return new Vector3(0, -0.7, -0.18);
-    if (v.kind === "boat") return new Vector3(-0.42, -0.3, -0.28);
-    if (v.kind === "plane") return new Vector3(-v.tuning.width * 0.21, -0.78, -0.03);
-    if (v.kind === "helicopter") return new Vector3(-v.tuning.width * 0.21, -0.8, 0.55);
-    return new Vector3(
-      -v.tuning.width * 0.21,
-      ["suv", "truck"].includes(v.kind)
-        ? -0.7
-        : ["coupe", "sedan", "police"].includes(v.kind)
-          ? -0.92
-          : -0.65,
-      -0.03,
-    );
+    return vehicleSeatOffset(this.vehicle!);
   }
   private attachSeat() {
     this.model.root.parent = this.vehicle!.root;
@@ -158,17 +178,55 @@ export class Player {
     if (!this.vehicle) return true;
     const v = this.vehicle;
     this.interactionMessage = "";
+    if (!force && this.transitioning) {
+      this.interactionMessage = "Finish entering or exiting first.";
+      return false;
+    }
     if (!force && Math.abs(v.speed) > 10) {
       this.interactionMessage = "Slow down before exiting.";
       return false;
     }
-    let p: Vector3 | null = null;
+    let p = this.safeExit(v);
+    if (!p && !force) {
+      this.interactionMessage = "No safe exit here. Move away from the obstruction.";
+      return false;
+    }
+    p ??= v.root.position.add(new Vector3(v.tuning.width + 1, 1.5, 0));
+    v.input = parkedVehicleInput(v);
+    if (force) { this.finishExit(v, p); return true; }
+    openVehicleDoor(v, Vector3.Dot(p.subtract(v.root.position), v.root.right) < 0 ? -1 : 1, 1.1);
+    this.model.root.computeWorldMatrix(true);
+    this.mountStart.copyFrom(this.model.root.getAbsolutePosition());
+    this.model.root.parent = null;
+    this.model.root.position.copyFrom(this.mountStart);
+    this.model.root.rotationQuaternion = null;
+    this.model.root.rotation.y = v.heading;
+    this.exitDestination = p;
+    this.mountTime = 0;
+    this.vehiclePhase = 'exiting';
+    this.transitioning = true;
+    v.controlLocked = true;
+    return true;
+  }
+
+  private safeExit(v: Vehicle, side?: -1 | 1): Vector3 | null {
+    // The entrant is deliberately beside the ejection path. Exclude only their
+    // own capsule from these synchronous queries, then restore normal contacts.
+    const shape = this.controller.shape;
+    const membership = shape.filterMembershipMask;
+    shape.filterMembershipMask = 0;
+    try { return this.findSafeExit(v, side); }
+    finally { shape.filterMembershipMask = membership; }
+  }
+
+  private findSafeExit(v: Vehicle, side?: -1 | 1): Vector3 | null {
     // Both doors first, then the rear. Sweep against world geometry while ignoring the source car.
-    for (const local of [
+    const candidates = side ? [new Vector3(side * (v.tuning.width / 2 + .7), 0, -.65)] : [
       new Vector3(-v.tuning.width / 2 - 0.62, 0, 0),
       new Vector3(v.tuning.width / 2 + 0.62, 0, 0),
       new Vector3(0, 0, -v.tuning.length / 2 - 0.65),
-    ]) {
+    ];
+    for (const local of candidates) {
       const offset = v.root.right
         .scale(local.x)
         .add(v.root.forward.scale(local.z));
@@ -187,31 +245,30 @@ export class Player {
         this.queries.clear(candidate) &&
         this.queries.path(start, candidate, v.body)
       ) {
-        p = candidate;
-        break;
+        return candidate;
       }
     }
-    if (!p && !force) {
-      this.interactionMessage =
-        "No safe exit here. Move away from the obstruction.";
-      return false;
-    }
-    p ??= v.root.position.add(new Vector3(v.tuning.width + 1, 1.5, 0));
-    if (!force) openVehicleDoor(v, Vector3.Dot(p.subtract(v.root.position), v.root.right) < 0 ? -1 : 1, 1.1);
+    return null;
+  }
+
+  private finishExit(v: Vehicle, p: Vector3) {
     this.model.root.parent = null;
     this.model.root.rotationQuaternion = null;
     this.transitioning = false;
+    this.vehiclePhase = 'on-foot';
+    this.exitDestination = null;
+    this.ejectDestination = null;
     this.controller.setShapeOptions(
       { capsuleHeight: 1.8, capsuleRadius: 0.32 },
       false,
     );
     this.teleport(p);
     v.occupied = false;
+    v.controlLocked = false;
     // Stop feeding the last driver's throttle after leaving the seat.
-    v.input = { throttle: 0, steer: 0, brake: 1, handbrake: !["boat", "plane", "helicopter"].includes(v.kind), lift: 0 };
+    v.input = parkedVehicleInput(v);
     this.vehicle = null;
     this.model.root.setEnabled(true);
-    return true;
   }
   hurt(amount: number) {
     if (this.god || this.deadTimer > 0) return;
@@ -224,23 +281,61 @@ export class Player {
   update(dt: number) {
     this.previous.copyFrom(this.controller.getPosition());
     this.aim = this.deadTimer <= 0 && this.input.aim;
+    const canRaise = this.deadTimer <= 0 && !this.vehicle && !this.transitioning && !this.climbing && !this.swimming;
+    this.weaponHold = canRaise && (this.input.aim || this.input.mouseDown) ? 0.65 : Math.max(0, this.weaponHold - dt);
+    this.weaponRaised = canRaise && this.weaponHold > 0;
+    this.weaponFacingReady = false;
     if (this.deadTimer > 0) {
       this.climbPath = [];
       this.climbing = false;
     }
     this.hitTime = Math.max(0, this.hitTime - dt);
     if (this.vehicle) {
+      const vehicle = this.vehicle;
       this.speed = 0;
       this.model.animate(dt, 0);
-      this.mountTime = Math.min(0.65, this.mountTime + dt);
-      this.model.pose(
-        this.transitioning ? "mount" : "seated",
-        this.mountTime / 0.65,
-        this.vehicle.kind === "motorcycle" ? "rider" : this.vehicle.kind === "concept" ? "reclined" : ["coupe", "sedan", "police", "boat"].includes(this.vehicle.kind) ? "low" : "upright",
-      );
-      if (this.mountTime >= 0.65 && this.transitioning) {
-        this.transitioning = false;
-        this.attachSeat();
+      this.mountTime += dt;
+      const pose = vehicleSeatPose(vehicle);
+      if (this.vehiclePhase === 'approaching') {
+        this.model.animate(dt, 1.5);
+        if (this.mountTime >= .32) {
+          this.mountStart.copyFrom(this.mountDoor);
+          this.mountTime = 0;
+          if (this.ejectDestination && this.occupancy.beginEjection(vehicle, this.ejectDestination.subtract(new Vector3(0, .94, 0))))
+            this.vehiclePhase = 'ejecting-driver';
+          else this.vehiclePhase = 'entering';
+        }
+      } else if (this.vehiclePhase === 'ejecting-driver') {
+        this.model.pose('mount', .28, pose);
+        if (this.mountTime >= EJECTION_SECONDS + .08) {
+          this.vehiclePhase = 'entering';
+          this.mountTime = 0;
+        }
+      } else if (this.vehiclePhase === 'entering') {
+        this.model.pose('mount', Math.min(1, this.mountTime / .65), pose);
+        if (this.mountTime >= .65) {
+          this.transitioning = false;
+          this.vehiclePhase = 'seated';
+          vehicle.controlLocked = false;
+          this.attachSeat();
+        }
+      } else if (this.vehiclePhase === 'exiting') {
+        this.model.pose('mount', 1 - Math.min(1, this.mountTime / .65), pose);
+        if (this.mountTime >= .65) {
+          const destination = this.exitDestination!;
+          if (this.queries.clear(destination) && this.queries.path(new Vector3(vehicle.root.position.x, destination.y, vehicle.root.position.z), destination, vehicle.body))
+            this.finishExit(vehicle, destination);
+          else {
+            this.interactionMessage = 'The exit became blocked. Move the vehicle and try again.';
+            this.vehiclePhase = 'seated';
+            this.transitioning = false;
+            this.exitDestination = null;
+            vehicle.controlLocked = false;
+            this.attachSeat();
+          }
+        }
+      } else {
+        this.model.pose('seated', 1, pose);
       }
       return;
     }
@@ -341,16 +436,19 @@ export class Player {
       );
     }
     this.speed = Math.hypot(move.x, move.z);
-    if (this.speed > 0.1)
+    if (this.speed > 0.1 && !this.weaponRaised)
       this.heading +=
         angleDelta(this.heading, Math.atan2(move.x, move.z)) *
         Math.min(1, dt * 14);
-    if (this.aim) this.heading = this.yaw;
+    if (this.weaponRaised) {
+      const forward = this.camera.getForwardRay().direction;
+      this.heading = turnWeaponHeading(this.heading, Math.atan2(forward.x, forward.z), dt);
+    }
     this.model.root.rotation.y = this.heading;
-    this.model.animate(dt, this.speed, this.aim, this.crouched);
+    this.model.animate(dt, this.speed, this.weaponRaised, this.crouched);
     if (this.swimming) this.model.pose("swim", this.model.phase);
     else if (this.hitTime > 0) this.model.pose("hit", this.hitTime / 0.35);
-    if (this.aim && !this.swimming) this.model.aimToward(this.camera.getForwardRay().direction);
+    this.alignWeaponPose();
     if (this.position.y < -15) this.teleport(new Vector3(6, 1.2, -28));
   }
   render(dt: number, alpha = 1, allowLook = true) {
@@ -375,11 +473,13 @@ export class Player {
         this.seatOffset(),
         this.vehicle.root.getWorldMatrix(),
       );
-      const t = this.mountTime / 0.65;
+      const t = Math.min(1, this.mountTime / (this.vehiclePhase === 'approaching' ? .32 : .65));
+      const end = this.vehiclePhase === 'approaching' || this.vehiclePhase === 'ejecting-driver'
+        ? this.mountDoor : this.vehiclePhase === 'exiting' ? this.exitDestination!.subtract(new Vector3(0, .94, 0)) : seat;
       this.model.root.position.copyFrom(
-        Vector3.Lerp(this.mountStart, seat, t * t * (3 - 2 * t)),
+        Vector3.Lerp(this.mountStart, end, t * t * (3 - 2 * t)),
       );
-      this.model.root.rotation.y = this.yaw;
+      this.model.root.rotation.y = this.vehicle.heading + (this.vehiclePhase === 'ejecting-driver' ? -this.mountSide * Math.PI / 2 : 0);
     }
     if (
       allowLook &&
@@ -419,7 +519,14 @@ export class Player {
     );
     this.cameraTarget.copyFrom(target);
     this.camera.setTarget(this.cameraTarget);
-    if (this.aim && !this.vehicle && !this.transitioning && !this.climbing && !this.swimming)
-      this.model.aimToward(this.camera.getForwardRay().direction);
+    this.alignWeaponPose();
+  }
+  private alignWeaponPose(): void {
+    this.weaponFacingReady = false;
+    if (!this.weaponRaised || this.vehicle || this.transitioning || this.climbing || this.swimming || this.deadTimer > 0) return;
+    const forward = this.camera.getForwardRay().direction;
+    const error = Math.abs(angleDelta(this.heading, Math.atan2(forward.x, forward.z)));
+    if (error <= WEAPON_ARM_CONE) this.model.aimToward(forward);
+    this.weaponFacingReady = error <= WEAPON_FIRE_CONE;
   }
 }

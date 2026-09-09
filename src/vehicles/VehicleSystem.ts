@@ -63,6 +63,8 @@ export interface Vehicle {
   speed: number;
   health: number;
   occupied: boolean;
+  /** Entry/ejection/dismount holds the brakes until the seat handoff is complete. */
+  controlLocked?: boolean;
   readonly heading: number;
   tuning: VehicleTuning;
   model: VehicleModel;
@@ -480,6 +482,7 @@ export class VehicleSystem {
 
   control(v: Vehicle, input: VehicleInput): void {
     if (!this.owns(v)) return;
+    if (v.controlLocked) input = { throttle: 0, steer: 0, brake: 1, handbrake: !['boat', 'plane', 'helicopter'].includes(v.kind), lift: 0 };
     v.input = {
       throttle: clamp(input.throttle, -1, 1),
       steer: clamp(input.steer, -1, 1),

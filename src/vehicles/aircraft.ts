@@ -24,16 +24,16 @@ export function aircraftInput(input: Pick<Input, 'axis' | 'down'>, kind: Vehicle
 const keyLabel = (code: string) => code.replace(/^Key/, '').replace(/Left$|Right$/, '').toUpperCase();
 export function aircraftPrompt(v: Pick<Vehicle, 'kind' | 'speed' | 'grounded' | 'health' | 'engineRunning'>, input: Pick<Input, 'bindings' | 'gamepad'>): string {
   const pad = !!input.gamepad;
-  const rise = pad ? 'A / L3' : `${keyLabel(input.bindings.jump)} / ${keyLabel(input.bindings.sprint)}`;
+  const rise = pad ? 'A' : keyLabel(input.bindings.jump);
   const lower = pad ? 'B' : keyLabel(input.bindings.crouch);
   const throttle = pad ? 'LEFT STICK ↑' : keyLabel(input.bindings.forward);
   const brake = pad ? 'LEFT STICK ↓' : keyLabel(input.bindings.back);
   const exit = pad ? 'Y' : keyLabel(input.bindings.interact);
-  if (v.health <= 0 || !v.engineRunning) return 'Engine disabled · Repair this aircraft to fly';
-  if (v.kind === 'helicopter') return `${rise}  Rise · ${lower}  Descend / land · ${throttle}/${brake}  Move · ${exit}  Exit`;
+  if (v.health <= 0 || !v.engineRunning) return `${keyLabel(input.bindings.repair)}  Repair`;
+  if (v.kind === 'helicopter') return `${rise} ↑  ${lower} ↓ · ${throttle}/${brake} · ${exit} Exit`;
   if (v.kind === 'plane') {
-    if (v.grounded > 0 && v.speed < 25) return `${throttle}  Accelerate to 90 km/h · then hold ${rise} to take off · ${brake}  Brake`;
-    return `${rise}  Nose up · ${lower}  Nose down · ${throttle}  Throttle · ${brake}  Slow / landing brake · ${exit}  Exit`;
+    if (v.grounded > 0 && v.speed < 25) return `${throttle} 90 km/h · ${rise} ↑ · ${lower} ↓`;
+    return `${throttle}/${brake} · ${rise} ↑  ${lower} ↓ · ${exit} Exit`;
   }
   return '';
 }

@@ -1,0 +1,83 @@
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ licensed player skins load once, retarget direct bone changes, preserve NPC uniforms and release clones (285.778709ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ both licensed skins clear existing low and detailed concept car cabin floor and roof bounds (54.028791ms)
+ℹ Jason low: cabin-space floor=-0.1528m, roof=0.9126m; all 14064 visible vertices evaluated.
+ℹ Jason reclined: cabin-space floor=-0.4322m, roof=0.5010m; all 14064 visible vertices evaluated.
+ℹ Lucia low: cabin-space floor=-0.1545m, roof=0.8929m; all 16308 visible vertices evaluated.
+ℹ Lucia reclined: cabin-space floor=-0.4307m, roof=0.4790m; all 16308 visible vertices evaluated.
+✔ a failed licensed character load retains fallback and can retry cleanly (14.453375ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ Rocketbox GLB packages retain licensed provenance and valid three-material skin data (2.19725ms)
+✔ visible player pelvis follows Havok ragdoll synchronization in the same render frame (146.015917ms)
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ civilian and player libraries load independently once and keep shared geometry with private rigs (269.116625ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ partial civilian loading failure retains working players and retries without accumulating assets (32.153375ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ population civilian appearance is stable by ID and does not change police or player selection (30.261541ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ nearby detailed civilian budget prioritizes settled casualties and changes only visibility (280.614917ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ civilian distance hysteresis avoids repeated visible mesh replacement at the detail threshold (10.011917ms)
+✔ both civilian rigs follow the same-frame Havok pelvis and retain fatal poses after distant culling (206.358459ms)
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ weapon switching conserves rounds and reloading transfers only available reserve (0.396417ms)
+✔ reticle sees target but muzzle ray stops at close cover, including invisible Havok proxies (14.921083ms)
+✔ physical grenade follows gravity, bounces off a thin wall and detonates at its actual body position (10.615459ms)
+✔ destructible fences collide and obstruct navigation until broken; material damage differs (35.313375ms)
+✔ explosion cover is resolved in three dimensions before destruction changes the scene (13.771958ms)
+✔ fire has visible flames, causes material damage, extinguishes in rain and preserves deformed geometry on save (9.957584ms)
+✔ Babylon V2 ragdoll uses constrained bodies, physically falls, then safely returns the live rig to animation (37.787875ms)
+✔ held models follow the skinned hand, hide for traversal and release pooled submaterials when switching (28.801584ms)
+✔ aimed weapon follows the firing direction at different pitches and yaws while its grip stays at the hand (6.573291ms)
+✔ fatal hit during recovery reactivates physics and bounded ragdolls release disposal observers (44.27625ms)
+✔ vehicle-like impacts queue prop destruction outside the physics callback and disposal restores resource counts (4.494042ms)
+✔ Combat fire and melee use the normal public interfaces, dispatch officer impacts and spend ammunition (19.064708ms)
+✔ reset clears active, fatal and already-settled ragdolls before population respawn (37.2425ms)
+✔ save validation accepts extended and original version-one snapshots (0.823083ms)
+✔ malformed prop rotation and duplicate IDs are rejected before world restoration (0.190667ms)
+✔ invalid ammunition cannot create impossible magazines or unusable weapon selection (0.06525ms)
+✔ casualty saves round trip and invalid records are rejected before restoring the world (0.339542ms)
+BJS - [20:54:41]: Babylon.js v9.25.0 - Null engine
+✔ ordinary player recovery preserves lethal civilian, guard and officer casualties while nonfatal victims recover (257.361834ms)
+ℹ Fatal health/dead gates survive ordinary recovery; explicit encounter reset revives; nonfatal recovery retains75health.
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ casualty save round trip retains ambient/custom civilian IDs, fixed guards and retired officers without resurrection or extra physics (122.820209ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ dead response crews do not count as living dispatch and disabled-response cleanup remains bounded without resurrecting IDs (196.930208ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ uniform trousers use the role palette and the firearm follows a live rigged hand through aiming (45.565292ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ legacy saved health-zero creative civilians acquire a persistent corpse pose without a casualty field (50.653542ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ a surviving gunshot remains incapacitating through ordinary recovery and version-two save/load (246.470542ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ minor blunt recovery waits its remaining time after save/load while repeated injuries can incapacitate (139.44975ms)
+BJS - [20:54:42]: Babylon.js v9.25.0 - Null engine
+✔ settling more than eight casualties never forces a survivor upright, and all actor roles preserve serious injuries (221.905708ms)
+BJS - [20:54:43]: Babylon.js v9.25.0 - Null engine
+✔ production Combat shots damage a settled surviving target and can make the injury fatal (145.764708ms)
+BJS - [20:54:43]: Babylon.js v9.25.0 - Null engine
+✔ an incapacitated response crew does not permanently reserve an offscreen patrol assignment (106.43875ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2609.398292

@@ -187,19 +187,28 @@ test("vehicle exit finds the opposite door and refuses when every exit is blocke
     null,
     "switching during mount must keep world-space interpolation unparented",
   );
-  for (let n = 0; n < 45; n++) player.update(1 / 60);
+  for (let n = 0; n < 65; n++) player.update(1 / 60);
   assert.equal(player.model.root.isEnabled(), true);
   assert.equal(player.model.root.parent, car.root);
-  f.box("left wall", new Vector3(-1.5, 1, 0), 0.3, 2, 8);
+  const leftWall = f.box("left wall", new Vector3(-1.5, 1, 0), 0.3, 2, 8);
   f.physics._step(1 / 60);
   vehicles.control(car, { throttle: -1, steer: .5, brake: 0, handbrake: false, lift: 1 });
   assert.equal(player.exit(), true);
+  assert.equal(player.vehiclePhase, "exiting", "dismount is visible before control returns");
+  for (let n = 0; n < 45; n++) player.update(1 / 60);
   assert.ok(player.position.x > 1, "other door chosen");
+  assert.deepEqual(car.input, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
+  // The clearance fixture places a wall through the animated open door. Remove
+  // that contact before measuring powered drift, then allow the door to close.
+  leftWall.dispose();
+  for (let n = 0; n < 90; n++) { vehicles.update(1 / 60); f.physics._step(1 / 60); }
   const parked = car.root.position.clone();
   for (let n = 0; n < 180; n++) { vehicles.update(1 / 60); f.physics._step(1 / 60); }
   assert.ok(Vector3.Distance(car.root.position, parked) < .1, "an exited vehicle cannot retain powered reverse/throttle");
   assert.deepEqual(car.input, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
   assert.equal(player.enter(car), true);
+  for (let n = 0; n < 65; n++) player.update(1 / 60);
+  f.box("left wall", new Vector3(-1.5, 1, 0), 0.3, 2, 8);
   f.box("right wall", new Vector3(1.5, 1, 0), 0.3, 2, 8);
   f.box("back wall", new Vector3(0, 1, -2.85), 5, 2, 0.3);
   f.physics._step(1 / 60);
@@ -248,4 +257,28 @@ test("WASTED rejects vehicle entry and jumping; paused controller look stays fix
   player.controller.dispose();
   player.queries.dispose();
   vehicles.dispose();
+});
+
+
+test("hip firing raises the weapon and turns the actual player before its firing cone opens", async (t) => {
+  const f = await fixture();
+  t.after(() => { f.scene.dispose(); f.engine.dispose(); });
+  let fireHeld = true;
+  const input = { aim: false, get mouseDown() { return fireHeld; }, down: () => false, take: () => false, axis: () => 0, dx: 0, dy: 0, gamepad: null } as unknown as Input;
+  const player = new Player(f.scene, f.shadows, input, new Vector3(0, .94, 0));
+  player.camera.position.set(0, 1.6, 7); player.camera.setTarget(new Vector3(0, 1.6, 0));
+  player.heading = 0;
+  player.update(1 / 60);
+  assert.equal(player.aim, false, "left-click does not require RMB zoom");
+  assert.equal(player.weaponRaised, true);
+  assert.equal(player.weaponFacingReady, false, "backward aim cannot fire");
+  assert.ok(Math.abs(player.heading) < .18, "body turns at a bounded rate");
+  for (let i = 0; i < 25; i++) { player.update(1 / 60); f.physics._step(1 / 60); }
+  assert.equal(player.weaponFacingReady, true);
+  const forward = player.camera.getForwardRay().direction;
+  assert.ok(Math.sin(player.heading) * forward.x + Math.cos(player.heading) * forward.z > .965, "torso faces the firing direction");
+  fireHeld = false;
+  for (let i = 0; i < 50; i++) player.update(1 / 60);
+  assert.equal(player.weaponRaised, false); assert.equal(player.weaponFacingReady, false);
+  player.controller.dispose(); player.model.dispose(); player.queries.dispose();
 });

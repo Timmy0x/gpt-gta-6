@@ -303,7 +303,7 @@ test("Babylon V2 ragdoll uses constrained bodies, physically falls, then safely 
     assert.ok(Vector3.Distance(pelvis.position, start) > 0.25);
     assert.ok(pelvis.position.y < 0.8, "body settles near ground");
     assert.ok(model.root.metadata.ragdollActive);
-    f.step(140, (dt) => reactions.update(dt));
+    f.step(660, (dt) => reactions.update(dt));
     assert.equal(reactions.active.length, 0);
     assert.equal(f.physics.getBodies().length, bodyCount);
     assert.equal(model.root.metadata.ragdollActive, false);
@@ -376,8 +376,8 @@ test("fatal hit during recovery reactivates physics and bounded ragdolls release
     const observers = model.root.onDisposeObservable.observers.length,
       baseline = f.physics.getBodies().length;
     reactions.hit(model, new Vector3(20, 3, 0));
-    f.step(168, (dt) => reactions.update(dt));
-    assert.ok(reactions.active[0].recovering);
+    f.step(630, (dt) => reactions.update(dt));
+    assert.ok(model.root.metadata.ragdollRecovering);
     reactions.hit(model, new Vector3(30, 5, 0), true);
     assert.equal(reactions.active[0].recovering, false);
     assert.equal(reactions.active[0].fatal, true);

@@ -428,7 +428,6 @@ async function boot() {
         ui.toast(player.interactionMessage);
         return;
       }
-      population.drivers = population.drivers.filter((d) => d.v !== v);
       audio.start();
       ui.toast(
         isAircraft(v.kind) ? `${v.tuning.label} · ${aircraftPrompt(v, input)}` : `${v.tuning.label} · W/S throttle · A/D steer · Space handbrake · E exit`,
@@ -501,7 +500,7 @@ async function boot() {
       ui.showPanel("");
       setPause(false);
       canvas.focus();
-      ui.toast(action === "continue" ? "Saved sandbox restored." : "Walk to the car ahead. Press E to get in.");
+      ui.toast(action === "continue" ? "Saved sandbox restored." : "E  Drive");
       return;
     }
     if (["creative", "map", "pause", "credits"].includes(action)) {
@@ -920,20 +919,20 @@ async function boot() {
       hudTime = 0;
       closest = nearestVehicle();
       let prompt = player.vehicle
-        ? isAircraft(player.vehicle.kind) ? aircraftPrompt(player.vehicle, input) : "E  Exit vehicle · G  Repair / recover · T  Coastal sprint"
+        ? isAircraft(player.vehicle.kind) ? aircraftPrompt(player.vehicle, input) : "E  Exit"
         : closest
-          ? `E  Enter ${closest.tuning.label}`
+          ? "E  Drive"
           : "";
       if (!prompt) {
         const l = world.locations.find(
           (l) => distance(l, player.position) < 12,
         );
-        if (l) prompt = `E  Interact · ${l.name}`;
+        if (l) prompt = "E  Use";
       }
       if (population.facility.canRequestAccess && population.facility.accessRemaining <= 0)
-        prompt = "E  Request visitor access · Coastal Reserve gate";
+        prompt = "E  Access";
       if (player.vehicle && Math.abs(player.vehicle.speed) < 2 && nearbyGarage(player.position, world.locations))
-        prompt = "E  Garage · Repair and paint";
+        prompt = "E  Garage";
       ui.settings = {
         time,
         weather,

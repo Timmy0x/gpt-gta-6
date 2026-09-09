@@ -1,3 +1,5 @@
+import { isDown } from "./casualties";
+import type { CharacterDamageKind, CharacterImpact } from "../combat/injuries";
 import {
   Ray,
   Frustum,
@@ -52,7 +54,7 @@ export class PoliceDirector {
   onArrest = () => {};
   onMessage = (_message: string) => {};
   onCharacterHit:
-    | ((model: Character, impulse: Vector3, fatal: boolean) => void)
+    | ((model: Character, impulse: Vector3, fatal: boolean, impact: CharacterImpact) => void)
     | null = null;
   private spawnTimer = 0;
   private nextOfficerId = 1;
@@ -76,7 +78,7 @@ export class PoliceDirector {
     this.resistance = Math.max(this.resistance, seconds);
     this.arrestProgress = 0;
   }
-  hurtOfficer(officer: Officer, amount: number) {
+  hurtOfficer(officer: Officer, amount: number, kind: CharacterDamageKind = "impact") {
     if (
       !this.officers.includes(officer) ||
       officer.health <= 0 ||
@@ -99,7 +101,7 @@ export class PoliceDirector {
     impulse.y = 1.5;
     if (this.onCharacterHit) {
       officer.state = "pursuit";
-      this.onCharacterHit(officer.model, impulse, officer.health <= 0);
+      this.onCharacterHit(officer.model, impulse, officer.health <= 0, { kind, damage: amount, health: officer.health });
     } else if (officer.health <= 0) {
       officer.model.root.rotation.z = Math.PI / 2;
       officer.model.root.position.y = 0.35;
@@ -189,7 +191,7 @@ export class PoliceDirector {
     const count = assignment === "swat" ? 2 : 1;
     for (
       let seat = 0;
-      seat < count && this.officers.filter(o=>o.health>0).length < OFFICER_LIMIT && this.officers.length < OFFICER_LIMIT+CASUALTY_LIMITS.police;
+      seat < count && this.officers.filter(o=>!isDown(o.model,o.health)).length < OFFICER_LIMIT && this.officers.length < OFFICER_LIMIT+CASUALTY_LIMITS.police;
       seat++
     )
       this.officers.push(
@@ -312,8 +314,8 @@ export class PoliceDirector {
     if (
       this.wanted.stars &&
       this.spawnTimer <= 0 &&
-      this.officers.filter(o=>o.health>0).length < OFFICER_LIMIT &&
-      this.officers.filter(o=>o.health<=0).length < CASUALTY_LIMITS.police &&
+      this.officers.filter(o=>!isDown(o.model,o.health)).length < OFFICER_LIMIT &&
+      this.officers.filter(o=>isDown(o.model,o.health)).length < CASUALTY_LIMITS.police &&
       this.officers.length < OFFICER_LIMIT+CASUALTY_LIMITS.police
     ) {
       const assignment =
@@ -479,7 +481,7 @@ export class PoliceDirector {
       if (!d.police || d.v === this.player.vehicle) continue;
       const crew = this.officers.filter((o) => o.vehicleId === d.v.id);
       if (
-        crew.every((o) => o.health <= 0 && o.deadTime > 12) &&
+        crew.every((o) => isDown(o.model, o.health) && o.deadTime > 12) &&
         distance(d.v.root.position, position) > 70 &&
         this.outsideView(d.v.root.position)
       ) {
@@ -529,7 +531,7 @@ export class PoliceDirector {
     this.player.hurt(amount);
   }
   private updateCasualties(dt:number,position:Vector3){
-    for(const officer of [...this.officers])if(officer.health<=0){
+    for(const officer of [...this.officers])if(isDown(officer.model,officer.health)){
       officer.deadTime+=dt;
       if(officer.deadTime>25&&distance(officer.position,position)>50&&this.outsideView(officer.position)){
         officer.dispose();this.officers.splice(this.officers.indexOf(officer),1);
@@ -665,8 +667,8 @@ export class PoliceDirector {
     void drivers;
   }
   removeResponse(drivers: Driver[], removeCasualties = true) {
-    for (const o of this.officers)if(removeCasualties||o.health>0)o.dispose();
-    this.officers = removeCasualties?[]:this.officers.filter(o=>o.health<=0);
+    for (const o of this.officers)if(removeCasualties||!isDown(o.model,o.health))o.dispose();
+    this.officers = removeCasualties?[]:this.officers.filter(o=>isDown(o.model,o.health));
     for (let i = drivers.length - 1; i >= 0; i--)
       if (drivers[i].police) {
         if (drivers[i].v !== this.player.vehicle)
@@ -688,13 +690,13 @@ export class PoliceDirector {
     this.lastPlayer.copyFrom(this.player.position);
   }
   serializeCasualties(){
-    return {police:this.officers.filter(o=>o.health<=0&&o.role!=="military").slice(-CASUALTY_LIMITS.police).map(o=>({...snapshotCasualty(o.id,o.model),role:o.role as "patrol"|"swat"})),nextOfficerId:Math.max(this.nextOfficerId,...this.officers.map(o=>Number(o.id.slice(8))+1).filter(Number.isFinite))};
+    return {police:this.officers.filter(o=>isDown(o.model,o.health)&&o.role!=="military").slice(-CASUALTY_LIMITS.police).map(o=>({...snapshotCasualty(o.id,o.model,o.health),role:o.role as "patrol"|"swat"})),nextOfficerId:Math.max(this.nextOfficerId,...this.officers.map(o=>Number(o.id.slice(8))+1).filter(Number.isFinite))};
   }
   restoreCasualties(entries:PoliceCasualty[],nextOfficerId:number){
-    for(const officer of [...this.officers])if(officer.health<=0){officer.dispose();this.officers.splice(this.officers.indexOf(officer),1);}
+    for(const officer of [...this.officers])if(isDown(officer.model,officer.health)){officer.dispose();this.officers.splice(this.officers.indexOf(officer),1);}
     this.nextOfficerId=Math.max(this.nextOfficerId,nextOfficerId,...entries.map(e=>Number(e.id.slice(8))+1));
     for(const entry of entries.slice(-CASUALTY_LIMITS.police)){
-      const officer=new Officer(entry.id,entry.role,"retired-response",this.scene,this.shadows);officer.health=0;officer.state="injured";
+      const officer=new Officer(entry.id,entry.role,"retired-response",this.scene,this.shadows);officer.health=entry.health??0;officer.state="injured";
       restoreCorpse(officer.model,entry);officer.weapon.setEnabled(false);this.officers.push(officer);
     }
   }

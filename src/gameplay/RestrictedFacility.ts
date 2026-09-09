@@ -1,3 +1,4 @@
+import type { CharacterDamageKind, CharacterImpact } from "./combat/injuries";
 import { Color3, MeshBuilder, PBRMaterial, PhysicsAggregate, PhysicsMotionType, PhysicsShapeType, Quaternion, Ray, Vector3, type Scene, type ShadowGenerator } from "@babylonjs/core";
 import type { Obstacle, RoadNode, WorldContract } from "../core/contracts";
 import { clamp, distance, lineBlocked, type Point2 } from "../core/math";
@@ -38,7 +39,7 @@ export class RestrictedFacility {
   observesSuspect=false;
   onMessage=(_text:string)=>{};
   onArrest=()=>{};
-  onCharacterHit:((model:Character,impulse:Vector3,fatal:boolean)=>void)|null=null;
+  onCharacterHit:((model:Character,impulse:Vector3,fatal:boolean,impact:CharacterImpact)=>void)|null=null;
   private active=false;
   private resistance=0;
   private messageTimer=0;
@@ -86,12 +87,12 @@ export class RestrictedFacility {
     }
     this.alarmRemaining=FACILITY_RULES.alarmSearchSeconds;
   }
-  hurtGuard(guard:Officer,amount:number){
+  hurtGuard(guard:Officer,amount:number,kind:CharacterDamageKind="impact"){
     if(!this.guards.includes(guard)||guard.health<=0||!Number.isFinite(amount)||amount<=0)return;
     guard.health=Math.max(0,guard.health-amount);this.resistance=12;this.alarm("A guard has been attacked.");
     if(guard.health<=0)guard.model.dead=true;
     const impulse=guard.position.subtract(this.player.position).normalize().scale(Math.min(12,amount*.16));impulse.y=1.5;
-    this.onCharacterHit?.(guard.model,impulse,guard.health<=0);
+    this.onCharacterHit?.(guard.model,impulse,guard.health<=0,{kind,damage:amount,health:guard.health});
     if(guard.health<=0){guard.state="injured";guard.controller?.dispose();guard.controller=null;if(!this.onCharacterHit){guard.model.root.rotation.z=Math.PI/2;guard.model.root.position.y=.35;}}
   }
   update(dt:number,enabled=true){
@@ -163,7 +164,7 @@ export class RestrictedFacility {
     this.player.hurt(7);
   }
   reset(revive=true){if(revive){this.guards.forEach(g=>g.dispose());this.createGuards();this.active=false;this.patrolIndices=[0,0,0,0];}this.phase="quiet";this.warningRemaining=0;this.accessRemaining=0;this.alarmRemaining=0;this.arrestProgress=0;this.resistance=0;this.lastPlayer.copyFrom(this.player.position);}
-  restoreCasualties(entries:Casualty[]){for(const entry of entries){const guard=this.guards.find(g=>g.id===entry.id);if(!guard)continue;guard.health=0;guard.state="injured";guard.controller?.dispose();guard.controller=null;restoreCorpse(guard.model,entry);guard.weapon.setEnabled(false);}}
+  restoreCasualties(entries:Casualty[]){for(const entry of entries){const guard=this.guards.find(g=>g.id===entry.id);if(!guard)continue;guard.health=entry.health??0;guard.state="injured";guard.controller?.dispose();guard.controller=null;restoreCorpse(guard.model,entry);guard.weapon.setEnabled(false);}}
   get stats(){return {id:B.id,classification:B.classification,phase:this.phase,inside:insideFacility(this.player.position),accessSeconds:Math.ceil(this.accessRemaining),warningSeconds:Math.ceil(this.warningRemaining),guards:this.guards.filter(g=>g.health>0).length,activeGuards:this.active?this.guards.filter(g=>g.health>0).length:0,gateOpen:this.gateAngle>1.4,arrestProgress:this.arrestProgress};}
   dispose(){this.guards.forEach(g=>g.dispose());this.guards=[];this.gatePhysics.dispose();this.gate.dispose();this.beacon.dispose();this.material.dispose();this.alarmMaterial.dispose();}
 }

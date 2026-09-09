@@ -21,9 +21,9 @@ test('Space / gamepad A is collective or elevator in aircraft, without applying 
 test('aircraft instructions expose required lift, change after runway acceleration, and follow remapped keys or gamepad',()=>{
   const input={bindings:{...DEFAULT_BINDINGS},gamepad:null};
   const v={kind:'plane' as const,speed:0,grounded:3,health:100,engineRunning:true};
-  assert.match(aircraftPrompt(v,input),/Accelerate to 90 km\/h.*SPACE \/ SHIFT/);
-  assert.match(aircraftPrompt({...v,speed:30,grounded:0},input),/Nose up.*Nose down/);
+  assert.match(aircraftPrompt(v,input),/90 km\/h.*SPACE ↑.*C ↓/);
+  assert.match(aircraftPrompt({...v,speed:30,grounded:0},input),/SPACE ↑.*C ↓/);
   input.bindings.jump='KeyQ';input.bindings.sprint='ControlLeft';
-  assert.match(aircraftPrompt({...v,kind:'helicopter'},input),/Q \/ CONTROL.*Rise/);
-  assert.match(aircraftPrompt({...v,kind:'helicopter'},{...input,gamepad:{} as Input['gamepad']}),/A \/ L3.*B.*Descend/);
+  assert.match(aircraftPrompt({...v,kind:'helicopter'},input),/Q ↑/);
+  assert.match(aircraftPrompt({...v,kind:'helicopter'},{...input,gamepad:{} as Input['gamepad']}),/A ↑.*B ↓/);
 });

@@ -11,12 +11,15 @@ import {
   type Scene,
 } from "@babylonjs/core";
 import type { Character } from "../Character";
+import { INJURY_RULES, injuryFromImpact, type CharacterImpact } from "./injuries";
 
 type BonePose = { bone: Bone; position: Vector3; rotation: Quaternion };
 interface Reaction {
   model: Character;
   ragdoll: Ragdoll;
   life: number;
+  physicalLife: number;
+  pelvis: Vector3;
   fatal: boolean;
   recovering: boolean;
   start: BonePose[];
@@ -29,26 +32,25 @@ type Config = RagdollBoneProperties & { bone: string; mass: number };
 /** Babylon's existing Physics V2 Ragdoll owns body constraints and physical skin synchronization. */
 export class RagdollReactions {
   readonly active: Reaction[] = [];
-  private frozen = new Map<Character, BonePose[]>();
+  private frozen = new Map<Character, Reaction>();
   constructor(private scene: Scene) {}
-  hit(model: Character, impulse: Vector3, fatal = false): void {
+  hit(model: Character, impulse: Vector3, fatal = false, impact: CharacterImpact = { kind: "impact", damage: 10, health: 100 }): void {
     if (model.root.isDisposed()) return;
-    if(fatal)model.dead=true;
-    this.frozen.delete(model);
-    let reaction = this.active.find((r) => r.model === model);
-    if (reaction?.recovering) {
-      this.finish(reaction, true);
-      this.hit(model, impulse, fatal);
-      return;
-    }
-    if (reaction) {
+    fatal ||= model.dead;
+    if (fatal) model.dead = true;
+    model.injury = injuryFromImpact(impact, model.injury);
+    let reaction = this.active.find(r => r.model === model) ?? this.frozen.get(model);
+    const target = reaction?.target;
+    if (reaction && !reaction.disposed) {
       reaction.fatal ||= fatal;
-      reaction.life = Math.max(reaction.life, fatal ? 6 : 1.8);
-      if (!reaction.recovering) this.applyImpulse(reaction, impulse);
+      reaction.physicalLife = Math.max(reaction.physicalLife, fatal ? INJURY_RULES.fatalPhysicalSeconds : INJURY_RULES.physicalSeconds);
+      this.applyImpulse(reaction, impulse);
+      this.status(reaction);
       return;
     }
-    while (this.active.length >= 8)
-      this.finish(this.active[0], !this.active[0].fatal);
+    // Restart from the current down/recovering pose, never from an upright target.
+    if (reaction) this.remove(reaction);
+    while (this.active.length >= INJURY_RULES.physicalBodyLimit) this.settle(this.active[0]);
     model.root.metadata = {
       ...model.root.metadata,
       ragdollActive: true,
@@ -115,16 +117,18 @@ export class RagdollReactions {
         PhysicsConstraintType.HINGE,
       ),
     ];
-    const target = this.capture(model);
+    const recoveryTarget = target ?? this.capture(model);
     const ragdoll = new Ragdoll(model.skeleton, model.root, config);
     reaction = {
       model,
       ragdoll,
-      life: fatal ? 8 : 2.7,
+      life: 0,
+      physicalLife: fatal ? INJURY_RULES.fatalPhysicalSeconds : INJURY_RULES.physicalSeconds,
+      pelvis: model.root.position.clone(),
       fatal,
       recovering: false,
       start: [],
-      target,
+      target: recoveryTarget,
       disposed: false,
       removeDisposeObserver: () => {},
     };
@@ -142,12 +146,13 @@ export class RagdollReactions {
     }
     const entry = reaction,
       observer = model.root.onDisposeObservable.addOnce(() =>
-        this.finish(entry, false),
+        this.remove(entry),
       );
     entry.removeDisposeObserver = () => {
       model.root.onDisposeObservable.remove(observer);
     };
     this.applyImpulse(entry, impulse);
+    this.status(entry);
   }
   private capture(model: Character): BonePose[] {
     return model.skeleton.bones.map((bone) => ({
@@ -165,45 +170,61 @@ export class RagdollReactions {
       body.applyImpulse(bounded.scale(mass / 70), body.transformNode.position);
     }
   }
+  private status(reaction: Reaction): void {
+    const model = reaction.model;
+    model.root.metadata = {
+      ...model.root.metadata,
+      ragdollActive: true,
+      ragdollRecovering: reaction.recovering,
+      injuryStatus: model.dead ? "dead" : reaction.recovering ? "recovering" : model.injury?.remaining === null ? "incapacitated" : "knocked-down",
+    };
+  }
   update(dt: number): void {
-    for (const model of this.frozen.keys()) if (model.root.isDisposed()) this.frozen.delete(model);
-    for (const reaction of [...this.active]) {
-      if (reaction.model.root.isDisposed()) {
-        this.finish(reaction, false);
+    for (const reaction of [...this.active, ...this.frozen.values()]) {
+      const model = reaction.model;
+      if (model.root.isDisposed()) { this.remove(reaction); continue; }
+      if (!reaction.disposed) {
+        reaction.pelvis.copyFrom(reaction.ragdoll.getAggregate(0).transformNode.position);
+        model.root.position.x = reaction.pelvis.x;
+        model.root.position.z = reaction.pelvis.z;
+        model.root.computeWorldMatrix(true);
+        reaction.physicalLife -= dt;
+      }
+      reaction.fatal ||= model.dead;
+      if (reaction.recovering) {
+        reaction.life -= dt;
+        const alpha = Math.max(0, Math.min(1, 1 - reaction.life / INJURY_RULES.recoverySeconds));
+        const smooth = alpha * alpha * (3 - 2 * alpha);
+        for (let i = 0; i < reaction.target.length; i++) {
+          const target = reaction.target[i], start = reaction.start[i];
+          target.bone.setPosition(Vector3.Lerp(start.position, target.position, smooth));
+          target.bone.setRotationQuaternion(Quaternion.Slerp(start.rotation, target.rotation, smooth));
+        }
+        if (reaction.life <= 0) this.finishRecovery(reaction);
         continue;
       }
-      if (!reaction.recovering) {
-        const pelvis = reaction.ragdoll.getAggregate(0).transformNode.position;
-        reaction.model.root.position.x = pelvis.x;
-        reaction.model.root.position.z = pelvis.z;
-        reaction.model.root.computeWorldMatrix(true);
-      }
-      reaction.life -= dt;
-      if (reaction.recovering) {
-        const alpha = Math.max(0, Math.min(1, 1 - reaction.life / 0.7)),
-          smooth = alpha * alpha * (3 - 2 * alpha);
-        for (let i = 0; i < reaction.target.length; i++) {
-          const target = reaction.target[i],
-            start = reaction.start[i];
-          target.bone.setPosition(
-            Vector3.Lerp(start.position, target.position, smooth),
-          );
-          target.bone.setRotationQuaternion(
-            Quaternion.Slerp(start.rotation, target.rotation, smooth),
-          );
-        }
-        if (reaction.life <= 0) this.finish(reaction, true);
-      } else if (reaction.life <= 0) {
-        if (reaction.fatal) this.finish(reaction, false);
-        else this.recover(reaction);
-      }
+      if (!reaction.fatal && model.injury?.remaining != null) model.injury.remaining = Math.max(0, model.injury.remaining - dt);
+      if (!reaction.disposed && reaction.physicalLife <= 0) this.settle(reaction);
+      if (!reaction.fatal && model.injury?.remaining === 0) this.recover(reaction);
     }
+  }
+  /** Release Havok bodies while keeping the exact fallen pose and injury timer. */
+  private settle(reaction: Reaction): void {
+    if (reaction.disposed) return;
+    reaction.pelvis.copyFrom(reaction.ragdoll.getAggregate(0).transformNode.position);
+    const pose = this.capture(reaction.model);
+    reaction.ragdoll.dispose();
+    reaction.disposed = true;
+    reaction.removeDisposeObserver();
+    for (const bone of pose) { bone.bone.setPosition(bone.position); bone.bone.setRotationQuaternion(bone.rotation); }
+    this.active.splice(this.active.indexOf(reaction), 1);
+    this.frozen.set(reaction.model, reaction);
+    this.status(reaction);
   }
   private recover(reaction: Reaction): void {
     const model = reaction.model,
-      pelvis = reaction.ragdoll.getAggregate(0).transformNode.position.clone();
-    reaction.ragdoll.dispose();
-    reaction.disposed = true;
+      pelvis = reaction.pelvis.clone();
+    if (!reaction.disposed) this.settle(reaction);
     const physics = this.scene.getPhysicsEngine() as PhysicsEngineV2,
       result = new PhysicsRaycastResult();
     physics.raycastToRef(
@@ -229,45 +250,59 @@ export class RagdollReactions {
       ),
     );
     reaction.start = this.capture(model);
-    reaction.life = 0.7;
+    reaction.life = INJURY_RULES.recoverySeconds;
     reaction.recovering = true;
-    model.root.metadata.ragdollRecovering = true;
+    this.status(reaction);
   }
-  private finish(reaction: Reaction, recovered: boolean): void {
-    const index = this.active.indexOf(reaction);
-    if (index < 0) return;
+  private remove(reaction: Reaction): void {
     reaction.removeDisposeObserver();
-    const settled=!recovered&&!reaction.model.root.isDisposed()?this.capture(reaction.model):null;
-    if (!reaction.disposed) {
-      reaction.ragdoll.dispose();
-      reaction.disposed = true;
-    }
-    if (!reaction.model.root.isDisposed()) {
-      reaction.model.root.metadata = {
-        ...reaction.model.root.metadata,
-        ragdollActive: !recovered,
-        ragdollRecovering: false,
-      };
-      if (!recovered) this.frozen.set(reaction.model, reaction.target);
-      if(settled)for(const pose of settled){pose.bone.setPosition(pose.position);pose.bone.setRotationQuaternion(pose.rotation);}
-      if (recovered)
-        for (const pose of reaction.target) {
-          pose.bone.setPosition(pose.position);
-          pose.bone.setRotationQuaternion(pose.rotation);
-        }
-    }
-    this.active.splice(index, 1);
+    if (!reaction.disposed) { reaction.ragdoll.dispose(); reaction.disposed = true; }
+    const index = this.active.indexOf(reaction);
+    if (index >= 0) this.active.splice(index, 1);
+    this.frozen.delete(reaction.model);
   }
-  /** Full reset restores encounter poses; ordinary player recovery preserves fatal casualties. */
-  reset(options:{preserveFatal?:boolean}={}): void {
-    for (const reaction of [...this.active]) this.finish(reaction, !(options.preserveFatal&&reaction.fatal));
-    for (const [model, poses] of this.frozen) {
-      if(options.preserveFatal&&model.dead)continue;
-      if (model.root.isDisposed()) continue;
-      model.root.metadata = { ...model.root.metadata, ragdollActive: false, ragdollRecovering: false };
-      for (const pose of poses) { pose.bone.setPosition(pose.position); pose.bone.setRotationQuaternion(pose.rotation); }
+  private finishRecovery(reaction: Reaction): void {
+    const model = reaction.model;
+    if (model.dead) { reaction.fatal = true; reaction.recovering = false; this.status(reaction); return; }
+    this.remove(reaction);
+    model.injury = null;
+    model.root.metadata = { ...model.root.metadata, ragdollActive: false, ragdollRecovering: false, injuryStatus: "healthy" };
+    for (const pose of reaction.target) { pose.bone.setPosition(pose.position); pose.bone.setRotationQuaternion(pose.rotation); }
+  }
+  /** Register a saved lying survivor without allocating a new physics ragdoll. */
+  restore(model: Character): void {
+    if (model.root.isDisposed()) return;
+    const down = this.capture(model);
+    const previous = this.active.find(reaction => reaction.model === model) ?? this.frozen.get(model);
+    if (previous) this.remove(previous);
+    for (const pose of down) { pose.bone.setPosition(pose.position); pose.bone.setRotationQuaternion(pose.rotation); }
+    if (model.dead || !model.injury) return;
+    model.skeleton.returnToRest();
+    const target = this.capture(model);
+    for (const pose of down) { pose.bone.setPosition(pose.position); pose.bone.setRotationQuaternion(pose.rotation); }
+    model.root.computeWorldMatrix(true);
+    model.skeleton.computeAbsoluteMatrices(true);
+    const pelvis = model.skeleton.bones[0].getAbsolutePosition(model.root);
+    // A restored entry never accesses ragdoll: all transitions respect disposed=true.
+    const reaction: Reaction = { model, ragdoll: null as unknown as Ragdoll, life: 0, physicalLife: 0, pelvis, fatal: false,
+      recovering: false, start: [], target, disposed: true, removeDisposeObserver() {} };
+    this.frozen.set(model, reaction);
+    this.status(reaction);
+  }
+  /** Ordinary player recovery preserves down survivors as well as fatal casualties. */
+  reset(options: { preserveFatal?: boolean } = {}): void {
+    if (options.preserveFatal) {
+      for (const reaction of [...this.active]) this.settle(reaction);
+      return;
     }
-    if(options.preserveFatal){for(const model of this.frozen.keys())if(!model.dead||model.root.isDisposed())this.frozen.delete(model);}else this.frozen.clear();
+    for (const reaction of [...this.active, ...this.frozen.values()]) {
+      const model = reaction.model;
+      this.remove(reaction);
+      if (model.root.isDisposed()) continue;
+      model.injury = null;
+      model.root.metadata = { ...model.root.metadata, ragdollActive: false, ragdollRecovering: false, injuryStatus: "healthy" };
+      for (const pose of reaction.target) { pose.bone.setPosition(pose.position); pose.bone.setRotationQuaternion(pose.rotation); }
+    }
   }
   dispose(): void { this.reset(); }
 }
