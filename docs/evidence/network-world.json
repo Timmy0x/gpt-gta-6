@@ -1,0 +1,860 @@
+{
+  "renderer": "Babylon NullEngine; texture URLs are parsed but PNGs are not fetched/rendered by NullEngine",
+  "transport": "real local HTTP fetch with gzip decompression and SHA-256 verification",
+  "capturedAt": "2026-09-09T15:43:36.941Z",
+  "requests": [
+    {
+      "path": "/world/manifest.json",
+      "status": 200,
+      "bytes": 162073
+    },
+    {
+      "path": "/world/materials/material-000.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "path": "/world/materials/material-001.json.gz",
+      "status": 200,
+      "bytes": 2203
+    },
+    {
+      "path": "/world/materials/material-002.json.gz",
+      "status": 200,
+      "bytes": 2222
+    },
+    {
+      "path": "/world/materials/material-007.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "path": "/world/materials/material-062.json.gz",
+      "status": 200,
+      "bytes": 1910
+    },
+    {
+      "path": "/world/materials/material-061.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "path": "/world/materials/material-063.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-067.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "path": "/world/materials/material-064.json.gz",
+      "status": 200,
+      "bytes": 1949
+    },
+    {
+      "path": "/world/materials/material-065.json.gz",
+      "status": 200,
+      "bytes": 1953
+    },
+    {
+      "path": "/world/materials/material-066.json.gz",
+      "status": 200,
+      "bytes": 1940
+    },
+    {
+      "path": "/world/materials/material-069.json.gz",
+      "status": 200,
+      "bytes": 1932
+    },
+    {
+      "path": "/world/materials/material-070.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-071.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "path": "/world/materials/material-072.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "path": "/world/materials/material-074.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "path": "/world/materials/material-073.json.gz",
+      "status": 200,
+      "bytes": 1923
+    },
+    {
+      "path": "/world/materials/material-076.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "path": "/world/materials/material-077.json.gz",
+      "status": 200,
+      "bytes": 1916
+    },
+    {
+      "path": "/world/materials/material-078.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "path": "/world/materials/material-079.json.gz",
+      "status": 200,
+      "bytes": 1931
+    },
+    {
+      "path": "/world/materials/material-080.json.gz",
+      "status": 200,
+      "bytes": 1901
+    },
+    {
+      "path": "/world/materials/material-075.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-081.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "path": "/world/materials/material-085.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-083.json.gz",
+      "status": 200,
+      "bytes": 1938
+    },
+    {
+      "path": "/world/materials/material-086.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "path": "/world/materials/material-087.json.gz",
+      "status": 200,
+      "bytes": 1957
+    },
+    {
+      "path": "/world/materials/material-082.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "path": "/world/materials/material-088.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "path": "/world/materials/material-089.json.gz",
+      "status": 200,
+      "bytes": 1916
+    },
+    {
+      "path": "/world/materials/material-090.json.gz",
+      "status": 200,
+      "bytes": 1923
+    },
+    {
+      "path": "/world/materials/material-091.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "path": "/world/materials/material-059.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "path": "/world/materials/material-092.json.gz",
+      "status": 200,
+      "bytes": 1911
+    },
+    {
+      "path": "/world/materials/material-093.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-094.json.gz",
+      "status": 200,
+      "bytes": 1916
+    },
+    {
+      "path": "/world/materials/material-095.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "path": "/world/materials/material-102.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "path": "/world/materials/material-098.json.gz",
+      "status": 200,
+      "bytes": 1937
+    },
+    {
+      "path": "/world/materials/material-103.json.gz",
+      "status": 200,
+      "bytes": 1924
+    },
+    {
+      "path": "/world/materials/material-104.json.gz",
+      "status": 200,
+      "bytes": 1957
+    },
+    {
+      "path": "/world/materials/material-105.json.gz",
+      "status": 200,
+      "bytes": 1910
+    },
+    {
+      "path": "/world/materials/material-101.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "path": "/world/materials/material-003.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "path": "/world/materials/material-004.json.gz",
+      "status": 200,
+      "bytes": 2198
+    },
+    {
+      "path": "/world/materials/material-008.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "path": "/world/materials/material-009.json.gz",
+      "status": 200,
+      "bytes": 2219
+    },
+    {
+      "path": "/world/materials/material-099.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "path": "/world/materials/material-107.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "path": "/world/materials/material-109.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "path": "/world/materials/material-110.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "path": "/world/materials/material-111.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-112.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "path": "/world/materials/material-113.json.gz",
+      "status": 200,
+      "bytes": 1924
+    },
+    {
+      "path": "/world/chunks/-1_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 816388
+    },
+    {
+      "path": "/world/materials/material-114.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "path": "/world/chunks/-1_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 877821
+    },
+    {
+      "path": "/world/materials/material-014.json.gz",
+      "status": 200,
+      "bytes": 2201
+    },
+    {
+      "path": "/world/materials/material-011.json.gz",
+      "status": 200,
+      "bytes": 2217
+    },
+    {
+      "path": "/world/materials/material-010.json.gz",
+      "status": 200,
+      "bytes": 2201
+    },
+    {
+      "path": "/world/materials/material-012.json.gz",
+      "status": 200,
+      "bytes": 2195
+    },
+    {
+      "path": "/world/materials/material-120.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "path": "/world/materials/material-118.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-119.json.gz",
+      "status": 200,
+      "bytes": 1927
+    },
+    {
+      "path": "/world/materials/material-100.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "path": "/world/materials/material-015.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "path": "/world/materials/material-121.json.gz",
+      "status": 200,
+      "bytes": 1960
+    },
+    {
+      "path": "/world/materials/material-115.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "path": "/world/materials/material-096.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "path": "/world/materials/material-122.json.gz",
+      "status": 200,
+      "bytes": 2213
+    },
+    {
+      "path": "/world/materials/material-068.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "path": "/world/chunks/0_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 815134
+    },
+    {
+      "path": "/world/materials/material-018.json.gz",
+      "status": 200,
+      "bytes": 2195
+    },
+    {
+      "path": "/world/materials/material-021.json.gz",
+      "status": 200,
+      "bytes": 2217
+    },
+    {
+      "path": "/world/materials/material-019.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "path": "/world/materials/material-123.json.gz",
+      "status": 200,
+      "bytes": 1917
+    },
+    {
+      "path": "/world/materials/material-159.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "path": "/world/materials/material-020.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "path": "/world/materials/material-160.json.gz",
+      "status": 200,
+      "bytes": 1917
+    },
+    {
+      "path": "/world/materials/material-051.json.gz",
+      "status": 200,
+      "bytes": 2198
+    },
+    {
+      "path": "/world/materials/material-161.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/materials/material-153.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "path": "/world/materials/material-152.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "path": "/world/materials/material-165.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "path": "/world/chunks/1_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 676759
+    },
+    {
+      "path": "/world/materials/material-022.json.gz",
+      "status": 200,
+      "bytes": 2191
+    },
+    {
+      "path": "/world/materials/material-023.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "path": "/world/materials/material-162.json.gz",
+      "status": 200,
+      "bytes": 1926
+    },
+    {
+      "path": "/world/materials/material-024.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "path": "/world/materials/material-025.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "path": "/world/materials/material-056.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "path": "/world/materials/material-060.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "path": "/world/materials/material-057.json.gz",
+      "status": 200,
+      "bytes": 2219
+    },
+    {
+      "path": "/world/materials/material-058.json.gz",
+      "status": 200,
+      "bytes": 1909
+    },
+    {
+      "path": "/world/materials/material-169.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "path": "/world/materials/material-170.json.gz",
+      "status": 200,
+      "bytes": 1129
+    },
+    {
+      "path": "/world/chunks/1_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 792002
+    },
+    {
+      "path": "/world/chunks/global.babylon.gz",
+      "status": 200,
+      "bytes": 23336
+    },
+    {
+      "path": "/world/materials/material-116.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "path": "/world/chunks/0_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 1062061
+    },
+    {
+      "path": "/world/materials/material-106.json.gz",
+      "status": 200,
+      "bytes": 1929
+    },
+    {
+      "path": "/world/materials/material-084.json.gz",
+      "status": 200,
+      "bytes": 1929
+    },
+    {
+      "path": "/world/materials/material-108.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "path": "/world/chunks/-1_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 8128
+    },
+    {
+      "path": "/world/chunks/0_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 10268
+    },
+    {
+      "path": "/world/materials/material-117.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "path": "/world/chunks/0_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 6913
+    },
+    {
+      "path": "/world/chunks/1_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3783
+    },
+    {
+      "path": "/world/chunks/1_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3742
+    },
+    {
+      "path": "/world/materials/material-131.json.gz",
+      "status": 200,
+      "bytes": 1943
+    },
+    {
+      "path": "/world/materials/material-034.json.gz",
+      "status": 200,
+      "bytes": 2205
+    },
+    {
+      "path": "/world/materials/material-033.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "path": "/world/materials/material-132.json.gz",
+      "status": 200,
+      "bytes": 1922
+    },
+    {
+      "path": "/world/materials/material-133.json.gz",
+      "status": 200,
+      "bytes": 1917
+    },
+    {
+      "path": "/world/materials/material-130.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "path": "/world/materials/material-134.json.gz",
+      "status": 200,
+      "bytes": 1928
+    },
+    {
+      "path": "/world/materials/material-136.json.gz",
+      "status": 200,
+      "bytes": 1929
+    },
+    {
+      "path": "/world/materials/material-129.json.gz",
+      "status": 200,
+      "bytes": 1940
+    },
+    {
+      "path": "/world/materials/material-035.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "path": "/world/materials/material-036.json.gz",
+      "status": 200,
+      "bytes": 2215
+    },
+    {
+      "path": "/world/materials/material-142.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "path": "/world/materials/material-039.json.gz",
+      "status": 200,
+      "bytes": 2216
+    },
+    {
+      "path": "/world/materials/material-038.json.gz",
+      "status": 200,
+      "bytes": 2209
+    },
+    {
+      "path": "/world/materials/material-145.json.gz",
+      "status": 200,
+      "bytes": 1937
+    },
+    {
+      "path": "/world/materials/material-146.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "path": "/world/materials/material-138.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "path": "/world/materials/material-144.json.gz",
+      "status": 200,
+      "bytes": 1939
+    },
+    {
+      "path": "/world/materials/material-147.json.gz",
+      "status": 200,
+      "bytes": 1928
+    },
+    {
+      "path": "/world/materials/material-149.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "path": "/world/materials/material-140.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "path": "/world/materials/material-148.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "path": "/world/materials/material-150.json.gz",
+      "status": 200,
+      "bytes": 1927
+    },
+    {
+      "path": "/world/materials/material-151.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "path": "/world/chunks/-2_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 722975
+    },
+    {
+      "path": "/world/chunks/-2_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 859932
+    },
+    {
+      "path": "/world/chunks/-3_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 368474
+    },
+    {
+      "path": "/world/chunks/-3_0_detail.babylon.gz",
+      "status": 503,
+      "bytes": 15
+    },
+    {
+      "path": "/world/materials/material-128.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "path": "/world/materials/material-127.json.gz",
+      "status": 200,
+      "bytes": 1943
+    },
+    {
+      "path": "/world/materials/material-137.json.gz",
+      "status": 200,
+      "bytes": 1941
+    },
+    {
+      "path": "/world/materials/material-135.json.gz",
+      "status": 200,
+      "bytes": 1940
+    },
+    {
+      "path": "/world/materials/material-139.json.gz",
+      "status": 200,
+      "bytes": 1939
+    },
+    {
+      "path": "/world/chunks/-3_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 4112
+    },
+    {
+      "path": "/world/chunks/-3_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 4086
+    },
+    {
+      "path": "/world/materials/material-141.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "path": "/world/chunks/-2_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 5835
+    },
+    {
+      "path": "/world/materials/material-143.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "path": "/world/chunks/-2_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 6566
+    },
+    {
+      "path": "/world/chunks/-3_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 458322
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "ready",
+      "totalChunks": 56,
+      "residentChunks": 6,
+      "totalMeshes": 1221,
+      "residentMeshes": 391,
+      "totalColliders": 249,
+      "residentColliders": 98,
+      "cpuGeometryBytes": 24006568,
+      "meshLoads": 391,
+      "meshDisposals": 0,
+      "colliderLoads": 98,
+      "colliderDisposals": 0,
+      "pendingMeshes": 363,
+      "activeAnchors": 0,
+      "lastMeshOperations": 0,
+      "loadedPackages": 12,
+      "totalPackages": 84,
+      "pendingPackages": 25,
+      "failedPackages": 0,
+      "retries": 0,
+      "requests": 110,
+      "fetchedBytes": 5291321,
+      "residentMaterials": 98,
+      "totalCpuGeometryBytes": 57932888,
+      "lastError": "",
+      "packagesLoaded": 12,
+      "packagesEvicted": 0,
+      "ready": true,
+      "sceneMeshes": 489,
+      "sceneGeometries": 489
+    },
+    {
+      "name": "west",
+      "totalChunks": 56,
+      "residentChunks": 10,
+      "totalMeshes": 1221,
+      "residentMeshes": 601,
+      "totalColliders": 249,
+      "residentColliders": 196,
+      "cpuGeometryBytes": 34849112,
+      "meshLoads": 601,
+      "meshDisposals": 0,
+      "colliderLoads": 217,
+      "colliderDisposals": 21,
+      "pendingMeshes": 236,
+      "activeAnchors": 1,
+      "lastMeshOperations": 0,
+      "loadedPackages": 20,
+      "totalPackages": 84,
+      "pendingPackages": 15,
+      "failedPackages": 0,
+      "retries": 1,
+      "requests": 150,
+      "fetchedBytes": 7783104,
+      "residentMaterials": 129,
+      "totalCpuGeometryBytes": 57932888,
+      "lastError": "chunks/-3_0_detail.babylon.gz: HTTP 503",
+      "packagesLoaded": 20,
+      "packagesEvicted": 0,
+      "ready": true,
+      "sceneMeshes": 798,
+      "sceneGeometries": 798
+    },
+    {
+      "name": "return",
+      "totalChunks": 56,
+      "residentChunks": 10,
+      "totalMeshes": 1221,
+      "residentMeshes": 529,
+      "totalColliders": 249,
+      "residentColliders": 138,
+      "cpuGeometryBytes": 31011040,
+      "meshLoads": 601,
+      "meshDisposals": 72,
+      "colliderLoads": 238,
+      "colliderDisposals": 100,
+      "pendingMeshes": 368,
+      "activeAnchors": 1,
+      "lastMeshOperations": 0,
+      "loadedPackages": 18,
+      "totalPackages": 84,
+      "pendingPackages": 22,
+      "failedPackages": 0,
+      "retries": 1,
+      "requests": 159,
+      "fetchedBytes": 7783104,
+      "residentMaterials": 138,
+      "totalCpuGeometryBytes": 57932888,
+      "lastError": "chunks/-3_0_detail.babylon.gz: HTTP 503",
+      "packagesLoaded": 20,
+      "packagesEvicted": 2,
+      "ready": true,
+      "sceneMeshes": 668,
+      "sceneGeometries": 668
+    }
+  ]
+}

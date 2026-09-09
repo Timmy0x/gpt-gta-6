@@ -1,5 +1,6 @@
 import {
   Matrix,
+  Color3,
   Mesh,
   PhysicsAggregate,
   PhysicsBody,
@@ -31,6 +32,7 @@ import {
   type VehicleTuning,
 } from "./handling";
 import { createVehicleModel, type VehicleModel } from "./models";
+import { VehicleEquipment } from "./VehicleEquipment";
 import {
   validVehicleId,
   validateVehicleSnapshot,
@@ -68,6 +70,7 @@ export interface Vehicle {
   skidding: number;
   engineRunning: boolean;
   siren: boolean;
+  headlights: boolean;
   /** Body-frame longitudinal velocity; negative while reversing. */
   forwardSpeed: number;
 }
@@ -75,6 +78,7 @@ export interface Vehicle {
 interface VehicleRuntime {
   vehicle: Vehicle;
   appearanceSeed: number;
+  paint?: string;
   shapes: PhysicsShape[];
   lastVelocity: Vector3;
   crashCooldown: number;
@@ -100,6 +104,7 @@ interface PendingImpact {
 /** Physics-only motion: controls apply forces/torques, never rewrite position or heading. */
 export class VehicleSystem {
   readonly list: Vehicle[] = [];
+  readonly equipment: VehicleEquipment;
   waterLevel = -0.35;
   wetness = 0;
   onCrash?: (vehicle: Vehicle, severity: number, point: Vector3) => void;
@@ -112,6 +117,7 @@ export class VehicleSystem {
 
   constructor(private ctx: BuildContext) {
     this.physics = ctx.scene.getPhysicsEngine() as PhysicsEngineV2;
+    this.equipment = new VehicleEquipment(ctx.scene);
   }
 
   spawn(
@@ -250,6 +256,7 @@ export class VehicleSystem {
       skidding: 0,
       engineRunning: true,
       siren: false,
+      headlights: true,
       forwardSpeed: 0,
     };
     const originals = new Map<Mesh, number[]>();
@@ -332,6 +339,7 @@ export class VehicleSystem {
       windowsEnabled: v.model.windows.map((mesh) => mesh.isEnabled()),
       lightsEnabled: v.model.lights.map((mesh) => mesh.isEnabled()),
       bumpersEnabled: v.model.bumpers.map((mesh) => mesh.isEnabled()),
+      doors: v.model.doors.map(door => ({ enabled: door.mesh.isEnabled(), angle: door.angle })),
     };
     return {
       schemaVersion: 1,
@@ -347,8 +355,10 @@ export class VehicleSystem {
       angularVelocity: v.body.getAngularVelocity().asArray() as VectorTuple,
       engineRunning: v.engineRunning,
       siren: v.siren,
+      headlights: v.headlights,
       rotorSpeed: runtime.rotorSpeed,
       appearanceSeed: runtime.appearanceSeed,
+      paint: runtime.paint,
       damage,
     };
   }
@@ -376,6 +386,8 @@ export class VehicleSystem {
       v.health = state.health;
       v.engineRunning = state.engineRunning;
       v.siren = state.siren;
+      v.headlights = state.headlights;
+      if (state.paint) this.setPaint(v, state.paint);
       const linear = Vector3.FromArray(state.linearVelocity),
         angular = Vector3.FromArray(state.angularVelocity);
       v.body.setLinearVelocity(linear);
@@ -406,8 +418,9 @@ export class VehicleSystem {
       state.panels.length !== m.panels.length ||
       state.tiresDamaged.length !== m.wheels.length ||
       state.windowsEnabled.length !== m.windows.length ||
-      state.lightsEnabled.length !== m.lights.length ||
-      state.bumpersEnabled.length !== m.bumpers.length
+      (state.lightsEnabled.length !== m.lights.length && !(v.kind === "motorcycle" && state.lightsEnabled.length === 0)) ||
+      state.bumpersEnabled.length !== m.bumpers.length ||
+      (state.doors !== undefined && state.doors.length !== m.doors.length)
     )
       throw new TypeError("Vehicle damage layout does not match its model");
     for (const part of state.panels) {
@@ -445,6 +458,12 @@ export class VehicleSystem {
     state.bumpersEnabled.forEach((enabled, i) =>
       m.bumpers[i].setEnabled(enabled),
     );
+    state.doors?.forEach((saved, i) => {
+      const door = m.doors[i];
+      door.mesh.setEnabled(saved.enabled);
+      door.angle = saved.angle;
+      door.mesh.rotation.y = -door.side * door.angle;
+    });
   }
 
   control(v: Vehicle, input: VehicleInput): void {
@@ -528,6 +547,7 @@ export class VehicleSystem {
       }
       r.lastVelocity.copyFrom(velocity);
     }
+    this.equipment.update(dt, this.list, this.ctx.scene.activeCamera?.globalPosition ?? Vector3.Zero());
     for (let i = this.debris.length - 1; i >= 0; i--) {
       const d = this.debris[i];
       d.life -= dt;
@@ -779,7 +799,7 @@ export class VehicleSystem {
       .add(UP.scale(input.steer * t.mass * 0.9 * authority));
     // The trainer's stability assist trims toward a bounded angle of attack; it cannot create
     // lift below flying speed. Bank follows yaw input without imposing pitch toward the horizon.
-    const bankTarget = UP.add(right.scale(-input.steer * 0.4)).normalize();
+    const bankTarget = UP.add(right.scale(input.steer * 0.4)).normalize();
     worldAngular.addInPlace(
       forward.scale(
         Vector3.Dot(Vector3.Cross(up, bankTarget), forward) *
@@ -854,7 +874,7 @@ export class VehicleSystem {
     }
     for (const lamp of v.model.lights)
       if (
-        Vector3.Distance(lamp.getAbsolutePosition(), impact) < 1.35 &&
+        Vector3.Distance(lamp.getAbsolutePosition(), impact) < clamp(amount * 0.012, 0.45, 1.5) &&
         amount > 6
       )
         lamp.setEnabled(false);
@@ -881,6 +901,13 @@ export class VehicleSystem {
         )[0];
       if (bumper) this.detach(v, bumper, 18, 26);
     }
+    // Doors separate only for a local severe strike; a frontal bump cannot tear off every door.
+    if (amount > 28) {
+      const door = v.model.doors.filter(d => d.mesh.isEnabled())
+        .sort((a, b) => Vector3.DistanceSquared(a.mesh.getBoundingInfo().boundingBox.centerWorld, impact) - Vector3.DistanceSquared(b.mesh.getBoundingInfo().boundingBox.centerWorld, impact))[0];
+      if (door && Vector3.Distance(door.mesh.getBoundingInfo().boundingBox.centerWorld, impact) < 1.35)
+        this.detach(v, door.mesh, 32, 26);
+    }
   }
 
   private detach(v: Vehicle, part: Mesh, mass: number, lifetime: number): void {
@@ -896,6 +923,7 @@ export class VehicleSystem {
     clone.rotationQuaternion = rotation;
     clone.scaling.copyFrom(scaling);
     clone.metadata = { debris: true };
+    for (const child of clone.getChildMeshes()) child.metadata = { debris: true };
     part.setEnabled(false);
     clone.setEnabled(true);
     clone.computeWorldMatrix(true);
@@ -941,12 +969,23 @@ export class VehicleSystem {
       ...v.model.windows,
       ...v.model.bumpers,
       ...v.model.lights,
+      ...v.model.doors.map(door => door.mesh),
     ])
       mesh.setEnabled(true);
+    for (const door of v.model.doors) { door.angle = 0; door.hold = 0; door.mesh.rotation.y = 0; }
     for (const wheel of v.model.wheels) {
       wheel.damaged = false;
       wheel.tire.scaling.setAll(1);
     }
+  }
+
+  setPaint(v: Vehicle, color: string): boolean {
+    if (!this.owns(v) || !/^#[0-9a-f]{6}$/i.test(color)) return false;
+    const paint = v.model.materials.filter(m => m.name.startsWith("paint-"));
+    if (!paint.length) return false;
+    for (const material of paint) material.albedoColor.copyFrom(Color3.FromHexString(color));
+    this.runtime.get(v.id)!.paint = color.toUpperCase();
+    return true;
   }
 
   /** Explicit creative recovery only: right the car and teleport it above the supporting surface. */
@@ -1008,6 +1047,7 @@ export class VehicleSystem {
   }
 
   dispose(): void {
+    this.equipment.dispose();
     for (const v of [...this.list]) this.remove(v);
     for (const d of this.debris) {
       d.aggregate.dispose();

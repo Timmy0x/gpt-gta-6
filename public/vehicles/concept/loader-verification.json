@@ -1,0 +1,163 @@
+{
+  "method": "Babylon 9.25 NullEngine glTF import, skipMaterials; no GPU or texture rendering",
+  "outputSha256": "6923a315ac3656ddab95c281a8113055f0a4051ced2c35b35706fc1095d860ab",
+  "meshes": 110,
+  "transformNodes": 16,
+  "skeletons": 0,
+  "animationGroups": 0,
+  "importedBoundingBox": {
+    "min": [
+      -1.3528623973425553,
+      -0.15929901850039008,
+      -1.940231204032898
+    ],
+    "max": [
+      1.36329630006263,
+      1.1486550569534302,
+      2.4171547889709473
+    ],
+    "dimensions": [
+      2.7161586974051852,
+      1.3079540754538201,
+      4.357385993003845
+    ]
+  },
+  "inspected": [
+    {
+      "name": "BodyDoorLColor1",
+      "children": [
+        "InteriorDoorL04",
+        "InteriorDoorL01",
+        "InteriorDoorL02",
+        "InteriorDoorL03",
+        "InteriorDoorL05",
+        "InteriorDoorL06",
+        "BodyDoorLColor2",
+        "BodyDoorLHandle01",
+        "BodyDoorLHandle02",
+        "BodyDoorLMirror",
+        "BodyDoorLMirrorColor1",
+        "BodyDoorLWindowGasket",
+        "BodyDoorLWindow",
+        "BodyDoorLMirrorColor2"
+      ],
+      "position": [
+        -1.0886822938919067,
+        0.6430185437202454,
+        0.9975706934928894
+      ]
+    },
+    {
+      "name": "BodyDoorRColor1",
+      "children": [
+        "BodyDoorRColor2",
+        "BodyDoorRHandle01",
+        "BodyDoorRHandle02",
+        "BodyDoorRMirror",
+        "BodyDoorRMirrorColor1",
+        "BodyDoorRMirrorColor2",
+        "BodyDoorRWindow",
+        "BodyDoorRWindowGasket",
+        "InteriorDoorR01",
+        "InteriorDoorR02",
+        "InteriorDoorR03",
+        "InteriorDoorR04",
+        "InteriorDoorR05",
+        "InteriorDoorR06"
+      ],
+      "position": [
+        1.0871999263763428,
+        0.6429661512374878,
+        0.997542679309845
+      ]
+    },
+    {
+      "name": "BodyHood",
+      "children": [
+        "BodyHoodInterior01",
+        "BodyHoodInterior02",
+        "BodyHoodTopgrill",
+        "BodyHoodUnder",
+        "BodyHeadlights"
+      ],
+      "position": [
+        1.0882532652800592e-9,
+        0.17601461708545685,
+        2.3793885707855225
+      ]
+    },
+    {
+      "name": "BodyRearPanelsColor1",
+      "children": [
+        "InteriorRearHatch",
+        "InteriorRearPanels",
+        "BodyWindowsRearSides",
+        "BodyTurnsignalsRear",
+        "BodyTaillightsPanels",
+        "BodyTaillights",
+        "BodyRearwindow"
+      ],
+      "position": [
+        0,
+        0.4230137765407562,
+        -1.9285271167755127
+      ]
+    },
+    {
+      "name": "WheelFrontL",
+      "children": [
+        "WheelFrontLRim",
+        "WheelFrontLBrakePad",
+        "WheelFrontLBrakeDisc",
+        "node84"
+      ],
+      "position": [
+        -0.9754931926727295,
+        0.3837590217590332,
+        1.4856805801391602
+      ]
+    },
+    {
+      "name": "WheelFrontR",
+      "children": [
+        "WheelFrontRRim",
+        "WheelFrontRBrakePad",
+        "WheelFrontRBrakeDisc",
+        "node89"
+      ],
+      "position": [
+        0.9766749143600464,
+        0.3837589621543884,
+        1.4839684963226318
+      ]
+    },
+    {
+      "name": "WheelRearL",
+      "children": [
+        "WheelRearLBrakeDisc",
+        "WheelRearLBrakePad",
+        "WheelRearLRim",
+        "node94"
+      ],
+      "position": [
+        -0.9825136661529541,
+        0.3837589621543884,
+        -1.3140623569488525
+      ]
+    },
+    {
+      "name": "WheelRearR",
+      "children": [
+        "WheelRearRBrakeDisc",
+        "WheelRearRBrakePad",
+        "WheelRearRRim",
+        "node99"
+      ],
+      "position": [
+        0.981704831123352,
+        0.3837589621543884,
+        -1.3140623569488525
+      ]
+    }
+  ]
+}

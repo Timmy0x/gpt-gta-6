@@ -1,0 +1,120 @@
+import { chromium } from '@playwright/test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+
+const backend = process.argv[2] || 'webgpu';
+const origin = process.env.AUDIT_URL || 'http://127.0.0.1:4176';
+const prefix = `docs/evidence/checkpoint-3-${backend}`;
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--enable-unsafe-webgpu', '--disable-background-timer-throttling', '--disable-renderer-backgrounding'] });
+const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+const errors = [], expectedNetworkErrors = [], checks = [], requests = [];
+let injectingFailure = false;
+page.on('pageerror', error => { errors.push(error.stack || error.message); console.error('PAGE ERROR', error.message); });
+page.on('console', message => { if (message.type() === 'error') { (injectingFailure ? expectedNetworkErrors : errors).push(message.text()); console.error(injectingFailure ? 'EXPECTED NETWORK ERROR' : 'CONSOLE ERROR', message.text()); } });
+page.on('response', response => { if (response.url().includes('/world/')) requests.push({ url: response.url(), status: response.status(), bytes: Number(response.headers()['content-length'] || 0) }); });
+const state = () => page.evaluate(() => {
+  const { frameTimes, ...s } = window.__leonida.snapshot(), g = window.__leonida.game;
+  const v = g.player.vehicle;
+  return { ...s, position: { x: s.position[0], y: s.position[1], z: s.position[2] }, playerYaw: g.player.yaw, headlights: v?.headlights, paint: v?.model.materials.find(m => m.name.startsWith('paint-'))?.albedoColor.toHexString(), doorAngles: v?.model.doors.map(d => ({ side: d.side, front: d.front, angle: d.angle, enabled: d.mesh.isEnabled() })), mounted: g.player.model.root.parent?.name, beams: g.vehicles.equipment.beams.map(l => ({ enabled: l.isEnabled(), intensity: l.intensity, position: l.position.asArray() })), guards: g.population.facility.guards.map(o => ({ state: o.state, position: o.position.asArray(), health: o.health })) };
+});
+async function capture(name) { const s = await state(); checks.push({ name, ...s }); await page.screenshot({ path: `${prefix}-${name}.png` }); console.log(name, JSON.stringify(s)); return s; }
+const creative = async () => { await page.keyboard.press('F2'); await page.locator('#panel:not(.hidden)').waitFor(); };
+const close = async () => { await page.locator('[data-action="close"]').click(); };
+const waitTravel = async () => { await page.waitForFunction(() => !window.__leonida.snapshot().streamingBusy, {}, { timeout: 45000 }); };
+
+try {
+  await page.goto(`${origin}/?backend=${backend}&test`, { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => !document.querySelector('#welcome')?.classList.contains('hidden') || document.querySelector('#loading-text')?.textContent?.startsWith('Unable to start'), {}, { timeout: 120000 });
+  assert.equal(await page.locator('#welcome').isVisible(), true, await page.locator('#loading-text').textContent());
+  const initial = await capture('ready');
+  assert.equal(initial.backend, backend === 'webgpu' ? 'WebGPU' : 'WebGL2');
+  assert.ok(initial.streaming.loadedPackages < initial.streaming.totalPackages, 'initial entry does not load the entire world');
+  await page.locator('[data-action="play"]').click();
+  await page.waitForTimeout(2500);
+  await page.keyboard.down('w'); await page.waitForTimeout(450); await page.keyboard.up('w');
+  await page.keyboard.press('e'); await page.waitForTimeout(280);
+  const entry = await capture('entry-door');
+  assert.ok(entry.doorAngles?.some(d => d.angle > 0.3));
+  await page.waitForTimeout(1000);
+  assert.ok((await state()).mounted);
+  await creative();
+  await page.locator('[data-change="god"]').check();
+  await page.locator('[data-change="time"]').fill('23');
+  await page.locator('[data-change="time"]').dispatchEvent('change');
+  await close(); await page.waitForTimeout(1800);
+  const lightsOn = await capture('headlights-on');
+  assert.equal(lightsOn.headlights, true);
+  await page.keyboard.press('l'); await page.waitForTimeout(350);
+  assert.equal((await capture('headlights-off')).headlights, false);
+  await creative(); await page.locator('[data-action="vehicle-lights"]').click(); await close();
+  assert.equal((await state()).headlights, true);
+  await page.keyboard.press('e'); await page.waitForTimeout(250);
+  assert.equal((await capture('exit-door')).vehicle, null);
+  await creative();
+  await page.locator('[data-change="time"]').fill('15'); await page.locator('[data-change="time"]').dispatchEvent('change');
+  await page.locator('[data-change="wanted"]').selectOption('0'); await close();
+
+  await page.keyboard.press('m');
+  await page.locator('[data-action="teleport"][data-value="garage"]').click(); await waitTravel();
+  await page.waitForFunction(() => Math.abs(window.__leonida.snapshot().position[0] + 34) < 2);
+  await creative(); await page.locator('#spawn-kind').selectOption('coupe'); await page.locator('[data-action="spawn"]').click(); await close();
+  await page.waitForTimeout(750);
+  await page.keyboard.down('w'); await page.waitForTimeout(750); await page.keyboard.up('w');
+  await page.keyboard.press('e'); await page.waitForTimeout(1100);
+  assert.ok((await state()).vehicle, 'normal entry into the garage customer vehicle');
+  await page.keyboard.press('e'); await page.locator('#paint-color').waitFor();
+  const cashBeforePaint = (await state()).cash;
+  await page.locator('#paint-color').selectOption('#BA283B');
+  await page.locator('[data-action="garage-paint"]').click();
+  const painted = await capture('garage-paint');
+  assert.equal(painted.paint, '#BA283B'); assert.equal(painted.cash, cashBeforePaint - 75);
+  await page.locator('[data-action="garage-exit"]').click();
+  assert.equal((await state()).vehicle, null);
+
+  // Exercise a real failed network request before committing a map fast travel.
+  const manifest = await page.evaluate(async () => (await fetch('world/manifest.json')).json());
+  const point = { x: -449, z: 144 };
+  const distance = b => Math.hypot(Math.max(b.minX - point.x, 0, point.x - b.maxX), Math.max(b.minZ - point.z, 0, point.z - b.maxZ));
+  const missing = manifest.chunks.find(c => c.detail !== 'global' && distance(c.bounds) <= 95 && !requests.some(r => r.url.endsWith(c.url) && r.status === 200));
+  assert.ok(missing, 'west travel needs at least one package not previously requested');
+  const blockedUrl = `${origin}/world/${missing.url}`;
+  injectingFailure = true;
+  await page.route(blockedUrl, route => route.fulfill({ status: 503, body: 'Intentional network resilience fixture' }));
+  const before = await state();
+  await page.keyboard.press('m');
+  const reserve = page.locator('[data-action="teleport"][data-value="restricted-compound"]');
+  await reserve.click();
+  await page.waitForFunction(() => document.querySelector('#toast')?.textContent?.includes('could not load'), {}, { timeout: 45000 });
+  const failed = await capture('failed-travel-preserves-origin');
+  assert.ok(Math.hypot(failed.position.x - before.position.x, failed.position.z - before.position.z) < 1);
+  await page.unroute(blockedUrl); injectingFailure = false;
+  await reserve.click(); await waitTravel();
+  await page.waitForFunction(() => Math.abs(window.__leonida.snapshot().position[0] + 449) < 3, {}, { timeout: 45000 });
+  await page.waitForTimeout(1800);
+  const gate = await capture('reserve-gate');
+  assert.ok(gate.facility.activeGuards === 4);
+  await page.keyboard.press('e'); await page.waitForTimeout(1700);
+  const access = await capture('visitor-access');
+  assert.equal(access.facility.phase, 'authorized'); assert.equal(access.facility.gateOpen, true);
+  // With yaw unchanged from the north-facing starter car, A crosses the east gate westward.
+  await page.keyboard.down('a'); await page.waitForTimeout(3700); await page.keyboard.up('a');
+  const inside = await capture('inside-reserve');
+  assert.equal(inside.facility.inside, true);
+  await creative(); await page.locator('[data-action="reset"]').click(); await close();
+  await page.waitForFunction(() => window.__leonida.snapshot().facility.phase === 'warning', {}, { timeout: 5000 });
+  await capture('restricted-warning');
+  await page.mouse.move(960, 540); await page.mouse.down({ button: 'right' });
+  await page.waitForFunction(() => window.__leonida.snapshot().facility.phase === 'alarm', {}, { timeout: 10000 });
+  await page.waitForFunction(() => window.__leonida.snapshot().wanted.stars > 0, {}, { timeout: 6000 });
+  const alarm = await capture('restricted-alarm');
+  assert.ok(alarm.wanted.stars > 0); assert.ok(alarm.guards.some(o => ['firing', 'challenge'].includes(o.state)));
+  await page.mouse.up({ button: 'right' });
+  assert.equal(errors.length, 0, JSON.stringify(errors));
+} catch (error) {
+  errors.push(error.stack || String(error)); console.error(error);
+  await page.screenshot({ path: `${prefix}-failure.png` }).catch(() => {});
+}
+await fs.writeFile(`${prefix}.json`, JSON.stringify({ backend, origin, errors, expectedNetworkErrors, requests, checks }, null, 2));
+console.log('RESULT', JSON.stringify({ backend, errors, checks: checks.length, requests: requests.length }));
+await Promise.race([browser.close(), new Promise(resolve => setTimeout(resolve, 5000))]);
+process.exit(errors.length ? 1 : 0);

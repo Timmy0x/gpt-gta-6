@@ -32,6 +32,7 @@ import {
   OFFICER_LIMIT,
   responseFor,
 } from "./rules";
+import { lineBlocked } from "../../core/math";
 export interface Driver {
   v: Vehicle;
   target: number;
@@ -39,6 +40,8 @@ export interface Driver {
   police: boolean;
   stuck: number;
   assignment?: "patrol" | "swat" | "roadblock" | "air";
+  recovery?: { anchor: Point2; timer: number; reverse: number; attempts: number; stranded: boolean };
+  turn?: { at: number; next: number };
 }
 const STOP = { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 };
 export class PoliceDirector {
@@ -158,6 +161,7 @@ export class PoliceDirector {
   ) {
     const node = this.spawnNode(drivers, assignment === "roadblock");
     if (!node) return false;
+    (this.world as WorldContract&{ensureCollision?:(p:Vector3)=>void}).ensureCollision?.(new Vector3(node.x,1,node.z));
     const next = this.world.roads.find((n) => n.id === node.next[0]) ?? node;
     const heading =
       Math.atan2(next.x - node.x, next.z - node.z) +
@@ -253,7 +257,7 @@ export class PoliceDirector {
       )
     );
   }
-  update(dt: number, drivers: Driver[], enabled: boolean) {
+  update(dt: number, drivers: Driver[], enabled: boolean, externalContact=false) {
     this.elapsed += dt;
     this.spawnTimer -= dt;
     this.challengeTimer -= dt;
@@ -263,7 +267,7 @@ export class PoliceDirector {
       distance(position, this.lastPlayer) / Math.max(dt, 0.001);
     this.lastPlayer.copyFrom(position);
     const profile = responseFor(this.wanted.stars);
-    let seen = false;
+    let seen = enabled&&externalContact;
     if (enabled && this.wanted.stars) {
       for (const o of this.officers)
         if (
@@ -367,6 +371,7 @@ export class PoliceDirector {
           driver.assignment !== "air" &&
           Math.abs(v.speed) < 2.1 &&
           (driver.assignment === "roadblock" ||
+            driver.recovery?.stranded ||
             ((!this.player.vehicle ||
               Math.abs(this.player.vehicle.speed) < 1.5) &&
               distance(v.root.position, this.wanted.lastKnown) < 25) ||
@@ -378,6 +383,7 @@ export class PoliceDirector {
       if (!o.controller)
         o.dismount(o.model.root.position.add(new Vector3(0, 0.95, 0)));
       const p = o.position;
+      (this.world as WorldContract&{ensureCollision?:(p:Vector3)=>void}).ensureCollision?.(p);
       const contact =
         this.wanted.stars > 0 &&
         this.sees(p.add(new Vector3(0, 0.6, 0)), profile.sight);
@@ -585,23 +591,29 @@ export class PoliceDirector {
       this.vehicles.control(v, STOP);
       return;
     }
-    if (distance(p, target) < 10) {
+    // Approach/departure nodes are only 20 m apart. Advancing 10 m early cuts
+    // across the sidewalk on sharp turns and can send a bumped car into a facade.
+    if (distance(p, target) < 3.5) {
       d.previous = target.id;
       d.target = laneNext(target.id, goal, this.world.roads);
       target = this.world.roads.find((n) => n.id === d.target) ?? target;
     }
+    const vehicleObstacles = this.world.obstacles.filter(o => o.height > 0.5).map(o => ({...o,w:o.w+2.6,d:o.d+2.6}));
+    const clearDrive = (a: Point2,b: Point2) => !lineBlocked(a,b,vehicleObstacles);
     const close =
       distance(p, goal) < 38 &&
-      clearSight(
-        p.add(new Vector3(0, 1, 0)),
-        new Vector3(goal.x, 1, goal.z),
-        this.world.obstacles,
-      );
+      clearDrive(p,goal);
     const tx = close ? goal.x : target.x,
       tz = close ? goal.z : target.z;
     const error = angleDelta(v.heading, Math.atan2(tx - p.x, tz - p.z));
     let cruise: number = responseFor(this.wanted.stars).speed;
     if (Math.abs(error) > 0.45) cruise = 6;
+    if(d.turn?.at!==target.id)d.turn={at:target.id,next:laneNext(target.id,goal,this.world.roads)};
+    const next = this.world.roads.find(n => n.id === d.turn!.next);
+    if (next) {
+      const turn = Math.abs(angleDelta(Math.atan2(target.x-p.x,target.z-p.z),Math.atan2(next.x-target.x,next.z-target.z)));
+      if(turn>.55) cruise=Math.min(cruise,Math.sqrt(36+2*5*Math.max(0,distance(p,target)-3)));
+    }
     if (
       (!this.player.vehicle || Math.abs(this.player.vehicle.speed) < 1.5) &&
       close &&
@@ -615,15 +627,37 @@ export class PoliceDirector {
       if (gap < 9 && Vector3.Dot(delta.normalize(), v.root.forward) > 0.84)
         cruise = 0;
     }
-    d.stuck = Math.abs(v.speed) < 0.6 && cruise > 0 ? d.stuck + dt : 0;
+    const recovery=d.recovery??= {anchor:{x:p.x,z:p.z},timer:0,reverse:0,attempts:0,stranded:false};
+    if(recovery.stranded){this.vehicles.control(v,STOP);return;}
+    if(recovery.reverse>0){
+      recovery.reverse-=dt;
+      this.vehicles.control(v,{throttle:-.42,steer:clamp(-error*1.6,-1,1),brake:Math.abs(v.forwardSpeed)>3.5?1:0,handbrake:false,lift:0});
+      if(recovery.reverse<=0){
+        // Rejoin a visible paved connector after backing out; continuing to aim
+        // at the old waypoint can repeat the same collision indefinitely.
+        const rejoin=this.world.roads.filter(n=>n.next.length&&distance(p,n)<65&&clearDrive(p,n)).sort((a,b)=>distance(p,a)-distance(p,b))[0];
+        if(rejoin)d.target=rejoin.id;
+        recovery.anchor={x:p.x,z:p.z};recovery.timer=0;
+      }
+      return;
+    }
+    recovery.timer+=dt;
+    if(distance(p,recovery.anchor)>2){recovery.anchor={x:p.x,z:p.z};recovery.timer=0;}
+    const parkedAtSuspect=close&&distance(p,goal)<20&&(!this.player.vehicle||Math.abs(this.player.vehicle.speed)<1.5);
+    if(recovery.timer>3&&!parkedAtSuspect){
+      recovery.attempts++;
+      recovery.timer=0;
+      if(recovery.attempts>=3){recovery.stranded=true;this.vehicles.control(v,STOP);return;}
+      recovery.reverse=2.2;
+    }
+    d.stuck = recovery.timer;
     this.vehicles.control(v, {
-      throttle: d.stuck > 6 ? -0.45 : Math.abs(v.speed) < cruise ? 0.7 : 0,
-      steer: clamp(error * (d.stuck > 6 ? -1.8 : 1.8), -1, 1),
+      throttle: Math.abs(v.speed) < cruise ? 0.7 : 0,
+      steer: clamp(error * 1.8, -1, 1),
       brake: Math.abs(v.speed) > cruise + 0.5 || cruise === 0 ? 1 : 0,
       handbrake: cruise === 0,
       lift: 0,
     });
-    if (d.stuck > 8) d.stuck = 0;
     void drivers;
   }
   removeResponse(drivers: Driver[]) {

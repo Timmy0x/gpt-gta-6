@@ -1,6 +1,6 @@
 # Continuation checkpoint
 
-Full goal remains active. This is an early central-neighborhood build, not full scope completion. Do not push, configure hosting or deploy before the user's later deployment decision.
+Full goal remains active. This is an early central-neighborhood build, not full scope completion. The user authorized frequent commits and pushes on 2026-09-09. Push every tested checkpoint to origin/main. Hosting and deployment remain unconfigured pending a separate decision.
 
 ## Repository and commands
 
@@ -38,4 +38,18 @@ The full source objective is copied to `docs/goal-objective.md`; read it and the
 
 Current browser commands: `node tests/integrated-checkpoint.mjs webgpu` and `node tests/police-browser-audit.mjs`. The frozen production snapshot remains4175; update `/tmp/leonida-audit-build` only between active audits. The world agent's4181 helper is stopped. Combined audit uses normal UI/keyboard/mouse with read-only test diagnostics; its earlier failed harness records are retained.
 
-Normal armed-threat urban evidence is now retained in `verification-police-checkpoint.md`; both combined renderer audits pass. Next priorities: improve blocked/oscillating urban AI routes, capture close-up tactical behavior, and run isolated30-minute mixed-world performance/memory profiling; acquire/create higher-fidelity licensed assets; continue contiguous district/regional construction following the atlas with modular network assets, regional water/terrain and actual military/emergency/activities systems. Do not treat this expanded local district as the full planned map. The user explicitly prohibited pushing or deployment configuration until their later decision.
+Normal armed-threat urban evidence is now retained in `verification-police-checkpoint.md`; both combined renderer audits pass. Next priorities: improve blocked/oscillating urban AI routes, capture close-up tactical behavior, and run isolated30-minute mixed-world performance/memory profiling; acquire/create higher-fidelity licensed assets; continue contiguous district/regional construction following the atlas with modular network assets, regional water/terrain and actual military/emergency/activities systems. Do not treat this expanded local district as the full planned map. The user subsequently authorized frequent commits and pushes on 2026-09-09. Push tested checkpoints to origin/main; deployment configuration still awaits a separate decision.
+
+## Third-checkpoint continuation
+
+The user explicitly superseded the no-push restriction: commit/push frequently, and push each tested checkpoint. Existing dcc7bca/ce382f3 commits are on origin/main. Do not configure deployment without a separate decision.
+
+Current changes include network World/PackageResidency and export-time WorldBuilder; optional world.ready/preparePosition lifecycle is wired in main. The native browser fetch receiver and invalid shared-box merge indices were fixed, all world geometry indices validated, sign PNGs preserved at1024px, and PBR materials rebound to scene image processing. Current manifest build authored-860409-v3 contains84packages,171materials,46PNGtextures,1221meshes,57,932,888CPU geometry bytes and13,132,677compressed package/material bytes.
+
+Root added VehicleEquipment, Garage, bounded FrameHistory, animated/detachable doors, lights/brake/siren behavior, paint persistence, seated pose clearance and plane turn correction. RestrictedFacility/PoliceDirector improvements, production Havok tests, licensed GIS and debranded CarConcept asset preparation also landed. CarConcept is prepared only, not runtime-integrated.
+
+All94 tests and production build pass. Parent WebGPU and WebGL2 checkpoint-3 audits each pass12stages with zero unexpected errors. Real HTTP evidence is refreshed. Frozen current production directory is /tmp/leonida-checkpoint-3-build on4176; the original4175 snapshot is ce382f3 and should stay archived. Runtime/server processes were interrupted by a usage-limit event;4176 was restarted. Subagents reference_atlas and vehicles errored with account usage limit and world became pending; parent continued integration. Do not invent completed subagent reviews after that interruption.
+
+The old30-minute baseline stopped15m51s from harness aircraft-recovery errors; plane banking was separately proven wrong then fixed. Corrected180-second flight smokes passed before the final rendering corrections. Full30-minute validation of the new frozen build remains next, alongside the existing combined combat/save/load normal-control tests. Keep final evidence separate from preserved startup/report-timing/harness failures.
+
+Final third-checkpoint gate: both existing combined combat/save/load renderer audits pass eight normal-control stages with zero errors, in addition to both new 12-stage audits. Logs use `checkpoint-3-*`. All94 unit tests and production build pass. The stability harness now awaits destination package preparation for its explicit fixtures and UI fast travel/load. Next run the new frozen build for30minutes, then integrate the prepared detailed car asset without modifying that frozen snapshot.

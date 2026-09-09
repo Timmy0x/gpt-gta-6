@@ -7,6 +7,7 @@ import type { Player } from "./Player";
 import type { WantedSystem } from "./Wanted";
 import { PoliceDirector, type Driver } from "./police/PoliceDirector";
 import type { Officer } from "./police/Officer";
+import { RestrictedFacility } from "./RestrictedFacility";
 export interface Pedestrian {
   id: string;
   model: Character;
@@ -27,6 +28,7 @@ export class Population {
   private rng = random(417);
   private ticks = 0;
   readonly police: PoliceDirector;
+  readonly facility: RestrictedFacility;
   private nextPedId = 0;
   onCharacterHit:
     | ((model: Character, impulse: Vector3, fatal: boolean) => void)
@@ -51,6 +53,9 @@ export class Population {
     );
     this.police.onArrest = () => this.onArrest();
     this.police.onMessage = (message) => this.onMessage(message);
+    this.facility = new RestrictedFacility(scene,shadows,world,vehicles,player,wanted);
+    this.facility.onArrest=()=>this.onArrest();
+    this.facility.onMessage=(message)=>this.onMessage(message);
     for (let i = 0; i < 30; i++) {
       const roadX = [-144, -72, 0, 72, 144][i % 5];
       const x = roadX + (i % 2 ? 11 : -11);
@@ -168,7 +173,9 @@ export class Population {
     this.ticks += dt;
     const position = this.player.position;
     this.police.onCharacterHit = this.onCharacterHit;
-    this.police.update(dt, this.drivers, this.policeEnabled);
+    this.facility.onCharacterHit=this.onCharacterHit;
+    this.facility.update(dt,this.policeEnabled);
+    this.police.update(dt, this.drivers, this.policeEnabled,this.facility.observesSuspect);
     for (const d of this.drivers) {
       if (d.police || d.v.occupied) continue;
       if (
@@ -282,6 +289,7 @@ export class Population {
   }
   reset() {
     this.police.reset(this.drivers);
+    this.facility.reset();
     for (const p of this.pedestrians) {
       p.health = 100;
       p.panic = 0;
@@ -290,19 +298,21 @@ export class Population {
     }
   }
   get officers() {
-    return this.police.officers;
+    return [...this.police.officers,...this.facility.guards];
   }
   hurtOfficer(officer: Officer, damage: number) {
+    if(this.facility.guards.includes(officer)){this.facility.onCharacterHit=this.onCharacterHit;this.facility.hurtGuard(officer,damage);return;}
     this.police.onCharacterHit = this.onCharacterHit;
     this.police.hurtOfficer(officer, damage);
   }
   resist(seconds = 12) {
     this.police.resist(seconds);
+    this.facility.resist(seconds);
   }
   get policeStats() {
     return this.police.stats;
   }
   get arrestProgress() {
-    return this.police.arrestProgress;
+    return Math.max(this.police.arrestProgress,this.facility.arrestProgress);
   }
 }

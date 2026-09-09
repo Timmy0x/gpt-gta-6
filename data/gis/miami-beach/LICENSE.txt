@@ -1,0 +1,12 @@
+© OpenStreetMap contributors
+
+This folder contains an OpenStreetMap extract and derived coordinate/topology files.
+They are made available under the Open Data Commons Open Database License (ODbL)1.0:
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Attribution and source information:
+https://www.openstreetmap.org/copyright
+See source.json, query.overpassql and docs/geodata.md for retrieval and conversion details.
+
+The geographic data is a real-world reference, not GTA VI map data.
+The acquisition/import scripts are project code; this notice applies to the geographic dataset.

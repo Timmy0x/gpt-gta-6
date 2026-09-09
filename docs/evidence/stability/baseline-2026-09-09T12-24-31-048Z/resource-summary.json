@@ -1,0 +1,172 @@
+{
+  "counts": {
+    "meshes": {
+      "min": 1648,
+      "max": 2482,
+      "first": 2033,
+      "last": 1909
+    },
+    "activeMeshes": {
+      "min": 25,
+      "max": 1642,
+      "first": 915,
+      "last": 672
+    },
+    "bodies": {
+      "min": 152,
+      "max": 287,
+      "first": 260,
+      "last": 200
+    },
+    "materials": {
+      "min": 353,
+      "max": 455,
+      "first": 353,
+      "last": 365
+    },
+    "multiMaterials": {
+      "min": 1,
+      "max": 1,
+      "first": 1,
+      "last": 1
+    },
+    "textures": {
+      "min": 100,
+      "max": 120,
+      "first": 100,
+      "last": 102
+    },
+    "geometries": {
+      "min": 1631,
+      "max": 2457,
+      "first": 2016,
+      "last": 1887
+    },
+    "skeletons": {
+      "min": 31,
+      "max": 41,
+      "first": 31,
+      "last": 32
+    },
+    "transformNodes": {
+      "min": 86,
+      "max": 132,
+      "first": 90,
+      "last": 95
+    },
+    "observers": {
+      "min": 1,
+      "max": 2,
+      "first": 1,
+      "last": 1
+    },
+    "props": {
+      "min": 18,
+      "max": 18,
+      "first": 18,
+      "last": 18
+    },
+    "debris": {
+      "min": 0,
+      "max": 6,
+      "first": 0,
+      "last": 0
+    },
+    "grenades": {
+      "min": 0,
+      "max": 0,
+      "first": 0,
+      "last": 0
+    },
+    "ragdolls": {
+      "min": 0,
+      "max": 1,
+      "first": 0,
+      "last": 0
+    },
+    "vehicles": {
+      "min": 16,
+      "max": 24,
+      "first": 16,
+      "last": 17
+    },
+    "peds": {
+      "min": 30,
+      "max": 30,
+      "first": 30,
+      "last": 30
+    },
+    "officers": {
+      "min": 0,
+      "max": 10,
+      "first": 0,
+      "last": 1
+    }
+  },
+  "cdp": {
+    "heapUsed": {
+      "min": 246552556,
+      "max": 1043401004,
+      "first": 977264784,
+      "last": 260074928
+    },
+    "nodes": {
+      "min": 606,
+      "max": 1712,
+      "first": 646,
+      "last": 693
+    },
+    "documents": {
+      "min": 1,
+      "max": 5,
+      "first": 5,
+      "last": 1
+    },
+    "listeners": {
+      "min": 57,
+      "max": 77,
+      "first": 58,
+      "last": 60
+    }
+  },
+  "phases": [
+    {
+      "kind": "coupe",
+      "seconds": 298.65613649999995,
+      "waypoints": 9,
+      "recoveries": 3,
+      "airborneSeconds": 0
+    },
+    {
+      "kind": "boat",
+      "seconds": 298.700291542,
+      "waypoints": 10,
+      "recoveries": 0,
+      "airborneSeconds": 0
+    },
+    {
+      "kind": "helicopter",
+      "seconds": 298.3546855410001,
+      "waypoints": 8,
+      "recoveries": 0,
+      "airborneSeconds": 293.7476522499998
+    }
+  ],
+  "lateHeapWindows": [
+    {
+      "start": 0,
+      "end": 300,
+      "min": 260276084
+    },
+    {
+      "start": 300,
+      "end": 600,
+      "min": 246552556
+    },
+    {
+      "start": 600,
+      "end": 900,
+      "min": 252483284
+    }
+  ]
+}

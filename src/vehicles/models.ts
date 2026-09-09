@@ -1,5 +1,6 @@
 import {
   Color3,
+  Matrix,
   Mesh,
   MeshBuilder,
   PBRMaterial,
@@ -26,8 +27,17 @@ export interface VehicleModel {
   bumpers: Mesh[];
   lights: Mesh[];
   wheels: WheelVisual[];
+  doors: DoorVisual[];
   rotor?: TransformNode;
   materials: PBRMaterial[];
+}
+export interface DoorVisual {
+  /** Geometry is offset behind this front hinge; detached copies retain their actual shape. */
+  mesh: Mesh;
+  side: number;
+  front: boolean;
+  angle: number;
+  hold: number;
 }
 
 const PALETTE = [
@@ -42,7 +52,7 @@ const PALETTE = [
 ];
 
 /** A hand-authored cross-section body. Vertex positions remain editable for impact dents. */
-function loft(name: string, sections: number[][], scene: Scene): Mesh {
+function loft(name: string, sections: number[][], scene: Scene, face?: (section: number, side: number) => boolean, caps = true): Mesh {
   const positions: number[] = [],
     indices: number[] = [],
     normals: number[] = [];
@@ -64,15 +74,16 @@ function loft(name: string, sections: number[][], scene: Scene): Mesh {
     );
   for (let s = 0; s < sections.length - 1; s++)
     for (let j = 0; j < 4; j++) {
+      if (face && !face(s, j)) continue;
       const a = s * 4 + j,
         b = s * 4 + ((j + 1) % 4),
         c = b + 4,
         d = a + 4;
       indices.push(a, c, b, a, d, c);
     }
-  indices.push(0, 1, 2, 0, 2, 3);
+  if (caps) indices.push(0, 1, 2, 0, 2, 3);
   const last = (sections.length - 1) * 4;
-  indices.push(last, last + 2, last + 1, last, last + 3, last + 2);
+  if (caps) indices.push(last, last + 2, last + 1, last, last + 3, last + 2);
   VertexData.ComputeNormals(positions, indices, normals);
   const mesh = new Mesh(name, scene),
     data = new VertexData();
@@ -115,7 +126,8 @@ export function createVehicleModel(
   const black = material("rubber", "#171c22", 0.05, 0.85),
     chrome = material("alloy", "#b5c3c7", 0.87, 0.2);
   const glass = material("glass", "#16343f", 0.3, 0.16);
-  glass.alpha = 0.9;
+  glass.alpha = 0.38;
+  glass.backFaceCulling = false;
   const dark = material("interior", "#202630", 0.1, 0.67);
   const lamp = material("headlight", "#e9f7fa", 0.1, 0.15);
   lamp.emissiveColor = new Color3(0.7, 0.84, 0.85);
@@ -128,6 +140,7 @@ export function createVehicleModel(
     bumpers: [],
     lights: [],
     wheels: [],
+    doors: [],
     materials,
   };
   function parent(mesh: Mesh, mat: PBRMaterial) {
@@ -158,8 +171,8 @@ export function createVehicleModel(
     m.position.set(x, y, z);
     return m;
   }
-  function body(name: string, sections: number[][], mat = paint) {
-    const m = parent(loft(`${name}-${id}`, sections, scene), mat);
+  function body(name: string, sections: number[][], mat = paint, face?: (section: number, side: number) => boolean, caps = true) {
+    const m = parent(loft(`${name}-${id}`, sections, scene, face, caps), mat);
     model.panels.push(m);
     return m;
   }
@@ -203,24 +216,39 @@ export function createVehicleModel(
   if (["coupe", "sedan", "suv", "police", "truck"].includes(kind)) {
     const high = kind === "suv" || kind === "truck",
       top = high ? 0.46 : 0.3;
-    body("coachwork", [
-      [-half, w * 0.84, -0.26, 0.08, 0.93],
-      [-half + 0.3, w, -0.29, top, 0.98],
-      [-half * 0.48, w, -0.29, top + 0.06, 0.99],
-      [half * 0.38, w, -0.29, top, 0.97],
-      [half - 0.32, w * 0.97, -0.23, top - 0.07, 0.97],
-      [half, w * 0.8, -0.17, top - 0.13, 0.94],
-    ]);
     const cabBack = kind === "truck" ? -0.1 : kind === "coupe" ? -0.95 : -1.3,
       cabFront = kind === "truck" ? 1.37 : 1.0,
       roofHeight = high ? 1.28 : 0.94;
+    body("coachwork", [
+      [-half, w * 0.84, -0.26, 0.08, 0.93],
+      [-half + 0.3, w, -0.29, top, 0.98],
+      [cabBack + 0.12, w, -0.29, top + 0.06, 0.99],
+      [cabFront - 0.15, w, -0.29, top, 0.97],
+      [half - 0.32, w * 0.97, -0.23, top - 0.07, 0.97],
+      [half, w * 0.8, -0.17, top - 0.13, 0.94],
+    ], paint, (section, side) => section !== 2 || side === 0);
     body("roof", [
       [cabBack, w * 0.92, top, top + 0.08, 0.9],
       [cabBack + 0.37, w * 0.9, top, roofHeight, 0.73],
       [cabFront - 0.48, w * 0.87, top, roofHeight, 0.77],
       [cabFront, w * 0.85, top, top + 0.11, 0.93],
-    ]);
-    // Windshield and backlight angled to the roof rake, opaque dark glass shows reflections without sorting artifacts.
+    ], paint, (section, side) => section === 1 && side === 2, false);
+    // The cabin is open geometry: the roof no longer hides the driver behind a solid volume.
+    box("cabin-floor", t.width * 0.86, 0.08, cabFront - cabBack, 0, -0.25, (cabFront + cabBack) / 2, dark);
+    box("dashboard", t.width * 0.74, 0.16, 0.28, 0, top + 0.08, cabFront - 0.16, dark);
+    for (const side of [-1, 1]) {
+      box("front-seat", 0.53, 0.15, 0.53, side * t.width * 0.21, high ? 0.26 : 0.05, -0.08, dark);
+      const seat = box("front-seat-back", 0.53, high ? 0.64 : 0.55, 0.14, side * t.width * 0.21, high ? 0.55 : 0.24, -0.34, dark);
+      seat.rotation.x = -0.12;
+      box("headrest", 0.3, 0.18, 0.13, side * t.width * 0.21, high ? 0.96 : 0.58, -0.37, dark);
+      for (const z of [cabBack + 0.22, cabFront - 0.24]) {
+        const pillar = box("cab-pillar", 0.075, roofHeight - top, 0.065, side * w * 0.82, (roofHeight + top) / 2, z, paint);
+        pillar.rotation.x = z < 0 ? 0.28 : -0.35;
+      }
+    }
+    const steering = parent(MeshBuilder.CreateTorus(`steering-${id}`, { diameter: 0.31, thickness: 0.027, tessellation: 16 }, scene), dark);
+    steering.position.set(-t.width * 0.21, top + 0.09, cabFront - 0.43);
+    steering.rotation.x = 1.1;
     const windshield = box(
       "windshield",
       t.width * 0.73,
@@ -260,6 +288,12 @@ export function createVehicleModel(
           kind === "coupe" || kind === "truck"
             ? (cabBack + cabFront) / 2
             : cabBack + 0.39 + windowDepth * (door + 0.5);
+        const doorLength = dz;
+        const hinge = box("door", 0.085, top + 0.24, doorLength, side * (w - 0.045), (top - 0.24) / 2, z, paint);
+        hinge.bakeTransformIntoVertices(Matrix.Translation(0, 0, -doorLength / 2));
+        hinge.position.z = z + doorLength / 2;
+        const mount = (part: Mesh) => { part.setParent(hinge); return part; };
+        model.doors.push({ mesh: hinge, side, front: door === (kind === "coupe" || kind === "truck" ? 0 : 1), angle: 0, hold: 0 });
         const window = box(
           "side-window",
           0.025,
@@ -271,8 +305,9 @@ export function createVehicleModel(
           glass,
         );
         window.rotation.z = side * 0.14;
+        mount(window);
         model.windows.push(window);
-        box(
+        mount(box(
           "door-handle",
           0.04,
           0.055,
@@ -281,7 +316,10 @@ export function createVehicleModel(
           top - 0.09,
           z - 0.26,
           chrome,
-        );
+        ));
+        mount(box("door-frame-top", 0.04, 0.045, dz, side * w * 0.77, roofHeight - 0.045, z, paint));
+        mount(box("door-frame-back", 0.04, roofHeight - top, 0.055, side * w * 0.81, (roofHeight + top) / 2, z - dz / 2, paint));
+        mount(box("door-trim", 0.04, 0.13, dz * 0.84, side * (w - 0.1), top - 0.11, z, dark));
       }
       box("rocker", 0.095, 0.1, t.length * 0.72, side * w, -0.26, 0, dark);
       const mirror = box(
@@ -293,7 +331,7 @@ export function createVehicleModel(
         top + 0.26,
         cabFront - 0.2,
       );
-      box(
+      const mirrorGlass = box(
         "mirror-glass",
         0.13,
         0.1,
@@ -304,6 +342,8 @@ export function createVehicleModel(
         chrome,
       );
       mirror.rotation.y = side * 0.12;
+      const door = model.doors.find(d => d.side === side && d.front);
+      if (door) { mirror.setParent(door.mesh); mirrorGlass.setParent(door.mesh); }
     }
     if (kind === "truck") {
       box("bed-floor", t.width * 0.84, 0.08, 2.16, 0, top - 0.17, -1.52, dark);
@@ -312,8 +352,8 @@ export function createVehicleModel(
       box("tailgate", t.width * 0.9, 0.42, 0.14, 0, top - 0.01, -half + 0.1);
     }
     if (kind === "coupe") {
-      for (const side of [-1, 1])
-        box(
+      for (const side of [-1, 1]) {
+        const stripe = box(
           "spoiler-bracket",
           0.055,
           0.15,
@@ -323,6 +363,9 @@ export function createVehicleModel(
           -half + 0.46,
           dark,
         );
+        const door = model.doors.find(d => d.side === side && d.front);
+        if (door) stripe.setParent(door.mesh);
+      }
       box(
         "spoiler",
         t.width * 0.84,
@@ -436,6 +479,7 @@ export function createVehicleModel(
     ]);
     box("saddle", 0.39, 0.15, 0.72, 0, 0.3, -0.57, dark);
     box("engine", 0.4, 0.36, 0.43, 0, -0.13, 0, chrome);
+    box("footpegs", 0.74, 0.035, 0.07, 0, -0.33, -0.18, chrome);
     for (const side of [-1, 1]) {
       const fork = box(
         "fork",
@@ -450,7 +494,7 @@ export function createVehicleModel(
       fork.rotation.x = -0.18;
     }
     box("handlebar", 0.78, 0.055, 0.08, 0, 0.64, 0.55, chrome);
-    box("headlight", 0.3, 0.23, 0.1, 0, 0.45, 0.78, lamp);
+    model.lights.push(box("headlight", 0.3, 0.23, 0.1, 0, 0.45, 0.78, lamp));
     wheel(0, -t.wheelbase / 2, false);
     wheel(0, t.wheelbase / 2, true);
   } else if (kind === "boat") {

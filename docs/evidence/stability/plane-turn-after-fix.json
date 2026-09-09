@@ -1,0 +1,10 @@
+{
+  "command": "node --import tsx --test tests/plane-turn.test.ts",
+  "sourceChange": "VehicleSystem.updatePlane bankTarget uses positive input.steer along right",
+  "method": "Real Havok over continuous 5 km ground; 1.5 s settle, 10 s runway acceleration, 8 s takeoff, 4 s sustained commanded turn. No velocity or post-spawn transform seeding.",
+  "passed": true,
+  "measurements": [
+    {"direction":-1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66034698486328,"minAltitude":61.51572799682617,"headingChange":-0.4666378986939496,"meanSignedBank":0.15542083350493088,"meanSignedLateralAcceleration":1.5114566177258126,"endVelocity":[-5.791051387786865,0.2294800728559494,28.53548812866211],"health":100},
+    {"direction":1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66032409667969,"minAltitude":61.51572799682617,"headingChange":0.4666380059653102,"meanSignedBank":0.15542098894274947,"meanSignedLateralAcceleration":1.511454584063789,"endVelocity":[5.792882442474365,0.22948454320430756,28.535144805908203],"health":100}
+  ]
+}

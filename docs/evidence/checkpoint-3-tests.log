@@ -1,0 +1,189 @@
+
+> leonida-free-roam@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ low driving pose keeps both character variants' skinned feet above the cabin floor and head below the roof (32.249209ms)
+✔ both character variants have valid skinned geometry and one render submesh (10.857ms)
+ℹ Jason: 4692 vertices, 9160 triangles, 17 bones.
+ℹ Lucia: 4662 vertices, 9100 triangles, 17 bones.
+✔ walk and run skin the feet while aiming raises the hand and crouching recovers (12.926042ms)
+✔ characters share their material safely across repeated character switching (77.413417ms)
+✔ equal fixed-step inputs produce equal joint poses without moving the controller root (4.073875ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ weapon switching conserves rounds and reloading transfers only available reserve (0.547334ms)
+✔ reticle sees target but muzzle ray stops at close cover, including invisible Havok proxies (21.199083ms)
+✔ physical grenade follows gravity, bounces off a thin wall and detonates at its actual body position (17.600209ms)
+✔ destructible fences collide and obstruct navigation until broken; material damage differs (61.762375ms)
+✔ explosion cover is resolved in three dimensions before destruction changes the scene (31.766167ms)
+✔ fire has visible flames, causes material damage, extinguishes in rain and preserves deformed geometry on save (9.582667ms)
+✔ Babylon V2 ragdoll uses constrained bodies, physically falls, then safely returns the live rig to animation (47.036417ms)
+✔ held models follow the skinned hand, hide for traversal and release pooled submaterials when switching (42.551791ms)
+✔ fatal hit during recovery reactivates physics and bounded ragdolls release disposal observers (47.619334ms)
+✔ vehicle-like impacts queue prop destruction outside the physics callback and disposal restores resource counts (4.495625ms)
+✔ Combat fire and melee use the normal public interfaces, dispatch officer impacts and spend ammunition (23.021416ms)
+✔ reset clears active, fatal and already-settled ragdolls before population respawn (32.332625ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ annex gate physically blocks entry until normal visitor access opens its animated Havok body (185.561542ms)
+ℹ {"closed":[-455.4500000000008,1.05,144],"authorized":[-467.4500000000035,1.05,144],"guards":4}
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ leaving within the annex warning avoids a crime; ignoring it leads to calm detention rather than automatic shooting (130.606792ms)
+ℹ {"arrested":true,"stats":{"id":"coastal-reserve-annex","classification":"creative-mode addition","phase":"alarm","inside":true,"accessSeconds":0,"warningSeconds":0,"guards":4,"activeGuards":4,"gateOpen":true,"arrestProgress":0.21111111111111117},"health":100}
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ visitor authorization is revoked by armed behavior, guard shots damage a resisting suspect, patrols and resets retain bounded stable actors (147.708209ms)
+ℹ {"healthAfterThreat":0,"guardIds":["reserve-guard-1","reserve-guard-2","reserve-guard-3","reserve-guard-4"],"phase":"quiet"}
+✔ long-session frame history retains raw stalls in chronological order across repeated wraps (8.015042ms)
+✔ saved key bindings reject reserved/corrupt fields and keep every action reachable (6.653459ms)
+✔ radial stick deadzone removes drift, preserves direction and gives analog travel (2.336625ms)
+✔ standard gamepad buttons supply held actions and exactly one press edge (0.981167ms)
+✔ holding Start while opening an overlay does not immediately toggle it closed (0.209ms)
+✔ analog axes support movement/braking and camera filtering without digitalizing the stick (0.460666ms)
+✔ triggers and weapon buttons work, and unplugging clears only controller input (0.889166ms)
+✔ rebindings survive reload, swap duplicates and preserve keyboard/mouse release behavior (0.696959ms)
+✔ focus loss cancels firing/movement and held controller buttons must release before resuming (0.42925ms)
+✔ jump survives render frames without physics while render actions retain one-frame edges (0.170792ms)
+✔ jump buffering follows remapping and clear discards unconsumed jump edges (0.150083ms)
+✔ pointer buttons aim and fire before mouse compatibility events and release outside canvas (0.12975ms)
+✔ pointer-only aim/fire chords and cancellation clear flags without clearing controller triggers (0.129583ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ render interpolation restores authoritative position/rotation and resets teleports (8.895583ms)
+✔ recovery between physics steps survives immediate render and authoritative restore (1.498917ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ Havok standing capsule rejects overlap, low ceilings, and swept wall crossings (34.305ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ Havok ledge query accepts a reachable low ledge and rejects an obstructed landing (50.33675ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ character controller actually climbs the queried ledge and settles on top (56.565291ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ vehicle exit finds the opposite door and refuses when every exit is blocked (64.02175ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ WASTED rejects vehicle entry and jumping; paused controller look stays fixed (23.379833ms)
+✔ routing follows directed connections and reports disconnected destinations (3.763416ms)
+✔ save validation accepts extended and original version-one snapshots (4.850875ms)
+✔ malformed prop rotation and duplicate IDs are rejected before world restoration (0.20375ms)
+✔ invalid ammunition cannot create impossible magazines or unusable weapon selection (0.167458ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ Havok trainer left turn banks lift into the commanded turn after physical takeoff (108.961792ms)
+ℹ {"direction":-1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66034698486328,"minAltitude":61.51572799682617,"headingChange":-0.4666378986939496,"meanSignedBank":0.15542083350493088,"meanSignedLateralAcceleration":1.5114566177258126,"startRight":[0.9999999994939266,-1.0389027410866852e-8,-0.00003181425561915374],"endVelocity":[-5.791051387786865,0.2294800728559494,28.53548812866211],"health":100}
+✔ Havok trainer right turn banks lift into the commanded turn after physical takeoff (53.159791ms)
+ℹ {"direction":1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66032409667969,"minAltitude":61.51572799682617,"headingChange":0.4666380059653102,"meanSignedBank":0.15542098894274947,"meanSignedLateralAcceleration":1.511454584063789,"startRight":[0.9999999994939266,-1.0389027410866852e-8,-0.00003181425561915374],"endVelocity":[5.792882442474365,0.22948454320430756,28.535144805908203],"health":100}
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ roadblock officer reaches the central suspect using production urban Havok collision (206.054209ms)
+ℹ {"obstacles":135,"samples":[{"seconds":0,"p":[68.7,1.1472749999999998,193.88666666666668],"path":[{"x":68.7,"z":82},{"x":3.3,"z":-28}]},{"seconds":10,"p":[68.7,1.027375,149.8866666666726],"path":[{"x":68.7,"z":82},{"x":3.3,"z":-28}]},{"seconds":20,"p":[67.84227321966273,1.027375,105.97214111392732],"path":[{"x":3.3,"z":-28}]},{"seconds":30,"p":[48.756603274967915,1.0445917354639365,66.33384644949166],"path":[{"x":3.3,"z":-28}]},{"seconds":40,"p":[29.66072947375592,1.1255677491935077,26.72146768144865],"path":[{"x":3.3,"z":-28}]},{"seconds":50,"p":[10.568387956697025,1.1470332785401436,-12.89034306095371],"path":[{"x":3.3,"z":-28}]},{"seconds":60,"p":[4.146889606286793,1.0489332785401435,-26.23947049985863],"path":[{"x":3.3,"z":-28}]}],"end":[4.146889606286793,1.0489332785401435,-26.23947049985863]}
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ urban cruiser follows lane corners instead of cutting into the garage approach (164.512417ms)
+ℹ {"samples":[{"seconds":0,"p":[-3.299999952316284,0.998333752155304,-134],"target":171,"heading":3.141592653589793,"speed":0,"state":"riding"},{"seconds":10,"p":[-22.172456741333008,0.7019389271736145,-213.05772399902344],"target":92,"heading":-1.5558589703941996,"speed":11.456034019002713,"state":"riding"},{"seconds":20,"p":[-68.71897888183594,0.698398768901825,-126.07225799560547],"target":226,"heading":-0.0005972476587085306,"speed":21.652553000111947,"state":"riding"},{"seconds":30,"p":[-8.160321235656738,0.6816844940185547,-73.42718505859375],"target":235,"heading":1.0187098660857619,"speed":7.3378413754063425,"state":"riding"}],"end":[3.0058722496032715,0.6354610323905945,-38.49017333984375],"officer":[0.5061862795064385,1.15,-38.44305976767162],"arrived":true}
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ a cruiser deflected to the observed garage blockage recovers or safely continues pursuit on foot (338.530334ms)
+ℹ {"arrived":true,"sawReverse":true,"samples":[{"seconds":0,"car":[-44.400001525878906,0.998333752155304,-52],"officer":[-44.2869028546085,1,-51.55311183087455],"state":"riding","recovery":{"anchor":{"x":-44.4,"z":-52},"timer":0.016666666666666666,"reverse":0,"attempts":0,"stranded":false}},{"seconds":10,"car":[-45.10732650756836,0.7614960670471191,-52.75642013549805],"officer":[-44.909204184219945,0.7614957789302452,-52.34018997682269],"state":"riding","recovery":{"anchor":{"x":-45.57126235961914,"z":-52.68794250488281},"timer":2.4333333333333296,"reverse":-0.016666666666663676,"attempts":1,"stranded":false}},{"seconds":20,"car":[-75.53250122070312,0.7005167007446289,-92.79041290283203],"officer":[-75.08356813912938,0.7075859468991788,-92.7039230951968],"state":"riding","recovery":{"anchor":{"x":-75.54417419433594,"z":-91.53743743896484},"timer":0.09999999999999999,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}},{"seconds":30,"car":[-15.54465103149414,0.6166738867759705,-147.3159637451172],"officer":[-15.584729035065875,0.6142026018778186,-146.8660744427803],"state":"riding","recovery":{"anchor":{"x":-15.961291313171387,"z":-147.31715393066406},"timer":0.03333333333333333,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}},{"seconds":40,"car":[3.609426975250244,0.5884573459625244,-22.196144104003906],"officer":[3.1488896062892846,0.5635918487786129,-22.225551044790052],"state":"riding","recovery":{"anchor":{"x":3.499237537384033,"z":-22.976835250854492},"timer":0.05,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}}],"end":[7.2078070640563965,0.7061073780059814,-13.599281311035156]}
+✔ fallback escalation changes response roles within bounded five-level configuration (0.486917ms)
+✔ compliance requires stopped movement, lowered weapon, no resistance and a living suspect (0.062459ms)
+✔ foot navigation routes around an opaque wall and never invents an unreachable shortcut (0.45875ms)
+✔ search remembers observed identities but a different car masks a face at range (0.144458ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ real Havok officer walks, collides with a wall, and disposes its controller and skin (105.648625ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ physical dispatch arrives, visible officer dismounts and compliant suspect is arrested; response resets cleanly (112.089041ms)
+ℹ {"arrested":true,"sawFoot":true,"wanted":"pursuit","vehicles":[[-0.002769345650449395,0.651496171951294,-7.137452125549316]],"officers":[{"state":"challenge","p":[-0.6996038011966615,1.027375,-2.0459856383539208]}]}
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ high escalation creates bounded tactical crew, collidable roadblocks and a helicopter that gains altitude through forces (841.80525ms)
+ℹ {"helicopterMax":59.02931594848633,"maxOfficers":10,"maxVehicles":8,"tacticalOfficers":4}
+✔ directed pursuit routing avoids a closer dead end (0.147541ms)
+BJS - [17:42:24]: Babylon.js v9.25.0 - Null engine
+✔ dispatch uses a lane behind the actual camera instead of popping into its visible approach (19.46675ms)
+BJS - [17:42:24]: Babylon.js v9.25.0 - Null engine
+✔ civilian deletion/restoration retains unique stable IDs and disabled actors do not witness crimes (54.318875ms)
+✔ unwitnessed crime does not dispatch police (0.408917ms)
+✔ report, pursuit, last known, search, reacquisition and escape (0.615584ms)
+✔ walls block witnesses; parallel and open lines remain clear (0.123291ms)
+✔ seeded world randomness is reproducible (0.084959ms)
+✔ police profile supports configured levels without claiming reference parity (0.079042ms)
+✔ last-known coordinates copy public getters used by Babylon vectors (0.077834ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ entry doors swing around their hinge, close, detach with real Havok motion and restore without leaks (146.903833ms)
+ℹ 32 kg door fragment physically separated; 10 replacements retained damage with stable scene/body/light resources.
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ headlight budget stays fixed, broken lenses extinguish beams and brake/siren controls change lamps (72.37875ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ garage charges only valid stopped-car services and paint persists through damage, repair and restore (12.842875ms)
+✔ tire demand respects friction circle and loses braking when sliding hard (0.743541ms)
+✔ suspension equilibrium supports the actual car weight (0.101375ms)
+✔ engine respects top speed, reverse cap, and mechanical damage (0.083042ms)
+✔ parking contact is harmless, high-speed impact is damaging (0.0545ms)
+✔ wing stalls at high angle of attack (0.0615ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ Havok car settles, accelerates, steers and stops against a solid wall (151.777041ms)
+ℹ Coupe reached 20.80 m/s after 3 seconds of throttle.
+ℹ Impact Δv=3.30
+ℹ Impact Δv=13.36
+ℹ Sedan hit wall: health 53.9, 2 collision callbacks, position z=25.09.
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ Havok boat floats, helicopter takes off and lands, trainer rotates from runway (105.376041ms)
+ℹ Boat floating height -0.05 m; propulsion reached 17.98 m/s.
+ℹ Helicopter collective reached 23.91 m; rotor tilt produced 5.23 m/s horizontal speed.
+ℹ Trainer runway roll: 36.51 m/s; y=0.67.
+ℹ Trainer rotation: 25.37 m/s; y=62.08; forward={X: 0.00038983026752248406 Y: 0.4436272382736206 Z: 0.8962113261222839}.
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ 62 m/s impact cannot tunnel through an 8 cm wall; creative recovery restores upright motion (33.514708ms)
+ℹ 223 km/h crash: max center z=9.741 at wall z12, health=25.0.
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ fixed physics substeps preserve driving across 30, 60 and 144 Hz render cadence (69.3095ms)
+ℹ 30 Hz: 299 steps, 17.623 m/s, z=36.987; 60 Hz: 299 steps, 17.623 m/s, z=36.987; 144 Hz: 299 steps, 17.623 m/s, z=36.987
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ vehicle save round-trip retains deformed vertices, broken components, punctures and overturned pose (43.029292ms)
+ℹ Saved 3105 bytes with dents, puncture, glass/light/bumper damage; 8 replacements preserved state with stable mesh/body/material counts.
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ stable IDs reject collisions; invalid restoration leaves existing body intact; legacy saves load (65.292875ms)
+✔ WGS84 tangent-plane projection preserves origin, east/north orientation and local metre scale (1.398167ms)
+✔ multipolygon chains join shared node IDs in either direction and reject open rings (0.872834ms)
+✔ acquired GIS extract retains provenance, closed footprints and explicit disconnected source topology (21.527708ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ material and chunk requests preserve the receiver required by native Window.fetch (40.369667ms)
+✔ merging a box and gable cannot corrupt shared boxes in later district batches (6.205417ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ native Babylon packages fetch only required cells and evict CPU geometry, GPU meshes, and unused materials (115.991333ms)
+✔ transient package failures retry and preserve the current neighborhood until destination preparation succeeds (407.428333ms)
+BJS - [17:42:24]: Babylon.js v9.25.0 - Null engine
+✔ production manifest preserves authored collision metadata and asset references (391.65925ms)
+BJS - [17:42:25]: Babylon.js v9.25.0 - Null engine
+✔ an unavailable destination rejects preparation without evicting the playable origin (1212.261042ms)
+✔ disposing residency does not remove unrelated gameplay geometry or materials (2.6565ms)
+BJS - [17:42:25]: Babylon.js v9.25.0 - Null engine
+✔ production World awaits native packages, preserves global wave identities and releases loaded CPU geometry (528.157167ms)
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+BJS - [17:42:23]: Babylon.js v9.25.0 - Null engine
+✔ streamed mesh disposal releases scene geometry and reconstruction preserves transformed vertices/material (19.926958ms)
+ℹ 20 round trips: 43 actual mesh disposals; stable 1680 CPU geometry bytes.
+✔ visual work is budgeted and hysteresis avoids residency thrashing (6.015292ms)
+✔ active vehicle anchors retain Havok walls, global ground remains, and collider reloads do not leak bodies (34.057833ms)
+ℹ 20 Havok unload/reload cycles: 3 bodies including restored wall, unchanged navigation box.
+✔ west and south expansion preserves a strongly connected paved lane network (21.144167ms)
+ℹ tests 94
+ℹ suites 0
+ℹ pass 94
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5741.1285

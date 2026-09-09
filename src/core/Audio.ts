@@ -195,7 +195,8 @@ export class GameAudio {
       foot = type === "footstep",
       shot = type === "shot",
       explosion = type === "explosion",
-      siren = type === "siren";
+      siren = type === "siren",
+      horn = type === "horn";
     const duration = foot ? 0.11 : explosion ? 1.1 : siren ? 0.7 : 0.35;
     const gain = ctx.createGain(),
       panner = this.panner(position),
@@ -203,15 +204,15 @@ export class GameAudio {
     filter.type = "lowpass";
     filter.frequency.value = foot ? 600 : shot ? 6500 : explosion ? 650 : 1400;
     const source: OscillatorNode | AudioBufferSourceNode =
-      !siren && this.noise ? ctx.createBufferSource() : ctx.createOscillator();
+      !siren && !horn && this.noise ? ctx.createBufferSource() : ctx.createOscillator();
     if (source instanceof AudioBufferSourceNode) {
       source.buffer = this.noise;
       source.playbackRate.value = shot ? 2.3 : foot ? 0.8 : 0.6;
     } else {
-      source.type = "sine";
-      source.frequency.setValueAtTime(siren ? 800 : 80, t);
+      source.type = horn ? "triangle" : "sine";
+      source.frequency.setValueAtTime(horn ? 370 : siren ? 800 : 80, t);
       source.frequency.exponentialRampToValueAtTime(
-        siren ? 450 : 25,
+        horn ? 370 : siren ? 450 : 25,
         t + duration,
       );
     }

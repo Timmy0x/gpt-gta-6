@@ -36,6 +36,8 @@ import { UI } from "./ui/UI";
 import { Navigation } from "./gameplay/Navigation";
 import { PhysicsInterpolation } from "./core/PhysicsInterpolation";
 import { Atmosphere } from "./core/Atmosphere";
+import { FrameHistory } from "./core/FrameHistory";
+import { nearbyGarage, serviceAtGarage } from "./gameplay/Garage";
 const ui = new UI();
 async function boot() {
   const canvas = document.querySelector<HTMLCanvasElement>("#game")!;
@@ -71,7 +73,7 @@ async function boot() {
   shadows.bias = 0.002;
   shadows.normalBias = 0.025;
   shadows.darkness = 0.18;
-  ui.loading("Building Ocean Beach and the Art Deco district…");
+  ui.loading("Loading the coast and nearby streets…");
   await new Promise((r) => setTimeout(r, 20));
   // Authored low-frequency sky radiance: local data, with no remote asset dependency.
   const cubeFaces = Array.from({ length: 6 }, (_, face) => {
@@ -105,6 +107,7 @@ async function boot() {
   scene.environmentIntensity = 0.85;
   const ctx = { scene, shadows };
   const world = new World(ctx);
+  await world.ready;
   const navigation = new Navigation(world.roads);
   ui.world = world;
   const input = new Input(canvas);
@@ -163,7 +166,23 @@ async function boot() {
   let recoveryTimer = 0,
     closest: Vehicle | null = null,
     crashCount = 0;
-  const frameTimes: number[] = [];
+  let loadingWorld = false;
+  async function prepareTravel(destination: Vector3): Promise<boolean> {
+    if (loadingWorld) return false;
+    loadingWorld = true;
+    const previousPause = paused, origin = player.position.clone();
+    input.clear();
+    setPause(true);
+    ui.toast("Loading nearby streets…");
+    try { await world.preparePosition(destination); return true; }
+    catch (error) {
+      console.error("Destination loading failed", error);
+      world.ensureCollision(origin);
+      ui.toast("This area could not load. Check your connection and try again.");
+      return false;
+    } finally { loadingWorld = false; setPause(previousPause); }
+  }
+  const frameTimes = new FrameHistory();
   let raceMarker: Mesh | null = null;
   const racePoints = [
     new Vector3(0, 2, 65),
@@ -281,12 +300,13 @@ async function boot() {
       console.error(e);
     }
   }
-  function load() {
+  async function load() {
     const s = Persistence.load();
     if (!s) {
       ui.toast("No compatible saved sandbox in this browser.");
       return false;
     }
+    if (!await prepareTravel(new Vector3(s.player.x, s.player.y, s.player.z))) return false;
     combat.reactions.reset();
     player.exit(true);
     for (const v of [...vehicles.list])
@@ -368,24 +388,19 @@ async function boot() {
     ui.toast("Coastal sprint · Drive through the five green checkpoints.");
   }
   function interact() {
-    const service = world.locations.find(
-      (l) =>
-        distance(l, player.position) < 10 &&
-        /garage/i.test(l.type + " " + l.name),
-    );
+    if (population.facility.canRequestAccess && population.facility.accessRemaining <= 0) {
+      population.facility.requestAccess();
+      return;
+    }
+    const service = nearbyGarage(player.position, world.locations);
     if (
       service &&
       player.vehicle &&
-      player.vehicle.health < 99 &&
       Math.abs(player.vehicle.speed) < 2
     ) {
-      if (cash < 150) {
-        ui.toast("Garage service costs $150.");
-        return;
-      }
-      cash -= 150;
-      vehicles.repair(player.vehicle);
-      ui.toast("Garage service · Vehicle repaired · −$150");
+      ui.showPanel("garage");
+      setPause(true); input.clear();
+      if (document.pointerLockElement) document.exitPointerLock();
       return;
     }
     if (player.vehicle) {
@@ -415,10 +430,7 @@ async function boot() {
         loc.type.includes("garage") ||
         loc.name.toLowerCase().includes("garage")
       ) {
-        const v = nearestVehicle();
-        if (v) vehicles.repair(v);
-        player.health = 100;
-        ui.toast("Garage service · Health and nearby ride restored.");
+        ui.toast("Drive a vehicle to the entrance for repair and paint service.");
       } else if (
         loc.type.includes("race") ||
         loc.name.toLowerCase().includes("sprint")
@@ -430,13 +442,31 @@ async function boot() {
           return;
         }
         player.health = 100;
-        combat.reserve = 180;
+        combat.inventory.reserves = [180, 180, 6];
         cash = Math.max(0, cash - 50);
         ui.toast(`${loc.name} · Supplies purchased for $50.`);
       }
     }
   }
-  ui.onAction = (action, value) => {
+  ui.onAction = async (action, value) => {
+    if (loadingWorld) return;
+    if (action === "garage-repair" || action === "garage-paint") {
+      const result = serviceAtGarage(vehicles, player.vehicle, world.locations, cash, action === "garage-repair" ? "repair" : "paint", document.querySelector<HTMLSelectElement>("#paint-color")?.value);
+      cash = result.cash; ui.toast(result.message); return;
+    }
+    if (action === "garage-exit") {
+      if (player.exit()) { ui.showPanel(""); setPause(false); }
+      else ui.toast(player.interactionMessage);
+      return;
+    }
+    if (action === "vehicle-lights" || action === "vehicle-siren") {
+      const v = player.vehicle || nearestVehicle();
+      if (!v) { ui.toast("Approach or enter a vehicle first."); return; }
+      if (action === "vehicle-lights") { v.headlights = !v.headlights; ui.toast(`Headlights ${v.headlights ? "on" : "off"}.`); }
+      else if (v.kind === "police") { v.siren = !v.siren; ui.toast(`Siren ${v.siren ? "on" : "off"}.`); }
+      else ui.toast("This vehicle has no siren.");
+      return;
+    }
     if (action === "route" && value) {
       const location = world.locations.find((l) => l.id === value);
       if (location) {
@@ -458,7 +488,7 @@ async function boot() {
       ui.showPanel("");
       setPause(false);
       audio.start();
-      if (action === "continue") load();
+      if (action === "continue" && !await load()) return;
       canvas.focus();
       ui.toast("Walk to the sports coupe ahead. Press E to get in.");
       return;
@@ -499,6 +529,7 @@ async function boot() {
       if (kind === "boat") p = new Vector3(239, 0.4, -230);
       if (kind === "plane") p = new Vector3(0, 1, -190);
       if (kind === "helicopter") p = new Vector3(0, 2, -112);
+      if (["boat", "plane", "helicopter"].includes(kind) && !await prepareTravel(p)) return;
       const v = vehicles.spawn(kind, p, kind === "plane" ? 0 : player.yaw);
       ui.toast(
         `${v.tuning.label} spawned${kind === "boat" ? " at the marina" : kind === "plane" ? " at the south boulevard" : ""}.`,
@@ -645,7 +676,7 @@ async function boot() {
       physics.setSubTimeStep(1000 / 60 / simSpeed);
     }
     if (action === "save") save();
-    if (action === "load") load();
+    if (action === "load") await load();
     if (action === "reset") {
       combat.reactions.reset();
       population.reset();
@@ -656,6 +687,7 @@ async function boot() {
     if (action === "teleport") {
       const l = world.locations.find((l) => l.id === value);
       if (l) {
+        if (!await prepareTravel(new Vector3(l.x, 1.5, l.z))) return;
         player.exit(true);
         player.teleport(new Vector3(l.x, 1.5, l.z));
         ui.showPanel("");
@@ -793,8 +825,16 @@ async function boot() {
         if (input.take("repair")) ui.onAction("repair");
         if (input.take("reload")) combat.reload();
         if (input.take("horn")) {
-          if (player.vehicle) audio.effect("siren", player.position);
+          if (player.vehicle) audio.effect("horn", player.position);
           else combat.melee();
+        }
+        if (input.take("lights") && player.vehicle) {
+          player.vehicle.headlights = !player.vehicle.headlights;
+          ui.toast(`Headlights ${player.vehicle.headlights ? "on" : "off"}.`);
+        }
+        if (input.take("siren") && player.vehicle?.kind === "police") {
+          player.vehicle.siren = !player.vehicle.siren;
+          ui.toast(`Siren ${player.vehicle.siren ? "on" : "off"}.`);
         }
         if (input.take("melee")) combat.melee();
         if (input.pressed.has("Digit1")) combat.select(0);
@@ -841,7 +881,7 @@ async function boot() {
             ? 0
             : player.speed,
         sources: vehicles.list
-          .filter((v) => v !== player.vehicle && v.engineRunning)
+          .filter((v) => (v !== player.vehicle || v.siren) && v.engineRunning)
           .map((v) => ({
             id: v.id,
             type: v.siren ? "siren" : "engine",
@@ -857,7 +897,6 @@ async function boot() {
     }
     if (started && !paused) {
       frameTimes.push(rawDt * 1000);
-      if (frameTimes.length > 108000) frameTimes.shift();
     }
     hudTime += dt;
     if (hudTime > 0.09) {
@@ -874,6 +913,10 @@ async function boot() {
         );
         if (l) prompt = `E  Interact · ${l.name}`;
       }
+      if (population.facility.canRequestAccess && population.facility.accessRemaining <= 0)
+        prompt = "E  Request visitor access · Coastal Reserve gate";
+      if (player.vehicle && Math.abs(player.vehicle.speed) < 2 && nearbyGarage(player.position, world.locations))
+        prompt = "E  Garage · Repair and paint";
       ui.settings = {
         time,
         weather,
@@ -934,6 +977,7 @@ async function boot() {
   // Read-only instrumentation is always present; deterministic mutations are opt-in for test runs.
   const diagnostics = () => ({
     backend,
+    cash,
     fallbackReason,
     position: player.position.asArray(),
     character: player.name,
@@ -973,11 +1017,13 @@ async function boot() {
       transitioning: player.transitioning,
     },
     atmosphere: atmosphere.getStats(),
+    facility: population.facility.stats,
     audio: audio.getStats(),
     fps: engine.getFps(),
     resolution: [engine.getRenderWidth(), engine.getRenderHeight()],
     quality,
-    frameTimes: frameTimes.slice(-1800),
+    frameTimes: frameTimes.latest(1800),
+    streamingBusy: loadingWorld,
     errors: [],
   });
   Object.assign(window, {

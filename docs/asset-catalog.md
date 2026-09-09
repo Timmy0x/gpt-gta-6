@@ -6,6 +6,12 @@ Initial catalog: **2026-09-09**. This file separates reference media from assets
 
 For every shipped file record: stable asset ID, local path, creator, source URL, exact license/permission, retrieval date, modifications, dimensions and units, LODs, compression, byte size, attribution, intended use, and replacement status. Maintain the record when an asset changes. Original procedural geometry and synthesized audio must be identified as such; visual placeholders are not finished realistic art.
 
+## Prepared licensed vehicle — runtime integration pending
+
+`VEH-CONCEPT-PREPARED` is retained at `public/vehicles/concept/car.glb`: the Car Concept model credited upstream to Eric Chadwick / © 2024 Darmstadt Graphics Group GmbH, under CC BY 4.0 with separately excluded logos. The 11,271,376-byte prepared asset is debranded: the plate/logo atlas and both branded tire-sidewall color/normal images, all references to them and their embedded PNG bytes are removed. Generic plate/rubber factors replace those slots; cabin, geometry and hinges remain intact. Attribution, source license, exact immutable download URLs and original/prepared SHA-256 values are stored beside it.
+
+`scripts/assets/prepare-car-concept.mjs` reproduces the rewrite and verifies no removed-image payload survives. `scripts/assets/verify-car-concept.mjs` imports the resulting GLB through Babylon in a CPU-only loader check. It contains 101 glTF nodes, 109 primitives and 213,347 triangles; exact posed geometry bounds are about 2.542 × 1.149 × 4.357 metres. There are no animation clips, skins or LODs. This is a detailed candidate asset, **not a completed drivable model, an FPS result or a GTA VI replica**. Steering/rolling frames, physics mounts, seats, doors, component damage and shared-resource lifecycle still require runtime integration. The complete [adapter brief](car-concept-adapter.md) records component pivots, coordinate conversion and limitations.
+
 ## Initial asset families
 
 Implementation status here is **planned / awaiting code inventory** unless a concrete path and evidence are supplied. The developer creating each family must update its source and gap record. Do not infer a completed asset from this list.

@@ -1,0 +1,2074 @@
+{
+  "origin": "http://127.0.0.1:4176",
+  "method": "Separate headless Chrome WebGL2. Normal UI keyboard/mouse only; ?test for read-only diagnostics. Concurrent GPU work, no performance gate.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-BTC1GROQ.js",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "entry-door",
+      "wallTime": "2026-09-09T12:52:03.043Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.6214540004730225,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 2.7333333333333285,
+      "meshes": 2363,
+      "activeMeshes": 477,
+      "physicsBodies": 246,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 211,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 211,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": true
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.01200240334223,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": 0,
+      "aim": false,
+      "headlights": true,
+      "doorAngles": [
+        {
+          "side": -1,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "angle": 0.9500000000000002,
+          "enabled": true
+        }
+      ],
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "enabled": false,
+          "flashTime": 0
+        }
+      ],
+      "toast": "Cobalt GT · W/S throttle · A/D steer · Space handbrake · E exit",
+      "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint"
+    },
+    {
+      "label": "cabin-side",
+      "wallTime": "2026-09-09T12:52:05.511Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.6214540004730225,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 5.199999999999987,
+      "meshes": 2380,
+      "activeMeshes": 284,
+      "physicsBodies": 263,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 228,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.00000000000001,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": 1.4250000000000005,
+      "aim": false,
+      "headlights": true,
+      "doorAngles": [
+        {
+          "side": -1,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "angle": 0,
+          "enabled": true
+        }
+      ],
+      "mounted": "vehicle-1",
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "enabled": false,
+          "flashTime": 0
+        }
+      ],
+      "toast": "Cobalt GT · W/S throttle · A/D steer · Space handbrake · E exit",
+      "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint"
+    },
+    {
+      "label": "night-lights-on",
+      "wallTime": "2026-09-09T12:52:07.129Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.6214539408683777,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 6.816666666666648,
+      "meshes": 2380,
+      "activeMeshes": 284,
+      "physicsBodies": 263,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 2,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.99999999999997,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": 1.4250000000000005,
+      "aim": false,
+      "headlights": true,
+      "doorAngles": [
+        {
+          "side": -1,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "angle": 0,
+          "enabled": true
+        }
+      ],
+      "mounted": "vehicle-1",
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "enabled": false,
+          "flashTime": 0
+        }
+      ],
+      "toast": "Cobalt GT · W/S throttle · A/D steer · Space handbrake · E exit",
+      "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint"
+    },
+    {
+      "label": "night-lights-off",
+      "wallTime": "2026-09-09T12:52:07.612Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.6214540004730225,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 7.299999999999979,
+      "meshes": 2380,
+      "activeMeshes": 284,
+      "physicsBodies": 263,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 2,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.99999999999997,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": 1.4250000000000005,
+      "aim": false,
+      "headlights": false,
+      "doorAngles": [
+        {
+          "side": -1,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "angle": 0,
+          "enabled": true
+        }
+      ],
+      "mounted": "vehicle-1",
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "enabled": false,
+          "flashTime": 0
+        }
+      ],
+      "toast": "Headlights off.",
+      "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint"
+    },
+    {
+      "label": "exit-door",
+      "wallTime": "2026-09-09T12:52:08.274Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        1.44,
+        0.9399999403953552,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 7.966666666666644,
+      "meshes": 2378,
+      "activeMeshes": 286,
+      "physicsBodies": 261,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 226,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 4,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.99999999999999,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": 1.4250000000000005,
+      "aim": false,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "enabled": false,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "enabled": false,
+          "flashTime": 0
+        }
+      ],
+      "toast": "Headlights on.",
+      "prompt": "E  Enter Cobalt GT"
+    },
+    {
+      "label": "closed-gate",
+      "wallTime": "2026-09-09T12:52:13.509Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -449,
+        1.034025,
+        144
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 13.10000000000023,
+      "meshes": 2382,
+      "activeMeshes": 95,
+      "physicsBodies": 273,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 24,
+        "totalMeshes": 1221,
+        "residentMeshes": 1097,
+        "totalColliders": 249,
+        "residentColliders": 234,
+        "cpuGeometryBytes": 56699384,
+        "meshLoads": 1207,
+        "meshDisposals": 110,
+        "colliderLoads": 261,
+        "colliderDisposals": 27,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 46,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 234,
+        "fetchedBytes": 13650880,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 55,
+        "packagesEvicted": 9,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.85634477041039,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": -1.5725000000000011,
+      "aim": false,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.0427749999999998,
+            154.59250000000233
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -508.592499999994,
+            1.0427749999999998,
+            132
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.0427749999999998,
+            114.40750000000183
+          ],
+          "enabled": true,
+          "flashTime": 0
+        }
+      ],
+      "toast": "COASTAL RESERVE · authored training annex. Request visitor access at the east gate before entering.",
+      "prompt": "E  Request visitor access · Coastal Reserve gate"
+    },
+    {
+      "label": "closed-gate-contact",
+      "wallTime": "2026-09-09T12:52:15.560Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -455.47499060314857,
+        1.034025,
+        143.98739282438123
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 15.150000000000333,
+      "meshes": 2367,
+      "activeMeshes": 89,
+      "physicsBodies": 254,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 25,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 215,
+        "cpuGeometryBytes": 56744200,
+        "meshLoads": 1211,
+        "meshDisposals": 110,
+        "colliderLoads": 263,
+        "colliderDisposals": 48,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 47,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 235,
+        "fetchedBytes": 13659566,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 56,
+        "packagesEvicted": 9,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.88023952095801,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": -1.5725000000000011,
+      "aim": false,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.0427749999999998,
+            157.3600000000033
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -511.3599999999915,
+            1.0427749999999998,
+            132
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.0427749999999998,
+            111.6400000000026
+          ],
+          "enabled": true,
+          "flashTime": 0
+        }
+      ],
+      "toast": "COASTAL RESERVE · authored training annex. Request visitor access at the east gate before entering.",
+      "prompt": "E  Request visitor access · Coastal Reserve gate"
+    },
+    {
+      "label": "visitor-access",
+      "wallTime": "2026-09-09T12:52:17.311Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -455.47499060314857,
+        1.034025,
+        143.98739282438123
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 16.900000000000322,
+      "meshes": 2365,
+      "activeMeshes": 79,
+      "physicsBodies": 252,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 25,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 213,
+        "cpuGeometryBytes": 56744200,
+        "meshLoads": 1211,
+        "meshDisposals": 110,
+        "colliderLoads": 263,
+        "colliderDisposals": 50,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 47,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 235,
+        "fetchedBytes": 13659566,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 56,
+        "packagesEvicted": 9,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "authorized",
+        "inside": false,
+        "accessSeconds": 89,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.10819474767959,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": -1.5725000000000011,
+      "aim": false,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.0427749999999998,
+            159.72250000000415
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -513.7224999999937,
+            1.0427749999999998,
+            132
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.0427749999999998,
+            109.27750000000326
+          ],
+          "enabled": true,
+          "flashTime": 0
+        }
+      ],
+      "toast": "RESERVE: 90-second visitor pass granted. Keep weapons lowered; use the marked gate.",
+      "prompt": "E  Interact · Coastal Reserve · creative facility"
+    },
+    {
+      "label": "inside-guard",
+      "wallTime": "2026-09-09T12:52:19.575Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -463.6149787899639,
+        1.034025,
+        143.9735249312006
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 19.16666666666686,
+      "meshes": 2297,
+      "activeMeshes": 54,
+      "physicsBodies": 241,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 24,
+        "totalMeshes": 1221,
+        "residentMeshes": 1044,
+        "totalColliders": 249,
+        "residentColliders": 202,
+        "cpuGeometryBytes": 54101160,
+        "meshLoads": 1211,
+        "meshDisposals": 167,
+        "colliderLoads": 263,
+        "colliderDisposals": 61,
+        "pendingMeshes": 0,
+        "activeAnchors": 6,
+        "lastMeshOperations": 0,
+        "loadedPackages": 45,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 235,
+        "fetchedBytes": 13659566,
+        "residentMaterials": 159,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 56,
+        "packagesEvicted": 11,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "authorized",
+        "inside": true,
+        "accessSeconds": 87,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.00000000000005,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": -1.5725000000000011,
+      "aim": false,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.0427749999999998,
+            162.78250000000523
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -516.7824999999987,
+            1.0427749999999998,
+            132
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.0427749999999998,
+            106.21750000000411
+          ],
+          "enabled": true,
+          "flashTime": 0
+        }
+      ],
+      "toast": "RESERVE: 90-second visitor pass granted. Keep weapons lowered; use the marked gate.",
+      "prompt": ""
+    },
+    {
+      "label": "armed-warning",
+      "wallTime": "2026-09-09T12:52:20.341Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -463.6149787899639,
+        1.034025,
+        143.9735249312006
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 19.933333333333483,
+      "meshes": 2280,
+      "activeMeshes": 59,
+      "physicsBodies": 228,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 23,
+        "totalMeshes": 1221,
+        "residentMeshes": 1040,
+        "totalColliders": 249,
+        "residentColliders": 189,
+        "cpuGeometryBytes": 54056344,
+        "meshLoads": 1211,
+        "meshDisposals": 171,
+        "colliderLoads": 263,
+        "colliderDisposals": 74,
+        "pendingMeshes": 0,
+        "activeAnchors": 5,
+        "lastMeshOperations": 0,
+        "loadedPackages": 44,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 235,
+        "fetchedBytes": 13659566,
+        "residentMaterials": 159,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 56,
+        "packagesEvicted": 12,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "warning",
+        "inside": true,
+        "accessSeconds": 0,
+        "warningSeconds": 6,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.808612440902145,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": -0.8250000000000011,
+      "aim": true,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -476,
+            1.0427749999999998,
+            163.8175000000056
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -517.8175000000003,
+            1.0427749999999998,
+            132
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "search",
+          "health": 140,
+          "position": [
+            -491,
+            1.0427749999999998,
+            105.1825000000044
+          ],
+          "enabled": true,
+          "flashTime": 0
+        }
+      ],
+      "toast": "RESERVE: Restricted grounds. Lower weapons and leave through the east gate within 6 seconds.",
+      "prompt": ""
+    },
+    {
+      "label": "armed-alarm",
+      "wallTime": "2026-09-09T12:52:27.191Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -463.6149787899639,
+        1.034025,
+        143.9735249312006
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 26.783333333333093,
+      "meshes": 2278,
+      "activeMeshes": 61,
+      "physicsBodies": 262,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 24,
+        "totalMeshes": 1221,
+        "residentMeshes": 1015,
+        "totalColliders": 249,
+        "residentColliders": 212,
+        "cpuGeometryBytes": 52984808,
+        "meshLoads": 1287,
+        "meshDisposals": 272,
+        "colliderLoads": 305,
+        "colliderDisposals": 93,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 44,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 247,
+        "fetchedBytes": 14381594,
+        "residentMaterials": 158,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 60,
+        "packagesEvicted": 16,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "alarm",
+        "inside": true,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 3,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.22886970559942,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": -0.8250000000000011,
+      "aim": true,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -473.57863726788855,
+            1.0427749999999998,
+            165.9621660254592
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -524.2981247798824,
+            1.0427749999999998,
+            132.6366319128341
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -489.02236165408885,
+            1.0427749999999998,
+            99.30441624472444
+          ],
+          "enabled": true,
+          "flashTime": 0
+        }
+      ],
+      "toast": "RESERVE ALARM: Restricted-area warning ignored. Lower your weapon and stop, or leave the restricted area.",
+      "prompt": ""
+    },
+    {
+      "label": "guard-response",
+      "wallTime": "2026-09-09T12:52:33.243Z",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -463.6149787899639,
+        1.034025,
+        143.9735249312006
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": -463.6149787899639,
+          "z": 143.9735249312006
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 32.83333333333275,
+      "meshes": 2506,
+      "activeMeshes": 61,
+      "physicsBodies": 263,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 25,
+        "totalMeshes": 1221,
+        "residentMeshes": 1059,
+        "totalColliders": 249,
+        "residentColliders": 222,
+        "cpuGeometryBytes": 55749856,
+        "meshLoads": 1512,
+        "meshDisposals": 453,
+        "colliderLoads": 347,
+        "colliderDisposals": 125,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 44,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 281,
+        "fetchedBytes": 17564468,
+        "residentMaterials": 164,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 68,
+        "packagesEvicted": 24,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "alarm",
+        "inside": true,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 56.422794807205655,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "yaw": -0.8250000000000011,
+      "aim": true,
+      "guards": [
+        {
+          "id": "reserve-guard-1",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-2",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -467.71783883675516,
+            1.0427749999999998,
+            153.02806220069877
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-3",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -500.50969776243915,
+            1.0427749999999998,
+            137.08081238127218
+          ],
+          "enabled": true,
+          "flashTime": 0
+        },
+        {
+          "id": "reserve-guard-4",
+          "role": "military",
+          "state": "challenge",
+          "health": 140,
+          "position": [
+            -477.0576496613264,
+            1.0427749999999998,
+            120.3397595252679
+          ],
+          "enabled": true,
+          "flashTime": 0
+        }
+      ],
+      "toast": "Police are responding to the reported location.",
+      "prompt": ""
+    }
+  ],
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(s.guards.some(o=>o.state==='firing'))\n\n    at file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/facility-visual-audit.mjs:46:75"
+  ],
+  "network": []
+}

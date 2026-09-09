@@ -163,7 +163,20 @@ export function footRoute(
     const n = map.get(id)!;
     result.unshift({ x: n.x, z: n.z });
   }
-  return result;
+  // Replanning can select a nearby connector behind the moving actor because the
+  // next forward connector is outside the initial candidate budget. Pull the
+  // route taut through visible waypoints so each replan preserves forward progress.
+  const pulled: Point2[] = [];
+  let anchor = start;
+  for (let i = 0; i < result.length;) {
+    let farthest = i;
+    for (let j = result.length - 1; j > i; j--)
+      if (clear(anchor, result[j])) { farthest = j; break; }
+    pulled.push(result[farthest]);
+    anchor = result[farthest];
+    i = farthest + 1;
+  }
+  return pulled;
 }
 /** Directed road path prevents pursuit cars from greedily circling an intersection. */
 export function laneNext(startId: number, goal: Point2, roads: RoadNode[]) {

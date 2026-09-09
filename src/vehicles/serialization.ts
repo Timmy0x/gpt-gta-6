@@ -12,6 +12,7 @@ export interface VehicleDamageState {
   windowsEnabled: boolean[];
   lightsEnabled: boolean[];
   bumpersEnabled: boolean[];
+  doors?: { enabled: boolean; angle: number }[];
 }
 
 /** Flat pose fields intentionally retain compatibility with the original sandbox save format. */
@@ -33,6 +34,8 @@ export interface SerializableVehicle extends LegacyVehicleSnapshot {
   angularVelocity: VectorTuple;
   engineRunning: boolean;
   siren: boolean;
+  headlights?: boolean;
+  paint?: string;
   rotorSpeed: number;
   appearanceSeed: number;
   damage: VehicleDamageState;
@@ -51,6 +54,8 @@ export interface ValidatedVehicleSnapshot {
   angularVelocity: VectorTuple;
   engineRunning: boolean;
   siren: boolean;
+  headlights: boolean;
+  paint?: string;
   rotorSpeed: number;
   appearanceSeed?: number;
   damage?: VehicleDamageState;
@@ -122,6 +127,7 @@ export function validateVehicleSnapshot(
       health > 0 &&
       (typeof s.engineRunning === "boolean" ? s.engineRunning : true),
     siren: s.siren === true,
+    headlights: s.headlights !== false,
     rotorSpeed:
       s.rotorSpeed === undefined
         ? 0
@@ -138,6 +144,10 @@ export function validateVehicleSnapshot(
     if (seed < 0 || !Number.isInteger(seed))
       throw new TypeError("Invalid vehicle appearance seed");
     out.appearanceSeed = seed;
+  }
+  if (s.paint !== undefined) {
+    if (typeof s.paint !== "string" || !/^#[0-9a-f]{6}$/i.test(s.paint)) throw new TypeError("Invalid vehicle paint");
+    out.paint = s.paint.toUpperCase();
   }
   if (s.damage !== undefined) {
     if (!s.damage || typeof s.damage !== "object" || Array.isArray(s.damage))
@@ -187,6 +197,15 @@ export function validateVehicleSnapshot(
       lightsEnabled: flags(damage.lightsEnabled, "lights"),
       bumpersEnabled: flags(damage.bumpersEnabled, "bumpers"),
     };
+    if (damage.doors !== undefined) {
+      if (!Array.isArray(damage.doors) || damage.doors.length > 8) throw new TypeError("Invalid vehicle doors");
+      out.damage.doors = damage.doors.map(entry => {
+        if (!entry || typeof entry !== "object" || typeof entry.enabled !== "boolean") throw new TypeError("Invalid vehicle door");
+        const angle = finite(entry.angle, "door angle", 1.2);
+        if (angle < 0) throw new TypeError("Invalid vehicle door angle");
+        return { enabled: entry.enabled, angle };
+      });
+    }
   }
   return out;
 }

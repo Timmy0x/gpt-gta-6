@@ -2,6 +2,8 @@ import { chromium } from "@playwright/test";
 import fs from "node:fs/promises";
 import assert from "node:assert/strict";
 const backend = process.argv[2] || "webgpu";
+const auditUrl = process.env.AUDIT_URL || "http://127.0.0.1:4175/";
+const evidencePrefix = process.env.AUDIT_PREFIX || "combined";
 const browser = await chromium.launch({
   channel: "chrome",
   headless: true,
@@ -49,7 +51,7 @@ async function capture(name) {
     }),
   );
   await page.screenshot({
-    path: `docs/evidence/combined-${backend}-${name}.png`,
+    path: `docs/evidence/${evidencePrefix}-${backend}-${name}.png`,
   });
   return s;
 }
@@ -60,8 +62,11 @@ async function panel() {
 async function close() {
   await page.locator('[data-action="close"]').click();
 }
+async function travelReady() {
+  await page.waitForFunction(() => !window.__leonida.snapshot().streamingBusy);
+}
 try {
-  await page.goto(`http://127.0.0.1:4175/?backend=${backend}&test`, {
+  await page.goto(`${auditUrl.replace(/\/$/, "")}/?backend=${backend}&test`, {
     waitUntil: "networkidle",
   });
   await page.locator("#welcome:not(.hidden)").waitFor({ timeout: 120000 });
@@ -116,6 +121,7 @@ try {
   await capture("route");
   await page.keyboard.press("m");
   await page.locator('[data-action="teleport"][data-value="race"]').click();
+  await travelReady();
   await panel();
   await page.locator('[data-change="police"]').uncheck();
   await page.locator('[data-change="god"]').check();
@@ -173,6 +179,7 @@ try {
   assert.ok(saved.props.some((p) => p.kind === "fence"));
   await page.locator('[data-action="weapons"]').click();
   await page.locator('[data-action="load"]').click();
+  await travelReady();
   await close();
   await page.waitForTimeout(600);
   s = await capture("save-restored");
@@ -198,12 +205,12 @@ try {
   errors.push(e.stack || String(e));
   console.error(e);
   await page
-    .screenshot({ path: `docs/evidence/combined-${backend}-failure.png` })
+    .screenshot({ path: `docs/evidence/${evidencePrefix}-${backend}-failure.png` })
     .catch(() => {});
 }
 await fs.writeFile(
-  `docs/evidence/combined-${backend}.json`,
-  JSON.stringify({ errors, checks }, null, 2),
+  `docs/evidence/${evidencePrefix}-${backend}.json`,
+  JSON.stringify({ auditUrl, backend, errors, checks }, null, 2),
 );
 console.log("RESULT", JSON.stringify({ errors, checks: checks.length }));
 await Promise.race([browser.close(), new Promise((r) => setTimeout(r, 5000))]);

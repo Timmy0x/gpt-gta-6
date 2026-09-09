@@ -1,0 +1,1 @@
+[out:json][timeout:45];(way["highway"](25.77,-80.14,25.784,-80.127);way["building"](25.77,-80.14,25.784,-80.127);relation["building"]["type"="multipolygon"](25.77,-80.14,25.784,-80.127););out body;>;out skel qt;

@@ -12,6 +12,7 @@ import type { Input } from "../core/Input";
 import { angleDelta, clamp } from "../core/math";
 import { Character } from "./Character";
 import type { Vehicle } from "../vehicles/VehicleSystem";
+import { openVehicleDoor } from "../vehicles/VehicleEquipment";
 import { MovementQueries } from "./MovementQueries";
 export class Player {
   controller: PhysicsCharacterController;
@@ -116,6 +117,7 @@ export class Player {
       return false;
     }
     this.vehicle = v;
+    openVehicleDoor(v, Vector3.Dot(from.subtract(v.root.position), v.root.right) < 0 ? -1 : 1);
     v.occupied = true;
     this.mountStart.copyFrom(this.model.root.position);
     this.mountTime = 0;
@@ -128,16 +130,18 @@ export class Player {
   }
   private seatOffset() {
     const v = this.vehicle!;
-    if (v.kind === "motorcycle") return new Vector3(0, -0.17, -0.18);
+    if (v.kind === "motorcycle") return new Vector3(0, -0.7, -0.18);
     if (v.kind === "boat") return new Vector3(-0.42, -0.3, -0.28);
+    if (v.kind === "plane") return new Vector3(-v.tuning.width * 0.21, -0.78, -0.03);
+    if (v.kind === "helicopter") return new Vector3(-v.tuning.width * 0.21, -0.8, 0.55);
     return new Vector3(
       -v.tuning.width * 0.21,
       ["suv", "truck"].includes(v.kind)
         ? -0.7
         : ["coupe", "sedan", "police"].includes(v.kind)
-          ? -1.02
+          ? -0.92
           : -0.65,
-      v.kind === "helicopter" ? 0.55 : -0.03,
+      -0.03,
     );
   }
   private attachSeat() {
@@ -190,6 +194,7 @@ export class Player {
       return false;
     }
     p ??= v.root.position.add(new Vector3(v.tuning.width + 1, 1.5, 0));
+    if (!force) openVehicleDoor(v, Vector3.Dot(p.subtract(v.root.position), v.root.right) < 0 ? -1 : 1, 1.1);
     this.model.root.parent = null;
     this.model.root.rotationQuaternion = null;
     this.transitioning = false;
@@ -226,6 +231,7 @@ export class Player {
       this.model.pose(
         this.transitioning ? "mount" : "seated",
         this.mountTime / 0.65,
+        this.vehicle.kind === "motorcycle" ? "rider" : ["coupe", "sedan", "police", "boat"].includes(this.vehicle.kind) ? "low" : "upright",
       );
       if (this.mountTime >= 0.65 && this.transitioning) {
         this.transitioning = false;

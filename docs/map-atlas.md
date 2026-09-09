@@ -65,7 +65,11 @@ flowchart TD
 
 Miami/Miami Beach provide building proportion and street-character references. Florida Keys provide island settlement and bridge references; Everglades provides wetland habitat structure (GEO-EVER). Port Gellhorn should use selected Gulf-coast motel and commercial-strip references; Ambrosia should use south/central Florida sugar/agriculture references; Kalaga needs independently documented wooded ridge terrain, not a claim that Miami contains mountains. Specific Gulf, agricultural and mountain source selections remain **unresolved**.
 
-Google Maps/Street View is for permitted visual inspection only. No imagery, textures or 3D tiles have been imported. Record each eventual viewpoint, date if visible, address and observation; do not export proprietary imagery as game art. OSM road/footprint import and USGS terrain import remain **not started**. The current 72 m grid is authored, so it must not carry a false GIS-import label.
+Google Maps/Street View is for permitted visual inspection only. No imagery, textures or 3D tiles have been imported. Record each eventual viewpoint, date if visible, address and observation; do not export proprietary imagery as game art. A licensed OSM Miami Beach/Ocean Drive foundation has now been acquired and transformed into local metric data; USGS terrain import remains **not started**. The current runtime 72 m grid remains authored and must not carry a false GIS-import label.
+
+The foundation is retained under `data/gis/miami-beach`, including the untouched Overpass response, source/query/license, WGS84 and local ENU GeoJSON, and road topology preserving shared OSM node IDs. The importer reports 1,028 building features and 1,305 road/path ways, with no invalid building rings; the 4,636-node main network component and separate nine-node parking aisle are preserved. See [geodata.md](geodata.md) and `scripts/gis/`. These are **real-world fallback data**, not GTA VI geography. No runtime blocks or region coverage are completed by preparing the dataset.
+
+An original Coastal Reserve training annex is now playable at X −548…−456, Z 78…198, with an east gate and four guards. It is a small local creative addition, separate from the planned CF-MILITARY regional facility above. [Facility behavior](facility-design.md) and [independent browser evidence](verification-facility-checkpoint.md) distinguish tested access/collision/alarm behavior from open scenery and appearance defects.
 
 ## Coverage ledger
 

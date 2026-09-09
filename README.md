@@ -63,6 +63,8 @@ The tests in `tests/vehicles.test.ts` instantiate actual Havok physics, includin
 - [Independent gameplay audit](docs/verification-audit.md)
 - [Continuation checkpoint](docs/continuation.md)
 
-The five other Leonida regions remain planned. Major remaining work includes realistic licensed assets, complete character/door/passenger animations, advanced police tactics and military units, more activities, full regional persistence, network-loaded modular assets, full geography and the 30-minute performance/stability gate. GPU meshes and Havok colliders now unload/rebuild, while CPU geometry is retained. Short successful tests do not satisfy the full objective.
+The five other Leonida regions remain planned. Major remaining work includes realistic licensed assets, complete character/passenger animations, advanced police tactics and military units, more activities, full regional persistence and full geography and the 30-minute performance/stability gate. World packages now load over HTTP near the player; CPU geometry, GPU meshes, shared materials and Havok colliders unload when no longer needed. Vehicles have animated detachable doors, working headlights and garage paint/repair services. The detailed licensed concept-car asset and OSM reference data are prepared but are not yet runtime vehicle/geography replacements. Short successful tests do not satisfy the full objective.
 
 Rockstar material is used as reference. No extracted Rockstar game assets are included. Geographic dimensions and physics tuning are explicit project decisions where sources do not disclose them.
+
+The user authorized frequent commits and pushes on 2026-09-09. Tested checkpoints are pushed to `origin/main`; hosting and deployment remain unconfigured.

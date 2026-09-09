@@ -66,6 +66,7 @@ export class Character {
     name: string,
     color = "#d9c3a7",
     female = false,
+    trousers?: string,
   ) {
     this.scene = scene;
     this.baseHeight = female ? 0.98 : 1.015;
@@ -149,7 +150,7 @@ export class Character {
       boneIndices: number[] = [];
     const skin = Color3.FromHexString(female ? "#bf8d72" : "#bd9478");
     const shirt = Color3.FromHexString(color);
-    const denim = Color3.FromHexString(female ? "#3b5262" : "#485867");
+    const denim = Color3.FromHexString(trousers ?? (female ? "#3b5262" : "#485867"));
     const darkDenim = denim.scale(0.74);
     const hair = Color3.FromHexString(female ? "#352921" : "#493b30");
     const shoe = Color3.FromHexString("#353430");
@@ -807,18 +808,21 @@ export class Character {
   }
 
   /** Authored overlays on the same skin rig; call after locomotion animation. */
-  pose(kind: "seated" | "mount" | "climb" | "swim" | "hit", phase = 1): void {
+  pose(kind: "seated" | "mount" | "climb" | "swim" | "hit", phase = 1, seating: "low" | "upright" | "rider" = "upright"): void {
     const seated = kind === "seated" || kind === "mount";
     const amount = kind === "mount" ? Math.max(0, Math.min(1, phase)) : 1;
     if (seated) {
-      this.rotate("leftThigh", -1.42 * amount);
-      this.rotate("rightThigh", -1.42 * amount);
-      this.rotate("leftCalf", 1.48 * amount);
-      this.rotate("rightCalf", 1.48 * amount);
-      this.rotate("leftArm", -0.98 * amount);
-      this.rotate("rightArm", -0.98 * amount);
-      this.rotate("leftForearm", -0.45 * amount);
-      this.rotate("rightForearm", -0.45 * amount);
+      const rider = seating === "rider", thigh = rider ? -0.85 : -1.6, calf = rider ? 1.95 : seating === "low" ? 0.25 : 1.15;
+      this.rotate("leftThigh", thigh * amount, 0, rider ? -0.32 * amount : 0);
+      this.rotate("rightThigh", thigh * amount, 0, rider ? 0.32 * amount : 0);
+      this.rotate("leftCalf", calf * amount);
+      this.rotate("rightCalf", calf * amount);
+      this.rotate("leftFoot", -(thigh + calf) * amount);
+      this.rotate("rightFoot", -(thigh + calf) * amount);
+      this.rotate("leftArm", (rider ? -1.1 : -1.35) * amount);
+      this.rotate("rightArm", (rider ? -1.1 : -1.35) * amount);
+      this.rotate("leftForearm", (rider ? -0.3 : -0.1) * amount);
+      this.rotate("rightForearm", (rider ? -0.3 : -0.1) * amount);
       this.rotate("spine", 0.1 * amount);
     } else if (kind === "climb") {
       this.rotate("leftArm", -2.65);

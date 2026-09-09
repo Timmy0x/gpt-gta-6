@@ -1,0 +1,7 @@
+# Car Concept — modified local asset
+
+Model and textures by **Eric Chadwick**, © 2024 **Darmstadt Graphics Group GmbH**, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Original asset](https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/44b6f9bdb08a5b16e92b91857ec3c87de9401dfa/Models/CarConcept/glTF-Binary/CarConcept.glb).
+
+Modified for Leonida: Khronos and 3DCommerce logo texture references and image payloads removed; generic tire sidewalls and blank license plate; logo emissive contributions removed. Door, wheel, cabin and body geometry/hierarchy retained. No endorsement by the original creators or Khronos is implied. Original licensing notices and exact source/output hashes are retained beside this file.
+
+Reproduce: `node scripts/assets/prepare-car-concept.mjs`. Optionally pass `--source /path/to/original.glb`; the source SHA-256 is always checked.

@@ -1,0 +1,7843 @@
+{
+  "version": 1,
+  "build": "authored-860409-v3",
+  "seed": 860409,
+  "format": "babylon-json+gzip",
+  "chunks": [
+    {
+      "id": "-1_-1_detail",
+      "url": "chunks/-1_-1_detail.babylon.gz",
+      "bounds": {
+        "minX": -215.8650073260069,
+        "maxX": -72.13500030338764,
+        "minZ": -215.8650073260069,
+        "maxZ": -72.13500030338764
+      },
+      "detail": "detail",
+      "meshes": 46,
+      "vertices": 109814,
+      "cpuBytes": 3928288,
+      "compressedBytes": 816388,
+      "materials": [
+        "material-000",
+        "material-001",
+        "material-002",
+        "material-007",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-074",
+        "material-073",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-075",
+        "material-081",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-082",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-091",
+        "material-059",
+        "material-092",
+        "material-093",
+        "material-094",
+        "material-095",
+        "material-102",
+        "material-098",
+        "material-103",
+        "material-104",
+        "material-105",
+        "material-101"
+      ],
+      "sha256": "d893ea86909a647c098785f1a8dde61d72d60321aa333f436b5ea82f2d575765"
+    },
+    {
+      "id": "-1_0_detail",
+      "url": "chunks/-1_0_detail.babylon.gz",
+      "bounds": {
+        "minX": -215.8650073260069,
+        "maxX": -72.13500030338764,
+        "minZ": -71.86499969661236,
+        "maxZ": 71.86499969661236
+      },
+      "detail": "detail",
+      "meshes": 53,
+      "vertices": 117476,
+      "cpuBytes": 4199968,
+      "compressedBytes": 877821,
+      "materials": [
+        "material-003",
+        "material-004",
+        "material-008",
+        "material-009",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-074",
+        "material-073",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-095",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-098",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-099",
+        "material-059",
+        "material-092",
+        "material-093",
+        "material-094",
+        "material-081",
+        "material-082",
+        "material-107",
+        "material-109",
+        "material-110",
+        "material-111",
+        "material-112",
+        "material-113",
+        "material-101",
+        "material-091",
+        "material-114",
+        "material-103",
+        "material-104",
+        "material-105"
+      ],
+      "sha256": "8a43d8a60c6e4023ef4c76bea3ad690915bf43bd2b76a45f94cc4373213107d2"
+    },
+    {
+      "id": "-1_1_detail",
+      "url": "chunks/-1_1_detail.babylon.gz",
+      "bounds": {
+        "minX": -215.8650073260069,
+        "maxX": -72.13500030338764,
+        "minZ": 72.13500030338764,
+        "maxZ": 215.8650073260069
+      },
+      "detail": "detail",
+      "meshes": 46,
+      "vertices": 156180,
+      "cpuBytes": 5556648,
+      "compressedBytes": 1046069,
+      "materials": [
+        "material-005",
+        "material-006",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-095",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-096",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-100",
+        "material-059",
+        "material-092",
+        "material-093",
+        "material-094",
+        "material-101",
+        "material-098",
+        "material-099",
+        "material-091",
+        "material-102",
+        "material-082",
+        "material-103",
+        "material-104",
+        "material-105"
+      ],
+      "sha256": "0291bb94dabf474893721801fc75fc65c724f85fcef1acc93650d2269186a263"
+    },
+    {
+      "id": "0_0_detail",
+      "url": "chunks/0_0_detail.babylon.gz",
+      "bounds": {
+        "minX": -71.86499969661236,
+        "maxX": 71.86499969661236,
+        "minZ": -71.86499969661236,
+        "maxZ": 71.86499969661236
+      },
+      "detail": "detail",
+      "meshes": 51,
+      "vertices": 96350,
+      "cpuBytes": 3474880,
+      "compressedBytes": 815134,
+      "materials": [
+        "material-010",
+        "material-011",
+        "material-012",
+        "material-014",
+        "material-015",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-118",
+        "material-120",
+        "material-119",
+        "material-121",
+        "material-094",
+        "material-093",
+        "material-100",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-091",
+        "material-115",
+        "material-103",
+        "material-104",
+        "material-105",
+        "material-081",
+        "material-096",
+        "material-059",
+        "material-092",
+        "material-068",
+        "material-122"
+      ],
+      "sha256": "f0988f9bd7d5ddb0bf8e758a87e0a100db5efc72d0450e51fa2403834d9d227e"
+    },
+    {
+      "id": "0_1_detail",
+      "url": "chunks/0_1_detail.babylon.gz",
+      "bounds": {
+        "minX": -71.86499969661236,
+        "maxX": 71.86499969661236,
+        "minZ": 72.13500030338764,
+        "maxZ": 215.8650073260069
+      },
+      "detail": "detail",
+      "meshes": 46,
+      "vertices": 131518,
+      "cpuBytes": 4697120,
+      "compressedBytes": 949507,
+      "materials": [
+        "material-013",
+        "material-016",
+        "material-017",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-075",
+        "material-099",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-100",
+        "material-116",
+        "material-103",
+        "material-104",
+        "material-105",
+        "material-093",
+        "material-094",
+        "material-091",
+        "material-081",
+        "material-059",
+        "material-092",
+        "material-114",
+        "material-102",
+        "material-115"
+      ],
+      "sha256": "238659a2dbb13ede1d866f2986f41bf43c9eb12109ac85b2e8faf6e6a374e72a"
+    },
+    {
+      "id": "1_-1_detail",
+      "url": "chunks/1_-1_detail.babylon.gz",
+      "bounds": {
+        "minX": 72.13500030338764,
+        "maxX": 215.125,
+        "minZ": -219.09193420410156,
+        "maxZ": -70.6858128204965
+      },
+      "detail": "detail",
+      "meshes": 47,
+      "vertices": 76873,
+      "cpuBytes": 2768264,
+      "compressedBytes": 676759,
+      "materials": [
+        "material-018",
+        "material-019",
+        "material-020",
+        "material-021",
+        "material-051",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-091",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-114",
+        "material-103",
+        "material-104",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-123",
+        "material-122",
+        "material-081",
+        "material-082",
+        "material-159",
+        "material-160",
+        "material-153",
+        "material-152",
+        "material-161",
+        "material-165"
+      ],
+      "sha256": "578f2bbd305d97687d1f67ca4e66c70ff33696433a0c81698e0d3697dfcf817b"
+    },
+    {
+      "id": "1_0_detail",
+      "url": "chunks/1_0_detail.babylon.gz",
+      "bounds": {
+        "minX": 72.13500030338764,
+        "maxX": 196,
+        "minZ": -74.82450866699219,
+        "maxZ": 71.86499969661236
+      },
+      "detail": "detail",
+      "meshes": 45,
+      "vertices": 98111,
+      "cpuBytes": 3511912,
+      "compressedBytes": 792002,
+      "materials": [
+        "material-022",
+        "material-023",
+        "material-024",
+        "material-025",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-102",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-115",
+        "material-103",
+        "material-104",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-123",
+        "material-122",
+        "material-081",
+        "material-082",
+        "material-159",
+        "material-160",
+        "material-152",
+        "material-153",
+        "material-162"
+      ],
+      "sha256": "395b9a11b06f24b1d4fba4fb907be533e25aa5dddb1c0975932e50d597fdd15d"
+    },
+    {
+      "id": "1_1_detail",
+      "url": "chunks/1_1_detail.babylon.gz",
+      "bounds": {
+        "minX": 72.13500030338764,
+        "maxX": 196.34999990463257,
+        "minZ": 70.15548706054688,
+        "maxZ": 216.89999997615814
+      },
+      "detail": "detail",
+      "meshes": 48,
+      "vertices": 72659,
+      "cpuBytes": 2620720,
+      "compressedBytes": 653962,
+      "materials": [
+        "material-026",
+        "material-027",
+        "material-028",
+        "material-029",
+        "material-052",
+        "material-053",
+        "material-054",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-099",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-114",
+        "material-103",
+        "material-104",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-123",
+        "material-122",
+        "material-081",
+        "material-159",
+        "material-160",
+        "material-152",
+        "material-153",
+        "material-161",
+        "material-163"
+      ],
+      "sha256": "33f0be71337495ce0bf109bbf6c9dba443bc0dfd8cc28ce331bd7cb234a695ba"
+    },
+    {
+      "id": "-3_-2_detail",
+      "url": "chunks/-3_-2_detail.babylon.gz",
+      "bounds": {
+        "minX": -443.3100122064352,
+        "maxX": -360.1349926739931,
+        "minZ": -309.15000009536743,
+        "maxZ": -216.1349926739931
+      },
+      "detail": "detail",
+      "meshes": 20,
+      "vertices": 7214,
+      "cpuBytes": 260536,
+      "compressedBytes": 54972,
+      "materials": [
+        "material-030",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-125",
+        "material-124",
+        "material-126",
+        "material-060",
+        "material-093",
+        "material-094"
+      ],
+      "sha256": "ceea2c7c73cc1c3adc3a46a889a1dedd135edf9ffe993576c8a79b305ed9b20c"
+    },
+    {
+      "id": "-3_1_detail",
+      "url": "chunks/-3_1_detail.babylon.gz",
+      "bounds": {
+        "minX": -548,
+        "maxX": -360.1349926739931,
+        "minZ": 72.13500030338764,
+        "maxZ": 215.8650073260069
+      },
+      "detail": "detail",
+      "meshes": 45,
+      "vertices": 44238,
+      "cpuBytes": 1632456,
+      "compressedBytes": 434425,
+      "materials": [
+        "material-031",
+        "material-048",
+        "material-049",
+        "material-050",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-074",
+        "material-073",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-075",
+        "material-130",
+        "material-131",
+        "material-086",
+        "material-132",
+        "material-133",
+        "material-134",
+        "material-059",
+        "material-068",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-129",
+        "material-136",
+        "material-138",
+        "material-140",
+        "material-083",
+        "material-122",
+        "material-155",
+        "material-158"
+      ],
+      "sha256": "6102046222f986e59db5672a29e029b818f6b1d16cdac92de5f87d1af442b370"
+    },
+    {
+      "id": "-2_-2_detail",
+      "url": "chunks/-2_-2_detail.babylon.gz",
+      "bounds": {
+        "minX": -359.8650073260069,
+        "maxX": -216.1349926739931,
+        "minZ": -309.15000009536743,
+        "maxZ": -216.1349926739931
+      },
+      "detail": "detail",
+      "meshes": 28,
+      "vertices": 16870,
+      "cpuBytes": 616136,
+      "compressedBytes": 177902,
+      "materials": [
+        "material-032",
+        "material-037",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-074",
+        "material-075",
+        "material-073",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-125",
+        "material-124",
+        "material-126",
+        "material-060",
+        "material-093",
+        "material-094"
+      ],
+      "sha256": "20650b72c6e76b9bdbdf3068779785ded42049db6d2bbb8fdb85be39a933b292"
+    },
+    {
+      "id": "-2_-1_detail",
+      "url": "chunks/-2_-1_detail.babylon.gz",
+      "bounds": {
+        "minX": -359.8650073260069,
+        "maxX": -216.1349926739931,
+        "minZ": -215.8650073260069,
+        "maxZ": -72.13500030338764
+      },
+      "detail": "detail",
+      "meshes": 41,
+      "vertices": 86966,
+      "cpuBytes": 3184096,
+      "compressedBytes": 722975,
+      "materials": [
+        "material-033",
+        "material-034",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-074",
+        "material-073",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-130",
+        "material-131",
+        "material-086",
+        "material-132",
+        "material-133",
+        "material-134",
+        "material-059",
+        "material-068",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-129",
+        "material-136",
+        "material-138",
+        "material-140",
+        "material-142",
+        "material-060"
+      ],
+      "sha256": "3120c05d8e6bca221f94833c633cc8a4d9d6359e68135b1b21b71f58f29356bd"
+    },
+    {
+      "id": "-2_0_detail",
+      "url": "chunks/-2_0_detail.babylon.gz",
+      "bounds": {
+        "minX": -359.8650073260069,
+        "maxX": -216.1349926739931,
+        "minZ": -71.86499969661236,
+        "maxZ": 71.86499969661236
+      },
+      "detail": "detail",
+      "meshes": 57,
+      "vertices": 99616,
+      "cpuBytes": 3710120,
+      "compressedBytes": 859932,
+      "materials": [
+        "material-035",
+        "material-036",
+        "material-038",
+        "material-039",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-130",
+        "material-131",
+        "material-086",
+        "material-132",
+        "material-133",
+        "material-134",
+        "material-059",
+        "material-068",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-129",
+        "material-136",
+        "material-138",
+        "material-140",
+        "material-081",
+        "material-085",
+        "material-083",
+        "material-087",
+        "material-115",
+        "material-144",
+        "material-145",
+        "material-146",
+        "material-147",
+        "material-148",
+        "material-149",
+        "material-150",
+        "material-151",
+        "material-152",
+        "material-099",
+        "material-116",
+        "material-153"
+      ],
+      "sha256": "d830e14b634db7afc9661d42cbf9b70018dd6f94570d145f874e303e90dbac65"
+    },
+    {
+      "id": "-2_1_detail",
+      "url": "chunks/-2_1_detail.babylon.gz",
+      "bounds": {
+        "minX": -359.8650073260069,
+        "maxX": -216.1349926739931,
+        "minZ": 72.13500030338764,
+        "maxZ": 215.8650073260069
+      },
+      "detail": "detail",
+      "meshes": 44,
+      "vertices": 93436,
+      "cpuBytes": 3407840,
+      "compressedBytes": 743575,
+      "materials": [
+        "material-040",
+        "material-041",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-130",
+        "material-131",
+        "material-086",
+        "material-132",
+        "material-133",
+        "material-134",
+        "material-059",
+        "material-068",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-129",
+        "material-136",
+        "material-138",
+        "material-140",
+        "material-099",
+        "material-085",
+        "material-083",
+        "material-087",
+        "material-115",
+        "material-153"
+      ],
+      "sha256": "6564afeb4969326defc8119bff4b9151477050ba99756203d4cf0af443449a19"
+    },
+    {
+      "id": "-1_-2_detail",
+      "url": "chunks/-1_-2_detail.babylon.gz",
+      "bounds": {
+        "minX": -215.8650073260069,
+        "maxX": -72.13500030338764,
+        "minZ": -309.15000009536743,
+        "maxZ": -216.1349926739931
+      },
+      "detail": "detail",
+      "meshes": 28,
+      "vertices": 17052,
+      "cpuBytes": 622440,
+      "compressedBytes": 178729,
+      "materials": [
+        "material-042",
+        "material-043",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-125",
+        "material-124",
+        "material-126",
+        "material-060",
+        "material-093",
+        "material-094"
+      ],
+      "sha256": "6946158866915e2e5b0e5a95d9d639f2b28ed5d6e0be927884a4d438038831b2"
+    },
+    {
+      "id": "0_-2_detail",
+      "url": "chunks/0_-2_detail.babylon.gz",
+      "bounds": {
+        "minX": -71.86499969661236,
+        "maxX": 71.86499969661236,
+        "minZ": -309.15000009536743,
+        "maxZ": -216.1349926739931
+      },
+      "detail": "detail",
+      "meshes": 28,
+      "vertices": 16836,
+      "cpuBytes": 614880,
+      "compressedBytes": 178848,
+      "materials": [
+        "material-044",
+        "material-045",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-125",
+        "material-124",
+        "material-126",
+        "material-060",
+        "material-093",
+        "material-094"
+      ],
+      "sha256": "bd09a00a8d9e0d61f28e7d5aaf846eb7a2650b4065e3224cfbaa3265c67fcfb2"
+    },
+    {
+      "id": "1_-2_detail",
+      "url": "chunks/1_-2_detail.babylon.gz",
+      "bounds": {
+        "minX": 72.13500030338764,
+        "maxX": 215.125,
+        "minZ": -309.15000009536743,
+        "maxZ": -214.73886640666595
+      },
+      "detail": "detail",
+      "meshes": 36,
+      "vertices": 28393,
+      "cpuBytes": 1020272,
+      "compressedBytes": 246827,
+      "materials": [
+        "material-046",
+        "material-047",
+        "material-055",
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-075",
+        "material-101",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-116",
+        "material-103",
+        "material-104",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-165"
+      ],
+      "sha256": "020985b04065f9f4ac652939346b6661ae016c659adb67f0fb76a2b564465f0c"
+    },
+    {
+      "id": "global",
+      "url": "chunks/global.babylon.gz",
+      "bounds": {
+        "minX": -570,
+        "maxX": 4410,
+        "minZ": -2600,
+        "maxZ": 2600
+      },
+      "detail": "global",
+      "meshes": 24,
+      "vertices": 2488,
+      "cpuBytes": 92744,
+      "compressedBytes": 23336,
+      "materials": [
+        "material-056",
+        "material-057",
+        "material-058",
+        "material-059",
+        "material-060",
+        "material-068",
+        "material-122",
+        "material-169",
+        "material-170"
+      ],
+      "sha256": "031838dc4daaf23b27e168e42407c3b7ed54aab672d91833f34f97d206c23470"
+    },
+    {
+      "id": "-3_-1_detail",
+      "url": "chunks/-3_-1_detail.babylon.gz",
+      "bounds": {
+        "minX": -443.3100122064352,
+        "maxX": -360.1349926739931,
+        "minZ": -215.8650073260069,
+        "maxZ": -72.13500030338764
+      },
+      "detail": "detail",
+      "meshes": 36,
+      "vertices": 50276,
+      "cpuBytes": 1833160,
+      "compressedBytes": 368474,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-075",
+        "material-130",
+        "material-131",
+        "material-086",
+        "material-132",
+        "material-133",
+        "material-134",
+        "material-059",
+        "material-068",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-129",
+        "material-136",
+        "material-138",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-140"
+      ],
+      "sha256": "ba7a7ba3c8b45451d83e10c9d8ade43e5eb14099a54c8567d379c5fb83442826"
+    },
+    {
+      "id": "-3_0_detail",
+      "url": "chunks/-3_0_detail.babylon.gz",
+      "bounds": {
+        "minX": -443.3100122064352,
+        "maxX": -360.1349926739931,
+        "minZ": -71.86499969661236,
+        "maxZ": 71.86499969661236
+      },
+      "detail": "detail",
+      "meshes": 36,
+      "vertices": 54720,
+      "cpuBytes": 2004912,
+      "compressedBytes": 458322,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-073",
+        "material-130",
+        "material-131",
+        "material-086",
+        "material-132",
+        "material-133",
+        "material-134",
+        "material-059",
+        "material-068",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-129",
+        "material-136",
+        "material-138",
+        "material-140"
+      ],
+      "sha256": "63fa80f4fb64a5004fdbf7bfebc56cf99749534b6501deb583199ac0b34138d4"
+    },
+    {
+      "id": "-3_2_detail",
+      "url": "chunks/-3_2_detail.babylon.gz",
+      "bounds": {
+        "minX": -442.3250061273575,
+        "maxX": -360.1349926739931,
+        "minZ": 216.1349926739931,
+        "maxZ": 239.15000009536743
+      },
+      "detail": "detail",
+      "meshes": 4,
+      "vertices": 892,
+      "cpuBytes": 31376,
+      "compressedBytes": 6578,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067"
+      ],
+      "sha256": "914fa525af02b934432aea904d79d8e1b0b9ea45ed3d4659179a02316abd3072"
+    },
+    {
+      "id": "-2_2_detail",
+      "url": "chunks/-2_2_detail.babylon.gz",
+      "bounds": {
+        "minX": -359.8650073260069,
+        "maxX": -216.1349926739931,
+        "minZ": 216.1349926739931,
+        "maxZ": 239.15000009536743
+      },
+      "detail": "detail",
+      "meshes": 4,
+      "vertices": 1276,
+      "cpuBytes": 44816,
+      "compressedBytes": 8738,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067"
+      ],
+      "sha256": "701827256c3e1d447f823001cb1a8883a582ac4b0f1fa0b701daa78bce11278b"
+    },
+    {
+      "id": "-1_2_detail",
+      "url": "chunks/-1_2_detail.babylon.gz",
+      "bounds": {
+        "minX": -215.8650073260069,
+        "maxX": -72.13500030338764,
+        "minZ": 216.1349926739931,
+        "maxZ": 239.15000009536743
+      },
+      "detail": "detail",
+      "meshes": 4,
+      "vertices": 1276,
+      "cpuBytes": 44816,
+      "compressedBytes": 8764,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067"
+      ],
+      "sha256": "fc1009bb4f7bf176d0819efd003e29cd836ba1271d95d683227352979df789bf"
+    },
+    {
+      "id": "0_-1_detail",
+      "url": "chunks/0_-1_detail.babylon.gz",
+      "bounds": {
+        "minX": -71.86499969661236,
+        "maxX": 71.86499969661236,
+        "minZ": -215.8650073260069,
+        "maxZ": -72.13500030338764
+      },
+      "detail": "detail",
+      "meshes": 41,
+      "vertices": 164158,
+      "cpuBytes": 5828072,
+      "compressedBytes": 1062061,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-064",
+        "material-065",
+        "material-066",
+        "material-069",
+        "material-070",
+        "material-071",
+        "material-072",
+        "material-074",
+        "material-075",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-073",
+        "material-100",
+        "material-085",
+        "material-083",
+        "material-086",
+        "material-087",
+        "material-088",
+        "material-089",
+        "material-090",
+        "material-091",
+        "material-114",
+        "material-103",
+        "material-104",
+        "material-105",
+        "material-093",
+        "material-094",
+        "material-101",
+        "material-082",
+        "material-102",
+        "material-116",
+        "material-095"
+      ],
+      "sha256": "1a1cabeea655d583ae7ed5fb1bea6bd56f916cf4b23c3afa01bd53e7896c1165"
+    },
+    {
+      "id": "0_2_detail",
+      "url": "chunks/0_2_detail.babylon.gz",
+      "bounds": {
+        "minX": -71.86499969661236,
+        "maxX": 71.86499969661236,
+        "minZ": 216.1349926739931,
+        "maxZ": 239.15000009536743
+      },
+      "detail": "detail",
+      "meshes": 4,
+      "vertices": 1276,
+      "cpuBytes": 44816,
+      "compressedBytes": 8686,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067"
+      ],
+      "sha256": "d505a715c23eb5915fbf7d87d45868478460cf018e5cd3798d955d5cef6faa25"
+    },
+    {
+      "id": "1_2_detail",
+      "url": "chunks/1_2_detail.babylon.gz",
+      "bounds": {
+        "minX": 72.13500030338764,
+        "maxX": 195.6900061070919,
+        "minZ": 213.827392578125,
+        "maxZ": 239.15000009536743
+      },
+      "detail": "detail",
+      "meshes": 15,
+      "vertices": 2566,
+      "cpuBytes": 94520,
+      "compressedBytes": 38031,
+      "materials": [
+        "material-061",
+        "material-062",
+        "material-063",
+        "material-067",
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080",
+        "material-071",
+        "material-072",
+        "material-073",
+        "material-074",
+        "material-083"
+      ],
+      "sha256": "8804db6e6e922dc813a26a0b8bc1f5d7746c53036d43e45b61fb9f295903ee73"
+    },
+    {
+      "id": "-3_-2_structure",
+      "url": "chunks/-3_-2_structure.babylon.gz",
+      "bounds": {
+        "minX": -425,
+        "maxX": -367,
+        "minZ": -281,
+        "maxZ": -223
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 72,
+      "cpuBytes": 2520,
+      "compressedBytes": 1221,
+      "materials": [
+        "material-068",
+        "material-124",
+        "material-125"
+      ],
+      "sha256": "bcc0907ab2b64224264f300fcfe9adf2d8f0f0ed35528ce233c2979b80bca938"
+    },
+    {
+      "id": "-3_-1_structure",
+      "url": "chunks/-3_-1_structure.babylon.gz",
+      "bounds": {
+        "minX": -425,
+        "maxX": -367,
+        "minZ": -209,
+        "maxZ": -79
+      },
+      "detail": "structure",
+      "meshes": 7,
+      "vertices": 576,
+      "cpuBytes": 20208,
+      "compressedBytes": 4112,
+      "materials": [
+        "material-068",
+        "material-127",
+        "material-128",
+        "material-129",
+        "material-135",
+        "material-137",
+        "material-139"
+      ],
+      "sha256": "a3dfe59f447f3062a2fb4b696a5ac086573372e08a491b3e72fc5445ebc00dbd"
+    },
+    {
+      "id": "-3_0_structure",
+      "url": "chunks/-3_0_structure.babylon.gz",
+      "bounds": {
+        "minX": -425,
+        "maxX": -367,
+        "minZ": -65,
+        "maxZ": 65
+      },
+      "detail": "structure",
+      "meshes": 7,
+      "vertices": 576,
+      "cpuBytes": 20208,
+      "compressedBytes": 4086,
+      "materials": [
+        "material-068",
+        "material-127",
+        "material-128",
+        "material-129",
+        "material-135",
+        "material-137",
+        "material-139"
+      ],
+      "sha256": "ed5535a553d214fe91d7fc1dc2ac1a04a23e48a4848b14489a7bc88e3054f6d1"
+    },
+    {
+      "id": "-3_1_structure",
+      "url": "chunks/-3_1_structure.babylon.gz",
+      "bounds": {
+        "minX": -548,
+        "maxX": -367,
+        "minZ": 78,
+        "maxZ": 209
+      },
+      "detail": "structure",
+      "meshes": 13,
+      "vertices": 646,
+      "cpuBytes": 23096,
+      "compressedBytes": 6081,
+      "materials": [
+        "material-068",
+        "material-127",
+        "material-128",
+        "material-129",
+        "material-135",
+        "material-137",
+        "material-139",
+        "material-059",
+        "material-154",
+        "material-060",
+        "material-156",
+        "material-155",
+        "material-157"
+      ],
+      "sha256": "3307277832c88ffb0672f4a9ef3e8bdb3386a6243166278ff517c9eaed6689c6"
+    },
+    {
+      "id": "-2_-2_structure",
+      "url": "chunks/-2_-2_structure.babylon.gz",
+      "bounds": {
+        "minX": -353,
+        "maxX": -223,
+        "minZ": -281,
+        "maxZ": -223
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 144,
+      "cpuBytes": 5040,
+      "compressedBytes": 1469,
+      "materials": [
+        "material-068",
+        "material-124",
+        "material-125"
+      ],
+      "sha256": "c1d74a8edd530c0e5f3398bac3dea0604b1992abbd885a344f3f83e63902ffb6"
+    },
+    {
+      "id": "-2_-1_structure",
+      "url": "chunks/-2_-1_structure.babylon.gz",
+      "bounds": {
+        "minX": -353,
+        "maxX": -223,
+        "minZ": -209,
+        "maxZ": -79
+      },
+      "detail": "structure",
+      "meshes": 9,
+      "vertices": 936,
+      "cpuBytes": 32832,
+      "compressedBytes": 5835,
+      "materials": [
+        "material-068",
+        "material-127",
+        "material-128",
+        "material-129",
+        "material-135",
+        "material-137",
+        "material-139",
+        "material-141",
+        "material-142"
+      ],
+      "sha256": "ecb2b87ce711c135f6f97d0049201d45a70d10a6fad223e6bb571451647b69a3"
+    },
+    {
+      "id": "-2_0_structure",
+      "url": "chunks/-2_0_structure.babylon.gz",
+      "bounds": {
+        "minX": -353,
+        "maxX": -223,
+        "minZ": -65,
+        "maxZ": 65
+      },
+      "detail": "structure",
+      "meshes": 17,
+      "vertices": 1056,
+      "cpuBytes": 37008,
+      "compressedBytes": 6566,
+      "materials": [
+        "material-068",
+        "material-127",
+        "material-128",
+        "material-129",
+        "material-135",
+        "material-137",
+        "material-139",
+        "material-143",
+        "material-081",
+        "material-115",
+        "material-083",
+        "material-084",
+        "material-144",
+        "material-099",
+        "material-116"
+      ],
+      "sha256": "d04207140fde1f6b6bde122128554386bdf2160a26221ec1d2b08d2a7ebf2702"
+    },
+    {
+      "id": "-2_1_structure",
+      "url": "chunks/-2_1_structure.babylon.gz",
+      "bounds": {
+        "minX": -353,
+        "maxX": -223,
+        "minZ": 79,
+        "maxZ": 209
+      },
+      "detail": "structure",
+      "meshes": 12,
+      "vertices": 1080,
+      "cpuBytes": 37872,
+      "compressedBytes": 6654,
+      "materials": [
+        "material-068",
+        "material-127",
+        "material-128",
+        "material-129",
+        "material-135",
+        "material-137",
+        "material-139",
+        "material-099",
+        "material-115",
+        "material-083",
+        "material-084"
+      ],
+      "sha256": "a15a2dd716017b947e96b5c9fa08fc0b5988e9175a0dd2792164571fdd0a55f7"
+    },
+    {
+      "id": "-1_-2_structure",
+      "url": "chunks/-1_-2_structure.babylon.gz",
+      "bounds": {
+        "minX": -209,
+        "maxX": -79,
+        "minZ": -281,
+        "maxZ": -223
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 144,
+      "cpuBytes": 5040,
+      "compressedBytes": 1469,
+      "materials": [
+        "material-068",
+        "material-124",
+        "material-125"
+      ],
+      "sha256": "1efa513fd622fe3b714bbb7910e818a9e350ae7826949f2ddd1b93ce20afe2ca"
+    },
+    {
+      "id": "-1_-1_structure",
+      "url": "chunks/-1_-1_structure.babylon.gz",
+      "bounds": {
+        "minX": -209,
+        "maxX": -79,
+        "minZ": -209,
+        "maxZ": -79
+      },
+      "detail": "structure",
+      "meshes": 18,
+      "vertices": 1536,
+      "cpuBytes": 53760,
+      "compressedBytes": 8072,
+      "materials": [
+        "material-068",
+        "material-081",
+        "material-082",
+        "material-083",
+        "material-084",
+        "material-091",
+        "material-095",
+        "material-096",
+        "material-097",
+        "material-102",
+        "material-098",
+        "material-101"
+      ],
+      "sha256": "a86dc42a36816f71e70148e4c13dc9df8b699089897299d992cc96f2100e6608"
+    },
+    {
+      "id": "-1_0_structure",
+      "url": "chunks/-1_0_structure.babylon.gz",
+      "bounds": {
+        "minX": -209,
+        "maxX": -79,
+        "minZ": -65,
+        "maxZ": 65
+      },
+      "detail": "structure",
+      "meshes": 23,
+      "vertices": 1512,
+      "cpuBytes": 52920,
+      "compressedBytes": 8128,
+      "materials": [
+        "material-068",
+        "material-095",
+        "material-098",
+        "material-083",
+        "material-084",
+        "material-099",
+        "material-082",
+        "material-081",
+        "material-096",
+        "material-106",
+        "material-107",
+        "material-108",
+        "material-101",
+        "material-091",
+        "material-114"
+      ],
+      "sha256": "495d05a986c79006fee1f7a9e6b9c5118c8e0d49835f2de852df4e7e1b86d51f"
+    },
+    {
+      "id": "-1_1_structure",
+      "url": "chunks/-1_1_structure.babylon.gz",
+      "bounds": {
+        "minX": -209,
+        "maxX": -79,
+        "minZ": 79,
+        "maxZ": 209
+      },
+      "detail": "structure",
+      "meshes": 20,
+      "vertices": 1776,
+      "cpuBytes": 62160,
+      "compressedBytes": 9196,
+      "materials": [
+        "material-068",
+        "material-095",
+        "material-096",
+        "material-083",
+        "material-084",
+        "material-100",
+        "material-098",
+        "material-101",
+        "material-099",
+        "material-091",
+        "material-102",
+        "material-082",
+        "material-115"
+      ],
+      "sha256": "12247cad3b08f709bdec9e374eafb6e87777f9e909fbc5d1b49c65ce18c1292c"
+    },
+    {
+      "id": "0_-2_structure",
+      "url": "chunks/0_-2_structure.babylon.gz",
+      "bounds": {
+        "minX": -65,
+        "maxX": 65,
+        "minZ": -281,
+        "maxZ": -223
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 144,
+      "cpuBytes": 5040,
+      "compressedBytes": 1435,
+      "materials": [
+        "material-068",
+        "material-124",
+        "material-125"
+      ],
+      "sha256": "69b9b9ab67533c4775fc3b4b5d410c6bcd08c74690999f203304bd6cd6e14abc"
+    },
+    {
+      "id": "0_-1_structure",
+      "url": "chunks/0_-1_structure.babylon.gz",
+      "bounds": {
+        "minX": -65,
+        "maxX": 65,
+        "minZ": -209,
+        "maxZ": -79
+      },
+      "detail": "structure",
+      "meshes": 20,
+      "vertices": 1920,
+      "cpuBytes": 67200,
+      "compressedBytes": 10268,
+      "materials": [
+        "material-068",
+        "material-100",
+        "material-082",
+        "material-083",
+        "material-084",
+        "material-091",
+        "material-114",
+        "material-101",
+        "material-116",
+        "material-102",
+        "material-096",
+        "material-095"
+      ],
+      "sha256": "db7070605de713613536b5965c7f2aa31e292975d4b5b08df2eaaccff2607cee"
+    },
+    {
+      "id": "0_0_structure",
+      "url": "chunks/0_0_structure.babylon.gz",
+      "bounds": {
+        "minX": -65,
+        "maxX": 65,
+        "minZ": -65,
+        "maxZ": 65
+      },
+      "detail": "structure",
+      "meshes": 19,
+      "vertices": 1200,
+      "cpuBytes": 42000,
+      "compressedBytes": 6913,
+      "materials": [
+        "material-068",
+        "material-117",
+        "material-118",
+        "material-119",
+        "material-100",
+        "material-114",
+        "material-083",
+        "material-084",
+        "material-091",
+        "material-115",
+        "material-081",
+        "material-096",
+        "material-082",
+        "material-059"
+      ],
+      "sha256": "617466c65b838cd23614026952613b92932b1301a9665cce4879b6be240a5cf8"
+    },
+    {
+      "id": "0_1_structure",
+      "url": "chunks/0_1_structure.babylon.gz",
+      "bounds": {
+        "minX": -65,
+        "maxX": 65,
+        "minZ": 79,
+        "maxZ": 209
+      },
+      "detail": "structure",
+      "meshes": 19,
+      "vertices": 1704,
+      "cpuBytes": 59640,
+      "compressedBytes": 8144,
+      "materials": [
+        "material-068",
+        "material-099",
+        "material-116",
+        "material-083",
+        "material-084",
+        "material-100",
+        "material-091",
+        "material-081",
+        "material-098",
+        "material-114",
+        "material-082",
+        "material-102",
+        "material-115"
+      ],
+      "sha256": "d9d17bdbf5734ec2638e41a3e5188a485b5a62e76221c04bf6bf444efa6c0273"
+    },
+    {
+      "id": "1_-2_structure",
+      "url": "chunks/1_-2_structure.babylon.gz",
+      "bounds": {
+        "minX": 79,
+        "maxX": 137,
+        "minZ": -281,
+        "maxZ": -223
+      },
+      "detail": "structure",
+      "meshes": 7,
+      "vertices": 288,
+      "cpuBytes": 10080,
+      "compressedBytes": 2670,
+      "materials": [
+        "material-068",
+        "material-101",
+        "material-116",
+        "material-083",
+        "material-084"
+      ],
+      "sha256": "c6f9372a7c9816eb3f3ad64efa277f354dad8a6f5f27721a51c10061d5c48126"
+    },
+    {
+      "id": "1_-1_structure",
+      "url": "chunks/1_-1_structure.babylon.gz",
+      "bounds": {
+        "minX": 79,
+        "maxX": 137,
+        "minZ": -209,
+        "maxZ": -79
+      },
+      "detail": "structure",
+      "meshes": 11,
+      "vertices": 576,
+      "cpuBytes": 20160,
+      "compressedBytes": 3783,
+      "materials": [
+        "material-068",
+        "material-091",
+        "material-114",
+        "material-083",
+        "material-084",
+        "material-081",
+        "material-082"
+      ],
+      "sha256": "25ee9ceec045b419e5b85c8a11dfebf88f83b0676654fc5b2c5068c17f8fee0e"
+    },
+    {
+      "id": "1_0_structure",
+      "url": "chunks/1_0_structure.babylon.gz",
+      "bounds": {
+        "minX": 79,
+        "maxX": 137,
+        "minZ": -65,
+        "maxZ": 65
+      },
+      "detail": "structure",
+      "meshes": 11,
+      "vertices": 576,
+      "cpuBytes": 20160,
+      "compressedBytes": 3742,
+      "materials": [
+        "material-068",
+        "material-102",
+        "material-115",
+        "material-083",
+        "material-084",
+        "material-081",
+        "material-082"
+      ],
+      "sha256": "b991abec5c20c9f267800971232e176654c4c458695378bec9d969785ded135d"
+    },
+    {
+      "id": "1_1_structure",
+      "url": "chunks/1_1_structure.babylon.gz",
+      "bounds": {
+        "minX": 79,
+        "maxX": 137,
+        "minZ": 79,
+        "maxZ": 209
+      },
+      "detail": "structure",
+      "meshes": 9,
+      "vertices": 576,
+      "cpuBytes": 20160,
+      "compressedBytes": 3703,
+      "materials": [
+        "material-068",
+        "material-099",
+        "material-114",
+        "material-083",
+        "material-084",
+        "material-081"
+      ],
+      "sha256": "efec0c7a641d6158c8616f08ab32c90fd7f4e28948ed54807209acdc91de53a9"
+    },
+    {
+      "id": "-4_1_detail",
+      "url": "chunks/-4_1_detail.babylon.gz",
+      "bounds": {
+        "minX": -548.035000000149,
+        "maxX": -505.4675000011921,
+        "minZ": 77.9675000011921,
+        "maxZ": 198.0324999988079
+      },
+      "detail": "detail",
+      "meshes": 3,
+      "vertices": 2424,
+      "cpuBytes": 84840,
+      "compressedBytes": 14031,
+      "materials": [
+        "material-155",
+        "material-086"
+      ],
+      "sha256": "1f0d40a6f7bccd7020faca0218073149926d736fd3e6452abdff35e9bc06257f"
+    },
+    {
+      "id": "-4_1_structure",
+      "url": "chunks/-4_1_structure.babylon.gz",
+      "bounds": {
+        "minX": -542.5499999523163,
+        "maxX": -505.5,
+        "minZ": 93,
+        "maxZ": 190.54999995231628
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 120,
+      "cpuBytes": 4200,
+      "compressedBytes": 1557,
+      "materials": [
+        "material-156",
+        "material-155"
+      ],
+      "sha256": "de93288df312a40ccd7c8bdef9105ad457be633ecdb59e923268c2e7216ee27f"
+    },
+    {
+      "id": "2_-1_structure",
+      "url": "chunks/2_-1_structure.babylon.gz",
+      "bounds": {
+        "minX": 206.5,
+        "maxX": 255.5,
+        "minZ": -217,
+        "maxZ": -186
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 48,
+      "cpuBytes": 1680,
+      "compressedBytes": 1064,
+      "materials": [
+        "material-164"
+      ],
+      "sha256": "c1c73233de56abc0e7c5828246c3de684a191d60d54b69cba6084bf1fe7e37c2"
+    },
+    {
+      "id": "2_-2_structure",
+      "url": "chunks/2_-2_structure.babylon.gz",
+      "bounds": {
+        "minX": 247.5,
+        "maxX": 250.5,
+        "minZ": -244,
+        "maxZ": -216
+      },
+      "detail": "structure",
+      "meshes": 1,
+      "vertices": 24,
+      "cpuBytes": 840,
+      "compressedBytes": 889,
+      "materials": [
+        "material-164"
+      ],
+      "sha256": "5aa19894a21d71b21009d30eb4132154b415be25937a1c1c2e552db4038215b6"
+    },
+    {
+      "id": "2_-1_detail",
+      "url": "chunks/2_-1_detail.babylon.gz",
+      "bounds": {
+        "minX": 218.875,
+        "maxX": 255.125,
+        "minZ": -216.97500002384186,
+        "maxZ": -213.02499997615814
+      },
+      "detail": "detail",
+      "meshes": 2,
+      "vertices": 620,
+      "cpuBytes": 22480,
+      "compressedBytes": 4606,
+      "materials": [
+        "material-160",
+        "material-165"
+      ],
+      "sha256": "9a16fbfde23b6739d3e827afbcf9bde1908899d26b9f6fcb739de80843dd73fe"
+    },
+    {
+      "id": "2_-2_detail",
+      "url": "chunks/2_-2_detail.babylon.gz",
+      "bounds": {
+        "minX": 218.875,
+        "maxX": 255.125,
+        "minZ": -216.84500122070312,
+        "maxZ": -216.59500122070312
+      },
+      "detail": "detail",
+      "meshes": 1,
+      "vertices": 380,
+      "cpuBytes": 14080,
+      "compressedBytes": 3131,
+      "materials": [
+        "material-165"
+      ],
+      "sha256": "590be25f55f8cabd5ef8bcd3b5c37f920f3dc95e982fde6d2e26a5a565d4ba84"
+    },
+    {
+      "id": "-3_10_structure",
+      "url": "chunks/-3_10_structure.babylon.gz",
+      "bounds": {
+        "minX": -431.4832534790039,
+        "maxX": -402.5039291381836,
+        "minZ": 1496.4113607406616,
+        "maxZ": 1523.8042154312134
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 456,
+      "cpuBytes": 15960,
+      "compressedBytes": 3621,
+      "materials": [
+        "material-166",
+        "material-167",
+        "material-168"
+      ],
+      "sha256": "e748d757dc2ab61470ebd4d5b9df13cb803b338089a2a40456e519ce62b7fb66"
+    },
+    {
+      "id": "-6_10_structure",
+      "url": "chunks/-6_10_structure.babylon.gz",
+      "bounds": {
+        "minX": -878.4195051193237,
+        "maxX": -853.3539323806763,
+        "minZ": 1425.924108505249,
+        "maxZ": 1474.207971572876
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 432,
+      "cpuBytes": 15120,
+      "compressedBytes": 3312,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "4e165973dc633ab5a788589f02ae71dac973e79cc3785269dffa3e1ecacdaed5"
+    },
+    {
+      "id": "-4_9_structure",
+      "url": "chunks/-4_9_structure.babylon.gz",
+      "bounds": {
+        "minX": -659.0299396514893,
+        "maxX": -498.978440284729,
+        "minZ": 1204.2964172363281,
+        "maxZ": 1369.9572925567627
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 1968,
+      "cpuBytes": 68880,
+      "compressedBytes": 12596,
+      "materials": [
+        "material-168",
+        "material-167",
+        "material-166"
+      ],
+      "sha256": "7b7ef52aafb967cb098ea656445a8a060af0c302f3af1af1babe379116df21e7"
+    },
+    {
+      "id": "-3_7_structure",
+      "url": "chunks/-3_7_structure.babylon.gz",
+      "bounds": {
+        "minX": -449.4545021057129,
+        "maxX": -405.8294334411621,
+        "minZ": 1000.5397663116455,
+        "maxZ": 1034.216215133667
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 768,
+      "cpuBytes": 26880,
+      "compressedBytes": 5237,
+      "materials": [
+        "material-166",
+        "material-167",
+        "material-168"
+      ],
+      "sha256": "7371222084d6d2cb7bdb41a1ed5dd41aa470c8f320f56d2b05996100260435a3"
+    },
+    {
+      "id": "-5_8_structure",
+      "url": "chunks/-5_8_structure.babylon.gz",
+      "bounds": {
+        "minX": -740.8798408508301,
+        "maxX": -644.799409866333,
+        "minZ": 1079.5164623260498,
+        "maxZ": 1240.0862884521484
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 2616,
+      "cpuBytes": 91560,
+      "compressedBytes": 16159,
+      "materials": [
+        "material-168",
+        "material-167",
+        "material-166"
+      ],
+      "sha256": "e6dfa69db29128b0e136cec2e8baa441ebe0d2137b818c4cd81b3ad7f0543050"
+    },
+    {
+      "id": "-6_5_structure",
+      "url": "chunks/-6_5_structure.babylon.gz",
+      "bounds": {
+        "minX": -835.4752445220947,
+        "maxX": -776.920916557312,
+        "minZ": 631.7730827331543,
+        "maxZ": 778.2814474105835
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 1080,
+      "cpuBytes": 37800,
+      "compressedBytes": 7003,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "c64bfcc6d3d99d955724f1bbc504a8e24f547cb6ca855ea2c8ab5bd63cd4ebff"
+    },
+    {
+      "id": "-4_5_structure",
+      "url": "chunks/-4_5_structure.babylon.gz",
+      "bounds": {
+        "minX": -541.7012615203857,
+        "maxX": -499.65701484680176,
+        "minZ": 742.6438541412354,
+        "maxZ": 788.0198421478271
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 792,
+      "cpuBytes": 27720,
+      "compressedBytes": 5362,
+      "materials": [
+        "material-166",
+        "material-167",
+        "material-168"
+      ],
+      "sha256": "3606673c054e43d3732218dbc7c0ed2710f14089d84a7524180548ffa5b55f23"
+    },
+    {
+      "id": "-4_7_structure",
+      "url": "chunks/-4_7_structure.babylon.gz",
+      "bounds": {
+        "minX": -639.6957769393921,
+        "maxX": -517.0886325836182,
+        "minZ": 928.6687383651733,
+        "maxZ": 1068.3329410552979
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 1968,
+      "cpuBytes": 68880,
+      "compressedBytes": 12356,
+      "materials": [
+        "material-168",
+        "material-167",
+        "material-166"
+      ],
+      "sha256": "08a5ac66b9c5f4dacd769d37a47eadead7e3e08430a28246efbbdaa766743113"
+    },
+    {
+      "id": "-3_9_structure",
+      "url": "chunks/-3_9_structure.babylon.gz",
+      "bounds": {
+        "minX": -521.4140357971191,
+        "maxX": -405.86556816101074,
+        "minZ": 1225.887098312378,
+        "maxZ": 1328.3738327026367
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 984,
+      "cpuBytes": 34440,
+      "compressedBytes": 6642,
+      "materials": [
+        "material-168",
+        "material-167",
+        "material-166"
+      ],
+      "sha256": "b7a15be8fea60bf7b9f43d779c30d002e8c37c3b85edfdec3f93c84fa6848d04"
+    },
+    {
+      "id": "-4_6_structure",
+      "url": "chunks/-4_6_structure.babylon.gz",
+      "bounds": {
+        "minX": -545.7068557739258,
+        "maxX": -504.2709274291992,
+        "minZ": 810.9714088439941,
+        "maxZ": 853.2375755310059
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 576,
+      "cpuBytes": 20160,
+      "compressedBytes": 4274,
+      "materials": [
+        "material-166",
+        "material-167",
+        "material-168"
+      ],
+      "sha256": "12226e85462f59b77dc0a0283e296305443506749edbd9b2e2cb78ae3246790e"
+    },
+    {
+      "id": "-6_6_structure",
+      "url": "chunks/-6_6_structure.babylon.gz",
+      "bounds": {
+        "minX": -836.7575206756592,
+        "maxX": -798.4423084259033,
+        "minZ": 796.0996503829956,
+        "maxZ": 821.7141923904419
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 600,
+      "cpuBytes": 21000,
+      "compressedBytes": 4287,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "8d9096b3828f9ea5780efd986c20c5a9d305cacde98730c2f14ee4df6be3d90a"
+    },
+    {
+      "id": "-5_9_structure",
+      "url": "chunks/-5_9_structure.babylon.gz",
+      "bounds": {
+        "minX": -804.7970085144043,
+        "maxX": -774.7255744934082,
+        "minZ": 1304.712773323059,
+        "maxZ": 1328.933466911316
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 912,
+      "cpuBytes": 31920,
+      "compressedBytes": 5846,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "434e1c3ef30cdb1f5f841be0179d52698d4e5ebe50ad38b83678faae6c6db2a9"
+    },
+    {
+      "id": "-5_6_structure",
+      "url": "chunks/-5_6_structure.babylon.gz",
+      "bounds": {
+        "minX": -770.9955825805664,
+        "maxX": -715.1385498046875,
+        "minZ": 835.6684722900391,
+        "maxZ": 953.3943214416504
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 984,
+      "cpuBytes": 34440,
+      "compressedBytes": 6484,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "e1eb06b8b6f7794ddf6c54b52dc590b4da8e505dbe45a0e5cc5a24e7ddd1be5d"
+    },
+    {
+      "id": "-3_4_structure",
+      "url": "chunks/-3_4_structure.babylon.gz",
+      "bounds": {
+        "minX": -507.29602813720703,
+        "maxX": -443.48170471191406,
+        "minZ": 606.6300086975098,
+        "maxZ": 652.6418418884277
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 672,
+      "cpuBytes": 23520,
+      "compressedBytes": 4954,
+      "materials": [
+        "material-166",
+        "material-167",
+        "material-168"
+      ],
+      "sha256": "5c013cd15bd8950438d4bee491771e2f2afb03ac98a4405ac3d378e2dcf0dc8f"
+    },
+    {
+      "id": "-5_10_structure",
+      "url": "chunks/-5_10_structure.babylon.gz",
+      "bounds": {
+        "minX": -746.6890544891357,
+        "maxX": -707.3182697296143,
+        "minZ": 1473.7413024902344,
+        "maxZ": 1516.8734436035156
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 528,
+      "cpuBytes": 18480,
+      "compressedBytes": 3951,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "82c7093210a738d6b59105d06cb7deb3698a0c4f948126927158ca83523e8d76"
+    },
+    {
+      "id": "-6_9_structure",
+      "url": "chunks/-6_9_structure.babylon.gz",
+      "bounds": {
+        "minX": -857.4433879852295,
+        "maxX": -823.576997756958,
+        "minZ": 1243.7480640411377,
+        "maxZ": 1284.7033519744873
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 888,
+      "cpuBytes": 31080,
+      "compressedBytes": 5719,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "97dd8c36af125f0400bd34e4f0bfeaba7efd348af39effefb1d5f22e1d1ae38a"
+    },
+    {
+      "id": "-4_10_structure",
+      "url": "chunks/-4_10_structure.babylon.gz",
+      "bounds": {
+        "minX": -566.9724569320679,
+        "maxX": -504.72740650177,
+        "minZ": 1379.5085678100586,
+        "maxZ": 1431.4510021209717
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 1008,
+      "cpuBytes": 35280,
+      "compressedBytes": 6717,
+      "materials": [
+        "material-166",
+        "material-167",
+        "material-168"
+      ],
+      "sha256": "754c8bb0d5edc6defb45d2d1272b4ea0da1eec0305c68a10e6bbde99d049a696"
+    },
+    {
+      "id": "-3_5_structure",
+      "url": "chunks/-3_5_structure.babylon.gz",
+      "bounds": {
+        "minX": -502.40897369384766,
+        "maxX": -469.56661224365234,
+        "minZ": 709.9623889923096,
+        "maxZ": 756.2006969451904
+      },
+      "detail": "structure",
+      "meshes": 3,
+      "vertices": 384,
+      "cpuBytes": 13440,
+      "compressedBytes": 3119,
+      "materials": [
+        "material-166",
+        "material-167",
+        "material-168"
+      ],
+      "sha256": "2115ef56c5c5f35ea6caa776b668b44d3768f4cde7c3c9bd2f51abd17dd7c970"
+    },
+    {
+      "id": "-6_4_structure",
+      "url": "chunks/-6_4_structure.babylon.gz",
+      "bounds": {
+        "minX": -875.1667938232422,
+        "maxX": -848.6631622314453,
+        "minZ": 602.3435440063477,
+        "maxZ": 652.0917587280273
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 888,
+      "cpuBytes": 31080,
+      "compressedBytes": 5731,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "09a894a58d7242456591519681d4f51e339712682ed2a02fb62d29d3cf4c100b"
+    },
+    {
+      "id": "0_-3_structure",
+      "url": "chunks/0_-3_structure.babylon.gz",
+      "bounds": {
+        "minX": 53.98529052734375,
+        "maxX": 86.48529052734375,
+        "minZ": -380.25,
+        "maxZ": -349.75
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 456,
+      "cpuBytes": 15960,
+      "compressedBytes": 3329,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "88e4aa376fccd4cb1c5678bc30583c402478353693aa47c85b0ed100fd8653da"
+    },
+    {
+      "id": "1_-3_detail",
+      "url": "chunks/1_-3_detail.babylon.gz",
+      "bounds": {
+        "minX": 152.11448669433594,
+        "maxX": 161.59083557128906,
+        "minZ": -500.6182861328125,
+        "maxZ": -361.2426452636719
+      },
+      "detail": "detail",
+      "meshes": 6,
+      "vertices": 3750,
+      "cpuBytes": 143904,
+      "compressedBytes": 72748,
+      "materials": [
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080"
+      ],
+      "sha256": "de3c6ff7fbc3b34d0af8ab93e74f6abd47b263e9256bf68243fcd3ccffd63ab1"
+    },
+    {
+      "id": "1_-3_structure",
+      "url": "chunks/1_-3_structure.babylon.gz",
+      "bounds": {
+        "minX": 58.17030334472656,
+        "maxX": 110.26242065429688,
+        "minZ": -512.25,
+        "maxZ": -415.75
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 648,
+      "cpuBytes": 22680,
+      "compressedBytes": 4402,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "6b69800291f2313fbd98262ad677a33df6fdffa0aa173017b6053c6903ed40ef"
+    },
+    {
+      "id": "0_-4_structure",
+      "url": "chunks/0_-4_structure.babylon.gz",
+      "bounds": {
+        "minX": 44.628074645996094,
+        "maxX": 80.28312683105469,
+        "minZ": -644.25,
+        "maxZ": -547.75
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 576,
+      "cpuBytes": 20160,
+      "compressedBytes": 4064,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "8adc896ab8fc1f298c98691cad1f6d63f9c50965d7d749074a2f78038dd8e8b3"
+    },
+    {
+      "id": "1_-4_detail",
+      "url": "chunks/1_-4_detail.babylon.gz",
+      "bounds": {
+        "minX": 152.63246154785156,
+        "maxX": 161.33937072753906,
+        "minZ": -633.4063720703125,
+        "maxZ": -558.3901977539062
+      },
+      "detail": "detail",
+      "meshes": 6,
+      "vertices": 2500,
+      "cpuBytes": 95936,
+      "compressedBytes": 49835,
+      "materials": [
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080"
+      ],
+      "sha256": "faa4973181341726f9fdd53846444cf3b28a441167349988dd0c7e440129f4ce"
+    },
+    {
+      "id": "0_-5_structure",
+      "url": "chunks/0_-5_structure.babylon.gz",
+      "bounds": {
+        "minX": 45.62738037109375,
+        "maxX": 78.12738037109375,
+        "minZ": -710.25,
+        "maxZ": -679.75
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 192,
+      "cpuBytes": 6720,
+      "compressedBytes": 1918,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "df456a117b6113ee4600fcf4ed586dafa66bf00ddc30106d8f2657e00813c6b1"
+    },
+    {
+      "id": "1_-5_detail",
+      "url": "chunks/1_-5_detail.babylon.gz",
+      "bounds": {
+        "minX": 153.1270751953125,
+        "maxX": 160.8046875,
+        "minZ": -699.9016723632812,
+        "maxZ": -691.6118774414062
+      },
+      "detail": "detail",
+      "meshes": 6,
+      "vertices": 1250,
+      "cpuBytes": 47968,
+      "compressedBytes": 26867,
+      "materials": [
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080"
+      ],
+      "sha256": "e9015ed71d56cee0d84e248ef4642274fbbb4f2878cf7e75219394731811d8f2"
+    },
+    {
+      "id": "1_3_structure",
+      "url": "chunks/1_3_structure.babylon.gz",
+      "bounds": {
+        "minX": 61.25614929199219,
+        "maxX": 109.47913360595703,
+        "minZ": 349.75,
+        "maxZ": 512.25
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 1008,
+      "cpuBytes": 35280,
+      "compressedBytes": 6318,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "6ff8b6d2d0f379073ee53b5711ce536c9ea6b478caa1edbb5e05fae3c5414985"
+    },
+    {
+      "id": "1_3_detail",
+      "url": "chunks/1_3_detail.babylon.gz",
+      "bounds": {
+        "minX": 152.55438232421875,
+        "maxX": 161.1314239501953,
+        "minZ": 361.4115295410156,
+        "maxZ": 500.9725646972656
+      },
+      "detail": "detail",
+      "meshes": 6,
+      "vertices": 3750,
+      "cpuBytes": 143904,
+      "compressedBytes": 72778,
+      "materials": [
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080"
+      ],
+      "sha256": "a7860122dfc52c51a0130f6befb5242596db34873cb3396ba43e56bcfaf9891c"
+    },
+    {
+      "id": "1_4_structure",
+      "url": "chunks/1_4_structure.babylon.gz",
+      "bounds": {
+        "minX": 57.03125,
+        "maxX": 109.23150634765625,
+        "minZ": 547.75,
+        "maxZ": 644.25
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 648,
+      "cpuBytes": 22680,
+      "compressedBytes": 4443,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "51eab34c5666fcf3b2e6d402af026dbddf23473c4f154113c2a5f96aa8bf233f"
+    },
+    {
+      "id": "1_4_detail",
+      "url": "chunks/1_4_detail.babylon.gz",
+      "bounds": {
+        "minX": 153.515380859375,
+        "maxX": 161.572509765625,
+        "minZ": 558.4168701171875,
+        "maxZ": 633.0716552734375
+      },
+      "detail": "detail",
+      "meshes": 6,
+      "vertices": 2500,
+      "cpuBytes": 95936,
+      "compressedBytes": 49727,
+      "materials": [
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080"
+      ],
+      "sha256": "a3d6f507a1c84809836cd038ff328b3b802db88363db9424091159f0f11caf67"
+    },
+    {
+      "id": "1_5_structure",
+      "url": "chunks/1_5_structure.babylon.gz",
+      "bounds": {
+        "minX": 58.61998748779297,
+        "maxX": 91.11998748779297,
+        "minZ": 679.75,
+        "maxZ": 710.25
+      },
+      "detail": "structure",
+      "meshes": 2,
+      "vertices": 432,
+      "cpuBytes": 15120,
+      "compressedBytes": 3200,
+      "materials": [
+        "material-168",
+        "material-167"
+      ],
+      "sha256": "66a1b76f387a7673f63ce51da1af7b3f589c4f05e16af323b5039311791925f4"
+    },
+    {
+      "id": "1_5_detail",
+      "url": "chunks/1_5_detail.babylon.gz",
+      "bounds": {
+        "minX": 153.324462890625,
+        "maxX": 161.0683135986328,
+        "minZ": 690.4609375,
+        "maxZ": 698.4042358398438
+      },
+      "detail": "detail",
+      "meshes": 6,
+      "vertices": 1250,
+      "cpuBytes": 47968,
+      "compressedBytes": 26877,
+      "materials": [
+        "material-076",
+        "material-077",
+        "material-078",
+        "material-079",
+        "material-080"
+      ],
+      "sha256": "e09da823b69c14634afe4cf6cd06d97ad3805af63ce1d73e730d860d8651e44e"
+    }
+  ],
+  "materials": [
+    {
+      "id": "material-000",
+      "name": "sign-material/LA ESTRELLA",
+      "url": "materials/material-000.json.gz",
+      "bytes": 2197
+    },
+    {
+      "id": "material-001",
+      "name": "sign-material/OCEAN BEACH POLICE",
+      "url": "materials/material-001.json.gz",
+      "bytes": 2203
+    },
+    {
+      "id": "material-002",
+      "name": "sign-material/VICE CITY  •  PUBLIC SAFETY",
+      "url": "materials/material-002.json.gz",
+      "bytes": 2222
+    },
+    {
+      "id": "material-003",
+      "name": "sign-material/BOTÁNICA",
+      "url": "materials/material-003.json.gz",
+      "bytes": 2197
+    },
+    {
+      "id": "material-004",
+      "name": "sign-material/PANADERÍA",
+      "url": "materials/material-004.json.gz",
+      "bytes": 2198
+    },
+    {
+      "id": "material-005",
+      "name": "sign-material/PANADERÍA",
+      "url": "materials/material-005.json.gz",
+      "bytes": 2200
+    },
+    {
+      "id": "material-006",
+      "name": "sign-material/CAFÉ CUBANO",
+      "url": "materials/material-006.json.gz",
+      "bytes": 2204
+    },
+    {
+      "id": "material-007",
+      "name": "sign-material/VINYL & SOUL",
+      "url": "materials/material-007.json.gz",
+      "bytes": 2202
+    },
+    {
+      "id": "material-008",
+      "name": "sign-material/PALMETTO SUPPLY",
+      "url": "materials/material-008.json.gz",
+      "bytes": 2202
+    },
+    {
+      "id": "material-009",
+      "name": "sign-material/OUTDOORS  ·  SPORTING GOODS",
+      "url": "materials/material-009.json.gz",
+      "bytes": 2219
+    },
+    {
+      "id": "material-010",
+      "name": "sign-material/SUNSET CUSTOMS",
+      "url": "materials/material-010.json.gz",
+      "bytes": 2201
+    },
+    {
+      "id": "material-011",
+      "name": "sign-material/REPAIR  /  RESPRAY  /  PERFORMANCE",
+      "url": "materials/material-011.json.gz",
+      "bytes": 2217
+    },
+    {
+      "id": "material-012",
+      "name": "sign-material/DRIVE IN",
+      "url": "materials/material-012.json.gz",
+      "bytes": 2195
+    },
+    {
+      "id": "material-013",
+      "name": "sign-material/24 HOUR DELI",
+      "url": "materials/material-013.json.gz",
+      "bytes": 2199
+    },
+    {
+      "id": "material-014",
+      "name": "sign-material/SUNRISE MARKET",
+      "url": "materials/material-014.json.gz",
+      "bytes": 2201
+    },
+    {
+      "id": "material-015",
+      "name": "sign-material/PALM COURT",
+      "url": "materials/material-015.json.gz",
+      "bytes": 2197
+    },
+    {
+      "id": "material-016",
+      "name": "sign-material/SUNRISE MARKET",
+      "url": "materials/material-016.json.gz",
+      "bytes": 2201
+    },
+    {
+      "id": "material-017",
+      "name": "sign-material/PALMETTO",
+      "url": "materials/material-017.json.gz",
+      "bytes": 2193
+    },
+    {
+      "id": "material-018",
+      "name": "sign-material/THE PALM",
+      "url": "materials/material-018.json.gz",
+      "bytes": 2195
+    },
+    {
+      "id": "material-019",
+      "name": "sign-material/HOTEL  •  OCEAN BEACH",
+      "url": "materials/material-019.json.gz",
+      "bytes": 2218
+    },
+    {
+      "id": "material-020",
+      "name": "sign-material/CORAL REEF",
+      "url": "materials/material-020.json.gz",
+      "bytes": 2197
+    },
+    {
+      "id": "material-021",
+      "name": "sign-material/HOTEL  •  OCEAN BEACH",
+      "url": "materials/material-021.json.gz",
+      "bytes": 2217
+    },
+    {
+      "id": "material-022",
+      "name": "sign-material/NACRE",
+      "url": "materials/material-022.json.gz",
+      "bytes": 2191
+    },
+    {
+      "id": "material-023",
+      "name": "sign-material/HOTEL  •  OCEAN BEACH",
+      "url": "materials/material-023.json.gz",
+      "bytes": 2218
+    },
+    {
+      "id": "material-024",
+      "name": "sign-material/SOLÉIL",
+      "url": "materials/material-024.json.gz",
+      "bytes": 2197
+    },
+    {
+      "id": "material-025",
+      "name": "sign-material/HOTEL  •  OCEAN BEACH",
+      "url": "materials/material-025.json.gz",
+      "bytes": 2218
+    },
+    {
+      "id": "material-026",
+      "name": "sign-material/THE TIDELINE",
+      "url": "materials/material-026.json.gz",
+      "bytes": 2199
+    },
+    {
+      "id": "material-027",
+      "name": "sign-material/HOTEL  •  OCEAN BEACH",
+      "url": "materials/material-027.json.gz",
+      "bytes": 2218
+    },
+    {
+      "id": "material-028",
+      "name": "sign-material/AVALON",
+      "url": "materials/material-028.json.gz",
+      "bytes": 2192
+    },
+    {
+      "id": "material-029",
+      "name": "sign-material/HOTEL  •  OCEAN BEACH",
+      "url": "materials/material-029.json.gz",
+      "bytes": 2218
+    },
+    {
+      "id": "material-030",
+      "name": "sign-material/MANGROVE MARINE",
+      "url": "materials/material-030.json.gz",
+      "bytes": 2202
+    },
+    {
+      "id": "material-031",
+      "name": "sign-material/PALM COURT",
+      "url": "materials/material-031.json.gz",
+      "bytes": 2197
+    },
+    {
+      "id": "material-032",
+      "name": "sign-material/SOUTH COAST LOGISTICS",
+      "url": "materials/material-032.json.gz",
+      "bytes": 2207
+    },
+    {
+      "id": "material-033",
+      "name": "sign-material/SUNRISE DINER",
+      "url": "materials/material-033.json.gz",
+      "bytes": 2200
+    },
+    {
+      "id": "material-034",
+      "name": "sign-material/BREAKFAST  ALL DAY",
+      "url": "materials/material-034.json.gz",
+      "bytes": 2205
+    },
+    {
+      "id": "material-035",
+      "name": "sign-material/MERCADO PALMA",
+      "url": "materials/material-035.json.gz",
+      "bytes": 2200
+    },
+    {
+      "id": "material-036",
+      "name": "sign-material/FLORES  /  FRUTAS  /  CAFÉ",
+      "url": "materials/material-036.json.gz",
+      "bytes": 2215
+    },
+    {
+      "id": "material-037",
+      "name": "sign-material/SOUTH COAST LOGISTICS",
+      "url": "materials/material-037.json.gz",
+      "bytes": 2207
+    },
+    {
+      "id": "material-038",
+      "name": "sign-material/LA PALMA PANADERÍA",
+      "url": "materials/material-038.json.gz",
+      "bytes": 2209
+    },
+    {
+      "id": "material-039",
+      "name": "sign-material/LITTLE CUBA  /  MERCADO PALMA",
+      "url": "materials/material-039.json.gz",
+      "bytes": 2216
+    },
+    {
+      "id": "material-040",
+      "name": "sign-material/DISCOS DEL SOL",
+      "url": "materials/material-040.json.gz",
+      "bytes": 2200
+    },
+    {
+      "id": "material-041",
+      "name": "sign-material/LITTLE CUBA  /  MERCADO PALMA",
+      "url": "materials/material-041.json.gz",
+      "bytes": 2215
+    },
+    {
+      "id": "material-042",
+      "name": "sign-material/ISLAND MOTOR WORKS",
+      "url": "materials/material-042.json.gz",
+      "bytes": 2205
+    },
+    {
+      "id": "material-043",
+      "name": "sign-material/PALMETTO STORAGE",
+      "url": "materials/material-043.json.gz",
+      "bytes": 2202
+    },
+    {
+      "id": "material-044",
+      "name": "sign-material/SOUTH WHARF",
+      "url": "materials/material-044.json.gz",
+      "bytes": 2198
+    },
+    {
+      "id": "material-045",
+      "name": "sign-material/COASTAL CARGO",
+      "url": "materials/material-045.json.gz",
+      "bytes": 2200
+    },
+    {
+      "id": "material-046",
+      "name": "sign-material/THE SOUTHERN",
+      "url": "materials/material-046.json.gz",
+      "bytes": 2199
+    },
+    {
+      "id": "material-047",
+      "name": "sign-material/HOTEL  •  OCEAN BEACH",
+      "url": "materials/material-047.json.gz",
+      "bytes": 2217
+    },
+    {
+      "id": "material-048",
+      "name": "sign-material/COASTAL RESERVE",
+      "url": "materials/material-048.json.gz",
+      "bytes": 2201
+    },
+    {
+      "id": "material-049",
+      "name": "sign-material/RESTRICTED  /  CREATIVE TRAINING ANNEX",
+      "url": "materials/material-049.json.gz",
+      "bytes": 2224
+    },
+    {
+      "id": "material-050",
+      "name": "sign-material/AUTHORIZED PERSONNEL",
+      "url": "materials/material-050.json.gz",
+      "bytes": 2207
+    },
+    {
+      "id": "material-051",
+      "name": "sign-material/OCEAN RESCUE",
+      "url": "materials/material-051.json.gz",
+      "bytes": 2198
+    },
+    {
+      "id": "material-052",
+      "name": "sign-material/OCEAN RESCUE",
+      "url": "materials/material-052.json.gz",
+      "bytes": 2199
+    },
+    {
+      "id": "material-053",
+      "name": "sign-material/OCEAN RESCUE",
+      "url": "materials/material-053.json.gz",
+      "bytes": 2199
+    },
+    {
+      "id": "material-054",
+      "name": "sign-material/SOLSTICE",
+      "url": "materials/material-054.json.gz",
+      "bytes": 2193
+    },
+    {
+      "id": "material-055",
+      "name": "sign-material/BAYSIDE MARINA",
+      "url": "materials/material-055.json.gz",
+      "bytes": 2200
+    },
+    {
+      "id": "material-056",
+      "name": "world/concrete",
+      "url": "materials/material-056.json.gz",
+      "bytes": 1936
+    },
+    {
+      "id": "material-057",
+      "name": "world/sand",
+      "url": "materials/material-057.json.gz",
+      "bytes": 2219
+    },
+    {
+      "id": "material-058",
+      "name": "world/seabed",
+      "url": "materials/material-058.json.gz",
+      "bytes": 1909
+    },
+    {
+      "id": "material-059",
+      "name": "world/grass",
+      "url": "materials/material-059.json.gz",
+      "bytes": 1934
+    },
+    {
+      "id": "material-060",
+      "name": "world/asphalt",
+      "url": "materials/material-060.json.gz",
+      "bytes": 2202
+    },
+    {
+      "id": "material-061",
+      "name": "world/road-yellow",
+      "url": "materials/material-061.json.gz",
+      "bytes": 1919
+    },
+    {
+      "id": "material-062",
+      "name": "world/road-white",
+      "url": "materials/material-062.json.gz",
+      "bytes": 1910
+    },
+    {
+      "id": "material-063",
+      "name": "world/metal-dark",
+      "url": "materials/material-063.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-064",
+      "name": "world/signal-0",
+      "url": "materials/material-064.json.gz",
+      "bytes": 1949
+    },
+    {
+      "id": "material-065",
+      "name": "world/signal-1",
+      "url": "materials/material-065.json.gz",
+      "bytes": 1953
+    },
+    {
+      "id": "material-066",
+      "name": "world/signal-2",
+      "url": "materials/material-066.json.gz",
+      "bytes": 1940
+    },
+    {
+      "id": "material-067",
+      "name": "world/stop-red",
+      "url": "materials/material-067.json.gz",
+      "bytes": 1918
+    },
+    {
+      "id": "material-068",
+      "name": "world/pavement",
+      "url": "materials/material-068.json.gz",
+      "bytes": 1935
+    },
+    {
+      "id": "material-069",
+      "name": "world/curb",
+      "url": "materials/material-069.json.gz",
+      "bytes": 1932
+    },
+    {
+      "id": "material-070",
+      "name": "world/paving-seams",
+      "url": "materials/material-070.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-071",
+      "name": "world/lamp-bronze",
+      "url": "materials/material-071.json.gz",
+      "bytes": 1920
+    },
+    {
+      "id": "material-072",
+      "name": "world/street-light",
+      "url": "materials/material-072.json.gz",
+      "bytes": 1933
+    },
+    {
+      "id": "material-073",
+      "name": "world/wood",
+      "url": "materials/material-073.json.gz",
+      "bytes": 1923
+    },
+    {
+      "id": "material-074",
+      "name": "world/municipal-teal",
+      "url": "materials/material-074.json.gz",
+      "bytes": 1930
+    },
+    {
+      "id": "material-075",
+      "name": "world/hydrant",
+      "url": "materials/material-075.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-076",
+      "name": "world/palm-trunk",
+      "url": "materials/material-076.json.gz",
+      "bytes": 1919
+    },
+    {
+      "id": "material-077",
+      "name": "world/bark-ring",
+      "url": "materials/material-077.json.gz",
+      "bytes": 1916
+    },
+    {
+      "id": "material-078",
+      "name": "world/palm-frond-light",
+      "url": "materials/material-078.json.gz",
+      "bytes": 1934
+    },
+    {
+      "id": "material-079",
+      "name": "world/palm-fronds",
+      "url": "materials/material-079.json.gz",
+      "bytes": 1931
+    },
+    {
+      "id": "material-080",
+      "name": "world/coconut",
+      "url": "materials/material-080.json.gz",
+      "bytes": 1901
+    },
+    {
+      "id": "material-081",
+      "name": "world/stucco-3",
+      "url": "materials/material-081.json.gz",
+      "bytes": 1935
+    },
+    {
+      "id": "material-082",
+      "name": "world/trim-0",
+      "url": "materials/material-082.json.gz",
+      "bytes": 1933
+    },
+    {
+      "id": "material-083",
+      "name": "world/ivory-trim",
+      "url": "materials/material-083.json.gz",
+      "bytes": 1938
+    },
+    {
+      "id": "material-084",
+      "name": "world/roof",
+      "url": "materials/material-084.json.gz",
+      "bytes": 1929
+    },
+    {
+      "id": "material-085",
+      "name": "world/ac",
+      "url": "materials/material-085.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-086",
+      "name": "world/glass-blue",
+      "url": "materials/material-086.json.gz",
+      "bytes": 1934
+    },
+    {
+      "id": "material-087",
+      "name": "world/warm-windows",
+      "url": "materials/material-087.json.gz",
+      "bytes": 1957
+    },
+    {
+      "id": "material-088",
+      "name": "world/planter-stone",
+      "url": "materials/material-088.json.gz",
+      "bytes": 1936
+    },
+    {
+      "id": "material-089",
+      "name": "world/soil",
+      "url": "materials/material-089.json.gz",
+      "bytes": 1916
+    },
+    {
+      "id": "material-090",
+      "name": "world/shrub",
+      "url": "materials/material-090.json.gz",
+      "bytes": 1923
+    },
+    {
+      "id": "material-091",
+      "name": "world/stucco-4",
+      "url": "materials/material-091.json.gz",
+      "bytes": 1935
+    },
+    {
+      "id": "material-092",
+      "name": "world/fence",
+      "url": "materials/material-092.json.gz",
+      "bytes": 1911
+    },
+    {
+      "id": "material-093",
+      "name": "world/dumpster-green",
+      "url": "materials/material-093.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-094",
+      "name": "world/rubber",
+      "url": "materials/material-094.json.gz",
+      "bytes": 1916
+    },
+    {
+      "id": "material-095",
+      "name": "world/stucco-6",
+      "url": "materials/material-095.json.gz",
+      "bytes": 1934
+    },
+    {
+      "id": "material-096",
+      "name": "world/trim-5",
+      "url": "materials/material-096.json.gz",
+      "bytes": 1933
+    },
+    {
+      "id": "material-097",
+      "name": "world/civic-blue",
+      "url": "materials/material-097.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-098",
+      "name": "world/trim-2",
+      "url": "materials/material-098.json.gz",
+      "bytes": 1937
+    },
+    {
+      "id": "material-099",
+      "name": "world/stucco-1",
+      "url": "materials/material-099.json.gz",
+      "bytes": 1935
+    },
+    {
+      "id": "material-100",
+      "name": "world/stucco-2",
+      "url": "materials/material-100.json.gz",
+      "bytes": 1935
+    },
+    {
+      "id": "material-101",
+      "name": "world/stucco-0",
+      "url": "materials/material-101.json.gz",
+      "bytes": 1936
+    },
+    {
+      "id": "material-102",
+      "name": "world/stucco-5",
+      "url": "materials/material-102.json.gz",
+      "bytes": 1934
+    },
+    {
+      "id": "material-103",
+      "name": "world/neon-mint",
+      "url": "materials/material-103.json.gz",
+      "bytes": 1924
+    },
+    {
+      "id": "material-104",
+      "name": "world/neon-rose",
+      "url": "materials/material-104.json.gz",
+      "bytes": 1957
+    },
+    {
+      "id": "material-105",
+      "name": "world/alley",
+      "url": "materials/material-105.json.gz",
+      "bytes": 1910
+    },
+    {
+      "id": "material-106",
+      "name": "world/shop-plaster",
+      "url": "materials/material-106.json.gz",
+      "bytes": 1929
+    },
+    {
+      "id": "material-107",
+      "name": "world/shop-trim",
+      "url": "materials/material-107.json.gz",
+      "bytes": 1936
+    },
+    {
+      "id": "material-108",
+      "name": "world/tile-floor",
+      "url": "materials/material-108.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-109",
+      "name": "world/stock-0",
+      "url": "materials/material-109.json.gz",
+      "bytes": 1914
+    },
+    {
+      "id": "material-110",
+      "name": "world/stock-1",
+      "url": "materials/material-110.json.gz",
+      "bytes": 1914
+    },
+    {
+      "id": "material-111",
+      "name": "world/stock-2",
+      "url": "materials/material-111.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-112",
+      "name": "world/stock-3",
+      "url": "materials/material-112.json.gz",
+      "bytes": 1914
+    },
+    {
+      "id": "material-113",
+      "name": "world/stock-4",
+      "url": "materials/material-113.json.gz",
+      "bytes": 1924
+    },
+    {
+      "id": "material-114",
+      "name": "world/trim-1",
+      "url": "materials/material-114.json.gz",
+      "bytes": 1934
+    },
+    {
+      "id": "material-115",
+      "name": "world/trim-3",
+      "url": "materials/material-115.json.gz",
+      "bytes": 1935
+    },
+    {
+      "id": "material-116",
+      "name": "world/trim-4",
+      "url": "materials/material-116.json.gz",
+      "bytes": 1933
+    },
+    {
+      "id": "material-117",
+      "name": "world/garage-stucco",
+      "url": "materials/material-117.json.gz",
+      "bytes": 1936
+    },
+    {
+      "id": "material-118",
+      "name": "world/garage-teal",
+      "url": "materials/material-118.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-119",
+      "name": "world/garage-floor",
+      "url": "materials/material-119.json.gz",
+      "bytes": 1927
+    },
+    {
+      "id": "material-120",
+      "name": "world/tool-red",
+      "url": "materials/material-120.json.gz",
+      "bytes": 1918
+    },
+    {
+      "id": "material-121",
+      "name": "world/workshop-light",
+      "url": "materials/material-121.json.gz",
+      "bytes": 1960
+    },
+    {
+      "id": "material-122",
+      "name": "world/ocean-water",
+      "url": "materials/material-122.json.gz",
+      "bytes": 2213
+    },
+    {
+      "id": "material-123",
+      "name": "world/pool-tile",
+      "url": "materials/material-123.json.gz",
+      "bytes": 1917
+    },
+    {
+      "id": "material-124",
+      "name": "world/warehouse-concrete",
+      "url": "materials/material-124.json.gz",
+      "bytes": 1942
+    },
+    {
+      "id": "material-125",
+      "name": "world/warehouse-metal",
+      "url": "materials/material-125.json.gz",
+      "bytes": 1925
+    },
+    {
+      "id": "material-126",
+      "name": "world/safety-yellow",
+      "url": "materials/material-126.json.gz",
+      "bytes": 1927
+    },
+    {
+      "id": "material-127",
+      "name": "world/bungalow-stucco-0",
+      "url": "materials/material-127.json.gz",
+      "bytes": 1943
+    },
+    {
+      "id": "material-128",
+      "name": "world/foundation-stone",
+      "url": "materials/material-128.json.gz",
+      "bytes": 1918
+    },
+    {
+      "id": "material-129",
+      "name": "world/terracotta-roof",
+      "url": "materials/material-129.json.gz",
+      "bytes": 1940
+    },
+    {
+      "id": "material-130",
+      "name": "world/vent-shadow",
+      "url": "materials/material-130.json.gz",
+      "bytes": 1919
+    },
+    {
+      "id": "material-131",
+      "name": "world/bungalow-cream-trim",
+      "url": "materials/material-131.json.gz",
+      "bytes": 1943
+    },
+    {
+      "id": "material-132",
+      "name": "world/utility-metal",
+      "url": "materials/material-132.json.gz",
+      "bytes": 1922
+    },
+    {
+      "id": "material-133",
+      "name": "world/shutter-0",
+      "url": "materials/material-133.json.gz",
+      "bytes": 1917
+    },
+    {
+      "id": "material-134",
+      "name": "world/door-wood",
+      "url": "materials/material-134.json.gz",
+      "bytes": 1928
+    },
+    {
+      "id": "material-135",
+      "name": "world/bungalow-stucco-2",
+      "url": "materials/material-135.json.gz",
+      "bytes": 1940
+    },
+    {
+      "id": "material-136",
+      "name": "world/shutter-2",
+      "url": "materials/material-136.json.gz",
+      "bytes": 1929
+    },
+    {
+      "id": "material-137",
+      "name": "world/bungalow-stucco-1",
+      "url": "materials/material-137.json.gz",
+      "bytes": 1941
+    },
+    {
+      "id": "material-138",
+      "name": "world/shutter-1",
+      "url": "materials/material-138.json.gz",
+      "bytes": 1919
+    },
+    {
+      "id": "material-139",
+      "name": "world/bungalow-stucco-3",
+      "url": "materials/material-139.json.gz",
+      "bytes": 1939
+    },
+    {
+      "id": "material-140",
+      "name": "world/shutter-3",
+      "url": "materials/material-140.json.gz",
+      "bytes": 1930
+    },
+    {
+      "id": "material-141",
+      "name": "world/diner-enamel",
+      "url": "materials/material-141.json.gz",
+      "bytes": 1930
+    },
+    {
+      "id": "material-142",
+      "name": "world/diner-trim",
+      "url": "materials/material-142.json.gz",
+      "bytes": 1936
+    },
+    {
+      "id": "material-143",
+      "name": "world/market-paving",
+      "url": "materials/material-143.json.gz",
+      "bytes": 1920
+    },
+    {
+      "id": "material-144",
+      "name": "world/market-trim",
+      "url": "materials/material-144.json.gz",
+      "bytes": 1939
+    },
+    {
+      "id": "material-145",
+      "name": "world/market-canopy--1",
+      "url": "materials/material-145.json.gz",
+      "bytes": 1937
+    },
+    {
+      "id": "material-146",
+      "name": "world/market-crate",
+      "url": "materials/material-146.json.gz",
+      "bytes": 1918
+    },
+    {
+      "id": "material-147",
+      "name": "world/produce-0",
+      "url": "materials/material-147.json.gz",
+      "bytes": 1928
+    },
+    {
+      "id": "material-148",
+      "name": "world/produce-1",
+      "url": "materials/material-148.json.gz",
+      "bytes": 1918
+    },
+    {
+      "id": "material-149",
+      "name": "world/produce-2",
+      "url": "materials/material-149.json.gz",
+      "bytes": 1920
+    },
+    {
+      "id": "material-150",
+      "name": "world/produce-3",
+      "url": "materials/material-150.json.gz",
+      "bytes": 1927
+    },
+    {
+      "id": "material-151",
+      "name": "world/market-canopy-1",
+      "url": "materials/material-151.json.gz",
+      "bytes": 1935
+    },
+    {
+      "id": "material-152",
+      "name": "world/umbrella-coral",
+      "url": "materials/material-152.json.gz",
+      "bytes": 1930
+    },
+    {
+      "id": "material-153",
+      "name": "world/umbrella-mint",
+      "url": "materials/material-153.json.gz",
+      "bytes": 1920
+    },
+    {
+      "id": "material-154",
+      "name": "world/compound-concrete",
+      "url": "materials/material-154.json.gz",
+      "bytes": 1940
+    },
+    {
+      "id": "material-155",
+      "name": "world/compound-fence",
+      "url": "materials/material-155.json.gz",
+      "bytes": 1917
+    },
+    {
+      "id": "material-156",
+      "name": "world/compound-olive",
+      "url": "materials/material-156.json.gz",
+      "bytes": 1931
+    },
+    {
+      "id": "material-157",
+      "name": "world/helipad",
+      "url": "materials/material-157.json.gz",
+      "bytes": 1928
+    },
+    {
+      "id": "material-158",
+      "name": "world/helipad-marking",
+      "url": "materials/material-158.json.gz",
+      "bytes": 1922
+    },
+    {
+      "id": "material-159",
+      "name": "world/boardwalk-wood",
+      "url": "materials/material-159.json.gz",
+      "bytes": 1920
+    },
+    {
+      "id": "material-160",
+      "name": "world/wood-joint",
+      "url": "materials/material-160.json.gz",
+      "bytes": 1917
+    },
+    {
+      "id": "material-161",
+      "name": "world/lifeguard-pink",
+      "url": "materials/material-161.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-162",
+      "name": "world/net-rope",
+      "url": "materials/material-162.json.gz",
+      "bytes": 1926
+    },
+    {
+      "id": "material-163",
+      "name": "world/beach-bar",
+      "url": "materials/material-163.json.gz",
+      "bytes": 1915
+    },
+    {
+      "id": "material-164",
+      "name": "world/marina-deck",
+      "url": "materials/material-164.json.gz",
+      "bytes": 1925
+    },
+    {
+      "id": "material-165",
+      "name": "world/marina-post",
+      "url": "materials/material-165.json.gz",
+      "bytes": 1914
+    },
+    {
+      "id": "material-166",
+      "name": "world/skyline-glass",
+      "url": "materials/material-166.json.gz",
+      "bytes": 1932
+    },
+    {
+      "id": "material-167",
+      "name": "world/skyline-window-band",
+      "url": "materials/material-167.json.gz",
+      "bytes": 1936
+    },
+    {
+      "id": "material-168",
+      "name": "world/skyline-concrete",
+      "url": "materials/material-168.json.gz",
+      "bytes": 1941
+    },
+    {
+      "id": "material-169",
+      "name": "world/shallows",
+      "url": "materials/material-169.json.gz",
+      "bytes": 1930
+    },
+    {
+      "id": "material-170",
+      "name": "world/sea-foam",
+      "url": "materials/material-170.json.gz",
+      "bytes": 1129
+    }
+  ],
+  "colliders": [
+    {
+      "id": "collision/urban-ground/0",
+      "x": -147.5,
+      "y": -0.55,
+      "z": -36,
+      "w": 605,
+      "h": 1.1,
+      "d": 548,
+      "global": true
+    },
+    {
+      "id": "collision/beach/1",
+      "x": 182.5,
+      "y": -0.58,
+      "z": 0,
+      "w": 55,
+      "h": 1.1,
+      "d": 1250,
+      "global": true
+    },
+    {
+      "id": "collision/seabed/2",
+      "x": 1210,
+      "y": -4.1,
+      "z": 0,
+      "w": 2000,
+      "h": 1,
+      "d": 2400,
+      "global": true
+    },
+    {
+      "id": "collision/western-green-margin/3",
+      "x": -510,
+      "y": -0.55,
+      "z": -36,
+      "w": 120,
+      "h": 1.1,
+      "d": 700,
+      "global": true
+    },
+    {
+      "id": "collision/city-block-sidewalk/4",
+      "x": -396,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/5",
+      "x": -396,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/6",
+      "x": -396,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/7",
+      "x": -396,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/8",
+      "x": -396,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/9",
+      "x": -396,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/10",
+      "x": -396,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/11",
+      "x": -324,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/12",
+      "x": -324,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/13",
+      "x": -324,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/14",
+      "x": -324,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/15",
+      "x": -324,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/16",
+      "x": -324,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/17",
+      "x": -324,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/18",
+      "x": -252,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/19",
+      "x": -252,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/20",
+      "x": -252,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/21",
+      "x": -252,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/22",
+      "x": -252,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/23",
+      "x": -252,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/24",
+      "x": -252,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/25",
+      "x": -180,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/26",
+      "x": -180,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/27",
+      "x": -180,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/28",
+      "x": -180,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/29",
+      "x": -180,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/30",
+      "x": -180,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/31",
+      "x": -180,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/32",
+      "x": -108,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/33",
+      "x": -108,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/34",
+      "x": -108,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/35",
+      "x": -108,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/36",
+      "x": -108,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/37",
+      "x": -108,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/38",
+      "x": -108,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/39",
+      "x": -36,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/40",
+      "x": -36,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/41",
+      "x": -36,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/42",
+      "x": -36,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/43",
+      "x": -36,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/44",
+      "x": -36,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/45",
+      "x": -36,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/46",
+      "x": 36,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/47",
+      "x": 36,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/48",
+      "x": 36,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/49",
+      "x": 36,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/50",
+      "x": 36,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/51",
+      "x": 36,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/52",
+      "x": 36,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/53",
+      "x": 108,
+      "y": 0.055,
+      "z": -252,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/54",
+      "x": 108,
+      "y": 0.055,
+      "z": -180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/55",
+      "x": 108,
+      "y": 0.055,
+      "z": -108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/56",
+      "x": 108,
+      "y": 0.055,
+      "z": -36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/57",
+      "x": 108,
+      "y": 0.055,
+      "z": 36,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/58",
+      "x": 108,
+      "y": 0.055,
+      "z": 108,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/city-block-sidewalk/59",
+      "x": 108,
+      "y": 0.055,
+      "z": 180,
+      "w": 58,
+      "h": 0.11,
+      "d": 58,
+      "global": false
+    },
+    {
+      "id": "collision/building/60",
+      "x": -191.2,
+      "y": 5.419999999999999,
+      "z": -190,
+      "w": 19,
+      "h": 10.499999999999998,
+      "d": 29,
+      "global": false,
+      "obstacle": {
+        "x": -191.2,
+        "z": -190,
+        "w": 19,
+        "d": 29,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/61",
+      "x": -168.6,
+      "y": 7.069999999999999,
+      "z": -174,
+      "w": 20,
+      "h": 13.799999999999999,
+      "d": 32,
+      "global": false,
+      "obstacle": {
+        "x": -168.6,
+        "z": -174,
+        "w": 20,
+        "d": 32,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/62",
+      "x": -180,
+      "y": 5.419999999999999,
+      "z": -103,
+      "w": 40,
+      "h": 10.499999999999998,
+      "d": 28,
+      "global": false,
+      "obstacle": {
+        "x": -180,
+        "z": -103,
+        "w": 40,
+        "d": 28,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/63",
+      "x": -191.2,
+      "y": 5.419999999999999,
+      "z": -46,
+      "w": 19,
+      "h": 10.499999999999998,
+      "d": 29,
+      "global": false,
+      "obstacle": {
+        "x": -191.2,
+        "z": -46,
+        "w": 19,
+        "d": 29,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/64",
+      "x": -168.6,
+      "y": 7.069999999999999,
+      "z": -30,
+      "w": 20,
+      "h": 13.799999999999999,
+      "d": 32,
+      "global": false,
+      "obstacle": {
+        "x": -168.6,
+        "z": -30,
+        "w": 20,
+        "d": 32,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/65",
+      "x": -191.2,
+      "y": 5.419999999999999,
+      "z": 26,
+      "w": 19,
+      "h": 10.499999999999998,
+      "d": 29,
+      "global": false,
+      "obstacle": {
+        "x": -191.2,
+        "z": 26,
+        "w": 19,
+        "d": 29,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/66",
+      "x": -168.6,
+      "y": 8.72,
+      "z": 42,
+      "w": 20,
+      "h": 17.1,
+      "d": 32,
+      "global": false,
+      "obstacle": {
+        "x": -168.6,
+        "z": 42,
+        "w": 20,
+        "d": 32,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/67",
+      "x": -191.2,
+      "y": 5.419999999999999,
+      "z": 98,
+      "w": 19,
+      "h": 10.499999999999998,
+      "d": 29,
+      "global": false,
+      "obstacle": {
+        "x": -191.2,
+        "z": 98,
+        "w": 19,
+        "d": 29,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/68",
+      "x": -168.6,
+      "y": 7.069999999999999,
+      "z": 114,
+      "w": 20,
+      "h": 13.799999999999999,
+      "d": 32,
+      "global": false,
+      "obstacle": {
+        "x": -168.6,
+        "z": 114,
+        "w": 20,
+        "d": 32,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/69",
+      "x": -191.2,
+      "y": 5.419999999999999,
+      "z": 170,
+      "w": 19,
+      "h": 10.499999999999998,
+      "d": 29,
+      "global": false,
+      "obstacle": {
+        "x": -191.2,
+        "z": 170,
+        "w": 19,
+        "d": 29,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/70",
+      "x": -168.6,
+      "y": 8.72,
+      "z": 186,
+      "w": 20,
+      "h": 17.1,
+      "d": 32,
+      "global": false,
+      "obstacle": {
+        "x": -168.6,
+        "z": 186,
+        "w": 20,
+        "d": 32,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/71",
+      "x": -119.9,
+      "y": 5.419999999999999,
+      "z": -186,
+      "w": 19.5,
+      "h": 10.499999999999998,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -119.9,
+        "z": -186,
+        "w": 19.5,
+        "d": 38,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/72",
+      "x": -96,
+      "y": 8.72,
+      "z": -176,
+      "w": 19.5,
+      "h": 17.1,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -96,
+        "z": -176,
+        "w": 19.5,
+        "d": 36,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/73",
+      "x": -108,
+      "y": 3.7699999999999996,
+      "z": -117,
+      "w": 42,
+      "h": 7.199999999999999,
+      "d": 24,
+      "global": false,
+      "obstacle": {
+        "x": -108,
+        "z": -117,
+        "w": 42,
+        "d": 24,
+        "height": 7.199999999999999
+      }
+    },
+    {
+      "id": "collision/building/74",
+      "x": -118,
+      "y": 8.72,
+      "z": -92,
+      "w": 20,
+      "h": 17.1,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -118,
+        "z": -92,
+        "w": 20,
+        "d": 16,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/shop-back/75",
+      "x": -108,
+      "y": 2.72,
+      "z": -22.5,
+      "w": 35,
+      "h": 5.1,
+      "d": 0.45,
+      "global": false,
+      "obstacle": {
+        "x": -108,
+        "z": -22.5,
+        "w": 35,
+        "d": 0.45,
+        "height": 5.1
+      }
+    },
+    {
+      "id": "collision/shop-side/76",
+      "x": -125.5,
+      "y": 2.72,
+      "z": -36,
+      "w": 0.45,
+      "h": 5.1,
+      "d": 27,
+      "global": false,
+      "obstacle": {
+        "x": -125.5,
+        "z": -36,
+        "w": 0.45,
+        "d": 27,
+        "height": 5.1
+      }
+    },
+    {
+      "id": "collision/shop-front-wing/77",
+      "x": -119,
+      "y": 2,
+      "z": -49.5,
+      "w": 13,
+      "h": 3.65,
+      "d": 0.38,
+      "global": false,
+      "obstacle": {
+        "x": -119,
+        "z": -49.5,
+        "w": 13,
+        "d": 0.38,
+        "height": 3.65
+      }
+    },
+    {
+      "id": "collision/shop-side/78",
+      "x": -90.5,
+      "y": 2.72,
+      "z": -36,
+      "w": 0.45,
+      "h": 5.1,
+      "d": 27,
+      "global": false,
+      "obstacle": {
+        "x": -90.5,
+        "z": -36,
+        "w": 0.45,
+        "d": 27,
+        "height": 5.1
+      }
+    },
+    {
+      "id": "collision/shop-front-wing/79",
+      "x": -97,
+      "y": 2,
+      "z": -49.5,
+      "w": 13,
+      "h": 3.65,
+      "d": 0.38,
+      "global": false,
+      "obstacle": {
+        "x": -97,
+        "z": -49.5,
+        "w": 13,
+        "d": 0.38,
+        "height": 3.65
+      }
+    },
+    {
+      "id": "collision/shop-roof/80",
+      "x": -108,
+      "y": 5.24,
+      "z": -36,
+      "w": 35.7,
+      "h": 0.36,
+      "d": 27.7,
+      "global": false
+    },
+    {
+      "id": "collision/shop-counter/81",
+      "x": -99,
+      "y": 0.84,
+      "z": -41,
+      "w": 9,
+      "h": 1.26,
+      "d": 1.4,
+      "global": false,
+      "obstacle": {
+        "x": -99,
+        "z": -41,
+        "w": 9,
+        "d": 1.4,
+        "height": 1.26
+      }
+    },
+    {
+      "id": "collision/building/82",
+      "x": -119.9,
+      "y": 8.72,
+      "z": 30,
+      "w": 19.5,
+      "h": 17.1,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -119.9,
+        "z": 30,
+        "w": 19.5,
+        "d": 38,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/83",
+      "x": -96,
+      "y": 7.069999999999999,
+      "z": 40,
+      "w": 19.5,
+      "h": 13.799999999999999,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -96,
+        "z": 40,
+        "w": 19.5,
+        "d": 36,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/84",
+      "x": -119.9,
+      "y": 12.02,
+      "z": 102,
+      "w": 19.5,
+      "h": 23.7,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -119.9,
+        "z": 102,
+        "w": 19.5,
+        "d": 38,
+        "height": 23.7
+      }
+    },
+    {
+      "id": "collision/building/85",
+      "x": -96,
+      "y": 5.419999999999999,
+      "z": 112,
+      "w": 19.5,
+      "h": 10.499999999999998,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -96,
+        "z": 112,
+        "w": 19.5,
+        "d": 36,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/86",
+      "x": -119.9,
+      "y": 10.37,
+      "z": 174,
+      "w": 19.5,
+      "h": 20.4,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -119.9,
+        "z": 174,
+        "w": 19.5,
+        "d": 38,
+        "height": 20.4
+      }
+    },
+    {
+      "id": "collision/building/87",
+      "x": -96,
+      "y": 7.069999999999999,
+      "z": 184,
+      "w": 19.5,
+      "h": 13.799999999999999,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -96,
+        "z": 184,
+        "w": 19.5,
+        "d": 36,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/88",
+      "x": -47.9,
+      "y": 8.72,
+      "z": -186,
+      "w": 19.5,
+      "h": 17.1,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -47.9,
+        "z": -186,
+        "w": 19.5,
+        "d": 38,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/89",
+      "x": -24,
+      "y": 8.72,
+      "z": -176,
+      "w": 19.5,
+      "h": 17.1,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -24,
+        "z": -176,
+        "w": 19.5,
+        "d": 36,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/90",
+      "x": -47.9,
+      "y": 8.72,
+      "z": -114,
+      "w": 19.5,
+      "h": 17.1,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -47.9,
+        "z": -114,
+        "w": 19.5,
+        "d": 38,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/91",
+      "x": -24,
+      "y": 8.72,
+      "z": -104,
+      "w": 19.5,
+      "h": 17.1,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -24,
+        "z": -104,
+        "w": 19.5,
+        "d": 36,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/garage-back/92",
+      "x": -36,
+      "y": 3.15,
+      "z": -22,
+      "w": 39,
+      "h": 6,
+      "d": 0.6,
+      "global": false,
+      "obstacle": {
+        "x": -36,
+        "z": -22,
+        "w": 39,
+        "d": 0.6,
+        "height": 6
+      }
+    },
+    {
+      "id": "collision/garage-side/93",
+      "x": -55.5,
+      "y": 3.15,
+      "z": -36,
+      "w": 0.65,
+      "h": 6,
+      "d": 28,
+      "global": false,
+      "obstacle": {
+        "x": -55.5,
+        "z": -36,
+        "w": 0.65,
+        "d": 28,
+        "height": 6
+      }
+    },
+    {
+      "id": "collision/garage-side/94",
+      "x": -16.5,
+      "y": 3.15,
+      "z": -36,
+      "w": 0.65,
+      "h": 6,
+      "d": 28,
+      "global": false,
+      "obstacle": {
+        "x": -16.5,
+        "z": -36,
+        "w": 0.65,
+        "d": 28,
+        "height": 6
+      }
+    },
+    {
+      "id": "collision/garage-roof/95",
+      "x": -36,
+      "y": 6.22,
+      "z": -36,
+      "w": 40.3,
+      "h": 0.38,
+      "d": 29,
+      "global": false
+    },
+    {
+      "id": "collision/garage-pillar/96",
+      "x": -55.3,
+      "y": 2.45,
+      "z": -49.8,
+      "w": 0.55,
+      "h": 4.6,
+      "d": 0.65,
+      "global": false,
+      "obstacle": {
+        "x": -55.3,
+        "z": -49.8,
+        "w": 0.55,
+        "d": 0.65,
+        "height": 4.6
+      }
+    },
+    {
+      "id": "collision/garage-pillar/97",
+      "x": -42.4,
+      "y": 2.45,
+      "z": -49.8,
+      "w": 0.55,
+      "h": 4.6,
+      "d": 0.65,
+      "global": false,
+      "obstacle": {
+        "x": -42.4,
+        "z": -49.8,
+        "w": 0.55,
+        "d": 0.65,
+        "height": 4.6
+      }
+    },
+    {
+      "id": "collision/garage-pillar/98",
+      "x": -29.6,
+      "y": 2.45,
+      "z": -49.8,
+      "w": 0.55,
+      "h": 4.6,
+      "d": 0.65,
+      "global": false,
+      "obstacle": {
+        "x": -29.6,
+        "z": -49.8,
+        "w": 0.55,
+        "d": 0.65,
+        "height": 4.6
+      }
+    },
+    {
+      "id": "collision/garage-pillar/99",
+      "x": -16.7,
+      "y": 2.45,
+      "z": -49.8,
+      "w": 0.55,
+      "h": 4.6,
+      "d": 0.65,
+      "global": false,
+      "obstacle": {
+        "x": -16.7,
+        "z": -49.8,
+        "w": 0.55,
+        "d": 0.65,
+        "height": 4.6
+      }
+    },
+    {
+      "id": "collision/building/100",
+      "x": -47.9,
+      "y": 10.37,
+      "z": 30,
+      "w": 19.5,
+      "h": 20.4,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -47.9,
+        "z": 30,
+        "w": 19.5,
+        "d": 38,
+        "height": 20.4
+      }
+    },
+    {
+      "id": "collision/building/101",
+      "x": -24,
+      "y": 7.069999999999999,
+      "z": 40,
+      "w": 19.5,
+      "h": 13.799999999999999,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -24,
+        "z": 40,
+        "w": 19.5,
+        "d": 36,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/102",
+      "x": -47.9,
+      "y": 7.069999999999999,
+      "z": 102,
+      "w": 19.5,
+      "h": 13.799999999999999,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": -47.9,
+        "z": 102,
+        "w": 19.5,
+        "d": 38,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/103",
+      "x": -24,
+      "y": 5.419999999999999,
+      "z": 112,
+      "w": 19.5,
+      "h": 10.499999999999998,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": -24,
+        "z": 112,
+        "w": 19.5,
+        "d": 36,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/104",
+      "x": -36,
+      "y": 3.7699999999999996,
+      "z": 171,
+      "w": 42,
+      "h": 7.199999999999999,
+      "d": 24,
+      "global": false,
+      "obstacle": {
+        "x": -36,
+        "z": 171,
+        "w": 42,
+        "d": 24,
+        "height": 7.199999999999999
+      }
+    },
+    {
+      "id": "collision/building/105",
+      "x": -46,
+      "y": 8.72,
+      "z": 196,
+      "w": 20,
+      "h": 17.1,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -46,
+        "z": 196,
+        "w": 20,
+        "d": 16,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/106",
+      "x": 24.1,
+      "y": 5.419999999999999,
+      "z": -186,
+      "w": 19.5,
+      "h": 10.499999999999998,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": 24.1,
+        "z": -186,
+        "w": 19.5,
+        "d": 38,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/107",
+      "x": 48,
+      "y": 8.72,
+      "z": -176,
+      "w": 19.5,
+      "h": 17.1,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": 48,
+        "z": -176,
+        "w": 19.5,
+        "d": 36,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/108",
+      "x": 24.1,
+      "y": 10.37,
+      "z": -114,
+      "w": 19.5,
+      "h": 20.4,
+      "d": 38,
+      "global": false,
+      "obstacle": {
+        "x": 24.1,
+        "z": -114,
+        "w": 19.5,
+        "d": 38,
+        "height": 20.4
+      }
+    },
+    {
+      "id": "collision/building/109",
+      "x": 48,
+      "y": 7.069999999999999,
+      "z": -104,
+      "w": 19.5,
+      "h": 13.799999999999999,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": 48,
+        "z": -104,
+        "w": 19.5,
+        "d": 36,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/110",
+      "x": 36,
+      "y": 3.7699999999999996,
+      "z": -45,
+      "w": 42,
+      "h": 7.199999999999999,
+      "d": 24,
+      "global": false,
+      "obstacle": {
+        "x": 36,
+        "z": -45,
+        "w": 42,
+        "d": 24,
+        "height": 7.199999999999999
+      }
+    },
+    {
+      "id": "collision/building/111",
+      "x": 26,
+      "y": 8.72,
+      "z": -20,
+      "w": 20,
+      "h": 17.1,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": 26,
+        "z": -20,
+        "w": 20,
+        "d": 16,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/112",
+      "x": 36,
+      "y": 5.419999999999999,
+      "z": 99,
+      "w": 42,
+      "h": 10.499999999999998,
+      "d": 24,
+      "global": false,
+      "obstacle": {
+        "x": 36,
+        "z": 99,
+        "w": 42,
+        "d": 24,
+        "height": 10.499999999999998
+      }
+    },
+    {
+      "id": "collision/building/113",
+      "x": 26,
+      "y": 13.67,
+      "z": 124,
+      "w": 20,
+      "h": 27,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": 26,
+        "z": 124,
+        "w": 20,
+        "d": 16,
+        "height": 27
+      }
+    },
+    {
+      "id": "collision/building/114",
+      "x": 36,
+      "y": 3.7699999999999996,
+      "z": 171,
+      "w": 42,
+      "h": 7.199999999999999,
+      "d": 24,
+      "global": false,
+      "obstacle": {
+        "x": 36,
+        "z": 171,
+        "w": 42,
+        "d": 24,
+        "height": 7.199999999999999
+      }
+    },
+    {
+      "id": "collision/building/115",
+      "x": 26,
+      "y": 8.72,
+      "z": 196,
+      "w": 20,
+      "h": 17.1,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": 26,
+        "z": 196,
+        "w": 20,
+        "d": 16,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/building/116",
+      "x": 109,
+      "y": 10.37,
+      "z": -180,
+      "w": 35,
+      "h": 20.4,
+      "d": 39,
+      "global": false,
+      "obstacle": {
+        "x": 109,
+        "z": -180,
+        "w": 35,
+        "d": 39,
+        "height": 20.4
+      }
+    },
+    {
+      "id": "collision/building/117",
+      "x": 109,
+      "y": 7.069999999999999,
+      "z": -108,
+      "w": 35,
+      "h": 13.799999999999999,
+      "d": 39,
+      "global": false,
+      "obstacle": {
+        "x": 109,
+        "z": -108,
+        "w": 35,
+        "d": 39,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/118",
+      "x": 109,
+      "y": 13.67,
+      "z": -36,
+      "w": 35,
+      "h": 27,
+      "d": 39,
+      "global": false,
+      "obstacle": {
+        "x": 109,
+        "z": -36,
+        "w": 35,
+        "d": 39,
+        "height": 27
+      }
+    },
+    {
+      "id": "collision/building/119",
+      "x": 109,
+      "y": 12.02,
+      "z": 36,
+      "w": 35,
+      "h": 23.7,
+      "d": 39,
+      "global": false,
+      "obstacle": {
+        "x": 109,
+        "z": 36,
+        "w": 35,
+        "d": 39,
+        "height": 23.7
+      }
+    },
+    {
+      "id": "collision/building/120",
+      "x": 109,
+      "y": 7.069999999999999,
+      "z": 108,
+      "w": 35,
+      "h": 13.799999999999999,
+      "d": 39,
+      "global": false,
+      "obstacle": {
+        "x": 109,
+        "z": 108,
+        "w": 35,
+        "d": 39,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/building/121",
+      "x": 109,
+      "y": 8.72,
+      "z": 180,
+      "w": 35,
+      "h": 17.1,
+      "d": 39,
+      "global": false,
+      "obstacle": {
+        "x": 109,
+        "z": 180,
+        "w": 35,
+        "d": 39,
+        "height": 17.1
+      }
+    },
+    {
+      "id": "collision/warehouse/122",
+      "x": -396,
+      "y": 4.3,
+      "z": -247,
+      "w": 43,
+      "h": 8.3,
+      "d": 34,
+      "global": false,
+      "obstacle": {
+        "x": -396,
+        "z": -247,
+        "w": 43,
+        "d": 34,
+        "height": 8.3
+      }
+    },
+    {
+      "id": "collision/bungalow/123",
+      "x": -408.5,
+      "y": 1.92,
+      "z": -192,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": -192,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/124",
+      "x": -408.5,
+      "y": 4.12,
+      "z": -192,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/125",
+      "x": -408.5,
+      "y": 2.27,
+      "z": -167,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": -167,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/126",
+      "x": -408.5,
+      "y": 4.82,
+      "z": -167,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/127",
+      "x": -383.5,
+      "y": 1.92,
+      "z": -192,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": -192,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/128",
+      "x": -383.5,
+      "y": 4.12,
+      "z": -192,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/129",
+      "x": -383.5,
+      "y": 1.92,
+      "z": -167,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": -167,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/130",
+      "x": -383.5,
+      "y": 4.12,
+      "z": -167,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/131",
+      "x": -408.5,
+      "y": 1.92,
+      "z": -120,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": -120,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/132",
+      "x": -408.5,
+      "y": 4.12,
+      "z": -120,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/133",
+      "x": -408.5,
+      "y": 2.27,
+      "z": -95,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": -95,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/134",
+      "x": -408.5,
+      "y": 4.82,
+      "z": -95,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/135",
+      "x": -383.5,
+      "y": 1.92,
+      "z": -120,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": -120,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/136",
+      "x": -383.5,
+      "y": 4.12,
+      "z": -120,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/137",
+      "x": -383.5,
+      "y": 1.92,
+      "z": -95,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": -95,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/138",
+      "x": -383.5,
+      "y": 4.12,
+      "z": -95,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/139",
+      "x": -408.5,
+      "y": 1.92,
+      "z": -48,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": -48,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/140",
+      "x": -408.5,
+      "y": 4.12,
+      "z": -48,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/141",
+      "x": -408.5,
+      "y": 2.27,
+      "z": -23,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": -23,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/142",
+      "x": -408.5,
+      "y": 4.82,
+      "z": -23,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/143",
+      "x": -383.5,
+      "y": 1.92,
+      "z": -48,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": -48,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/144",
+      "x": -383.5,
+      "y": 4.12,
+      "z": -48,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/145",
+      "x": -383.5,
+      "y": 1.92,
+      "z": -23,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": -23,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/146",
+      "x": -383.5,
+      "y": 4.12,
+      "z": -23,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/147",
+      "x": -408.5,
+      "y": 1.92,
+      "z": 24,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": 24,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/148",
+      "x": -408.5,
+      "y": 4.12,
+      "z": 24,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/149",
+      "x": -408.5,
+      "y": 2.27,
+      "z": 49,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": 49,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/150",
+      "x": -408.5,
+      "y": 4.82,
+      "z": 49,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/151",
+      "x": -383.5,
+      "y": 1.92,
+      "z": 24,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": 24,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/152",
+      "x": -383.5,
+      "y": 4.12,
+      "z": 24,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/153",
+      "x": -383.5,
+      "y": 1.92,
+      "z": 49,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": 49,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/154",
+      "x": -383.5,
+      "y": 4.12,
+      "z": 49,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/155",
+      "x": -408.5,
+      "y": 1.92,
+      "z": 96,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": 96,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/156",
+      "x": -408.5,
+      "y": 4.12,
+      "z": 96,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/157",
+      "x": -408.5,
+      "y": 2.27,
+      "z": 121,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -408.5,
+        "z": 121,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/158",
+      "x": -408.5,
+      "y": 4.82,
+      "z": 121,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/159",
+      "x": -383.5,
+      "y": 1.92,
+      "z": 96,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": 96,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/160",
+      "x": -383.5,
+      "y": 4.12,
+      "z": 96,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/161",
+      "x": -383.5,
+      "y": 1.92,
+      "z": 121,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -383.5,
+        "z": 121,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/162",
+      "x": -383.5,
+      "y": 4.12,
+      "z": 121,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/warehouse/163",
+      "x": -324,
+      "y": 4.3,
+      "z": -247,
+      "w": 43,
+      "h": 8.3,
+      "d": 34,
+      "global": false,
+      "obstacle": {
+        "x": -324,
+        "z": -247,
+        "w": 43,
+        "d": 34,
+        "height": 8.3
+      }
+    },
+    {
+      "id": "collision/bungalow/164",
+      "x": -336.5,
+      "y": 1.92,
+      "z": -192,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": -192,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/165",
+      "x": -336.5,
+      "y": 4.12,
+      "z": -192,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/166",
+      "x": -336.5,
+      "y": 2.27,
+      "z": -167,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": -167,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/167",
+      "x": -336.5,
+      "y": 4.82,
+      "z": -167,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/168",
+      "x": -311.5,
+      "y": 1.92,
+      "z": -192,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": -192,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/169",
+      "x": -311.5,
+      "y": 4.12,
+      "z": -192,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/170",
+      "x": -311.5,
+      "y": 1.92,
+      "z": -167,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": -167,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/171",
+      "x": -311.5,
+      "y": 4.12,
+      "z": -167,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/diner/172",
+      "x": -324,
+      "y": 2.32,
+      "z": -100,
+      "w": 39,
+      "h": 4.3,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -324,
+        "z": -100,
+        "w": 39,
+        "d": 17,
+        "height": 4.3
+      }
+    },
+    {
+      "id": "collision/bungalow/173",
+      "x": -336.5,
+      "y": 1.92,
+      "z": -48,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": -48,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/174",
+      "x": -336.5,
+      "y": 4.12,
+      "z": -48,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/175",
+      "x": -336.5,
+      "y": 2.27,
+      "z": -23,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": -23,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/176",
+      "x": -336.5,
+      "y": 4.82,
+      "z": -23,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/177",
+      "x": -311.5,
+      "y": 1.92,
+      "z": -48,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": -48,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/178",
+      "x": -311.5,
+      "y": 4.12,
+      "z": -48,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/179",
+      "x": -311.5,
+      "y": 1.92,
+      "z": -23,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": -23,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/180",
+      "x": -311.5,
+      "y": 4.12,
+      "z": -23,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/building/181",
+      "x": -324,
+      "y": 3.7699999999999996,
+      "z": 52,
+      "w": 42,
+      "h": 7.199999999999999,
+      "d": 14,
+      "global": false,
+      "obstacle": {
+        "x": -324,
+        "z": 52,
+        "w": 42,
+        "d": 14,
+        "height": 7.199999999999999
+      }
+    },
+    {
+      "id": "collision/bungalow/182",
+      "x": -336.5,
+      "y": 1.92,
+      "z": 96,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": 96,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/183",
+      "x": -336.5,
+      "y": 4.12,
+      "z": 96,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/184",
+      "x": -336.5,
+      "y": 2.27,
+      "z": 121,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": 121,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/185",
+      "x": -336.5,
+      "y": 4.82,
+      "z": 121,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/186",
+      "x": -311.5,
+      "y": 1.92,
+      "z": 96,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": 96,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/187",
+      "x": -311.5,
+      "y": 4.12,
+      "z": 96,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/188",
+      "x": -311.5,
+      "y": 1.92,
+      "z": 121,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": 121,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/189",
+      "x": -311.5,
+      "y": 4.12,
+      "z": 121,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/190",
+      "x": -336.5,
+      "y": 1.92,
+      "z": 168,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": 168,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/191",
+      "x": -336.5,
+      "y": 4.12,
+      "z": 168,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/192",
+      "x": -336.5,
+      "y": 2.27,
+      "z": 193,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -336.5,
+        "z": 193,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/193",
+      "x": -336.5,
+      "y": 4.82,
+      "z": 193,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/194",
+      "x": -311.5,
+      "y": 1.92,
+      "z": 168,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": 168,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/195",
+      "x": -311.5,
+      "y": 4.12,
+      "z": 168,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/196",
+      "x": -311.5,
+      "y": 1.92,
+      "z": 193,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -311.5,
+        "z": 193,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/197",
+      "x": -311.5,
+      "y": 4.12,
+      "z": 193,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/warehouse/198",
+      "x": -252,
+      "y": 4.3,
+      "z": -247,
+      "w": 43,
+      "h": 8.3,
+      "d": 34,
+      "global": false,
+      "obstacle": {
+        "x": -252,
+        "z": -247,
+        "w": 43,
+        "d": 34,
+        "height": 8.3
+      }
+    },
+    {
+      "id": "collision/bungalow/199",
+      "x": -264.5,
+      "y": 1.92,
+      "z": -192,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": -192,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/200",
+      "x": -264.5,
+      "y": 4.12,
+      "z": -192,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/201",
+      "x": -264.5,
+      "y": 2.27,
+      "z": -167,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": -167,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/202",
+      "x": -264.5,
+      "y": 4.82,
+      "z": -167,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/203",
+      "x": -239.5,
+      "y": 1.92,
+      "z": -192,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": -192,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/204",
+      "x": -239.5,
+      "y": 4.12,
+      "z": -192,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/205",
+      "x": -239.5,
+      "y": 1.92,
+      "z": -167,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": -167,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/206",
+      "x": -239.5,
+      "y": 4.12,
+      "z": -167,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/207",
+      "x": -264.5,
+      "y": 1.92,
+      "z": -120,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": -120,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/208",
+      "x": -264.5,
+      "y": 4.12,
+      "z": -120,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/209",
+      "x": -264.5,
+      "y": 2.27,
+      "z": -95,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": -95,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/210",
+      "x": -264.5,
+      "y": 4.82,
+      "z": -95,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/211",
+      "x": -239.5,
+      "y": 1.92,
+      "z": -120,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": -120,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/212",
+      "x": -239.5,
+      "y": 4.12,
+      "z": -120,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/213",
+      "x": -239.5,
+      "y": 1.92,
+      "z": -95,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": -95,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/214",
+      "x": -239.5,
+      "y": 4.12,
+      "z": -95,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/building/215",
+      "x": -252,
+      "y": 3.7699999999999996,
+      "z": -29,
+      "w": 40,
+      "h": 7.199999999999999,
+      "d": 26,
+      "global": false,
+      "obstacle": {
+        "x": -252,
+        "z": -29,
+        "w": 40,
+        "d": 26,
+        "height": 7.199999999999999
+      }
+    },
+    {
+      "id": "collision/bungalow/216",
+      "x": -264.5,
+      "y": 1.92,
+      "z": 24,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": 24,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/217",
+      "x": -264.5,
+      "y": 4.12,
+      "z": 24,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/218",
+      "x": -264.5,
+      "y": 2.27,
+      "z": 49,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": 49,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/219",
+      "x": -264.5,
+      "y": 4.82,
+      "z": 49,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/220",
+      "x": -239.5,
+      "y": 1.92,
+      "z": 24,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": 24,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/221",
+      "x": -239.5,
+      "y": 4.12,
+      "z": 24,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/222",
+      "x": -239.5,
+      "y": 1.92,
+      "z": 49,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": 49,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/223",
+      "x": -239.5,
+      "y": 4.12,
+      "z": 49,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/building/224",
+      "x": -252,
+      "y": 3.7699999999999996,
+      "z": 115,
+      "w": 40,
+      "h": 7.199999999999999,
+      "d": 26,
+      "global": false,
+      "obstacle": {
+        "x": -252,
+        "z": 115,
+        "w": 40,
+        "d": 26,
+        "height": 7.199999999999999
+      }
+    },
+    {
+      "id": "collision/bungalow/225",
+      "x": -264.5,
+      "y": 1.92,
+      "z": 168,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": 168,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/226",
+      "x": -264.5,
+      "y": 4.12,
+      "z": 168,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/227",
+      "x": -264.5,
+      "y": 2.27,
+      "z": 193,
+      "w": 18.5,
+      "h": 4.2,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -264.5,
+        "z": 193,
+        "w": 18.5,
+        "d": 17,
+        "height": 4.2
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/228",
+      "x": -264.5,
+      "y": 4.82,
+      "z": 193,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/229",
+      "x": -239.5,
+      "y": 1.92,
+      "z": 168,
+      "w": 17.5,
+      "h": 3.5,
+      "d": 16,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": 168,
+        "w": 17.5,
+        "d": 16,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/230",
+      "x": -239.5,
+      "y": 4.12,
+      "z": 168,
+      "w": 17.5,
+      "h": 1.1,
+      "d": 16,
+      "global": false
+    },
+    {
+      "id": "collision/bungalow/231",
+      "x": -239.5,
+      "y": 1.92,
+      "z": 193,
+      "w": 18.5,
+      "h": 3.5,
+      "d": 17,
+      "global": false,
+      "obstacle": {
+        "x": -239.5,
+        "z": 193,
+        "w": 18.5,
+        "d": 17,
+        "height": 3.5
+      }
+    },
+    {
+      "id": "collision/bungalow-attic/232",
+      "x": -239.5,
+      "y": 4.12,
+      "z": 193,
+      "w": 18.5,
+      "h": 1.1,
+      "d": 17,
+      "global": false
+    },
+    {
+      "id": "collision/warehouse/233",
+      "x": -180,
+      "y": 4.3,
+      "z": -247,
+      "w": 43,
+      "h": 8.3,
+      "d": 34,
+      "global": false,
+      "obstacle": {
+        "x": -180,
+        "z": -247,
+        "w": 43,
+        "d": 34,
+        "height": 8.3
+      }
+    },
+    {
+      "id": "collision/warehouse/234",
+      "x": -108,
+      "y": 4.3,
+      "z": -247,
+      "w": 43,
+      "h": 8.3,
+      "d": 34,
+      "global": false,
+      "obstacle": {
+        "x": -108,
+        "z": -247,
+        "w": 43,
+        "d": 34,
+        "height": 8.3
+      }
+    },
+    {
+      "id": "collision/warehouse/235",
+      "x": -36,
+      "y": 4.3,
+      "z": -247,
+      "w": 43,
+      "h": 8.3,
+      "d": 34,
+      "global": false,
+      "obstacle": {
+        "x": -36,
+        "z": -247,
+        "w": 43,
+        "d": 34,
+        "height": 8.3
+      }
+    },
+    {
+      "id": "collision/warehouse/236",
+      "x": 36,
+      "y": 4.3,
+      "z": -247,
+      "w": 43,
+      "h": 8.3,
+      "d": 34,
+      "global": false,
+      "obstacle": {
+        "x": 36,
+        "z": -247,
+        "w": 43,
+        "d": 34,
+        "height": 8.3
+      }
+    },
+    {
+      "id": "collision/building/237",
+      "x": 108,
+      "y": 7.069999999999999,
+      "z": -252,
+      "w": 35,
+      "h": 13.799999999999999,
+      "d": 36,
+      "global": false,
+      "obstacle": {
+        "x": 108,
+        "z": -252,
+        "w": 35,
+        "d": 36,
+        "height": 13.799999999999999
+      }
+    },
+    {
+      "id": "collision/compound-perimeter/238",
+      "x": -548,
+      "y": 1.66,
+      "z": 138,
+      "w": 0.15,
+      "h": 3.2,
+      "d": 120,
+      "global": false,
+      "obstacle": {
+        "x": -548,
+        "z": 138,
+        "w": 0.15,
+        "d": 120,
+        "height": 3.2
+      }
+    },
+    {
+      "id": "collision/compound-perimeter/239",
+      "x": -502,
+      "y": 1.66,
+      "z": 78,
+      "w": 92,
+      "h": 3.2,
+      "d": 0.15,
+      "global": false,
+      "obstacle": {
+        "x": -502,
+        "z": 78,
+        "w": 92,
+        "d": 0.15,
+        "height": 3.2
+      }
+    },
+    {
+      "id": "collision/compound-perimeter/240",
+      "x": -502,
+      "y": 1.66,
+      "z": 198,
+      "w": 92,
+      "h": 3.2,
+      "d": 0.15,
+      "global": false,
+      "obstacle": {
+        "x": -502,
+        "z": 198,
+        "w": 92,
+        "d": 0.15,
+        "height": 3.2
+      }
+    },
+    {
+      "id": "collision/compound-perimeter/241",
+      "x": -456,
+      "y": 1.66,
+      "z": 107.5,
+      "w": 0.15,
+      "h": 3.2,
+      "d": 59,
+      "global": false,
+      "obstacle": {
+        "x": -456,
+        "z": 107.5,
+        "w": 0.15,
+        "d": 59,
+        "height": 3.2
+      }
+    },
+    {
+      "id": "collision/compound-perimeter/242",
+      "x": -456,
+      "y": 1.66,
+      "z": 174.5,
+      "w": 0.15,
+      "h": 3.2,
+      "d": 47,
+      "global": false,
+      "obstacle": {
+        "x": -456,
+        "z": 174.5,
+        "w": 0.15,
+        "d": 47,
+        "height": 3.2
+      }
+    },
+    {
+      "id": "collision/compound-gatehouse/243",
+      "x": -465,
+      "y": 1.86,
+      "z": 161,
+      "w": 7,
+      "h": 3.4,
+      "d": 7,
+      "global": false,
+      "obstacle": {
+        "x": -465,
+        "z": 161,
+        "w": 7,
+        "d": 7,
+        "height": 3.4
+      }
+    },
+    {
+      "id": "collision/compound-barracks/244",
+      "x": -522,
+      "y": 2.81,
+      "z": 177,
+      "w": 32,
+      "h": 5.3,
+      "d": 18,
+      "global": false,
+      "obstacle": {
+        "x": -522,
+        "z": 177,
+        "w": 32,
+        "d": 18,
+        "height": 5.3
+      }
+    },
+    {
+      "id": "collision/compound-workshop/245",
+      "x": -523,
+      "y": 2.7,
+      "z": 104,
+      "w": 30,
+      "h": 5.1,
+      "d": 22,
+      "global": false,
+      "obstacle": {
+        "x": -523,
+        "z": 104,
+        "w": 30,
+        "d": 22,
+        "height": 5.1
+      }
+    },
+    {
+      "id": "collision/marina-main-pier/246",
+      "x": 231,
+      "y": 0.48,
+      "z": -215,
+      "w": 49,
+      "h": 0.45,
+      "d": 4,
+      "global": false,
+      "obstacle": {
+        "x": 231,
+        "z": -215,
+        "w": 49,
+        "d": 4,
+        "height": 0.45
+      }
+    },
+    {
+      "id": "collision/marina-finger/247",
+      "x": 249,
+      "y": 0.47,
+      "z": -230,
+      "w": 3,
+      "h": 0.42,
+      "d": 28,
+      "global": false,
+      "obstacle": {
+        "x": 249,
+        "z": -230,
+        "w": 3,
+        "d": 28,
+        "height": 0.42
+      }
+    },
+    {
+      "id": "collision/marina-finger/248",
+      "x": 249,
+      "y": 0.47,
+      "z": -200,
+      "w": 3,
+      "h": 0.42,
+      "d": 28,
+      "global": false,
+      "obstacle": {
+        "x": 249,
+        "z": -200,
+        "w": 3,
+        "d": 28,
+        "height": 0.42
+      }
+    }
+  ],
+  "lights": [
+    [
+      -424.52,
+      7.19,
+      -270
+    ],
+    [
+      -370.52,
+      7.19,
+      -234
+    ],
+    [
+      -424.52,
+      7.19,
+      -198
+    ],
+    [
+      -370.52,
+      7.19,
+      -162
+    ],
+    [
+      -424.52,
+      7.19,
+      -126
+    ],
+    [
+      -370.52,
+      7.19,
+      -90
+    ],
+    [
+      -424.52,
+      7.19,
+      -54
+    ],
+    [
+      -370.52,
+      7.19,
+      -18
+    ],
+    [
+      -424.52,
+      7.19,
+      18
+    ],
+    [
+      -370.52,
+      7.19,
+      54
+    ],
+    [
+      -424.52,
+      7.19,
+      90
+    ],
+    [
+      -370.52,
+      7.19,
+      126
+    ],
+    [
+      -424.52,
+      7.19,
+      162
+    ],
+    [
+      -370.52,
+      7.19,
+      198
+    ],
+    [
+      -352.52,
+      7.19,
+      -270
+    ],
+    [
+      -298.52,
+      7.19,
+      -234
+    ],
+    [
+      -352.52,
+      7.19,
+      -198
+    ],
+    [
+      -298.52,
+      7.19,
+      -162
+    ],
+    [
+      -352.52,
+      7.19,
+      -126
+    ],
+    [
+      -298.52,
+      7.19,
+      -90
+    ],
+    [
+      -352.52,
+      7.19,
+      -54
+    ],
+    [
+      -298.52,
+      7.19,
+      -18
+    ],
+    [
+      -352.52,
+      7.19,
+      18
+    ],
+    [
+      -298.52,
+      7.19,
+      54
+    ],
+    [
+      -352.52,
+      7.19,
+      90
+    ],
+    [
+      -298.52,
+      7.19,
+      126
+    ],
+    [
+      -352.52,
+      7.19,
+      162
+    ],
+    [
+      -298.52,
+      7.19,
+      198
+    ],
+    [
+      -280.52,
+      7.19,
+      -270
+    ],
+    [
+      -226.52,
+      7.19,
+      -234
+    ],
+    [
+      -280.52,
+      7.19,
+      -198
+    ],
+    [
+      -226.52,
+      7.19,
+      -162
+    ],
+    [
+      -280.52,
+      7.19,
+      -126
+    ],
+    [
+      -226.52,
+      7.19,
+      -90
+    ],
+    [
+      -280.52,
+      7.19,
+      -54
+    ],
+    [
+      -226.52,
+      7.19,
+      -18
+    ],
+    [
+      -280.52,
+      7.19,
+      18
+    ],
+    [
+      -226.52,
+      7.19,
+      54
+    ],
+    [
+      -280.52,
+      7.19,
+      90
+    ],
+    [
+      -226.52,
+      7.19,
+      126
+    ],
+    [
+      -280.52,
+      7.19,
+      162
+    ],
+    [
+      -226.52,
+      7.19,
+      198
+    ],
+    [
+      -208.52,
+      7.19,
+      -270
+    ],
+    [
+      -154.52,
+      7.19,
+      -234
+    ],
+    [
+      -208.52,
+      7.19,
+      -198
+    ],
+    [
+      -154.52,
+      7.19,
+      -162
+    ],
+    [
+      -208.52,
+      7.19,
+      -126
+    ],
+    [
+      -154.52,
+      7.19,
+      -90
+    ],
+    [
+      -208.52,
+      7.19,
+      -54
+    ],
+    [
+      -154.52,
+      7.19,
+      -18
+    ],
+    [
+      -208.52,
+      7.19,
+      18
+    ],
+    [
+      -154.52,
+      7.19,
+      54
+    ],
+    [
+      -208.52,
+      7.19,
+      90
+    ],
+    [
+      -154.52,
+      7.19,
+      126
+    ],
+    [
+      -208.52,
+      7.19,
+      162
+    ],
+    [
+      -154.52,
+      7.19,
+      198
+    ],
+    [
+      -136.52,
+      7.19,
+      -270
+    ],
+    [
+      -82.52,
+      7.19,
+      -234
+    ],
+    [
+      -136.52,
+      7.19,
+      -198
+    ],
+    [
+      -82.52,
+      7.19,
+      -162
+    ],
+    [
+      -136.52,
+      7.19,
+      -126
+    ],
+    [
+      -82.52,
+      7.19,
+      -90
+    ],
+    [
+      -136.52,
+      7.19,
+      -54
+    ],
+    [
+      -82.52,
+      7.19,
+      -18
+    ],
+    [
+      -136.52,
+      7.19,
+      18
+    ],
+    [
+      -82.52,
+      7.19,
+      54
+    ],
+    [
+      -136.52,
+      7.19,
+      90
+    ],
+    [
+      -82.52,
+      7.19,
+      126
+    ],
+    [
+      -136.52,
+      7.19,
+      162
+    ],
+    [
+      -82.52,
+      7.19,
+      198
+    ],
+    [
+      -64.52,
+      7.19,
+      -270
+    ],
+    [
+      -10.52,
+      7.19,
+      -234
+    ],
+    [
+      -64.52,
+      7.19,
+      -198
+    ],
+    [
+      -10.52,
+      7.19,
+      -162
+    ],
+    [
+      -64.52,
+      7.19,
+      -126
+    ],
+    [
+      -10.52,
+      7.19,
+      -90
+    ],
+    [
+      -64.52,
+      7.19,
+      -54
+    ],
+    [
+      -10.52,
+      7.19,
+      -18
+    ],
+    [
+      -64.52,
+      7.19,
+      18
+    ],
+    [
+      -10.52,
+      7.19,
+      54
+    ],
+    [
+      -64.52,
+      7.19,
+      90
+    ],
+    [
+      -10.52,
+      7.19,
+      126
+    ],
+    [
+      -64.52,
+      7.19,
+      162
+    ],
+    [
+      -10.52,
+      7.19,
+      198
+    ],
+    [
+      10.52,
+      7.19,
+      -270
+    ],
+    [
+      64.52,
+      7.19,
+      -234
+    ],
+    [
+      10.52,
+      7.19,
+      -198
+    ],
+    [
+      64.52,
+      7.19,
+      -162
+    ],
+    [
+      10.52,
+      7.19,
+      -126
+    ],
+    [
+      64.52,
+      7.19,
+      -90
+    ],
+    [
+      10.52,
+      7.19,
+      -54
+    ],
+    [
+      64.52,
+      7.19,
+      -18
+    ],
+    [
+      10.52,
+      7.19,
+      18
+    ],
+    [
+      64.52,
+      7.19,
+      54
+    ],
+    [
+      10.52,
+      7.19,
+      90
+    ],
+    [
+      64.52,
+      7.19,
+      126
+    ],
+    [
+      10.52,
+      7.19,
+      162
+    ],
+    [
+      64.52,
+      7.19,
+      198
+    ],
+    [
+      82.52,
+      7.19,
+      -270
+    ],
+    [
+      136.52,
+      7.19,
+      -234
+    ],
+    [
+      82.52,
+      7.19,
+      -198
+    ],
+    [
+      136.52,
+      7.19,
+      -162
+    ],
+    [
+      82.52,
+      7.19,
+      -126
+    ],
+    [
+      136.52,
+      7.19,
+      -90
+    ],
+    [
+      82.52,
+      7.19,
+      -54
+    ],
+    [
+      136.52,
+      7.19,
+      -18
+    ],
+    [
+      82.52,
+      7.19,
+      18
+    ],
+    [
+      136.52,
+      7.19,
+      54
+    ],
+    [
+      82.52,
+      7.19,
+      90
+    ],
+    [
+      136.52,
+      7.19,
+      126
+    ],
+    [
+      82.52,
+      7.19,
+      162
+    ],
+    [
+      136.52,
+      7.19,
+      198
+    ],
+    [
+      149.98,
+      7.19,
+      -230
+    ],
+    [
+      149.98,
+      7.19,
+      -206
+    ],
+    [
+      149.98,
+      7.19,
+      -182
+    ],
+    [
+      149.98,
+      7.19,
+      -158
+    ],
+    [
+      149.98,
+      7.19,
+      -134
+    ],
+    [
+      149.98,
+      7.19,
+      -110
+    ],
+    [
+      149.98,
+      7.19,
+      -86
+    ],
+    [
+      149.98,
+      7.19,
+      -62
+    ],
+    [
+      149.98,
+      7.19,
+      -38
+    ],
+    [
+      149.98,
+      7.19,
+      -14
+    ],
+    [
+      149.98,
+      7.19,
+      10
+    ],
+    [
+      149.98,
+      7.19,
+      34
+    ],
+    [
+      149.98,
+      7.19,
+      58
+    ],
+    [
+      149.98,
+      7.19,
+      82
+    ],
+    [
+      149.98,
+      7.19,
+      106
+    ],
+    [
+      149.98,
+      7.19,
+      130
+    ],
+    [
+      149.98,
+      7.19,
+      154
+    ],
+    [
+      149.98,
+      7.19,
+      178
+    ],
+    [
+      149.98,
+      7.19,
+      202
+    ],
+    [
+      149.98,
+      7.19,
+      226
+    ]
+  ],
+  "litMaterials": [
+    {
+      "id": "material-064",
+      "color": [
+        0.8156862745098039,
+        0.4196078431372549,
+        0.32941176470588235
+      ],
+      "intensity": 0.13
+    },
+    {
+      "id": "material-065",
+      "color": [
+        0.8941176470588236,
+        0.7490196078431373,
+        0.4549019607843137
+      ],
+      "intensity": 0.13
+    },
+    {
+      "id": "material-066",
+      "color": [
+        0.4823529411764706,
+        0.6627450980392157,
+        0.5803921568627451
+      ],
+      "intensity": 0.5
+    },
+    {
+      "id": "material-072",
+      "color": [
+        1,
+        0.8745098039215686,
+        0.6274509803921569
+      ],
+      "intensity": 2.2
+    },
+    {
+      "id": "material-087",
+      "color": [
+        0.9137254901960784,
+        0.7647058823529411,
+        0.5450980392156862
+      ],
+      "intensity": 0.55
+    },
+    {
+      "id": "material-103",
+      "color": [
+        0.40784313725490196,
+        0.8784313725490196,
+        0.807843137254902
+      ],
+      "intensity": 1.7
+    },
+    {
+      "id": "material-104",
+      "color": [
+        0.9607843137254902,
+        0.6352941176470588,
+        0.7176470588235294
+      ],
+      "intensity": 1.35
+    },
+    {
+      "id": "material-121",
+      "color": [
+        0.9568627450980393,
+        0.9372549019607843,
+        0.8470588235294118
+      ],
+      "intensity": 1.4
+    }
+  ],
+  "waterMaterial": "material-122",
+  "asphaltMaterial": "material-060",
+  "foam": [
+    "shore-break/0",
+    "shore-break/1",
+    "shore-break/2",
+    "shore-break/3",
+    "shore-break/4",
+    "shore-break/5",
+    "shore-break/6",
+    "shore-break/7"
+  ],
+  "totals": {
+    "meshes": 1221,
+    "cpuGeometryBytes": 57932888,
+    "compressedBytes": 13132677,
+    "textureBytes": 722275
+  }
+}

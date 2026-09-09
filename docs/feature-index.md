@@ -311,3 +311,18 @@ This ledger supersedes only the named partial implementations. The full map and 
 | Creative | Barrier/material placement, ignite/extinguish, full inventory refill/clear, stable saved settings and civilian IDs | Combined browser audit and strict malformed-save tests. Transform gizmos, undo/redo, bulk editing and complete regional state remain open. |
 
 Detailed implementation specifications: `police-design.md`, `combat-design.md`, `movement-interaction-design.md`, `world-streaming.md`. Browser audit instrumentation is read-only during normal-control tests; targeted hook-assisted tests must be labeled separately. Earlier screenshots and failed harness attempts are retained rather than silently presented as successes.
+
+## Third checkpoint addendum — integration remains in progress
+
+This addendum updates the named subsets; it does not mark the broader goal or any complete region finished.
+
+| Subset | New evidence | Current limit |
+|---|---|---|
+| Urban police navigation | Production-manifest/Havok tests reproduce and fix the prior oscillating foot route, test connected street turns and recover a deflected cruiser through actual reverse forces | No teleport recovery; broad live congestion and every intersection/vehicle combination remain unverified |
+| Coastal Reserve annex | Four stable military guards, physical animated gate, normal E visitor access, normal walking collision/entry, armed warning and three-star alarm verified independently in WebGL2 | Creative local annex, not VI-confirmed regional military base. Guards still use stylized common body/blue trousers; detailed firearm grip and browser damage/detention coverage remain open |
+| Streamed world packages | Real compressed Babylon packages and material/texture downloads, CPU geometry disposal, loaded-package diagnostics and asynchronous fast-travel preparation exist | Initial fetch receiver bug was fixed. Independent WebGL2 screenshots then exposed invalid exported indices causing missing annex scenery; exporter correction/regeneration and visual retest are underway |
+| Vehicle interaction/lighting | Normal E visibly opens a coupe door, mounts and exits; L toggles light state and lamp appearance. Root's separate UI audit exercises garage paint/service | Seated feet visibly protrude below the chassis in the independent side view. Root is correcting the pose; full door/seat/class/collision visual matrix remains open |
+| Licensed geographic foundation | OSM Miami Beach/Ocean Drive building and road/path data retained with source/query/license and local metric transformation | Runtime map remains authored. Dataset preparation does not fulfill reconstructed regional geography |
+| Licensed detailed vehicle candidate | Debranded Car Concept GLB prepared with reproducible script, attribution, payload removal, exact bounds and CPU Babylon import verification | Not yet drivable; no GPU visual/LOD/performance, wheel/seat, damage or component adapter acceptance |
+
+See `verification-facility-checkpoint.md`, `facility-design.md`, `geodata.md` and `car-concept-adapter.md`. Prior ledger phrases such as “no network asset partition/loading” or “door opening missing” describe the second checkpoint and are superseded only to the extent documented here.

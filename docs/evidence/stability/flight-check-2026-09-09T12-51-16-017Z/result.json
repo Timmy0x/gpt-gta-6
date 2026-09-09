@@ -1,0 +1,698 @@
+{
+  "metadata": {
+    "commit": "working-checkpoint-plane-bank-and-fetch-fix",
+    "mode": "functional flight harness check, not isolated performance",
+    "targetSeconds": 180,
+    "url": "http://127.0.0.1:4176",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "deviceScaleFactor": 1,
+    "quality": "high",
+    "requestedBackend": "WebGPU",
+    "hardware": {
+      "model": "MacBook Pro",
+      "modelId": "Mac17,9",
+      "chip": "Apple M5 Pro",
+      "memory": "24 GB",
+      "cpuCores": "proc 15:5:0:10",
+      "gpu": "Apple M5 Pro",
+      "gpuCores": "16"
+    },
+    "os": {
+      "platform": "darwin",
+      "release": "25.5.0",
+      "arch": "arm64"
+    },
+    "startedFingerprint": {
+      "htmlSha256": "bd25db5c752437b05f7548553bcc206e0790825aee9658573dd712b9ad4ee4f6",
+      "assets": [
+        {
+          "url": "/assets/index-BTC1GROQ.js",
+          "bytes": 6908564,
+          "sha256": "7a647826f6cf86804124bd3570cea9e38351e1f333c1572f002d862c65005b4e"
+        },
+        {
+          "url": "/assets/math.scalar.functions-BWXNux-o.js",
+          "bytes": 2197,
+          "sha256": "93af6a709051859ad9c2cb2e062213f9e2006e05387edd346cb7f2d36a7a4737"
+        },
+        {
+          "url": "/assets/observable.pure-H-M_hi7F.js",
+          "bytes": 3207,
+          "sha256": "08c0e04c1857138331e86c1b0c907ad4425ece8fa34628c2eca4c6666c798cee"
+        },
+        {
+          "url": "/assets/performanceConfigurator-UtxC_Odd.js",
+          "bytes": 500,
+          "sha256": "18ac183db602e06e8f22bb36ef5a1b0127170dfa0401d3e6aff4f81dc5d76b26"
+        },
+        {
+          "url": "/assets/engineStore-B_7KzytD.js",
+          "bytes": 364,
+          "sha256": "dc389a6ff7fd747f3b269d90d3c4b734321104633e79ef27f7ea133d75f0857e"
+        },
+        {
+          "url": "/assets/math.vector.pure-BAJs8R8E.js",
+          "bytes": 64080,
+          "sha256": "148fb2b5381af672590de8dcda264dd7787b463428ed4580c8e902a986cd9188"
+        },
+        {
+          "url": "/assets/logger-CuBYPcDK.js",
+          "bytes": 1881,
+          "sha256": "30a999582eace71f2e78a479182e71e943508bbda9574b17e5b29575c49a3b9e"
+        },
+        {
+          "url": "/assets/tools.functions-CGAPgMh0.js",
+          "bytes": 13974,
+          "sha256": "f38bef6bb5810dbaadeae7cf5eb119e4ba200660c2fa20cc88a4021941ae39cc"
+        },
+        {
+          "url": "/assets/webRequest-dqz0dHXK.js",
+          "bytes": 2941,
+          "sha256": "d4a0d83706cc2f7681ca2895f9b827fbadfe11ed77025bc19fbf9ef40dd9d01d"
+        },
+        {
+          "url": "/assets/precisionDate-CfCevjl-.js",
+          "bytes": 390,
+          "sha256": "ca81e6b450810d0472b8ea1d02e169f7c206f21994ba8fd557a0fdde51bb1e67"
+        },
+        {
+          "url": "/assets/halfFloat-Ce77JD5z.js",
+          "bytes": 1290,
+          "sha256": "e364d38c88e676a0e9ced31660c08e156b244af07b1729fb8ea38e1ad6cffbb7"
+        },
+        {
+          "url": "/assets/tools.pure-yXf9W3Ut.js",
+          "bytes": 30774,
+          "sha256": "a30d8f132307bcf10f7627b53c5a78640960b4450577adf0d5b62d990c38d9ce"
+        },
+        {
+          "url": "/assets/math.color.pure-CaHjkGe9.js",
+          "bytes": 12230,
+          "sha256": "f1a3a98b3cc66a7a77d49aeaa3d5f44ae2c5dc91ed8edb45c921e4559c3b2200"
+        },
+        {
+          "url": "/assets/decorators-D3kDnvNy.js",
+          "bytes": 3885,
+          "sha256": "c169e42a47e2dcf0d743239a7d3dc7bc0ec303fcf1c01b2bd18c41673d2de332"
+        },
+        {
+          "url": "/assets/shaderStore-D-XQlhUT.js",
+          "bytes": 469,
+          "sha256": "db600316439f2fedb7bfd3bcbc61b24d30c2b2646828dcea1c7c778cd07d5e3e"
+        },
+        {
+          "url": "/assets/webAudioBaseSubGraph-D0ajKcgP.js",
+          "bytes": 12389,
+          "sha256": "38e6ace9c2ae896a5ef43aa7f0664dd16f461bb8b1fcc35a696d2bc97ce15dbf"
+        },
+        {
+          "url": "/assets/abstractSoundSource-B3SG6se2.js",
+          "bytes": 1484,
+          "sha256": "372f20c05cce5d8e90434ff5e0eb73185a0d81ffd29346bf8abd91b857afcf7e"
+        },
+        {
+          "url": "/assets/meshUboDeclaration-BATNZvmb.js",
+          "bytes": 279,
+          "sha256": "66ede90e05d64026782d6c0998c9bc9b447b02f6baf420a4146000ef8472b534"
+        },
+        {
+          "url": "/assets/sceneUboDeclaration-B96Tfx7b.js",
+          "bytes": 436,
+          "sha256": "5d5d6cd518aad42a92783140733752058aa59cb9526ce525f8714eaca6a7ebd2"
+        },
+        {
+          "url": "/assets/sceneUboDeclaration-B5VhSG0v.js",
+          "bytes": 364,
+          "sha256": "bb44727afcb0fe70461ca9bdb0d212901fa0a18067c8a62d1577506c6d347b95"
+        },
+        {
+          "url": "/assets/meshUboDeclaration-BmNu2KU_.js",
+          "bytes": 345,
+          "sha256": "1729108f883e17bb71137bfb06a700c8c073d1d7825d37d8beec06a2fc00a6a0"
+        },
+        {
+          "url": "/assets/clusteredLightingFunctions-BFCOODPn.js",
+          "bytes": 764,
+          "sha256": "aa95a24bca0029895482fcb2699fcd9c91d0f34662ca4ef1ca3782c0af067b32"
+        },
+        {
+          "url": "/assets/clusteredLightingFunctions-DNqaoQCj.js",
+          "bytes": 792,
+          "sha256": "b921a6f820ecbc181b383ddcbf92894f83a6707c1855680d4cfa6c802f847512"
+        },
+        {
+          "url": "/assets/ltcHelperFunctions-D8BySwCQ.js",
+          "bytes": 6631,
+          "sha256": "26e912aedbd5871f89d3cc7995843715ae9373f97ae98a7355d82af4c9a1cd41"
+        },
+        {
+          "url": "/assets/ltcHelperFunctions-DS3Utz6C.js",
+          "bytes": 6040,
+          "sha256": "5432fdc54860588913266cde48a725a3e39adc6888f49d6106b4cb956607d885"
+        },
+        {
+          "url": "/assets/mainUVVaryingDeclaration-B_7d0nc3.js",
+          "bytes": 239,
+          "sha256": "b1dca32192a0bc13a46420375ec010bebb6608aebd70baec9ad21d24e9cdcb4e"
+        },
+        {
+          "url": "/assets/samplerFragmentDeclaration-CEHqUfAO.js",
+          "bytes": 729,
+          "sha256": "a982bce45409d46f76d23173d8cc700fbab4a61d10d4ae0482ccc7d782d8f647"
+        },
+        {
+          "url": "/assets/mainUVVaryingDeclaration-BBamQlxR.js",
+          "bytes": 229,
+          "sha256": "f458b4a817df909582f5973c0ebf23a740ad2d30da10c307e991a1628b26d688"
+        },
+        {
+          "url": "/assets/samplerFragmentDeclaration-3yaLawFX.js",
+          "bytes": 675,
+          "sha256": "3cde581ea44c741f48e406bba1d74b38c5f15534255898bcf752bc5afad4bfdf"
+        },
+        {
+          "url": "/assets/index-BdFcW67w.css",
+          "bytes": 8971,
+          "sha256": "7de07bea63825694138332eecffc2abef9050bc6ac5c2a6668410f59290ec11d"
+        },
+        {
+          "url": "/assets/HavokPhysics-BqNY-4N9.wasm",
+          "bytes": 2094563,
+          "sha256": "026917766f534c156286f07975850978dabf17c42e742bbfaaebbcb2215e4e11"
+        },
+        {
+          "url": "/assets/glslang-G7Yt_-32.wasm",
+          "bytes": 943680,
+          "sha256": "d79453e0803ebcdf3753c6b1d8d51543b52fed96f7f0d4aec94acd847e225169"
+        },
+        {
+          "url": "/assets/twgsl-CB--yrSG.wasm",
+          "bytes": 1702916,
+          "sha256": "a434c2decdbb38caadf5f486d806384a1543554828c983c77922b2d92579914c"
+        }
+      ]
+    },
+    "methods": {
+      "control": "Physical keyboard/mouse events; closed-loop steering reads live vehicle state. Phase transitions place a vehicle with explicit test hooks; creative controls set weather/wanted/invulnerability, save/load and fast travel. Every hook placement/recovery is logged.",
+      "frameTimes": "Raw milliseconds between Babylon onAfterRender observer callbacks. Includes running creative overlay rendering; map/pause rendering also retained and marked paused in resource samples. This measures delivered render callbacks, not display presentation or GPU execution time.",
+      "memory": "CDP Performance JSHeapUsedSize/TotalSize and DOM counters; Babylon live mesh/body/material/multiMaterial/texture/geometry counts. No forced GC. GPU allocation and whole-process RSS unavailable in this sandbox.",
+      "concurrency": "Functional flight check; other integration browsers may run concurrently. Performance is not isolated."
+    },
+    "browser": "152.0.7977.83",
+    "gpu": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": "",
+      "description": ""
+    },
+    "measurementStartedUTC": "2026-09-09T12:51:26.484Z"
+  },
+  "completed": true,
+  "failure": null,
+  "endedUTC": "2026-09-09T12:54:26.717Z",
+  "durationSeconds": 180.230915667,
+  "errors": [],
+  "eventsCount": 90,
+  "samplesCount": 20,
+  "framesCount": 10717,
+  "performance": {
+    "medianFPS": 59.88023956370228,
+    "meanFPS": 59.48667280942284,
+    "p99FrameMs": 20.299999982118607,
+    "p99EquivalentFPS": 49.26108378723433,
+    "meanSlowestOnePercentFrameMs": 36.17500000033114,
+    "onePercentLowFPS": 27.64340013796396,
+    "maxFrameMs": 79.69999998807907
+  },
+  "resources": {
+    "first": {
+      "utc": "2026-09-09T12:51:27.111Z",
+      "elapsed": 0.593523208999999,
+      "phase": "plane-functional-flight-check",
+      "snapshot": {
+        "backend": "WebGPU",
+        "cash": 12500,
+        "fallbackReason": "",
+        "position": [
+          6.299943440025954,
+          1.7156130096715083,
+          -275.0012888114915
+        ],
+        "character": "Jason",
+        "health": 100,
+        "vehicle": null,
+        "wanted": {
+          "stars": 0,
+          "phase": "clear",
+          "lastKnown": {
+            "x": 3,
+            "z": -23
+          }
+        },
+        "population": {
+          "traffic": 12,
+          "peds": 30,
+          "police": {
+            "officers": 0,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": false,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 0,
+        "shots": 0,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 8.566666666666672,
+        "meshes": 2399,
+        "activeMeshes": 1175,
+        "physicsBodies": 262,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 29,
+          "totalMeshes": 1221,
+          "residentMeshes": 1109,
+          "totalColliders": 249,
+          "residentColliders": 226,
+          "cpuGeometryBytes": 56821088,
+          "meshLoads": 1111,
+          "meshDisposals": 2,
+          "colliderLoads": 232,
+          "colliderDisposals": 6,
+          "pendingMeshes": 0,
+          "activeAnchors": 7,
+          "lastMeshOperations": 0,
+          "loadedPackages": 51,
+          "totalPackages": 84,
+          "pendingPackages": 0,
+          "failedPackages": 0,
+          "retries": 0,
+          "requests": 222,
+          "fetchedBytes": 12758164,
+          "residentMaterials": 170,
+          "totalCpuGeometryBytes": 58285352,
+          "lastError": "",
+          "packagesLoaded": 52,
+          "packagesEvicted": 1,
+          "ready": true
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "facility": {
+          "id": "coastal-reserve-annex",
+          "classification": "creative-mode addition",
+          "phase": "quiet",
+          "inside": false,
+          "accessSeconds": 0,
+          "warningSeconds": 0,
+          "guards": 4,
+          "activeGuards": 0,
+          "gateOpen": false,
+          "arrestProgress": 0
+        },
+        "audio": {
+          "voices": 3,
+          "effects": 0,
+          "state": "running"
+        },
+        "fps": 51.13345832727032,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "quality": "high",
+        "streamingBusy": false,
+        "errors": []
+      },
+      "counts": {
+        "meshes": 2399,
+        "activeMeshes": 1175,
+        "bodies": 262,
+        "materials": 366,
+        "multiMaterials": 1,
+        "textures": 164,
+        "geometries": 2382,
+        "skeletons": 35,
+        "transformNodes": 94,
+        "observers": 1,
+        "props": 18,
+        "debris": 0,
+        "grenades": 0,
+        "ragdolls": 0,
+        "vehicles": 16,
+        "peds": 30,
+        "officers": 4
+      },
+      "pageMemory": {
+        "used": 243050859,
+        "total": 286052627,
+        "limit": 4395630592
+      },
+      "cdp": {
+        "heapUsed": 176474484,
+        "heapTotal": 218906624,
+        "nodes": 554,
+        "documents": 1,
+        "listeners": 57,
+        "taskDuration": 7.647078,
+        "layoutCount": 22
+      }
+    },
+    "last": {
+      "utc": "2026-09-09T12:54:26.648Z",
+      "elapsed": 180.158860459,
+      "phase": "plane-functional-flight-check",
+      "snapshot": {
+        "backend": "WebGPU",
+        "cash": 12500,
+        "fallbackReason": "",
+        "position": [
+          94.35014343261719,
+          178.7673797607422,
+          -353.8337707519531
+        ],
+        "character": "Lucia",
+        "health": 100,
+        "vehicle": {
+          "id": "stability-fixture",
+          "kind": "plane",
+          "health": 100,
+          "speed": 59.815034982093565,
+          "grounded": 0
+        },
+        "wanted": {
+          "stars": 0,
+          "phase": "clear",
+          "lastKnown": {
+            "x": 3,
+            "z": -23
+          }
+        },
+        "population": {
+          "traffic": 12,
+          "peds": 30,
+          "police": {
+            "officers": 0,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": false,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 8,
+        "shots": 0,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 188.1333333333752,
+        "meshes": 2383,
+        "activeMeshes": 52,
+        "physicsBodies": 234,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 29,
+          "totalMeshes": 1221,
+          "residentMeshes": 1121,
+          "totalColliders": 249,
+          "residentColliders": 198,
+          "cpuGeometryBytes": 56881040,
+          "meshLoads": 3677,
+          "meshDisposals": 2556,
+          "colliderLoads": 3464,
+          "colliderDisposals": 3266,
+          "pendingMeshes": 0,
+          "activeAnchors": 10,
+          "lastMeshOperations": 0,
+          "loadedPackages": 53,
+          "totalPackages": 84,
+          "pendingPackages": 0,
+          "failedPackages": 0,
+          "retries": 0,
+          "requests": 611,
+          "fetchedBytes": 42637489,
+          "residentMaterials": 170,
+          "totalCpuGeometryBytes": 58285352,
+          "lastError": "",
+          "packagesLoaded": 219,
+          "packagesEvicted": 166,
+          "ready": true
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "facility": {
+          "id": "coastal-reserve-annex",
+          "classification": "creative-mode addition",
+          "phase": "quiet",
+          "inside": false,
+          "accessSeconds": 0,
+          "warningSeconds": 0,
+          "guards": 4,
+          "activeGuards": 0,
+          "gateOpen": false,
+          "arrestProgress": 0
+        },
+        "audio": {
+          "voices": 0,
+          "effects": 0,
+          "state": "running"
+        },
+        "fps": 59.96402158561842,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "quality": "high",
+        "streamingBusy": false,
+        "errors": []
+      },
+      "counts": {
+        "meshes": 2383,
+        "activeMeshes": 52,
+        "bodies": 234,
+        "materials": 366,
+        "multiMaterials": 1,
+        "textures": 164,
+        "geometries": 2366,
+        "skeletons": 35,
+        "transformNodes": 94,
+        "observers": 1,
+        "props": 18,
+        "debris": 0,
+        "grenades": 0,
+        "ragdolls": 0,
+        "vehicles": 16,
+        "peds": 30,
+        "officers": 4
+      },
+      "pageMemory": {
+        "used": 765112281,
+        "total": 848873317,
+        "limit": 4395630592
+      },
+      "cdp": {
+        "heapUsed": 377883764,
+        "heapTotal": 461586432,
+        "nodes": 630,
+        "documents": 1,
+        "listeners": 195,
+        "taskDuration": 115.691017,
+        "layoutCount": 480
+      }
+    },
+    "maxHeapUsed": 415065280,
+    "minHeapUsed": 173428300
+  },
+  "endedFingerprint": {
+    "htmlSha256": "bd25db5c752437b05f7548553bcc206e0790825aee9658573dd712b9ad4ee4f6",
+    "assets": [
+      {
+        "url": "/assets/index-BTC1GROQ.js",
+        "bytes": 6908564,
+        "sha256": "7a647826f6cf86804124bd3570cea9e38351e1f333c1572f002d862c65005b4e"
+      },
+      {
+        "url": "/assets/math.scalar.functions-BWXNux-o.js",
+        "bytes": 2197,
+        "sha256": "93af6a709051859ad9c2cb2e062213f9e2006e05387edd346cb7f2d36a7a4737"
+      },
+      {
+        "url": "/assets/observable.pure-H-M_hi7F.js",
+        "bytes": 3207,
+        "sha256": "08c0e04c1857138331e86c1b0c907ad4425ece8fa34628c2eca4c6666c798cee"
+      },
+      {
+        "url": "/assets/performanceConfigurator-UtxC_Odd.js",
+        "bytes": 500,
+        "sha256": "18ac183db602e06e8f22bb36ef5a1b0127170dfa0401d3e6aff4f81dc5d76b26"
+      },
+      {
+        "url": "/assets/engineStore-B_7KzytD.js",
+        "bytes": 364,
+        "sha256": "dc389a6ff7fd747f3b269d90d3c4b734321104633e79ef27f7ea133d75f0857e"
+      },
+      {
+        "url": "/assets/math.vector.pure-BAJs8R8E.js",
+        "bytes": 64080,
+        "sha256": "148fb2b5381af672590de8dcda264dd7787b463428ed4580c8e902a986cd9188"
+      },
+      {
+        "url": "/assets/logger-CuBYPcDK.js",
+        "bytes": 1881,
+        "sha256": "30a999582eace71f2e78a479182e71e943508bbda9574b17e5b29575c49a3b9e"
+      },
+      {
+        "url": "/assets/tools.functions-CGAPgMh0.js",
+        "bytes": 13974,
+        "sha256": "f38bef6bb5810dbaadeae7cf5eb119e4ba200660c2fa20cc88a4021941ae39cc"
+      },
+      {
+        "url": "/assets/webRequest-dqz0dHXK.js",
+        "bytes": 2941,
+        "sha256": "d4a0d83706cc2f7681ca2895f9b827fbadfe11ed77025bc19fbf9ef40dd9d01d"
+      },
+      {
+        "url": "/assets/precisionDate-CfCevjl-.js",
+        "bytes": 390,
+        "sha256": "ca81e6b450810d0472b8ea1d02e169f7c206f21994ba8fd557a0fdde51bb1e67"
+      },
+      {
+        "url": "/assets/halfFloat-Ce77JD5z.js",
+        "bytes": 1290,
+        "sha256": "e364d38c88e676a0e9ced31660c08e156b244af07b1729fb8ea38e1ad6cffbb7"
+      },
+      {
+        "url": "/assets/tools.pure-yXf9W3Ut.js",
+        "bytes": 30774,
+        "sha256": "a30d8f132307bcf10f7627b53c5a78640960b4450577adf0d5b62d990c38d9ce"
+      },
+      {
+        "url": "/assets/math.color.pure-CaHjkGe9.js",
+        "bytes": 12230,
+        "sha256": "f1a3a98b3cc66a7a77d49aeaa3d5f44ae2c5dc91ed8edb45c921e4559c3b2200"
+      },
+      {
+        "url": "/assets/decorators-D3kDnvNy.js",
+        "bytes": 3885,
+        "sha256": "c169e42a47e2dcf0d743239a7d3dc7bc0ec303fcf1c01b2bd18c41673d2de332"
+      },
+      {
+        "url": "/assets/shaderStore-D-XQlhUT.js",
+        "bytes": 469,
+        "sha256": "db600316439f2fedb7bfd3bcbc61b24d30c2b2646828dcea1c7c778cd07d5e3e"
+      },
+      {
+        "url": "/assets/webAudioBaseSubGraph-D0ajKcgP.js",
+        "bytes": 12389,
+        "sha256": "38e6ace9c2ae896a5ef43aa7f0664dd16f461bb8b1fcc35a696d2bc97ce15dbf"
+      },
+      {
+        "url": "/assets/abstractSoundSource-B3SG6se2.js",
+        "bytes": 1484,
+        "sha256": "372f20c05cce5d8e90434ff5e0eb73185a0d81ffd29346bf8abd91b857afcf7e"
+      },
+      {
+        "url": "/assets/meshUboDeclaration-BATNZvmb.js",
+        "bytes": 279,
+        "sha256": "66ede90e05d64026782d6c0998c9bc9b447b02f6baf420a4146000ef8472b534"
+      },
+      {
+        "url": "/assets/sceneUboDeclaration-B96Tfx7b.js",
+        "bytes": 436,
+        "sha256": "5d5d6cd518aad42a92783140733752058aa59cb9526ce525f8714eaca6a7ebd2"
+      },
+      {
+        "url": "/assets/sceneUboDeclaration-B5VhSG0v.js",
+        "bytes": 364,
+        "sha256": "bb44727afcb0fe70461ca9bdb0d212901fa0a18067c8a62d1577506c6d347b95"
+      },
+      {
+        "url": "/assets/meshUboDeclaration-BmNu2KU_.js",
+        "bytes": 345,
+        "sha256": "1729108f883e17bb71137bfb06a700c8c073d1d7825d37d8beec06a2fc00a6a0"
+      },
+      {
+        "url": "/assets/clusteredLightingFunctions-BFCOODPn.js",
+        "bytes": 764,
+        "sha256": "aa95a24bca0029895482fcb2699fcd9c91d0f34662ca4ef1ca3782c0af067b32"
+      },
+      {
+        "url": "/assets/clusteredLightingFunctions-DNqaoQCj.js",
+        "bytes": 792,
+        "sha256": "b921a6f820ecbc181b383ddcbf92894f83a6707c1855680d4cfa6c802f847512"
+      },
+      {
+        "url": "/assets/ltcHelperFunctions-D8BySwCQ.js",
+        "bytes": 6631,
+        "sha256": "26e912aedbd5871f89d3cc7995843715ae9373f97ae98a7355d82af4c9a1cd41"
+      },
+      {
+        "url": "/assets/ltcHelperFunctions-DS3Utz6C.js",
+        "bytes": 6040,
+        "sha256": "5432fdc54860588913266cde48a725a3e39adc6888f49d6106b4cb956607d885"
+      },
+      {
+        "url": "/assets/mainUVVaryingDeclaration-B_7d0nc3.js",
+        "bytes": 239,
+        "sha256": "b1dca32192a0bc13a46420375ec010bebb6608aebd70baec9ad21d24e9cdcb4e"
+      },
+      {
+        "url": "/assets/samplerFragmentDeclaration-CEHqUfAO.js",
+        "bytes": 729,
+        "sha256": "a982bce45409d46f76d23173d8cc700fbab4a61d10d4ae0482ccc7d782d8f647"
+      },
+      {
+        "url": "/assets/mainUVVaryingDeclaration-BBamQlxR.js",
+        "bytes": 229,
+        "sha256": "f458b4a817df909582f5973c0ebf23a740ad2d30da10c307e991a1628b26d688"
+      },
+      {
+        "url": "/assets/samplerFragmentDeclaration-3yaLawFX.js",
+        "bytes": 675,
+        "sha256": "3cde581ea44c741f48e406bba1d74b38c5f15534255898bcf752bc5afad4bfdf"
+      },
+      {
+        "url": "/assets/index-BdFcW67w.css",
+        "bytes": 8971,
+        "sha256": "7de07bea63825694138332eecffc2abef9050bc6ac5c2a6668410f59290ec11d"
+      },
+      {
+        "url": "/assets/HavokPhysics-BqNY-4N9.wasm",
+        "bytes": 2094563,
+        "sha256": "026917766f534c156286f07975850978dabf17c42e742bbfaaebbcb2215e4e11"
+      },
+      {
+        "url": "/assets/glslang-G7Yt_-32.wasm",
+        "bytes": 943680,
+        "sha256": "d79453e0803ebcdf3753c6b1d8d51543b52fed96f7f0d4aec94acd847e225169"
+      },
+      {
+        "url": "/assets/twgsl-CB--yrSG.wasm",
+        "bytes": 1702916,
+        "sha256": "a434c2decdbb38caadf5f486d806384a1543554828c983c77922b2d92579914c"
+      }
+    ]
+  },
+  "frozenBuildUnchanged": true,
+  "output": "/Users/timmymckeegan/Desktop/gpt-gta-6/docs/evidence/stability/flight-check-2026-09-09T12-51-16-017Z"
+}

@@ -72,6 +72,23 @@ function skinVertex(
   return output;
 }
 
+test("low driving pose keeps both character variants' skinned feet above the cabin floor and head below the roof", context => {
+  const { scene, shadows } = fixture(context);
+  for (const female of [false, true]) {
+    const character = new Character(scene, shadows, female ? "Lucia" : "Jason", "#ffffff", female);
+    character.animate(1 / 60, 0);
+    character.pose("seated", 1, "low");
+    const matrices = transforms(character);
+    const vertices = Array.from({ length: character.parts[0].getTotalVertices() }, (_, i) => skinVertex(character, i, matrices));
+    const foot = Math.min(...vertices.map(v => v.y)) - 0.92;
+    const head = Math.max(...vertices.map(v => v.y)) - 0.92;
+    assert.ok(foot >= -0.25, `feet protrude below cabin floor: ${foot}`);
+    assert.ok(head <= 0.94, `head protrudes through roof: ${head}`);
+    assert.ok(Math.max(...vertices.map(v => v.z)) < 1.1, "feet stay inside the pedal/hood space");
+    character.dispose();
+  }
+});
+
 test("both character variants have valid skinned geometry and one render submesh", (context) => {
   const { scene, shadows } = fixture(context);
   for (const female of [false, true]) {

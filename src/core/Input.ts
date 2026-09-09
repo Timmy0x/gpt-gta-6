@@ -13,6 +13,8 @@ export type Action =
   | "creative"
   | "repair"
   | "horn"
+  | "lights"
+  | "siren"
   | "melee";
 export const DEFAULT_BINDINGS: Readonly<Record<Action, string>> = {
   forward: "KeyW",
@@ -29,6 +31,8 @@ export const DEFAULT_BINDINGS: Readonly<Record<Action, string>> = {
   creative: "F2",
   repair: "KeyG",
   horn: "KeyH",
+  lights: "KeyL",
+  siren: "KeyJ",
   melee: "KeyF",
 };
 const ACTIONS = Object.keys(DEFAULT_BINDINGS) as Action[];

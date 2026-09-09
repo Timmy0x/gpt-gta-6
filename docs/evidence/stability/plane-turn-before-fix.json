@@ -1,0 +1,11 @@
+{
+  "testedAtUTC":"2026-09-09T12:47:05Z",
+  "command":"node --import tsx --test tests/plane-turn.test.ts",
+  "sourceState":"Current VehicleSystem retained ce382f3 bankTarget=UP+right*(-steer*0.4); no source correction applied before this observation.",
+  "method":"Actual packaged Havok WASM, continuous5000m ground, physical settlement,10s runway acceleration,8s aerodynamic takeoff,4s held steering and climb input; no vehicle position or velocity seeding.",
+  "results":[
+    {"direction":"left","startAltitude":61.51572799682617,"endAltitude":73.65335083007812,"headingChange":-0.5279154246984772,"meanSignedBank":-0.21331214864475373,"meanSignedLateralAcceleration":-0.7341360666317799,"health":100},
+    {"direction":"right","startAltitude":61.51572799682617,"endAltitude":73.6534194946289,"headingChange":0.5279145434551243,"meanSignedBank":-0.21331232015148022,"meanSignedLateralAcceleration":-0.7341368396454176,"health":100}
+  ],
+  "conclusion":"Both turns yaw correctly but tilt lift and accelerate laterally away from the requested turn. Both coordinated-turn assertions fail. This is independent of the finite world terrain boundary and independent of the initial stability harness's invalid zero-speed mid-air recovery."
+}

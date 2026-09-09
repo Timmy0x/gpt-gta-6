@@ -1,0 +1,139 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/44b6f9bdb08a5b16e92b91857ec3c87de9401dfa/Models/CarConcept/glTF-Binary/CarConcept.glb",
+  "originalDownloadUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/glTF-Binary/CarConcept.glb",
+  "sourceCommit": "44b6f9bdb08a5b16e92b91857ec3c87de9401dfa",
+  "documentCommit": "90d7ede14c7e280af263824604b427a1ca02cb66",
+  "sourceSha256": "c272098089d78c5cd9fd9f24ff50ee8acf8d932c55f2d55fc10adb6c8998966b",
+  "sourceBytes": 11778688,
+  "sourceCopyright": "© 2015, Khronos Group, Khronos logo. © 2017, Khronos Group, 3D Commerce logo. Asset is CC BY 4.0 International, created by Eric Chadwick of Darmstadt Graphics Group GmbH, 2024",
+  "license": "CC-BY-4.0",
+  "author": "Eric Chadwick",
+  "copyrightOwner": "Darmstadt Graphics Group GmbH",
+  "copyrightYear": 2024,
+  "outputSha256": "6923a315ac3656ddab95c281a8113055f0a4051ced2c35b35706fc1095d860ab",
+  "outputBytes": 11271376,
+  "modifications": "Removed Khronos/3DCommerce logo images and all their texture references and binary payloads; generic rubber sidewalls and blank plate; removed logo emissive contributions.",
+  "removedImages": [
+    {
+      "image": 3,
+      "bufferView": 521,
+      "sha256": "1453559c58526ec236ea7f90a72b0e49823061e6c26b571928b9ea3b91593e4d",
+      "bytes": 8177
+    },
+    {
+      "image": 10,
+      "bufferView": 528,
+      "sha256": "8cca97aa2b8f10e63751cda6c3d62efa58fb21fed9dcc2a2649f56a7253bc28d",
+      "bytes": 23370
+    },
+    {
+      "image": 11,
+      "bufferView": 529,
+      "sha256": "54297a9940353fdab05356ebd1649d967d0cf316968b15f496903ec00731b2c1",
+      "bytes": 475684
+    }
+  ],
+  "removedTextureSlots": [
+    {
+      "material": 2,
+      "name": null,
+      "slot": "emissiveTexture",
+      "texture": 3
+    },
+    {
+      "material": 5,
+      "name": "Hardware",
+      "slot": "emissiveTexture",
+      "texture": 3
+    },
+    {
+      "material": 9,
+      "name": "License",
+      "slot": "baseColorTexture",
+      "texture": 3
+    },
+    {
+      "material": 15,
+      "name": "Mirror",
+      "slot": "emissiveTexture",
+      "texture": 3
+    },
+    {
+      "material": 16,
+      "name": "Brake",
+      "slot": "emissiveTexture",
+      "texture": 3
+    },
+    {
+      "material": 18,
+      "name": "Tireside",
+      "slot": "normalTexture",
+      "texture": 12
+    },
+    {
+      "material": 18,
+      "name": "Tireside",
+      "slot": "baseColorTexture",
+      "texture": 11
+    },
+    {
+      "material": 20,
+      "name": "Rim2",
+      "slot": "emissiveTexture",
+      "texture": 3
+    },
+    {
+      "material": 21,
+      "name": "Rim1",
+      "slot": "emissiveTexture",
+      "texture": 3
+    }
+  ],
+  "verification": {
+    "geometry": {
+      "nodes": 101,
+      "meshes": 97,
+      "primitives": 109,
+      "vertices": 162766,
+      "triangles": 213347,
+      "bounds": {
+        "min": [
+          -1.2714082962213737,
+          -0.0002410734226865885,
+          -1.940231204032898
+        ],
+        "max": [
+          1.2709126943464768,
+          1.1486550569534302,
+          2.4171547889709473
+        ],
+        "dimensions": [
+          2.5423209905678505,
+          1.1488961303761167,
+          4.357385993003845
+        ]
+      }
+    },
+    "hierarchyPreserved": true,
+    "remainingImages": 11,
+    "remainingTextures": 12,
+    "removedPayloadsAbsent": true
+  },
+  "documents": [
+    {
+      "filename": "SOURCE-LICENSE.md",
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/90d7ede14c7e280af263824604b427a1ca02cb66/Models/CarConcept/LICENSE.md",
+      "sha256": "68fe164ee56cceb1d8376c32c228a74ebf83913355fe953217a2aa315c5cf0c3"
+    },
+    {
+      "filename": "SOURCE-metadata.json",
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/90d7ede14c7e280af263824604b427a1ca02cb66/Models/CarConcept/metadata.json",
+      "sha256": "89555a6cb9dc0a4f300abe3cc6476c2d8d77c6f3f2cbde9bf790c1bd320027ed"
+    },
+    {
+      "filename": "SOURCE-TRADEMARK.txt",
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/90d7ede14c7e280af263824604b427a1ca02cb66/LICENSES/LicenseRef-LegalMark-Khronos.txt",
+      "sha256": "2ea9821de870cf8d3faaa115ffc47f56632bf9f98d54d2ac1ce61592040b765c"
+    }
+  ]
+}

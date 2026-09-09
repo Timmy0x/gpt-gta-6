@@ -1,0 +1,30 @@
+{
+  "validatedAt": "2026-09-09T12:40:21.416Z",
+  "rawSha256": "0742f53c479a3d573e912a146beae4f13043094bb527a1de0e1dbc938b31ce9c",
+  "features": 2333,
+  "buildings": 1028,
+  "roads": 1305,
+  "rings": 1046,
+  "roadNodes": 4645,
+  "roadEdges": 5890,
+  "roadMeters": 109583.07612595621,
+  "geodesicMeters": 109758.33742395656,
+  "maxSegmentRelativeDifference": 0.004274449933974022,
+  "buildingAreaSquareMeters": {
+    "min": 13.976111500000115,
+    "max": 10995.60925150005,
+    "sum": 519965.32079600147
+  },
+  "topology": {
+    "components": 2,
+    "largestComponentNodes": 4636,
+    "sizes": [
+      4636,
+      9
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    "2 road/path components remain; shared-node topology is preserved, including boundary cuts and separately mapped footpaths."
+  ]
+}

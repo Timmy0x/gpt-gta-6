@@ -1,0 +1,16 @@
+{
+  "origin": "http://127.0.0.1:4176",
+  "method": "Separate headless Chrome WebGL2. Normal UI keyboard/mouse only; ?test for read-only diagnostics. Concurrent GPU work, no performance gate.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-BWJ1hGx5.js",
+      "browser": "152.0.7977.83"
+    }
+  ],
+  "errors": [
+    "TypeError: Failed to execute 'fetch' on 'Window': Illegal invocation\n    at JXe.readJson (http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29612:51108)\n    at JXe.acquireMaterial (http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29612:51957)\n    at http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29612:52618\n    at Array.map (<anonymous>)\n    at http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29612:52593\n    at async http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29612:54499\n    at async Promise.all (index 0)\n    at async JXe.preparePosition (http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29612:54441)\n    at async YXe.initialize (http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29612:57676)\n    at async zZe (http://127.0.0.1:4176/assets/index-BWJ1hGx5.js:29616:19328)",
+    "locator.waitFor: Timeout 100000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=\"play\"]') to be visible\u001b[22m\n\u001b[2m    202 × locator resolved to hidden <button class=\"primary\" data-action=\"play\">…</button>\u001b[22m\n\n    at /Users/timmymckeegan/Desktop/gpt-gta-6/tests/facility-visual-audit.mjs:24:45"
+  ],
+  "network": []
+}

@@ -1,0 +1,3829 @@
+{
+  "backend": "webgpu",
+  "origin": "http://127.0.0.1:4176",
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(alarm.wanted.stars > 0)\n\n    at file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/checkpoint-3-audit.mjs:110:10"
+  ],
+  "expectedNetworkErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Destination loading failed Error: chunks/-4_1_detail.babylon.gz: HTTP 503\n    at JXe.readJson (http://127.0.0.1:4176/assets/index-BTC1GROQ.js:29612:51207)\n    at async http://127.0.0.1:4176/assets/index-BTC1GROQ.js:29612:52745\n    at async http://127.0.0.1:4176/assets/index-BTC1GROQ.js:29612:54515\n    at async Promise.all (index 7)\n    at async JXe.preparePosition (http://127.0.0.1:4176/assets/index-BTC1GROQ.js:29612:54457)\n    at async YXe.preparePosition (http://127.0.0.1:4176/assets/index-BTC1GROQ.js:29612:57977)\n    at async fe (http://127.0.0.1:4176/assets/index-BTC1GROQ.js:29616:20187)\n    at async $9.onAction (http://127.0.0.1:4176/assets/index-BTC1GROQ.js:29616:30337)"
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:4176/world/manifest.json",
+      "status": 200,
+      "bytes": 162073
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-001.json.gz",
+      "status": 200,
+      "bytes": 2203
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-007.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-000.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-061.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-002.json.gz",
+      "status": 200,
+      "bytes": 2222
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-062.json.gz",
+      "status": 200,
+      "bytes": 1910
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-063.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-067.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-064.json.gz",
+      "status": 200,
+      "bytes": 1949
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-065.json.gz",
+      "status": 200,
+      "bytes": 1953
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-066.json.gz",
+      "status": 200,
+      "bytes": 1940
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-070.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-069.json.gz",
+      "status": 200,
+      "bytes": 1932
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-071.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-073.json.gz",
+      "status": 200,
+      "bytes": 1923
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-072.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-074.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-076.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-077.json.gz",
+      "status": 200,
+      "bytes": 1916
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-078.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-080.json.gz",
+      "status": 200,
+      "bytes": 1901
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-079.json.gz",
+      "status": 200,
+      "bytes": 1931
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-075.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-081.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-085.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-086.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-083.json.gz",
+      "status": 200,
+      "bytes": 1938
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-087.json.gz",
+      "status": 200,
+      "bytes": 1957
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-082.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-088.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-090.json.gz",
+      "status": 200,
+      "bytes": 1923
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-091.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-089.json.gz",
+      "status": 200,
+      "bytes": 1916
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-059.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-092.json.gz",
+      "status": 200,
+      "bytes": 1911
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-093.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-094.json.gz",
+      "status": 200,
+      "bytes": 1916
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-095.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-102.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-098.json.gz",
+      "status": 200,
+      "bytes": 1937
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-103.json.gz",
+      "status": 200,
+      "bytes": 1924
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-104.json.gz",
+      "status": 200,
+      "bytes": 1957
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-105.json.gz",
+      "status": 200,
+      "bytes": 1910
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-101.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-004.json.gz",
+      "status": 200,
+      "bytes": 2198
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-003.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-008.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-009.json.gz",
+      "status": 200,
+      "bytes": 2219
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-107.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-099.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-109.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-110.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-111.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-112.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-113.json.gz",
+      "status": 200,
+      "bytes": 1924
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-001.png",
+      "status": 200,
+      "bytes": 12949
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-000.png",
+      "status": 200,
+      "bytes": 10083
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-114.json.gz",
+      "status": 200,
+      "bytes": 1934
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-006.png",
+      "status": 200,
+      "bytes": 13724
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-002.png",
+      "status": 200,
+      "bytes": 13798
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 816405
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-003.png",
+      "status": 200,
+      "bytes": 11456
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-004.png",
+      "status": 200,
+      "bytes": 10555
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-007.png",
+      "status": 200,
+      "bytes": 14548
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-008.png",
+      "status": 200,
+      "bytes": 18260
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 877854
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-012.json.gz",
+      "status": 200,
+      "bytes": 2195
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-010.json.gz",
+      "status": 200,
+      "bytes": 2201
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-014.json.gz",
+      "status": 200,
+      "bytes": 2201
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-011.json.gz",
+      "status": 200,
+      "bytes": 2217
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-015.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-118.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-120.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-121.json.gz",
+      "status": 200,
+      "bytes": 1960
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-100.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-119.json.gz",
+      "status": 200,
+      "bytes": 1927
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-115.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-096.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-068.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-122.json.gz",
+      "status": 200,
+      "bytes": 2213
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-018.json.gz",
+      "status": 200,
+      "bytes": 2195
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-019.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-020.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-021.json.gz",
+      "status": 200,
+      "bytes": 2217
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-123.json.gz",
+      "status": 200,
+      "bytes": 1917
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-051.json.gz",
+      "status": 200,
+      "bytes": 2198
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-159.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-160.json.gz",
+      "status": 200,
+      "bytes": 1917
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-153.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-152.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-161.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-165.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-009.png",
+      "status": 200,
+      "bytes": 17401
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-011.png",
+      "status": 200,
+      "bytes": 8035
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-013.png",
+      "status": 200,
+      "bytes": 15220
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-010.png",
+      "status": 200,
+      "bytes": 16785
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-014.png",
+      "status": 200,
+      "bytes": 12749
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-045.png",
+      "status": 200,
+      "bytes": 71636
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 815150
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-016.png",
+      "status": 200,
+      "bytes": 7693
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-017.png",
+      "status": 200,
+      "bytes": 15326
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-040.png",
+      "status": 200,
+      "bytes": 14850
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-018.png",
+      "status": 200,
+      "bytes": 10631
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 677035
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-023.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-022.json.gz",
+      "status": 200,
+      "bytes": 2191
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-024.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-162.json.gz",
+      "status": 200,
+      "bytes": 1926
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-025.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-057.json.gz",
+      "status": 200,
+      "bytes": 2219
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-056.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-058.json.gz",
+      "status": 200,
+      "bytes": 1909
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-170.json.gz",
+      "status": 200,
+      "bytes": 1129
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-060.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-169.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 792547
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-019.png",
+      "status": 200,
+      "bytes": 8965
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-020.png",
+      "status": 200,
+      "bytes": 8472
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-043.png",
+      "status": 200,
+      "bytes": 27459
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-044.png",
+      "status": 200,
+      "bytes": 29136
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/global.babylon.gz",
+      "status": 200,
+      "bytes": 23349
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-116.json.gz",
+      "status": 200,
+      "bytes": 1933
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-106.json.gz",
+      "status": 200,
+      "bytes": 1929
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-084.json.gz",
+      "status": 200,
+      "bytes": 1929
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-108.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 1062071
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 8159
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 10317
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-117.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3796
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 6936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3754
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-097.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-013.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-016.json.gz",
+      "status": 200,
+      "bytes": 2201
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-017.json.gz",
+      "status": 200,
+      "bytes": 2193
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 8087
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-012.png",
+      "status": 200,
+      "bytes": 11057
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-015.png",
+      "status": 200,
+      "bytes": 9557
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 949517
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-026.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-027.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-028.json.gz",
+      "status": 200,
+      "bytes": 2192
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-029.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-052.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-053.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-054.json.gz",
+      "status": 200,
+      "bytes": 2193
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 8154
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-163.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-021.png",
+      "status": 200,
+      "bytes": 6564
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-022.png",
+      "status": 200,
+      "bytes": 10455
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-041.png",
+      "status": 200,
+      "bytes": 11798
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 654254
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-005.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-006.json.gz",
+      "status": 200,
+      "bytes": 2204
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-005.png",
+      "status": 200,
+      "bytes": 14826
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 1046103
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3711
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 9478
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-044.json.gz",
+      "status": 200,
+      "bytes": 2198
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-045.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-124.json.gz",
+      "status": 200,
+      "bytes": 1942
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-125.json.gz",
+      "status": 200,
+      "bytes": 1925
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-126.json.gz",
+      "status": 200,
+      "bytes": 1927
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-035.png",
+      "status": 200,
+      "bytes": 17777
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-034.png",
+      "status": 200,
+      "bytes": 13386
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_-2_structure.babylon.gz",
+      "status": 200,
+      "bytes": 1467
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_-2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 179498
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-047.json.gz",
+      "status": 200,
+      "bytes": 2217
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-046.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-055.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-2_structure.babylon.gz",
+      "status": 200,
+      "bytes": 2713
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-036.png",
+      "status": 200,
+      "bytes": 11333
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-042.png",
+      "status": 200,
+      "bytes": 15547
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 251777
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_-2_structure.babylon.gz",
+      "status": 200,
+      "bytes": 1500
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-127.json.gz",
+      "status": 200,
+      "bytes": 1943
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-129.json.gz",
+      "status": 200,
+      "bytes": 1940
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-135.json.gz",
+      "status": 200,
+      "bytes": 1940
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-137.json.gz",
+      "status": 200,
+      "bytes": 1941
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-128.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-139.json.gz",
+      "status": 200,
+      "bytes": 1939
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-143.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-144.json.gz",
+      "status": 200,
+      "bytes": 1939
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-141.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-142.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 6674
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 5942
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-164.json.gz",
+      "status": 200,
+      "bytes": 1925
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 6785
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/2_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 1079
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_-2_structure.babylon.gz",
+      "status": 200,
+      "bytes": 1500
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/2_-2_structure.babylon.gz",
+      "status": 200,
+      "bytes": 901
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-168.json.gz",
+      "status": 200,
+      "bytes": 1941
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-167.json.gz",
+      "status": 200,
+      "bytes": 1936
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_0_structure.babylon.gz",
+      "status": 200,
+      "bytes": 4086
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_-3_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3452
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 4112
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_3_structure.babylon.gz",
+      "status": 200,
+      "bytes": 6582
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-154.json.gz",
+      "status": 200,
+      "bytes": 1940
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-155.json.gz",
+      "status": 200,
+      "bytes": 1917
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-157.json.gz",
+      "status": 200,
+      "bytes": 1928
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-156.json.gz",
+      "status": 200,
+      "bytes": 1931
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-3_structure.babylon.gz",
+      "status": 200,
+      "bytes": 4592
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 6124
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_-2_structure.babylon.gz",
+      "status": 200,
+      "bytes": 1238
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-043.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-042.json.gz",
+      "status": 200,
+      "bytes": 2205
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-035.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-036.json.gz",
+      "status": 200,
+      "bytes": 2215
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-038.json.gz",
+      "status": 200,
+      "bytes": 2209
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-039.json.gz",
+      "status": 200,
+      "bytes": 2216
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-130.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-134.json.gz",
+      "status": 200,
+      "bytes": 1928
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-133.json.gz",
+      "status": 200,
+      "bytes": 1917
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-131.json.gz",
+      "status": 200,
+      "bytes": 1943
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-132.json.gz",
+      "status": 200,
+      "bytes": 1922
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-136.json.gz",
+      "status": 200,
+      "bytes": 1929
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-138.json.gz",
+      "status": 200,
+      "bytes": 1919
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-140.json.gz",
+      "status": 200,
+      "bytes": 1930
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-145.json.gz",
+      "status": 200,
+      "bytes": 1937
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-148.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-146.json.gz",
+      "status": 200,
+      "bytes": 1918
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-147.json.gz",
+      "status": 200,
+      "bytes": 1928
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-149.json.gz",
+      "status": 200,
+      "bytes": 1920
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-151.json.gz",
+      "status": 200,
+      "bytes": 1935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-150.json.gz",
+      "status": 200,
+      "bytes": 1927
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-033.png",
+      "status": 200,
+      "bytes": 16852
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-032.png",
+      "status": 200,
+      "bytes": 21873
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-027.png",
+      "status": 200,
+      "bytes": 15333
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_-2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 179422
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-028.png",
+      "status": 200,
+      "bytes": 14644
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-029.png",
+      "status": 200,
+      "bytes": 13018
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-030.png",
+      "status": 200,
+      "bytes": 16151
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 869611
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-033.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-034.json.gz",
+      "status": 200,
+      "bytes": 2205
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-040.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-041.json.gz",
+      "status": 200,
+      "bytes": 2215
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-025.png",
+      "status": 200,
+      "bytes": 12769
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-026.png",
+      "status": 200,
+      "bytes": 14854
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 738249
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-031.png",
+      "status": 200,
+      "bytes": 16935
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 759542
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-1_2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 8764
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-032.json.gz",
+      "status": 200,
+      "bytes": 2207
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-037.json.gz",
+      "status": 200,
+      "bytes": 2207
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-024.png",
+      "status": 200,
+      "bytes": 20435
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_-2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 178576
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-2_2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 8738
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 368474
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_0_detail.babylon.gz",
+      "status": 200,
+      "bytes": 458322
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-031.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-048.json.gz",
+      "status": 200,
+      "bytes": 2201
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-049.json.gz",
+      "status": 200,
+      "bytes": 2224
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-050.json.gz",
+      "status": 200,
+      "bytes": 2207
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-158.json.gz",
+      "status": 200,
+      "bytes": 1922
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-030.json.gz",
+      "status": 200,
+      "bytes": 2202
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-037.png",
+      "status": 200,
+      "bytes": 17125
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-038.png",
+      "status": 200,
+      "bytes": 18085
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-039.png",
+      "status": 200,
+      "bytes": 15789
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 438029
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-023.png",
+      "status": 200,
+      "bytes": 16381
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_-2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 54984
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-3_2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 6578
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/manifest.json",
+      "status": 200,
+      "bytes": 162073
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-4_1_detail.babylon.gz",
+      "status": 503,
+      "bytes": 38
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-4_1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 1581
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-4_1_detail.babylon.gz",
+      "status": 503,
+      "bytes": 38
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-4_1_detail.babylon.gz",
+      "status": 503,
+      "bytes": 38
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/-4_1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 15208
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-018.json.gz",
+      "status": 200,
+      "bytes": 2195
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-019.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-020.json.gz",
+      "status": 200,
+      "bytes": 2197
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-021.json.gz",
+      "status": 200,
+      "bytes": 2217
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-051.json.gz",
+      "status": 200,
+      "bytes": 2198
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-165.json.gz",
+      "status": 200,
+      "bytes": 1914
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3796
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-016.png",
+      "status": 200,
+      "bytes": 7693
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-018.png",
+      "status": 200,
+      "bytes": 10631
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 677035
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-046.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-055.json.gz",
+      "status": 200,
+      "bytes": 2200
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-047.json.gz",
+      "status": 200,
+      "bytes": 2217
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-2_structure.babylon.gz",
+      "status": 200,
+      "bytes": 2713
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-036.png",
+      "status": 200,
+      "bytes": 11333
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-042.png",
+      "status": 200,
+      "bytes": 15547
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_-2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 251777
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 8686
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/0_2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 8686
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-026.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-027.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-028.json.gz",
+      "status": 200,
+      "bytes": 2192
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-029.json.gz",
+      "status": 200,
+      "bytes": 2218
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-052.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-163.json.gz",
+      "status": 200,
+      "bytes": 1915
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_1_structure.babylon.gz",
+      "status": 200,
+      "bytes": 3711
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-053.json.gz",
+      "status": 200,
+      "bytes": 2199
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/materials/material-054.json.gz",
+      "status": 200,
+      "bytes": 2193
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-021.png",
+      "status": 200,
+      "bytes": 6564
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-022.png",
+      "status": 200,
+      "bytes": 10455
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/textures/texture-041.png",
+      "status": 200,
+      "bytes": 11798
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_1_detail.babylon.gz",
+      "status": 200,
+      "bytes": 654254
+    },
+    {
+      "url": "http://127.0.0.1:4176/world/chunks/1_2_detail.babylon.gz",
+      "status": 200,
+      "bytes": 38044
+    }
+  ],
+  "checks": [
+    {
+      "name": "ready",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": {
+        "x": 3.3,
+        "y": 1.2,
+        "z": -28
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": true,
+      "simTime": 0,
+      "meshes": 1821,
+      "activeMeshes": 470,
+      "physicsBodies": 133,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 12,
+        "totalMeshes": 1221,
+        "residentMeshes": 674,
+        "totalColliders": 249,
+        "residentColliders": 98,
+        "cpuGeometryBytes": 38782008,
+        "meshLoads": 674,
+        "meshDisposals": 0,
+        "colliderLoads": 98,
+        "colliderDisposals": 0,
+        "pendingMeshes": 80,
+        "activeAnchors": 0,
+        "lastMeshOperations": 0,
+        "loadedPackages": 24,
+        "totalPackages": 84,
+        "pendingPackages": 13,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 152,
+        "fetchedBytes": 8471151,
+        "residentMaterials": 128,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 24,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "not-started"
+      },
+      "fps": 8.508334300228729,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "entry-door",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": {
+        "x": 3,
+        "y": 0.6217812299728394,
+        "z": -23
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 1.183333333333334,
+      "meshes": 2360,
+      "activeMeshes": 477,
+      "physicsBodies": 243,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 208,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 208,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": true
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 48.87585532651891,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "headlights": true,
+      "paint": "#CC3C33",
+      "doorAngles": [
+        {
+          "side": -1,
+          "front": true,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "front": true,
+          "angle": 1.12,
+          "enabled": true
+        }
+      ],
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            2.398400068283081,
+            0.7217620611190796,
+            -20.725000076293945
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            3.601599931716919,
+            0.7217620611190796,
+            -20.725000076293945
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            11,
+            1.1614575386047363,
+            -42.849998779296875
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -66.5121574758777,
+            0.6566393073486667,
+            2.683516105706213
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "headlights-on",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": {
+        "x": 3,
+        "y": 0.6214539408683777,
+        "z": -23
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 4.316666666666657,
+      "meshes": 2377,
+      "activeMeshes": 478,
+      "physicsBodies": 260,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 225,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.15640665874699,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "headlights": true,
+      "paint": "#CC3C33",
+      "doorAngles": [
+        {
+          "side": -1,
+          "front": true,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "front": true,
+          "angle": 0,
+          "enabled": true
+        }
+      ],
+      "mounted": "vehicle-1",
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            2.398400068283081,
+            0.7214540243148804,
+            -20.725000076293945
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            3.601599931716919,
+            0.7214540243148804,
+            -20.725000076293945
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            11,
+            1.161210298538208,
+            -42.849998779296875
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -96.85703275606743,
+            0.732995831679073,
+            2.694274091726014
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "headlights-off",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": {
+        "x": 3,
+        "y": 0.6214540004730225,
+        "z": -23
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 4.816666666666655,
+      "meshes": 2377,
+      "activeMeshes": 478,
+      "physicsBodies": 260,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 225,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.99999999999996,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "headlights": false,
+      "paint": "#CC3C33",
+      "doorAngles": [
+        {
+          "side": -1,
+          "front": true,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "front": true,
+          "angle": 0,
+          "enabled": true
+        }
+      ],
+      "mounted": "vehicle-1",
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            11,
+            1.161210298538208,
+            -42.849998779296875
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -102.39150237051575,
+            0.7327930913723879,
+            2.6948884872714136
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -102.39136504141419,
+            0.7327940450467043,
+            3.8980885891238306
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            26.050894307833243,
+            0.9744668906774173,
+            74.64400480986352
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "exit-door",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": {
+        "x": 1.44,
+        "y": 0.9399999403953552,
+        "z": -23
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 5.33333333333332,
+      "meshes": 2380,
+      "activeMeshes": 467,
+      "physicsBodies": 263,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 228,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.9640215856189,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            2.398400068283081,
+            0.7214540243148804,
+            -20.725000076293945
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            3.601599931716919,
+            0.7214540243148804,
+            -20.725000076293945
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            11,
+            1.161210298538208,
+            -42.849998779296875
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            19.31482715545482,
+            0.8995822613335959,
+            74.64400481254849
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "garage-paint",
+      "backend": "WebGPU",
+      "cash": 12425,
+      "fallbackReason": "",
+      "position": {
+        "x": -34,
+        "y": 0.7314569354057312,
+        "z": -49
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-16",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": true,
+      "simTime": 8.750000000000014,
+      "meshes": 2444,
+      "activeMeshes": 590,
+      "physicsBodies": 267,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 231,
+        "cpuGeometryBytes": 56686064,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 231,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12679215,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": true,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.156406658746924,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "headlights": true,
+      "paint": "#BA283B",
+      "doorAngles": [
+        {
+          "side": -1,
+          "front": true,
+          "angle": 0,
+          "enabled": true
+        },
+        {
+          "side": 1,
+          "front": true,
+          "angle": 0.043333333333333335,
+          "enabled": true
+        }
+      ],
+      "mounted": "vehicle-16",
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -34.601600646972656,
+            0.8314577341079712,
+            -46.72499816894531
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -33.398399353027344,
+            0.8314577341079712,
+            -46.72499816894531
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            11,
+            1.161210298538208,
+            -42.849998779296875
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            2.398400068283081,
+            0.7214540243148804,
+            -20.725000076293945
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "failed-travel-preserves-origin",
+      "backend": "WebGPU",
+      "cash": 12425,
+      "fallbackReason": "",
+      "position": {
+        "x": -35.56,
+        "y": 1.0500000664591789,
+        "z": -49
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": true,
+      "simTime": 8.833333333333352,
+      "meshes": 2459,
+      "activeMeshes": 589,
+      "physicsBodies": 280,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1103,
+        "totalColliders": 249,
+        "residentColliders": 244,
+        "cpuGeometryBytes": 56690504,
+        "meshLoads": 1103,
+        "meshDisposals": 0,
+        "colliderLoads": 248,
+        "colliderDisposals": 4,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 1,
+        "retries": 2,
+        "requests": 223,
+        "fetchedBytes": 12680796,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "chunks/-4_1_detail.babylon.gz: HTTP 503",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": true,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.98800240023492,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -34.601600646972656,
+            0.8314555883407593,
+            -46.72499816894531
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -33.398399353027344,
+            0.8314555883407593,
+            -46.72499816894531
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            11,
+            1.161210298538208,
+            -42.849998779296875
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            2.398400068283081,
+            0.7214540243148804,
+            -20.725000076293945
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.05,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.05,
+            148
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502,
+            1.05,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.05,
+            121
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "reserve-gate",
+      "backend": "WebGPU",
+      "cash": 12425,
+      "fallbackReason": "",
+      "position": {
+        "x": -449,
+        "y": 1.034025,
+        "z": 144
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 10.566666666666771,
+      "meshes": 2451,
+      "activeMeshes": 126,
+      "physicsBodies": 282,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 24,
+        "totalMeshes": 1221,
+        "residentMeshes": 1097,
+        "totalColliders": 249,
+        "residentColliders": 242,
+        "cpuGeometryBytes": 56699384,
+        "meshLoads": 1207,
+        "meshDisposals": 110,
+        "colliderLoads": 258,
+        "colliderDisposals": 16,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 46,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 3,
+        "requests": 237,
+        "fetchedBytes": 13650880,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "chunks/-4_1_detail.babylon.gz: HTTP 503",
+        "packagesLoaded": 55,
+        "packagesEvicted": 9,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 1,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 56.23242736644784,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -432.0477567549151,
+            0.8395719328882364,
+            202.400314312058
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -433.22433146194635,
+            0.7968262234689859,
+            202.64842222221424
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -362.9548458985916,
+            0.9194359519423944,
+            -15.825758055501188
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -364.2644467286697,
+            0.9660894014777642,
+            -16.20134456520578
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.0427749999999998,
+            150.34000000000083
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -504.3399999999979,
+            1.0427749999999998,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.0427749999999998,
+            118.66000000000065
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "visitor-access",
+      "backend": "WebGPU",
+      "cash": 12425,
+      "fallbackReason": "",
+      "position": {
+        "x": -449,
+        "y": 1.034025,
+        "z": 144
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 12.466666666666866,
+      "meshes": 2444,
+      "activeMeshes": 125,
+      "physicsBodies": 275,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 24,
+        "totalMeshes": 1221,
+        "residentMeshes": 1097,
+        "totalColliders": 249,
+        "residentColliders": 235,
+        "cpuGeometryBytes": 56699384,
+        "meshLoads": 1207,
+        "meshDisposals": 110,
+        "colliderLoads": 258,
+        "colliderDisposals": 23,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 46,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 3,
+        "requests": 237,
+        "fetchedBytes": 13650880,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "chunks/-4_1_detail.babylon.gz: HTTP 503",
+        "packagesLoaded": 55,
+        "packagesEvicted": 9,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "authorized",
+        "inside": false,
+        "accessSeconds": 89,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.892194049995936,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -432.9775065019531,
+            0.7303821433902433,
+            183.97654683542356
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -434.17873941210934,
+            0.7307166446567228,
+            184.04522664499387
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -362.9548458985916,
+            0.9194359519423944,
+            -15.825758055501188
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -364.2644467286697,
+            0.9660894014777642,
+            -16.20134456520578
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.0427749999999998,
+            152.90500000000173
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -506.90499999999554,
+            1.0427749999999998,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.0427749999999998,
+            116.09500000000136
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "inside-reserve",
+      "backend": "WebGPU",
+      "cash": 12425,
+      "fallbackReason": "",
+      "position": {
+        "x": -462.69000000000017,
+        "y": 1.034025,
+        "z": 144
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.44,
+          "z": -23
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 16.43333333333368,
+      "meshes": 2426,
+      "activeMeshes": 74,
+      "physicsBodies": 253,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 25,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 213,
+        "cpuGeometryBytes": 56744200,
+        "meshLoads": 1211,
+        "meshDisposals": 110,
+        "colliderLoads": 261,
+        "colliderDisposals": 48,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 47,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 3,
+        "requests": 238,
+        "fetchedBytes": 13659566,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "chunks/-4_1_detail.babylon.gz: HTTP 503",
+        "packagesLoaded": 56,
+        "packagesEvicted": 9,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "authorized",
+        "inside": true,
+        "accessSeconds": 85,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.08411776343614,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -427.6398654444912,
+            0.7909218666219471,
+            149.21254491554495
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -428.60821871597557,
+            0.7736308571958301,
+            148.4986166928887
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -362.9548458985916,
+            0.9194359519423944,
+            -15.825758055501188
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -364.2644467286697,
+            0.9660894014777642,
+            -16.20134456520578
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.0427749999999998,
+            158.26000000000363
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -512.2599999999914,
+            1.0427749999999998,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.0427749999999998,
+            110.74000000000285
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "restricted-warning",
+      "backend": "WebGPU",
+      "cash": 12425,
+      "fallbackReason": "",
+      "position": {
+        "x": -462.69000000000017,
+        "y": 1.034025,
+        "z": 144
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": -462.69000000000017,
+          "z": 144
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 16.666666666667002,
+      "meshes": 2426,
+      "activeMeshes": 63,
+      "physicsBodies": 253,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 25,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 213,
+        "cpuGeometryBytes": 56744200,
+        "meshLoads": 1211,
+        "meshDisposals": 110,
+        "colliderLoads": 261,
+        "colliderDisposals": 48,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 47,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 3,
+        "requests": 238,
+        "fetchedBytes": 13659566,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "chunks/-4_1_detail.babylon.gz: HTTP 503",
+        "packagesLoaded": 56,
+        "packagesEvicted": 9,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "warning",
+        "inside": true,
+        "accessSeconds": 0,
+        "warningSeconds": 6,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 58.11700890926136,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -426.2249350662012,
+            0.7456095941951627,
+            147.34462147528413
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -427.1881919021387,
+            0.7376074918201322,
+            146.62370472723725
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -362.9548458985916,
+            0.9194359519423944,
+            -15.825758055501188
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -364.2644467286697,
+            0.9660894014777642,
+            -16.20134456520578
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "search",
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -476,
+            1.0427749999999998,
+            148.13500000000005
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -502.1349999999999,
+            1.0427749999999998,
+            132
+          ],
+          "health": 140
+        },
+        {
+          "state": "search",
+          "position": [
+            -491,
+            1.0427749999999998,
+            120.86500000000004
+          ],
+          "health": 140
+        }
+      ]
+    },
+    {
+      "name": "restricted-alarm",
+      "backend": "WebGPU",
+      "cash": 12425,
+      "fallbackReason": "",
+      "position": {
+        "x": -462.69000000000017,
+        "y": 1.034025,
+        "z": 144
+      },
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": -462.69000000000017,
+          "z": 144
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 23.499999999999947,
+      "meshes": 2341,
+      "activeMeshes": 54,
+      "physicsBodies": 254,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 24,
+        "totalMeshes": 1221,
+        "residentMeshes": 1015,
+        "totalColliders": 249,
+        "residentColliders": 214,
+        "cpuGeometryBytes": 52984808,
+        "meshLoads": 1287,
+        "meshDisposals": 272,
+        "colliderLoads": 302,
+        "colliderDisposals": 88,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 44,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 3,
+        "requests": 250,
+        "fetchedBytes": 14381594,
+        "residentMaterials": 158,
+        "totalCpuGeometryBytes": 58285352,
+        "lastError": "chunks/-4_1_detail.babylon.gz: HTTP 503",
+        "packagesLoaded": 60,
+        "packagesEvicted": 16,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "alarm",
+        "inside": true,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.10819474767962,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "playerYaw": 0,
+      "beams": [
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -365.7905800428313,
+            0.6682349286444093,
+            135.34223563676431
+          ]
+        },
+        {
+          "enabled": true,
+          "intensity": 85,
+          "position": [
+            -366.6557839002532,
+            0.7773932061560059,
+            134.51327140336588
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -362.9548458985916,
+            0.9194359519423944,
+            -15.825758055501188
+          ]
+        },
+        {
+          "enabled": false,
+          "intensity": 0,
+          "position": [
+            -364.2644467286697,
+            0.9660894014777642,
+            -16.20134456520578
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "state": "challenge",
+          "position": [
+            -464,
+            1.0427749999999998,
+            140
+          ],
+          "health": 140
+        },
+        {
+          "state": "challenge",
+          "position": [
+            -475.2393173589201,
+            1.0427749999999998,
+            157.8598771732657
+          ],
+          "health": 140
+        },
+        {
+          "state": "challenge",
+          "position": [
+            -513.438661265274,
+            1.0427749999999998,
+            132.04585614375387
+          ],
+          "health": 140
+        },
+        {
+          "state": "challenge",
+          "position": [
+            -489.0529502587772,
+            1.0427749999999998,
+            114.29395573101624
+          ],
+          "health": 140
+        }
+      ]
+    }
+  ]
+}

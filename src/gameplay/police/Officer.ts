@@ -12,7 +12,7 @@ import {
   type ShadowGenerator,
 } from "@babylonjs/core";
 import { Character } from "../Character";
-export type OfficerRole = "patrol" | "swat";
+export type OfficerRole = "patrol" | "swat" | "military";
 export type OfficerState =
   | "riding"
   | "pursuit"
@@ -43,13 +43,14 @@ export class Officer {
     shadows: ShadowGenerator,
     public seat = 0,
   ) {
-    this.health = role === "swat" ? 150 : 100;
+    this.health = role === "military" ? 140 : role === "swat" ? 150 : 100;
     this.model = new Character(
       scene,
       shadows,
       id,
-      role === "swat" ? "#162827" : "#182e48",
+      role === "military" ? "#6c7051" : role === "swat" ? "#162827" : "#182e48",
       false,
+      role === "military" ? "#535E42" : role === "swat" ? "#162827" : "#182E48",
     );
     const material = (name: string, color: string) => {
       const m = new PBRMaterial(`${id}/${name}`, scene);
@@ -60,7 +61,7 @@ export class Officer {
     };
     const armor = material(
         "uniform-equipment",
-        role === "swat" ? "#15201e" : "#16273a",
+        role === "military" ? "#414b35" : role === "swat" ? "#15201e" : "#16273a",
       ),
       badge = material("badge", "#e8c272");
     const box = (
@@ -90,7 +91,11 @@ export class Officer {
     box("radio", 0.07, 0.12, 0.06, -0.17, 1.32, 0.14);
     box("badge", 0.055, 0.072, 0.013, 0.092, 1.4, 0.146, badge);
     box("shoulder-patch", 0.02, 0.09, 0.085, 0.239, 1.39, 0, badge);
-    if (role === "swat") box("ballistic-vest", 0.4, 0.37, 0.3, 0, 1.27, 0);
+    if (role !== "patrol") box("ballistic-vest", 0.4, 0.37, 0.3, 0, 1.27, 0);
+    if(role === "military") {
+      box("reserve-armband",.022,.12,.14,-.24,1.36,0,badge);
+      box("field-pack",.27,.27,.12,0,1.24,-.2);
+    }
     const helmet = MeshBuilder.CreateSphere(
       `${id}/headwear`,
       { diameterX: 0.32, diameterY: 0.18, diameterZ: 0.31, segments: 10 },
@@ -109,10 +114,10 @@ export class Officer {
         false,
       );
       texture.drawText(
-        role === "swat" ? "SWAT" : "POLICE",
+        role === "military" ? "MILITARY" : role === "swat" ? "SWAT" : "POLICE",
         null,
         49,
-        "bold 48px sans-serif",
+        role === "military" ? "bold 36px sans-serif" : "bold 48px sans-serif",
         "#f2f1df",
         "#172b38",
         true,
@@ -124,10 +129,10 @@ export class Officer {
       box("marked-front", 0.23, 0.063, 0.008, 0, 1.28, 0.157, label);
     }
     this.weapon = box(
-      role === "swat" ? "carbine" : "sidearm",
+      role !== "patrol" ? "carbine" : "sidearm",
       0.055,
       0.095,
-      role === "swat" ? 0.48 : 0.23,
+      role !== "patrol" ? 0.48 : 0.23,
       0.18,
       1.42,
       0.45,
@@ -139,7 +144,7 @@ export class Officer {
       0.085,
       0.18,
       1.42,
-      role === "swat" ? 0.72 : 0.6,
+      role !== "patrol" ? 0.72 : 0.6,
       badge,
     );
     this.flash.setEnabled(false);
