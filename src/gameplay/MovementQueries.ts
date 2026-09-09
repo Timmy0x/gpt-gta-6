@@ -8,6 +8,7 @@ import {
   ShapeCastResult,
   Vector3,
   type PhysicsBody,
+  type PhysicsShape,
   type Scene,
 } from "@babylonjs/core";
 
@@ -20,7 +21,7 @@ export class MovementQueries {
   private overlapInput = new ProximityCastResult();
   private overlapHit = new ProximityCastResult();
   private ray = new PhysicsRaycastResult();
-  constructor(private scene: Scene) {
+  constructor(private scene: Scene, private ownShape?: () => PhysicsShape | undefined) {
     this.plugin = scene.getPhysicsEngine()!.getPhysicsPlugin() as HavokPlugin;
     this.capsule = new PhysicsShapeCapsule(
       new Vector3(0, -0.58, 0),
@@ -30,6 +31,7 @@ export class MovementQueries {
     );
   }
   clear(position: Vector3, ignoreBody?: PhysicsBody) {
+    return this.withoutSelf(() => {
     this.plugin.shapeProximity(
       {
         shape: this.capsule,
@@ -42,9 +44,11 @@ export class MovementQueries {
       this.overlapInput,
       this.overlapHit,
     );
-    return !this.overlapHit.hasHit || this.overlapHit.hitDistance > -0.015;
+      return !this.overlapHit.hasHit || this.overlapHit.hitDistance > -0.015;
+    });
   }
   path(start: Vector3, end: Vector3, ignoreBody?: PhysicsBody) {
+    return this.withoutSelf(() => {
     this.plugin.shapeCast(
       {
         shape: this.capsule,
@@ -57,9 +61,11 @@ export class MovementQueries {
       this.input,
       this.hit,
     );
-    return !this.hit.hasHit || this.hit.hitFraction > 0.985;
+      return !this.hit.hasHit || this.hit.hitFraction > 0.985;
+    });
   }
   ground(position: Vector3, up = 1.5, down = 3, ignoreBody?: PhysicsBody) {
+    return this.withoutSelf(() => {
     const from = position.add(new Vector3(0, up, 0));
     const to = position.add(new Vector3(0, -down, 0));
     (this.scene.getPhysicsEngine()! as PhysicsEngineV2).raycastToRef(
@@ -71,6 +77,15 @@ export class MovementQueries {
     return this.ray.hasHit && this.ray.hitNormalWorld.y > 0.65
       ? this.ray.hitPointWorld.clone()
       : null;
+    });
+  }
+  /** Queries may ignore an attached vehicle too; excluding our own capsule is independent. */
+  private withoutSelf<T>(query: () => T): T {
+    const shape = this.ownShape?.();
+    if (!shape) return query();
+    const membership = shape.filterMembershipMask;
+    shape.filterMembershipMask = 0;
+    try { return query(); } finally { shape.filterMembershipMask = membership; }
   }
   /** Two-stage up/across clearance plus a walkable landing; no blind ledge teleport. */
   mantle(position: Vector3, heading: number) {

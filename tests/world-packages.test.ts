@@ -83,7 +83,7 @@ test('transient package failures retry and preserve the current neighborhood unt
 
 test('production manifest preserves authored collision metadata and asset references',async()=>{
  const manifest=JSON.parse(await readFile(new URL('../public/world/manifest.json',import.meta.url),'utf8')) as WorldManifest;
- assert.equal(manifest.chunks.length,84);assert.equal(manifest.colliders.length,249);
+ assert.equal(manifest.chunks.length,138);assert.equal(manifest.colliders.length,730);
  assert.ok(manifest.colliders.some(c=>c.global&&c.id.includes('urban-ground')));
  assert.ok(manifest.colliders.some(c=>c.obstacle&&c.x<-450));
  const ids=new Set(manifest.materials.map(m=>m.id));
@@ -120,7 +120,8 @@ test('disposing residency does not remove unrelated gameplay geometry or materia
  }finally{f.dispose();}
 });
 
-test('production World awaits native packages, preserves global wave identities and releases loaded CPU geometry',async()=>{
+test('production World awaits native packages, preserves runtime ocean identity and releases loaded CPU geometry',async()=>{
+ const nameDescriptor=Object.getOwnPropertyDescriptor(globalThis,'name');Object.defineProperty(globalThis,'name',{value:'',configurable:true});
  const [{World}, {default:HavokPhysics}, {HavokPlugin}]=await Promise.all([import('../src/world/World'),import('@babylonjs/havok'),import('@babylonjs/core')]);
  const bytes=await readFile(new URL('../node_modules/@babylonjs/havok/lib/esm/HavokPhysics.wasm',import.meta.url));
  const havok=await HavokPhysics({wasmBinary:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength) as ArrayBuffer});
@@ -130,9 +131,10 @@ test('production World awaits native packages, preserves global wave identities 
  const fileFetch:typeof fetch=async input=>{const path=new URL(String(input)).pathname;requests.push(path);const bytes=await readFile(new URL(`../public${path}`,import.meta.url));return new Response(bytes as BodyInit);};
  const world=new World({scene,shadows},{baseUrl:'http://world.test/world/',fetch:fileFetch});
  try{
-  await world.ready;const stat=world.getStreamingStats();assert.equal(stat.loadedPackages,12);assert.equal(stat.totalPackages,84);assert.ok(stat.cpuGeometryBytes<stat.totalCpuGeometryBytes/2);assert.ok(world.obstacles.length>100);
-  const foam=Array.from({length:8},(_,i)=>scene.getMeshById(`shore-break/${i}`));assert.ok(foam.every(Boolean));assert.equal(new Set(foam.map(m=>m!.geometry)).size,8);
-  world.update(1,world.spawn,15,'Rain');assert.equal(new Set(foam.map(m=>m!.position.x)).size,8,'every shore wave animates independently');
+  await world.ready;const stat=world.getStreamingStats();assert.equal(stat.loadedPackages,12);assert.equal(stat.totalPackages,138);assert.ok(stat.cpuGeometryBytes<stat.totalCpuGeometryBytes/2);assert.ok(world.obstacles.length>100);assert.ok(world.obstacles.filter(o=>o.x < -570).length>100,'western buildings and fixtures participate in navigation');
+  const ocean=world.ocean.mesh,foam=world.ocean.foam,originalFoam=Array.from(foam.getVerticesData('position')!);
+  assert.ok(!scene.getMeshByName('Atlantic Ocean'));assert.ok(!scene.getMeshByName('shallow-turquoise-shelf'));assert.ok(!scene.getMeshById('shore-break/0'));
+  world.update(.1,world.spawn,15,'Rain');assert.equal(world.ocean.mesh,ocean);assert.equal(world.ocean.foam,foam);assert.notDeepEqual(Array.from(foam.getVerticesData('position')!),originalFoam,'bounded broken foam patches animate without recreating geometry');
   for(const mesh of scene.meshes.filter(m=>m.metadata?.worldDetail)){
     assert.ok(mesh.material,'native meshes retain their lazily shared material');
     if(mesh.material instanceof PBRMaterial)assert.equal(mesh.material.imageProcessingConfiguration,scene.imageProcessingConfiguration,'streamed materials follow live tone mapping and exposure');
@@ -141,5 +143,5 @@ test('production World awaits native packages, preserves global wave identities 
   }
   assert.ok(!requests.some(path=>path.includes('/chunks/-4_')),'the remote annex is not downloaded during initial readiness');
   world.dispose();assert.equal(scene.geometries.length,0);assert.equal(scene.meshes.length,0);assert.equal(shadows.getShadowMap()!.renderList!.length,0);
- }finally{world.dispose();shadows.dispose();scene.dispose();engine.dispose();}
+ }finally{world.dispose();shadows.dispose();scene.dispose();engine.dispose();if(nameDescriptor)Object.defineProperty(globalThis,'name',nameDescriptor);else Reflect.deleteProperty(globalThis,'name');}
 });

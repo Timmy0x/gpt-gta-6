@@ -77,14 +77,14 @@ export function createLaneGraph(): RoadNode[] {
 export const CENTRAL_LOCATIONS: WorldLocation[] = [
   {
     id: "palma-market",
-    name: "Mercado Palma · authored district",
+    name: "Mercado Palma",
     x: -324,
     z: 18,
     type: "market",
   },
   {
     id: "mangrove-estates",
-    name: "Mangrove Estates · authored neighborhood",
+    name: "Mangrove Estates",
     x: -408.5,
     z: -63.5,
     type: "district",
@@ -98,7 +98,7 @@ export const CENTRAL_LOCATIONS: WorldLocation[] = [
   },
   {
     id: "restricted-compound",
-    name: "Coastal Reserve · creative facility",
+    name: "Coastal Reserve",
     x: -449,
     z: 144,
     type: "military",
@@ -111,7 +111,7 @@ export const CENTRAL_LOCATIONS: WorldLocation[] = [
   { id: "race", name: "Ocean Circuit", x: 3.3, z: -190, type: "race" },
   {
     id: "little-cuba",
-    name: "Little Cuba · authored block",
+    name: "Little Cuba",
     x: -180,
     z: 30,
     type: "district",

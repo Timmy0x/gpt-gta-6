@@ -73,6 +73,11 @@ export class Population {
       const z = -170 + Math.floor(i / 5) * 63 + this.rng() * 12;
       this.spawnPed(new Vector3(x, 0, z), i, false);
     }
+    // Keep original identities, then seed the new courts and park with persistent locals.
+    // Their activity budget follows proximity so a growing map does not multiply AI work.
+    for (const location of world.locations.filter(l => l.id.startsWith('inner-') && ['market', 'park', 'landmark'].includes(l.type))) {
+      for (let i = 0; i < 3; i++) this.spawnPed(new Vector3(location.x + (i - 1) * .9, 0, location.z + 2), undefined, false, `${location.id}-civilian-${i}`);
+    }
     const nodes = world.roads;
     for (let i = 0; i < 12 && nodes.length; i++) {
       const node = nodes[Math.floor((i * nodes.length) / 12)];
@@ -290,6 +295,9 @@ export class Population {
       });
       if (d.stuck > 8) d.stuck = 0;
     }
+    const ambient = new Set(this.pedestrians.filter(p => !p.creative && !p.formerDriver && !p.vehicleId)
+      .sort((a, b) => distance(a.model.root.position, position) - distance(b.model.root.position, position))
+      .slice(0, Math.floor(30 * this.density)));
     for (let i = 0; i < this.pedestrians.length; i++) {
       const ped = this.pedestrians[i];
       // A driver is already animated by occupancy; combat still sees the same Pedestrian.
@@ -304,7 +312,7 @@ export class Population {
       }
       // Older saves recorded health without a corpse pose/ledger.
       if(ped.health<=0&&!ped.model.dead){restoreCorpse(ped.model,snapshotCasualty(ped.id,ped.model));ped.activity="dead";ped.report=0;}
-      const active = ped.creative || ped.formerDriver || i < 30 * this.density;
+      const active = ped.creative || ped.formerDriver || ambient.has(ped);
       ped.model.root.setEnabled(active);
       if (!active || ped.health <= 0 || ped.model.root.metadata?.ragdollActive)
         continue;

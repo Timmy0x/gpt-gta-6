@@ -27,6 +27,8 @@ export interface ColliderRecord {
   global?: boolean;
   obstacle?: Obstacle;
   material?: string;
+  /** Pitch across X for authored walkable banks and slopes. */
+  rotationZ?: number;
 }
 interface MeshRecord {
   id: string;
@@ -253,6 +255,7 @@ export class ChunkResidency {
       this.scene,
     );
     mesh.position.set(r.x, r.y, r.z);
+    mesh.rotation.z = r.rotationZ ?? 0;
     mesh.isVisible = false;
     mesh.isPickable = true;
     mesh.metadata = {

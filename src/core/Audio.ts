@@ -23,6 +23,8 @@ export class GameAudio {
   private voices = new Map<string, Voice>();
   private effects = 0;
   private footTimer = 0;
+  private swimTimer = 0;
+  private underwaterFilter: BiquadFilterNode | null = null;
   start() {
     if (this.context) {
       void this.context.resume();
@@ -32,7 +34,10 @@ export class GameAudio {
     const ctx = this.context;
     this.master = ctx.createGain();
     this.master.gain.value = 0.24;
-    this.master.connect(ctx.destination);
+    this.underwaterFilter = ctx.createBiquadFilter();
+    this.underwaterFilter.type = "lowpass";
+    this.underwaterFilter.frequency.value = 20000;
+    this.master.connect(this.underwaterFilter).connect(ctx.destination);
     this.engine = ctx.createOscillator();
     this.engine.type = "sawtooth";
     this.engine.frequency.value = 45;
@@ -74,6 +79,8 @@ export class GameAudio {
       weather: string;
       paused: boolean;
       footSpeed: number;
+      underwater?: boolean;
+      swimSpeed?: number;
       sources: Source[];
     },
   ) {
@@ -96,6 +103,12 @@ export class GameAudio {
     l.upY.value = 1;
     l.upZ.value = 0;
     if (!options) return;
+    this.underwaterFilter?.frequency.setTargetAtTime(options.underwater ? 650 : 20000, t, .15);
+    this.swimTimer -= options.dt;
+    if (!options.paused && (options.swimSpeed ?? 0) > .2 && this.swimTimer <= 0) {
+      this.effect("swim", position);
+      this.swimTimer = .75;
+    }
     const rain = options.weather === "Rain",
       coastal = position.x > 140;
     this.ambience?.gain.setTargetAtTime(
@@ -193,21 +206,22 @@ export class GameAudio {
     const ctx = this.context,
       t = ctx.currentTime,
       foot = type === "footstep",
+      swim = type === "swim",
       shot = type === "shot",
       explosion = type === "explosion",
       siren = type === "siren",
       horn = type === "horn";
-    const duration = foot ? 0.11 : explosion ? 1.1 : siren ? 0.7 : 0.35;
+    const duration = swim ? .5 : foot ? 0.11 : explosion ? 1.1 : siren ? 0.7 : 0.35;
     const gain = ctx.createGain(),
       panner = this.panner(position),
       filter = ctx.createBiquadFilter();
     filter.type = "lowpass";
-    filter.frequency.value = foot ? 600 : shot ? 6500 : explosion ? 650 : 1400;
+    filter.frequency.value = swim ? 1800 : foot ? 600 : shot ? 6500 : explosion ? 650 : 1400;
     const source: OscillatorNode | AudioBufferSourceNode =
       !siren && !horn && this.noise ? ctx.createBufferSource() : ctx.createOscillator();
     if (source instanceof AudioBufferSourceNode) {
       source.buffer = this.noise;
-      source.playbackRate.value = shot ? 2.3 : foot ? 0.8 : 0.6;
+      source.playbackRate.value = swim ? .55 : shot ? 2.3 : foot ? 0.8 : 0.6;
     } else {
       source.type = horn ? "triangle" : "sine";
       source.frequency.setValueAtTime(horn ? 370 : siren ? 800 : 80, t);
@@ -217,7 +231,7 @@ export class GameAudio {
       );
     }
     gain.gain.setValueAtTime(
-      foot ? 0.08 : shot ? 1.2 : explosion ? 1.8 : 0.5,
+      swim ? .12 : foot ? 0.08 : shot ? 1.2 : explosion ? 1.8 : 0.5,
       t,
     );
     gain.gain.exponentialRampToValueAtTime(0.001, t + duration);

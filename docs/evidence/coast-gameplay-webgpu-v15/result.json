@@ -1,0 +1,2992 @@
+{
+  "origin": "http://127.0.0.1:4206",
+  "backend": "webgpu",
+  "method": "Normal map fast travel, keyboard beach traversal/swimming/diving/surfacing, western walking and normal save/load. Diagnostics read only; no game state hooks.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-BHOH6UD5.js",
+      "sha256": "6b6d210a8cdca417ac399b9ef3e87c59c02a971108774a350ffd37ab0d53e6ac",
+      "world": "authored-860409-v7-inner-city",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "dry-beach",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        0.9099999690055847,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 4.4499999999999895,
+      "meshes": 2825,
+      "activeMeshes": 294,
+      "physicsBodies": 433,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 26,
+        "totalMeshes": 1970,
+        "residentMeshes": 1056,
+        "totalColliders": 730,
+        "residentColliders": 398,
+        "cpuGeometryBytes": 52918696,
+        "meshLoads": 1056,
+        "meshDisposals": 0,
+        "colliderLoads": 411,
+        "colliderDisposals": 13,
+        "pendingMeshes": 399,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 138,
+        "pendingPackages": 28,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 224,
+        "fetchedBytes": 11870399,
+        "residentMaterials": 173,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 45.56500607530823,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        179.99999999143813,
+        2.3995734388567853,
+        -34.984008531416194
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 4.533400000002235
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": false,
+          "position": [
+            -870.9,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": false,
+          "position": [
+            -870,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": false,
+          "position": [
+            -869.1,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": false,
+          "position": [
+            -978.9,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": false,
+          "position": [
+            -978,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": false,
+          "position": [
+            -977.1,
+            0,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "label": "shoreline-swim-entry",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        228.18835157183156,
+        -0.4403098625507483,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 3,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.866666666666934,
+      "meshes": 3132,
+      "activeMeshes": 206,
+      "physicsBodies": 318,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 41,
+        "totalMeshes": 1970,
+        "residentMeshes": 1478,
+        "totalColliders": 730,
+        "residentColliders": 283,
+        "cpuGeometryBytes": 62474384,
+        "meshLoads": 1674,
+        "meshDisposals": 196,
+        "colliderLoads": 508,
+        "colliderDisposals": 225,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 77,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 272,
+        "fetchedBytes": 15782688,
+        "residentMaterials": 178,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 93,
+        "packagesEvicted": 16,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 1,
+        "effects": 1,
+        "state": "running"
+      },
+      "fps": 49.89190088151635,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        228.00323281352922,
+        1.0709915646602226,
+        -34.9840085315131
+      ],
+      "swimming": true,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 1.3050681257465249,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 17.950300000000748
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": false,
+          "position": [
+            -870.9,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": false,
+          "position": [
+            -870,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": false,
+          "position": [
+            -869.1,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": false,
+          "position": [
+            -978.9,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": false,
+          "position": [
+            -978,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": false,
+          "position": [
+            -977.1,
+            0,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "label": "floating-offshore",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        258.037596995605,
+        -0.629999999999999,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 8,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 35.73333333333259,
+      "meshes": 3172,
+      "activeMeshes": 234,
+      "physicsBodies": 306,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 47,
+        "totalMeshes": 1970,
+        "residentMeshes": 1530,
+        "totalColliders": 730,
+        "residentColliders": 271,
+        "cpuGeometryBytes": 55864080,
+        "meshLoads": 2148,
+        "meshDisposals": 618,
+        "colliderLoads": 739,
+        "colliderDisposals": 468,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 86,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 335,
+        "fetchedBytes": 19662423,
+        "residentMaterials": 173,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 118,
+        "packagesEvicted": 32,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.820538384845584,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        258.03759631178264,
+        0.8595734698458646,
+        -34.9840085315131
+      ],
+      "swimming": true,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 3.3715038798241994,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 15,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 35.831200000001076
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": false,
+          "position": [
+            -870.9,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": false,
+          "position": [
+            -870,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": false,
+          "position": [
+            -869.1,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": false,
+          "position": [
+            -978.9,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": false,
+          "position": [
+            -978,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": false,
+          "position": [
+            -977.1,
+            0,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "label": "underwater",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        258.1190684018511,
+        -2.5232588676858567,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 12,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 38.99999999999907,
+      "meshes": 3166,
+      "activeMeshes": 233,
+      "physicsBodies": 300,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 47,
+        "totalMeshes": 1970,
+        "residentMeshes": 1530,
+        "totalColliders": 730,
+        "residentColliders": 265,
+        "cpuGeometryBytes": 55864080,
+        "meshLoads": 2148,
+        "meshDisposals": 618,
+        "colliderLoads": 747,
+        "colliderDisposals": 482,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 86,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 335,
+        "fetchedBytes": 19662423,
+        "residentMaterials": 173,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 118,
+        "packagesEvicted": 32,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 1,
+        "state": "running"
+      },
+      "fps": 58.858151853902925,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        258.11906808364154,
+        -1.0336853851025292,
+        -34.9840085315131
+      ],
+      "swimming": true,
+      "submerged": true,
+      "breath": 27.11666666666683,
+      "waterLevel": -0.18,
+      "depth": 3.3747627360740444,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 17,
+        "refractionMeshes": 16,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 39.10690000000221
+      },
+      "fog": {
+        "density": 0.095,
+        "color": [
+          0.039702159299214425,
+          0.15900719766404808,
+          0.1890071976640481
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": false,
+          "position": [
+            -870.9,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": false,
+          "position": [
+            -870,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": false,
+          "position": [
+            -869.1,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": false,
+          "position": [
+            -978.9,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": false,
+          "position": [
+            -978,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": false,
+          "position": [
+            -977.1,
+            0,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "label": "surfaced",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        258.1190684018511,
+        -0.6301330114538325,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 12,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 41.86666666666557,
+      "meshes": 2986,
+      "activeMeshes": 234,
+      "physicsBodies": 280,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 44,
+        "totalMeshes": 1970,
+        "residentMeshes": 1370,
+        "totalColliders": 730,
+        "residentColliders": 245,
+        "cpuGeometryBytes": 49697384,
+        "meshLoads": 2217,
+        "meshDisposals": 847,
+        "colliderLoads": 830,
+        "colliderDisposals": 585,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 79,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 343,
+        "fetchedBytes": 20023499,
+        "residentMaterials": 155,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 123,
+        "packagesEvicted": 44,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 56.211354693726825,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        258.11906840185105,
+        0.8593995863541782,
+        -34.9840085315131
+      ],
+      "swimming": true,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 3.3747627360740444,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 15,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 41.977200000001076
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": false,
+          "position": [
+            -870.9,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": false,
+          "position": [
+            -870,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": false,
+          "position": [
+            -869.1,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": false,
+          "position": [
+            -978.9,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": false,
+          "position": [
+            -978,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": false,
+          "position": [
+            -977.1,
+            0,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "label": "walked-ashore",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        207.9566855450995,
+        1.0192074263105901,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 18,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 66.48333333333085,
+      "meshes": 2499,
+      "activeMeshes": 170,
+      "physicsBodies": 268,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 33,
+        "totalMeshes": 1970,
+        "residentMeshes": 895,
+        "totalColliders": 730,
+        "residentColliders": 233,
+        "cpuGeometryBytes": 32444224,
+        "meshLoads": 2399,
+        "meshDisposals": 1504,
+        "colliderLoads": 1078,
+        "colliderDisposals": 845,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 53,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 359,
+        "fetchedBytes": 21050371,
+        "residentMaterials": 136,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 134,
+        "packagesEvicted": 81,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.952038369260386,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        207.95668693999704,
+        2.508780896088589,
+        -34.9840085315131
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 15,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 66.60140000000192
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            56
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": false,
+          "position": [
+            -870.9,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": false,
+          "position": [
+            -870,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": false,
+          "position": [
+            -869.1,
+            0,
+            168
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            -162
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": false,
+          "position": [
+            -978.9,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": false,
+          "position": [
+            -978,
+            0,
+            488
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": false,
+          "position": [
+            -977.1,
+            0,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "label": "western-market",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -762,
+        1.0999999219179153,
+        54
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 18,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 68.61666666666406,
+      "meshes": 2963,
+      "activeMeshes": 326,
+      "physicsBodies": 468,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 48,
+        "totalMeshes": 1970,
+        "residentMeshes": 1163,
+        "totalColliders": 730,
+        "residentColliders": 429,
+        "cpuGeometryBytes": 37504800,
+        "meshLoads": 2670,
+        "meshDisposals": 1507,
+        "colliderLoads": 4559,
+        "colliderDisposals": 4130,
+        "pendingMeshes": 16,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 75,
+        "totalPackages": 138,
+        "pendingPackages": 4,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 388,
+        "fetchedBytes": 22391595,
+        "residentMaterials": 139,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 158,
+        "packagesEvicted": 83,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 3,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 52.779732582654006,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        -761.999999896733,
+        2.5895733917551773,
+        49.0159914595438
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 68.74790000000192
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            58.37500000000027
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            58.37500000000027
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            58.37500000000027
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": true,
+          "position": [
+            -870.9,
+            0,
+            170.375
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": true,
+          "position": [
+            -870,
+            0,
+            170.375
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": true,
+          "position": [
+            -869.1,
+            0,
+            170.375
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            -159.625
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            -159.625
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            -159.625
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": true,
+          "position": [
+            -978.9,
+            0,
+            490.375
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": true,
+          "position": [
+            -978,
+            0,
+            490.375
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": true,
+          "position": [
+            -977.1,
+            0,
+            490.375
+          ]
+        }
+      ]
+    },
+    {
+      "label": "market-walk",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -762,
+        1.0999999219179153,
+        62.1400000000001
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 20,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 71.11666666666392,
+      "meshes": 3079,
+      "activeMeshes": 395,
+      "physicsBodies": 512,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 49,
+        "totalMeshes": 1970,
+        "residentMeshes": 1235,
+        "totalColliders": 730,
+        "residentColliders": 473,
+        "cpuGeometryBytes": 38548168,
+        "meshLoads": 2903,
+        "meshDisposals": 1668,
+        "colliderLoads": 9323,
+        "colliderDisposals": 8850,
+        "pendingMeshes": 4,
+        "activeAnchors": 9,
+        "lastMeshOperations": 0,
+        "loadedPackages": 81,
+        "totalPackages": 138,
+        "pendingPackages": 1,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 417,
+        "fetchedBytes": 24492504,
+        "residentMaterials": 145,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 171,
+        "packagesEvicted": 90,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 4,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 3,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 38.845008416381205,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        -762,
+        2.589573391763779,
+        57.04558810953717
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 71.25540000000186
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            61.500000000000625
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            61.500000000000625
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            61.500000000000625
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": true,
+          "position": [
+            -870.9,
+            0,
+            173.5
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": true,
+          "position": [
+            -870,
+            0,
+            173.5
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": true,
+          "position": [
+            -869.1,
+            0,
+            173.5
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            -156.5
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            -156.5
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            -156.5
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": true,
+          "position": [
+            -978.9,
+            0,
+            493.5
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": true,
+          "position": [
+            -978,
+            0,
+            493.5
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": true,
+          "position": [
+            -977.1,
+            0,
+            493.5
+          ]
+        }
+      ]
+    },
+    {
+      "label": "western-cafe",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -870,
+        1.0999999219179153,
+        166
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 22,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 73.36666666666379,
+      "meshes": 3057,
+      "activeMeshes": 340,
+      "physicsBodies": 478,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 46,
+        "totalMeshes": 1970,
+        "residentMeshes": 1243,
+        "totalColliders": 730,
+        "residentColliders": 443,
+        "cpuGeometryBytes": 39777408,
+        "meshLoads": 2963,
+        "meshDisposals": 1720,
+        "colliderLoads": 9870,
+        "colliderDisposals": 9427,
+        "pendingMeshes": 0,
+        "activeAnchors": 9,
+        "lastMeshOperations": 0,
+        "loadedPackages": 79,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 421,
+        "fetchedBytes": 25006592,
+        "residentMaterials": 142,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 175,
+        "packagesEvicted": 96,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.00000000000043,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        -869.9999999959178,
+        2.589573391763779,
+        161.0159914645613
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 73.50470000000276
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            64.31250000000084
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            64.37500000000081
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            64.3750000000007
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": true,
+          "position": [
+            -870.9,
+            0,
+            176.25000000000114
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": true,
+          "position": [
+            -870,
+            0,
+            176.25000000000114
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": true,
+          "position": [
+            -869.1,
+            0,
+            176.25000000000114
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            -153.75
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            -153.75
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            -153.75
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": true,
+          "position": [
+            -978.9,
+            0,
+            496.25
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": true,
+          "position": [
+            -978,
+            0,
+            496.25
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": true,
+          "position": [
+            -977.1,
+            0,
+            496.25
+          ]
+        }
+      ]
+    },
+    {
+      "label": "western-gardens",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -978,
+        1.0999999219179153,
+        486
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 22,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 75.28333333333035,
+      "meshes": 3026,
+      "activeMeshes": 59,
+      "physicsBodies": 417,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 42,
+        "totalMeshes": 1970,
+        "residentMeshes": 1273,
+        "totalColliders": 730,
+        "residentColliders": 382,
+        "cpuGeometryBytes": 46580056,
+        "meshLoads": 3028,
+        "meshDisposals": 1755,
+        "colliderLoads": 9898,
+        "colliderDisposals": 9516,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 74,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 428,
+        "fetchedBytes": 26277037,
+        "residentMaterials": 144,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 180,
+        "packagesEvicted": 106,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 1,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.67774020277206,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        -977.9999999643483,
+        2.589573391763779,
+        481.0159913628522
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 75.42350000000363
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            66.68750000000081
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            66.75000000000078
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            66.75000000000067
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": true,
+          "position": [
+            -870.9,
+            0,
+            178.6250000000012
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": true,
+          "position": [
+            -870,
+            0,
+            178.6250000000012
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": true,
+          "position": [
+            -869.1,
+            0,
+            178.6250000000012
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            -151.375
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            -151.375
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            -151.375
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": true,
+          "position": [
+            -978.9,
+            0,
+            498.64583333333127
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": true,
+          "position": [
+            -978,
+            0,
+            498.64583333333127
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": true,
+          "position": [
+            -977.1,
+            0,
+            498.64583333333127
+          ]
+        }
+      ]
+    },
+    {
+      "label": "return-coast",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        0.9099999690055847,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 23,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 77.3499999999969,
+      "meshes": 3020,
+      "activeMeshes": 172,
+      "physicsBodies": 349,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 43,
+        "totalMeshes": 1970,
+        "residentMeshes": 1335,
+        "totalColliders": 730,
+        "residentColliders": 314,
+        "cpuGeometryBytes": 47107976,
+        "meshLoads": 3153,
+        "meshDisposals": 1818,
+        "colliderLoads": 9910,
+        "colliderDisposals": 9596,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 77,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 452,
+        "fetchedBytes": 27010681,
+        "residentMaterials": 156,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 192,
+        "packagesEvicted": 115,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 3,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.00000000000042,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        179.99999950403,
+        2.399573438932825,
+        -34.98400831051091
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 77.51870000000112
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            67.06250000000081
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            67.12500000000078
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            67.12500000000067
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": false,
+          "position": [
+            -870.9,
+            0,
+            179.0000000000012
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": false,
+          "position": [
+            -870,
+            0,
+            179.0000000000012
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": false,
+          "position": [
+            -869.1,
+            0,
+            179.0000000000012
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": false,
+          "position": [
+            -762.9,
+            0,
+            -151
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": false,
+          "position": [
+            -762,
+            0,
+            -151
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": false,
+          "position": [
+            -761.1,
+            0,
+            -151
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": false,
+          "position": [
+            -978.9,
+            0,
+            499.0208333333309
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": false,
+          "position": [
+            -978,
+            0,
+            499.0208333333309
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": false,
+          "position": [
+            -977.1,
+            0,
+            499.0208333333309
+          ]
+        }
+      ]
+    },
+    {
+      "label": "western-save-restored",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        -978,
+        1.1435249219179153,
+        486
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": -978,
+          "z": 486
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 54,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 23,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 80.08333333333007,
+      "meshes": 3024,
+      "activeMeshes": 59,
+      "physicsBodies": 374,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 41,
+        "totalMeshes": 1970,
+        "residentMeshes": 1314,
+        "totalColliders": 730,
+        "residentColliders": 339,
+        "cpuGeometryBytes": 48480184,
+        "meshLoads": 3216,
+        "meshDisposals": 1902,
+        "colliderLoads": 9950,
+        "colliderDisposals": 9611,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 74,
+        "totalPackages": 138,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 461,
+        "fetchedBytes": 27561370,
+        "residentMaterials": 151,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 201,
+        "packagesEvicted": 127,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 1,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.01200240043575,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "camera": [
+        -977.999999999635,
+        2.6330983931652536,
+        481.0159914683243
+      ],
+      "swimming": false,
+      "submerged": false,
+      "breath": 30,
+      "waterLevel": -0.18,
+      "depth": 0,
+      "ocean": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 32,
+        "refractionMeshes": 16,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 80.26760000000176
+      },
+      "fog": {
+        "density": 0.00125,
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ]
+      },
+      "roadNodes": 772,
+      "newLocals": [
+        {
+          "id": "inner-mercado-luna-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            59
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            59
+          ]
+        },
+        {
+          "id": "inner-mercado-luna-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            59
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-0",
+          "active": true,
+          "position": [
+            -870.9,
+            0,
+            171
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-1",
+          "active": true,
+          "position": [
+            -870,
+            0,
+            171
+          ]
+        },
+        {
+          "id": "inner-cafe-lucero-civilian-2",
+          "active": true,
+          "position": [
+            -869.1,
+            0,
+            171
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-0",
+          "active": true,
+          "position": [
+            -762.9,
+            0,
+            -159
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-1",
+          "active": true,
+          "position": [
+            -762,
+            0,
+            -159
+          ]
+        },
+        {
+          "id": "inner-motor-court-civilian-2",
+          "active": true,
+          "position": [
+            -761.1,
+            0,
+            -159
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-0",
+          "active": true,
+          "position": [
+            -978.9,
+            0,
+            490.97916666666396
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-1",
+          "active": true,
+          "position": [
+            -978,
+            0,
+            490.97916666666396
+          ]
+        },
+        {
+          "id": "inner-west-gardens-civilian-2",
+          "active": true,
+          "position": [
+            -977.1,
+            0,
+            490.97916666666396
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

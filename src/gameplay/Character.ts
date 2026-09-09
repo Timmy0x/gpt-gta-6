@@ -15,6 +15,7 @@ import {
 } from "@babylonjs/core";
 import { RocketboxSkin, type CivilianSkin } from './characters/RocketboxSkin';
 import type { CharacterInjury } from './combat/injuries';
+import { CharacterContactIK } from './CharacterContactIK';
 
 type Joint =
   | "pelvis"
@@ -73,6 +74,7 @@ export class Character {
   private elapsed = 0;
   private disposed = false;
   private readonly visualSkin?: RocketboxSkin;
+  private contactIK?: CharacterContactIK;
 
   constructor(
     scene: Scene,
@@ -877,14 +879,72 @@ export class Character {
       this.rotate("leftCalf", 1.1);
       this.rotate("spine", 0.22);
     } else if (kind === "swim") {
-      this.rotate("spine", 0.52);
-      this.rotate("leftArm", -1.7 + Math.sin(phase) * 0.8, -0.5);
-      this.rotate("rightArm", -1.7 - Math.sin(phase) * 0.8, 0.5);
-      this.rotate("leftThigh", Math.sin(phase * 1.4) * 0.32);
-      this.rotate("rightThigh", -Math.sin(phase * 1.4) * 0.32);
+      this.swimPose(phase, 1, false);
     } else {
       this.rotate("chest", -0.24 * Math.sin(phase * Math.PI));
     }
+  }
+
+  /** Treading sculls blend into alternating crawl strokes and a flutter kick. */
+  swimPose(phase: number, stroke: number, submerged: boolean): void {
+    if (this.dead || this.root.metadata?.ragdollActive) return;
+    const travel = Math.max(0, Math.min(1, stroke));
+    this.root.scaling.y = 1;
+    this.pelvisPosition.set(0, this.baseHeight, 0);
+    this.bones.get("pelvis")!.setPosition(this.pelvisPosition);
+    this.rotate("pelvis", 0, 0, 0);
+    this.rotate("spine", -.05 * travel);
+    this.rotate("chest", 0, Math.sin(phase) * .06 * travel);
+    this.rotate("neck", -(submerged ? .3 : .55) * travel);
+    this.rotate("head", -(submerged ? .18 : .4) * travel);
+    for (const side of [-1, 1] as const) {
+      const prefix = side < 0 ? "left" : "right", cycle = phase + (side > 0 ? Math.PI : 0);
+      const wave = Math.sin(cycle), kick = Math.sin(cycle * 2);
+      // Blend rotations as quaternions so entering/leaving a stroke never spins a full turn.
+      const arm = this.bones.get(`${prefix}Arm`)!;
+      const tread = Quaternion.RotationYawPitchRoll(side * .15, -.85 + wave * .18, side * .9);
+      const crawl = Quaternion.RotationYawPitchRoll(0, -cycle, side * .2);
+      Quaternion.SlerpToRef(tread, crawl, travel, this.rotation); arm.setRotationQuaternion(this.rotation);
+      this.rotate(`${prefix}Forearm`, -1.0 * (1 - travel) - (.15 + Math.max(0, wave) * .9) * travel);
+      this.rotate(`${prefix}Hand`, -.12, side * wave * .18 * (1 - travel));
+      this.rotate(`${prefix}Thigh`, -.25 * (1 - travel) + kick * (.18 * travel + .1), 0, side * .16 * (1 - travel));
+      this.rotate(`${prefix}Calf`, .42 * (1 - travel) + Math.max(0, -kick) * .25);
+      this.rotate(`${prefix}Foot`, .18 * travel - .15 * (1 - travel));
+    }
+  }
+
+  /** Contact points come from the same bones that drive the detailed visual skin. */
+  jointPosition(joint: Joint, offset = Vector3.Zero()): Vector3 {
+    this.skeleton.computeAbsoluteMatrices(true);
+    const local = Vector3.TransformCoordinates(offset, this.bones.get(joint)!.getAbsoluteMatrix());
+    return Vector3.TransformCoordinates(local, this.root.computeWorldMatrix(true));
+  }
+
+  /** Deterministic torso overlay for a planted reach, pull or door-frame brace. */
+  interactionPosture(lower: number, lean: number, twist = 0, forward = 0): void {
+    if (this.dead || this.root.metadata?.ragdollActive) return;
+    this.root.scaling.y = 1;
+    this.pelvisPosition.set(0, this.baseHeight - Math.max(0, Math.min(.32, lower)), forward);
+    this.bones.get('pelvis')!.setPosition(this.pelvisPosition);
+    this.rotate('pelvis', 0, twist * .2);
+    this.rotate('spine', lean, twist * .55);
+    this.rotate('chest', lean * .12, twist * .25);
+    this.rotate('neck', -lean * .35);
+    this.rotate('head', -lean * .2);
+  }
+
+  reachHand(side: -1 | 1, worldWrist: Vector3, weight = 1): void {
+    if (this.dead || this.root.metadata?.ragdollActive || weight <= 0) return;
+    this.contactIK ??= new CharacterContactIK(this.scene, this.root, this.skeleton);
+    this.contactIK.solve(side < 0 ? 'leftHand' : 'rightHand', worldWrist, weight);
+  }
+
+  plantFoot(side: -1 | 1, worldAnkle: Vector3, weight = 1): void {
+    if (this.dead || this.root.metadata?.ragdollActive || weight <= 0) return;
+    this.contactIK ??= new CharacterContactIK(this.scene, this.root, this.skeleton);
+    const limb = side < 0 ? 'leftFoot' : 'rightFoot';
+    this.contactIK.solve(limb, worldAnkle, weight);
+    this.contactIK.levelEnd(limb, weight);
   }
 
   position(p: Vector3): void {
@@ -895,6 +955,7 @@ export class Character {
     if (this.disposed) return;
     this.disposed = true;
     this.visualSkin?.dispose();
+    this.contactIK?.dispose();
     this.root.dispose(false, false);
     this.skeleton.dispose();
     this.material.users--;

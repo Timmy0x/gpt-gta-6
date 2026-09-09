@@ -10,7 +10,11 @@ import {
 } from "@babylonjs/core";
 import type { Input } from "../core/Input";
 import { angleDelta, clamp } from "../core/math";
+import { Swimming, type SwimWater } from "./Swimming";
+import { SwimAnimation } from "./SwimAnimation";
+import { WorldBoundary } from "../world/WorldBoundary";
 import { Character } from "./Character";
+import { poseVehicleEntrant } from './VehicleInteractionPose';
 import type { Vehicle } from "../vehicles/VehicleSystem";
 import { openVehicleDoor } from "../vehicles/VehicleEquipment";
 import { MovementQueries } from "./MovementQueries";
@@ -29,6 +33,10 @@ export class Player {
   heading = 0;
   speed = 0;
   swimming = false;
+  readonly swim = new Swimming();
+  readonly swimAnimation = new SwimAnimation();
+  water?: SwimWater;
+  readonly boundary = new WorldBoundary();
   crouched = false;
   god = false;
   noclip = false;
@@ -61,7 +69,7 @@ export class Player {
     public input: Input,
     spawn: Vector3,
   ) {
-    this.queries = new MovementQueries(scene);
+    this.queries = new MovementQueries(scene, () => this.controller?.shape);
     this.controller = new PhysicsCharacterController(
       spawn,
       { capsuleHeight: 1.8, capsuleRadius: 0.32 },
@@ -108,6 +116,9 @@ export class Player {
     this.controller.setPosition(p);
     this.controller.setVelocity(Vector3.Zero());
     this.previous.copyFrom(p);
+    this.swim.update(p, this.water, 0);
+    this.swimming = this.swim.active;
+    this.swimAnimation.reset();
   }
   enter(v: Vehicle) {
     this.interactionMessage = "";
@@ -152,8 +163,8 @@ export class Player {
     this.mountStart.copyFrom(this.model.root.position);
     const entry = v.root.position.add(v.root.right.scale(this.mountSide * (v.tuning.width / 2 + .48)));
     entry.y = this.mountStart.y;
-    // The entrant stays just ahead of the door while the former driver steps out behind it.
-    entry.addInPlace(v.root.forward.scale(.45));
+    // Stand beside the opening: both hands must reach the seated driver's upper body.
+    entry.addInPlace(v.root.forward.scale(.12));
     this.mountDoor.copyFrom(entry);
     this.mountTime = 0;
     this.transitioning = true;
@@ -194,7 +205,8 @@ export class Player {
     p ??= v.root.position.add(new Vector3(v.tuning.width + 1, 1.5, 0));
     v.input = parkedVehicleInput(v);
     if (force) { this.finishExit(v, p); return true; }
-    openVehicleDoor(v, Vector3.Dot(p.subtract(v.root.position), v.root.right) < 0 ? -1 : 1, 1.1);
+    this.mountSide = Vector3.Dot(p.subtract(v.root.position), v.root.right) < 0 ? -1 : 1;
+    openVehicleDoor(v, this.mountSide, 1.1);
     this.model.root.computeWorldMatrix(true);
     this.mountStart.copyFrom(this.model.root.getAbsolutePosition());
     this.model.root.parent = null;
@@ -235,8 +247,10 @@ export class Player {
       const candidate = v.root.position.add(offset);
       const ground = this.queries.ground(candidate, 1.5, 3, v.body);
       if (ground && ground.y > v.root.position.y + 0.45) continue;
-      if (ground) candidate.y = ground.y + 0.94;
-      else if (candidate.x > 210 && candidate.y < 2) candidate.y = 0.7;
+      const water = this.water?.surfaceHeight(candidate.x, candidate.z);
+      if (water != null && this.water!.depthAt(candidate.x, candidate.z) > 1.3 && candidate.y < water + 2)
+        candidate.y = water - .45;
+      else if (ground) candidate.y = ground.y + 0.94;
       else continue;
       const start = new Vector3(
         v.root.position.x,
@@ -272,16 +286,20 @@ export class Player {
     this.vehicle = null;
     this.model.root.setEnabled(true);
   }
-  hurt(amount: number) {
+  hurt(amount: number, ignoreArmor = false) {
     if (this.god || this.deadTimer > 0) return;
     this.hitTime = 0.35;
-    const absorbed = Math.min(this.armor, amount * 0.55);
+    const absorbed = ignoreArmor ? 0 : Math.min(this.armor, amount * 0.55);
     this.armor -= absorbed;
     this.health = Math.max(0, this.health - amount + absorbed);
     if (this.health <= 0) this.deadTimer = 4;
   }
   update(dt: number) {
     this.previous.copyFrom(this.controller.getPosition());
+    if (!this.vehicle) {
+      const recovery = this.boundary.recovery(this.position, .94, .34);
+      if (recovery) this.teleport(recovery.position);
+    }
     this.aim = this.deadTimer <= 0 && this.input.aim;
     const canRaise = this.deadTimer <= 0 && !this.vehicle && !this.transitioning && !this.climbing && !this.swimming;
     this.weaponHold = canRaise && (this.input.aim || this.input.mouseDown) ? 0.65 : Math.max(0, this.weaponHold - dt);
@@ -292,6 +310,12 @@ export class Player {
       this.climbing = false;
     }
     this.hitTime = Math.max(0, this.hitTime - dt);
+    if (this.vehicle) {
+      this.swim.update(this.position, undefined, dt);
+      this.swimming = false;
+      this.swimAnimation.reset();
+      this.model.root.rotation.x = this.model.root.rotation.z = 0;
+    }
     if (this.vehicle) {
       const vehicle = this.vehicle;
       this.speed = 0;
@@ -341,7 +365,9 @@ export class Player {
       }
       return;
     }
-    let crouch = this.input.down("crouch");
+    this.swim.update(this.position, this.water, dt);
+    this.swimming = this.swim.active;
+    let crouch = !this.swimming && this.input.down("crouch");
     if (
       !crouch &&
       this.crouched &&
@@ -363,9 +389,8 @@ export class Player {
       z * Math.cos(this.yaw) - x * Math.sin(this.yaw),
     );
     if (move.lengthSquared() > 1) move.normalize();
-    this.swimming = this.position.x > 210 && this.position.y < 1.3;
     const targetSpeed = this.swimming
-      ? 3.3
+      ? this.input.down("sprint") ? 2.8 : 1.8
       : this.crouched
         ? 1.65
         : this.input.down("sprint")
@@ -387,7 +412,7 @@ export class Player {
         this.climbPath.shift();
       else {
         this.controller.setVelocity(
-          delta.normalize().scale(Math.min(3.6, delta.length() / dt)),
+          this.boundary.limitVelocity(this.position, delta.normalize().scale(Math.min(3.6, delta.length() / dt)), dt, .34),
         );
         this.controller.integrate(dt, surface, Vector3.Zero());
       }
@@ -406,7 +431,7 @@ export class Player {
     if (
       this.input.take("jump") &&
       this.deadTimer <= 0 &&
-      (grounded || this.swimming)
+      grounded && !this.swimming
     ) {
       const mantle =
         !this.crouched &&
@@ -421,16 +446,19 @@ export class Player {
         this.climbTime = 2;
       } else this.velocity.y = 5.7;
     }
-    if (this.swimming) this.velocity.y = (0.65 - this.position.y) * 3;
+    if (this.swimming) {
+      this.velocity.y = this.swim.verticalVelocity(this.position, last.y, z, this.pitch, this.input.down("jump"), this.input.down("crouch"), dt);
+      if (this.swim.breath <= 0) this.hurt(8 * dt, true);
+    }
     if (this.noclip) {
       this.velocity.y =
         (Number(this.input.down("jump")) - Number(this.input.down("crouch"))) *
         (this.deadTimer > 0 ? 0 : 12);
       this.controller.setPosition(
-        this.position.add(this.velocity.scale(dt * 3)),
+        this.position.add(this.boundary.limitVelocity(this.position, this.velocity.scale(3), dt, .34).scale(dt)),
       );
     } else {
-      this.controller.setVelocity(this.velocity);
+      this.controller.setVelocity(this.boundary.limitVelocity(this.position, this.velocity, dt, .34));
       this.controller.integrate(
         dt,
         surface,
@@ -448,10 +476,12 @@ export class Player {
     }
     this.model.root.rotation.y = this.heading;
     this.model.animate(dt, this.speed, this.weaponRaised, this.crouched);
-    if (this.swimming) this.model.pose("swim", this.model.phase);
+    this.swimAnimation.update(dt, this.swimming && !this.noclip, this.speed, this.swim.submerged, this.velocity.y);
+    if (this.swimming) this.model.swimPose(this.swimAnimation.phase, this.swimAnimation.stroke, this.swim.submerged);
     else if (this.hitTime > 0) this.model.pose("hit", this.hitTime / 0.35);
     this.alignWeaponPose();
-    if (this.position.y < -15) this.teleport(new Vector3(6, 1.2, -28));
+    const recovery = this.boundary.recovery(this.position, .94, .34);
+    if (recovery) this.teleport(recovery.position);
   }
   render(dt: number, alpha = 1, allowLook = true) {
     if (allowLook) {
@@ -469,19 +499,29 @@ export class Player {
     if (!this.vehicle) {
       this.model.root.position.copyFrom(Vector3.Lerp(this.previous, p, alpha));
       this.model.root.position.y -= this.crouched ? 0.65 : 0.9;
+      const swim = this.swimAnimation;
+      this.model.root.rotation.set(swim.pitch, this.heading, swim.roll);
+      if (swim.blend > .001) {
+        const rotation = Quaternion.RotationYawPitchRoll(this.heading, swim.pitch, swim.roll);
+        const pelvis = this.model.skeleton.bones[0].getPosition().clone();
+        pelvis.y *= this.model.root.scaling.y;
+        pelvis.rotateByQuaternionToRef(rotation, pelvis);
+        const anchor = Vector3.Lerp(this.previous, p, alpha);
+        anchor.y += this.swim.submerged ? .02 : .1 + swim.stroke * .08;
+        const origin = anchor.subtract(pelvis);
+        Vector3.LerpToRef(this.model.root.position, origin, swim.blend, this.model.root.position);
+      }
     } else if (this.transitioning) {
       this.vehicle.root.computeWorldMatrix(true);
       const seat = Vector3.TransformCoordinates(
         this.seatOffset(),
         this.vehicle.root.getWorldMatrix(),
       );
-      const t = Math.min(1, this.mountTime / (this.vehiclePhase === 'approaching' ? .32 : .65));
-      const end = this.vehiclePhase === 'approaching' || this.vehiclePhase === 'ejecting-driver'
-        ? this.mountDoor : this.vehiclePhase === 'exiting' ? this.exitDestination!.subtract(new Vector3(0, .94, 0)) : seat;
-      this.model.root.position.copyFrom(
-        Vector3.Lerp(this.mountStart, end, t * t * (3 - 2 * t)),
-      );
-      this.model.root.rotation.y = this.vehicle.heading + (this.vehiclePhase === 'ejecting-driver' ? -this.mountSide * Math.PI / 2 : 0);
+      if (this.vehiclePhase !== 'on-foot' && this.vehiclePhase !== 'seated') {
+        const duration = this.vehiclePhase === 'approaching' ? .32 : this.vehiclePhase === 'ejecting-driver' ? EJECTION_SECONDS + .08 : .65;
+        const destination = this.vehiclePhase === 'exiting' ? this.exitDestination!.subtract(new Vector3(0, .94, 0)) : seat;
+        poseVehicleEntrant(this.model, this.vehicle, this.vehiclePhase, this.mountTime / duration, this.mountStart, this.mountDoor, destination, this.mountSide, vehicleSeatPose(this.vehicle), this.occupancy.get(this.vehicle)?.model);
+      }
     }
     if (
       allowLook &&

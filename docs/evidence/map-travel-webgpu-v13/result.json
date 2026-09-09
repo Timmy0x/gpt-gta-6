@@ -1,0 +1,66 @@
+{
+  "origin": "http://127.0.0.1:4204",
+  "backend": "webgpu",
+  "method": "Normal UI map search, marker selection, zoom/pan, every listed destination, arbitrary canvas travel, keyboard edge swimming and responsive/keyboard map. Read-only diagnostics only.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-UOHi1qgF.js",
+      "sha256": "52c933fd550d4633b50f566410ab006aba10627ede95d7d5a782279c21fc8401",
+      "world": "authored-860409-v7-inner-city",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "district-map",
+      "backend": "WebGPU",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "swimming": false,
+      "submerged": false,
+      "clear": false,
+      "physics": [
+        0,
+        0,
+        0
+      ],
+      "oceanDepth": 0,
+      "streaming": {
+        "totalChunks": 82,
+        "residentChunks": 20,
+        "totalMeshes": 1970,
+        "residentMeshes": 887,
+        "totalColliders": 730,
+        "residentColliders": 374,
+        "cpuGeometryBytes": 48395776,
+        "meshLoads": 887,
+        "meshDisposals": 0,
+        "colliderLoads": 374,
+        "colliderDisposals": 0,
+        "pendingMeshes": 491,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 36,
+        "totalPackages": 138,
+        "pendingPackages": 35,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 195,
+        "fetchedBytes": 10767870,
+        "residentMaterials": 157,
+        "totalCpuGeometryBytes": 75149512,
+        "lastError": "",
+        "packagesLoaded": 36,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "health": 100
+    }
+  ],
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n2 !== 1\n\n    at file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/map-travel-audit.mjs:32:66"
+  ],
+  "warnings": []
+}

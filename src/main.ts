@@ -30,6 +30,7 @@ import type { VehicleKind } from "./core/contracts";
 import { AIRCRAFT_SPAWNS, aircraftInput, aircraftPrompt, isAircraft } from "./vehicles/aircraft";
 import { findGroundVehicleSpawn } from "./vehicles/spawnPlacement";
 import { Player } from "./gameplay/Player";
+import { parseMapDestination, resolveTravelDestination } from './gameplay/TravelDestination';
 import { prepareCharacterAssets, prepareCivilianAssets } from "./gameplay/characters/RocketboxSkin";
 import { DETAILED_CAR_LIMIT } from "./vehicles/ConceptCar";
 import { WantedSystem } from "./gameplay/Wanted";
@@ -86,6 +87,7 @@ async function boot() {
   scene.environmentIntensity = 0.85;
   const ctx = { scene, shadows };
   const world = new World(ctx);
+  scene.onDisposeObservable.addOnce(() => world.dispose());
   await world.ready;
   const navigation = new Navigation(world.roads);
   ui.world = world;
@@ -97,6 +99,7 @@ async function boot() {
   catch (error) { console.warn("Using the procedural civilian fallback", error); }
   const input = new Input(canvas);
   const player = new Player(scene, shadows, input, world.spawn);
+  player.water = world.ocean;
   const vehicles = new VehicleSystem(ctx);
   const interpolation = new PhysicsInterpolation();
   vehicles.waterLevel = world.waterLevel;
@@ -429,9 +432,7 @@ async function boot() {
         return;
       }
       audio.start();
-      ui.toast(
-        isAircraft(v.kind) ? `${v.tuning.label} · ${aircraftPrompt(v, input)}` : `${v.tuning.label} · W/S throttle · A/D steer · Space handbrake · E exit`,
-      );
+      ui.toast(v.tuning.label);
       return;
     }
     const loc = world.locations.find((l) => distance(l, player.position) < 12);
@@ -477,8 +478,8 @@ async function boot() {
       else ui.toast("This vehicle has no siren.");
       return;
     }
-    if (action === "route" && value) {
-      const location = world.locations.find((l) => l.id === value);
+    if ((action === "route" || action === "route-point") && value) {
+      const location = action === 'route-point' ? parseMapDestination(value) : world.locations.find((l) => l.id === value);
       if (location) {
         navigation.set(location, player.position);
         ui.toast(`Route set · ${location.name}`);
@@ -679,7 +680,7 @@ async function boot() {
     if (action === "weapons") {
       combat.inventory.reserves = [999, 999, 30];
       combat.inventory.magazines = combat.weapons.map((w) => w.capacity);
-      ui.toast("Weapons refilled. Use 1, 2, 3 to select.");
+      ui.toast("Weapons refilled.");
     }
     if (action === "time") time = Number(value);
     if (action === "weather") {
@@ -706,12 +707,15 @@ async function boot() {
       player.armor = 50;
       ui.toast("Encounter reset.");
     }
-    if (action === "teleport") {
-      const l = world.locations.find((l) => l.id === value);
+    if (action === "teleport" || action === 'teleport-point') {
+      const l = action === 'teleport-point' ? parseMapDestination(value) : world.locations.find((l) => l.id === value);
       if (l) {
+        const origin = player.position.clone();
         if (!await prepareTravel(new Vector3(l.x, 1.5, l.z))) return;
+        const destination = resolveTravelDestination(l, player.queries, world.ocean, action === 'teleport');
+        if (!destination) { world.ensureCollision(origin); ui.toast('No clear landing here. Pick a nearby point.'); return; }
         player.exit(true);
-        player.teleport(new Vector3(l.x, 1.5, l.z));
+        player.teleport(destination);
         ui.showPanel("");
         setPause(false);
         ui.toast(l.name);
@@ -779,6 +783,8 @@ async function boot() {
     population.update(dt);
     navigation.update(dt, player.position);
     vehicles.update(dt);
+    for (const vehicle of vehicles.list)
+      player.boundary.beforePhysics(vehicle.body, dt, { radius: Math.max(vehicle.kind === 'plane' ? 6 : vehicle.kind === 'helicopter' ? 5 : 0, Math.hypot(vehicle.tuning.width, vehicle.tuning.length) / 2), clearance: 1.2 });
     damage.update(dt, weather);
     if (raceIndex >= 0 && player.vehicle) {
       raceTime += dt;
@@ -796,8 +802,13 @@ async function boot() {
       }
     }
   });
-  scene.onAfterPhysicsObservable.add(() => interpolation.afterStep());
+  scene.onAfterPhysicsObservable.add(() => {
+    for (const vehicle of vehicles.list)
+      player.boundary.afterPhysics(vehicle.body, 1 / 60, { radius: Math.max(vehicle.kind === 'plane' ? 6 : vehicle.kind === 'helicopter' ? 5 : 0, Math.hypot(vehicle.tuning.width, vehicle.tuning.length) / 2), clearance: 1.2 });
+    interpolation.afterStep();
+  });
   let renderDt = 1 / 60;
+  let renderDaylight = 0, underwater = false;
   scene.onBeforeRenderObservable.add(() => {
     // Babylon 9.25's pinned Physics V2 component owns this accumulator in milliseconds.
     const accumulator = (
@@ -812,6 +823,9 @@ async function boot() {
       alpha,
       !ui.panel && !paused && player.deadTimer <= 0,
     );
+    const cameraWater = world.ocean.surfaceHeight(player.camera.position.x, player.camera.position.z);
+    underwater = cameraWater != null && player.camera.position.y < cameraWater - .03 && world.ocean.depthAt(player.camera.position.x, player.camera.position.z) > 0;
+    if (underwater) { scene.fogDensity = .095; scene.fogColor.set(.025 + renderDaylight * .03, .11 + renderDaylight * .10, .14 + renderDaylight * .10); }
   });
   scene.onAfterRenderObservable.add(() => interpolation.restore());
   scene.physicsEnabled = false;
@@ -860,6 +874,7 @@ async function boot() {
       }
     }
     const solarState = sky.update(time, weather), solar = solarState.daylight;
+    renderDaylight = solar;
     ambient.intensity = 0.04 + solar * 0.25;
     scene.environmentIntensity = 0.025 + Math.max(0, solar - 0.08) * 0.55;
     sun.intensity = solar * 2.6 * (weather === "Rain" ? 0.4 : 1);
@@ -881,7 +896,9 @@ async function boot() {
     world.update(paused ? 0 : dt, player.position, time, weather);
     atmosphere.update(paused ? 0 : dt, player.position, time, weather, paused);
     scene.fogColor.copyFrom(solarState.horizonColor);
+    world.ocean.setAtmosphericFog(scene.fogDensity, scene.fogColor);
     vehicles.wetness = atmosphere.wetness;
+    scene.render();
     audio.update(
       player.vehicle?.speed || 0,
       !!player.vehicle && !paused,
@@ -892,6 +909,8 @@ async function boot() {
         heading: player.yaw,
         weather,
         paused,
+        underwater,
+        swimSpeed: player.swimming && !ui.panel && !paused ? player.speed : 0,
         footSpeed:
           ui.panel || player.vehicle || player.swimming || player.climbing
             ? 0
@@ -906,7 +925,6 @@ async function boot() {
           })),
       },
     );
-    scene.render();
     if (!ui.ready) {
       warmFrames = rawDt < 0.08 ? warmFrames + 1 : 0;
       if (warmFrames >= 8 || now - warmStarted > 20000) ui.loaded();
@@ -952,6 +970,7 @@ async function boot() {
         name: player.name,
         health: player.health,
         armor: player.armor,
+        breath: player.swim.breath,
         cash,
         stars: wanted.stars,
         phase: wanted.phase,

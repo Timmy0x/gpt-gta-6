@@ -1,0 +1,1063 @@
+{
+  "outDir": ".local-builds/ocean-preview-underwater-v3",
+  "method": "Frozen production build of isolated native Ocean+Sky material preview with scale geometry, sloping sand bank and bounded reflection/refraction lists. Not normal gameplay or integrated performance evidence.",
+  "checks": [
+    {
+      "backend": "WebGPU",
+      "label": "reflection",
+      "time": 12,
+      "weather": "Clear",
+      "view": "reflection",
+      "elapsed": 2.0359000000003733,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 15,
+        "refractionMeshes": 8,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 2.0359000000003733
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 1,
+      "effectReady": true,
+      "optics": {
+        "variants": 1,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": false,
+      "compiledSeparateFresnel": false,
+      "reflection": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-1",
+        "shore-building-2",
+        "shore-building-0",
+        "shore-building-3",
+        "shore-building-4"
+      ],
+      "refraction": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "camera": [
+        250,
+        0.37,
+        -26
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGPU",
+      "label": "underwater",
+      "time": 12,
+      "weather": "Clear",
+      "view": "underwater",
+      "elapsed": 3.5521000000014937,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 3.5521000000014937
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 1,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-1",
+        "shore-building-2",
+        "shore-building-0",
+        "shore-building-3",
+        "shore-building-4"
+      ],
+      "camera": [
+        258.109,
+        -1.035,
+        -34.984
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGPU",
+      "label": "underwater-up",
+      "time": 12,
+      "weather": "Clear",
+      "view": "underwater-up",
+      "elapsed": 5.118700000001122,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 5.118700000001122
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 1,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-2",
+        "shore-building-1",
+        "shore-building-3",
+        "shore-building-0",
+        "shore-building-4"
+      ],
+      "camera": [
+        245,
+        -1.35,
+        -8
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGPU",
+      "label": "zenith",
+      "time": 12,
+      "weather": "Clear",
+      "view": "zenith",
+      "elapsed": 6.735200000001119,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 6.735200000001119
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 1,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-2",
+        "shore-building-1",
+        "shore-building-3",
+        "shore-building-0",
+        "shore-building-4"
+      ],
+      "camera": [
+        245,
+        -1.35,
+        -8
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGPU",
+      "label": "underwater-shore",
+      "time": 12,
+      "weather": "Clear",
+      "view": "underwater-shore",
+      "elapsed": 8.301499999999997,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 8.301499999999997
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 1,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-2",
+        "shore-building-1",
+        "shore-building-3",
+        "shore-building-0",
+        "shore-building-4"
+      ],
+      "camera": [
+        232,
+        -1,
+        -12
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGPU",
+      "label": "resurfaced",
+      "time": 12,
+      "weather": "Clear",
+      "view": "reflection",
+      "elapsed": 9.935200000001116,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 15,
+        "refractionMeshes": 8,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 9.935200000001116
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 1,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": false,
+      "compiledSeparateFresnel": false,
+      "reflection": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-1",
+        "shore-building-2",
+        "shore-building-0",
+        "shore-building-3",
+        "shore-building-4"
+      ],
+      "refraction": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "camera": [
+        250,
+        0.37,
+        -26
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGL2",
+      "label": "reflection",
+      "time": 12,
+      "weather": "Clear",
+      "view": "reflection",
+      "elapsed": 1.9784000000003727,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 15,
+        "refractionMeshes": 8,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 1.9784000000003727
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 0,
+      "effectReady": true,
+      "optics": {
+        "variants": 1,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": false,
+      "compiledSeparateFresnel": false,
+      "reflection": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-1",
+        "shore-building-2",
+        "shore-building-0",
+        "shore-building-3",
+        "shore-building-4"
+      ],
+      "refraction": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "camera": [
+        250,
+        0.37,
+        -26
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGL2",
+      "label": "underwater",
+      "time": 12,
+      "weather": "Clear",
+      "view": "underwater",
+      "elapsed": 3.5950999999996274,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 3.5950999999996274
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 0,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-1",
+        "shore-building-2",
+        "shore-building-0",
+        "shore-building-3",
+        "shore-building-4"
+      ],
+      "camera": [
+        258.109,
+        -1.035,
+        -34.984
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGL2",
+      "label": "underwater-up",
+      "time": 12,
+      "weather": "Clear",
+      "view": "underwater-up",
+      "elapsed": 5.144999999999996,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 5.144999999999996
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 0,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-2",
+        "shore-building-1",
+        "shore-building-3",
+        "shore-building-0",
+        "shore-building-4"
+      ],
+      "camera": [
+        245,
+        -1.35,
+        -8
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGL2",
+      "label": "zenith",
+      "time": 12,
+      "weather": "Clear",
+      "view": "zenith",
+      "elapsed": 6.761400000000363,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 6.761400000000363
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 0,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-2",
+        "shore-building-1",
+        "shore-building-3",
+        "shore-building-0",
+        "shore-building-4"
+      ],
+      "camera": [
+        245,
+        -1.35,
+        -8
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGL2",
+      "label": "underwater-shore",
+      "time": 12,
+      "weather": "Clear",
+      "view": "underwater-shore",
+      "elapsed": 8.32730000000073,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 8,
+        "refractionMeshes": 15,
+        "submergedView": true,
+        "foamPatches": 817,
+        "elapsed": 8.32730000000073
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 0,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": true,
+      "compiledSeparateFresnel": true,
+      "reflection": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "refraction": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-2",
+        "shore-building-1",
+        "shore-building-3",
+        "shore-building-0",
+        "shore-building-4"
+      ],
+      "camera": [
+        232,
+        -1,
+        -12
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "backend": "WebGL2",
+      "label": "resurfaced",
+      "time": 12,
+      "weather": "Clear",
+      "view": "reflection",
+      "elapsed": 9.943900000000331,
+      "stats": {
+        "meshes": 3,
+        "materials": 3,
+        "triangles": 38510,
+        "targets": 2,
+        "targetSize": 512,
+        "refreshRate": 2,
+        "reflectionMeshes": 15,
+        "refractionMeshes": 8,
+        "submergedView": false,
+        "foamPatches": 817,
+        "elapsed": 9.943900000000331
+      },
+      "meshes": 19,
+      "materials": 8,
+      "textures": 6,
+      "shaderLanguage": 0,
+      "effectReady": true,
+      "optics": {
+        "variants": 2,
+        "model": "dielectric-underwater"
+      },
+      "dielectricShader": true,
+      "separateFresnel": false,
+      "compiledSeparateFresnel": false,
+      "reflection": [
+        "sky/dome",
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "shore-building-1",
+        "shore-building-2",
+        "shore-building-0",
+        "shore-building-3",
+        "shore-building-4"
+      ],
+      "refraction": [
+        "study/continuous-sand-bank",
+        "study/boat-scale",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post",
+        "study/pier-post"
+      ],
+      "camera": [
+        250,
+        0.37,
+        -26
+      ],
+      "physicalWater": -0.18,
+      "depth": 1.32,
+      "nativeWaveHeight": 0.004,
+      "renderTargets": [
+        {
+          "name": "ocean/reflection-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        },
+        {
+          "name": "ocean/refraction-512",
+          "size": {
+            "width": 512,
+            "height": 512
+          },
+          "refresh": 2,
+          "samples": 1
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,6 +1,9 @@
-import { Color3, PBRMaterial, Vector3, type Texture } from '@babylonjs/core';
+import { Color3, PBRMaterial, Vector3 } from '@babylonjs/core';
 import type { BuildContext, Obstacle, RoadNode, WorldContract, WorldLocation } from '../core/contracts';
+import { Ocean } from './Ocean';
+import { COAST, coastFloorHeight } from './Coast';
 import { CENTRAL_LOCATIONS, createLaneGraph } from './layout';
+import { connectInnerCityRoads, INNER_CITY_LOCATIONS } from './authoring/expansion/innerCityLayout';
 import { ChunkResidency } from './ChunkResidency';
 import { PackageResidency } from './PackageResidency';
 import type { NetworkStreamingStats, WorldManifest } from './packages';
@@ -9,9 +12,10 @@ export interface WorldOptions { baseUrl?:string; fetch?:typeof fetch; }
 /** Pre-exported Babylon packages: no procedural district generation in the runtime bundle. */
 export class World implements WorldContract {
   readonly spawn = new Vector3(3.3,1.2,-28);
-  readonly waterLevel = -.18;
-  readonly roads:RoadNode[]=createLaneGraph();
-  readonly locations:WorldLocation[]=CENTRAL_LOCATIONS.map(l=>({...l}));
+  readonly waterLevel = COAST.waterLevel;
+  readonly ocean: Ocean;
+  readonly roads:RoadNode[]=connectInnerCityRoads(createLaneGraph());
+  readonly locations:WorldLocation[]=[...CENTRAL_LOCATIONS,...INNER_CITY_LOCATIONS].map(l=>({...l}));
   readonly obstacles:Obstacle[]=[];
   readonly lightPositions:Vector3[]=[];
   readonly ready:Promise<void>;
@@ -19,12 +23,12 @@ export class World implements WorldContract {
   private packages?:PackageResidency;
   private manifest?:WorldManifest;
   private anchors:Vector3[]=[];
-  private age=0;
   private initialized=false;
   private disposed=false;
   private error='';
   private readonly abort=new AbortController();
   constructor(private readonly ctx:BuildContext,options:WorldOptions={}) {
+    this.ocean = new Ocean(ctx.scene, { waterLevel: this.waterLevel, shorelineX: COAST.shorelineX, floorHeightAt: coastFloorHeight });
     this.collision=new ChunkResidency(ctx.scene,ctx.shadows,this.spawn);
     const baseUrl=options.baseUrl||new URL('world/',document.baseURI).href;
     this.ready=this.initialize(baseUrl,options.fetch||fetch);
@@ -60,6 +64,8 @@ export class World implements WorldContract {
     if(!Number.isFinite(position.x)||!Number.isFinite(position.z))throw new Error('Invalid destination');
     this.ensureCollision(position);
     await this.packages!.preparePosition(position);
+    // Old-origin render updates may evict destination bodies during the load.
+    this.ensureCollision(position);
   }
   setActiveAnchors(anchors:Vector3[]):void {
     this.anchors=anchors.filter(p=>Number.isFinite(p.x)&&Number.isFinite(p.z)).map(p=>p.clone());
@@ -68,20 +74,17 @@ export class World implements WorldContract {
   ensureCollision(position:Vector3):void {this.collision.ensureCollision(position);}
   update(dt:number,position:Vector3,time:number,weather:string):void {
     if(!this.initialized||this.disposed)return;
-    this.age+=dt;
     this.collision.update(position,0);this.packages!.update(position);
     const manifest=this.manifest!,rain=['rain','storm'].includes(weather.toLowerCase());
     const asphalt=this.packages!.getMaterial(manifest.asphaltMaterial) as PBRMaterial|undefined;
-    const water=this.packages!.getMaterial(manifest.waterMaterial) as PBRMaterial|undefined;
     if(asphalt)asphalt.roughness=rain?.29:.94;
-    if(water){water.roughness=rain?.33:.16;const bump=water.bumpTexture as Texture|null;if(bump){bump.uOffset=this.age*.0008;bump.vOffset=this.age*.00045;}}
-    for(let n=0;n<manifest.foam.length;n++){const foam=this.packages!.getMesh(manifest.foam[n]);if(!foam)continue;foam.unfreezeWorldMatrix();const phase=(this.age*.45+n*4.3)%34;foam.position.x=211+(34-phase);foam.visibility=Math.min(1,phase/5,(34-phase)/5)*.63;}
     const hour=((time%24)+24)%24,night=Math.max(0,Math.min(1,(Math.abs(hour-12)-5)/2.5));
+    this.ocean.update(dt, position, weather, Math.max(0, Math.sin((hour - 6) / 12 * Math.PI)));
     for(const item of manifest.litMaterials){const material=this.packages!.getMaterial(item.id) as PBRMaterial|undefined;if(material)material.emissiveColor=Color3.FromArray(item.color).scale((.06+night*.94)*item.intensity);}
   }
   getStreamingStats():NetworkStreamingStats {
     const base=this.collision.getStats(),network=this.packages?.getStats();
     return {...base,loadedPackages:0,totalPackages:0,pendingPackages:0,failedPackages:0,retries:0,requests:0,fetchedBytes:0,residentMaterials:0,totalCpuGeometryBytes:0,lastError:this.error,packagesLoaded:0,packagesEvicted:0,...network,ready:this.initialized};
   }
-  dispose():void {this.disposed=true;this.abort.abort();this.packages?.dispose();this.collision.dispose();}
+  dispose():void {this.disposed=true;this.abort.abort();this.ocean.dispose();this.packages?.dispose();this.collision.dispose();}
 }

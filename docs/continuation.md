@@ -2,6 +2,12 @@
 
 Full goal remains active. This is an early central-neighborhood build, not full scope completion. The user authorized frequent commits and pushes on 2026-09-09. Push every tested checkpoint to origin/main. Hosting and deployment remain unconfigured pending a separate decision.
 
+## Latest integrated checkpoint — map/coast v15
+
+See [map-coast-checkpoint.md](map-coast-checkpoint.md). All171tests and production build pass; normal UI map32 + coast13 checks on each backend,0errors/warnings. Production entry index-BHOH6UD5.js, worldv7. Western expansion, safe map pins/all20places, swimming/diving, water camera correction, world bounds and pause filler removal are integrated. Initial contact IK remains visibly deficient and is being rewritten; do not report animation parity.
+
+In-progress source is ahead of this checkpoint: component_finish has isolated street-v16 with555 damageable lamps/palms awaiting normal audits; occupancy_finish is correcting all-frame entry/theft defects and has eight converted NPC sources pending runtime integration; edge_guard is converting licensed CARLA vehicle sources toward ten distinct detailed cars; root is implementing the weapon wheel/draw/scopes/window firing. Preserve each cohort and avoid staging all workspace files. One GPU browser at a time. Push every commit. Full goal remains active and the baseline1%low performance gate still fails.
+
 ## Repository and commands
 
 The workspace and remote `https://github.com/Timmy0x/gpt-gta-6` were empty at inspection. Initialized local `main`, configured only that Git origin, installed pinned dependencies and retained lockfile. `npm test`, `npm run typecheck`, `npm run build`, `npm run dev`, `npm run preview` are the reproducible entry points.

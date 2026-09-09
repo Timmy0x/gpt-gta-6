@@ -1,6 +1,7 @@
 import { Vector3 } from '@babylonjs/core';
 import type { Character } from './Character';
 import type { Vehicle } from '../vehicles/VehicleSystem';
+import { poseVehicleWithdrawal } from './VehicleInteractionPose';
 
 export type SeatPose = 'low' | 'upright' | 'rider' | 'reclined';
 export const EJECTION_SECONDS = .78;
@@ -93,11 +94,8 @@ export class VehicleOccupancy {
       if (occupant.state === 'driving') { this.seat(occupant, dt); continue; }
       occupant.elapsed = Math.min(EJECTION_SECONDS, occupant.elapsed + dt);
       const progress = occupant.elapsed / EJECTION_SECONDS;
-      const t = progress * progress * (3 - 2 * progress);
-      model.root.position.copyFrom(Vector3.Lerp(occupant.start!, occupant.destination!, t));
-      model.root.rotation.y = vehicle.heading - Math.PI / 2 * Math.min(1, progress * 2);
       model.animate(dt, 0);
-      model.pose('mount', 1 - progress, vehicleSeatPose(vehicle));
+      poseVehicleWithdrawal(occupant, progress, vehicleSeatPose(vehicle));
       if (progress >= 1) {
         this.occupants.delete(vehicle);
         occupant.onEjected(occupant.destination!.clone());

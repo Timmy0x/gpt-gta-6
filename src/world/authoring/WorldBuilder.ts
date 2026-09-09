@@ -10,6 +10,7 @@ import {
   Vector3,
   VertexData,
 } from "@babylonjs/core";
+import { COAST, seabedSlabs } from "../Coast";
 import { mergeAuthoredBatch } from './mergeBatch';
 import { applyMetreUVs } from './metreUVs';
 import type { Material, Scene } from "@babylonjs/core";
@@ -26,6 +27,8 @@ import {
   createLaneGraph,
   seededRandom,
 } from "../layout";
+import { createInnerCityPlan, emitInnerCity, INNER_CITY_MATERIALS, type InnerMaterial } from "./expansion/InnerCity";
+import { connectInnerCityRoads, INNER_CITY_LOCATIONS } from "./expansion/innerCityLayout";
 
 import {
   type WorldDetail,
@@ -63,8 +66,8 @@ type BuildingStyle = "deco" | "residential" | "commercial" | "civic";
 export class WorldBuilder implements WorldContract {
   readonly spawn = new Vector3(3.3, 1.2, -28);
   readonly obstacles: Obstacle[] = [];
-  readonly roads: RoadNode[] = createLaneGraph();
-  readonly locations: WorldLocation[] = CENTRAL_LOCATIONS.map((location) => ({
+  readonly roads: RoadNode[] = connectInnerCityRoads(createLaneGraph());
+  readonly locations: WorldLocation[] = [...CENTRAL_LOCATIONS, ...INNER_CITY_LOCATIONS].map((location) => ({
     ...location,
   }));
   readonly waterLevel = -0.18;
@@ -135,6 +138,7 @@ export class WorldBuilder implements WorldContract {
     this.buildBeach();
     this.buildMarina();
     this.buildDistantCity();
+    this.buildInnerCity();
     this.flushBatches();
     this.update(0, this.spawn, 16, "clear");
     if (this.debugStreaming)
@@ -145,6 +149,27 @@ export class WorldBuilder implements WorldContract {
             ...this.getStreamingStats(),
           }),
       );
+  }
+
+  private buildInnerCity(): void {
+    const materials = new Map<InnerMaterial, PBRMaterial>();
+    for (const key of Object.keys(INNER_CITY_MATERIALS) as InnerMaterial[]) {
+      const entry: { color: string; roughness: number; metallic?: number; emissive?: number } = INNER_CITY_MATERIALS[key];
+      materials.set(key, key === "asphalt" ? this.asphalt : entry.emissive !== undefined
+        ? this.lightMat(key, entry.color, entry.emissive)
+        : this.mat(key, entry.color, entry.roughness, entry.metallic));
+    }
+    emitInnerCity(createInnerCityPlan(), {
+      box: r => { this.box(r.id, r.x, r.y, r.z, r.w, r.h, r.d, materials.get(r.material)!, r.detail, r.casts); },
+      cylinder: r => { this.cylinder(r.id, r.x, r.y, r.z, r.diameter, r.h, materials.get(r.material)!, r.top, 8, r.detail); },
+      sign: r => { this.sign(r.text, r.x, r.y, r.z, r.w, r.h, r.color, r.background, r.rotation); },
+      prop: r => {
+        if (r.kind === "palm") this.palm(r.x, r.z, r.height);
+        else if (r.kind === "lamp") this.streetLamp(r.x, r.z);
+        else this.bench(r.x, r.z, r.angle);
+      },
+      collider: r => { if (r.obstacle) this.obstacles.push(r.obstacle); this.residency.registerCollider(r); },
+    });
   }
 
   private mat(
@@ -423,30 +448,21 @@ export class WorldBuilder implements WorldContract {
     this.collider("urban-ground", -147.5, -0.55, -36, 605, 1.1, 548, false);
     this.box("beach-sand", 182.5, -0.52, 0, 55, 1, 1250, sand, "structure");
     this.collider("beach", 182.5, -0.58, 0, 55, 1.1, 1250, false);
-    const seabed = this.mat("seabed", "#66a6a1", 1);
-    this.box("seabed", 1210, -4.1, 0, 2000, 1, 2400, seabed, "structure");
-    this.collider("seabed", 1210, -4.1, 0, 2000, 1, 2400, false);
-    const ocean = MeshBuilder.CreateGround(
-      "Atlantic Ocean",
-      { width: 4200, height: 5200, subdivisions: 1 },
-      this.scene,
-    );
-    ocean.position.set(2310, this.waterLevel, 0);
-    ocean.material = this.waterMaterial;
-    ocean.isPickable = false;
-    this.looseMeshes.push(ocean);
-    // The shallow shelf makes watercraft visibly meet the sandy coast.
-    const shallow = this.mat("shallows", "#57c2bd", 0.2, 0.15);
-    shallow.alpha = 0.58;
-    const shelf = MeshBuilder.CreateGround(
-      "shallow-turquoise-shelf",
-      { width: 48, height: 1600 },
-      this.scene,
-    );
-    shelf.position.set(233, this.waterLevel + 0.009, 0);
-    shelf.material = shallow;
-    shelf.isPickable = false;
-    this.looseMeshes.push(shelf);
+    // Physical and visual sand use exactly the same sloping bank. Water is rendered
+    // at runtime with Ocean so no overlapping opaque shelf is exported here.
+    for (const slab of seabedSlabs()) {
+      const mesh = this.box('seabed', slab.x, slab.y, slab.z, slab.w, slab.h, slab.d, sand, 'global');
+      mesh.rotation.z = slab.rotationZ;
+      this.residency.registerCollider(slab);
+    }
+    // Continuous supporting ground under unfinished margins; it is not counted as
+    // authored district coverage. Existing street/park surfaces sit above this base.
+    const margin = this.mat('coastal-ground-margin', '#798762', .98);
+    const westWidth = 155 - COAST.minX, groundDepth = COAST.maxZ - COAST.minZ + 80;
+    this.box('coastal-ground-base', COAST.minX + westWidth / 2 - 20, -.60, 0, westWidth + 40, 1, groundDepth, margin, 'global');
+    this.residency.registerCollider({ id: 'collision/coastal-ground-base', x: COAST.minX + westWidth / 2 - 20, y: -.60, z: 0, w: westWidth + 40, h: 1, d: groundDepth, global: true, material: 'grass' });
+    this.box('coastal-beach-base', 182.5, -.54, 0, 55, 1, groundDepth, sand, 'global');
+    this.residency.registerCollider({ id: 'collision/coastal-beach-base', x: 182.5, y: -.54, z: 0, w: 55, h: 1, d: groundDepth, global: true, material: 'sand' });
     // Garden ground beyond the locally detailed blocks, explicitly provisional.
     const grass = this.mat("grass", "#798762", 0.94);
     this.box(
@@ -2204,31 +2220,7 @@ export class WorldBuilder implements WorldContract {
     for (let slat = -6.5; slat <= 6.5; slat += 0.65)
       this.box("pergola-roof", 170 + slat, 3.5, 118, 0.22, 0.18, 12, white);
     this.sign("SOLSTICE", 170, 3.15, 112.3, 7.7, 0.65, "#f6ead7", "#8e8069");
-    const foamMat = new StandardMaterial("world/sea-foam", this.scene);
-    foamMat.diffuseColor = new Color3(0.9, 1, 0.94);
-    foamMat.emissiveColor = new Color3(0.11, 0.16, 0.15);
-    foamMat.alpha = 0.28;
-    foamMat.disableLighting = false;
-    this.allMaterials.push(foamMat);
-    for (let wave = 0; wave < 8; wave++) {
-      const paths: Vector3[][] = [[], []];
-      for (let step = 0; step <= 60; step++) {
-        const z = -660 + step * 22;
-        const x = Math.sin(step * 0.4 + wave) * 1.4;
-        paths[0].push(new Vector3(x, 0, z));
-        paths[1].push(new Vector3(x + 0.45 + Math.sin(step) * 0.12, 0, z));
-      }
-      const foam = MeshBuilder.CreateRibbon(
-        `shore-break/${wave}`,
-        { pathArray: paths, sideOrientation: Mesh.DOUBLESIDE },
-        this.scene,
-      );
-      foam.position.set(211 + wave * 4.3, this.waterLevel + 0.022, 0);
-      foam.material = foamMat;
-      foam.isPickable = false;
-      this.foamMeshes.push(foam);
-      this.looseMeshes.push(foam);
-    }
+
   }
 
   private umbrella(x: number, z: number, color: string): void {
