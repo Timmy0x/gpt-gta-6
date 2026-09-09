@@ -70,3 +70,21 @@ test("invalid ammunition cannot create impossible magazines or unusable weapon s
   data.combat.selected = 4;
   assert.equal(load(data), null);
 });
+test("casualty saves round trip and invalid records are rejected before restoring the world", () => {
+  const casualties = {
+    version: 1, nextOfficerId: 7,
+    civilians: [{ id: "ped-2", x: 3, y: 0.2, z: 4, yaw: 0.4 }],
+    guards: [{ id: "reserve-guard-1", x: -500, y: 0.2, z: 620, yaw: 0 }],
+    police: [{ id: "officer-6", role: "patrol", x: 4, y: 0.2, z: 8, yaw: 1 }],
+  };
+  const data = { ...fixture(), casualties };
+  assert.deepEqual(load(data), data);
+  for (const corrupt of [
+    { ...casualties, version: 2 },
+    { ...casualties, nextOfficerId: 0 },
+    { ...casualties, civilians: [...casualties.civilians, ...casualties.civilians] },
+    { ...casualties, guards: [{ ...casualties.guards[0], id: "unknown-guard" }] },
+    { ...casualties, police: [{ ...casualties.police[0], role: "civilian" }] },
+    { ...casualties, civilians: [{ ...casualties.civilians[0], x: Infinity }] },
+  ]) assert.equal(load({ ...data, casualties: corrupt }), null);
+});

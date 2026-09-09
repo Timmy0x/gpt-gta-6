@@ -8,6 +8,7 @@ import type { Character } from "./Character";
 import type { Player } from "./Player";
 import type { WantedSystem } from "./Wanted";
 import type { VehicleSystem } from "../vehicles/VehicleSystem";
+import { restoreCorpse, type Casualty } from "./police/casualties";
 
 /** An original local training annex. These numbers are authored, not VI intelligence. */
 export const FACILITY_RULES={warningSeconds:6,visitorSeconds:90,alarmSearchSeconds:30,guardCount:4,guardSight:65,guardFireRange:45,arrestSeconds:3} as const;
@@ -88,6 +89,7 @@ export class RestrictedFacility {
   hurtGuard(guard:Officer,amount:number){
     if(!this.guards.includes(guard)||guard.health<=0||!Number.isFinite(amount)||amount<=0)return;
     guard.health=Math.max(0,guard.health-amount);this.resistance=12;this.alarm("A guard has been attacked.");
+    if(guard.health<=0)guard.model.dead=true;
     const impulse=guard.position.subtract(this.player.position).normalize().scale(Math.min(12,amount*.16));impulse.y=1.5;
     this.onCharacterHit?.(guard.model,impulse,guard.health<=0);
     if(guard.health<=0){guard.state="injured";guard.controller?.dispose();guard.controller=null;if(!this.onCharacterHit){guard.model.root.rotation.z=Math.PI/2;guard.model.root.position.y=.35;}}
@@ -116,7 +118,7 @@ export class RestrictedFacility {
     this.alarmMaterial.emissiveColor.set(flash?1:0,flash?.05:.05,0);
     if(near!==this.active){
       this.active=near;
-      for(const guard of this.guards){guard.model.root.setEnabled(near);if(!near){guard.controller?.dispose();guard.controller=null;}}
+      for(const guard of this.guards){guard.model.root.setEnabled(near);if(!near){guard.weapon.setEnabled(false);guard.flash.setEnabled(false);guard.controller?.dispose();guard.controller=null;}}
     }
     if(!near){this.alarmRemaining=Math.max(0,this.alarmRemaining-dt);if(this.alarmRemaining===0&&this.phase==="alarm")this.phase="quiet";return;}
     if(this.world.obstacles.length!==this.obstacleCount){this.obstacleCount=this.world.obstacles.length;this.nav=facilityRoads(this.world.obstacles);}
@@ -160,7 +162,8 @@ export class RestrictedFacility {
     if(hit?.hit&&hit.pickedMesh&&hit.distance<length-.8){const id=hit.pickedMesh.metadata?.vehicleId??hit.pickedMesh.parent?.metadata?.vehicleId;const v=this.vehicles.list.find(v=>v.id===id);if(v)this.vehicles.damage(v,3,hit.pickedPoint??target);return;}
     this.player.hurt(7);
   }
-  reset(){this.guards.forEach(g=>g.dispose());this.createGuards();this.active=false;this.phase="quiet";this.warningRemaining=0;this.accessRemaining=0;this.alarmRemaining=0;this.arrestProgress=0;this.resistance=0;this.patrolIndices=[0,0,0,0];this.lastPlayer.copyFrom(this.player.position);}
+  reset(revive=true){if(revive){this.guards.forEach(g=>g.dispose());this.createGuards();this.active=false;this.patrolIndices=[0,0,0,0];}this.phase="quiet";this.warningRemaining=0;this.accessRemaining=0;this.alarmRemaining=0;this.arrestProgress=0;this.resistance=0;this.lastPlayer.copyFrom(this.player.position);}
+  restoreCasualties(entries:Casualty[]){for(const entry of entries){const guard=this.guards.find(g=>g.id===entry.id);if(!guard)continue;guard.health=0;guard.state="injured";guard.controller?.dispose();guard.controller=null;restoreCorpse(guard.model,entry);guard.weapon.setEnabled(false);}}
   get stats(){return {id:B.id,classification:B.classification,phase:this.phase,inside:insideFacility(this.player.position),accessSeconds:Math.ceil(this.accessRemaining),warningSeconds:Math.ceil(this.warningRemaining),guards:this.guards.filter(g=>g.health>0).length,activeGuards:this.active?this.guards.filter(g=>g.health>0).length:0,gateOpen:this.gateAngle>1.4,arrestProgress:this.arrestProgress};}
   dispose(){this.guards.forEach(g=>g.dispose());this.guards=[];this.gatePhysics.dispose();this.gate.dispose();this.beacon.dispose();this.material.dispose();this.alarmMaterial.dispose();}
 }

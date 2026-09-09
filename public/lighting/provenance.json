@@ -1,0 +1,293 @@
+{
+  "asset": "Wide Street 02",
+  "author": "Sergej Majboroda",
+  "publisher": "Poly Haven",
+  "license": "CC0-1.0",
+  "sourcePage": "https://polyhaven.com/a/wide_street_02",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/wide_street_02_1k.hdr",
+  "sourceBytes": 1519162,
+  "sourceSha256": "2d496622629e51276846e1149afd9040fa889cb3a26bed4c7d4d6c31ebaed9ad",
+  "outputBytes": 897853,
+  "outputSha256": "7c05d4ac97c2cf6c8b5b9580da74d0ef6e8dcf662676808b99d9cc7ac73423d1",
+  "conversion": "Babylon.js 9.25.0 HDRCubeTexture, 256px faces, linear radiance, harmonics and prefiltered mip chain; CreateEnvTextureAsync PNG RGBD output.",
+  "use": "Generic urban lighting/reflection reference; not a Leonida/Miami geography source or live scene reflection.",
+  "verification": {
+    "errors": [],
+    "engine": 2,
+    "info": {
+      "version": 2,
+      "width": 256,
+      "imageType": "image/png",
+      "irradiance": {
+        "x": [
+          0.10004647081063035,
+          0.10085950720146623,
+          0.09914102773233496
+        ],
+        "y": [
+          0.06225670385326784,
+          0.09821016641163959,
+          0.1473093779345229
+        ],
+        "z": [
+          0.1332880745220914,
+          0.13567205849109912,
+          0.1355690239604854
+        ],
+        "xx": [
+          0.20919962994827906,
+          0.26149983028085944,
+          0.3292833737689689
+        ],
+        "yy": [
+          0.1912977820219269,
+          0.24200613941087443,
+          0.30960749415083494
+        ],
+        "zz": [
+          0.22355354592750934,
+          0.274421403249618,
+          0.34091519775598356
+        ],
+        "yz": [
+          0.03015067923060275,
+          0.03170874604129107,
+          0.0330830730627596
+        ],
+        "zx": [
+          0.05265689160719894,
+          0.054790173898386245,
+          0.056739738037471156
+        ],
+        "xy": [
+          0.021603493087763864,
+          0.022783386280786307,
+          0.023638753057125192
+        ]
+      },
+      "specular": {
+        "mipmaps": [
+          {
+            "length": 126814,
+            "position": 0
+          },
+          {
+            "length": 112855,
+            "position": 126814
+          },
+          {
+            "length": 66224,
+            "position": 239669
+          },
+          {
+            "length": 151346,
+            "position": 305893
+          },
+          {
+            "length": 130700,
+            "position": 457239
+          },
+          {
+            "length": 115272,
+            "position": 587939
+          },
+          {
+            "length": 25802,
+            "position": 703211
+          },
+          {
+            "length": 23310,
+            "position": 729013
+          },
+          {
+            "length": 15987,
+            "position": 752323
+          },
+          {
+            "length": 18756,
+            "position": 768310
+          },
+          {
+            "length": 27766,
+            "position": 787066
+          },
+          {
+            "length": 23536,
+            "position": 814832
+          },
+          {
+            "length": 7308,
+            "position": 838368
+          },
+          {
+            "length": 6320,
+            "position": 845676
+          },
+          {
+            "length": 5097,
+            "position": 851996
+          },
+          {
+            "length": 4433,
+            "position": 857093
+          },
+          {
+            "length": 7923,
+            "position": 861526
+          },
+          {
+            "length": 6410,
+            "position": 869449
+          },
+          {
+            "length": 2194,
+            "position": 875859
+          },
+          {
+            "length": 1860,
+            "position": 878053
+          },
+          {
+            "length": 1871,
+            "position": 879913
+          },
+          {
+            "length": 1287,
+            "position": 881784
+          },
+          {
+            "length": 2423,
+            "position": 883071
+          },
+          {
+            "length": 1858,
+            "position": 885494
+          },
+          {
+            "length": 779,
+            "position": 887352
+          },
+          {
+            "length": 627,
+            "position": 888131
+          },
+          {
+            "length": 773,
+            "position": 888758
+          },
+          {
+            "length": 522,
+            "position": 889531
+          },
+          {
+            "length": 835,
+            "position": 890053
+          },
+          {
+            "length": 603,
+            "position": 890888
+          },
+          {
+            "length": 319,
+            "position": 891491
+          },
+          {
+            "length": 270,
+            "position": 891810
+          },
+          {
+            "length": 325,
+            "position": 892080
+          },
+          {
+            "length": 265,
+            "position": 892405
+          },
+          {
+            "length": 320,
+            "position": 892670
+          },
+          {
+            "length": 262,
+            "position": 892990
+          },
+          {
+            "length": 155,
+            "position": 893252
+          },
+          {
+            "length": 155,
+            "position": 893407
+          },
+          {
+            "length": 155,
+            "position": 893562
+          },
+          {
+            "length": 155,
+            "position": 893717
+          },
+          {
+            "length": 155,
+            "position": 893872
+          },
+          {
+            "length": 155,
+            "position": 894027
+          },
+          {
+            "length": 102,
+            "position": 894182
+          },
+          {
+            "length": 101,
+            "position": 894284
+          },
+          {
+            "length": 102,
+            "position": 894385
+          },
+          {
+            "length": 102,
+            "position": 894487
+          },
+          {
+            "length": 102,
+            "position": 894589
+          },
+          {
+            "length": 101,
+            "position": 894691
+          },
+          {
+            "length": 88,
+            "position": 894792
+          },
+          {
+            "length": 88,
+            "position": 894880
+          },
+          {
+            "length": 89,
+            "position": 894968
+          },
+          {
+            "length": 88,
+            "position": 895057
+          },
+          {
+            "length": 88,
+            "position": 895145
+          },
+          {
+            "length": 88,
+            "position": 895233
+          }
+        ],
+        "lodGenerationScale": 0.8
+      },
+      "binaryDataPosition": 2532
+    }
+  }
+}

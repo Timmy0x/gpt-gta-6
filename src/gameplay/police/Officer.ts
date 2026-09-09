@@ -148,6 +148,15 @@ export class Officer {
       badge,
     );
     this.flash.setEnabled(false);
+    // Gear must follow the skinned hand, including aim and hit poses.
+    const hand=this.model.skeleton.bones.find(b=>b.name.endsWith("/rightHand"));
+    if(hand){
+      this.weapon.attachToBone(hand,this.model.torso);
+      this.weapon.position.set(0,-.02,role!=="patrol"?.15:.075);
+      this.weapon.rotation.set(Math.PI/2,0,0);
+      this.flash.parent=this.weapon;this.flash.position.set(0,0,role!=="patrol"?.29:.17);
+    }
+    this.weapon.setEnabled(false);
     this.model.parts.forEach(
       (m) => (m.metadata = { ...m.metadata, officer: this }),
     );
@@ -196,11 +205,14 @@ export class Officer {
     if (direction.lengthSquared() > 0.001)
       this.model.root.rotation.y = Math.atan2(direction.x, direction.z);
     this.model.animate(dt, speed, aim, false);
+    this.model.skeleton.computeAbsoluteMatrices(true);
+    this.model.skeleton.prepare(true);
     this.weapon.setEnabled(aim);
   }
   dispose() {
     this.controller?.dispose();
     this.controller = null;
+    this.weapon.dispose();
     this.model.dispose();
     this.textures.forEach((t) => t.dispose());
     this.materials.forEach((m) => m.dispose());

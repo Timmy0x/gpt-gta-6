@@ -1,0 +1,35 @@
+BJS - [19:08:12]: Babylon.js v9.25.0 - Null engine
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+✔ licensed player skins load once, retarget direct bone changes, preserve NPC uniforms and release clones (239.310958ms)
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+✔ both licensed skins clear existing low and detailed concept car cabin floor and roof bounds (45.719625ms)
+ℹ Jason low: cabin-space floor=-0.1528m, roof=0.9126m; all 14064 visible vertices evaluated.
+ℹ Jason reclined: cabin-space floor=-0.4322m, roof=0.5010m; all 14064 visible vertices evaluated.
+ℹ Lucia low: cabin-space floor=-0.1545m, roof=0.8929m; all 16308 visible vertices evaluated.
+ℹ Lucia reclined: cabin-space floor=-0.4307m, roof=0.4790m; all 16308 visible vertices evaluated.
+✔ a failed licensed character load retains fallback and can retry cleanly (12.787208ms)
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+✔ Rocketbox GLB packages retain licensed provenance and valid three-material skin data (4.170875ms)
+✔ visible player pelvis follows Havok ragdoll synchronization in the same render frame (152.250959ms)
+BJS - [19:08:12]: Babylon.js v9.25.0 - Null engine
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+BJS - [19:08:13]: Babylon.js v9.25.0 - Null engine
+✔ low driving pose keeps both character variants' skinned feet above the cabin floor and head below the roof (19.304459ms)
+✔ reclined driving pose clears the detailed concept car's floor and roof (6.183625ms)
+✔ both character variants have valid skinned geometry and one render submesh (8.438334ms)
+ℹ Jason: 4692 vertices, 9160 triangles, 17 bones.
+ℹ Lucia: 4662 vertices, 9100 triangles, 17 bones.
+✔ walk and run skin the feet while aiming raises the hand and crouching recovers (4.899292ms)
+✔ characters share their material safely across repeated character switching (31.613583ms)
+✔ equal fixed-step inputs produce equal joint poses without moving the controller root (3.434541ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1377.167

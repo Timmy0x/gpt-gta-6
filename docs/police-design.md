@@ -10,6 +10,8 @@ The primary VI footage inspection constraints and secondary six-star/identity re
 
 ## Responsibilities and integration
 
+Ordinary player recovery now preserves civilian, guard and response-officer casualties. Dead officers do not consume the living dispatch allowance; old distant offscreen bodies retire without reusing identities, and repeated kill/recovery cycles obey a hard total-rig budget. An explicit encounter reset still revives the world. The validated save ledger and normal-control BUSTED/save/load evidence are documented in [casualty-lifecycle.md](casualty-lifecycle.md).
+
 - `Population.ts` owns ambient traffic/civilians and preserves its existing constructor and public properties. Its `drivers` array continues to include response vehicles with `d.v` and `d.police`, so the application can exclude them from user sandbox saves.
 - `police/PoliceDirector.ts` owns response dispatch, observed contact, vehicle/foot pursuit, compliance, weapons, roadblocks, air support and response cleanup. `police/rules.ts` isolates reference classification, budgets, LOS and route decisions. `police/Officer.ts` owns original uniformed Character rigs and Havok character controllers.
 - Public additions are `population.officers`, `population.policeStats`, `population.hurtOfficer(officer, amount)`, `population.resist(seconds = 12)`, and nullable `population.onCharacterHit(model, impulse, fatal)`. Rig meshes, equipment and foot-controller bodies carry `metadata.officer`.

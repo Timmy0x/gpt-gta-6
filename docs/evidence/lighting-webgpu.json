@@ -1,0 +1,12 @@
+{
+  "errors": [],
+  "scope": "Normal launch and car spawn; experimental environment replacement through a test-only module import. Static comparison, not a performance benchmark.",
+  "texture": "Wide Street 02 / Poly Haven / CC0",
+  "ready": true,
+  "size": {
+    "width": 256,
+    "height": 256
+  },
+  "polynomial": true,
+  "backend": "WebGPU"
+}

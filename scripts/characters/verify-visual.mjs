@@ -1,0 +1,7 @@
+import {createServer} from 'vite';
+import { chromium } from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+const server=await createServer({server:{host:'127.0.0.1',port:4184,strictPort:true}});await server.listen();
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--use-angle=metal','--ignore-gpu-blocklist']}),page=await browser.newPage({viewport:{width:1600,height:1100}}),errors=[],states=[];
+page.on('pageerror',e=>{errors.push(e.stack);console.log('PAGEERROR',e.stack);});page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+try{await page.goto('http://127.0.0.1:4184/scripts/characters/preview.html');await page.waitForFunction(()=>window.review?.ready,{},{timeout:120000});for(const mode of ['idle','walk','aim','seated']){await page.evaluate(mode=>window.review.setMode(mode),mode);await page.waitForTimeout(1200);await page.screenshot({path:`docs/evidence/rocketbox-${mode}.png`});const state=await page.evaluate(()=>{const r=window.review;return {meshes:r.scene.meshes.length,materials:r.scene.materials.length,skeletons:r.scene.skeletons.length,parts:r.male.parts.map(m=>({name:m.name,vertices:m.getTotalVertices(),skeleton:m.skeleton?.bones.length,visible:m.isVisible,scaling:m.scaling.asArray()}))};});states.push({mode,...state});console.log(mode,JSON.stringify(state));}}finally{await writeFile('docs/evidence/rocketbox-review.json',JSON.stringify({errors,states},null,2));await browser.close();await server.close();}

@@ -1,0 +1,14 @@
+import { ArcRotateCamera, Color3, Color4, DirectionalLight, Engine, HemisphericLight, MeshBuilder, PBRMaterial, Scene, ShadowGenerator, Vector3 } from '@babylonjs/core';
+import { Character } from '../../src/gameplay/Character';
+import { prepareCharacterAssets } from '../../src/gameplay/characters/RocketboxSkin';
+const engine=new Engine(document.querySelector('canvas')!,true),scene=new Scene(engine);
+scene.clearColor=new Color4(.09,.12,.15,1);scene.imageProcessingConfiguration.toneMappingEnabled=true;scene.imageProcessingConfiguration.toneMappingType=1;scene.imageProcessingConfiguration.exposure=1.1;
+const camera=new ArcRotateCamera('review',Math.PI/2,Math.PI/2.2,3.7,new Vector3(0,.99,0),scene);camera.attachControl(document.querySelector('canvas')!,true);camera.minZ=.01;
+const ambient=new HemisphericLight('ambient',Vector3.Up(),scene);ambient.intensity=.7;ambient.groundColor=new Color3(.18,.2,.22);
+const sun=new DirectionalLight('key',new Vector3(-.8,-1,1),scene);sun.intensity=2;sun.position.set(3,6,-3);const shadows=new ShadowGenerator(1024,sun);shadows.usePercentageCloserFiltering=true;
+const floor=MeshBuilder.CreateGround('studio',{width:20,height:20},scene),mat=new PBRMaterial('floor',scene);mat.albedoColor=new Color3(.13,.15,.16);mat.metallic=0;mat.roughness=1;floor.material=mat;floor.receiveShadows=true;
+await prepareCharacterAssets(scene,new URL('/characters/rocketbox/',location.href).href);
+const male=new Character(scene,shadows,'Jason','#ffffff',false,undefined,{licensedPlayerSkin:true}),female=new Character(scene,shadows,'Lucia','#bb4767',true,undefined,{licensedPlayerSkin:true});male.position(new Vector3(-.5,0,0));female.position(new Vector3(.5,0,0));
+let mode='idle',elapsed=0;
+Object.assign(window,{review:{scene,male,female,camera,setMode(v:string){mode=v;},ready:true}});
+engine.runRenderLoop(()=>{const dt=Math.min(engine.getDeltaTime()/1000,.05);elapsed+=dt;for(const c of [male,female]){c.animate(dt,mode==='walk'?3:mode==='run'?7:0,mode==='aim',mode==='crouch');if(['seated','climb','swim'].includes(mode))c.pose(mode as 'seated'|'climb'|'swim',elapsed,'reclined');}scene.render();});

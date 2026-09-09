@@ -1,0 +1,213 @@
+{
+  "errors": [],
+  "states": [
+    {
+      "mode": "idle",
+      "meshes": 11,
+      "materials": 9,
+      "skeletons": 4,
+      "parts": [
+        {
+          "name": "Jason/skinned-body",
+          "vertices": 4692,
+          "skeleton": 17,
+          "visible": false,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "walk",
+      "meshes": 11,
+      "materials": 9,
+      "skeletons": 4,
+      "parts": [
+        {
+          "name": "Jason/skinned-body",
+          "vertices": 4692,
+          "skeleton": 17,
+          "visible": false,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "aim",
+      "meshes": 11,
+      "materials": 9,
+      "skeletons": 4,
+      "parts": [
+        {
+          "name": "Jason/skinned-body",
+          "vertices": 4692,
+          "skeleton": 17,
+          "visible": false,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "seated",
+      "meshes": 11,
+      "materials": 9,
+      "skeletons": 4,
+      "parts": [
+        {
+          "name": "Jason/skinned-body",
+          "vertices": 4692,
+          "skeleton": 17,
+          "visible": false,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "skeleton": 80,
+          "visible": true,
+          "scaling": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

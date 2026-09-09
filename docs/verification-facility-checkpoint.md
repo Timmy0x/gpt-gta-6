@@ -23,3 +23,11 @@ The fresh facility camera is at (−449, 2.524, 139.016), looking toward (−449
 ## Remaining verification
 
 Rerun the normal-control visual route after the rendering and seat fixes. Capture armed response over an interval, or received damage with invulnerability disabled, rather than relying on one transient officer-state sample. Close-up uniform/firearm appearance, access denial while wanted, calm detention/recovery in the actual browser, vehicle gate entry, alert save behavior and sustained mixed-world performance remain outside this checkpoint. The deterministic/Havok facility tests cover a narrower set of physical behavior described in `facility-design.md`.
+
+## Subsequent fixed-world and lifecycle retest
+
+The same independent normal-control route passed 13 stages on the later frozen `index-DTgddOO0.js` build at port 4181. Evidence uses `facility-checkpoint-3-webgl-lifecycle-fix-*`; earlier failures remain unchanged. The facility concrete, buildings and perimeter fence now visibly render, and the cabin side view no longer shows the seated player's feet below the chassis. The nearby military actor now has olive trousers rather than civilian blue jeans. These screenshots were independently opened and inspected.
+
+The gate again stopped normal walking at X −455.475, E opened visitor access, and walking reached X −463.615 inside. Aiming caused warning and alarm. With invulnerability disabled, the guard response reduced actual player health from 100 to 87.4 and then 81.1; this establishes damage over time rather than relying on a transient `firing` state. The capture ended during the legitimate report delay; the earlier three-star result remains separate evidence. No runtime errors or failed network requests occurred.
+
+Officer weapons are now attached to the right-hand bone with an aligned forward barrel and role-colored trousers. Physical/geometry tests validate the attachment and disposal; the nearest actor was cropped in the final aimed screenshot, so detailed firearm/grip visual quality is still not certified. World material detail and character likeness remain provisional art, despite the fixed missing-geometry and seat defects. The separate [casualty lifecycle audit](casualty-lifecycle.md) verifies normal lethal civilian shots, ordinary BUSTED recovery and save/load/fresh Continue without resurrection.

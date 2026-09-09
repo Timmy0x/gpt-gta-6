@@ -59,7 +59,7 @@ export class Player {
     this.controller.maxStepHeight = 0.36;
     this.controller.characterMass = 80;
     this.controller.characterStrength = 1600;
-    this.model = new Character(scene, shadows, "Jason", "#d8d3c5");
+    this.model = new Character(scene, shadows, "Jason", "#d8d3c5", false, undefined, { licensedPlayerSkin: true });
     this.previous.copyFrom(spawn);
     this.camera = new UniversalCamera(
       "third-person",
@@ -86,6 +86,8 @@ export class Player {
       this.name,
       this.name === "Lucia" ? "#8d283b" : "#d8d3c5",
       this.name === "Lucia",
+      undefined,
+      { licensedPlayerSkin: true },
     );
     if (this.vehicle && !this.transitioning) this.attachSeat();
   }

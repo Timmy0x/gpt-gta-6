@@ -19,7 +19,7 @@ npm run build
 npm run preview
 ```
 
-Vite writes a static application to `dist/`. Havok and shader compiler WASM files are bundled locally. No server is required for gameplay. Nothing has been pushed or deployed, and hosting has not been configured.
+Vite writes a static application to `dist/`. Havok and shader compiler WASM files are bundled locally. No server is required for gameplay. Tested checkpoints are pushed to origin/main. Hosting and deployment have not been configured.
 
 ## Controls
 
@@ -27,7 +27,7 @@ Vite writes a static application to `dist/`. Havok and shader compiler WASM file
 |---|---|
 | WASD | Walk / steer and accelerate |
 | Shift | Sprint / aircraft climb |
-| Space | Jump / mantle low ledge / handbrake |
+| Space | Jump / mantle low ledge / ground-vehicle handbrake / aircraft lift |
 | C | Crouch / aircraft descend |
 | E | Enter or exit a nearby vehicle / contextual interaction |
 | Mouse | Look after clicking the game canvas |
@@ -42,7 +42,7 @@ Vite writes a static application to `dist/`. Havok and shader compiler WASM file
 
 Standard gamepads support movement/look, A jump, Y interact, X reload, B crouch, L3 sprint/lift, LT aim, RT fire, Start map, Select creative, and D-pad up switching. Keyboard actions can be remapped in settings. Controller menus use D-pad/left stick to focus, A to activate/cycle, B to close, and left/right to adjust ranges. Physical-device validation remains pending.
 
-Map routes and fast travel, creative spawning/materials/barriers/fire, wanted level, density, weather/time, invulnerability, ammunition, noclip, simulation speed and browser-local save/load are available in the normal interface. Visible patrol and SWAT crews can pursue, challenge, arrest or engage a resisting player; higher levels add roadblocks and physical helicopter observation. Spawn boats and aircraft from the sandbox panel and press E nearby. Helicopters need a few seconds for their rotor to spool up; use Shift to climb. Planes need runway speed before holding Shift to rotate.
+Map routes and fast travel, creative spawning/materials/barriers/fire, wanted level, density, weather/time, invulnerability, ammunition, noclip, simulation speed and browser-local save/load are available in the normal interface. Visible patrol and SWAT crews can pursue, challenge, arrest or engage a resisting player; higher levels add roadblocks and physical helicopter observation. Spawn boats and aircraft from the sandbox panel and press E nearby. Helicopters need a few seconds for their rotor to spool up; hold Space or Shift to climb. Planes launch on a clear beach strip; accelerate to about 90 km/h before holding Space or Shift to rotate.
 
 ## Rendering and testing
 

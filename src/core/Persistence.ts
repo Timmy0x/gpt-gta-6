@@ -3,6 +3,7 @@ import {
   type LegacyVehicleSnapshot,
   type SerializableVehicle,
 } from "../vehicles/serialization";
+import { validateCasualties, type PopulationCasualties } from "../gameplay/police/casualties";
 export interface SavedProp {
   id: string;
   x: number;
@@ -32,6 +33,7 @@ export interface SaveData {
   vehicles: (LegacyVehicleSnapshot | SerializableVehicle)[];
   destroyed: string[];
   props?: SavedProp[];
+  casualties?: PopulationCasualties;
   civilians?: {
     id?: string;
     x: number;
@@ -178,6 +180,7 @@ export class Persistence {
         .map((p: { id?: string }) => p.id)
         .filter(Boolean);
       if (new Set(civilianIds).size !== civilianIds.length) return null;
+      if (s.casualties !== undefined && !validateCasualties(s.casualties)) return null;
       return s;
     } catch {
       return null;

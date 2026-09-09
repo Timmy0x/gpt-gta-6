@@ -2,8 +2,6 @@ import "./ui/style.css";
 import {
   Color3,
   Color4,
-  RawCubeTexture,
-  Constants,
   DefaultRenderingPipeline,
   DirectionalLight,
   HemisphericLight,
@@ -20,6 +18,7 @@ import {
 import HavokPhysics from "@babylonjs/havok";
 import havokWasm from "@babylonjs/havok/lib/esm/HavokPhysics.wasm?url";
 import { createRenderer } from "./core/Renderer";
+import { prepareEnvironmentLighting } from "./core/EnvironmentLighting";
 import { Input, type Action } from "./core/Input";
 import { Persistence } from "./core/Persistence";
 import { GameAudio } from "./core/Audio";
@@ -28,7 +27,9 @@ import { World } from "./world/World";
 import { VehicleSystem, type Vehicle, VEHICLE_TUNING } from "./vehicles";
 import type { VehicleKind } from "./core/contracts";
 import { AIRCRAFT_SPAWNS, aircraftInput, aircraftPrompt, isAircraft } from "./vehicles/aircraft";
+import { findGroundVehicleSpawn } from "./vehicles/spawnPlacement";
 import { Player } from "./gameplay/Player";
+import { prepareCharacterAssets } from "./gameplay/characters/RocketboxSkin";
 import { WantedSystem } from "./gameplay/Wanted";
 import { Population } from "./gameplay/Population";
 import { DamageSystem } from "./gameplay/Damage";
@@ -76,41 +77,17 @@ async function boot() {
   shadows.darkness = 0.18;
   ui.loading("Loading the coast and nearby streets…");
   await new Promise((r) => setTimeout(r, 20));
-  // Authored low-frequency sky radiance: local data, with no remote asset dependency.
-  const cubeFaces = Array.from({ length: 6 }, (_, face) => {
-    const pixels = new Uint8Array(32 * 32 * 4);
-    for (let y = 0; y < 32; y++)
-      for (let x = 0; x < 32; x++) {
-        const t = face === 2 ? 1 : face === 3 ? 0 : 1 - y / 31;
-        const c = Color3.Lerp(
-          new Color3(0.26, 0.29, 0.25),
-          new Color3(0.58, 0.77, 0.9),
-          t,
-        );
-        const i = (y * 32 + x) * 4;
-        pixels[i] = c.r * 255;
-        pixels[i + 1] = c.g * 255;
-        pixels[i + 2] = c.b * 255;
-        pixels[i + 3] = 255;
-      }
-    return pixels;
-  });
-  const environment = new RawCubeTexture(
-    scene,
-    cubeFaces,
-    32,
-    Constants.TEXTUREFORMAT_RGBA,
-    Constants.TEXTURETYPE_UNSIGNED_BYTE,
-    true,
-    false,
-  );
-  scene.environmentTexture = environment;
+  ui.loading("Preparing coastal lighting…");
+  await prepareEnvironmentLighting(scene);
   scene.environmentIntensity = 0.85;
   const ctx = { scene, shadows };
   const world = new World(ctx);
   await world.ready;
   const navigation = new Navigation(world.roads);
   ui.world = world;
+  ui.loading("Loading character detail…");
+  try { await prepareCharacterAssets(scene); }
+  catch (error) { console.warn("Using the procedural character fallback", error); }
   const input = new Input(canvas);
   const player = new Player(scene, shadows, input, world.spawn);
   const vehicles = new VehicleSystem(ctx);
@@ -204,13 +181,13 @@ async function boot() {
     new Vector3(0, 2, -72),
   ];
   function resetPlayer(reason: string) {
-    combat.reactions.reset();
+    combat.reactions.reset({ preserveFatal: true });
     player.exit(true);
     player.health = 100;
     player.armor = 50;
     player.deadTimer = 0;
     player.teleport(world.spawn.clone());
-    population.reset();
+    population.reset(false);
     cash = Math.max(0, cash - (reason === "BUSTED" ? 300 : 100));
     ui.outcome("");
     activity = "Back on the coast. Find your next ride.";
@@ -284,6 +261,7 @@ async function boot() {
           .map((v) => vehicles.serialize(v)),
         destroyed: [...damage.destroyed],
         props: damage.serialize(),
+        casualties: population.serializeCasualties(),
         civilians: population.pedestrians
           .filter((p) => p.creative)
           .map((p) => ({
@@ -376,6 +354,7 @@ async function boot() {
       );
       ped.health = p.health;
     }
+    if (s.casualties) population.restoreCasualties(s.casualties);
     ui.toast("Saved sandbox restored.");
     return true;
   }
@@ -539,9 +518,12 @@ async function boot() {
         ?.value || "coupe") as VehicleKind;
       if (kind === "concept" && vehicles.list.filter(v => v.kind === "concept").length >= 4) { ui.toast("Four detailed cars are already in the sandbox. Remove one first."); return; }
       if (!await prepareVehicleModels([kind])) return;
-      let p = player.position.add(
-        new Vector3(Math.sin(player.yaw) * 6, 1, Math.cos(player.yaw) * 6),
-      );
+      let p = player.position.clone();
+      if (!isAircraft(kind) && kind !== "boat") {
+        const clear = findGroundVehicleSpawn({scene, kind, origin:player.position, heading:player.yaw, obstacles:world.obstacles, vehicles:vehicles.list});
+        if (!clear) { ui.toast("No clear space for this vehicle nearby. Move to a wider open area and try again."); return; }
+        p = clear;
+      }
       if (kind === "boat") p = new Vector3(239, 0.4, -230);
       if (kind === "plane" || kind === "helicopter") {
         const launch = AIRCRAFT_SPAWNS[kind];

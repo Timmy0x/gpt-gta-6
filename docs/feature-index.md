@@ -335,3 +335,12 @@ See `verification-facility-checkpoint.md`, `facility-design.md`, `geodata.md` an
 | Long-run baseline | 1805-second third-checkpoint run with zero browser errors and no transport recoveries | Performance failed: 59.52 median / 19.45 slowest-1% FPS, max stall 1026.3 ms; bounded memory unproven; see performance-stability.md |
 
 The latest user reports aircraft staying grounded and widespread rapid respawning. These remain active defects requiring normal-interface reproduction; fixture flight tests do not dismiss them. Character and broader vehicle/world realism remain priority work.
+
+
+### 2026-09-09 character, casualty and lighting integration
+
+- Player appearance: two MIT Rocketbox substitutes replace visible procedural player bodies; original 17-bone gameplay controllers drive 80-bone imported skins. Eleven actual-asset tests and integrated normal views verify switching, seating, ragdolls and disposal. Source identity, locomotion clips, fingers and broad NPC variety remain fidelity gaps.
+- Death/recovery: ordinary player recovery preserves fatal NPCs, with a validated bounded save ledger. Normal WebGL2 17-stage and WebGPU 20-stage civilian kill/BUSTED/save/fresh-Continue flows pass. Guard/officer lifecycle is covered by real Havok tests. Explicit Reset encounter remains a deliberate reset; living knockdowns recover.
+- Lighting: verified local CC0 HDR prefilter supplies PBR reflections/ambient radiance on both backends. Static generic probe, no live reflections or performance claim.
+- Ground spawning: level collision-free candidate search prevents newly spawned detailed cars overlapping the starter vehicle. Three Havok cases and normal two-car WebGPU evidence pass.
+- Aircraft: normal launch positions, Space/A lift controls, speed instructions and takeoff/landing/exit verified on both renderers in 02e4363. Beach launch is an authored connection, not a completed airport.

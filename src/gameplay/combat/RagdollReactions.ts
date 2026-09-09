@@ -33,6 +33,7 @@ export class RagdollReactions {
   constructor(private scene: Scene) {}
   hit(model: Character, impulse: Vector3, fatal = false): void {
     if (model.root.isDisposed()) return;
+    if(fatal)model.dead=true;
     this.frozen.delete(model);
     let reaction = this.active.find((r) => r.model === model);
     if (reaction?.recovering) {
@@ -236,6 +237,7 @@ export class RagdollReactions {
     const index = this.active.indexOf(reaction);
     if (index < 0) return;
     reaction.removeDisposeObserver();
+    const settled=!recovered&&!reaction.model.root.isDisposed()?this.capture(reaction.model):null;
     if (!reaction.disposed) {
       reaction.ragdoll.dispose();
       reaction.disposed = true;
@@ -247,6 +249,7 @@ export class RagdollReactions {
         ragdollRecovering: false,
       };
       if (!recovered) this.frozen.set(reaction.model, reaction.target);
+      if(settled)for(const pose of settled){pose.bone.setPosition(pose.position);pose.bone.setRotationQuaternion(pose.rotation);}
       if (recovered)
         for (const pose of reaction.target) {
           pose.bone.setPosition(pose.position);
@@ -255,15 +258,16 @@ export class RagdollReactions {
     }
     this.active.splice(index, 1);
   }
-  /** Used before respawn/load: no old body, frozen pose, or animation gate survives the reset. */
-  reset(): void {
-    for (const reaction of [...this.active]) this.finish(reaction, true);
+  /** Full reset restores encounter poses; ordinary player recovery preserves fatal casualties. */
+  reset(options:{preserveFatal?:boolean}={}): void {
+    for (const reaction of [...this.active]) this.finish(reaction, !(options.preserveFatal&&reaction.fatal));
     for (const [model, poses] of this.frozen) {
+      if(options.preserveFatal&&model.dead)continue;
       if (model.root.isDisposed()) continue;
       model.root.metadata = { ...model.root.metadata, ragdollActive: false, ragdollRecovering: false };
       for (const pose of poses) { pose.bone.setPosition(pose.position); pose.bone.setRotationQuaternion(pose.rotation); }
     }
-    this.frozen.clear();
+    if(options.preserveFatal){for(const model of this.frozen.keys())if(!model.dead||model.root.isDisposed())this.frozen.delete(model);}else this.frozen.clear();
   }
   dispose(): void { this.reset(); }
 }

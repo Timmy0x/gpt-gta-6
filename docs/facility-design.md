@@ -22,7 +22,9 @@ Population forwards warnings, arrest and combat ragdoll hooks. The combined `pop
 - Leaving during the warning produced no crime; ignoring it produced three stars and calm detention while health stayed 100.
 - A guard moved more than five metres on patrol, aimed trespass revoked access and caused actual damage, hit hooks ran, and reset/reactivation retained four unique stable guard IDs. Controllers were released after leaving the active area.
 
-The focused suite of facility, police and urban navigation tests passed 16 cases. An independent WebGL2 normal-control run subsequently confirmed closed-gate collision, visitor access, physical entry, four active patrol guards, aimed-access revocation and warning-to-three-star escalation. It also exposed missing streamed scenery and incomplete uniform/weapon appearance; visual certification remains open. See [the browser checkpoint](verification-facility-checkpoint.md) for screenshots, exact observations and harness limitations.
+The focused suite of facility, police and urban navigation tests passed 16 cases. An independent WebGL2 normal-control run subsequently confirmed closed-gate collision, visitor access, physical entry, four active patrol guards, aimed-access revocation and warning-to-three-star escalation. It also exposed missing streamed scenery and incomplete uniform/weapon appearance. A later 13-stage normal-control retest confirms restored scenery, olive trousers and actual armed-response health loss (100 → 81.1); detailed firearm grip and full visual fidelity remain open. See [the browser checkpoint](verification-facility-checkpoint.md) for screenshots, exact observations and harness limitations.
+
+Ordinary player arrest/death recovery now clears the local encounter without healing or recreating dead guards. Explicit Reset encounter deliberately restores them. A bounded casualty ledger preserves their stable IDs and dead state through save/load; range-based reactivation does not revive them. [Casualty lifecycle](casualty-lifecycle.md) describes the distinction from nonfatal knockdowns and the physical/browser verification.
 
 ## Limits
 

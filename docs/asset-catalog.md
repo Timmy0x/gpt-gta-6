@@ -93,3 +93,10 @@ Numerical mass/friction/impact thresholds belong in data, with values identified
 New source-authored families include skinned-hand pistol/SMG/grenade geometry; patrol/SWAT labels, helmets, vest/radio/weapon overlays; fence/gate assemblies and separate colliding fragments; fire meshes and a local rain streak texture; bungalow side elevations/gables/meters, market frontage and a creative training annex. All are original procedural meshes/textures produced in this repository, with no imported Rockstar model or Google imagery. They retain the existing procedural art license/provenance category. Their stylized construction and approximate human/vehicle details do not meet final requested realistic art fidelity.
 
 Audio is newly authored procedural Web Audio synthesis: noise buffers, oscillators, filters and HRTF spatialization. No external samples, music or performer likeness recording is embedded. The initial CSS still requests Google Fonts at runtime; offline typography falls back to system faces. Modular licensed high-detail art, compressed textures, verified animation clips and recorded vehicle/ambient audio remain acquisition work.
+
+
+## Licensed player skins and shared HDR lighting (2026-09-09)
+
+`public/characters/rocketbox` contains converted male/female Microsoft Rocketbox avatars under MIT, pinned upstream commit 0943055db6ec570bcef9f2c8b41c9e5467c808f9. Source manifest, original license, preparation scripts, output hashes and texture provenance are retained in data/characters, scripts/characters and the public manifest. Runtime uses these for the two players only; ambient role-specific characters remain procedural. See character-assets.md for exact rig/triangle counts and tested limitations.
+
+`public/lighting/coastal-street.env` is an offline Babylon prefilter of Poly Haven Wide Street 02 by Sergej Majboroda (CC0). The local source metadata/HDR, preparation scripts, attribution and hash are retained. This generic urban light probe improves PBR radiance without importing its depicted geography. See environment-lighting.md. Both sources appear in in-game credits.

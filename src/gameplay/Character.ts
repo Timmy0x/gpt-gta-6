@@ -13,6 +13,7 @@ import {
   type Scene,
   type ShadowGenerator,
 } from "@babylonjs/core";
+import { RocketboxSkin } from './characters/RocketboxSkin';
 
 type Joint =
   | "pelvis"
@@ -35,6 +36,7 @@ type Joint =
 type Influence = [Joint, number];
 type Ring = { y: number; w: number; d: number; x?: number; z?: number };
 type SharedMaterial = { material: PBRMaterial; users: number };
+export type CharacterOptions = { licensedPlayerSkin?: boolean };
 const characterMaterials = new WeakMap<Scene, SharedMaterial>();
 
 /** Original, metre-scale, vertex-colored character asset with a real Babylon skin rig.
@@ -59,6 +61,7 @@ export class Character {
   private crouching = 0;
   private elapsed = 0;
   private disposed = false;
+  private readonly visualSkin?: RocketboxSkin;
 
   constructor(
     scene: Scene,
@@ -67,6 +70,7 @@ export class Character {
     color = "#d9c3a7",
     female = false,
     trousers?: string,
+    options: CharacterOptions = {},
   ) {
     this.scene = scene;
     this.baseHeight = female ? 0.98 : 1.015;
@@ -725,9 +729,11 @@ export class Character {
         new Vector3(0.7, 1.96, 0.95),
       ),
     );
-    this.parts = [this.torso];
-    shadows.addShadowCaster(this.torso, false);
     this.skeleton.prepare();
+    this.visualSkin = RocketboxSkin.create(scene, this.root, this.skeleton, name, female, shadows, options.licensedPlayerSkin === true);
+    this.parts = [this.torso, ...(this.visualSkin?.parts ?? [])];
+    if (this.visualSkin) this.torso.isVisible = false;
+    else shadows.addShadowCaster(this.torso, false);
   }
 
   private rotate(joint: Joint, x: number, y = 0, z = 0): void {
@@ -850,6 +856,7 @@ export class Character {
   dispose(): void {
     if (this.disposed) return;
     this.disposed = true;
+    this.visualSkin?.dispose();
     this.root.dispose(false, false);
     this.skeleton.dispose();
     this.material.users--;

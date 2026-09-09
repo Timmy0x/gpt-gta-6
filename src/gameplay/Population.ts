@@ -8,6 +8,7 @@ import type { WantedSystem } from "./Wanted";
 import { PoliceDirector, type Driver } from "./police/PoliceDirector";
 import type { Officer } from "./police/Officer";
 import { RestrictedFacility } from "./RestrictedFacility";
+import { restoreCorpse, snapshotCasualty, validateCasualties, type PopulationCasualties } from "./police/casualties";
 export interface Pedestrian {
   id: string;
   model: Character;
@@ -144,7 +145,7 @@ export class Population {
   }
   frighten(p: Vector3) {
     for (const ped of this.pedestrians)
-      if (distance(p, ped.model.root.position) < 70) {
+      if (ped.health > 0 && distance(p, ped.model.root.position) < 70) {
         ped.panic = 12;
         ped.activity = "fleeing";
         ped.target = ped.model.root.position.add(
@@ -155,6 +156,7 @@ export class Population {
   hurtPed(ped: Pedestrian, damage: number) {
     if (ped.health <= 0 || !Number.isFinite(damage) || damage <= 0) return;
     ped.health = Math.max(0, ped.health - damage);
+    if(ped.health<=0){ped.model.dead=true;ped.activity="dead";ped.report=0;}
     ped.panic = 20;
     const impulse = ped.model.root.position
       .subtract(this.player.position)
@@ -165,7 +167,7 @@ export class Population {
     if (ped.health <= 0 && !this.onCharacterHit) {
       ped.model.root.rotation.z = Math.PI / 2;
       ped.model.root.position.y = 0.35;
-      ped.activity = "injured";
+      ped.activity = "dead";
     }
     this.frighten(ped.model.root.position);
   }
@@ -239,6 +241,8 @@ export class Population {
     }
     for (let i = 0; i < this.pedestrians.length; i++) {
       const ped = this.pedestrians[i];
+      // Older saves recorded health without a corpse pose/ledger.
+      if(ped.health<=0&&!ped.model.dead){restoreCorpse(ped.model,snapshotCasualty(ped.id,ped.model));ped.activity="dead";ped.report=0;}
       const active = ped.creative || i < 30 * this.density;
       ped.model.root.setEnabled(active);
       if (!active || ped.health <= 0 || ped.model.root.metadata?.ragdollActive)
@@ -273,6 +277,7 @@ export class Population {
           }
         }
       }
+      if(ped.health<=0||ped.model.root.metadata?.ragdollActive)continue;
       const next = p.add(direction.scale(speed * elapsed));
       if (
         !this.world.obstacles.some(
@@ -287,15 +292,28 @@ export class Population {
       ped.model.animate(elapsed, speed);
     }
   }
-  reset() {
-    this.police.reset(this.drivers);
-    this.facility.reset();
+  /** Player recovery clears pursuit, but only an explicit encounter reset revives the world. */
+  reset(revive = true) {
+    this.police.reset(this.drivers,revive);
+    this.facility.reset(revive);
     for (const p of this.pedestrians) {
-      p.health = 100;
       p.panic = 0;
-      p.model.root.rotation.z = 0;
-      p.model.position(p.home);
+      p.report = 0;
+      if(revive){
+        p.health = 100;p.model.dead=false;p.activity="walking";
+        p.model.root.metadata={...p.model.root.metadata,ragdollActive:false,ragdollRecovering:false};
+        p.model.skeleton.returnToRest();p.model.root.rotationQuaternion=null;p.model.root.rotation.z = 0;
+        p.model.position(p.home);p.target=p.home.add(new Vector3(0,0,24));
+      }
     }
+  }
+  serializeCasualties():PopulationCasualties {
+    return {version:1,civilians:this.pedestrians.filter(p=>p.health<=0).slice(0,60).map(p=>snapshotCasualty(p.id,p.model)),guards:this.facility.guards.filter(g=>g.health<=0).map(g=>snapshotCasualty(g.id,g.model)),...this.police.serializeCasualties()};
+  }
+  restoreCasualties(value:unknown):boolean {
+    if(!validateCasualties(value))return false;
+    for(const entry of value.civilians){const p=this.pedestrians.find(p=>p.id===entry.id);if(!p)continue;p.health=0;p.activity="dead";p.panic=0;p.report=0;restoreCorpse(p.model,entry);}
+    this.facility.restoreCasualties(value.guards);this.police.restoreCasualties(value.police,value.nextOfficerId);return true;
   }
   get officers() {
     return [...this.police.officers,...this.facility.guards];

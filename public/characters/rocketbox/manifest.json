@@ -1,0 +1,61 @@
+{
+  "format": "glTF2 GLB with external textures",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2020 Microsoft",
+  "assets": [
+    {
+      "name": "Male_Adult_01",
+      "label": "male",
+      "file": "male.glb",
+      "bytes": 413068,
+      "sha256": "e4d5a208c0d27d03b52221b2b797cd6938516137c07eff5b3add7ad49cc436cb",
+      "meshes": [
+        {
+          "vertices": 4688,
+          "triangles": 7440,
+          "groups": 3,
+          "bones": 80
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6741140666814878,
+          -0.0009263069833067544,
+          -0.14381251200833936
+        ],
+        "max": [
+          0.674114088815143,
+          1.8227523782826722,
+          0.19597118240040182
+        ]
+      }
+    },
+    {
+      "name": "Female_Adult_01",
+      "label": "female",
+      "file": "female.glb",
+      "bytes": 528260,
+      "sha256": "cc6c18a06afb210d8bf780de94733ecc242e1abf0814df87eb370a007809636a",
+      "meshes": [
+        {
+          "vertices": 5436,
+          "triangles": 8732,
+          "groups": 3,
+          "bones": 80
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6086203654407231,
+          -0.004575936083962894,
+          -0.2501525438953574
+        ],
+        "max": [
+          0.6086204120525529,
+          1.7387715616868955,
+          0.12597439660105045
+        ]
+      }
+    }
+  ]
+}
