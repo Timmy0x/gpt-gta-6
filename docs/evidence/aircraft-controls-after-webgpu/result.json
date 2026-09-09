@@ -1,0 +1,5197 @@
+{
+  "origin": "http://127.0.0.1:5179",
+  "backend": "webgpu",
+  "label": "after",
+  "results": [
+    {
+      "kind": "helicopter",
+      "phase": "spawn",
+      "state": {
+        "player": [
+          3,
+          0.9935250000000001,
+          -112
+        ],
+        "vehicle": null,
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0009416444227099419,
+              0.8449848294258118,
+              -112.00041961669922
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Enter Mistral Helicopter",
+        "toast": "Mistral Helicopter spawned at the boulevard landing area. Close the menu, then press E to enter.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "entry",
+      "state": {
+        "player": [
+          0.0015226020477712154,
+          0.8450100421905518,
+          -112.00071716308594
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0015226020477712154,
+            0.8450100421905518,
+            -112.00071716308594
+          ],
+          "health": 100,
+          "speed": 0.001297024924982418,
+          "forwardSpeed": -0.0006300310311412349,
+          "rotation": [
+            0.000018220413731516056,
+            -0.0000021940703544396094,
+            0.00001720943875808781
+          ],
+          "velocity": [
+            0.00004753073153551668,
+            0.0009913202375173569,
+            -0.000026393805455882102
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0015226020477712154,
+              0.8450100421905518,
+              -112.00071716308594
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 0.21925404199999865,
+      "state": {
+        "player": [
+          0.0017694019479677081,
+          0.847867488861084,
+          -112.0007095336914
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0017694019479677081,
+            0.847867488861084,
+            -112.0007095336914
+          ],
+          "health": 100,
+          "speed": 0.00025531643783105636,
+          "forwardSpeed": 0.00007765155066058468,
+          "rotation": [
+            0.00012715724957220264,
+            -0.0000043609884412020395,
+            -0.0004052832180216682
+          ],
+          "velocity": [
+            0.00026185475871898234,
+            -0.06084012985229492,
+            0.00007626795559190214
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0017694019479677081,
+              0.847867488861084,
+              -112.0007095336914
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 0.42275566699999945,
+      "state": {
+        "player": [
+          0.0018297277856618166,
+          0.8533015847206116,
+          -112.00068664550781
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0018297277856618166,
+            0.8533015847206116,
+            -112.00068664550781
+          ],
+          "health": 100,
+          "speed": 0.00027497187635171157,
+          "forwardSpeed": 0.00009469671712913636,
+          "rotation": [
+            0.00019221747099373913,
+            -0.00000801647090403067,
+            -0.00048221525944232096
+          ],
+          "velocity": [
+            0.000143713055877015,
+            0.0009605399682186544,
+            0.00005296173912938684
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0018297277856618166,
+              0.8533015847206116,
+              -112.00068664550781
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 0.6288433339999993,
+      "state": {
+        "player": [
+          0.0019497975008562207,
+          0.8848307132720947,
+          -112.00062561035156
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0019497975008562207,
+            0.8848307132720947,
+            -112.00062561035156
+          ],
+          "health": 100,
+          "speed": 0.001038860706654854,
+          "forwardSpeed": 0.00039938701826889276,
+          "rotation": [
+            0.00022489617435276132,
+            -0.000012595648197906871,
+            -0.000386537009043259
+          ],
+          "velocity": [
+            0.001012385357171297,
+            0.17621798813343048,
+            0.00047397566959261894
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0019497975008562207,
+              0.8848307132720947,
+              -112.00062561035156
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 0.8477953340000004,
+      "state": {
+        "player": [
+          0.0022446108050644398,
+          0.9661566615104675,
+          -112.00045776367188
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0022446108050644398,
+            0.9661566615104675,
+            -112.00045776367188
+          ],
+          "health": 100,
+          "speed": 0.0019311244465002474,
+          "forwardSpeed": 0.000855027185761227,
+          "rotation": [
+            0.00022622275120287837,
+            -0.000016655188959089795,
+            -0.00024688106166801933
+          ],
+          "velocity": [
+            0.0017236375715583563,
+            0.4399968385696411,
+            0.0009891170775517821
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0022446108050644398,
+              0.9661566615104675,
+              -112.00045776367188
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 1.0656858749999991,
+      "state": {
+        "player": [
+          0.0026564267463982105,
+          1.1097263097763062,
+          -112.00019073486328
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0026564267463982105,
+            1.1097263097763062,
+            -112.00019073486328
+          ],
+          "health": 100,
+          "speed": 0.0025310336920665623,
+          "forwardSpeed": 0.001286069907643701,
+          "rotation": [
+            0.0002051793174642261,
+            -0.00001977226235752762,
+            -0.00013074967689786986
+          ],
+          "velocity": [
+            0.0021039163693785667,
+            0.7430105209350586,
+            0.0014696958241984248
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0026564267463982105,
+              1.1097263097763062,
+              -112.00019073486328
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 1.2805201669999988,
+      "state": {
+        "player": [
+          0.003123994916677475,
+          1.3212486505508423,
+          -111.99982452392578
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.003123994916677475,
+            1.3212486505508423,
+            -111.99982452392578
+          ],
+          "health": 100,
+          "speed": 0.002893573375696969,
+          "forwardSpeed": 0.0016604443056701347,
+          "rotation": [
+            0.0001703727513459496,
+            -0.000021975704079636203,
+            -0.00005528482352374481
+          ],
+          "velocity": [
+            0.0022366743069142103,
+            1.0624401569366455,
+            0.0018673307495191693
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.003123994916677475,
+              1.3212486505508423,
+              -111.99982452392578
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 1.4986009589999993,
+      "state": {
+        "player": [
+          0.003604974364861846,
+          1.602287769317627,
+          -111.9993896484375
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.003604974364861846,
+            1.602287769317627,
+            -111.9993896484375
+          ],
+          "health": 100,
+          "speed": 0.0030871102442443345,
+          "forwardSpeed": 0.0019584203243393637,
+          "rotation": [
+            0.0001292748538566944,
+            -0.000023469638461028917,
+            -0.000014526446627851796
+          ],
+          "velocity": [
+            0.0022221605759114027,
+            1.3821016550064087,
+            0.002156540984287858
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.003604974364861846,
+              1.602287769317627,
+              -111.9993896484375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 1.7186393749999989,
+      "state": {
+        "player": [
+          0.00407571904361248,
+          1.9515310525894165,
+          -111.99890899658203
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.00407571904361248,
+            1.9515310525894165,
+            -111.99890899658203
+          ],
+          "health": 100,
+          "speed": 0.0031611818381777233,
+          "forwardSpeed": 0.0021701264625310236,
+          "rotation": [
+            0.00008820467346852219,
+            -0.00002447430337647106,
+            0.000003564669637642549
+          ],
+          "velocity": [
+            0.002136822557076812,
+            1.6910219192504883,
+            0.002331964671611786
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.00407571904361248,
+              1.9515310525894165,
+              -111.99890899658203
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 1.929215791999999,
+      "state": {
+        "player": [
+          0.0045257010497152805,
+          2.3657708168029785,
+          -111.9983901977539
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0045257010497152805,
+            2.3657708168029785,
+            -111.9983901977539
+          ],
+          "health": 100,
+          "speed": 0.003147501531042915,
+          "forwardSpeed": 0.0022950203677106944,
+          "rotation": [
+            0.000051329962204767194,
+            -0.000025162502671335807,
+            0.000009416633420770441
+          ],
+          "velocity": [
+            0.0020266228821128607,
+            1.9821956157684326,
+            0.002402977552264929
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0045257010497152805,
+              2.3657708168029785,
+              -111.9983901977539
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 2.1382665419999993,
+      "state": {
+        "player": [
+          0.004919896367937326,
+          2.8020706176757812,
+          -111.99791717529297
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.004919896367937326,
+            2.8020706176757812,
+            -111.99791717529297
+          ],
+          "health": 100,
+          "speed": 0.0030763209208020804,
+          "forwardSpeed": 0.0023388901877897665,
+          "rotation": [
+            0.00002306153630692635,
+            -0.000025617906961860854,
+            0.000009892135686289601
+          ],
+          "velocity": [
+            0.0019226842559874058,
+            2.2316627502441406,
+            0.0023912389297038317
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.004919896367937326,
+              2.8020706176757812,
+              -111.99791717529297
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 2.3544521669999994,
+      "state": {
+        "player": [
+          0.005324273835867643,
+          3.3284857273101807,
+          -111.99740600585938
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.005324273835867643,
+            3.3284857273101807,
+            -111.99740600585938
+          ],
+          "health": 100,
+          "speed": 0.0029533898693438576,
+          "forwardSpeed": 0.002319686903786404,
+          "rotation": [
+            -2.9232388517488136e-7,
+            -0.00002598417211302657,
+            0.000008574705294244473
+          ],
+          "velocity": [
+            0.001816176576539874,
+            2.479126214981079,
+            0.0023150546476244926
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.005324273835867643,
+              3.3284857273101807,
+              -111.99740600585938
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 2.569873167,
+      "state": {
+        "player": [
+          0.0057065668515861034,
+          3.905721426010132,
+          -111.99691772460938
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0057065668515861034,
+            3.905721426010132,
+            -111.99691772460938
+          ],
+          "health": 100,
+          "speed": 0.0027994592885629303,
+          "forwardSpeed": 0.002245351774659791,
+          "rotation": [
+            -0.000016168599330530376,
+            -0.00002626017176824589,
+            0.0000069985116359904584
+          ],
+          "velocity": [
+            0.0017181080766022205,
+            2.702371120452881,
+            0.002194147789850831
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0057065668515861034,
+              3.905721426010132,
+              -111.99691772460938
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 2.784469292,
+      "state": {
+        "player": [
+          0.006068505812436342,
+          4.528569221496582,
+          -111.9964599609375
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.006068505812436342,
+            4.528569221496582,
+            -111.9964599609375
+          ],
+          "health": 100,
+          "speed": 0.002629705457965175,
+          "forwardSpeed": 0.002131804326082799,
+          "rotation": [
+            -0.00002539615925842647,
+            -0.000026471702043787373,
+            0.000005744711952120027
+          ],
+          "velocity": [
+            0.0016278948169201612,
+            2.901883602142334,
+            0.002048244932666421
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.006068505812436342,
+              4.528569221496582,
+              -111.9964599609375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 2.991924959,
+      "state": {
+        "player": [
+          0.0064116367138922215,
+          5.1920084953308105,
+          -111.99604034423828
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.0064116367138922215,
+            5.1920084953308105,
+            -111.99604034423828
+          ],
+          "health": 100,
+          "speed": 0.0024562446854992244,
+          "forwardSpeed": 0.0019946107311422587,
+          "rotation": [
+            -0.000029368260991534442,
+            -0.000026634964256025422,
+            0.000004887259848511598
+          ],
+          "velocity": [
+            0.0015442433068528771,
+            3.078815221786499,
+            0.0018930584192276
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.0064116367138922215,
+              5.1920084953308105,
+              -111.99604034423828
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 3.2067174589999996,
+      "state": {
+        "player": [
+          0.006712798960506916,
+          5.836355209350586,
+          -111.99567413330078
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.006712798960506916,
+            5.836355209350586,
+            -111.99567413330078
+          ],
+          "health": 100,
+          "speed": 0.0023005966581181292,
+          "forwardSpeed": 0.0018582973799901043,
+          "rotation": [
+            -0.000029507034726240523,
+            -0.000026752432713279295,
+            0.000004367079754014417
+          ],
+          "velocity": [
+            0.0014718370512127876,
+            3.223433494567871,
+            0.001751731033436954
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.006712798960506916,
+              5.836355209350586,
+              -111.99567413330078
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 3.4259284589999988,
+      "state": {
+        "player": [
+          0.007023202255368233,
+          6.564905166625977,
+          -111.99530792236328
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.007023202255368233,
+            6.564905166625977,
+            -111.99530792236328
+          ],
+          "health": 100,
+          "speed": 0.0021422368898004022,
+          "forwardSpeed": 0.0017100525151813807,
+          "rotation": [
+            -0.00002704834796602486,
+            -0.00002685144257933541,
+            0.000003990609712294912
+          ],
+          "velocity": [
+            0.0013978041242808104,
+            3.3614816665649414,
+            0.0016079877968877554
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.007023202255368233,
+              6.564905166625977,
+              -111.99530792236328
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 3.6396703340000003,
+      "state": {
+        "player": [
+          0.007318022195249796,
+          7.321298122406006,
+          -111.99497985839844
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.007318022195249796,
+            7.321298122406006,
+            -111.99497985839844
+          ],
+          "health": 100,
+          "speed": 0.001997701227912296,
+          "forwardSpeed": 0.001569163256285176,
+          "rotation": [
+            -0.000023075329296500978,
+            -0.000026927368928482597,
+            0.000003724170569617888
+          ],
+          "velocity": [
+            0.0013277969555929303,
+            3.4819507598876953,
+            0.0014784805243834853
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.007318022195249796,
+              7.321298122406006,
+              -111.99497985839844
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "takeoff",
+      "second": 3.8559512089999988,
+      "state": {
+        "player": [
+          0.007598091382533312,
+          8.101935386657715,
+          -111.99466705322266
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.007598091382533312,
+            8.101935386657715,
+            -111.99466705322266
+          ],
+          "health": 100,
+          "speed": 0.001868053929380623,
+          "forwardSpeed": 0.001440270293040539,
+          "rotation": [
+            -0.000018368427731129298,
+            -0.00002698536034811251,
+            0.0000035139382836958977
+          ],
+          "velocity": [
+            0.001261436496861279,
+            3.5866568088531494,
+            0.0013651150511577725
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.007598091382533312,
+              8.101935386657715,
+              -111.99466705322266
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 0,
+      "state": {
+        "player": [
+          0.00807954277843237,
+          9.406331062316895,
+          -111.99415588378906
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.00807954277843237,
+            9.406331062316895,
+            -111.99415588378906
+          ],
+          "health": 100,
+          "speed": 0.001682195996930221,
+          "forwardSpeed": 0.0012454817789726142,
+          "rotation": [
+            -0.000010156961770236085,
+            -0.00002705844581503053,
+            0.000003188658720561568
+          ],
+          "velocity": [
+            0.0011526612797752023,
+            2.222316026687622,
+            0.0012162933126091957
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.00807954277843237,
+              9.406331062316895,
+              -111.99415588378906
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 0.2,
+      "state": {
+        "player": [
+          0.008323166519403458,
+          9.764859199523926,
+          -111.993896484375
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.008323166519403458,
+            9.764859199523926,
+            -111.993896484375
+          ],
+          "health": 100,
+          "speed": 0.0016001630243245733,
+          "forwardSpeed": 0.0011670460154587126,
+          "rotation": [
+            -0.000006612350172143997,
+            -0.000027084938673092986,
+            0.0000030288712956183176
+          ],
+          "velocity": [
+            0.0010991619201377034,
+            1.0867646932601929,
+            0.0011545080924406648
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.008323166519403458,
+              9.764859199523926,
+              -111.993896484375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 0.4,
+      "state": {
+        "player": [
+          0.008555429056286812,
+          9.901446342468262,
+          -111.99365234375
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.008555429056286812,
+            9.901446342468262,
+            -111.99365234375
+          ],
+          "health": 100,
+          "speed": 0.0015232876614389016,
+          "forwardSpeed": 0.001102933969814168,
+          "rotation": [
+            -0.000003911516277493625,
+            -0.000027104974092211067,
+            0.0000028770641947265818
+          ],
+          "velocity": [
+            0.0010477083269506693,
+            0.15284274518489838,
+            0.001097894157283008
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.008555429056286812,
+              9.901446342468262,
+              -111.99365234375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 0.6000000000000001,
+      "state": {
+        "player": [
+          0.008677462115883827,
+          9.855515480041504,
+          -111.9935302734375
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.008677462115883827,
+            9.855515480041504,
+            -111.9935302734375
+          ],
+          "health": 100,
+          "speed": 0.0006399681991475266,
+          "forwardSpeed": 0.00046176808564999284,
+          "rotation": [
+            -0.0000020041718660157832,
+            -0.000027118444272706535,
+            0.0000025475136492238056
+          ],
+          "velocity": [
+            0.000440041912952438,
+            -0.6138109564781189,
+            0.00046115819714032114
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.008677462115883827,
+              9.855515480041504,
+              -111.9935302734375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 0.8,
+      "state": {
+        "player": [
+          0.008770265616476536,
+          9.659805297851562,
+          -111.9934310913086
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.008770265616476536,
+            9.659805297851562,
+            -111.9934310913086
+          ],
+          "health": 100,
+          "speed": 0.0006083069228999387,
+          "forwardSpeed": 0.0004397982514836427,
+          "rotation": [
+            -6.947395357887823e-7,
+            -0.000027126407770122766,
+            0.0000020026128464276105
+          ],
+          "velocity": [
+            0.000417596340412274,
+            -1.2451647520065308,
+            0.00043914318666793406
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.008770265616476536,
+              9.659805297851562,
+              -111.9934310913086
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 1,
+      "state": {
+        "player": [
+          0.00885837897658348,
+          9.340751647949219,
+          -111.99333953857422
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.00885837897658348,
+            9.340751647949219,
+            -111.99333953857422
+          ],
+          "health": 100,
+          "speed": 0.0005795363234137711,
+          "forwardSpeed": 0.0004211017340861697,
+          "rotation": [
+            1.0619176936849922e-7,
+            -0.0000271325424436144,
+            0.0000015466027125642032
+          ],
+          "velocity": [
+            0.000396710354834795,
+            -1.7640036344528198,
+            0.0004195740621071309
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.00885837897658348,
+              9.340751647949219,
+              -111.99333953857422
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 1.2000000000000002,
+      "state": {
+        "player": [
+          0.008942115120589733,
+          8.920344352722168,
+          -111.99324798583984
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.008942115120589733,
+            8.920344352722168,
+            -111.99324798583984
+          ],
+          "health": 100,
+          "speed": 0.0005530681374023295,
+          "forwardSpeed": 0.0004040787597948419,
+          "rotation": [
+            4.69403462941749e-7,
+            -0.00002713792280530714,
+            0.000001240213234142362
+          ],
+          "velocity": [
+            0.000377218791982159,
+            -2.1903061866760254,
+            0.0004017788451164961
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.008942115120589733,
+              8.920344352722168,
+              -111.99324798583984
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 1.4000000000000001,
+      "state": {
+        "player": [
+          0.009015767835080624,
+          8.45801067352295,
+          -111.99317169189453
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009015767835080624,
+            8.45801067352295,
+            -111.99317169189453
+          ],
+          "health": 100,
+          "speed": 0.000530120064631532,
+          "forwardSpeed": 0.00038887952890435175,
+          "rotation": [
+            5.131732552513798e-7,
+            -0.000027142322958367693,
+            0.0000010654725589195218
+          ],
+          "velocity": [
+            0.00036027157329954207,
+            -2.5159621238708496,
+            0.00038634432712569833
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009015767835080624,
+              8.45801067352295,
+              -111.99317169189453
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 1.6,
+      "state": {
+        "player": [
+          0.009091836400330067,
+          7.890726566314697,
+          -111.99308776855469
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009091836400330067,
+            7.890726566314697,
+            -111.99308776855469
+          ],
+          "health": 100,
+          "speed": 0.0005064345795115238,
+          "forwardSpeed": 0.000372639678649151,
+          "rotation": [
+            3.967563879202516e-7,
+            -0.00002714641031219591,
+            9.514493661740707e-7
+          ],
+          "velocity": [
+            0.0003428723430261016,
+            -2.8080294132232666,
+            0.0003702897229231894
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009091836400330067,
+              7.890726566314697,
+              -111.99308776855469
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 1.8,
+      "state": {
+        "player": [
+          0.009164231829345226,
+          7.266397953033447,
+          -111.99301147460938
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009164231829345226,
+            7.266397953033447,
+            -111.99301147460938
+          ],
+          "health": 100,
+          "speed": 0.00048368113702141924,
+          "forwardSpeed": 0.00035644880332679797,
+          "rotation": [
+            1.8068856798796666e-7,
+            -0.000027149751904879163,
+            8.810435957370311e-7
+          ],
+          "velocity": [
+            0.0003263487305957824,
+            -3.0479226112365723,
+            0.0003546625084709376
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009164231829345226,
+              7.266397953033447,
+              -111.99301147460938
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 2,
+      "state": {
+        "player": [
+          0.009233136661350727,
+          6.595218181610107,
+          -111.99293518066406
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009233136661350727,
+            6.595218181610107,
+            -111.99293518066406
+          ],
+          "health": 100,
+          "speed": 0.0004616825748913827,
+          "forwardSpeed": 0.00034031104793155373,
+          "rotation": [
+            -7.076923081379671e-8,
+            -0.000027152385910563363,
+            8.317483037764184e-7
+          ],
+          "velocity": [
+            0.0003106194199062884,
+            -3.2449469566345215,
+            0.00033931227517314255
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009233136661350727,
+              6.595218181610107,
+              -111.99293518066406
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 2.2,
+      "state": {
+        "player": [
+          0.00929871853441,
+          5.885560035705566,
+          -111.99286651611328
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.00929871853441,
+            5.885560035705566,
+            -111.99286651611328
+          ],
+          "health": 100,
+          "speed": 0.000440354682613505,
+          "forwardSpeed": 0.0003243102836520317,
+          "rotation": [
+            -3.1943292533352215e-7,
+            -0.000027154399628815867,
+            7.914916464751526e-7
+          ],
+          "velocity": [
+            0.0002956322568934411,
+            -3.406747817993164,
+            0.00032418372575193644
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.00929871853441,
+              5.885560035705566,
+              -111.99286651611328
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 2.4000000000000004,
+      "state": {
+        "player": [
+          0.009356441907584667,
+          5.202311038970947,
+          -111.9927978515625
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009356441907584667,
+            5.202311038970947,
+            -111.9927978515625
+          ],
+          "health": 100,
+          "speed": 0.00042128184986607413,
+          "forwardSpeed": 0.0003100874384337092,
+          "rotation": [
+            -4.4236799334304933e-7,
+            -0.00002715581302473532,
+            7.575928103878765e-7
+          ],
+          "velocity": [
+            0.00028242386179044843,
+            -3.530301332473755,
+            0.00031048853998072445
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009356441907584667,
+              5.202311038970947,
+              -111.9927978515625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 2.6,
+      "state": {
+        "player": [
+          0.009416066110134125,
+          4.436927795410156,
+          -111.99273681640625
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009416066110134125,
+            4.436927795410156,
+            -111.99273681640625
+          ],
+          "health": 100,
+          "speed": 0.0004013435194134969,
+          "forwardSpeed": 0.0002950902715533955,
+          "rotation": [
+            -5.699596623552324e-7,
+            -0.000027156962664364584,
+            7.224856602312317e-7
+          ],
+          "velocity": [
+            0.00026876453193835914,
+            -3.64107084274292,
+            0.0002960372075904161
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009416066110134125,
+              4.436927795410156,
+              -111.99273681640625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 2.8000000000000003,
+      "state": {
+        "player": [
+          0.009472806006669998,
+          3.6499133110046387,
+          -111.99266815185547
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009472806006669998,
+            3.6499133110046387,
+            -111.99266815185547
+          ],
+          "health": 100,
+          "speed": 0.00038214639080168283,
+          "forwardSpeed": 0.0002806763840995245,
+          "rotation": [
+            -6.38877994897663e-7,
+            -0.00002715780123250001,
+            6.884393779274351e-7
+          ],
+          "velocity": [
+            0.0002557526167947799,
+            -3.732029676437378,
+            0.0002820024383254349
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009472806006669998,
+              3.6499133110046387,
+              -111.99266815185547
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 3,
+      "state": {
+        "player": [
+          0.009530840441584587,
+          2.7825891971588135,
+          -111.99260711669922
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009530840441584587,
+            2.7825891971588135,
+            -111.99260711669922
+          ],
+          "health": 100,
+          "speed": 0.00036239316737945315,
+          "forwardSpeed": 0.00026604442805016,
+          "rotation": [
+            -6.500543469718847e-7,
+            -0.00002715843787111574,
+            6.529884496033687e-7
+          ],
+          "velocity": [
+            0.0002424329868517816,
+            -3.811880111694336,
+            0.00026750858523882926
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009530840441584587,
+              2.7825891971588135,
+              -111.99260711669922
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 3.2,
+      "state": {
+        "player": [
+          0.00957817118614912,
+          2.025773763656616,
+          -111.9925537109375
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.00957817118614912,
+            2.025773763656616,
+            -111.9925537109375
+          ],
+          "health": 100,
+          "speed": 0.000346214140952542,
+          "forwardSpeed": 0.00025401798720842817,
+          "rotation": [
+            -6.612306143334452e-7,
+            -0.000027158821671873116,
+            6.237832486924243e-7
+          ],
+          "velocity": [
+            0.000231563433771953,
+            -3.868044376373291,
+            0.00025560089852660894
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.00957817118614912,
+              2.025773763656616,
+              -111.9925537109375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 3.4000000000000004,
+      "state": {
+        "player": [
+          0.009627054445445538,
+          1.1944369077682495,
+          -111.99250030517578
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.009627054445445538,
+            1.1944369077682495,
+            -111.99250030517578
+          ],
+          "health": 100,
+          "speed": 0.00032946483035698696,
+          "forwardSpeed": 0.0002417941617511185,
+          "rotation": [
+            -6.053516709469069e-7,
+            -0.000027159114502573766,
+            5.935030239323178e-7
+          ],
+          "velocity": [
+            0.00022033241111785173,
+            -3.9183943271636963,
+            0.00024326302809640765
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.009627054445445538,
+              1.1944369077682495,
+              -111.99250030517578
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "landing",
+      "second": 3.6,
+      "state": {
+        "player": [
+          0.008069442585110664,
+          0.8572427034378052,
+          -111.99541473388672
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.008069442585110664,
+            0.8572427034378052,
+            -111.99541473388672
+          ],
+          "health": 96.42239175430572,
+          "speed": 0.022060008816749167,
+          "forwardSpeed": -0.01819870552841819,
+          "rotation": [
+            -0.003608260989061387,
+            -0.0003254997603197429,
+            0.0013120471958797005
+          ],
+          "velocity": [
+            -0.012174928560853004,
+            -0.1415611356496811,
+            -0.01717292331159115
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": -1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.008069442585110664,
+              0.8572427034378052,
+              -111.99541473388672
+            ],
+            "health": 96.42239175430572
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "toast": "Mistral Helicopter · SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "spawn",
+      "state": {
+        "player": [
+          185.49998983272107,
+          1.70192901019399,
+          -565.0019111989666
+        ],
+        "vehicle": null,
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.50265502929688,
+              0.5051456093788147,
+              -565.046630859375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Enter Pelican Trainer",
+        "toast": "Pelican Trainer spawned at the clear south beach launch area. Close the menu, then press E to enter.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "entry",
+      "state": {
+        "player": [
+          182.50030517578125,
+          0.5042397975921631,
+          -565.0658569335938
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.50030517578125,
+            0.5042397975921631,
+            -565.0658569335938
+          ],
+          "health": 100,
+          "speed": 0.009062872086509962,
+          "forwardSpeed": -0.011448392864410954,
+          "rotation": [
+            -0.05006769632987663,
+            -0.0004501946389138601,
+            0.0001598787647191714
+          ],
+          "velocity": [
+            0.001726264483295381,
+            -0.06246908754110336,
+            -0.013996223919093609
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.50030517578125,
+              0.5042397975921631,
+              -565.0658569335938
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 6.362419416999997,
+      "state": {
+        "player": [
+          182.46673583984375,
+          0.647419810295105,
+          -476.1131286621094
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.46673583984375,
+            0.647419810295105,
+            -476.1131286621094
+          ],
+          "health": 100,
+          "speed": 26.12161433794698,
+          "forwardSpeed": 26.10020799013066,
+          "rotation": [
+            -0.0555923770605052,
+            -0.00037006471451549335,
+            -3.2959360800569994e-7
+          ],
+          "velocity": [
+            -0.009685110300779343,
+            0.3162473440170288,
+            26.16857147216797
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.46673583984375,
+              0.647419810295105,
+              -476.1131286621094
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 6.584414375000001,
+      "state": {
+        "player": [
+          182.46461486816406,
+          0.7300835251808167,
+          -470.371826171875
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.46461486816406,
+            0.7300835251808167,
+            -470.371826171875
+          ],
+          "health": 100,
+          "speed": 26.787992404290797,
+          "forwardSpeed": 26.573653101088645,
+          "rotation": [
+            -0.13487925994677114,
+            -0.0003700012835342883,
+            -4.479075229955123e-7
+          ],
+          "velocity": [
+            -0.009931202977895737,
+            -0.025393424555659294,
+            26.83692741394043
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.46461486816406,
+              0.7300835251808167,
+              -470.371826171875
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 6.7876058750000015,
+      "state": {
+        "player": [
+          182.46238708496094,
+          0.6984459757804871,
+          -464.50347900390625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.46238708496094,
+            0.6984459757804871,
+            -464.50347900390625
+          ],
+          "health": 100,
+          "speed": 27.21158986961888,
+          "forwardSpeed": 26.68742446938737,
+          "rotation": [
+            -0.18751906455421585,
+            -0.0006596817694560744,
+            0.00017173044652488045
+          ],
+          "velocity": [
+            -0.01181005872786045,
+            -0.029725590720772743,
+            27.20077896118164
+          ],
+          "grounded": 1,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.46238708496094,
+              0.6984459757804871,
+              -464.50347900390625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 6.998492041999998,
+      "state": {
+        "player": [
+          182.45999145507812,
+          0.705365777015686,
+          -459.0206604003906
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.45999145507812,
+            0.705365777015686,
+            -459.0206604003906
+          ],
+          "health": 100,
+          "speed": 27.54804838231581,
+          "forwardSpeed": 27.11540137667272,
+          "rotation": [
+            -0.17133557751884834,
+            -0.0013652011120346998,
+            0.003985437280464641
+          ],
+          "velocity": [
+            -0.011696488596498966,
+            -0.17292678356170654,
+            27.58418083190918
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.45999145507812,
+              0.705365777015686,
+              -459.0206604003906
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 7.215573875000002,
+      "state": {
+        "player": [
+          182.45709228515625,
+          0.6954547166824341,
+          -452.99456787109375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.45709228515625,
+            0.6954547166824341,
+            -452.99456787109375
+          ],
+          "health": 100,
+          "speed": 27.95265199831776,
+          "forwardSpeed": 27.575558119783018,
+          "rotation": [
+            -0.15976985879664204,
+            -0.0019149733164516953,
+            0.0008046409013778935
+          ],
+          "velocity": [
+            -0.014793110080063343,
+            -0.1492462158203125,
+            27.99059295654297
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.45709228515625,
+              0.6954547166824341,
+              -452.99456787109375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 7.432601374999998,
+      "state": {
+        "player": [
+          182.4529571533203,
+          0.7044582366943359,
+          -446.8813781738281
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.4529571533203,
+            0.7044582366943359,
+            -446.8813781738281
+          ],
+          "health": 100,
+          "speed": 28.378565596186913,
+          "forwardSpeed": 28.01475086743074,
+          "rotation": [
+            -0.15668361180537588,
+            -0.0023229312107651318,
+            0.0032616434504028676
+          ],
+          "velocity": [
+            -0.019671563059091568,
+            -0.1455717235803604,
+            28.416194915771484
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.4529571533203,
+              0.7044582366943359,
+              -446.8813781738281
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 7.638437334000002,
+      "state": {
+        "player": [
+          182.44784545898438,
+          0.7015582919120789,
+          -440.67620849609375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.44784545898438,
+            0.7015582919120789,
+            -440.67620849609375
+          ],
+          "health": 100,
+          "speed": 28.776943206130234,
+          "forwardSpeed": 28.390533748077164,
+          "rotation": [
+            -0.16324063303785927,
+            -0.002594309012186892,
+            0.001426847284565112
+          ],
+          "velocity": [
+            -0.025933081284165382,
+            -0.06760075688362122,
+            28.812013626098633
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.44784545898438,
+              0.7015582919120789,
+              -440.67620849609375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 7.840951208999999,
+      "state": {
+        "player": [
+          182.44261169433594,
+          0.7046580910682678,
+          -434.87347412109375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.44261169433594,
+            0.7046580910682678,
+            -434.87347412109375
+          ],
+          "health": 100,
+          "speed": 29.13871278859799,
+          "forwardSpeed": 28.699279827963526,
+          "rotation": [
+            -0.17154286075193972,
+            -0.002728598705353671,
+            -0.005800392652045249
+          ],
+          "velocity": [
+            -0.03011462651193142,
+            0.11327092349529266,
+            29.129955291748047
+          ],
+          "grounded": 1,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.44261169433594,
+              0.7046580910682678,
+              -434.87347412109375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 8.058165208999998,
+      "state": {
+        "player": [
+          182.43576049804688,
+          0.7183095216751099,
+          -428.51226806640625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.43576049804688,
+            0.7183095216751099,
+            -428.51226806640625
+          ],
+          "health": 100,
+          "speed": 29.494032050374216,
+          "forwardSpeed": 29.011251617025252,
+          "rotation": [
+            -0.1797489828140036,
+            -0.0028500387408768855,
+            0.0016193171366018287
+          ],
+          "velocity": [
+            -0.028528228402137756,
+            -0.07234393060207367,
+            29.52206039428711
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.43576049804688,
+              0.7183095216751099,
+              -428.51226806640625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 8.266854833999998,
+      "state": {
+        "player": [
+          182.4289093017578,
+          0.7074258327484131,
+          -422.5704650878906
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.4289093017578,
+            0.7074258327484131,
+            -422.5704650878906
+          ],
+          "health": 100,
+          "speed": 29.81002835513757,
+          "forwardSpeed": 29.273037950309917,
+          "rotation": [
+            -0.18588863014896106,
+            -0.0029380210313979527,
+            0.0056157908673472555
+          ],
+          "velocity": [
+            -0.03652425482869148,
+            -0.13860204815864563,
+            29.834636688232422
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.4289093017578,
+              0.7074258327484131,
+              -422.5704650878906
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 8.484430333999997,
+      "state": {
+        "player": [
+          182.4210205078125,
+          0.7211686968803406,
+          -416.0722961425781
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.4210205078125,
+            0.7211686968803406,
+            -416.0722961425781
+          ],
+          "health": 100,
+          "speed": 30.08754967436711,
+          "forwardSpeed": 29.583710951626067,
+          "rotation": [
+            -0.18415926913822656,
+            -0.0029431570815599403,
+            -0.007923910587270029
+          ],
+          "velocity": [
+            -0.04231881722807884,
+            0.029596799984574318,
+            30.1122989654541
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.4210205078125,
+              0.7211686968803406,
+              -416.0722961425781
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 8.700188958999998,
+      "state": {
+        "player": [
+          182.41522216796875,
+          0.7390098571777344,
+          -408.9989929199219
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.41522216796875,
+            0.7390098571777344,
+            -408.9989929199219
+          ],
+          "health": 100,
+          "speed": 30.429006151370587,
+          "forwardSpeed": 29.923117806950142,
+          "rotation": [
+            -0.18286016738092184,
+            -0.0030234694019331196,
+            -0.019719008813958612
+          ],
+          "velocity": [
+            -0.015265699476003647,
+            0.00884150993078947,
+            30.45286750793457
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.41522216796875,
+              0.7390098571777344,
+              -408.9989929199219
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 8.911668958999995,
+      "state": {
+        "player": [
+          182.41668701171875,
+          0.7542158365249634,
+          -402.8743896484375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.41668701171875,
+            0.7542158365249634,
+            -402.8743896484375
+          ],
+          "health": 100,
+          "speed": 30.709589472002925,
+          "forwardSpeed": 30.199155728946078,
+          "rotation": [
+            -0.18335143113847355,
+            -0.00309713676372558,
+            -0.025015445679133504
+          ],
+          "velocity": [
+            0.023036981001496315,
+            0.02474590577185154,
+            30.732358932495117
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.41668701171875,
+              0.7542158365249634,
+              -402.8743896484375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 9.120257791999997,
+      "state": {
+        "player": [
+          182.42764282226562,
+          0.7783522009849548,
+          -396.1781921386719
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.42764282226562,
+            0.7783522009849548,
+            -396.1781921386719
+          ],
+          "health": 100,
+          "speed": 30.997859681096646,
+          "forwardSpeed": 30.48251793716557,
+          "rotation": [
+            -0.18503222136424144,
+            -0.003150305614333062,
+            -0.02771427712759147
+          ],
+          "velocity": [
+            0.07264431565999985,
+            0.07767399400472641,
+            31.019224166870117
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.42764282226562,
+              0.7783522009849548,
+              -396.1781921386719
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 9.327725709,
+      "state": {
+        "player": [
+          182.44754028320312,
+          0.8143041133880615,
+          -389.9437255859375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.44754028320312,
+            0.8143041133880615,
+            -389.9437255859375
+          ],
+          "health": 100,
+          "speed": 31.248216516205392,
+          "forwardSpeed": 30.72985607941899,
+          "rotation": [
+            -0.18734324029004912,
+            -0.0031695242315446515,
+            -0.028477496532689377
+          ],
+          "velocity": [
+            0.1216953843832016,
+            0.157586470246315,
+            31.26814842224121
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.44754028320312,
+              0.8143041133880615,
+              -389.9437255859375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 9.544028333999995,
+      "state": {
+        "player": [
+          182.4801788330078,
+          0.8748278021812439,
+          -383.1355895996094
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.4801788330078,
+            0.8748278021812439,
+            -383.1355895996094
+          ],
+          "health": 100,
+          "speed": 31.501724477952227,
+          "forwardSpeed": 30.981951073903684,
+          "rotation": [
+            -0.19057983574202314,
+            -0.0031572106777361404,
+            -0.0281869111891417
+          ],
+          "velocity": [
+            0.1753787100315094,
+            0.27478545904159546,
+            31.519947052001953
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.4801788330078,
+              0.8748278021812439,
+              -383.1355895996094
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 9.749571917,
+      "state": {
+        "player": [
+          182.5204620361328,
+          0.9561492204666138,
+          -376.8046569824219
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.5204620361328,
+            0.9561492204666138,
+            -376.8046569824219
+          ],
+          "health": 100,
+          "speed": 31.718645766499495,
+          "forwardSpeed": 31.198831882327596,
+          "rotation": [
+            -0.19428911221058817,
+            -0.0031155160655756374,
+            -0.027312484383762218
+          ],
+          "velocity": [
+            0.22378244996070862,
+            0.4088689088821411,
+            31.73516082763672
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.5204620361328,
+              0.9561492204666138,
+              -376.8046569824219
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 9.959637334,
+      "state": {
+        "player": [
+          182.57473754882812,
+          1.077514410018921,
+          -369.89990234375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.57473754882812,
+            1.077514410018921,
+            -369.89990234375
+          ],
+          "health": 100,
+          "speed": 31.93398485202399,
+          "forwardSpeed": 31.415121010051468,
+          "rotation": [
+            -0.199140690941895,
+            -0.003039911271738738,
+            -0.026004865779249264
+          ],
+          "velocity": [
+            0.2738892436027527,
+            0.5802415609359741,
+            31.948488235473633
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.57473754882812,
+              1.077514410018921,
+              -369.89990234375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 10.178039833999996,
+      "state": {
+        "player": [
+          182.6395263671875,
+          1.2390174865722656,
+          -362.9515075683594
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.6395263671875,
+            1.2390174865722656,
+            -362.9515075683594
+          ],
+          "health": 100,
+          "speed": 32.12743430412689,
+          "forwardSpeed": 31.61069333122061,
+          "rotation": [
+            -0.20483849491125186,
+            -0.002937999415936302,
+            -0.02451218417330385
+          ],
+          "velocity": [
+            0.32095056772232056,
+            0.7770811319351196,
+            32.1397590637207
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.6395263671875,
+              1.2390174865722656,
+              -362.9515075683594
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 10.388206083999998,
+      "state": {
+        "player": [
+          182.714111328125,
+          1.445959210395813,
+          -355.96441650390625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.714111328125,
+            1.445959210395813,
+            -355.96441650390625
+          ],
+          "health": 100,
+          "speed": 32.29758486676398,
+          "forwardSpeed": 31.784688601851773,
+          "rotation": [
+            -0.21129416659800063,
+            -0.002816870493155268,
+            -0.022952642153489616
+          ],
+          "velocity": [
+            0.3646451234817505,
+            0.9974410533905029,
+            32.307621002197266
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.714111328125,
+              1.445959210395813,
+              -355.96441650390625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 10.609595416999996,
+      "state": {
+        "player": [
+          182.79776000976562,
+          1.703168272972107,
+          -348.94384765625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.79776000976562,
+            1.703168272972107,
+            -348.94384765625
+          ],
+          "health": 100,
+          "speed": 32.44349483373274,
+          "forwardSpeed": 31.936804843627755,
+          "rotation": [
+            -0.21839460722684612,
+            -0.0026835395044701818,
+            -0.02139528659102686
+          ],
+          "velocity": [
+            0.40484532713890076,
+            1.238924264907837,
+            32.451175689697266
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.79776000976562,
+              1.703168272972107,
+              -348.94384765625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 10.827144416999996,
+      "state": {
+        "player": [
+          182.8897247314453,
+          2.0149052143096924,
+          -341.8951110839844
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.8897247314453,
+            2.0149052143096924,
+            -341.8951110839844
+          ],
+          "health": 100,
+          "speed": 32.564591138385886,
+          "forwardSpeed": 32.0669618806597,
+          "rotation": [
+            -0.2260378694939229,
+            -0.002543495011627835,
+            -0.019880730988514183
+          ],
+          "velocity": [
+            0.4415426254272461,
+            1.4987518787384033,
+            32.56986999511719
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.8897247314453,
+              2.0149052143096924,
+              -341.8951110839844
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 11.035553124999998,
+      "state": {
+        "player": [
+          182.98924255371094,
+          2.384805202484131,
+          -334.8236083984375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            182.98924255371094,
+            2.384805202484131,
+            -334.8236083984375
+          ],
+          "health": 100,
+          "speed": 32.66047861406713,
+          "forwardSpeed": 32.175056913680656,
+          "rotation": [
+            -0.23414450020621938,
+            -0.0024006859948665677,
+            -0.01843184296688152
+          ],
+          "velocity": [
+            0.4748057425022125,
+            1.7739779949188232,
+            32.663352966308594
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              182.98924255371094,
+              2.384805202484131,
+              -334.8236083984375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 11.239914417,
+      "state": {
+        "player": [
+          183.08718872070312,
+          2.7804746627807617,
+          -328.28057861328125
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.08718872070312,
+            2.7804746627807617,
+            -328.28057861328125
+          ],
+          "health": 100,
+          "speed": 32.726588244245164,
+          "forwardSpeed": 32.25534927920938,
+          "rotation": [
+            -0.2419832244872168,
+            -0.002269074403871269,
+            -0.01716203938447677
+          ],
+          "velocity": [
+            0.5025635957717896,
+            2.039151906967163,
+            32.727272033691406
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.08718872070312,
+              2.7804746627807617,
+              -328.28057861328125
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 11.452747959,
+      "state": {
+        "player": [
+          183.19921875,
+          3.2700963020324707,
+          -321.1806945800781
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.19921875,
+            3.2700963020324707,
+            -321.1806945800781
+          ],
+          "health": 100,
+          "speed": 32.77402249053904,
+          "forwardSpeed": 32.321371122455055,
+          "rotation": [
+            -0.2508034905600026,
+            -0.0021290751359635206,
+            -0.015863166115611317
+          ],
+          "velocity": [
+            0.5295773148536682,
+            2.335780143737793,
+            32.7723503112793
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.19921875,
+              3.2700963020324707,
+              -321.1806945800781
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 11.667021584000002,
+      "state": {
+        "player": [
+          183.31675720214844,
+          3.8248772621154785,
+          -314.0739440917969
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.31675720214844,
+            3.8248772621154785,
+            -314.0739440917969
+          ],
+          "health": 100,
+          "speed": 32.796589160699696,
+          "forwardSpeed": 32.36592473047327,
+          "rotation": [
+            -0.25989970675634844,
+            -0.001993654944375376,
+            -0.014644668982883741
+          ],
+          "velocity": [
+            0.5535669922828674,
+            2.6394124031066895,
+            32.792633056640625
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.31675720214844,
+              3.8248772621154785,
+              -314.0739440917969
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 11.884138417000003,
+      "state": {
+        "player": [
+          183.4391632080078,
+          4.446014881134033,
+          -306.9656677246094
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.4391632080078,
+            4.446014881134033,
+            -306.9656677246094
+          ],
+          "health": 100,
+          "speed": 32.79475453750628,
+          "forwardSpeed": 32.38946839810269,
+          "rotation": [
+            -0.26920330013519606,
+            -0.0018641688874547417,
+            -0.013505378128051646
+          ],
+          "velocity": [
+            0.5747002363204956,
+            2.9472906589508057,
+            32.78858947753906
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.4391632080078,
+              4.446014881134033,
+              -306.9656677246094
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 12.090167042000001,
+      "state": {
+        "player": [
+          183.55596923828125,
+          5.078802585601807,
+          -300.40728759765625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.55596923828125,
+            5.078802585601807,
+            -300.40728759765625
+          ],
+          "health": 100,
+          "speed": 32.772013078322026,
+          "forwardSpeed": 32.39309777382786,
+          "rotation": [
+            -0.27791433931479914,
+            -0.0017508572750360247,
+            -0.012521346228835167
+          ],
+          "velocity": [
+            0.5918197631835938,
+            3.2329232692718506,
+            32.763885498046875
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.55596923828125,
+              5.078802585601807,
+              -300.40728759765625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 12.297995292,
+      "state": {
+        "player": [
+          183.67596435546875,
+          5.768693447113037,
+          -293.85601806640625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.67596435546875,
+            5.768693447113037,
+            -293.85601806640625
+          ],
+          "health": 100,
+          "speed": 32.729789430460414,
+          "forwardSpeed": 32.37994107290484,
+          "rotation": [
+            -0.28668888003475135,
+            -0.0016441545486355416,
+            -0.011598974554766175
+          ],
+          "velocity": [
+            0.6067837476730347,
+            3.5178117752075195,
+            32.71979522705078
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.67596435546875,
+              5.768693447113037,
+              -293.85601806640625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 12.51373575,
+      "state": {
+        "player": [
+          183.80908203125,
+          6.58008337020874,
+          -286.7711181640625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.80908203125,
+            6.58008337020874,
+            -286.7711181640625
+          ],
+          "health": 100,
+          "speed": 32.66299173891717,
+          "forwardSpeed": 32.34744576163174,
+          "rotation": [
+            -0.29620828046977465,
+            -0.0015365331463073045,
+            -0.010665096272601246
+          ],
+          "velocity": [
+            0.6207144260406494,
+            3.823293685913086,
+            32.651084899902344
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.80908203125,
+              6.58008337020874,
+              -286.7711181640625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 12.716515833999997,
+      "state": {
+        "player": [
+          183.94496154785156,
+          7.457080364227295,
+          -279.70355224609375
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            183.94496154785156,
+            7.457080364227295,
+            -279.70355224609375
+          ],
+          "health": 100,
+          "speed": 32.575539667320854,
+          "forwardSpeed": 32.29689766430068,
+          "rotation": [
+            -0.30568343270537346,
+            -0.0014374205073936917,
+            -0.009795258110943963
+          ],
+          "velocity": [
+            0.6324295401573181,
+            4.123185634613037,
+            32.56186294555664
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              183.94496154785156,
+              7.457080364227295,
+              -279.70355224609375
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "takeoff",
+      "second": 12.930098249999995,
+      "state": {
+        "player": [
+          184.07244873046875,
+          8.323582649230957,
+          -273.19873046875
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            184.07244873046875,
+            8.323582649230957,
+            -273.19873046875
+          ],
+          "health": 100,
+          "speed": 32.47763817050504,
+          "forwardSpeed": 32.235031310350706,
+          "rotation": [
+            -0.3143409613153355,
+            -0.0013534786793312108,
+            -0.009045776661194679
+          ],
+          "velocity": [
+            0.641414225101471,
+            4.393120765686035,
+            32.46243667602539
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              184.07244873046875,
+              8.323582649230957,
+              -273.19873046875
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 0,
+      "state": {
+        "player": [
+          184.34304809570312,
+          10.2326078414917,
+          -259.8865051269531
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            184.34304809570312,
+            10.2326078414917,
+            -259.8865051269531
+          ],
+          "health": 100,
+          "speed": 31.06721029352301,
+          "forwardSpeed": 30.833865512859795,
+          "rotation": [
+            -0.3286367481417413,
+            -0.0012306826227022282,
+            -0.0076256954455462015
+          ],
+          "velocity": [
+            0.655998945236206,
+            4.418118476867676,
+            30.96883201599121
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              184.34304809570312,
+              10.2326078414917,
+              -259.8865051269531
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 0.2,
+      "state": {
+        "player": [
+          184.4747772216797,
+          11.103124618530273,
+          -253.80833435058594
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            184.4747772216797,
+            11.103124618530273,
+            -253.80833435058594
+          ],
+          "health": 100,
+          "speed": 29.978086501527304,
+          "forwardSpeed": 29.662814890833808,
+          "rotation": [
+            -0.33923490957191565,
+            -0.001149394627741862,
+            -0.00702195631809708
+          ],
+          "velocity": [
+            0.6604259610176086,
+            4.172478199005127,
+            29.88083267211914
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              184.4747772216797,
+              11.103124618530273,
+              -253.80833435058594
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 0.4,
+      "state": {
+        "player": [
+          184.61825561523438,
+          11.982154846191406,
+          -247.4659881591797
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            184.61825561523438,
+            11.982154846191406,
+            -247.4659881591797
+          ],
+          "health": 100,
+          "speed": 28.824410665096707,
+          "forwardSpeed": 28.42534067991637,
+          "rotation": [
+            -0.3445940127786941,
+            -0.0011114761511850204,
+            -0.006396934256911394
+          ],
+          "velocity": [
+            0.6632673144340515,
+            3.827716112136841,
+            28.729904174804688
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              184.61825561523438,
+              11.982154846191406,
+              -247.4659881591797
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 0.6000000000000001,
+      "state": {
+        "player": [
+          184.7621307373047,
+          12.775589942932129,
+          -241.36578369140625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            184.7621307373047,
+            12.775589942932129,
+            -241.36578369140625
+          ],
+          "health": 100,
+          "speed": 27.727357087235525,
+          "forwardSpeed": 27.275671780906766,
+          "rotation": [
+            -0.33871399423818976,
+            -0.0011495182229717892,
+            -0.005791079423412657
+          ],
+          "velocity": [
+            0.6642184853553772,
+            3.3840830326080322,
+            27.63827133178711
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              184.7621307373047,
+              12.775589942932129,
+              -241.36578369140625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 0.8,
+      "state": {
+        "player": [
+          184.89495849609375,
+          13.412223815917969,
+          -235.93576049804688
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            184.89495849609375,
+            13.412223815917969,
+            -235.93576049804688
+          ],
+          "health": 100,
+          "speed": 26.79021281256723,
+          "forwardSpeed": 26.308855202120718,
+          "rotation": [
+            -0.3242093143043199,
+            -0.001234346602261965,
+            -0.005254402121237706
+          ],
+          "velocity": [
+            0.6636107563972473,
+            2.8781795501708984,
+            26.707548141479492
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              184.89495849609375,
+              13.412223815917969,
+              -235.93576049804688
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 1,
+      "state": {
+        "player": [
+          185.02752685546875,
+          13.938128471374512,
+          -230.6825714111328
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.02752685546875,
+            13.938128471374512,
+            -230.6825714111328
+          ],
+          "health": 100,
+          "speed": 25.93473118802038,
+          "forwardSpeed": 25.42616890055087,
+          "rotation": [
+            -0.30398988343141975,
+            -0.0013408188823890417,
+            -0.004748164235229619
+          ],
+          "velocity": [
+            0.6618033051490784,
+            2.2849740982055664,
+            25.858613967895508
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.02752685546875,
+              13.938128471374512,
+              -230.6825714111328
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 1.2000000000000002,
+      "state": {
+        "player": [
+          185.1596221923828,
+          14.337152481079102,
+          -225.59039306640625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.1596221923828,
+            14.337152481079102,
+            -225.59039306640625
+          ],
+          "health": 100,
+          "speed": 25.157641962899003,
+          "forwardSpeed": 24.61824655042304,
+          "rotation": [
+            -0.2804938094999877,
+            -0.001451650334419791,
+            -0.004276893419529813
+          ],
+          "velocity": [
+            0.6590092778205872,
+            1.6183807849884033,
+            25.087522506713867
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.1596221923828,
+              14.337152481079102,
+              -225.59039306640625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 1.4000000000000001,
+      "state": {
+        "player": [
+          185.29107666015625,
+          14.596322059631348,
+          -220.6445770263672
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.29107666015625,
+            14.596322059631348,
+            -220.6445770263672
+          ],
+          "health": 100,
+          "speed": 24.450963593969686,
+          "forwardSpeed": 23.882157614319176,
+          "rotation": [
+            -0.2546401572735669,
+            -0.0015605186739361062,
+            -0.0038413935264195063
+          ],
+          "velocity": [
+            0.6554055213928223,
+            0.8945004940032959,
+            24.386201858520508
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.29107666015625,
+              14.596322059631348,
+              -220.6445770263672
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 1.6,
+      "state": {
+        "player": [
+          185.4434356689453,
+          14.708810806274414,
+          -215.04188537597656
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.4434356689453,
+            14.708810806274414,
+            -215.04188537597656
+          ],
+          "health": 100,
+          "speed": 23.70632861430739,
+          "forwardSpeed": 23.119960768269117,
+          "rotation": [
+            -0.22106166014382217,
+            -0.0016851292252730956,
+            -0.003376132498826178
+          ],
+          "velocity": [
+            0.6503596901893616,
+            -0.004409496206790209,
+            23.647306442260742
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.4434356689453,
+              14.708810806274414,
+              -215.04188537597656
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 1.8,
+      "state": {
+        "player": [
+          185.562255859375,
+          14.646380424499512,
+          -210.75430297851562
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.562255859375,
+            14.646380424499512,
+            -210.75430297851562
+          ],
+          "health": 100,
+          "speed": 23.17771735928021,
+          "forwardSpeed": 22.601502111946434,
+          "rotation": [
+            -0.19145971208089038,
+            -0.0017821440903639128,
+            -0.0030405651283194847
+          ],
+          "velocity": [
+            0.6458645462989807,
+            -0.7423748970031738,
+            23.123050689697266
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.562255859375,
+              14.646380424499512,
+              -210.75430297851562
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 2,
+      "state": {
+        "player": [
+          185.70156860351562,
+          14.394765853881836,
+          -205.80381774902344
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.70156860351562,
+            14.394765853881836,
+            -205.80381774902344
+          ],
+          "health": 100,
+          "speed": 22.615204753878537,
+          "forwardSpeed": 22.08760086319217,
+          "rotation": [
+            -0.15255646635489142,
+            -0.0018948957572743768,
+            -0.0026760544891592532
+          ],
+          "velocity": [
+            0.6400501728057861,
+            -1.6428592205047607,
+            22.56561279296875
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.70156860351562,
+              14.394765853881836,
+              -205.80381774902344
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 2.2,
+      "state": {
+        "player": [
+          185.82899475097656,
+          13.986557960510254,
+          -201.33448791503906
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.82899475097656,
+            13.986557960510254,
+            -201.33448791503906
+          ],
+          "health": 100,
+          "speed": 22.155001896866793,
+          "forwardSpeed": 21.711622237818872,
+          "rotation": [
+            -0.11333982388574328,
+            -0.0019946065721947043,
+            -0.0023690496255841693
+          ],
+          "velocity": [
+            0.6342787146568298,
+            -2.4966506958007812,
+            22.11007308959961
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.82899475097656,
+              13.986557960510254,
+              -201.33448791503906
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 2.4000000000000004,
+      "state": {
+        "player": [
+          185.9656982421875,
+          13.349259376525879,
+          -196.58822631835938
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            185.9656982421875,
+            13.349259376525879,
+            -196.58822631835938
+          ],
+          "health": 100,
+          "speed": 21.718429534650845,
+          "forwardSpeed": 21.40976100220586,
+          "rotation": [
+            -0.06845745802820295,
+            -0.002094466569694307,
+            -0.002067982955644141
+          ],
+          "velocity": [
+            0.6276582479476929,
+            -3.4386725425720215,
+            21.678340911865234
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              185.9656982421875,
+              13.349259376525879,
+              -196.58822631835938
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 2.6,
+      "state": {
+        "player": [
+          186.090576171875,
+          12.578559875488281,
+          -192.283935546875
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            186.090576171875,
+            12.578559875488281,
+            -192.283935546875
+          ],
+          "health": 100,
+          "speed": 21.369866970370104,
+          "forwardSpeed": 21.22540771141229,
+          "rotation": [
+            -0.025837471012895477,
+            -0.0021772496947635306,
+            -0.0018171774048308597
+          ],
+          "velocity": [
+            0.6212536096572876,
+            -4.315881252288818,
+            21.334054946899414
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              186.090576171875,
+              12.578559875488281,
+              -192.283935546875
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 2.8000000000000003,
+      "state": {
+        "player": [
+          186.22439575195312,
+          11.545181274414062,
+          -187.69223022460938
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            186.22439575195312,
+            11.545181274414062,
+            -187.69223022460938
+          ],
+          "health": 100,
+          "speed": 21.04839788333137,
+          "forwardSpeed": 21.124138623049458,
+          "rotation": [
+            0.020773173365942935,
+            -0.002256122693710952,
+            -0.0015719811863531795
+          ],
+          "velocity": [
+            0.6140357851982117,
+            -5.266505718231201,
+            21.017051696777344
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              186.22439575195312,
+              11.545181274414062,
+              -187.69223022460938
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "landing",
+      "second": 3,
+      "state": {
+        "player": [
+          186.34649658203125,
+          10.40861701965332,
+          -183.50917053222656
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            186.34649658203125,
+            10.40861701965332,
+            -183.50917053222656
+          ],
+          "health": 100,
+          "speed": 20.801583026899664,
+          "forwardSpeed": 21.117917782728263,
+          "rotation": [
+            0.06361102994596067,
+            -0.002319047685242539,
+            -0.0013670583498029446
+          ],
+          "velocity": [
+            0.6071450710296631,
+            -6.139377117156982,
+            20.774259567260742
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": -1,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              186.34649658203125,
+              10.40861701965332,
+              -183.50917053222656
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit",
+        "toast": "Pelican Trainer · W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    }
+  ],
+  "errors": [
+    "plane: page.evaluate: Execution context was destroyed, most likely because of a navigation\n    at snapshot (/Users/timmymckeegan/Desktop/gpt-gta-6/tests/aircraft-controls-audit.mjs:10:26)\n    at /Users/timmymckeegan/Desktop/gpt-gta-6/tests/aircraft-controls-audit.mjs:37:76"
+  ]
+}

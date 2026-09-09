@@ -27,6 +27,7 @@ import { distance } from "./core/math";
 import { World } from "./world/World";
 import { VehicleSystem, type Vehicle, VEHICLE_TUNING } from "./vehicles";
 import type { VehicleKind } from "./core/contracts";
+import { AIRCRAFT_SPAWNS, aircraftInput, aircraftPrompt, isAircraft } from "./vehicles/aircraft";
 import { Player } from "./gameplay/Player";
 import { WantedSystem } from "./gameplay/Wanted";
 import { Population } from "./gameplay/Population";
@@ -433,7 +434,7 @@ async function boot() {
       population.drivers = population.drivers.filter((d) => d.v !== v);
       audio.start();
       ui.toast(
-        `${v.tuning.label} · W/S throttle · A/D steer · Space handbrake · E exit`,
+        isAircraft(v.kind) ? `${v.tuning.label} · ${aircraftPrompt(v, input)}` : `${v.tuning.label} · W/S throttle · A/D steer · Space handbrake · E exit`,
       );
       return;
     }
@@ -542,16 +543,23 @@ async function boot() {
         new Vector3(Math.sin(player.yaw) * 6, 1, Math.cos(player.yaw) * 6),
       );
       if (kind === "boat") p = new Vector3(239, 0.4, -230);
-      if (kind === "plane") p = new Vector3(0, 1, -190);
-      if (kind === "helicopter") p = new Vector3(0, 2, -112);
+      if (kind === "plane" || kind === "helicopter") {
+        const launch = AIRCRAFT_SPAWNS[kind];
+        p = new Vector3(launch.x, launch.y, launch.z);
+      }
+      if (isAircraft(kind) && vehicles.list.some(v => Math.abs(v.root.position.x - p.x) < 10 && Math.abs(v.root.position.z - p.z) < 12 && Math.abs(v.root.position.y - p.y) < 6)) {
+        ui.toast("Aircraft launch area occupied. Move or remove the aircraft there before spawning another.");
+        return;
+      }
       if (["boat", "plane", "helicopter"].includes(kind) && !await prepareTravel(p)) return;
-      const v = vehicles.spawn(kind, p, kind === "plane" ? 0 : player.yaw);
+      const v = vehicles.spawn(kind, p, isAircraft(kind) ? 0 : player.yaw);
       ui.toast(
-        `${v.tuning.label} spawned${kind === "boat" ? " at the marina" : kind === "plane" ? " at the south boulevard" : ""}.`,
+        `${v.tuning.label} spawned${kind === "boat" ? " at the marina" : kind === "plane" || kind === "helicopter" ? ` at ${AIRCRAFT_SPAWNS[kind].label}` : ""}. ${isAircraft(kind) ? "Close the menu, then press E to enter." : ""}`,
       );
       if (["boat", "plane", "helicopter"].includes(kind)) {
         player.exit(true);
         player.teleport(p.add(new Vector3(3, 1, 0)));
+        if (isAircraft(kind)) player.yaw = 0;
       }
       return;
     }
@@ -757,13 +765,7 @@ async function boot() {
     if (!ui.panel && recoveryTimer <= 0) {
       player.update(dt);
       if (player.vehicle && player.deadTimer <= 0)
-        vehicles.control(player.vehicle, {
-          throttle: input.axis("y"),
-          steer: input.axis("x"),
-          brake: input.down("back") && player.vehicle.forwardSpeed > 1 ? 1 : 0,
-          handbrake: input.down("jump"),
-          lift: Number(input.down("sprint")) - Number(input.down("crouch")),
-        });
+        vehicles.control(player.vehicle, aircraftInput(input, player.vehicle.kind, player.vehicle.forwardSpeed));
       else if (player.vehicle)
         vehicles.control(player.vehicle, {
           throttle: 0,
@@ -918,7 +920,7 @@ async function boot() {
       hudTime = 0;
       closest = nearestVehicle();
       let prompt = player.vehicle
-        ? "E  Exit vehicle · G  Repair / recover · T  Coastal sprint"
+        ? isAircraft(player.vehicle.kind) ? aircraftPrompt(player.vehicle, input) : "E  Exit vehicle · G  Repair / recover · T  Coastal sprint"
         : closest
           ? `E  Enter ${closest.tuning.label}`
           : "";

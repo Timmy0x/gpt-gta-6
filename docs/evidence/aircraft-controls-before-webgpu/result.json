@@ -1,0 +1,2540 @@
+{
+  "origin": "http://127.0.0.1:4177",
+  "backend": "webgpu",
+  "label": "before",
+  "results": [
+    {
+      "kind": "helicopter",
+      "phase": "spawn",
+      "state": {
+        "player": [
+          3,
+          0.9807749999999995,
+          -112
+        ],
+        "vehicle": null,
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.004897687584161758,
+              0.8449802398681641,
+              -112.00470733642578
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Enter Mistral Helicopter",
+        "toast": "Mistral Helicopter spawned.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "entry",
+      "state": {
+        "player": [
+          0.005448498763144016,
+          0.845007061958313,
+          -112.0049819946289
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.005448498763144016,
+            0.845007061958313,
+            -112.0049819946289
+          ],
+          "health": 94.71686110380435,
+          "speed": 0.002019795392161355,
+          "forwardSpeed": -0.001412905934252557,
+          "rotation": [
+            0.000017464573061161208,
+            -0.0001963025868480031,
+            0.000023174586429874105
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.005448498763144016,
+              0.845007061958313,
+              -112.0049819946289
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 1,
+      "state": {
+        "player": [
+          0.006335658486932516,
+          0.8451434969902039,
+          -112.0048828125
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.006335658486932516,
+            0.8451434969902039,
+            -112.0048828125
+          ],
+          "health": 94.71686110380435,
+          "speed": 0.0017599147134914482,
+          "forwardSpeed": -0.0017539393517793098,
+          "rotation": [
+            0.00006607460054054513,
+            -0.0001479967990576575,
+            -0.000024493794596250293
+          ],
+          "velocity": [
+            -0.0001168836242868565,
+            -0.04026861488819122,
+            -0.0013541782973334193
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.006335658486932516,
+              0.8451434969902039,
+              -112.0048828125
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 2,
+      "state": {
+        "player": [
+          0.006550651043653488,
+          0.8727025985717773,
+          -111.99641418457031
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.006550651043653488,
+            0.8727025985717773,
+            -111.99641418457031
+          ],
+          "health": 94.71686110380435,
+          "speed": 0.027467162854462265,
+          "forwardSpeed": 0.027220817288612763,
+          "rotation": [
+            0.0160121363604143,
+            -0.00021893997566304303,
+            -0.000034691388799871174
+          ],
+          "velocity": [
+            -0.002035513985902071,
+            0.04880700260400772,
+            0.028044966980814934
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.006550651043653488,
+              0.8727025985717773,
+              -111.99641418457031
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 3,
+      "state": {
+        "player": [
+          0.007149641402065754,
+          1.0532792806625366,
+          -111.84956359863281
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.007149641402065754,
+            1.0532792806625366,
+            -111.84956359863281
+          ],
+          "health": 94.71686110380435,
+          "speed": 0.3711215014535339,
+          "forwardSpeed": 0.3485524976614769,
+          "rotation": [
+            0.12401782141230182,
+            -0.0006417559037110031,
+            -0.000032680253969980556
+          ],
+          "velocity": [
+            0.0015285681001842022,
+            0.1951819211244583,
+            0.38903847336769104
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.007149641402065754,
+              1.0532792806625366,
+              -111.84956359863281
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 4,
+      "state": {
+        "player": [
+          0.005976005923002958,
+          1.2566412687301636,
+          -110.7598648071289
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            0.005976005923002958,
+            1.2566412687301636,
+            -110.7598648071289
+          ],
+          "health": 94.71686110380435,
+          "speed": 1.8361944806012855,
+          "forwardSpeed": 1.7668656013931425,
+          "rotation": [
+            0.23866039497495656,
+            -0.0016024064721656564,
+            0.00010949763134474975
+          ],
+          "velocity": [
+            -0.00400158716365695,
+            0.06883370131254196,
+            1.8679139614105225
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              0.005976005923002958,
+              1.2566412687301636,
+              -110.7598648071289
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 5,
+      "state": {
+        "player": [
+          -0.0004148959123995155,
+          1.3076577186584473,
+          -107.88130950927734
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.0004148959123995155,
+            1.3076577186584473,
+            -107.88130950927734
+          ],
+          "health": 94.71686110380435,
+          "speed": 3.704962821472118,
+          "forwardSpeed": 3.5915844191871398,
+          "rotation": [
+            0.2651614103084925,
+            -0.0015255878694781996,
+            0.00023350012332603361
+          ],
+          "velocity": [
+            -0.00916911568492651,
+            -0.0667165145277977,
+            3.735257863998413
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.0004148959123995155,
+              1.3076577186584473,
+              -107.88130950927734
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 6,
+      "state": {
+        "player": [
+          -0.01211349107325077,
+          1.2800171375274658,
+          -103.24699401855469
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.01211349107325077,
+            1.2800171375274658,
+            -103.24699401855469
+          ],
+          "health": 94.71686110380435,
+          "speed": 5.252322226376562,
+          "forwardSpeed": 5.110893366393768,
+          "rotation": [
+            0.25082790691004514,
+            -0.0012614624557096721,
+            -0.0008981565565981047
+          ],
+          "velocity": [
+            -0.011916320770978928,
+            -0.09698687493801117,
+            5.275245189666748
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.01211349107325077,
+              1.2800171375274658,
+              -103.24699401855469
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 7,
+      "state": {
+        "player": [
+          -0.023311279714107513,
+          1.259520411491394,
+          -97.38040924072266
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.023311279714107513,
+            1.259520411491394,
+            -97.38040924072266
+          ],
+          "health": 94.71686110380435,
+          "speed": 6.359515063602553,
+          "forwardSpeed": 6.190842064177787,
+          "rotation": [
+            0.24035883337127523,
+            -0.0011978437373937265,
+            0.0005690244997842445
+          ],
+          "velocity": [
+            -0.011263762600719929,
+            -0.06380873918533325,
+            6.3769121170043945
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.023311279714107513,
+              1.259520411491394,
+              -97.38040924072266
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "w-only",
+      "second": 8,
+      "state": {
+        "player": [
+          -0.03558298200368881,
+          1.2589362859725952,
+          -90.42414855957031
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.03558298200368881,
+            1.2589362859725952,
+            -90.42414855957031
+          ],
+          "health": 94.71686110380435,
+          "speed": 7.240481939856946,
+          "forwardSpeed": 7.048940166611747,
+          "rotation": [
+            0.2397499767310035,
+            -0.001530971830684413,
+            0.0004571864624212596
+          ],
+          "velocity": [
+            -0.01302039809525013,
+            -0.06768907606601715,
+            7.254739761352539
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.03558298200368881,
+              1.2589362859725952,
+              -90.42414855957031
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 1,
+      "state": {
+        "player": [
+          -0.05223100259900093,
+          2.581587076187134,
+          -81.02339935302734
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.05223100259900093,
+            2.581587076187134,
+            -81.02339935302734
+          ],
+          "health": 94.71686110380435,
+          "speed": 8.59473416921401,
+          "forwardSpeed": 7.7937541062255935,
+          "rotation": [
+            0.2475668411779109,
+            -0.0015806029180615907,
+            -0.00003376876552842793
+          ],
+          "velocity": [
+            -0.014605363830924034,
+            2.2413384914398193,
+            8.614273071289062
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.05223100259900093,
+              2.581587076187134,
+              -81.02339935302734
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 2,
+      "state": {
+        "player": [
+          -0.06793877482414246,
+          5.457141399383545,
+          -71.60236358642578
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.06793877482414246,
+            5.457141399383545,
+            -71.60236358642578
+          ],
+          "health": 94.71686110380435,
+          "speed": 9.873963448116015,
+          "forwardSpeed": 8.554965270441535,
+          "rotation": [
+            0.2930084001543413,
+            -0.0015781494278064804,
+            -0.0000019492163931084117
+          ],
+          "velocity": [
+            -0.016324155032634735,
+            3.124241590499878,
+            9.895086288452148
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.06793877482414246,
+              5.457141399383545,
+              -71.60236358642578
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 3,
+      "state": {
+        "player": [
+          -0.0854477658867836,
+          8.888919830322266,
+          -60.91263961791992
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.0854477658867836,
+            8.888919830322266,
+            -60.91263961791992
+          ],
+          "health": 94.71686110380435,
+          "speed": 11.035947177975189,
+          "forwardSpeed": 9.561893088125863,
+          "rotation": [
+            0.2942259108912696,
+            -0.0015764158897334701,
+            -0.000001540842484697784
+          ],
+          "velocity": [
+            -0.017997637391090393,
+            3.4478704929351807,
+            11.052302360534668
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.0854477658867836,
+              8.888919830322266,
+              -60.91263961791992
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 4,
+      "state": {
+        "player": [
+          -0.10409083217382431,
+          12.483098030090332,
+          -49.4100456237793
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.10409083217382431,
+            12.483098030090332,
+            -49.4100456237793
+          ],
+          "health": 94.71686110380435,
+          "speed": 11.86784574575307,
+          "forwardSpeed": 10.37034069600993,
+          "rotation": [
+            0.2861892604624186,
+            -0.0015751901416515973,
+            -0.0000013285917715711604
+          ],
+          "velocity": [
+            -0.01917819306254387,
+            3.59419846534729,
+            11.879427909851074
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.10409083217382431,
+              12.483098030090332,
+              -49.4100456237793
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 5,
+      "state": {
+        "player": [
+          -0.12406504899263382,
+          16.24424171447754,
+          -36.995933532714844
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.12406504899263382,
+            16.24424171447754,
+            -36.995933532714844
+          ],
+          "health": 94.71686110380435,
+          "speed": 12.480420918771374,
+          "forwardSpeed": 10.958998365325812,
+          "rotation": [
+            0.2831412813625707,
+            -0.0015742131863648054,
+            -0.0000010739396288256333
+          ],
+          "velocity": [
+            -0.02003706432878971,
+            3.6673989295959473,
+            12.489112854003906
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.12406504899263382,
+              16.24424171447754,
+              -36.995933532714844
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 6,
+      "state": {
+        "player": [
+          -0.14480233192443848,
+          20.05665397644043,
+          -24.038284301757812
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.14480233192443848,
+            20.05665397644043,
+            -24.038284301757812
+          ],
+          "health": 94.71686110380435,
+          "speed": 12.953416177271917,
+          "forwardSpeed": 11.40868476962113,
+          "rotation": [
+            0.28247005750233056,
+            -0.0015734335188511694,
+            -8.68358594636479e-7
+          ],
+          "velocity": [
+            -0.020696695894002914,
+            3.7004282474517822,
+            12.960262298583984
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.14480233192443848,
+              20.05665397644043,
+              -24.038284301757812
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 7,
+      "state": {
+        "player": [
+          -0.16578127443790436,
+          23.8289737701416,
+          -10.876897811889648
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.16578127443790436,
+            23.8289737701416,
+            -10.876897811889648
+          ],
+          "health": 94.71686110380435,
+          "speed": 13.321449937252398,
+          "forwardSpeed": 11.763272959474888,
+          "rotation": [
+            0.28173521484451086,
+            -0.0015728140740601728,
+            -7.034198533777179e-7
+          ],
+          "velocity": [
+            -0.021208111196756363,
+            3.7152209281921387,
+            13.326859474182129
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.16578127443790436,
+              23.8289737701416,
+              -10.876897811889648
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "helicopter",
+      "phase": "lift",
+      "second": 8,
+      "state": {
+        "player": [
+          -0.18757431209087372,
+          27.675172805786133,
+          2.837454080581665
+        ],
+        "vehicle": {
+          "kind": "helicopter",
+          "position": [
+            -0.18757431209087372,
+            27.675172805786133,
+            2.837454080581665
+          ],
+          "health": 94.71686110380435,
+          "speed": 13.61559007712971,
+          "forwardSpeed": 12.049847720747351,
+          "rotation": [
+            0.2808840153140384,
+            -0.0015723039631139323,
+            -5.718184109370571e-7
+          ],
+          "velocity": [
+            -0.021614978089928627,
+            3.7232038974761963,
+            13.619817733764648
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "helicopter",
+            "position": [
+              -0.18757431209087372,
+              27.675172805786133,
+              2.837454080581665
+            ],
+            "health": 94.71686110380435
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Mistral Helicopter · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "spawn",
+      "state": {
+        "player": [
+          3.000071949967996,
+          1.7437165172357256,
+          -190.00268960353026
+        ],
+        "vehicle": null,
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              -0.000592465337831527,
+              0.5348324775695801,
+              -190.04705810546875
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Enter Pelican Trainer",
+        "toast": "Pelican Trainer spawned at the south boulevard.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "entry",
+      "state": {
+        "player": [
+          -0.002443971112370491,
+          0.534004271030426,
+          -190.0661163330078
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            -0.002443971112370491,
+            0.534004271030426,
+            -190.0661163330078
+          ],
+          "health": 100,
+          "speed": 0.016449814995411382,
+          "forwardSpeed": -0.019716097298603207,
+          "rotation": [
+            -0.050237979961640755,
+            0.0003319350743980036,
+            0.00010842843272560621
+          ],
+          "velocity": [
+            -0.0014404822140932083,
+            -0.020316259935498238,
+            -0.01995564065873623
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              -0.002443971112370491,
+              0.534004271030426,
+              -190.0661163330078
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 1,
+      "state": {
+        "player": [
+          -0.0015084671322256327,
+          0.5661252737045288,
+          -187.52789306640625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            -0.0015084671322256327,
+            0.5661252737045288,
+            -187.52789306640625
+          ],
+          "health": 100,
+          "speed": 4.786701029434629,
+          "forwardSpeed": 4.779739504117994,
+          "rotation": [
+            -0.05075553000250585,
+            0.00037207085028710636,
+            -0.000048265970979703155
+          ],
+          "velocity": [
+            0.0017302100313827395,
+            -0.015512732788920403,
+            4.864139556884766
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              -0.0015084671322256327,
+              0.5661252737045288,
+              -187.52789306640625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 2,
+      "state": {
+        "player": [
+          0.0011142775183543563,
+          0.6023073196411133,
+          -180.18455505371094
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.0011142775183543563,
+            0.6023073196411133,
+            -180.18455505371094
+          ],
+          "health": 100,
+          "speed": 9.382141719102934,
+          "forwardSpeed": 9.372354420182884,
+          "rotation": [
+            -0.04216154104957557,
+            0.0003588657556838204,
+            0.0000012775695418408437
+          ],
+          "velocity": [
+            0.00339869549497962,
+            -0.0559680201113224,
+            9.457795143127441
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.0011142775183543563,
+              0.6023073196411133,
+              -180.18455505371094
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 3,
+      "state": {
+        "player": [
+          0.0053863367065787315,
+          0.6206042170524597,
+          -168.2870330810547
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.0053863367065787315,
+            0.6206042170524597,
+            -168.2870330810547
+          ],
+          "health": 100,
+          "speed": 13.75241654308003,
+          "forwardSpeed": 13.743400454976971,
+          "rotation": [
+            -0.03310864086541037,
+            0.000358985779230035,
+            -4.6333187112958585e-8
+          ],
+          "velocity": [
+            0.0049613225273787975,
+            -0.03561762347817421,
+            13.821188926696777
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.0053863367065787315,
+              0.6206042170524597,
+              -168.2870330810547
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 4,
+      "state": {
+        "player": [
+          0.011206008493900299,
+          0.634792149066925,
+          -152.07794189453125
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.011206008493900299,
+            0.634792149066925,
+            -152.07794189453125
+          ],
+          "health": 100,
+          "speed": 17.865832527185887,
+          "forwardSpeed": 17.858538728672446,
+          "rotation": [
+            -0.02709856740038257,
+            0.0003591472649230119,
+            2.9064958543911486e-8
+          ],
+          "velocity": [
+            0.006440259050577879,
+            -0.04998202994465828,
+            17.933216094970703
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.011206008493900299,
+              0.634792149066925,
+              -152.07794189453125
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 5,
+      "state": {
+        "player": [
+          0.01795956678688526,
+          0.6445822715759277,
+          -133.27301025390625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.01795956678688526,
+            0.6445822715759277,
+            -133.27301025390625
+          ],
+          "health": 100,
+          "speed": 21.46681542522378,
+          "forwardSpeed": 21.460203023238293,
+          "rotation": [
+            -0.022294531640318742,
+            0.0003590655080694011,
+            -1.2519916479281244e-8
+          ],
+          "velocity": [
+            0.007731238845735788,
+            -0.06876969337463379,
+            21.52982521057129
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.01795956678688526,
+              0.6445822715759277,
+              -133.27301025390625
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 6,
+      "state": {
+        "player": [
+          0.026343287900090218,
+          0.6524708271026611,
+          -109.91799926757812
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.026343287900090218,
+            0.6524708271026611,
+            -109.91799926757812
+          ],
+          "health": 100,
+          "speed": 24.992517173033963,
+          "forwardSpeed": 24.98775297642537,
+          "rotation": [
+            -0.018049137559627428,
+            0.00035878965745921433,
+            -8.39223868310839e-8
+          ],
+          "velocity": [
+            0.008987716399133205,
+            -0.0340316966176033,
+            25.047151565551758
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.026343287900090218,
+              0.6524708271026611,
+              -109.91799926757812
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 7,
+      "state": {
+        "player": [
+          0.03610336408019066,
+          0.6599316000938416,
+          -82.70559692382812
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.03610336408019066,
+            0.6599316000938416,
+            -82.70559692382812
+          ],
+          "health": 100,
+          "speed": 28.296039492291325,
+          "forwardSpeed": 28.292577546552664,
+          "rotation": [
+            -0.015009383862193953,
+            0.0003584471892822727,
+            -1.0579213288874559e-7
+          ],
+          "velocity": [
+            0.01016183290630579,
+            -0.025725748389959335,
+            28.345863342285156
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.03610336408019066,
+              0.6599316000938416,
+              -82.70559692382812
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "w-only",
+      "second": 8,
+      "state": {
+        "player": [
+          0.04681892693042755,
+          0.6660836338996887,
+          -52.80030822753906
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.04681892693042755,
+            0.6660836338996887,
+            -52.80030822753906
+          ],
+          "health": 100,
+          "speed": 31.28025255556818,
+          "forwardSpeed": 31.27717112289259,
+          "rotation": [
+            -0.012707826639363482,
+            0.0003581035029837556,
+            -1.1992377423872508e-7
+          ],
+          "velocity": [
+            0.011220809072256088,
+            -0.056405387818813324,
+            31.329795837402344
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.04681892693042755,
+              0.6660836338996887,
+              -52.80030822753906
+            ],
+            "health": 100
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Pelican Trainer · W/S throttle · A/D steer · Space handbrake · E exit",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 1,
+      "state": {
+        "player": [
+          0.03329150751233101,
+          1.4873384237289429,
+          -17.93340492248535
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            0.03329150751233101,
+            1.4873384237289429,
+            -17.93340492248535
+          ],
+          "health": 45.93202965169353,
+          "speed": 24.74202815435505,
+          "forwardSpeed": 16.228210992791578,
+          "rotation": [
+            -0.3717598125491276,
+            0.8697142437851305,
+            0.21271491681951432
+          ],
+          "velocity": [
+            0.19684357941150665,
+            1.3925985097885132,
+            24.748363494873047
+          ],
+          "grounded": 0,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              0.03329150751233101,
+              1.4873384237289429,
+              -17.93340492248535
+            ],
+            "health": 45.93202965169353
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Impact · 46% vehicle condition",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 2,
+      "state": {
+        "player": [
+          1.6003007888793945,
+          0.5033909678459167,
+          6.033483982086182
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            1.6003007888793945,
+            0.5033909678459167,
+            6.033483982086182
+          ],
+          "health": 45.3392902614293,
+          "speed": 19.602475007486195,
+          "forwardSpeed": -7.295188860548752,
+          "rotation": [
+            -0.008119076359052561,
+            2.066928130981926,
+            0.019330569511654176
+          ],
+          "velocity": [
+            1.9717061519622803,
+            -0.023045692592859268,
+            19.37649154663086
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              1.6003007888793945,
+              0.5033909678459167,
+              6.033483982086182
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Impact · 46% vehicle condition",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 3,
+      "state": {
+        "player": [
+          2.882662534713745,
+          0.5146480798721313,
+          21.572132110595703
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            2.882662534713745,
+            0.5146480798721313,
+            21.572132110595703
+          ],
+          "health": 45.3392902614293,
+          "speed": 11.679445442364441,
+          "forwardSpeed": -11.006178543638386,
+          "rotation": [
+            -0.020747631429911678,
+            2.792964051824418,
+            0.022316483364964876
+          ],
+          "velocity": [
+            -0.2848009467124939,
+            -0.03938436508178711,
+            11.559102058410645
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              2.882662534713745,
+              0.5146480798721313,
+              21.572132110595703
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Impact · 46% vehicle condition",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 4,
+      "state": {
+        "player": [
+          1.8840478658676147,
+          0.5138294100761414,
+          30.668752670288086
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            1.8840478658676147,
+            0.5138294100761414,
+            30.668752670288086
+          ],
+          "health": 45.3392902614293,
+          "speed": 6.8753869041141815,
+          "forwardSpeed": -6.872422729678471,
+          "rotation": [
+            -0.0328050882597787,
+            3.0443504464765105,
+            -0.0001834811892392355
+          ],
+          "velocity": [
+            -0.6614230275154114,
+            -0.04681135341525078,
+            6.75917911529541
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              1.8840478658676147,
+              0.5138294100761414,
+              30.668752670288086
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 5,
+      "state": {
+        "player": [
+          1.4191995859146118,
+          0.5224937200546265,
+          35.45414733886719
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            1.4191995859146118,
+            0.5224937200546265,
+            35.45414733886719
+          ],
+          "health": 45.3392902614293,
+          "speed": 2.8534557857406373,
+          "forwardSpeed": -2.85268543638653,
+          "rotation": [
+            -0.040028242939626736,
+            3.044837405457236,
+            -0.0002393742530657479
+          ],
+          "velocity": [
+            -0.27130529284477234,
+            -0.05278826877474785,
+            2.7844655513763428
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              1.4191995859146118,
+              0.5224937200546265,
+              35.45414733886719
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 6,
+      "state": {
+        "player": [
+          1.320209264755249,
+          0.5332344174385071,
+          36.475486755371094
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            1.320209264755249,
+            0.5332344174385071,
+            36.475486755371094
+          ],
+          "health": 45.3392902614293,
+          "speed": 0.5257172541550462,
+          "forwardSpeed": 0.5220760318536836,
+          "rotation": [
+            -0.04963386572429078,
+            3.0448141020854678,
+            -0.00001288485017696883
+          ],
+          "velocity": [
+            0.05479861795902252,
+            -0.01423447672277689,
+            -0.5729188919067383
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              1.320209264755249,
+              0.5332344174385071,
+              36.475486755371094
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 7,
+      "state": {
+        "player": [
+          1.5202653408050537,
+          0.552801251411438,
+          34.412017822265625
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            1.5202653408050537,
+            0.552801251411438,
+            34.412017822265625
+          ],
+          "health": 45.3392902614293,
+          "speed": 3.3833014153133796,
+          "forwardSpeed": 3.3743796194783275,
+          "rotation": [
+            -0.06393800081644554,
+            3.0448315128817405,
+            -0.00025103651475504366
+          ],
+          "velocity": [
+            0.33077383041381836,
+            -0.03155987337231636,
+            -3.4121651649475098
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              1.5202653408050537,
+              0.552801251411438,
+              34.412017822265625
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 8,
+      "state": {
+        "player": [
+          1.9825518131256104,
+          0.5719776749610901,
+          29.65068244934082
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            1.9825518131256104,
+            0.5719776749610901,
+            29.65068244934082
+          ],
+          "health": 45.3392902614293,
+          "speed": 6.029903394654434,
+          "forwardSpeed": 6.01859213901263,
+          "rotation": [
+            -0.057296970228898764,
+            3.044802189069523,
+            0.000008177982696801496
+          ],
+          "velocity": [
+            0.5870408415794373,
+            -0.03795343264937401,
+            -6.045989513397217
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              1.9825518131256104,
+              0.5719776749610901,
+              29.65068244934082
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 9,
+      "state": {
+        "player": [
+          2.724564552307129,
+          0.5851803421974182,
+          22.008573532104492
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            2.724564552307129,
+            0.5851803421974182,
+            22.008573532104492
+          ],
+          "health": 45.3392902614293,
+          "speed": 8.672979688252811,
+          "forwardSpeed": 8.659554732785717,
+          "rotation": [
+            -0.05130107273949449,
+            3.0447994449368516,
+            -4.1994443892394496e-7
+          ],
+          "velocity": [
+            0.8422544002532959,
+            -0.04562203586101532,
+            -8.67441463470459
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              2.724564552307129,
+              0.5851803421974182,
+              22.008573532104492
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 10,
+      "state": {
+        "player": [
+          3.7060742378234863,
+          0.6007265448570251,
+          11.89999771118164
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            3.7060742378234863,
+            0.6007265448570251,
+            11.89999771118164
+          ],
+          "health": 45.3392902614293,
+          "speed": 11.148878953445816,
+          "forwardSpeed": 11.133278278251694,
+          "rotation": [
+            -0.04850791102946332,
+            3.044799229416781,
+            2.331266360843716e-8
+          ],
+          "velocity": [
+            1.0812747478485107,
+            -0.050292350351810455,
+            -11.136051177978516
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              3.7060742378234863,
+              0.6007265448570251,
+              11.89999771118164
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 11,
+      "state": {
+        "player": [
+          4.899788856506348,
+          0.669916570186615,
+          -0.3940644860267639
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            4.899788856506348,
+            0.669916570186615,
+            -0.3940644860267639
+          ],
+          "health": 45.3392902614293,
+          "speed": 13.363582813049328,
+          "forwardSpeed": 13.334159495793985,
+          "rotation": [
+            -0.07513870921950255,
+            3.044799280884507,
+            1.8272731840354252e-8
+          ],
+          "velocity": [
+            1.2946182489395142,
+            0.10204682499170303,
+            -13.333266258239746
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              4.899788856506348,
+              0.669916570186615,
+              -0.3940644860267639
+            ],
+            "health": 45.3392902614293
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 12,
+      "state": {
+        "player": [
+          6.311201572418213,
+          0.7636198997497559,
+          -14.467679023742676
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            6.311201572418213,
+            0.7636198997497559,
+            -14.467679023742676
+          ],
+          "health": 38.87244477464434,
+          "speed": 9.521627089267566,
+          "forwardSpeed": 9.471786991496709,
+          "rotation": [
+            -0.14697347734865124,
+            3.009813889533426,
+            -0.038246454121145
+          ],
+          "velocity": [
+            1.1343886852264404,
+            0.2990582287311554,
+            -9.16040325164795
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              6.311201572418213,
+              0.7636198997497559,
+              -14.467679023742676
+            ],
+            "health": 38.87244477464434
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Impact · 42% vehicle condition · mechanical damage",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 13,
+      "state": {
+        "player": [
+          5.992764949798584,
+          0.6100513339042664,
+          -20.878950119018555
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            5.992764949798584,
+            0.6100513339042664,
+            -20.878950119018555
+          ],
+          "health": 38.87244477464434,
+          "speed": 6.156497641178213,
+          "forwardSpeed": 6.147975196802,
+          "rotation": [
+            -0.005333005238477374,
+            -3.0537524230462414,
+            -0.09097544689292388
+          ],
+          "velocity": [
+            -0.6196483373641968,
+            -0.6088186502456665,
+            -6.077402591705322
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              5.992764949798584,
+              0.6100513339042664,
+              -20.878950119018555
+            ],
+            "health": 38.87244477464434
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Impact · 42% vehicle condition · mechanical damage",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 14,
+      "state": {
+        "player": [
+          5.327730655670166,
+          0.5590236186981201,
+          -25.19042205810547
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            5.327730655670166,
+            0.5590236186981201,
+            -25.19042205810547
+          ],
+          "health": 17.00106901933835,
+          "speed": 0.6294073526224312,
+          "forwardSpeed": -0.5953023773333987,
+          "rotation": [
+            -0.06606961669410323,
+            3.0848332105770253,
+            -0.009809264495284254
+          ],
+          "velocity": [
+            -0.25521427392959595,
+            -0.16505824029445648,
+            0.583975613117218
+          ],
+          "grounded": 2,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              5.327730655670166,
+              0.5590236186981201,
+              -25.19042205810547
+            ],
+            "health": 17.00106901933835
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "POLICE: Stop, lower your weapon and remain still.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 15,
+      "state": {
+        "player": [
+          5.240344524383545,
+          0.5339274406433105,
+          -24.964553833007812
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            5.240344524383545,
+            0.5339274406433105,
+            -24.964553833007812
+          ],
+          "health": 17.00106901933835,
+          "speed": 0.023278121682450185,
+          "forwardSpeed": 0.018724277983494266,
+          "rotation": [
+            -0.04923251545684377,
+            3.0424942212159416,
+            -0.00030606776055725605
+          ],
+          "velocity": [
+            -0.009335309267044067,
+            -0.06053799018263817,
+            -0.025449931621551514
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              5.240344524383545,
+              0.5339274406433105,
+              -24.964553833007812
+            ],
+            "health": 17.00106901933835
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    },
+    {
+      "kind": "plane",
+      "phase": "lift",
+      "second": 16,
+      "state": {
+        "player": [
+          5.2270731925964355,
+          0.5337008237838745,
+          -25.00385093688965
+        ],
+        "vehicle": {
+          "kind": "plane",
+          "position": [
+            5.2270731925964355,
+            0.5337008237838745,
+            -25.00385093688965
+          ],
+          "health": 17.00106901933835,
+          "speed": 0.04129027993629519,
+          "forwardSpeed": 0.03477885899702396,
+          "rotation": [
+            -0.049809998254133014,
+            3.042778415754894,
+            -0.00039048033990523033
+          ],
+          "velocity": [
+            -0.013339049182832241,
+            -0.04562849551439285,
+            -0.040500953793525696
+          ],
+          "grounded": 3,
+          "input": {
+            "throttle": 1,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 1
+          },
+          "occupied": true,
+          "engineRunning": true
+        },
+        "aircraft": [
+          {
+            "kind": "plane",
+            "position": [
+              5.2270731925964355,
+              0.5337008237838745,
+              -25.00385093688965
+            ],
+            "health": 17.00106901933835
+          }
+        ],
+        "prompt": "E  Exit vehicle · G  Repair / recover · T  Coastal sprint",
+        "toast": "Police are responding to the reported location.",
+        "paused": false,
+        "panel": "hidden",
+        "input": {}
+      }
+    }
+  ],
+  "errors": []
+}
