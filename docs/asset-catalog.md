@@ -97,9 +97,18 @@ Audio is newly authored procedural Web Audio synthesis: noise buffers, oscillato
 
 ## Licensed player skins and shared HDR lighting (2026-09-09)
 
-`public/characters/rocketbox` contains converted male/female Microsoft Rocketbox avatars under MIT, pinned upstream commit 0943055db6ec570bcef9f2c8b41c9e5467c808f9. Source manifest, original license, preparation scripts, output hashes and texture provenance are retained in data/characters, scripts/characters and the public manifest. Runtime uses these for the two players only; ambient role-specific characters remain procedural. See character-assets.md for exact rig/triangle counts and tested limitations.
+`public/characters/rocketbox` contains converted male/female Microsoft Rocketbox avatars under MIT, pinned upstream commit 0943055db6ec570bcef9f2c8b41c9e5467c808f9. Source manifest, original license, preparation scripts, output hashes and texture provenance are retained in data/characters, scripts/characters and the public manifest. These two assets are reserved for the players. Additional nearby civilian variants are described below; uniformed responders remain procedural. See character-assets.md for exact rig/triangle counts and tested limitations.
 
 `public/lighting/coastal-street.env` is an offline Babylon prefilter of Poly Haven Wide Street 02 by Sergej Majboroda (CC0). The local source metadata/HDR, preparation scripts, attribution and hash are retained. This generic urban light probe improves PBR radiance without importing its depicted geography. See environment-lighting.md. Both sources appear in in-game credits.
 
 
 The current Aster game asset is `car-lod1-batched.glb` (SHA-256 17e0f6867d1992d2cbef00fbcd5079099480385f03bbbe084adc4024060a52a6), derived with pinned MIT meshoptimizer 0.25 and compatible material batching. It retains Car Concept CC BY 4.0 provenance and embedded texture payloads. Source and intermediate GLBs remain for reproduction; only the 5.92 MB game asset is downloaded by play. Detailed-street-cars.md records geometry, component, visual and runtime verification.
+
+
+## Additional civilian, sky and scanned surface assets (2026-09-09)
+
+- `public/characters/civilians`: pinned Microsoft Rocketbox MIT Male Adult 03 / Female Adult 06, 7,200 / 6,992 triangles, 80 bones, three material parts each. Local textures and reproducible source conversion are retained. Main preloads independently; Population uses stable variant selection with a twelve-person nearby detail budget. See character-assets.md and the civilian compatibility record.
+- `src/core/Sky.ts`: original wrapper/seeded star positions using native Babylon 9.25 SkyMaterial (Apache-2.0 package). Two meshes/332 triangles/zero textures. Authored solar arc and weather parameters; no geographic ephemeris, moon, clouds or dynamic environment capture.
+- `public/surfaces`: unchanged Poly Haven CC0 1K JPEG triples for Asphalt 02 (Rob Tuytel, 3 m tile) and Dense Sand (Dimitrios Savva, 1.8 m tile). Six active maps total 4,628,319 bytes. Sand03 was superseded after visual review found it too dark for the dry beach; historical evidence/source metadata remain. Manifest, attribution, publisher checksums and local hashes are retained.
+
+These improvements do not resolve primitive building/vegetation shapes, broad vehicle variety, uniformed responders, reference likenesses, final texture/geometry LOD or the sustained performance gate.

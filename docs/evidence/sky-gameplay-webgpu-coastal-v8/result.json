@@ -1,0 +1,2358 @@
+{
+  "origin": "http://127.0.0.1:4198",
+  "backend": "webgpu",
+  "method": "Fresh normal game launch, map fast travel, Creative time/weather/rule controls, keyboard noclip ascent, and pointer-lock mouse look. Test hooks only read loaded scene diagnostics; no game-state assignments or test actions.",
+  "resolution": [
+    1600,
+    900
+  ],
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-CxJrQY1k.js",
+      "sha256": "0e304f177228f219ba9cc1c5ccad41347655f108c4deedb543f41583541e5dcc",
+      "browser": "152.0.7977.83",
+      "manifest": {
+        "build": "authored-860409-v6-dry-sand",
+        "sha256": "f09fd783847151550cd3aba36229e733fbeca0538cd8d15013d070263a6ae29b"
+      }
+    },
+    {
+      "label": "day-street",
+      "requested": {
+        "time": 12,
+        "weather": "Clear"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 4.166666666666657,
+      "meshes": 2574,
+      "activeMeshes": 533,
+      "physicsBodies": 260,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 225,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 167251635,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "12:00",
+      "weather": "CLEAR",
+      "view": {
+        "yaw": 0,
+        "pitch": 0.08,
+        "camera": [
+          3.3,
+          2.5097234698458637,
+          -32.9840085315131
+        ],
+        "far": 1500,
+        "forward": [
+          0,
+          -0.16803607538443802,
+          0.9857808465218806
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": false,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -915.0474137098662,
+          424735.38224856637,
+          -148657.38378699822
+        ],
+        "sunDirection": [
+          -0.002033438697133036,
+          0.9438564049968141,
+          -0.33034974174888493
+        ],
+        "turbidity": 3.8,
+        "mieCoefficient": 0.0038,
+        "rayleigh": 2.15,
+        "shaderLanguage": 1,
+        "starAlpha": 0
+      },
+      "lighting": {
+        "direction": [
+          0.002033438697133036,
+          -0.9438564049968141,
+          0.33034974174888493
+        ],
+        "intensity": 2.5999939661827245,
+        "solarDot": -1,
+        "position": [
+          2.9949841954300442,
+          142.59861074952212,
+          -77.55246126233274
+        ],
+        "diffuse": [
+          1,
+          0.9499991877553667,
+          0.8399989556854714
+        ],
+        "environmentIntensity": 0.5309987236155764
+      },
+      "fog": {
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ],
+        "density": 0.00125
+      },
+      "visibility": {
+        "activeWorldMeshes": 510,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2306.9373787407385,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1207.1688047915643,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/144:432:world/skyline-window-band:structure:false",
+            "material": "world/skyline-window-band",
+            "distance": 472.0465589569647,
+            "materialId": 13129,
+            "triangles": 468
+          },
+          {
+            "name": "world-chunk/144:432:world/skyline-concrete:structure:false",
+            "material": "world/skyline-concrete",
+            "distance": 472.03331680813454,
+            "materialId": 13128,
+            "triangles": 36
+          }
+        ]
+      }
+    },
+    {
+      "label": "day-coast",
+      "requested": {
+        "time": 12,
+        "weather": "Clear"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        62.1822500000001,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 33.04999999999941,
+      "meshes": 2587,
+      "activeMeshes": 1896,
+      "physicsBodies": 270,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1104,
+        "totalColliders": 249,
+        "residentColliders": 235,
+        "cpuGeometryBytes": 56416576,
+        "meshLoads": 1104,
+        "meshDisposals": 0,
+        "colliderLoads": 289,
+        "colliderDisposals": 54,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 167359614,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 1,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "12:00",
+      "weather": "CLEAR",
+      "view": {
+        "yaw": -1.572500000000001,
+        "pitch": 0.08,
+        "camera": [
+          184.9840012984665,
+          63.67182346984596,
+          -29.991508882318435
+        ],
+        "far": 1500,
+        "forward": [
+          -0.9857794110042682,
+          -0.1680361043334166,
+          -0.0016794286311061187
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": false,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -1274.1160296464564,
+          424734.55788029137,
+          -148657.09525810197
+        ],
+        "sunDirection": [
+          -0.002831368954769903,
+          0.9438545730673141,
+          -0.33034910057355993
+        ],
+        "turbidity": 3.8,
+        "mieCoefficient": 0.0038,
+        "rayleigh": 2.15,
+        "shaderLanguage": 1,
+        "starAlpha": 0
+      },
+      "lighting": {
+        "direction": [
+          0.002831368954769903,
+          -0.9438545730673141,
+          0.33034910057355993
+        ],
+        "intensity": 2.5999883016884278,
+        "solarDot": -1.0000000000000002,
+        "position": [
+          179.5752946567845,
+          203.76043596009723,
+          -79.55236508603399
+        ],
+        "diffuse": [
+          1,
+          0.9499984252272883,
+          0.8399979752922277
+        ],
+        "environmentIntensity": 0.5309975253571675
+      },
+      "fog": {
+        "color": [
+          0.56,
+          0.7,
+          0.8
+        ],
+        "density": 0.00125
+      },
+      "visibility": {
+        "activeWorldMeshes": 1856,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2126.18661944427,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1027.6917379460835,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-concrete:structure:false",
+            "material": "world/compound-concrete",
+            "distance": 710.0807201874579,
+            "materialId": 13423,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:detail:false",
+            "material": "world/compound-fence",
+            "distance": 709.7366130953139,
+            "materialId": 13327,
+            "triangles": 1188
+          },
+          {
+            "name": "world-chunk/-576:0:world/grass:global:false",
+            "material": "world/grass",
+            "distance": 697.9708494155279,
+            "materialId": 252,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad-marking:detail:false",
+            "material": "world/helipad-marking",
+            "distance": 691.6798004831871,
+            "materialId": 13326,
+            "triangles": 84
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad:structure:false",
+            "material": "world/helipad",
+            "distance": 682.8891975161306,
+            "materialId": 13424,
+            "triangles": 160
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:structure:true",
+            "material": "world/compound-fence",
+            "distance": 670.6213797079528,
+            "materialId": 13327,
+            "triangles": 24
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-olive:structure:true",
+            "material": "world/compound-olive",
+            "distance": 670.2459064051412,
+            "materialId": 13422,
+            "triangles": 24
+          },
+          {
+            "name": "sign/RESTRICTED  /  CREATIVE TRAINING ANNEX/-454.8:2.73:155",
+            "material": "sign-material/RESTRICTED  /  CREATIVE TRAINING ANNEX",
+            "distance": 668.7744888240069,
+            "materialId": 13317,
+            "triangles": 4
+          },
+          {
+            "name": "sign/COASTAL RESERVE/-454.8:3.51:155",
+            "material": "sign-material/COASTAL RESERVE",
+            "distance": 668.7038627529163,
+            "materialId": 13323,
+            "triangles": 4
+          },
+          {
+            "name": "reserve/gate-alarm",
+            "material": "reserve/alarm-material",
+            "distance": 665.1868969711232,
+            "materialId": 2590,
+            "triangles": 400
+          }
+        ]
+      }
+    },
+    {
+      "label": "sunset",
+      "requested": {
+        "time": 17.8,
+        "weather": "Clear"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        62.1822500000001,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 56.13333333333143,
+      "meshes": 2566,
+      "activeMeshes": 1890,
+      "physicsBodies": 272,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 27,
+        "totalMeshes": 1221,
+        "residentMeshes": 1081,
+        "totalColliders": 249,
+        "residentColliders": 237,
+        "cpuGeometryBytes": 56153520,
+        "meshLoads": 1164,
+        "meshDisposals": 83,
+        "colliderLoads": 319,
+        "colliderDisposals": 82,
+        "pendingMeshes": 0,
+        "activeAnchors": 13,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 228,
+        "fetchedBytes": 171171061,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 54,
+        "packagesEvicted": 5,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "17:48",
+      "weather": "CLEAR",
+      "view": {
+        "yaw": -1.572500000000001,
+        "pitch": 0.08,
+        "camera": [
+          184.98400129846652,
+          63.67182346984597,
+          -29.99150888231843
+        ],
+        "far": 1500,
+        "forward": [
+          -0.9857794110042682,
+          -0.1680361043334166,
+          -0.0016794286311061187
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": false,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -449400.4407373185,
+          21917.92475309503,
+          -7671.273663583261
+        ],
+        "sunDirection": [
+          -0.9986676460829299,
+          0.048706499451322285,
+          -0.017047274807962802
+        ],
+        "turbidity": 3.8,
+        "mieCoefficient": 0.0038,
+        "rayleigh": 2.15,
+        "shaderLanguage": 1,
+        "starAlpha": 0
+      },
+      "lighting": {
+        "direction": [
+          0.9986676460829299,
+          -0.04870649945132229,
+          0.017047274807962802
+        ],
+        "intensity": 0.12665530353287904,
+        "solarDot": -1,
+        "position": [
+          30.199853087560513,
+          69.48822491769845,
+          -32.55709122119442
+        ],
+        "diffuse": [
+          1,
+          0.6170497523986568,
+          0.41192111022684447
+        ],
+        "environmentIntensity": 0.025
+      },
+      "fog": {
+        "color": [
+          0.47461407348456297,
+          0.3755334792413393,
+          0.3559931821197274
+        ],
+        "density": 0.00125
+      },
+      "visibility": {
+        "activeWorldMeshes": 1850,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2126.18661944427,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1027.6917379460838,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-concrete:structure:false",
+            "material": "world/compound-concrete",
+            "distance": 710.0807201874579,
+            "materialId": 13423,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:detail:false",
+            "material": "world/compound-fence",
+            "distance": 709.7366130953139,
+            "materialId": 13327,
+            "triangles": 1188
+          },
+          {
+            "name": "world-chunk/-576:0:world/grass:global:false",
+            "material": "world/grass",
+            "distance": 697.9708494155279,
+            "materialId": 252,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad-marking:detail:false",
+            "material": "world/helipad-marking",
+            "distance": 691.6798004831871,
+            "materialId": 13326,
+            "triangles": 84
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad:structure:false",
+            "material": "world/helipad",
+            "distance": 682.8891975161306,
+            "materialId": 13424,
+            "triangles": 160
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:structure:true",
+            "material": "world/compound-fence",
+            "distance": 670.6213797079528,
+            "materialId": 13327,
+            "triangles": 24
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-olive:structure:true",
+            "material": "world/compound-olive",
+            "distance": 670.2459064051412,
+            "materialId": 13422,
+            "triangles": 24
+          },
+          {
+            "name": "sign/RESTRICTED  /  CREATIVE TRAINING ANNEX/-454.8:2.73:155",
+            "material": "sign-material/RESTRICTED  /  CREATIVE TRAINING ANNEX",
+            "distance": 668.7744888240069,
+            "materialId": 13317,
+            "triangles": 4
+          },
+          {
+            "name": "sign/COASTAL RESERVE/-454.8:3.51:155",
+            "material": "sign-material/COASTAL RESERVE",
+            "distance": 668.7038627529163,
+            "materialId": 13323,
+            "triangles": 4
+          },
+          {
+            "name": "reserve/gate-alarm",
+            "material": "reserve/alarm-material",
+            "distance": 665.1868969711232,
+            "materialId": 2590,
+            "triangles": 400
+          }
+        ]
+      }
+    },
+    {
+      "label": "night",
+      "requested": {
+        "time": 23,
+        "weather": "Clear"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        62.1822500000001,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 62.34999999999774,
+      "meshes": 2528,
+      "activeMeshes": 1845,
+      "physicsBodies": 262,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 27,
+        "totalMeshes": 1221,
+        "residentMeshes": 1053,
+        "totalColliders": 249,
+        "residentColliders": 227,
+        "cpuGeometryBytes": 55531080,
+        "meshLoads": 1164,
+        "meshDisposals": 111,
+        "colliderLoads": 322,
+        "colliderDisposals": 95,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 48,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 228,
+        "fetchedBytes": 171171061,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 54,
+        "packagesEvicted": 6,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "23:00",
+      "weather": "CLEAR",
+      "view": {
+        "yaw": -1.572500000000001,
+        "pitch": 0.08,
+        "camera": [
+          184.98400129846652,
+          63.67182346984597,
+          -29.99150888231843
+        ],
+        "far": 1500,
+        "forward": [
+          -0.9857794110042682,
+          -0.1680361043334166,
+          -0.0016794286311061187
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -109202.3789649743,
+          -412040.21732525487,
+          144214.0760638392
+        ],
+        "sunDirection": [
+          -0.24267195325549848,
+          -0.9156449273894554,
+          0.32047572458630935
+        ],
+        "turbidity": 3.8,
+        "mieCoefficient": 0.0038,
+        "rayleigh": 2.15,
+        "shaderLanguage": 1,
+        "starAlpha": 0.8
+      },
+      "lighting": {
+        "direction": [
+          0.24267195325549845,
+          0.9156449273894552,
+          -0.3204757245863093
+        ],
+        "intensity": 0,
+        "solarDot": -0.9999999999999999,
+        "position": [
+          143.59920701167522,
+          -75.1644891084182,
+          18.071358687946393
+        ],
+        "diffuse": [
+          1,
+          0.6,
+          0.39
+        ],
+        "environmentIntensity": 0.025
+      },
+      "fog": {
+        "color": [
+          0.018000000000000016,
+          0.027000000000000024,
+          0.04799999999999999
+        ],
+        "density": 0.00125
+      },
+      "visibility": {
+        "activeWorldMeshes": 1804,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2126.18661944427,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1027.6917379460838,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-concrete:structure:false",
+            "material": "world/compound-concrete",
+            "distance": 710.0807201874579,
+            "materialId": 13423,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:detail:false",
+            "material": "world/compound-fence",
+            "distance": 709.7366130953139,
+            "materialId": 13327,
+            "triangles": 1188
+          },
+          {
+            "name": "world-chunk/-576:0:world/grass:global:false",
+            "material": "world/grass",
+            "distance": 697.9708494155279,
+            "materialId": 252,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad-marking:detail:false",
+            "material": "world/helipad-marking",
+            "distance": 691.6798004831871,
+            "materialId": 13326,
+            "triangles": 84
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad:structure:false",
+            "material": "world/helipad",
+            "distance": 682.8891975161306,
+            "materialId": 13424,
+            "triangles": 160
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:structure:true",
+            "material": "world/compound-fence",
+            "distance": 670.6213797079528,
+            "materialId": 13327,
+            "triangles": 24
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-olive:structure:true",
+            "material": "world/compound-olive",
+            "distance": 670.2459064051412,
+            "materialId": 13422,
+            "triangles": 24
+          },
+          {
+            "name": "sign/RESTRICTED  /  CREATIVE TRAINING ANNEX/-454.8:2.73:155",
+            "material": "sign-material/RESTRICTED  /  CREATIVE TRAINING ANNEX",
+            "distance": 668.7744888240069,
+            "materialId": 13317,
+            "triangles": 4
+          },
+          {
+            "name": "sign/COASTAL RESERVE/-454.8:3.51:155",
+            "material": "sign-material/COASTAL RESERVE",
+            "distance": 668.7038627529163,
+            "materialId": 13323,
+            "triangles": 4
+          },
+          {
+            "name": "reserve/gate-alarm",
+            "material": "reserve/alarm-material",
+            "distance": 665.1868969711232,
+            "materialId": 2590,
+            "triangles": 400
+          }
+        ]
+      }
+    },
+    {
+      "label": "haze",
+      "requested": {
+        "time": 15,
+        "weather": "Haze"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        62.1822500000001,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 73.04999999999714,
+      "meshes": 2516,
+      "activeMeshes": 1729,
+      "physicsBodies": 278,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 27,
+        "totalMeshes": 1221,
+        "residentMeshes": 1025,
+        "totalColliders": 249,
+        "residentColliders": 243,
+        "cpuGeometryBytes": 54914944,
+        "meshLoads": 1248,
+        "meshDisposals": 223,
+        "colliderLoads": 407,
+        "colliderDisposals": 164,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 47,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 233,
+        "fetchedBytes": 187340749,
+        "residentMaterials": 165,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 57,
+        "packagesEvicted": 10,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "15:00",
+      "weather": "HAZE",
+      "view": {
+        "yaw": -1.572500000000001,
+        "pitch": 0.08,
+        "camera": [
+          184.98400129846652,
+          63.67182346984597,
+          -29.99150888231843
+        ],
+        "far": 1500,
+        "forward": [
+          -0.9857794110042682,
+          -0.1680361043334166,
+          -0.0016794286311061187
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": false,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -309662.4599884071,
+          308179.7422974448,
+          -107862.90980410567
+        ],
+        "sunDirection": [
+          -0.6881387999742381,
+          0.6848438717720996,
+          -0.23969535512023485
+        ],
+        "turbidity": 10,
+        "mieCoefficient": 0.012,
+        "rayleigh": 2.15,
+        "shaderLanguage": 1,
+        "starAlpha": 0
+      },
+      "lighting": {
+        "direction": [
+          0.688138799974238,
+          -0.6848438717720995,
+          0.23969535512023482
+        ],
+        "intensity": 1.8340603116826342,
+        "solarDot": -1,
+        "position": [
+          76.7791800038643,
+          164.90883076581503,
+          -65.95430326803523
+        ],
+        "diffuse": [
+          1,
+          0.8468927342649699,
+          0.7074335154835328
+        ],
+        "environmentIntensity": 0.36897429670209575
+      },
+      "fog": {
+        "color": [
+          0.64,
+          0.65,
+          0.62
+        ],
+        "density": 0.004
+      },
+      "visibility": {
+        "activeWorldMeshes": 1698,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2126.18661944427,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1027.6917379460838,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-concrete:structure:false",
+            "material": "world/compound-concrete",
+            "distance": 710.0807201874579,
+            "materialId": 13423,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:detail:false",
+            "material": "world/compound-fence",
+            "distance": 709.7366130953139,
+            "materialId": 13327,
+            "triangles": 1188
+          },
+          {
+            "name": "world-chunk/-576:0:world/grass:global:false",
+            "material": "world/grass",
+            "distance": 697.9708494155279,
+            "materialId": 252,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad-marking:detail:false",
+            "material": "world/helipad-marking",
+            "distance": 691.6798004831871,
+            "materialId": 13326,
+            "triangles": 84
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad:structure:false",
+            "material": "world/helipad",
+            "distance": 682.8891975161306,
+            "materialId": 13424,
+            "triangles": 160
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:structure:true",
+            "material": "world/compound-fence",
+            "distance": 670.6213797079528,
+            "materialId": 13327,
+            "triangles": 24
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-olive:structure:true",
+            "material": "world/compound-olive",
+            "distance": 670.2459064051412,
+            "materialId": 13422,
+            "triangles": 24
+          },
+          {
+            "name": "sign/RESTRICTED  /  CREATIVE TRAINING ANNEX/-454.8:2.73:155",
+            "material": "sign-material/RESTRICTED  /  CREATIVE TRAINING ANNEX",
+            "distance": 668.7744888240069,
+            "materialId": 13317,
+            "triangles": 4
+          },
+          {
+            "name": "sign/COASTAL RESERVE/-454.8:3.51:155",
+            "material": "sign-material/COASTAL RESERVE",
+            "distance": 668.7038627529163,
+            "materialId": 13323,
+            "triangles": 4
+          },
+          {
+            "name": "reserve/gate-alarm",
+            "material": "reserve/alarm-material",
+            "distance": 665.1868969711232,
+            "materialId": 2590,
+            "triangles": 400
+          }
+        ]
+      }
+    },
+    {
+      "label": "rain",
+      "requested": {
+        "time": 15,
+        "weather": "Rain"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        62.1822500000001,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 92.26666666666272,
+      "meshes": 2521,
+      "activeMeshes": 1836,
+      "physicsBodies": 263,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 25,
+        "totalMeshes": 1221,
+        "residentMeshes": 1045,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 55441448,
+        "meshLoads": 1280,
+        "meshDisposals": 235,
+        "colliderLoads": 466,
+        "colliderDisposals": 238,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 46,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 237,
+        "fetchedBytes": 189281543,
+        "residentMaterials": 167,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 59,
+        "packagesEvicted": 13,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0.7098514291794358,
+        "sheltered": false,
+        "particles": 347
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "15:00",
+      "weather": "RAIN",
+      "view": {
+        "yaw": -1.572500000000001,
+        "pitch": 0.08,
+        "camera": [
+          184.98400129846652,
+          63.67182346984597,
+          -29.99150888231843
+        ],
+        "far": 1500,
+        "forward": [
+          -0.9857794110042682,
+          -0.1680361043334166,
+          -0.0016794286311061187
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": false,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -309778.03654832364,
+          308076.24670486274,
+          -107826.68634670197
+        ],
+        "sunDirection": [
+          -0.6883956367740525,
+          0.6846138815663616,
+          -0.2396148585482266
+        ],
+        "turbidity": 18,
+        "mieCoefficient": 0.035,
+        "rayleigh": 1.4,
+        "shaderLanguage": 1,
+        "starAlpha": 0
+      },
+      "lighting": {
+        "direction": [
+          0.6883956367740525,
+          -0.6846138815663617,
+          0.2396148585482266
+        ],
+        "intensity": 0.7333627428271239,
+        "solarDot": -1,
+        "position": [
+          76.74065448389213,
+          164.87433223495435,
+          -65.942228782234
+        ],
+        "diffuse": [
+          1,
+          0.8468047692206666,
+          0.7073204175694285
+        ],
+        "environmentIntensity": 0.36883606591819057
+      },
+      "fog": {
+        "color": [
+          0.36,
+          0.4,
+          0.43
+        ],
+        "density": 0.003
+      },
+      "visibility": {
+        "activeWorldMeshes": 1796,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2126.18661944427,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1027.6917379460838,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-concrete:structure:false",
+            "material": "world/compound-concrete",
+            "distance": 710.0807201874579,
+            "materialId": 13423,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:detail:false",
+            "material": "world/compound-fence",
+            "distance": 709.7366130953139,
+            "materialId": 13327,
+            "triangles": 1188
+          },
+          {
+            "name": "world-chunk/-576:0:world/grass:global:false",
+            "material": "world/grass",
+            "distance": 697.9708494155279,
+            "materialId": 252,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad-marking:detail:false",
+            "material": "world/helipad-marking",
+            "distance": 691.6798004831871,
+            "materialId": 13326,
+            "triangles": 84
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad:structure:false",
+            "material": "world/helipad",
+            "distance": 682.8891975161306,
+            "materialId": 13424,
+            "triangles": 160
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:structure:true",
+            "material": "world/compound-fence",
+            "distance": 670.6213797079528,
+            "materialId": 13327,
+            "triangles": 24
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-olive:structure:true",
+            "material": "world/compound-olive",
+            "distance": 670.2459064051412,
+            "materialId": 13422,
+            "triangles": 24
+          },
+          {
+            "name": "sign/RESTRICTED  /  CREATIVE TRAINING ANNEX/-454.8:2.73:155",
+            "material": "sign-material/RESTRICTED  /  CREATIVE TRAINING ANNEX",
+            "distance": 668.7744888240069,
+            "materialId": 13317,
+            "triangles": 4
+          },
+          {
+            "name": "sign/COASTAL RESERVE/-454.8:3.51:155",
+            "material": "sign-material/COASTAL RESERVE",
+            "distance": 668.7038627529163,
+            "materialId": 13323,
+            "triangles": 4
+          },
+          {
+            "name": "reserve/gate-alarm",
+            "material": "reserve/alarm-material",
+            "distance": 665.1868969711232,
+            "materialId": 2590,
+            "triangles": 400
+          }
+        ]
+      }
+    },
+    {
+      "label": "night-rain",
+      "requested": {
+        "time": 23,
+        "weather": "Rain"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        62.1822500000001,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 96.33333333332915,
+      "meshes": 2566,
+      "activeMeshes": 1864,
+      "physicsBodies": 265,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 26,
+        "totalMeshes": 1221,
+        "residentMeshes": 1088,
+        "totalColliders": 249,
+        "residentColliders": 230,
+        "cpuGeometryBytes": 56158408,
+        "meshLoads": 1323,
+        "meshDisposals": 235,
+        "colliderLoads": 469,
+        "colliderDisposals": 239,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 48,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 241,
+        "fetchedBytes": 191466767,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 61,
+        "packagesEvicted": 13,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0.9891769258294677,
+        "sheltered": false,
+        "particles": 354
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "23:00",
+      "weather": "RAIN",
+      "view": {
+        "yaw": -1.572500000000001,
+        "pitch": 0.08,
+        "camera": [
+          184.98400129846652,
+          63.67182346984597,
+          -29.99150888231843
+        ],
+        "far": 1500,
+        "forward": [
+          -0.9857794110042682,
+          -0.1680361043334166,
+          -0.0016794286311061187
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": false,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -109191.06122180354,
+          -412042.88935976464,
+          144215.0112759176
+        ],
+        "sunDirection": [
+          -0.24264680271511901,
+          -0.9156508652439216,
+          0.3204778028353725
+        ],
+        "turbidity": 18,
+        "mieCoefficient": 0.035,
+        "rayleigh": 1.4,
+        "shaderLanguage": 1,
+        "starAlpha": 0
+      },
+      "lighting": {
+        "direction": [
+          0.24264680271511896,
+          0.9156508652439215,
+          -0.32047780283537247
+        ],
+        "intensity": 0,
+        "solarDot": -1.0000000000000002,
+        "position": [
+          143.60297959273214,
+          -75.16537978658812,
+          18.071670425305868
+        ],
+        "diffuse": [
+          1,
+          0.6,
+          0.39
+        ],
+        "environmentIntensity": 0.025
+      },
+      "fog": {
+        "color": [
+          0.018000000000000016,
+          0.027000000000000024,
+          0.04799999999999999
+        ],
+        "density": 0.003
+      },
+      "visibility": {
+        "activeWorldMeshes": 1824,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2126.18661944427,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1027.6917379460838,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-concrete:structure:false",
+            "material": "world/compound-concrete",
+            "distance": 710.0807201874579,
+            "materialId": 13423,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:detail:false",
+            "material": "world/compound-fence",
+            "distance": 709.7366130953139,
+            "materialId": 13327,
+            "triangles": 1188
+          },
+          {
+            "name": "world-chunk/-576:0:world/grass:global:false",
+            "material": "world/grass",
+            "distance": 697.9708494155279,
+            "materialId": 252,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad-marking:detail:false",
+            "material": "world/helipad-marking",
+            "distance": 691.6798004831871,
+            "materialId": 13326,
+            "triangles": 84
+          },
+          {
+            "name": "world-chunk/-432:144:world/helipad:structure:false",
+            "material": "world/helipad",
+            "distance": 682.8891975161306,
+            "materialId": 13424,
+            "triangles": 160
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:structure:true",
+            "material": "world/compound-fence",
+            "distance": 670.6213797079528,
+            "materialId": 13327,
+            "triangles": 24
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-olive:structure:true",
+            "material": "world/compound-olive",
+            "distance": 670.2459064051412,
+            "materialId": 13422,
+            "triangles": 24
+          },
+          {
+            "name": "sign/RESTRICTED  /  CREATIVE TRAINING ANNEX/-454.8:2.73:155",
+            "material": "sign-material/RESTRICTED  /  CREATIVE TRAINING ANNEX",
+            "distance": 668.7744888240069,
+            "materialId": 13317,
+            "triangles": 4
+          },
+          {
+            "name": "sign/COASTAL RESERVE/-454.8:3.51:155",
+            "material": "sign-material/COASTAL RESERVE",
+            "distance": 668.7038627529163,
+            "materialId": 13323,
+            "triangles": 4
+          },
+          {
+            "name": "reserve/gate-alarm",
+            "material": "reserve/alarm-material",
+            "distance": 665.1868969711232,
+            "materialId": 2590,
+            "triangles": 400
+          }
+        ]
+      }
+    },
+    {
+      "label": "night-stars",
+      "requested": {
+        "time": 23,
+        "weather": "Clear"
+      },
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        62.1822500000001,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 102.26666666666215,
+      "meshes": 2555,
+      "activeMeshes": 570,
+      "physicsBodies": 265,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 26,
+        "totalMeshes": 1221,
+        "residentMeshes": 1088,
+        "totalColliders": 249,
+        "residentColliders": 219,
+        "cpuGeometryBytes": 56171848,
+        "meshLoads": 1327,
+        "meshDisposals": 239,
+        "colliderLoads": 492,
+        "colliderDisposals": 273,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 48,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 242,
+        "fetchedBytes": 191589740,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 62,
+        "packagesEvicted": 14,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0.8400601860593688,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 0,
+        "effects": 0,
+        "state": "running"
+      },
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "clock": "23:01",
+      "weather": "CLEAR",
+      "view": {
+        "yaw": -1.570000000000001,
+        "pitch": -0.5,
+        "camera": [
+          184.38792408060178,
+          60.87514723734958,
+          -30.00349366065888
+        ],
+        "far": 1500,
+        "forward": [
+          -0.9140496929423091,
+          0.4056015645932094,
+          0.0007277579342841473
+        ]
+      },
+      "sky": {
+        "dome": {
+          "name": "sky/dome",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 12,
+          "material": "sky/atmospheric-scattering",
+          "materialId": 2,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            0.8250000000000001,
+            0.8250000000000001,
+            0.8250000000000001
+          ],
+          "effectReady": true
+        },
+        "stars": {
+          "name": "sky/stars",
+          "enabled": true,
+          "pickable": false,
+          "applyFog": false,
+          "infiniteDistance": true,
+          "triangles": 320,
+          "material": "sky/starlight",
+          "materialId": 5,
+          "depthWriteDisabled": true,
+          "renderingGroupId": 0,
+          "scale": [
+            1470,
+            1470,
+            1470
+          ],
+          "effectReady": true
+        },
+        "meshCount": 2,
+        "materialCount": 2,
+        "sunPosition": [
+          -107866.49630882304,
+          -412353.5782232876,
+          144323.75237815062
+        ],
+        "sunDirection": [
+          -0.23970332513071785,
+          -0.916341284940639,
+          0.32071944972922356
+        ],
+        "turbidity": 3.8,
+        "mieCoefficient": 0.0038,
+        "rayleigh": 2.15,
+        "shaderLanguage": 1,
+        "starAlpha": 0.8
+      },
+      "lighting": {
+        "direction": [
+          0.23970332513071788,
+          0.916341284940639,
+          -0.3207194497292236
+        ],
+        "intensity": 0,
+        "solarDot": -1,
+        "position": [
+          144.0445012303923,
+          -75.26894274109577,
+          18.107917459383543
+        ],
+        "diffuse": [
+          1,
+          0.6,
+          0.39
+        ],
+        "environmentIntensity": 0.025
+      },
+      "fog": {
+        "color": [
+          0.018000000000000016,
+          0.027000000000000024,
+          0.04799999999999999
+        ],
+        "density": 0.00125
+      },
+      "visibility": {
+        "activeWorldMeshes": 566,
+        "opaqueMaterialOrderViolations": [],
+        "activeDistantMeshes": [
+          {
+            "name": "Atlantic Ocean",
+            "material": "world/ocean-water",
+            "distance": 2126.700410949146,
+            "materialId": 504,
+            "triangles": 2
+          },
+          {
+            "name": "world-chunk/1152:0:world/seabed:global:false",
+            "material": "world/seabed",
+            "distance": 1028.1060789868254,
+            "materialId": 742,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-concrete:structure:false",
+            "material": "world/compound-concrete",
+            "distance": 709.261614878127,
+            "materialId": 13423,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/compound-fence:detail:false",
+            "material": "world/compound-fence",
+            "distance": 708.9319678072687,
+            "materialId": 13327,
+            "triangles": 1188
+          },
+          {
+            "name": "world-chunk/-576:0:world/grass:global:false",
+            "material": "world/grass",
+            "distance": 697.125236889455,
+            "materialId": 252,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/signal-2:detail:false",
+            "material": "world/signal-2",
+            "distance": 624.9894599772784,
+            "materialId": 229,
+            "triangles": 512
+          },
+          {
+            "name": "world-chunk/-432:144:world/signal-1:detail:false",
+            "material": "world/signal-1",
+            "distance": 624.9597956622483,
+            "materialId": 228,
+            "triangles": 512
+          },
+          {
+            "name": "world-chunk/-432:144:world/signal-0:detail:false",
+            "material": "world/signal-0",
+            "distance": 624.9303041984823,
+            "materialId": 227,
+            "triangles": 512
+          },
+          {
+            "name": "world-chunk/-432:144:world/glass-blue:detail:false",
+            "material": "world/glass-blue",
+            "distance": 624.7815841134345,
+            "materialId": 243,
+            "triangles": 444
+          },
+          {
+            "name": "world-chunk/-432:0:world/asphalt:global:false",
+            "material": "world/asphalt",
+            "distance": 619.4151145444122,
+            "materialId": 743,
+            "triangles": 12
+          },
+          {
+            "name": "world-chunk/-432:144:world/metal-dark:detail:false",
+            "material": "world/metal-dark",
+            "distance": 616.9933321429432,
+            "materialId": 226,
+            "triangles": 424
+          },
+          {
+            "name": "world-chunk/-432:144:world/road-white:detail:false",
+            "material": "world/road-white",
+            "distance": 614.5730187125824,
+            "materialId": 224,
+            "triangles": 1008
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

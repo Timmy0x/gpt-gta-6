@@ -1,0 +1,738 @@
+{
+  "origin": "http://127.0.0.1:4197",
+  "backend": "webgpu",
+  "fingerprint": {
+    "entry": "/assets/index-CxJrQY1k.js",
+    "sha256": "0e304f177228f219ba9cc1c5ccad41347655f108c4deedb543f41583541e5dcc",
+    "worldBuild": "authored-860409-v6-dry-sand",
+    "browser": "152.0.7977.83"
+  },
+  "scope": "Normal Creative UI aircraft spawn, E entry, mouse camera orbit, Tab character switching and takeoff keys; diagnostics read seat/model state only. No game-state or camera-transform hooks.",
+  "checks": [
+    {
+      "kind": "plane",
+      "label": "jason-ground-rear",
+      "backend": "WebGPU",
+      "characterName": "Jason",
+      "visibleSkins": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "intendedSeat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "vehicle": {
+        "kind": "plane",
+        "health": 100,
+        "speed": 0.017906122952596547,
+        "position": [
+          182.49977111816406,
+          0.504133403301239,
+          -565.059814453125
+        ],
+        "velocity": [
+          -0.0016213977942243218,
+          -0.033081889152526855,
+          -0.021443115547299385
+        ]
+      },
+      "prompt": "W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake"
+    },
+    {
+      "kind": "plane",
+      "label": "jason-ground-side",
+      "backend": "WebGPU",
+      "characterName": "Jason",
+      "visibleSkins": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "intendedSeat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "vehicle": {
+        "kind": "plane",
+        "health": 100,
+        "speed": 0.018214539112986986,
+        "position": [
+          182.49969482421875,
+          0.5043977499008179,
+          -565.1351928710938
+        ],
+        "velocity": [
+          0.0010773291578516364,
+          -0.04229346290230751,
+          -0.005190054886043072
+        ]
+      },
+      "prompt": "W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake"
+    },
+    {
+      "kind": "plane",
+      "label": "lucia-ground-side",
+      "backend": "WebGPU",
+      "characterName": "Lucia",
+      "visibleSkins": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "intendedSeat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "vehicle": {
+        "kind": "plane",
+        "health": 100,
+        "speed": 0.010957453853710792,
+        "position": [
+          182.4994659423828,
+          0.5044048428535461,
+          -565.1857299804688
+        ],
+        "velocity": [
+          0.0013392369728535414,
+          -0.06766293197870255,
+          -0.015647444874048233
+        ]
+      },
+      "prompt": "W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake"
+    },
+    {
+      "kind": "plane",
+      "label": "lucia-ground-rear",
+      "backend": "WebGPU",
+      "characterName": "Lucia",
+      "visibleSkins": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "intendedSeat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "vehicle": {
+        "kind": "plane",
+        "health": 100,
+        "speed": 0.017427506723395325,
+        "position": [
+          182.49920654296875,
+          0.5042924880981445,
+          -565.2483520507812
+        ],
+        "velocity": [
+          -0.0005448590964078903,
+          -0.051822349429130554,
+          -0.009649927727878094
+        ]
+      },
+      "prompt": "W  Accelerate to 90 km/h · then hold SPACE / SHIFT to take off · S  Brake"
+    },
+    {
+      "kind": "plane",
+      "label": "lucia-airborne",
+      "backend": "WebGPU",
+      "characterName": "Lucia",
+      "visibleSkins": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "intendedSeat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "vehicle": {
+        "kind": "plane",
+        "health": 100,
+        "speed": 32.48153230785442,
+        "position": [
+          184.4454345703125,
+          8.302149772644043,
+          -273.348388671875
+        ],
+        "velocity": [
+          0.7084647417068481,
+          4.399393558502197,
+          32.46489334106445
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit"
+    },
+    {
+      "kind": "plane",
+      "label": "takeoff-time",
+      "seconds": 14.225971917000003
+    },
+    {
+      "kind": "plane",
+      "label": "jason-airborne",
+      "backend": "WebGPU",
+      "characterName": "Jason",
+      "visibleSkins": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "intendedSeat": [
+        0,
+        -0.86,
+        -0.1
+      ],
+      "vehicle": {
+        "kind": "plane",
+        "health": 100,
+        "speed": 31.17793184996849,
+        "position": [
+          185.66624450683594,
+          17.496498107910156,
+          -219.69430541992188
+        ],
+        "velocity": [
+          0.7271384596824646,
+          6.222378253936768,
+          31.153865814208984
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Nose up · C  Nose down · W  Throttle · S  Slow / landing brake · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "jason-ground-rear",
+      "backend": "WebGPU",
+      "characterName": "Jason",
+      "visibleSkins": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 0,
+        "position": [
+          0.001486461260356009,
+          0.8450179696083069,
+          -112.00068664550781
+        ],
+        "velocity": [
+          0.0013449323596432805,
+          -0.0576549731194973,
+          -0.0012874550884589553
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "jason-ground-side",
+      "backend": "WebGPU",
+      "characterName": "Jason",
+      "visibleSkins": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 0.00046100723940914343,
+        "position": [
+          0.0010733563685789704,
+          0.8481279015541077,
+          -112.00055694580078
+        ],
+        "velocity": [
+          -0.000366037042113021,
+          -0.05642325058579445,
+          0.0002995606337208301
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "lucia-ground-side",
+      "backend": "WebGPU",
+      "characterName": "Lucia",
+      "visibleSkins": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 0,
+        "position": [
+          0.0009000290301628411,
+          0.8680905103683472,
+          -112.00015258789062
+        ],
+        "velocity": [
+          0,
+          -0.03958717733621597,
+          0
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "lucia-ground-front",
+      "backend": "WebGPU",
+      "characterName": "Lucia",
+      "visibleSkins": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 0,
+        "position": [
+          0.0009001458529382944,
+          0.9192912578582764,
+          -112.00017547607422
+        ],
+        "velocity": [
+          0,
+          -0.03958717733621597,
+          0
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "jason-ground-front",
+      "backend": "WebGPU",
+      "characterName": "Jason",
+      "visibleSkins": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 0,
+        "position": [
+          0.0009001446305774152,
+          0.9524797797203064,
+          -112.00017547607422
+        ],
+        "velocity": [
+          0,
+          -0.03958717733621597,
+          0
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "lucia-ground-rear",
+      "backend": "WebGPU",
+      "characterName": "Lucia",
+      "visibleSkins": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 0,
+        "position": [
+          0.0009001447469927371,
+          1.0258755683898926,
+          -112.00017547607422
+        ],
+        "velocity": [
+          0,
+          -0.03958717733621597,
+          0
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "lucia-airborne",
+      "backend": "WebGPU",
+      "characterName": "Lucia",
+      "visibleSkins": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 4.616315006153082e-7,
+        "position": [
+          0.0009001441649161279,
+          8.241767883300781,
+          -112.00016784667969
+        ],
+        "velocity": [
+          -2.5525512259427785e-10,
+          3.8325960636138916,
+          4.617484421487461e-7
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    },
+    {
+      "kind": "helicopter",
+      "label": "takeoff-time",
+      "seconds": 3.7538749580000004
+    },
+    {
+      "kind": "helicopter",
+      "label": "jason-airborne",
+      "backend": "WebGPU",
+      "characterName": "Jason",
+      "visibleSkins": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "seated": true,
+      "transitioning": false,
+      "seat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "intendedSeat": [
+        -0.3,
+        -0.88,
+        0.35
+      ],
+      "vehicle": {
+        "kind": "helicopter",
+        "health": 100,
+        "speed": 4.704773951663478e-7,
+        "position": [
+          0.0009001437574625015,
+          15.883170127868652,
+          -112.00016784667969
+        ],
+        "velocity": [
+          -2.1473675615446552e-10,
+          4.141751289367676,
+          4.7053057983248436e-7
+        ]
+      },
+      "prompt": "SPACE / SHIFT  Rise · C  Descend / land · W/S  Move · E  Exit"
+    }
+  ],
+  "errors": []
+}

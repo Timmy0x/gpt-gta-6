@@ -1,6 +1,6 @@
 # Licensed human assets
 
-The player can use two Microsoft Rocketbox avatars, `Male_Adult_01` and `Female_Adult_01`. These replace the original procedural player skins with modeled anatomy, fingers, face detail, hair alpha geometry, garment folds and diffuse/normal textures. They are generic licensed human substitutes, not depictions of Rockstar's Jason or Lucia and not a claim of GTA VI visual parity. Civilian and police skins remain the original procedural assets until distinct licensed variants are integrated.
+The player can use two Microsoft Rocketbox avatars, `Male_Adult_01` and `Female_Adult_01`. These replace the original procedural player skins with modeled anatomy, fingers, face detail, hair alpha geometry, garment folds and diffuse/normal textures. They are generic licensed human substitutes, not depictions of Rockstar's Jason or Lucia and not a claim of GTA VI visual parity. Civilians now use two additional licensed variants at nearby detail; police and other role-specific uniforms remain procedural.
 
 ## Source and permission
 
@@ -33,7 +33,7 @@ Both texture sets together occupy about 8.8 MB. `public/characters/rocketbox/man
 
 ## Runtime contract
 
-Call `prepareCharacterAssets(scene)` before creating `Player` or `Population`. A rejected load can be caught by the boot code; Character retains its original procedural skin when the templates are unavailable. Failed preparation can be retried. Only callers explicitly passing `{ licensedPlayerSkin: true }` as the seventh constructor argument select these skins. Player enables the option for Jason/Lucia; NPC constructors retain their existing appearances.
+Call `prepareCharacterAssets(scene)` before creating `Player` or `Population`. A rejected load can be caught by the boot code; Character retains its original procedural skin when the templates are unavailable. Failed preparation can be retried. Only callers explicitly passing `{ licensedPlayerSkin: true }` as the seventh constructor argument select these skins. Player enables the option for Jason/Lucia. Population independently opts into `{ licensedCivilianSkin }` for its two licensed civilian variants.
 
 `RocketboxSkin` adapts the existing 17-joint gameplay skeleton to 17 anatomical anchors in the imported 80-bone rig. The adapter aligns arm/leg source directions and preserves the source's face/finger child bones. The existing gameplay skeleton, `.torso`, weapon attachment points, collision, seating overlays and ragdoll constraints retain their existing APIs. The procedural torso uses `isVisible=false`, so weapon children attached to it remain enabled. Visible imported parts are included in `Character.parts` before callers attach hit metadata.
 
@@ -55,3 +55,12 @@ The ordinary pointer-lock review found that changing camera pitch left the visib
 The combat regression checks 18 yaw/pitch/crouch combinations, barrel direction dot product above 0.9999, hand attachment within 10 cm, repeat-call stability and retained recoil. All 114 tests and a production build pass. Ordinary WebGPU and WebGL2 gameplay reviews each pass 10 stages, including actual pointer-locked up/down look, Jason/Lucia switching and held-C crouched aim; aimed barrel error stays below 0.001° in those samples. Earlier baseline screenshots are preserved. Full finger contact, left-hand support grip and animation fidelity remain unfinished.
 
 A fresh WebGPU normal-control combat audit with this correction passes 16 stages: seven actual shots kill the spawned civilian, the corpse stays dead after ten seconds, police arrest/recovery preserves it, and normal save/load/fresh Continue preserve it. Zero errors/warnings were recorded. This complements the earlier casualty tests; it does not establish a separate WASTED browser test or the performance target. Evidence uses `character-gameplay-*-aligned` and `casualty-controls-aiming`.
+
+
+## Detailed civilian variants
+
+Population now selects Microsoft Rocketbox Male Adult 03 or Female Adult 06 from each civilian's stable appearance ID, independently of the player assets. Main awaits `prepareCivilianAssets` with its own fallback handler. A failed civilian group load leaves the player templates available, releases successful partial loads, and permits retry. The prepared variants total 9,312,350 bytes including local textures; they are generic substitutes, not region-specific wardrobe or Rockstar likenesses. See `data/characters/civilians/COMPATIBILITY.md` for the pinned MIT source and exact asset checks.
+
+One scene observer chooses at most twelve detailed civilian skins, entering within 70 metres and exiting beyond 80 metres. An eight-metre selection preference reduces switching near the budget boundary; nearby casualties and active ragdolls take priority. Distant/excess civilians use the original gameplay mesh. Switching detail changes visibility and shadow membership without rebuilding the private imported rig, so returning fatal bodies retain their pose. Source geometry/materials/textures are shared; each civilian retains its private skeleton. This bounds detailed draws/retarget work, not total CPU skeleton storage.
+
+Six additional actual-asset tests cover independent loading/failure/retry, stable appearance selection, the twelve-person cap and distance hysteresis, direct driver-bone synchronization, fatal-ragdoll detail return, and resource lifetime. The existing player/aim/casualty regressions pass alongside them. The source long garment still produces angular seated folds and stretches at raised shoulders; authored locomotion, cloth/facial motion, more regional wardrobe, and full crowd performance remain open.

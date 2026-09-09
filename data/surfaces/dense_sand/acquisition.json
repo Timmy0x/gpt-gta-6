@@ -1,0 +1,28 @@
+{
+  "acquired": "2026-09-09T18:27:24.756Z",
+  "provider": "Poly Haven",
+  "providerCredit": "Powered by Poly Haven",
+  "api": [
+    "https://api.polyhaven.com/info/dense_sand",
+    "https://api.polyhaven.com/files/dense_sand"
+  ],
+  "license": "https://polyhaven.com/license",
+  "apiTerms": "https://github.com/Poly-Haven/Public-API/blob/master/ToS.md",
+  "userAgent": "LeonidaFreeRoam-AssetResearch/0.1 (+https://github.com/Timmy0x/gpt-gta-6)",
+  "modifications": "None. Publisher 1K JPEG maps copied unchanged; file size and publisher MD5 verified. No preview renders redistributed.",
+  "sourceAppearance": "Dry, compacted tan sand. A lighter authored fallback for the dry beach, not a documented Miami or Leonida sand capture.",
+  "totalBytes": 2359720,
+  "comparison": {
+    "sand_03_meanRGB": [
+      107.96,
+      96.12,
+      78.73
+    ],
+    "dense_sand_meanRGB": [
+      147.13,
+      128.39,
+      99.39
+    ],
+    "method": "Pillow ImageStat mean over unchanged 1024x1024 RGB JPEG pixels; encoded sRGB values, not calibrated reflectance."
+  }
+}

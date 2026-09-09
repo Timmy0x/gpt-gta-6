@@ -1,0 +1,20 @@
+✔ Space / gamepad A is collective or elevator in aircraft, without applying the wheel handbrake (0.735667ms)
+✔ aircraft instructions expose required lift, change after runway acceleration, and follow remapped keys or gamepad (0.526709ms)
+BJS - [20:30:56]: Babylon.js v9.25.0 - Null engine
+✔ both full player skins and procedural fallbacks fit inside the actual aircraft cockpit surfaces (1721.663417ms)
+ℹ plane Jason licensed: 14064 vertices, roof clearance 0.1224m, floor clearance 0.1033m; {"min":[-0.27936236028625233,-0.35945337987219594,-0.2352115676408362],"max":[0.27941963618989485,0.972627011216535,0.6839451872431811]}
+ℹ plane Jason fallback: 4692 vertices, roof clearance 0.1027m, floor clearance 0.0790m; {"min":[-0.318,-0.37790343499183654,-0.23600000149011613],"max":[0.318,0.9923706939648838,0.6704392437338829]}
+ℹ plane Lucia licensed: 16308 vertices, roof clearance 0.1420m, floor clearance 0.1013m; {"min":[-0.28872808609510076,-0.36117410861370175,-0.26059453574967195],"max":[0.2887278852675862,0.9528592406570904,0.6619557854125501]}
+ℹ plane Lucia fallback: 4662 vertices, roof clearance 0.1027m, floor clearance 0.0790m; {"min":[-0.302,-0.3779034945964813,-0.23600000149011613],"max":[0.302,0.9923706939648838,0.6704392437338829]}
+ℹ helicopter Jason licensed: 14064 vertices, roof clearance 0.0699m, floor clearance 0.0877m; {"min":[-0.5793623722071812,-0.3794534380239758,0.21478841938065918],"max":[-0.0205802994370905,0.9526269530647552,1.1339451827728197]}
+ℹ helicopter Jason fallback: 4692 vertices, roof clearance 0.0508m, floor clearance 0.0637m; {"min":[-0.618000011920929,-0.3979034159183502,0.2139999940395355],"max":[0.01799998807907105,0.9723707130383701,1.1204392392635345]}
+ℹ helicopter Lucia licensed: 16308 vertices, roof clearance 0.0888m, floor clearance 0.0903m; {"min":[-0.5887280217220966,-0.3811741276871872,0.189405446666972],"max":[-0.011272050359306673,0.9328592597305767,1.1119558572361845]}
+ℹ helicopter Lucia fallback: 4662 vertices, roof clearance 0.0508m, floor clearance 0.0637m; {"min":[-0.602000011920929,-0.397903475522995,0.2139999940395355],"max":[0.0019999880790710356,0.9723707130383701,1.1204392392635345]}
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15763.559417

@@ -13,7 +13,7 @@ import {
   type Scene,
   type ShadowGenerator,
 } from "@babylonjs/core";
-import { RocketboxSkin } from './characters/RocketboxSkin';
+import { RocketboxSkin, type CivilianSkin } from './characters/RocketboxSkin';
 
 type Joint =
   | "pelvis"
@@ -36,7 +36,7 @@ type Joint =
 type Influence = [Joint, number];
 type Ring = { y: number; w: number; d: number; x?: number; z?: number };
 type SharedMaterial = { material: PBRMaterial; users: number };
-export type CharacterOptions = { licensedPlayerSkin?: boolean };
+export type CharacterOptions = { licensedPlayerSkin?: boolean; licensedCivilianSkin?: CivilianSkin };
 const characterMaterials = new WeakMap<Scene, SharedMaterial>();
 
 /** Original, metre-scale, vertex-colored character asset with a real Babylon skin rig.
@@ -739,9 +739,9 @@ export class Character {
       ),
     );
     this.skeleton.prepare();
-    this.visualSkin = RocketboxSkin.create(scene, this.root, this.skeleton, name, female, shadows, options.licensedPlayerSkin === true);
+    this.visualSkin = RocketboxSkin.create(scene, this.root, this.skeleton, name, female, shadows, options.licensedPlayerSkin === true, options.licensedCivilianSkin, this.torso);
     this.parts = [this.torso, ...(this.visualSkin?.parts ?? [])];
-    if (this.visualSkin) this.torso.isVisible = false;
+    if (this.visualSkin) this.torso.isVisible = !this.visualSkin.detailed;
     else shadows.addShadowCaster(this.torso, false);
   }
 

@@ -1,0 +1,2530 @@
+{
+  "origin": "http://127.0.0.1:4198",
+  "method": "Normal UI creative civilian spawn, pointer/mouse lethal shooting, police wanted control, ordinary arrest/recovery, normal save/load and fresh Continue. ?test only reads diagnostics. No game-object mutations.",
+  "checks": [
+    {
+      "label": "build",
+      "backend": "webgpu",
+      "module": "/assets/index-CxJrQY1k.js",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "spawned-civilian",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 4.099999999999991,
+      "meshes": 2579,
+      "activeMeshes": 605,
+      "physicsBodies": 260,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 225,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 167251635,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 47.288776796945825,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 100,
+        "dead": false,
+        "activity": "fleeing",
+        "position": [
+          7.442401679650845,
+          0.12014999999999987,
+          -23.8863649986801
+        ],
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "detailedCivilians": 5,
+      "outcome": "",
+      "aim": true
+    },
+    {
+      "label": "shooting-5",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 6,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 7.533333333333312,
+      "meshes": 2588,
+      "activeMeshes": 339,
+      "physicsBodies": 279,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 2,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 167251635,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.95203836925997,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 43,
+        "dead": false,
+        "activity": "fleeing",
+        "position": [
+          13.389189720153809,
+          0.12014999999999987,
+          -18.16682243347168
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "detailedCivilians": 5,
+      "outcome": "",
+      "aim": true
+    },
+    {
+      "label": "lethal-result",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 9.250000000000039,
+      "meshes": 2585,
+      "activeMeshes": 337,
+      "physicsBodies": 276,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 231,
+        "colliderDisposals": 6,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 167251635,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.904153354654895,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387378692626953,
+          0.12014999999999987,
+          -18.166030883789062
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387378692626953,
+            "y": 0.12014999999999987,
+            "z": -18.166030883789062,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": true
+    },
+    {
+      "label": "after-ten-seconds",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 20.01666666666681,
+      "meshes": 2599,
+      "activeMeshes": 315,
+      "physicsBodies": 275,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 241,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 251,
+        "colliderDisposals": 10,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 167374608,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.98800239956504,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "detailedCivilians": 4,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-4s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 24.84999999999987,
+      "meshes": 2689,
+      "activeMeshes": 328,
+      "physicsBodies": 279,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 244,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 255,
+        "colliderDisposals": 11,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 167374608,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.784774810704,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-8s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 29.09999999999963,
+      "meshes": 2686,
+      "activeMeshes": 385,
+      "physicsBodies": 276,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 241,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 255,
+        "colliderDisposals": 14,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 167374608,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 52.78901988388167,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-12s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 33.34999999999939,
+      "meshes": 2685,
+      "activeMeshes": 385,
+      "physicsBodies": 275,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 240,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 255,
+        "colliderDisposals": 15,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 167374608,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.00000000000034,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-16s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 37.54999999999915,
+      "meshes": 2685,
+      "activeMeshes": 385,
+      "physicsBodies": 275,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 240,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 255,
+        "colliderDisposals": 15,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 167374608,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.06006006006042,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-20s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 41.76666666666558,
+      "meshes": 2679,
+      "activeMeshes": 385,
+      "physicsBodies": 273,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 238,
+        "cpuGeometryBytes": 56393456,
+        "meshLoads": 1105,
+        "meshDisposals": 4,
+        "colliderLoads": 255,
+        "colliderDisposals": 17,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 167374608,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.571088165144864,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-24s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 1,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0.6249999999999989
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 45.866666666665346,
+      "meshes": 2693,
+      "activeMeshes": 472,
+      "physicsBodies": 273,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1116,
+        "totalColliders": 249,
+        "residentColliders": 237,
+        "cpuGeometryBytes": 56487976,
+        "meshLoads": 1120,
+        "meshDisposals": 4,
+        "colliderLoads": 255,
+        "colliderDisposals": 18,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 167689179,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 52.301255230159896,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-28s",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.1018999999999999,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 50.08333333333177,
+      "meshes": 2596,
+      "activeMeshes": 400,
+      "physicsBodies": 261,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1116,
+        "totalColliders": 249,
+        "residentColliders": 227,
+        "cpuGeometryBytes": 56487976,
+        "meshLoads": 1120,
+        "meshDisposals": 4,
+        "colliderLoads": 255,
+        "colliderDisposals": 28,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 167689179,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 58.06077027286528,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "saved-after-recovery",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 50.41666666666509,
+      "meshes": 2596,
+      "activeMeshes": 400,
+      "physicsBodies": 261,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1116,
+        "totalColliders": 249,
+        "residentColliders": 227,
+        "cpuGeometryBytes": 56487976,
+        "meshLoads": 1120,
+        "meshDisposals": 4,
+        "colliderLoads": 255,
+        "colliderDisposals": 28,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 167689179,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.06006006006069,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.12014999999999987,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.12014999999999987,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 3,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "loaded-dead-civilian",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        0.9901000000000002,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 9,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6"
+      ],
+      "paused": false,
+      "simTime": 52.93333333333161,
+      "meshes": 2606,
+      "activeMeshes": 402,
+      "physicsBodies": 271,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1116,
+        "totalColliders": 249,
+        "residentColliders": 231,
+        "cpuGeometryBytes": 56487976,
+        "meshLoads": 1120,
+        "meshDisposals": 4,
+        "colliderLoads": 259,
+        "colliderDisposals": 28,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 167689179,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 30.531243639335955,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.18,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.18,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 5,
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "fresh-continue",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        0.9901000000000002,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [
+        "street-prop-6",
+        "street-prop-11"
+      ],
+      "paused": false,
+      "simTime": 2.549999999999996,
+      "meshes": 2474,
+      "activeMeshes": 533,
+      "physicsBodies": 256,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 23,
+        "totalMeshes": 1221,
+        "residentMeshes": 998,
+        "totalColliders": 249,
+        "residentColliders": 211,
+        "cpuGeometryBytes": 54331656,
+        "meshLoads": 998,
+        "meshDisposals": 0,
+        "colliderLoads": 211,
+        "colliderDisposals": 0,
+        "pendingMeshes": 103,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 40,
+        "totalPackages": 84,
+        "pendingPackages": 9,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 202,
+        "fetchedBytes": 160849999,
+        "residentMaterials": 160,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 40,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 25.195263290517143,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          13.387380599975586,
+          0.18,
+          -18.165998458862305
+        ],
+        "ragdoll": true,
+        "visibleParts": [
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/body-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-color.jpg",
+                "ready": true
+              },
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/head-normal.png",
+                "ready": true
+              }
+            ]
+          },
+          {
+            "name": "ped-30/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80,
+            "textures": [
+              {
+                "url": "data:http://127.0.0.1:4198/characters/civilians/female-adult-06/opacity-color.png",
+                "ready": true
+              }
+            ]
+          }
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 13.387380599975586,
+            "y": 0.18,
+            "z": -18.165998458862305,
+            "yaw": 0.788882469854589
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "detailedCivilians": 5,
+      "outcome": "",
+      "aim": false
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

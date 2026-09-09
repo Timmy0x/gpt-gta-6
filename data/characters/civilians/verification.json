@@ -1,0 +1,332 @@
+{
+  "scope": "Actual Babylon GLB import and existing Character/RocketboxSkin retargeter in NullEngine; materials skipped; no gameplay integration or GPU performance claim.",
+  "variants": [
+    {
+      "name": "Male_Adult_03",
+      "label": "male-adult-03",
+      "description": "Older man wearing a checked jacket and dark trousers.",
+      "female": false,
+      "file": "male-adult-03.glb",
+      "bytes": 396196,
+      "sha256": "a7045b746a38afc9e75c2160b7b002a08f4584c116ba2427e5963143cd6479ad",
+      "meshes": [
+        {
+          "vertices": 4427,
+          "triangles": 7200,
+          "groups": 3,
+          "bones": 80
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6741140870449072,
+          -0.0009263108791173415,
+          -0.1405183726441538
+        ],
+        "max": [
+          0.6741139963800784,
+          1.8063208766321135,
+          0.20241594041902525
+        ]
+      },
+      "textures": [
+        {
+          "path": "male-adult-03/body-color.jpg",
+          "bytes": 1114238,
+          "sha256": "be9305c4d871fa2b859530f815e7e63e77a83de544738552f8f31752f9f05314"
+        },
+        {
+          "path": "male-adult-03/body-normal.png",
+          "bytes": 1237940,
+          "sha256": "6d2c13deeed6928d682266c96630e82fba2aa5b8cf8f9ed9761a37c5948cfb0c"
+        },
+        {
+          "path": "male-adult-03/head-color.jpg",
+          "bytes": 812611,
+          "sha256": "cbe562d94dc5b5f356606f526cbfbdf1441d82cd94c9843d5a72d9a449d0bc8b"
+        },
+        {
+          "path": "male-adult-03/head-normal.png",
+          "bytes": 1132572,
+          "sha256": "6de2b65b6c7a0f689e5aec850a42a14fa4981492968f9f9dacf9abe7cfaf2bb5"
+        },
+        {
+          "path": "male-adult-03/opacity-color.png",
+          "bytes": 904779,
+          "sha256": "5b51e9062044fa809f73129bd7259b3e420b018b3952f0e89db905022a9d970d"
+        }
+      ],
+      "actualImportedDraws": 3,
+      "actualImportedTriangles": 7200,
+      "poses": {
+        "idle": {
+          "min": [
+            -0.3110476807575662,
+            0.02561447924908622,
+            -0.14212670959520865
+          ],
+          "max": [
+            0.30826847828396436,
+            1.8176526848928196,
+            0.22195100068832352
+          ]
+        },
+        "walk": {
+          "min": [
+            -0.31109755249266613,
+            0.04407285634530356,
+            -0.1421244357305393
+          ],
+          "max": [
+            0.30822450685102204,
+            1.8365342175070847,
+            0.23193306201858793
+          ]
+        },
+        "run": {
+          "min": [
+            -0.31777736799399353,
+            0.18400523906861677,
+            -0.7526906372908791
+          ],
+          "max": [
+            0.3069698232781787,
+            1.7968801175147127,
+            0.7671901324675786
+          ]
+        },
+        "crouch": {
+          "min": [
+            -0.3110478307262568,
+            -0.0006445038836278005,
+            -0.14017934833262993
+          ],
+          "max": [
+            0.3082686144295808,
+            1.366126126370783,
+            0.26854851543492764
+          ]
+        },
+        "aim": {
+          "min": [
+            -0.32138483780459015,
+            0.027899713224778133,
+            -0.14212675935737895
+          ],
+          "max": [
+            0.31899606345122866,
+            1.819937824489291,
+            0.6823755964252534
+          ]
+        },
+        "seated": {
+          "min": [
+            -0.2881483805665285,
+            0.7649090009730874,
+            -0.14017934691086853
+          ],
+          "max": [
+            0.28637814287991853,
+            1.813392349409805,
+            1.0141895957663072
+          ]
+        }
+      },
+      "walkDisplacement": 0.5607813296937544,
+      "driverTranslationVerified": true
+    },
+    {
+      "name": "Female_Adult_06",
+      "label": "female-adult-06",
+      "description": "Woman wearing a long olive outfit and white headscarf.",
+      "female": true,
+      "file": "female-adult-06.glb",
+      "bytes": 445360,
+      "sha256": "a654295f01878c960c47469530c4edfa9025a22e487fab8b442b5293b7cc68cf",
+      "meshes": [
+        {
+          "vertices": 4372,
+          "triangles": 6992,
+          "groups": 3,
+          "bones": 80
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6085979369037782,
+          -0.0016856100783286792,
+          -0.20834788551462893
+        ],
+        "max": [
+          0.6086439016537841,
+          1.7345766031116394,
+          0.1639636512591062
+        ]
+      },
+      "textures": [
+        {
+          "path": "female-adult-06/body-color.jpg",
+          "bytes": 435205,
+          "sha256": "a00f8655c1ac51e3d5823844aeef80a0f55f0f54e2441d6662189a530a9f5355"
+        },
+        {
+          "path": "female-adult-06/body-normal.png",
+          "bytes": 1050774,
+          "sha256": "59247a29b678c511e35df9d2e99731bd38ba9756761135af67cb8b4d1cbc8870"
+        },
+        {
+          "path": "female-adult-06/head-color.jpg",
+          "bytes": 512570,
+          "sha256": "6df6911ff871bd94ad468e758207e3b5ab6d672d7e8e6cf39121aeb5ef8fc269"
+        },
+        {
+          "path": "female-adult-06/head-normal.png",
+          "bytes": 862541,
+          "sha256": "4085cae739e8be88405088b07e1900239f5a77cbeddd32c37b8bec7034477b9a"
+        },
+        {
+          "path": "female-adult-06/opacity-color.png",
+          "bytes": 407564,
+          "sha256": "6b910cd38d6b17607bc7c6e87a31d4c1acd14be34d2fdab0712cc443cdf01720"
+        }
+      ],
+      "actualImportedDraws": 3,
+      "actualImportedTriangles": 6992,
+      "poses": {
+        "idle": {
+          "min": [
+            -0.30720786049023185,
+            0.026784068372700864,
+            -0.2046701775718065
+          ],
+          "max": [
+            0.30720794555518144,
+            1.810353494423767,
+            0.2194894908394687
+          ]
+        },
+        "walk": {
+          "min": [
+            -0.3072369010091739,
+            0.04544128994632157,
+            -0.2046518211182923
+          ],
+          "max": [
+            0.30718297599438676,
+            1.8292347581636412,
+            0.21912969395576515
+          ]
+        },
+        "run": {
+          "min": [
+            -0.31218592874521056,
+            0.1982789791669919,
+            -0.7426792910840616
+          ],
+          "max": [
+            0.308773428621683,
+            1.7905926721136294,
+            0.745256480150183
+          ]
+        },
+        "crouch": {
+          "min": [
+            -0.3072079827870961,
+            0.001971717724631228,
+            -0.2129938891822646
+          ],
+          "max": [
+            0.30720813027542887,
+            1.3611140894613027,
+            0.3844378321272166
+          ]
+        },
+        "aim": {
+          "min": [
+            -0.31571791305523017,
+            0.029069301491928434,
+            -0.20467025225208552
+          ],
+          "max": [
+            0.31429974696212387,
+            1.8126384215219389,
+            0.6816356649573239
+          ]
+        },
+        "seated": {
+          "min": [
+            -0.29063566428001125,
+            0.7660785461723373,
+            -0.20657287451654424
+          ],
+          "max": [
+            0.29063571319888254,
+            1.8070548133455713,
+            0.9941849297507872
+          ]
+        }
+      },
+      "walkDisplacement": 0.558018321814634,
+      "driverTranslationVerified": true
+    }
+  ],
+  "sharedResources": [
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    },
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    },
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    },
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    },
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    },
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    },
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    },
+    {
+      "meshes": 0,
+      "geometries": 6,
+      "skeletons": 0,
+      "transforms": 0,
+      "shadows": 0
+    }
+  ],
+  "pass": true
+}

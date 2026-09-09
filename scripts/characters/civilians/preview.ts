@@ -1,0 +1,16 @@
+import {ArcRotateCamera,Color3,Color4,DirectionalLight,Engine,HemisphericLight,LoadAssetContainerAsync,MeshBuilder,PBRMaterial,Scene,ShadowGenerator,Vector3} from '@babylonjs/core';
+import {Character} from '../../../src/gameplay/Character';
+import {prepareCharacterAssets} from '../../../src/gameplay/characters/RocketboxSkin';
+const engine=new Engine(document.querySelector('canvas')!,true),scene=new Scene(engine);
+scene.clearColor=new Color4(.09,.12,.15,1);scene.imageProcessingConfiguration.toneMappingEnabled=true;scene.imageProcessingConfiguration.toneMappingType=1;scene.imageProcessingConfiguration.exposure=1.1;
+const camera=new ArcRotateCamera('review',Math.PI/2,Math.PI/2.2,3.7,new Vector3(0,.99,0),scene);camera.minZ=.01;
+const ambient=new HemisphericLight('ambient',Vector3.Up(),scene);ambient.intensity=.7;ambient.groundColor=new Color3(.18,.2,.22);
+const sun=new DirectionalLight('key',new Vector3(-.8,-1,1),scene);sun.intensity=2;sun.position.set(3,6,-3);const shadows=new ShadowGenerator(1024,sun);shadows.usePercentageCloserFiltering=true;
+const floor=MeshBuilder.CreateGround('studio',{width:20,height:20},scene),material=new PBRMaterial('floor',scene);material.albedoColor=new Color3(.13,.15,.16);material.metallic=0;material.roughness=1;floor.material=material;floor.receiveShadows=true;
+await prepareCharacterAssets(scene,new URL('/characters/civilians/',location.href).href,url=>LoadAssetContainerAsync(new URL(url.endsWith('female.glb')?'female-adult-06.glb':'male-adult-03.glb',url).href,scene,{pluginExtension:'.glb'}));
+const create=(female:boolean,name:string)=>new Character(scene,shadows,name,'#ffffff',female,undefined,{licensedPlayerSkin:true});
+const male=create(false,'Male Adult 03'),female=create(true,'Female Adult 06');male.position(new Vector3(-.55,0,0));female.position(new Vector3(.55,0,0));
+let mode='idle',elapsed=0;
+const counts=()=>({meshes:scene.meshes.length,geometries:scene.geometries.length,skeletons:scene.skeletons.length,transforms:scene.transformNodes.length,materials:scene.materials.length,textures:scene.textures.length,shadowCasters:shadows.getShadowMap()!.renderList!.length});
+Object.assign(window,{civilianReview:{scene,male,female,camera,setMode(value:string){mode=value;},ready:true,counts,cycleClones(){const before=counts();for(let n=0;n<8;n++){const pair=[create(false,`cycle-male-${n}`),create(true,`cycle-female-${n}`)];pair.forEach(c=>c.dispose());}return {before,after:counts()};}}});
+engine.runRenderLoop(()=>{const dt=Math.min(engine.getDeltaTime()/1000,.05);elapsed+=dt;for(const c of [male,female]){c.animate(dt,mode==='walk'?3.5:mode==='run'?7:0,mode==='aim',mode==='crouch');if(mode==='seated')c.pose('seated',elapsed,'low');}scene.render();});

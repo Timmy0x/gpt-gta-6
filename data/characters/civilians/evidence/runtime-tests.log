@@ -1,0 +1,58 @@
+BJS - [20:28:51]: Babylon.js v9.25.0 - Null engine
+BJS - [20:28:56]: Babylon.js v9.25.0 - Null engine
+✔ licensed player skins load once, retarget direct bone changes, preserve NPC uniforms and release clones (4935.734334ms)
+BJS - [20:28:57]: Babylon.js v9.25.0 - Null engine
+✔ both licensed skins clear existing low and detailed concept car cabin floor and roof bounds (443.504333ms)
+ℹ Jason low: cabin-space floor=-0.1528m, roof=0.9126m; all 14064 visible vertices evaluated.
+ℹ Jason reclined: cabin-space floor=-0.4322m, roof=0.5010m; all 14064 visible vertices evaluated.
+ℹ Lucia low: cabin-space floor=-0.1545m, roof=0.8929m; all 16308 visible vertices evaluated.
+ℹ Lucia reclined: cabin-space floor=-0.4307m, roof=0.4790m; all 16308 visible vertices evaluated.
+✔ a failed licensed character load retains fallback and can retry cleanly (302.699667ms)
+BJS - [20:28:57]: Babylon.js v9.25.0 - Null engine
+✔ Rocketbox GLB packages retain licensed provenance and valid three-material skin data (67.908916ms)
+✔ visible player pelvis follows Havok ragdoll synchronization in the same render frame (972.095583ms)
+BJS - [20:28:52]: Babylon.js v9.25.0 - Null engine
+BJS - [20:28:52]: Babylon.js v9.25.0 - Null engine
+BJS - [20:28:52]: Babylon.js v9.25.0 - Null engine
+BJS - [20:28:52]: Babylon.js v9.25.0 - Null engine
+BJS - [20:28:52]: Babylon.js v9.25.0 - Null engine
+BJS - [20:28:53]: Babylon.js v9.25.0 - Null engine
+✔ low driving pose keeps both character variants' skinned feet above the cabin floor and head below the roof (402.923917ms)
+✔ reclined driving pose clears the detailed concept car's floor and roof (51.928209ms)
+✔ both character variants have valid skinned geometry and one render submesh (139.161834ms)
+ℹ Jason: 4692 vertices, 9160 triangles, 17 bones.
+ℹ Lucia: 4662 vertices, 9100 triangles, 17 bones.
+✔ walk and run skin the feet while aiming raises the hand and crouching recovers (125.444583ms)
+✔ characters share their material safely across repeated character switching (329.648125ms)
+✔ equal fixed-step inputs produce equal joint poses without moving the controller root (19.575292ms)
+BJS - [20:28:51]: Babylon.js v9.25.0 - Null engine
+BJS - [20:28:56]: Babylon.js v9.25.0 - Null engine
+✔ civilian and player libraries load independently once and keep shared geometry with private rigs (5067.20175ms)
+BJS - [20:28:57]: Babylon.js v9.25.0 - Null engine
+✔ partial civilian loading failure retains working players and retries without accumulating assets (251.756667ms)
+BJS - [20:28:57]: Babylon.js v9.25.0 - Null engine
+✔ population civilian appearance is stable by ID and does not change police or player selection (462.031709ms)
+BJS - [20:28:59]: Babylon.js v9.25.0 - Null engine
+✔ nearby detailed civilian budget prioritizes settled casualties and changes only visibility (1352.662292ms)
+BJS - [20:28:59]: Babylon.js v9.25.0 - Null engine
+✔ civilian distance hysteresis avoids repeated visible mesh replacement at the detail threshold (43.911834ms)
+✔ both civilian rigs follow the same-frame Havok pelvis and retain fatal poses after distant culling (842.119041ms)
+BJS - [20:28:52]: Babylon.js v9.25.0 - Null engine
+✔ ordinary player recovery preserves lethal civilian, guard and officer casualties while nonfatal victims recover (2845.027583ms)
+ℹ Fatal health/dead gates survive ordinary recovery; explicit encounter reset revives; nonfatal recovery retains75health.
+BJS - [20:28:55]: Babylon.js v9.25.0 - Null engine
+✔ casualty save round trip retains ambient/custom civilian IDs, fixed guards and retired officers without resurrection or extra physics (2176.170959ms)
+BJS - [20:28:57]: Babylon.js v9.25.0 - Null engine
+✔ dead response crews do not count as living dispatch and disabled-response cleanup remains bounded without resurrecting IDs (1185.49975ms)
+BJS - [20:28:58]: Babylon.js v9.25.0 - Null engine
+✔ uniform trousers use the role palette and the firearm follows a live rigged hand through aiming (195.462542ms)
+BJS - [20:28:58]: Babylon.js v9.25.0 - Null engine
+✔ legacy saved health-zero creative civilians acquire a persistent corpse pose without a casualty field (265.058458ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25146.569083

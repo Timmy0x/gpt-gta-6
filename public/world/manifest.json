@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "build": "authored-860409-v5-photo-surfaces",
+  "build": "authored-860409-v6-dry-sand",
   "seed": 860409,
   "format": "babylon-json+gzip",
   "chunks": [
@@ -1001,7 +1001,7 @@
       "meshes": 24,
       "vertices": 2488,
       "cpuBytes": 92744,
-      "compressedBytes": 24529,
+      "compressedBytes": 24561,
       "materials": [
         "material-056",
         "material-057",
@@ -1013,7 +1013,7 @@
         "material-169",
         "material-170"
       ],
-      "sha256": "680f6fb4469d0e76c0c8315d66f5c39712001fde89aebf0f67f1f544cf2bfca9"
+      "sha256": "ecf42c87eca691fdc58d66f2f0c173929f6138c037b33884100e01d2125977ec"
     },
     {
       "id": "-3_-1_detail",
@@ -2968,7 +2968,7 @@
       "id": "material-057",
       "name": "world/sand",
       "url": "materials/material-057.json.gz",
-      "bytes": 2256
+      "bytes": 2260
     },
     {
       "id": "material-058",
@@ -7837,7 +7837,7 @@
   "totals": {
     "meshes": 1221,
     "cpuGeometryBytes": 57932888,
-    "compressedBytes": 13134887,
-    "textureBytes": 5116939
+    "compressedBytes": 13134923,
+    "textureBytes": 5293999
   }
 }

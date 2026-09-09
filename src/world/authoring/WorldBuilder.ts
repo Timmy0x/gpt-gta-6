@@ -408,7 +408,7 @@ export class WorldBuilder implements WorldContract {
     const sandTexture = this.grainTexture("sand-grain", "#eee6cf", 0.1);
     sand.albedoTexture = sandTexture;
     this.materialTileMetres.set(sand, 0.5);
-    this.photoSurface(sand, "sand_03", 2);
+    this.photoSurface(sand, "dense_sand", 1.8);
     this.box(
       "urban-ground",
       -147.5,

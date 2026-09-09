@@ -38,7 +38,7 @@ async function capture(label) {
   });
   checks.push({ label, ...s }); await page.screenshot({ path: `${output}/${label}.png` });
   if (process.env.AUDIT_VARIANT !== 'before') for (const surface of s.surfaces) {
-    const expected = process.env.AUDIT_PHOTO === '1' ? (surface.material === 'world/asphalt' ? 3 : 2) : (surface.material === 'world/asphalt' ? .75 : .5);
+    const expected = process.env.AUDIT_PHOTO === '1' ? (surface.material === 'world/asphalt' ? 3 : Number(process.env.AUDIT_SAND_SCALE || 2)) : (surface.material === 'world/asphalt' ? .75 : .5);
     assert.ok(Math.abs(surface.minimumMetresPerTile - expected) < .001 && Math.abs(surface.maximumMetresPerTile - expected) < .001, JSON.stringify(surface));
   }
   if (process.env.AUDIT_PHOTO === '1') for (const d of s.diagnostics) for (const map of d.maps) {

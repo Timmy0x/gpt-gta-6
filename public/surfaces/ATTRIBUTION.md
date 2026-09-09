@@ -3,7 +3,7 @@
 Powered by Poly Haven.
 
 - [Asphalt 02](https://polyhaven.com/a/asphalt_02) by **Rob Tuytel**, source scale 3 × 3 metres.
-- [Sand 03](https://polyhaven.com/a/sand_03) by **Charlotte Baglioni**, source scale 2 × 2 metres.
+- [Dense Sand](https://polyhaven.com/a/dense_sand) by **Dimitrios Savva**, source scale 1.8 × 1.8 metres.
 
 Both assets are dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), as specified by the [Poly Haven asset license](https://polyhaven.com/license). Acquired 9 September 2026 through the public API.
 

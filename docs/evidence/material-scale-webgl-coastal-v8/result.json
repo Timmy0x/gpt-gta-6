@@ -1,0 +1,2961 @@
+{
+  "origin": "http://127.0.0.1:4198",
+  "backend": "webgl",
+  "method": "Normal fresh launch and map fast travel; screenshots and read-only actual loaded GPU-mesh UV metrics.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-CxJrQY1k.js",
+      "browser": "152.0.7977.83",
+      "worldManifest": {
+        "build": "authored-860409-v6-dry-sand",
+        "sha256": "f09fd783847151550cd3aba36229e733fbeca0538cd8d15013d070263a6ae29b"
+      }
+    },
+    {
+      "label": "street",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 1.7499999999999987,
+      "meshes": 2557,
+      "activeMeshes": 532,
+      "physicsBodies": 243,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 208,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 208,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 167251635,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 57.26283641912321,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "surfaces": [
+        {
+          "mesh": "world-chunk/144:0:world/sand:global:false",
+          "material": "world/sand",
+          "minimumMetresPerTile": 1.7999999648437506,
+          "maximumMetresPerTile": 1.8000003495650536,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-432:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999999164664857,
+          "maximumMetresPerTile": 3.0000065394952817,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-288:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 2.9999999164664857,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 24
+        },
+        {
+          "mesh": "world-chunk/0:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999991825650945,
+          "maximumMetresPerTile": 3.0000001021793947,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999991825650945,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000000096983832,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-144:-144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999991825650945,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000000096983832,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/0:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.999999847817936,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.999999756508705,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-288:-144:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 3,
+          "maximumMetresPerTile": 3.000001346364345,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-288:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.999999026035057,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-432:144:world/asphalt:structure:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999986921043647,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-432:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 3.000000486982709,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 6
+        }
+      ],
+      "diagnostics": [
+        {
+          "mesh": "world-chunk/144:0:world/sand:global:false",
+          "material": "world/sand",
+          "metadata": {
+            "surfaceAsset": "dense_sand",
+            "tileMetres": 1.8
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 1250,
+            "3": 0,
+            "4": 0,
+            "5": 1250,
+            "6": 0,
+            "7": 0,
+            "8": 1250,
+            "9": 0,
+            "10": 0,
+            "11": 1250,
+            "12": 0,
+            "13": 0,
+            "14": -1250,
+            "15": 0,
+            "16": 0,
+            "17": -1250,
+            "18": 0,
+            "19": 0,
+            "20": -1250,
+            "21": 0,
+            "22": 0,
+            "23": -1250
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/dense_sand/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/dense_sand/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/dense_sand/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-432:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-288:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 288,
+          "normals": 288,
+          "uvs": 192,
+          "indices": 144,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/0:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:-144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/0:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-288:-144:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 17,
+            "3": 0,
+            "4": 0,
+            "5": 17,
+            "6": 0,
+            "7": 0,
+            "8": 17,
+            "9": 0,
+            "10": 0,
+            "11": 17,
+            "12": 0,
+            "13": 0,
+            "14": -17,
+            "15": 0,
+            "16": 0,
+            "17": -17,
+            "18": 0,
+            "19": 0,
+            "20": -17,
+            "21": 0,
+            "22": 0,
+            "23": -17
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-288:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-432:144:world/asphalt:structure:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-432:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        }
+      ],
+      "available": [
+        {
+          "name": "world-chunk/144:0:world/sand:global:false",
+          "material": "world/sand",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-432:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-288:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 96
+        },
+        {
+          "name": "world-chunk/0:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:-288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-144:-144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/0:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-288:-144:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-288:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-432:144:world/asphalt:structure:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-432:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        }
+      ]
+    },
+    {
+      "label": "beach",
+      "backend": "WebGL2",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        180,
+        0.98225,
+        -30
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 3.599999999999992,
+      "meshes": 2576,
+      "activeMeshes": 173,
+      "physicsBodies": 259,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1104,
+        "totalColliders": 249,
+        "residentColliders": 224,
+        "cpuGeometryBytes": 56416576,
+        "meshLoads": 1104,
+        "meshDisposals": 0,
+        "colliderLoads": 224,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 167359614,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 2,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.976009596139306,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "surfaces": [
+        {
+          "mesh": "world-chunk/144:0:world/sand:global:false",
+          "material": "world/sand",
+          "minimumMetresPerTile": 1.7999999648437506,
+          "maximumMetresPerTile": 1.8000003495650536,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-432:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999999164664857,
+          "maximumMetresPerTile": 3.0000065394952817,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-288:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 2.9999999164664857,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 24
+        },
+        {
+          "mesh": "world-chunk/0:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999991825650945,
+          "maximumMetresPerTile": 3.0000001021793947,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999991825650945,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000000096983832,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-144:-144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999991825650945,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999967302630504,
+          "maximumMetresPerTile": 3.000000096983832,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/0:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.999999847817936,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.999999756508705,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-288:-144:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 3,
+          "maximumMetresPerTile": 3.000001346364345,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-288:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.999999026035057,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 12
+        },
+        {
+          "mesh": "world-chunk/-432:144:world/asphalt:structure:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 2.9999986921043647,
+          "maximumMetresPerTile": 3.000001634871148,
+          "edges": 6
+        },
+        {
+          "mesh": "world-chunk/-432:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "minimumMetresPerTile": 3.000000486982709,
+          "maximumMetresPerTile": 3.000002080745406,
+          "edges": 6
+        }
+      ],
+      "diagnostics": [
+        {
+          "mesh": "world-chunk/144:0:world/sand:global:false",
+          "material": "world/sand",
+          "metadata": {
+            "surfaceAsset": "dense_sand",
+            "tileMetres": 1.8
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 1250,
+            "3": 0,
+            "4": 0,
+            "5": 1250,
+            "6": 0,
+            "7": 0,
+            "8": 1250,
+            "9": 0,
+            "10": 0,
+            "11": 1250,
+            "12": 0,
+            "13": 0,
+            "14": -1250,
+            "15": 0,
+            "16": 0,
+            "17": -1250,
+            "18": 0,
+            "19": 0,
+            "20": -1250,
+            "21": 0,
+            "22": 0,
+            "23": -1250
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/dense_sand/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/dense_sand/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/dense_sand/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-432:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-288:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 288,
+          "normals": 288,
+          "uvs": 192,
+          "indices": 144,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/0:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 548,
+            "3": 0,
+            "4": 0,
+            "5": 548,
+            "6": 0,
+            "7": 0,
+            "8": 548,
+            "9": 0,
+            "10": 0,
+            "11": 548,
+            "12": 0,
+            "13": 0,
+            "14": -548,
+            "15": 0,
+            "16": 0,
+            "17": -548,
+            "18": 0,
+            "19": 0,
+            "20": -548,
+            "21": 0,
+            "22": 0,
+            "23": -548
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:-144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/0:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-144:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-288:-144:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 17,
+            "3": 0,
+            "4": 0,
+            "5": 17,
+            "6": 0,
+            "7": 0,
+            "8": 17,
+            "9": 0,
+            "10": 0,
+            "11": 17,
+            "12": 0,
+            "13": 0,
+            "14": -17,
+            "15": 0,
+            "16": 0,
+            "17": -17,
+            "18": 0,
+            "19": 0,
+            "20": -17,
+            "21": 0,
+            "22": 0,
+            "23": -17
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-288:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 144,
+          "normals": 144,
+          "uvs": 96,
+          "indices": 72,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-432:144:world/asphalt:structure:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 14,
+            "3": 0,
+            "4": 0,
+            "5": 14,
+            "6": 0,
+            "7": 0,
+            "8": 14,
+            "9": 0,
+            "10": 0,
+            "11": 14,
+            "12": 0,
+            "13": 0,
+            "14": -14,
+            "15": 0,
+            "16": 0,
+            "17": -14,
+            "18": 0,
+            "19": 0,
+            "20": -14,
+            "21": 0,
+            "22": 0,
+            "23": -14
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        },
+        {
+          "mesh": "world-chunk/-432:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "metadata": {
+            "surfaceAsset": "asphalt_02",
+            "tileMetres": 3
+          },
+          "positions": 72,
+          "normals": 72,
+          "uvs": 48,
+          "indices": 36,
+          "sampleNormals": {
+            "0": 0,
+            "1": 0,
+            "2": 11,
+            "3": 0,
+            "4": 0,
+            "5": 11,
+            "6": 0,
+            "7": 0,
+            "8": 11,
+            "9": 0,
+            "10": 0,
+            "11": 11,
+            "12": 0,
+            "13": 0,
+            "14": -11,
+            "15": 0,
+            "16": 0,
+            "17": -11,
+            "18": 0,
+            "19": 0,
+            "20": -11,
+            "21": 0,
+            "22": 0,
+            "23": -11
+          },
+          "scaleU": 1,
+          "scaleV": 1,
+          "maps": [
+            {
+              "slot": "albedoTexture",
+              "url": "../surfaces/asphalt_02/color.jpg",
+              "ready": true,
+              "gammaSpace": true,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "bumpTexture",
+              "url": "../surfaces/asphalt_02/normal.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            },
+            {
+              "slot": "metallicTexture",
+              "url": "../surfaces/asphalt_02/arm.jpg",
+              "ready": true,
+              "gammaSpace": false,
+              "size": {
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        }
+      ],
+      "available": [
+        {
+          "name": "world-chunk/144:0:world/sand:global:false",
+          "material": "world/sand",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-432:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-288:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 96
+        },
+        {
+          "name": "world-chunk/0:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/144:0:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:-288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-144:-144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:144:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:288:world/asphalt:global:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/0:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-144:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-288:-144:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-288:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 48
+        },
+        {
+          "name": "world-chunk/-432:144:world/asphalt:structure:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        },
+        {
+          "name": "world-chunk/-432:-288:world/asphalt:detail:false",
+          "material": "world/asphalt",
+          "enabled": true,
+          "vertices": 24
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

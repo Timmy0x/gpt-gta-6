@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 
 // Metadata is retained from Poly Haven's official /info and /files API endpoints.
 // Download only the publisher's 1K maps, unchanged; no preview renders are redistributed.
-const assets = ['asphalt_02', 'sand_03'];
+const assets = ['asphalt_02', 'dense_sand'];
 const hash = (type, bytes) => createHash(type).update(bytes).digest('hex');
 const entries = [];
 for (const id of assets) {

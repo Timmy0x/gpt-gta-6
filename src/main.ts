@@ -19,6 +19,7 @@ import HavokPhysics from "@babylonjs/havok";
 import havokWasm from "@babylonjs/havok/lib/esm/HavokPhysics.wasm?url";
 import { createRenderer } from "./core/Renderer";
 import { prepareEnvironmentLighting } from "./core/EnvironmentLighting";
+import { Sky } from "./core/Sky";
 import { Input, type Action } from "./core/Input";
 import { Persistence } from "./core/Persistence";
 import { GameAudio } from "./core/Audio";
@@ -29,7 +30,7 @@ import type { VehicleKind } from "./core/contracts";
 import { AIRCRAFT_SPAWNS, aircraftInput, aircraftPrompt, isAircraft } from "./vehicles/aircraft";
 import { findGroundVehicleSpawn } from "./vehicles/spawnPlacement";
 import { Player } from "./gameplay/Player";
-import { prepareCharacterAssets } from "./gameplay/characters/RocketboxSkin";
+import { prepareCharacterAssets, prepareCivilianAssets } from "./gameplay/characters/RocketboxSkin";
 import { DETAILED_CAR_LIMIT } from "./vehicles/ConceptCar";
 import { WantedSystem } from "./gameplay/Wanted";
 import { Population } from "./gameplay/Population";
@@ -47,6 +48,8 @@ async function boot() {
   ui.loading("Selecting a rendering backend…");
   const { engine, backend, fallbackReason } = await createRenderer(canvas);
   const scene = new Scene(engine);
+  const sky = new Sky(scene);
+  scene.onDisposeObservable.addOnce(() => sky.dispose());
   Scene.MaxDeltaTime = (1000 / 60) * 5;
   scene.clearColor = new Color4(0.55, 0.76, 0.81, 1);
   scene.fogMode = Scene.FOGMODE_EXP2;
@@ -89,6 +92,9 @@ async function boot() {
   ui.loading("Loading character detail…");
   try { await prepareCharacterAssets(scene); }
   catch (error) { console.warn("Using the procedural character fallback", error); }
+  ui.loading("Loading street characters…");
+  try { await prepareCivilianAssets(scene); }
+  catch (error) { console.warn("Using the procedural civilian fallback", error); }
   const input = new Input(canvas);
   const player = new Player(scene, shadows, input, world.spawn);
   const vehicles = new VehicleSystem(ctx);
@@ -854,12 +860,11 @@ async function boot() {
         if (input.pressed.has("KeyT")) beginRace();
       }
     }
-    const solar = Math.max(0, Math.sin(((time - 6) / 24) * Math.PI * 2));
+    const solarState = sky.update(time, weather), solar = solarState.daylight;
     ambient.intensity = 0.04 + solar * 0.25;
     scene.environmentIntensity = 0.025 + Math.max(0, solar - 0.08) * 0.55;
-    sun.intensity = (0.04 + solar * 2.6) * (weather === "Rain" ? 0.4 : 1);
-    sun.direction.set(-0.65, -Math.max(0.15, solar), 0.32);
-    sun.direction.normalize();
+    sun.intensity = solar * 2.6 * (weather === "Rain" ? 0.4 : 1);
+    sun.direction.copyFrom(solarState.sunDirection).negateInPlace();
     sun.position.copyFrom(player.position.subtract(sun.direction.scale(150)));
     sun.diffuse = Color3.Lerp(
       new Color3(1, 0.6, 0.39),
@@ -876,6 +881,7 @@ async function boot() {
     world.ensureCollision(player.position);
     world.update(paused ? 0 : dt, player.position, time, weather);
     atmosphere.update(paused ? 0 : dt, player.position, time, weather, paused);
+    scene.fogColor.copyFrom(solarState.horizonColor);
     vehicles.wetness = atmosphere.wetness;
     audio.update(
       player.vehicle?.speed || 0,

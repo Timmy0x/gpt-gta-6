@@ -334,7 +334,7 @@ See `verification-facility-checkpoint.md`, `facility-design.md`, `geodata.md` an
 | Aster Concept licensed vehicle | Lazy verified GLB, detailed cabin/PBR body and wheels, Havok driving, hinged and detachable components, damage lattice, compact save/load, fresh continuation and paid paint; both renderer audits pass 13 normal-control stages | No LOD derivatives or detailed ambient traffic; generic concept design, not VI identity; full hand/seat contacts remain open |
 | Long-run baseline | 1805-second third-checkpoint run with zero browser errors and no transport recoveries | Performance failed: 59.52 median / 19.45 slowest-1% FPS, max stall 1026.3 ms; bounded memory unproven; see performance-stability.md |
 
-The latest user reports aircraft staying grounded and widespread rapid respawning. These remain active defects requiring normal-interface reproduction; fixture flight tests do not dismiss them. Character and broader vehicle/world realism remain priority work.
+The user reports of grounded aircraft and rapid NPC respawning were reproduced and fixed in the subsequent checkpoints below, with normal-interface checks. Character and broader vehicle/world realism remain priority work.
 
 
 ### 2026-09-09 character, casualty and lighting integration

@@ -1,0 +1,66 @@
+{
+  "format": "glTF2 GLB with external textures",
+  "commit": "0943055db6ec570bcef9f2c8b41c9e5467c808f9",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2020 Microsoft",
+  "assets": [
+    {
+      "name": "Male_Adult_03",
+      "label": "male-adult-03",
+      "description": "Older man wearing a checked jacket and dark trousers.",
+      "female": false,
+      "file": "male-adult-03.glb",
+      "bytes": 396196,
+      "sha256": "a7045b746a38afc9e75c2160b7b002a08f4584c116ba2427e5963143cd6479ad",
+      "meshes": [
+        {
+          "vertices": 4427,
+          "triangles": 7200,
+          "groups": 3,
+          "bones": 80
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6741140870449072,
+          -0.0009263108791173415,
+          -0.1405183726441538
+        ],
+        "max": [
+          0.6741139963800784,
+          1.8063208766321135,
+          0.20241594041902525
+        ]
+      }
+    },
+    {
+      "name": "Female_Adult_06",
+      "label": "female-adult-06",
+      "description": "Woman wearing a long olive outfit and white headscarf.",
+      "female": true,
+      "file": "female-adult-06.glb",
+      "bytes": 445360,
+      "sha256": "a654295f01878c960c47469530c4edfa9025a22e487fab8b442b5293b7cc68cf",
+      "meshes": [
+        {
+          "vertices": 4372,
+          "triangles": 6992,
+          "groups": 3,
+          "bones": 80
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.6085979369037782,
+          -0.0016856100783286792,
+          -0.20834788551462893
+        ],
+        "max": [
+          0.6086439016537841,
+          1.7345766031116394,
+          0.1639636512591062
+        ]
+      }
+    }
+  ]
+}

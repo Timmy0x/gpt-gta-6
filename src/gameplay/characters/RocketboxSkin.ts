@@ -4,42 +4,86 @@ import {
   type Scene, type ShadowGenerator,
 } from '@babylonjs/core';
 
-type Prepared = { male: AssetContainer; female: AssetContainer; live: Set<RocketboxSkin> };
+export type CivilianSkin = 'male-adult-03' | 'female-adult-06';
+type AssetKey = 'player-male' | 'player-female' | CivilianSkin;
+type AssetGroup = 'players' | 'civilians';
+type AssetLoader = (url: string) => Promise<AssetContainer>;
+type Prepared = { assets: Map<AssetKey, AssetContainer>; loading: Map<AssetGroup, Promise<void>>; live: Set<RocketboxSkin> };
 const libraries = new WeakMap<Scene, Prepared>();
-const preparing = new WeakMap<Scene, Promise<void>>();
+export const CIVILIAN_DETAIL_LIMIT = 12;
+export const CIVILIAN_DETAIL_DISTANCE = 70;
+const CIVILIAN_DETAIL_EXIT_DISTANCE = 80;
 
-/** Two licensed local assets, loaded once per scene before constructing characters. */
-export function prepareCharacterAssets(scene: Scene, baseUrl = new URL('characters/rocketbox/', document.baseURI).href, load = (url: string) => LoadAssetContainerAsync(url, scene, { pluginExtension: '.glb' })): Promise<void> {
-  const existing = preparing.get(scene); if (existing) return existing;
+function library(scene: Scene): Prepared {
+  const existing = libraries.get(scene); if (existing) return existing;
+  const prepared: Prepared = { assets: new Map(), loading: new Map(), live: new Set() };
+  libraries.set(scene, prepared);
+  // Havok Ragdoll copies bodies into driver bones during onBeforeRender. Select
+  // visual detail and retarget after that, before active meshes/skeletons evaluate.
+  const observer = scene.onBeforeActiveMeshesEvaluationObservable.add(() => {
+    const eye = scene.activeCamera?.globalPosition;
+    const nearby: { skin: RocketboxSkin; score: number; reacting: boolean }[] = [];
+    for (const skin of prepared.live) {
+      if (!skin.civilian || !skin.enabled) continue;
+      const distance = eye ? Vector3.Distance(skin.worldPosition, eye) : 0;
+      if (distance <= (skin.detailed ? CIVILIAN_DETAIL_EXIT_DISTANCE : CIVILIAN_DETAIL_DISTANCE))
+        nearby.push({ skin, score: distance - (skin.detailed ? 8 : 0), reacting: skin.reacting });
+    }
+    // Keep nearby casualties/reactions recognizable as live pedestrians move
+    // around them. More than twelve nearby casualties still obey the draw cap.
+    nearby.sort((a, b) => Number(b.reacting) - Number(a.reacting) || a.score - b.score);
+    const detailed = new Set(nearby.slice(0, CIVILIAN_DETAIL_LIMIT).map(candidate => candidate.skin));
+    for (const skin of prepared.live) {
+      if (skin.civilian) skin.setDetailed(detailed.has(skin));
+      skin.sync();
+    }
+  });
+  scene.onDisposeObservable.addOnce(() => {
+    scene.onBeforeActiveMeshesEvaluationObservable.remove(observer);
+    prepared.live.clear();
+    for (const container of prepared.assets.values()) container.dispose();
+    prepared.assets.clear(); prepared.loading.clear(); libraries.delete(scene);
+  });
+  return prepared;
+}
+
+function prepareGroup(scene: Scene, group: AssetGroup, files: [AssetKey, string][], baseUrl: string, load: AssetLoader): Promise<void> {
+  if (scene.isDisposed) return Promise.reject(new Error('Character scene disposed'));
+  const prepared = library(scene), existing = prepared.loading.get(group); if (existing) return existing;
   const promise = (async () => {
     await import('@babylonjs/loaders/glTF/index.js');
-    const loaded = await Promise.allSettled((['male', 'female'] as const).map(async sex => {
-      const container = await load(new URL(`${sex}.glb`, baseUrl).href);
+    const loaded = await Promise.allSettled(files.map(async ([key, file]) => {
+      const container = await load(new URL(file, baseUrl).href);
       try {
         const names = new Set(container.skeletons.flatMap(skeleton => skeleton.bones.map(bone => bone.name)));
-        if (JOINTS.some(([, name]) => !names.has(name)) || !container.meshes.some(mesh => mesh.getTotalVertices() > 0)) throw new Error(`Invalid ${sex} character rig`);
+        if (JOINTS.some(([, name]) => !names.has(name)) || !container.meshes.some(mesh => mesh.getTotalVertices() > 0)) throw new Error(`Invalid ${key} character rig`);
       } catch (error) { container.dispose(); throw error; }
       for (const material of container.materials) if (material instanceof PBRMaterial) {
         material.imageProcessingConfiguration = scene.imageProcessingConfiguration;
         material.environmentIntensity = .65;
       }
-      return container;
+      return { key, container };
     }));
     const failed = loaded.find(x => x.status === 'rejected');
     if (failed?.status === 'rejected') {
-      for (const result of loaded) if (result.status === 'fulfilled') result.value.dispose();
-      preparing.delete(scene); throw failed.reason;
+      for (const result of loaded) if (result.status === 'fulfilled') result.value.container.dispose();
+      throw failed.reason;
     }
-    const [male, female] = loaded.map(x => (x as PromiseFulfilledResult<AssetContainer>).value);
-    if (scene.isDisposed) { male.dispose(); female.dispose(); throw new Error('Character scene disposed'); }
-    const live = new Set<RocketboxSkin>();
-    libraries.set(scene, { male, female, live });
-    // Havok Ragdoll copies bodies into driver bones during onBeforeRender.
-    // Run after that phase, immediately before active meshes and skeletons evaluate.
-    const observer = scene.onBeforeActiveMeshesEvaluationObservable.add(() => { for (const skin of live) skin.sync(); });
-    scene.onDisposeObservable.addOnce(() => { scene.onBeforeActiveMeshesEvaluationObservable.remove(observer); live.clear(); male.dispose(); female.dispose(); libraries.delete(scene); preparing.delete(scene); });
-  })();
-  preparing.set(scene, promise); return promise;
+    const assets = loaded.map(result => (result as PromiseFulfilledResult<{ key: AssetKey; container: AssetContainer }>).value);
+    if (scene.isDisposed) { assets.forEach(asset => asset.container.dispose()); throw new Error('Character scene disposed'); }
+    for (const { key, container } of assets) prepared.assets.set(key, container);
+  })().catch(error => { prepared.loading.delete(group); throw error; });
+  prepared.loading.set(group, promise); return promise;
+}
+
+/** Existing player library stays independent from optional civilian loading. */
+export function prepareCharacterAssets(scene: Scene, baseUrl = new URL('characters/rocketbox/', document.baseURI).href, load: AssetLoader = url => LoadAssetContainerAsync(url, scene, { pluginExtension: '.glb' })): Promise<void> {
+  return prepareGroup(scene, 'players', [['player-male', 'male.glb'], ['player-female', 'female.glb']], baseUrl, load);
+}
+
+/** Optional shared civilian templates; await before constructing Population. */
+export function prepareCivilianAssets(scene: Scene, baseUrl = new URL('characters/civilians/', document.baseURI).href, load: AssetLoader = url => LoadAssetContainerAsync(url, scene, { pluginExtension: '.glb' })): Promise<void> {
+  return prepareGroup(scene, 'civilians', [['male-adult-03', 'male-adult-03.glb'], ['female-adult-06', 'female-adult-06.glb']], baseUrl, load);
 }
 
 const JOINTS: [string, string, string?][] = [
@@ -59,13 +103,14 @@ export class RocketboxSkin {
   private readonly roots: TransformNode[];
   private readonly mappings: Mapping[] = [];
   private disposed = false;
+  private detailEnabled = true;
   private readonly desired = Matrix.Identity();
   private readonly inverse = Matrix.Identity();
   private readonly local = Matrix.Identity();
   private readonly scale = Vector3.One();
   private readonly rotation = Quaternion.Identity();
   private readonly position = Vector3.Zero();
-  private constructor(private readonly root: TransformNode, private readonly driver: Skeleton, container: AssetContainer, name: string, private readonly shadows: ShadowGenerator, private readonly live: Set<RocketboxSkin>) {
+  private constructor(private readonly root: TransformNode, private readonly driver: Skeleton, container: AssetContainer, name: string, private readonly shadows: ShadowGenerator, private readonly live: Set<RocketboxSkin>, readonly civilian: boolean, private readonly fallback?: Mesh) {
     const instance = container.instantiateModelsToScene(source => `${name}/rocketbox/${source}`, false, { doNotInstantiate: true });
     this.roots = instance.rootNodes as TransformNode[];
     this.skeletons = instance.skeletons;
@@ -113,16 +158,40 @@ export class RocketboxSkin {
       mesh.setBoundingInfo(new BoundingInfo(minimum, maximum)); shadows.addShadowCaster(mesh, false);
     }
     this.sync();
+    if (civilian) this.setDetailed(false);
     live.add(this);
   }
-  static create(scene: Scene, root: TransformNode, driver: Skeleton, name: string, female: boolean, shadows: ShadowGenerator, enabled = false): RocketboxSkin | undefined {
+  static create(scene: Scene, root: TransformNode, driver: Skeleton, name: string, female: boolean, shadows: ShadowGenerator, enabled = false, civilian?: CivilianSkin, fallback?: Mesh): RocketboxSkin | undefined {
     const prepared = libraries.get(scene); if (!prepared) return undefined;
-    if (!enabled) return undefined;
-    return new RocketboxSkin(root, driver, prepared[female ? 'female' : 'male'], name, shadows, prepared.live);
+    const key: AssetKey | undefined = enabled ? female ? 'player-female' : 'player-male' : civilian;
+    const container = key && prepared.assets.get(key); if (!container) return undefined;
+    return new RocketboxSkin(root, driver, container, name, shadows, prepared.live, !enabled && !!civilian, fallback);
+  }
+  get enabled(): boolean { return !this.disposed && !this.root.isDisposed() && this.root.isEnabled(); }
+  get detailed(): boolean { return this.detailEnabled; }
+  get reacting(): boolean { return !!this.root.metadata?.ragdollActive; }
+  get worldPosition(): Vector3 { this.root.computeWorldMatrix(true); return this.root.getAbsolutePosition(); }
+  setDetailed(detailed: boolean): void {
+    if (!this.civilian || this.disposed || detailed === this.detailEnabled) return;
+    this.detailEnabled = detailed;
+    // Visibility changes retain the same private source skeleton and the same
+    // gameplay driver. Returning casualties therefore keep their settled pose.
+    for (const root of this.roots) root.setEnabled(detailed);
+    for (const mesh of this.parts) {
+      mesh.isVisible = detailed;
+      if (detailed) this.shadows.addShadowCaster(mesh, false);
+      else this.shadows.removeShadowCaster(mesh, false);
+    }
+    if (this.fallback) {
+      this.fallback.isVisible = !detailed;
+      if (detailed) this.shadows.removeShadowCaster(this.fallback, false);
+      else this.shadows.addShadowCaster(this.fallback, false);
+    }
   }
   sync(): void {
     if (this.disposed) return;
     if (this.root.isDisposed()) { this.dispose(); return; }
+    if (!this.detailEnabled || !this.root.isEnabled()) return;
     this.driver.computeAbsoluteMatrices(true); this.root.computeWorldMatrix(true);
     for (const mapping of this.mappings) {
       mapping.alignedBind.multiplyToRef(mapping.driver.getAbsoluteMatrix(), this.desired);
@@ -140,6 +209,7 @@ export class RocketboxSkin {
     if (this.disposed) return; this.disposed = true;
     this.live.delete(this);
     for (const mesh of this.parts) this.shadows.removeShadowCaster(mesh, false);
+    if (this.fallback) this.shadows.removeShadowCaster(this.fallback, false);
     for (const root of this.roots) root.dispose(false, false);
     for (const skeleton of this.skeletons) skeleton.dispose();
   }

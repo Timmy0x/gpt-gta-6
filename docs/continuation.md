@@ -97,3 +97,14 @@ Current final frozen directory `.local-builds/metre-uv-v5` has the same applicat
 ## Photo surfaces checkpoint, 9 September 2026
 
 Added verified local CC0 Asphalt 02 / Sand 03 PBR maps at source metre scale; normal WebGPU and WebGL2 street/beach audits pass with zero errors. See `docs/photo-surfaces.md` for fingerprints and screenshots. Road detail is improved; selected sand is too dark for dry tropical beach and needs a paler source replacement. Sky and civilian integration plus aircraft seat corrections are parallel work, not part of this surface checkpoint. Full goal and the failed long-session 1% FPS target remain open.
+
+
+## Coastal detail v8 and latest user priorities
+
+Graphics checkpoint: detailed nearby civilians (12 cap), native atmospheric sky/stars, dry Dense Sand replacement and corrected aircraft cockpits. Frozen `.local-builds/coastal-detail-v8`, port4198, `index-CxJrQY1k.js`, world `authored-860409-v6-dry-sand`;125 tests/build pass. Sky16 stages, aircraft32 checks and fatal civilian31 stages across both renderers pass. Root is committing/pushing this independently of new work.
+
+Latest user asks: realistic weapon facing/handling (backward hip fire), visible carjacking/driver removal and traffic escape, no quick recovery from serious NPC injury, substantial connected map growth, minimal controls text, collision for visible vehicle/scenery components, realistic water/swimming/shoreline and protection against falling off world edges. Keep all these requirements active alongside full goal.
+
+Agent assignments: vehicle_lod owns VehicleOccupancy/Player enter-exit/Population traffic adoption and panic driving; root owns Player weapon-facing sections and Combat.fire early gate. character_verify owns injury-aware Ragdoll/Character, injury callbacks and persistence v2 incl living incapacitated NPCs, Population hurt/casualty sections. gameplay_review owns a pure western VC-INNER expansion module (X−1100…−450,Z−300…600, ~0.585km²) and bounds/ground metadata. Root integrates main/UI/world export, physical component gaps and water/boundary work. Source files have concurrent new work; staging the v8 Character and Population uses exact known index blobs to avoid committing incomplete follow-ups.
+
+Two future CC0 sets are prepared but unintegrated: White Stucco (~2m) and Concrete Floor03 (~2.5m),5.15MB combined. Preserve pastel facade tint when integrating; concrete is darker/warmer than the old cream sidewalk and needs actual visual review. Optional new vehicle acquisition was paused for user priorities; legacy Khronos Buggy was rejected because its reuse license was missing/unsuitable.

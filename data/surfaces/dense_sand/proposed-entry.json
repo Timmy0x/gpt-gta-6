@@ -1,0 +1,39 @@
+{
+  "id": "dense_sand",
+  "name": "Dense Sand",
+  "authors": {
+    "Dimitrios Savva": "All"
+  },
+  "source": "https://polyhaven.com/a/dense_sand",
+  "license": "CC0-1.0",
+  "tileMetres": [
+    1.8000000715255737,
+    1.8000000715255737
+  ],
+  "maps": [
+    {
+      "channel": "Diffuse",
+      "path": "dense_sand/color.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dense_sand/dense_sand_diff_1k.jpg",
+      "bytes": 681515,
+      "md5": "1c3d2c1f41b24ea9133973f2dedd5fea",
+      "sha256": "0d2430c115167a2da3f60d60eb9ea2aa51e71472e2672f94c7f5df78342081ff"
+    },
+    {
+      "channel": "nor_gl",
+      "path": "dense_sand/normal.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dense_sand/dense_sand_nor_gl_1k.jpg",
+      "bytes": 993025,
+      "md5": "ade5aef220f7ad2904bf902ea02d003f",
+      "sha256": "776fe4f5008ee5043a709b0b63a9a7ec758f18ac5e62db65a0e99c04cc782617"
+    },
+    {
+      "channel": "arm",
+      "path": "dense_sand/arm.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dense_sand/dense_sand_arm_1k.jpg",
+      "bytes": 685180,
+      "md5": "1310b2067203e410a0df79df9a080bfb",
+      "sha256": "30d042f0b81e12eccdf2d32398c34c1f8416687a42f8ed453e9337c141c90015"
+    }
+  ]
+}

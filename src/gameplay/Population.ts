@@ -95,6 +95,8 @@ export class Population {
         appearance % 6
       ],
       appearance % 3 === 0,
+      undefined,
+      { licensedCivilianSkin: appearance % 3 === 0 ? "female-adult-06" : "male-adult-03" },
     );
     model.position(p);
     const ped: Pedestrian = {

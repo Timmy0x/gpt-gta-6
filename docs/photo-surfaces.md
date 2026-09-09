@@ -19,3 +19,8 @@ The frozen `.local-builds/photo-surfaces-v6` production bundle was served locall
 - [Beach capture](evidence/material-scale-webgpu-photo-v6/beach.png)
 
 The isolated staged checkpoint passes all 116 automated tests and the production build. This isolated copy avoids testing unrelated concurrent edits as though they were part of the checkpoint. These checks do not establish performance. The broad surfaces expose repeating asphalt cracks at a distance. Sand 03 appears too dark/damp for the entire dry tropical beach; a paler source replacement is the next art correction. Buildings, foliage, aircraft and most vehicle classes still use provisional geometry. No GTA VI visual parity is claimed.
+
+
+## Dry shoreline correction
+
+The next integrated candidate replaces Sand03 with unchanged Dense Sand maps by Dimitrios Savva, CC0 from Poly Haven, at a 1.8 m tile. Source diffuse was inspected before import; it is lighter dry tan with compacted grain, still not a verified Miami or Leonida surface. Three maps total2,359,720 bytes. The two active surface triples total4,628,319 bytes; full world texture accounting is5,293,999 bytes. Sand03 runtime files are removed; its historical checks/source metadata remain. `coastal-detail-v8` retains3 m asphalt and uses1.8 m sand.

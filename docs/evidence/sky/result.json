@@ -1,0 +1,416 @@
+{
+  "method": "Isolated procedural sky/scale-reference preview, using the production Sky module. Does not establish integrated game performance or geographic fidelity.",
+  "resolution": [
+    1600,
+    900
+  ],
+  "checks": [
+    {
+      "backend": "WebGPU",
+      "label": "day",
+      "time": 12,
+      "weather": "Clear",
+      "sun": [
+        5.779465574860626e-17,
+        0.9438583563660174,
+        -0.3303504247281061
+      ],
+      "night": 0,
+      "daylight": 1,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 370,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGPU",
+      "label": "sunset",
+      "time": 17.8,
+      "weather": "Clear",
+      "sun": [
+        -0.9984620398679896,
+        0.052327178207897555,
+        -0.01831451237276414
+      ],
+      "night": 0,
+      "daylight": 0.052335956242944695,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 680,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGPU",
+      "label": "twilight",
+      "time": 18.5,
+      "weather": "Clear",
+      "sun": [
+        -0.9904118838961029,
+        -0.13039019815516004,
+        0.04563656935430601
+      ],
+      "night": 0.5276309611002589,
+      "daylight": 0,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 1001,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      }
+    },
+    {
+      "backend": "WebGPU",
+      "label": "night",
+      "time": 23,
+      "weather": "Clear",
+      "sun": [
+        -0.24518636983905692,
+        -0.9150479895627343,
+        0.320266796346957
+      ],
+      "night": 1,
+      "daylight": 0,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 1320,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      }
+    },
+    {
+      "backend": "WebGPU",
+      "label": "haze",
+      "time": 15,
+      "weather": "Haze",
+      "sun": [
+        -0.6863982230545801,
+        0.6863982230545802,
+        -0.24023937806910306
+      ],
+      "night": 0,
+      "daylight": 0.7071067811865476,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 1629,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGPU",
+      "label": "rain",
+      "time": 15,
+      "weather": "Rain",
+      "sun": [
+        -0.6863982230545801,
+        0.6863982230545802,
+        -0.24023937806910306
+      ],
+      "night": 0,
+      "daylight": 0.7071067811865476,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 1929,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGPU",
+      "label": "solar-disk",
+      "time": 16,
+      "weather": "Clear",
+      "sun": [
+        -0.8530614080584931,
+        0.49251523357785204,
+        -0.1723803317522482
+      ],
+      "night": 0,
+      "daylight": 0.49999999999999994,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 2208,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGL2",
+      "label": "day",
+      "time": 12,
+      "weather": "Clear",
+      "sun": [
+        5.779465574860626e-17,
+        0.9438583563660174,
+        -0.3303504247281061
+      ],
+      "night": 0,
+      "daylight": 1,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 371,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGL2",
+      "label": "sunset",
+      "time": 17.8,
+      "weather": "Clear",
+      "sun": [
+        -0.9984620398679896,
+        0.052327178207897555,
+        -0.01831451237276414
+      ],
+      "night": 0,
+      "daylight": 0.052335956242944695,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 671,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGL2",
+      "label": "twilight",
+      "time": 18.5,
+      "weather": "Clear",
+      "sun": [
+        -0.9904118838961029,
+        -0.13039019815516004,
+        0.04563656935430601
+      ],
+      "night": 0.5276309611002589,
+      "daylight": 0,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 981,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      }
+    },
+    {
+      "backend": "WebGL2",
+      "label": "night",
+      "time": 23,
+      "weather": "Clear",
+      "sun": [
+        -0.24518636983905692,
+        -0.9150479895627343,
+        0.320266796346957
+      ],
+      "night": 1,
+      "daylight": 0,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 1311,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 160
+      }
+    },
+    {
+      "backend": "WebGL2",
+      "label": "haze",
+      "time": 15,
+      "weather": "Haze",
+      "sun": [
+        -0.6863982230545801,
+        0.6863982230545802,
+        -0.24023937806910306
+      ],
+      "night": 0,
+      "daylight": 0.7071067811865476,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 1620,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGL2",
+      "label": "rain",
+      "time": 15,
+      "weather": "Rain",
+      "sun": [
+        -0.6863982230545801,
+        0.6863982230545802,
+        -0.24023937806910306
+      ],
+      "night": 0,
+      "daylight": 0.7071067811865476,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 1920,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    },
+    {
+      "backend": "WebGL2",
+      "label": "solar-disk",
+      "time": 16,
+      "weather": "Clear",
+      "sun": [
+        -0.8530614080584931,
+        0.49251523357785204,
+        -0.1723803317522482
+      ],
+      "night": 0,
+      "daylight": 0.49999999999999994,
+      "stats": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      },
+      "meshes": 9,
+      "materials": 4,
+      "textures": 2,
+      "cumulativeDrawCalls": 2199,
+      "sky": {
+        "meshes": 2,
+        "triangles": 332,
+        "textures": 0,
+        "visibleStars": 0
+      }
+    }
+  ],
+  "errors": []
+}

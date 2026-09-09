@@ -24,7 +24,7 @@ export async function exportWorld() {
   for (const mesh of scene.meshes) if(mesh instanceof Mesh && mesh.isEnabled()&&!seen.has(mesh)) sink.registerMesh(mesh,'global',false);
   const usedMaterials = [...new Set(meshes.map(r=>r.mesh.material).filter(Boolean))] as Material[];
   usedMaterials.forEach((m,index)=>m.id=`material-${index.toString().padStart(3,'0')}`);
-  const manifest:WorldManifest={version:1,build:'authored-860409-v5-photo-surfaces',seed:860409,format:'babylon-json+gzip',chunks:[],materials:[],colliders,...world.getAuthoringMetadata(),totals:{meshes:meshes.length,cpuGeometryBytes:0,compressedBytes:0,textureBytes:0}};
+  const manifest:WorldManifest={version:1,build:'authored-860409-v6-dry-sand',seed:860409,format:'babylon-json+gzip',chunks:[],materials:[],colliders,...world.getAuthoringMetadata(),totals:{meshes:meshes.length,cpuGeometryBytes:0,compressedBytes:0,textureBytes:0}};
   const textures=new Map<string,string>();
   const photoTextures = new Set<string>();
   async function externalize(value:any):Promise<void>{

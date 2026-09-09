@@ -1,0 +1,706 @@
+{
+  "scope": "Isolated Babylon asset studio; actual imported models and existing retargeter; no gameplay integration/performance claim.",
+  "pass": true,
+  "errors": [],
+  "warnings": [],
+  "lifecycle": {
+    "before": {
+      "meshes": 11,
+      "geometries": 9,
+      "skeletons": 4,
+      "transforms": 174,
+      "materials": 9,
+      "textures": 8,
+      "shadowCasters": 6
+    },
+    "after": {
+      "meshes": 11,
+      "geometries": 9,
+      "skeletons": 4,
+      "transforms": 174,
+      "materials": 9,
+      "textures": 8,
+      "shadowCasters": 6
+    }
+  },
+  "states": [
+    {
+      "mode": "idle",
+      "backend": "WebGL 2",
+      "counts": {
+        "meshes": 11,
+        "geometries": 9,
+        "skeletons": 4,
+        "transforms": 174,
+        "materials": 9,
+        "textures": 8,
+        "shadowCasters": 6
+      },
+      "parts": [
+        {
+          "name": "Male Adult 03",
+          "meshes": [
+            {
+              "vertices": 4427,
+              "triangles": 3874,
+              "bones": 80,
+              "material": "m004_body",
+              "textures": [
+                {
+                  "name": "m004_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 3120,
+              "bones": 80,
+              "material": "m004_head",
+              "textures": [
+                {
+                  "name": "m004_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 206,
+              "bones": 80,
+              "material": "m004_opacity",
+              "textures": [
+                {
+                  "name": "m004_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Female Adult 06",
+          "meshes": [
+            {
+              "vertices": 4372,
+              "triangles": 3634,
+              "bones": 80,
+              "material": "f202_body",
+              "textures": [
+                {
+                  "name": "f202_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 3016,
+              "bones": 80,
+              "material": "f202_head",
+              "textures": [
+                {
+                  "name": "f202_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 342,
+              "bones": 80,
+              "material": "f202_opacity",
+              "textures": [
+                {
+                  "name": "f202_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "walk",
+      "backend": "WebGL 2",
+      "counts": {
+        "meshes": 11,
+        "geometries": 9,
+        "skeletons": 4,
+        "transforms": 174,
+        "materials": 9,
+        "textures": 8,
+        "shadowCasters": 6
+      },
+      "parts": [
+        {
+          "name": "Male Adult 03",
+          "meshes": [
+            {
+              "vertices": 4427,
+              "triangles": 3874,
+              "bones": 80,
+              "material": "m004_body",
+              "textures": [
+                {
+                  "name": "m004_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 3120,
+              "bones": 80,
+              "material": "m004_head",
+              "textures": [
+                {
+                  "name": "m004_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 206,
+              "bones": 80,
+              "material": "m004_opacity",
+              "textures": [
+                {
+                  "name": "m004_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Female Adult 06",
+          "meshes": [
+            {
+              "vertices": 4372,
+              "triangles": 3634,
+              "bones": 80,
+              "material": "f202_body",
+              "textures": [
+                {
+                  "name": "f202_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 3016,
+              "bones": 80,
+              "material": "f202_head",
+              "textures": [
+                {
+                  "name": "f202_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 342,
+              "bones": 80,
+              "material": "f202_opacity",
+              "textures": [
+                {
+                  "name": "f202_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "run",
+      "backend": "WebGL 2",
+      "counts": {
+        "meshes": 11,
+        "geometries": 9,
+        "skeletons": 4,
+        "transforms": 174,
+        "materials": 9,
+        "textures": 8,
+        "shadowCasters": 6
+      },
+      "parts": [
+        {
+          "name": "Male Adult 03",
+          "meshes": [
+            {
+              "vertices": 4427,
+              "triangles": 3874,
+              "bones": 80,
+              "material": "m004_body",
+              "textures": [
+                {
+                  "name": "m004_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 3120,
+              "bones": 80,
+              "material": "m004_head",
+              "textures": [
+                {
+                  "name": "m004_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 206,
+              "bones": 80,
+              "material": "m004_opacity",
+              "textures": [
+                {
+                  "name": "m004_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Female Adult 06",
+          "meshes": [
+            {
+              "vertices": 4372,
+              "triangles": 3634,
+              "bones": 80,
+              "material": "f202_body",
+              "textures": [
+                {
+                  "name": "f202_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 3016,
+              "bones": 80,
+              "material": "f202_head",
+              "textures": [
+                {
+                  "name": "f202_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 342,
+              "bones": 80,
+              "material": "f202_opacity",
+              "textures": [
+                {
+                  "name": "f202_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "crouch",
+      "backend": "WebGL 2",
+      "counts": {
+        "meshes": 11,
+        "geometries": 9,
+        "skeletons": 4,
+        "transforms": 174,
+        "materials": 9,
+        "textures": 8,
+        "shadowCasters": 6
+      },
+      "parts": [
+        {
+          "name": "Male Adult 03",
+          "meshes": [
+            {
+              "vertices": 4427,
+              "triangles": 3874,
+              "bones": 80,
+              "material": "m004_body",
+              "textures": [
+                {
+                  "name": "m004_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 3120,
+              "bones": 80,
+              "material": "m004_head",
+              "textures": [
+                {
+                  "name": "m004_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 206,
+              "bones": 80,
+              "material": "m004_opacity",
+              "textures": [
+                {
+                  "name": "m004_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Female Adult 06",
+          "meshes": [
+            {
+              "vertices": 4372,
+              "triangles": 3634,
+              "bones": 80,
+              "material": "f202_body",
+              "textures": [
+                {
+                  "name": "f202_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 3016,
+              "bones": 80,
+              "material": "f202_head",
+              "textures": [
+                {
+                  "name": "f202_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 342,
+              "bones": 80,
+              "material": "f202_opacity",
+              "textures": [
+                {
+                  "name": "f202_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "aim",
+      "backend": "WebGL 2",
+      "counts": {
+        "meshes": 11,
+        "geometries": 9,
+        "skeletons": 4,
+        "transforms": 174,
+        "materials": 9,
+        "textures": 8,
+        "shadowCasters": 6
+      },
+      "parts": [
+        {
+          "name": "Male Adult 03",
+          "meshes": [
+            {
+              "vertices": 4427,
+              "triangles": 3874,
+              "bones": 80,
+              "material": "m004_body",
+              "textures": [
+                {
+                  "name": "m004_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 3120,
+              "bones": 80,
+              "material": "m004_head",
+              "textures": [
+                {
+                  "name": "m004_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 206,
+              "bones": 80,
+              "material": "m004_opacity",
+              "textures": [
+                {
+                  "name": "m004_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Female Adult 06",
+          "meshes": [
+            {
+              "vertices": 4372,
+              "triangles": 3634,
+              "bones": 80,
+              "material": "f202_body",
+              "textures": [
+                {
+                  "name": "f202_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 3016,
+              "bones": 80,
+              "material": "f202_head",
+              "textures": [
+                {
+                  "name": "f202_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 342,
+              "bones": 80,
+              "material": "f202_opacity",
+              "textures": [
+                {
+                  "name": "f202_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "seated",
+      "backend": "WebGL 2",
+      "counts": {
+        "meshes": 11,
+        "geometries": 9,
+        "skeletons": 4,
+        "transforms": 174,
+        "materials": 9,
+        "textures": 8,
+        "shadowCasters": 6
+      },
+      "parts": [
+        {
+          "name": "Male Adult 03",
+          "meshes": [
+            {
+              "vertices": 4427,
+              "triangles": 3874,
+              "bones": 80,
+              "material": "m004_body",
+              "textures": [
+                {
+                  "name": "m004_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 3120,
+              "bones": 80,
+              "material": "m004_head",
+              "textures": [
+                {
+                  "name": "m004_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "m004_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4427,
+              "triangles": 206,
+              "bones": 80,
+              "material": "m004_opacity",
+              "textures": [
+                {
+                  "name": "m004_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Female Adult 06",
+          "meshes": [
+            {
+              "vertices": 4372,
+              "triangles": 3634,
+              "bones": 80,
+              "material": "f202_body",
+              "textures": [
+                {
+                  "name": "f202_body (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_body (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 3016,
+              "bones": 80,
+              "material": "f202_head",
+              "textures": [
+                {
+                  "name": "f202_head (Base Color)",
+                  "ready": true
+                },
+                {
+                  "name": "f202_head (Normal)",
+                  "ready": true
+                }
+              ]
+            },
+            {
+              "vertices": 4372,
+              "triangles": 342,
+              "bones": 80,
+              "material": "f202_opacity",
+              "textures": [
+                {
+                  "name": "f202_opacity (Base Color)",
+                  "ready": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

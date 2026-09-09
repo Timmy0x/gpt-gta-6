@@ -72,3 +72,12 @@ All114 tests and the production build pass. Both final WebGPU and WebGL2 street 
 ## World surface scale
 
 The authoring/export pipeline now uses physically consistent UV scale for road and beach grain, removing the long stretched streaks in normal views. All115 tests, build and actual-mesh measurements on both renderer paths pass. Geometry/collision/navigation counts are unchanged; package differences are recorded. See world-material-scale.md. The textures themselves are still original prototype grain, and broader world realism remains incomplete.
+
+
+## Coastal detail checkpoint (9 September 2026)
+
+Nearby civilians now use two distinct licensed Rocketbox variants, with at most twelve detailed skins and persistent private rigs through distance changes. Native Babylon SkyMaterial supplies a solar disk, atmospheric gradient, haze and a seeded night star layer; directional lighting shares its clock/vector. Road PBR detail is retained and the overly dark sand source is replaced by lighter Dense Sand. Aircraft seats and the opaque geometry behind their glass were corrected for both players.
+
+All125 tests and production build pass on this checkpoint; a focused rerun of actual aircraft seating passes after its final shell refinement. The frozen `coastal-detail-v8` module is `index-CxJrQY1k.js` (SHA256 `0e304f177228f219ba9cc1c5ccad41347655f108c4deedb543f41583541e5dcc`). Both renderers pass16 sky stages total,32 aircraft seating/takeoff checks total, and31 actual civilian fatal-damage/BUSTED/save/load/fresh-Continue stages total with zero errors. Full-game source skins and local textures are visible in the records. No new sustained performance pass is claimed.
+
+The latest user requests remain active: hip firing can be inconsistent with body direction; traffic needs visible carjacking rather than immediate ownership transfer; seriously injured surviving NPCs recover too quickly; the connected map is too small; controls are too verbose; visible component collisions, water/swimming/shoreline detail and world-edge protection need work. These are being implemented after this graphics checkpoint. Fatal NPC persistence verification does not excuse the separate rapid nonfatal-recovery defect. See the maintained continuation priorities.

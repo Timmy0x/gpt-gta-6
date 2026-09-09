@@ -532,23 +532,37 @@ export function createVehicleModel(
     box("rear-bench", 1.7, 0.3, 0.52, 0, 0.6, -1.78, paint);
     box("outboard-motor", 0.48, 0.85, 0.47, 0, -0.08, -half - 0.15, dark);
   } else if (kind === "helicopter") {
+    // The cabin is narrower above the shoulders; its pilot position is authored
+    // against the fuselage rather than inferred from the rotor/collision width.
+    model.seat = new Vector3(-0.3, -0.88, 0.35);
     body("fuselage", [
       [-2.15, 0.27, -0.4, 0.63, 0.7],
       [-1.2, 0.89, -0.57, 1.12, 0.64],
       [0.78, 0.95, -0.54, 1.0, 0.72],
       [1.81, 0.52, -0.3, 0.6, 0.6],
       [2.14, 0.14, -0.1, 0.35, 0.7],
-    ]);
+    ], paint, (section, side) => section < 2 || side === 0);
+    // The front glazing must look into the cabin, rather than through a second
+    // opaque fuselage surface. Keep the original damage-panel vertex layout.
+    parent(loft(`cockpit-lower-shell-${id}`, [
+      [0.78, 0.95, -0.54, -0.12, 0.96],
+      [1.81, 0.52, -0.3, -0.16, 0.83],
+      [2.14, 0.14, -0.1, -0.025, 0.7],
+    ], scene, (_section, side) => side === 1 || side === 3, false), paint);
     const window = body(
       "cockpit-canopy",
       [
-        [0.8, 0.92, -0.12, 0.92, 0.65],
+        [0.78, 0.95, -0.12, 1.0, 0.72],
         [1.69, 0.58, -0.22, 0.61, 0.59],
         [2.1, 0.13, -0.04, 0.32, 0.7],
       ],
       glass,
     );
     model.windows.push(window);
+    for (const side of [-1, 1]) {
+      box("cockpit-seat", 0.48, 0.12, 0.45, side * 0.3, 0.04, 0.38, dark);
+      box("cockpit-seat-back", 0.48, 0.55, 0.1, side * 0.3, 0.42, 0.1, dark);
+    }
     body("tail-boom", [
       [-5.05, 0.11, 0.18, 0.47, 0.8],
       [-1.85, 0.32, -0.1, 0.53, 0.9],
@@ -583,13 +597,16 @@ export function createVehicleModel(
     );
     tailRotor.rotation.x = 0.3;
   } else if (kind === "plane") {
+    // This narrow trainer has a central pilot seat under the canopy. The generic
+    // two-seat car offset placed the pilot's left shoulder through its side.
+    model.seat = new Vector3(0, -0.86, -0.1);
     body("fuselage", [
       [-3.7, 0.12, -0.03, 0.29, 0.8],
       [-1.1, 0.63, -0.43, 0.7, 0.72],
       [0.55, 0.68, -0.47, 0.68, 0.7],
       [2.69, 0.37, -0.23, 0.4, 0.85],
       [3.5, 0.12, -0.07, 0.2, 0.9],
-    ]);
+    ], paint, (section, side) => section !== 1 || side !== 2);
     body("wings", [
       [-0.65, 5.3, 0.05, 0.17, 0.95],
       [0.25, 5.3, 0.05, 0.17, 0.95],
@@ -608,6 +625,8 @@ export function createVehicleModel(
       glass,
     );
     model.windows.push(window);
+    box("pilot-seat", 0.48, 0.12, 0.43, 0, 0.1, -0.08, dark);
+    box("pilot-seat-back", 0.48, 0.56, 0.1, 0, 0.44, -0.29, dark);
     for (const side of [-1, 1]) wheel(side * 1.07, -0.27, false, 0.28);
     wheel(0, 2.05, true, 0.24);
     const rotor = new TransformNode(`propeller-${id}`, scene);
