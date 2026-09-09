@@ -349,3 +349,8 @@ The latest user reports aircraft staying grounded and widespread rapid respawnin
 ### Detailed street-car follow-up
 
 Aster now supplies the starter car and two traffic slots through a shared verified 61,879-triangle/79-renderable-mesh asset. Total detailed-class budget is six; saved ownership takes priority over ambient cars. Normal starter driving, traffic movement, parked exit, switching, spawn budget and saves pass ten stages on both renderer paths. Damage/retry/night-light/garage/fresh-Continue review passes fourteen stages on each path (WebGPU before the separately verified exit correction, WebGL2 after). Automatic distance LOD and distinct realistic models for other vehicle classes remain unbuilt. Full performance target remains unmet.
+
+
+### World surface scale correction
+
+Authored asphalt and sand now use equal metres-per-texture-tile across long and rotated surfaces. Regenerated native packages retain collider/navigation data and geometry counts. All115 tests/build and both actual-mesh browser measurements pass; parent street/beach images show the stretched streaks removed. This fixes mapping of existing authored texture pixels, not final surface art. See world-material-scale.md.

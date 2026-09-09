@@ -1,0 +1,67 @@
+{
+  "changedFieldsAcrossPackages": {
+    "/geometries/vertexData/*/uniqueId": 1221,
+    "/meshes/*/geometryUniqueId": 1221,
+    "/geometries/vertexData/*/uvs": 16,
+    "/geometries/vertexData/*/positions": 11
+  },
+  "collisionsAndNavigationUnchanged": true,
+  "before": {
+    "meshes": 1221,
+    "cpuGeometryBytes": 57932888,
+    "compressedBytes": 13132677,
+    "textureBytes": 722275
+  },
+  "after": {
+    "meshes": 1221,
+    "cpuGeometryBytes": 57932888,
+    "compressedBytes": 13134765,
+    "textureBytes": 722275
+  },
+  "positionRoundingDifferences": [
+    {
+      "mesh": "world-chunk/-432:-288:world/asphalt:detail:false/geometry",
+      "maxPositionDeltaMetres": 5.587935447692871e-09
+    },
+    {
+      "mesh": "world-chunk/-288:-288:world/asphalt:detail:false/geometry",
+      "maxPositionDeltaMetres": 5.587935447692871e-09
+    },
+    {
+      "mesh": "world-chunk/-288:-144:world/asphalt:detail:false/geometry",
+      "maxPositionDeltaMetres": 3.725290298461914e-09
+    },
+    {
+      "mesh": "world-chunk/-144:-288:world/asphalt:detail:false/geometry",
+      "maxPositionDeltaMetres": 5.587935447692871e-09
+    },
+    {
+      "mesh": "world-chunk/0:-288:world/asphalt:detail:false/geometry",
+      "maxPositionDeltaMetres": 5.587935447692871e-09
+    },
+    {
+      "mesh": "world-chunk/-144:0:world/asphalt:global:false/geometry",
+      "maxPositionDeltaMetres": 9.313225746154785e-10
+    },
+    {
+      "mesh": "world-chunk/-144:-288:world/asphalt:global:false/geometry",
+      "maxPositionDeltaMetres": 9.313225746154785e-10
+    },
+    {
+      "mesh": "world-chunk/-144:-144:world/asphalt:global:false/geometry",
+      "maxPositionDeltaMetres": 9.313225746154785e-10
+    },
+    {
+      "mesh": "world-chunk/-144:144:world/asphalt:global:false/geometry",
+      "maxPositionDeltaMetres": 9.313225746154785e-10
+    },
+    {
+      "mesh": "world-chunk/-144:288:world/asphalt:global:false/geometry",
+      "maxPositionDeltaMetres": 9.313225746154785e-10
+    },
+    {
+      "mesh": "world-chunk/-432:144:world/asphalt:structure:false/geometry",
+      "maxPositionDeltaMetres": 9.313225746154785e-10
+    }
+  ]
+}

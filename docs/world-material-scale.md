@@ -1,0 +1,13 @@
+# World surface texture scale
+
+Road and beach grain previously repeated a fixed number of times across each box. Consequently, long roads stretched a texture tile to roughly fifteen metres in one direction, while the other axis could be under thirty centimetres. The beach ranged from 0.61 to 29.76 metres per tile in the loaded mesh measurement. This produced long streaks visible in normal street and beach views.
+
+`applyMetreUVs` now writes surface coordinates in metres during world authoring. Asphalt uses a 0.75 m tile and sand uses a 0.5 m tile, explicit project art choices. Each face has equal scale in both tangent directions, including rotated boxes, with a consistent phase on parallel surfaces. The helper makes the box geometry unique before changing UVs so shared template geometry remains intact. Original generated texture pixels are retained; no new external asset or GPU shader is introduced.
+
+World packages were regenerated as `authored-860409-v4-metre-uv`. They retain 84 packages, 171 materials, 46 textures, 1,221 meshes and 57,932,888 CPU geometry bytes. Compressed geometry/material data grows by 2,088 bytes. Package comparison verifies identical collider/navigation records, normals and indices. Sixteen UV arrays change. Eleven position arrays differ only by floating-point rounding, with maximum difference 5.59e-9 m. Export-created numeric geometry IDs also change. The manifest's per-package hashes identify the exact outputs.
+
+All 115 tests and the production build pass. The added actual-Babylon box test checks face metrics on long roads, the beach and rotated boxes and preserves template UVs. Existing native-package and Havok streaming tests pass. The normal-control browser audit launches the game and fast-travels through the map, then measures the actual loaded road/beach geometry. WebGPU and WebGL2 both report asphalt between 0.7499992 and 0.7500017 m per tile, and sand at 0.5 m, with zero errors. Parent visual inspection confirms the long streaks are removed.
+
+Evidence is under `docs/evidence/material-scale-*` and `metre-uv-*`. Earlier harness failures assumed merged normals had unit length; Babylon's merged normals retain scale until shader normalization. Measuring their direction fixes the test without changing runtime normals. Source/final world-manifest hashes were independently checked against the immutable served snapshots after the audit, because the application JS remains identical for this data-only change.
+
+The current grain textures remain authored placeholders. Real surface variation, normal/roughness detail, decals, vegetation, architecture and lighting still require broader visual work. This correction does not establish final realism or the outstanding performance gate.

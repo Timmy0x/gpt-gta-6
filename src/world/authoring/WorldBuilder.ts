@@ -11,6 +11,7 @@ import {
   VertexData,
 } from "@babylonjs/core";
 import { mergeAuthoredBatch } from './mergeBatch';
+import { applyMetreUVs } from './metreUVs';
 import type { Material, Scene } from "@babylonjs/core";
 import type {
   BuildContext,
@@ -71,6 +72,7 @@ export class WorldBuilder implements WorldContract {
   private readonly scene: Scene;
   private readonly rng = seededRandom(860409);
   private readonly materials = new Map<string, PBRMaterial>();
+  private readonly materialTileMetres = new WeakMap<Material, number>();
   private readonly allMaterials: Material[] = [];
   private readonly textures: Texture[] = [];
   private readonly batches = new Map<string, Batch>();
@@ -114,8 +116,7 @@ export class WorldBuilder implements WorldContract {
       128,
     );
     this.asphalt.albedoTexture = roadTexture;
-    roadTexture.uScale = 38;
-    roadTexture.vScale = 38;
+    this.materialTileMetres.set(this.asphalt, 0.75);
     this.window = this.mat("glass-blue", "#284f5a", 0.18, 0.42);
     this.window.reflectivityColor = new Color3(0.54, 0.65, 0.7);
     this.waterMaterial = this.mat("ocean-water", "#247f90", 0.16, 0.34);
@@ -291,6 +292,8 @@ export class WorldBuilder implements WorldContract {
     mesh.scaling.set(w, h, d);
     mesh.position.set(x, y, z);
     mesh.rotation.y = rotation;
+    const tileMetres = this.materialTileMetres.get(material);
+    if (tileMetres) applyMetreUVs(mesh, tileMetres);
     return this.queue(mesh, material, detail, casts);
   }
 
@@ -378,8 +381,7 @@ export class WorldBuilder implements WorldContract {
     const sand = this.mat("sand", "#eee2bc", 0.98);
     const sandTexture = this.grainTexture("sand-grain", "#eee6cf", 0.1);
     sand.albedoTexture = sandTexture;
-    sandTexture.uScale = 42;
-    sandTexture.vScale = 90;
+    this.materialTileMetres.set(sand, 0.5);
     this.box(
       "urban-ground",
       -147.5,
