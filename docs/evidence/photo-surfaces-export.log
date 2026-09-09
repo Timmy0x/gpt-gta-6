@@ -1,0 +1,126 @@
+8:15:47 PM [vite] (client) Re-optimizing dependencies because lockfile has changed
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/surfaces/manifest.json instead of /public/surfaces/manifest.json.
+If you intend to use the URL of that asset, use /surfaces/manifest.json?url.
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+8:16:03 PM [vite] (client) [console.warn] BJS - [20:16:03]: The scene must be ready before serializing the dynamic texture
+{
+  "packages": 84,
+  "materials": 171,
+  "textures": 50,
+  "meshes": 1221,
+  "cpuGeometryBytes": 57932888,
+  "compressedBytes": 13134887,
+  "textureBytes": 5116939
+}

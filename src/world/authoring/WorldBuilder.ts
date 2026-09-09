@@ -117,6 +117,7 @@ export class WorldBuilder implements WorldContract {
     );
     this.asphalt.albedoTexture = roadTexture;
     this.materialTileMetres.set(this.asphalt, 0.75);
+    this.photoSurface(this.asphalt, "asphalt_02", 3);
     this.window = this.mat("glass-blue", "#284f5a", 0.18, 0.42);
     this.window.reflectivityColor = new Color3(0.54, 0.65, 0.7);
     this.waterMaterial = this.mat("ocean-water", "#247f90", 0.16, 0.34);
@@ -179,6 +180,31 @@ export class WorldBuilder implements WorldContract {
       });
     }
     return material;
+  }
+
+  private photoSurface(material: PBRMaterial, asset: string, tileMetres: number): void {
+    const map = (channel: string, gammaSpace: boolean) => {
+      const texture = new Texture(`/surfaces/${asset}/${channel}.jpg`, this.scene, false, false);
+      texture.gammaSpace = gammaSpace;
+      texture.wrapU = texture.wrapV = Texture.WRAP_ADDRESSMODE;
+      texture.anisotropicFilteringLevel = 8;
+      this.textures.push(texture);
+      return texture;
+    };
+    material.albedoTexture = map("color", true);
+    material.bumpTexture = map("normal", false);
+    material.metallicTexture = map("arm", false);
+    material.albedoColor.setAll(1);
+    material.metallic = 0;
+    material.roughness = 1;
+    material.useRoughnessFromMetallicTextureAlpha = false;
+    material.useRoughnessFromMetallicTextureGreen = true;
+    material.useMetallnessFromMetallicTextureBlue = true;
+    material.useAmbientOcclusionFromMetallicTextureRed = true;
+    material.invertNormalMapX = !this.scene.useRightHandedSystem;
+    material.invertNormalMapY = this.scene.useRightHandedSystem;
+    material.metadata = { surfaceAsset: asset, tileMetres };
+    this.materialTileMetres.set(material, tileMetres);
   }
 
   private grainTexture(
@@ -382,6 +408,7 @@ export class WorldBuilder implements WorldContract {
     const sandTexture = this.grainTexture("sand-grain", "#eee6cf", 0.1);
     sand.albedoTexture = sandTexture;
     this.materialTileMetres.set(sand, 0.5);
+    this.photoSurface(sand, "sand_03", 2);
     this.box(
       "urban-ground",
       -147.5,

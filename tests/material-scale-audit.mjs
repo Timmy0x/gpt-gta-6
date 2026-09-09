@@ -17,7 +17,7 @@ async function capture(label) {
     for (const mesh of g.scene.meshes) {
       if (!['world/asphalt', 'world/sand'].includes(mesh.material?.name) || !mesh.isEnabled()) continue;
       const p = mesh.getVerticesData('position'), n = mesh.getVerticesData('normal'), uv = mesh.getVerticesData('uv'), indices = mesh.getIndices(), world = mesh.computeWorldMatrix(true), scale = mesh.material.albedoTexture;
-      diagnostics.push({ mesh: mesh.name, material: mesh.material.name, positions: p?.length, normals: n?.length, uvs: uv?.length, indices: indices?.length, sampleNormals: n?.slice(0,24), scaleU: scale?.uScale, scaleV: scale?.vScale });
+      diagnostics.push({ mesh: mesh.name, material: mesh.material.name, metadata: mesh.material.metadata, positions: p?.length, normals: n?.length, uvs: uv?.length, indices: indices?.length, sampleNormals: n?.slice(0,24), scaleU: scale?.uScale, scaleV: scale?.vScale, maps: ['albedoTexture', 'bumpTexture', 'metallicTexture'].map(slot => { const t = mesh.material[slot]; return t ? {slot, url:t.url, ready:t.isReady(), gammaSpace:t.gammaSpace, size:t.getSize()} : {slot, absent:true}; }) });
       if (!p || !n || !uv || !indices) continue;
       let minimum = Infinity, maximum = 0, edges = 0;
       for (let k = 0; k < indices.length; k += 3) {
@@ -38,8 +38,13 @@ async function capture(label) {
   });
   checks.push({ label, ...s }); await page.screenshot({ path: `${output}/${label}.png` });
   if (process.env.AUDIT_VARIANT !== 'before') for (const surface of s.surfaces) {
-    const expected = surface.material === 'world/asphalt' ? .75 : .5;
+    const expected = process.env.AUDIT_PHOTO === '1' ? (surface.material === 'world/asphalt' ? 3 : 2) : (surface.material === 'world/asphalt' ? .75 : .5);
     assert.ok(Math.abs(surface.minimumMetresPerTile - expected) < .001 && Math.abs(surface.maximumMetresPerTile - expected) < .001, JSON.stringify(surface));
+  }
+  if (process.env.AUDIT_PHOTO === '1') for (const d of s.diagnostics) for (const map of d.maps) {
+    assert.ok(map.ready && map.url.includes('/surfaces/'), JSON.stringify(map));
+    assert.equal(map.gammaSpace, map.slot === 'albedoTexture');
+    assert.deepEqual(map.size, {width:1024,height:1024});
   }
   return s;
 }

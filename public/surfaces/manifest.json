@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "provider": "Poly Haven",
+  "providerCredit": "Powered by Poly Haven",
+  "license": "https://polyhaven.com/license",
+  "acquired": "2026-09-09",
+  "modifications": "Publisher-provided 1K JPEG maps copied unchanged. Albedo, OpenGL normals and packed red AO / green roughness / blue metalness are interpreted by Babylon PBR at source scale.",
+  "entries": [
+    {
+      "id": "asphalt_02",
+      "name": "Asphalt 02",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "source": "https://polyhaven.com/a/asphalt_02",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        3.000000238418579,
+        3
+      ],
+      "maps": [
+        {
+          "channel": "Diffuse",
+          "path": "asphalt_02/color.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg",
+          "bytes": 731707,
+          "md5": "fa19772d4817754c3efab708c651f5a8",
+          "sha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed"
+        },
+        {
+          "channel": "nor_gl",
+          "path": "asphalt_02/normal.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_nor_gl_1k.jpg",
+          "bytes": 1240122,
+          "md5": "338da8de636ea36133170578cac82e8e",
+          "sha256": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3"
+        },
+        {
+          "channel": "arm",
+          "path": "asphalt_02/arm.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_arm_1k.jpg",
+          "bytes": 296770,
+          "md5": "33820445f43af5e5ee484674b6939271",
+          "sha256": "56bd8e591a3db579846fcb5185f60b0651e0bd4ea85c3529c339e6746243c9cf"
+        }
+      ]
+    },
+    {
+      "id": "sand_03",
+      "name": "Sand 03",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "source": "https://polyhaven.com/a/sand_03",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        2,
+        2
+      ],
+      "maps": [
+        {
+          "channel": "Diffuse",
+          "path": "sand_03/color.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_03/sand_03_diff_1k.jpg",
+          "bytes": 703132,
+          "md5": "84bde2b8bea6351805f67a15682b36b2",
+          "sha256": "e72144f9d7b81bdb7bbdb34222b53431738dcef79346dd89412d2abd541e4d30"
+        },
+        {
+          "channel": "nor_gl",
+          "path": "sand_03/normal.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_03/sand_03_nor_gl_1k.jpg",
+          "bytes": 884706,
+          "md5": "ad8d6ce28344b1d8f241cbd7796243dc",
+          "sha256": "1bde5f49ea78f94bcad73592696bf3949711c4ac197133b710c0c8521b6e996b"
+        },
+        {
+          "channel": "arm",
+          "path": "sand_03/arm.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_03/sand_03_arm_1k.jpg",
+          "bytes": 594822,
+          "md5": "2d69c938c9ce5d4ba41f4789eae3a9cb",
+          "sha256": "6b497a5f4aaa6b8a6ffc35eb840c2ca3050db17eec7980426c531355a84704fa"
+        }
+      ]
+    }
+  ]
+}

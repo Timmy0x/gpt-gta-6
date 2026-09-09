@@ -2,6 +2,7 @@ import { DirectionalLight, Material, Mesh, NullEngine, Scene, SceneSerializer, S
 import { WorldBuilder, type AuthoringSink } from '../../src/world/authoring/WorldBuilder';
 import type { ColliderRecord, StreamingStats, WorldDetail } from '../../src/world/ChunkResidency';
 import type { WorldManifest, ChunkPackage } from '../../src/world/packages';
+import surfaceManifest from '../../public/surfaces/manifest.json';
 
 declare global { interface Window { writeWorldAsset: (name:string,text:string,kind:'json'|'png')=>Promise<{bytes:number;sha256:string}>; } }
 export async function exportWorld() {
@@ -23,10 +24,19 @@ export async function exportWorld() {
   for (const mesh of scene.meshes) if(mesh instanceof Mesh && mesh.isEnabled()&&!seen.has(mesh)) sink.registerMesh(mesh,'global',false);
   const usedMaterials = [...new Set(meshes.map(r=>r.mesh.material).filter(Boolean))] as Material[];
   usedMaterials.forEach((m,index)=>m.id=`material-${index.toString().padStart(3,'0')}`);
-  const manifest:WorldManifest={version:1,build:'authored-860409-v4-metre-uv',seed:860409,format:'babylon-json+gzip',chunks:[],materials:[],colliders,...world.getAuthoringMetadata(),totals:{meshes:meshes.length,cpuGeometryBytes:0,compressedBytes:0,textureBytes:0}};
+  const manifest:WorldManifest={version:1,build:'authored-860409-v5-photo-surfaces',seed:860409,format:'babylon-json+gzip',chunks:[],materials:[],colliders,...world.getAuthoringMetadata(),totals:{meshes:meshes.length,cpuGeometryBytes:0,compressedBytes:0,textureBytes:0}};
   const textures=new Map<string,string>();
+  const photoTextures = new Set<string>();
   async function externalize(value:any):Promise<void>{
     if(!value||typeof value!=='object')return;
+    if(typeof value.name==='string' && value.name.startsWith('/surfaces/')) {
+      const path=value.name.slice('/surfaces/'.length);
+      const source=surfaceManifest.entries.flatMap(entry=>entry.maps).find(map=>map.path===path);
+      if(!source)throw new Error(`Unrecorded surface texture: ${path}`);
+      if(!photoTextures.has(path)){photoTextures.add(path);manifest.totals.textureBytes+=source.bytes;}
+      value.name=`../surfaces/${path}`;
+      if(value.url)value.url=value.name;
+    }
     if(typeof value.base64String==='string'){
       const base64=value.base64String;
       let url=textures.get(base64);
@@ -74,5 +84,5 @@ export async function exportWorld() {
   }
   await window.writeWorldAsset('manifest.json',JSON.stringify(manifest,null,2),'json');
   world.dispose();shadows.dispose();scene.dispose();engine.dispose();
-  return {packages:manifest.chunks.length,materials:manifest.materials.length,textures:textures.size,...manifest.totals};
+  return {packages:manifest.chunks.length,materials:manifest.materials.length,textures:textures.size+photoTextures.size,...manifest.totals};
 }

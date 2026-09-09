@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "build": "authored-860409-v4-metre-uv",
+  "build": "authored-860409-v5-photo-surfaces",
   "seed": 860409,
   "format": "babylon-json+gzip",
   "chunks": [
@@ -17,7 +17,7 @@
       "meshes": 46,
       "vertices": 109814,
       "cpuBytes": 3928288,
-      "compressedBytes": 816386,
+      "compressedBytes": 816396,
       "materials": [
         "material-000",
         "material-001",
@@ -64,7 +64,7 @@
         "material-105",
         "material-101"
       ],
-      "sha256": "69ea576a73acbb28ad654021d4e307d367d5845fbccb63cd71dfeddad3a874fc"
+      "sha256": "4f7e74d03c8e27f56c3d7b1b417f012311c6b4664b39667c0b431f52c943c5b7"
     },
     {
       "id": "-1_0_detail",
@@ -79,7 +79,7 @@
       "meshes": 53,
       "vertices": 117476,
       "cpuBytes": 4199968,
-      "compressedBytes": 877831,
+      "compressedBytes": 877835,
       "materials": [
         "material-003",
         "material-004",
@@ -133,7 +133,7 @@
         "material-104",
         "material-105"
       ],
-      "sha256": "729e1bd8da72d30073f7167e9bc2561d5ae9803583e6970eccc602b0a30aa3cd"
+      "sha256": "89e62ea2c3a6bfd5338847f1ccc4c5ecc4179a0f19c04cbd4607024924179927"
     },
     {
       "id": "-1_1_detail",
@@ -148,7 +148,7 @@
       "meshes": 46,
       "vertices": 156180,
       "cpuBytes": 5556648,
-      "compressedBytes": 1046060,
+      "compressedBytes": 1046069,
       "materials": [
         "material-005",
         "material-006",
@@ -195,7 +195,7 @@
         "material-104",
         "material-105"
       ],
-      "sha256": "2d5a3880045243216e0130a188d41ca9c981108c644da1ea93b6aae1e7f31fca"
+      "sha256": "4dbc1e0b0d6630e3baa18e34c4bd590fb8d0d6ce0db1c6caa3dae7dda13737a6"
     },
     {
       "id": "0_0_detail",
@@ -210,7 +210,7 @@
       "meshes": 51,
       "vertices": 96350,
       "cpuBytes": 3474880,
-      "compressedBytes": 815141,
+      "compressedBytes": 815132,
       "materials": [
         "material-010",
         "material-011",
@@ -262,7 +262,7 @@
         "material-068",
         "material-122"
       ],
-      "sha256": "f1a6f190d079470488f741363126f1d36f0d2963c764ba262db703bd27a03f97"
+      "sha256": "3c4142a715b01aad3d97dfaa0b0f2cd469dc50d8f1762fee6e18a225140270ff"
     },
     {
       "id": "0_1_detail",
@@ -277,7 +277,7 @@
       "meshes": 46,
       "vertices": 131518,
       "cpuBytes": 4697120,
-      "compressedBytes": 949502,
+      "compressedBytes": 949507,
       "materials": [
         "material-013",
         "material-016",
@@ -324,7 +324,7 @@
         "material-102",
         "material-115"
       ],
-      "sha256": "678d3a63e3e72965b1d5649b689db43ec031f08cd2fb32cf5b9267c211fc5e74"
+      "sha256": "072ba55fd6fc73ba3f95992e1f629acd99bcdfe6d99c0b86484b5725b603936d"
     },
     {
       "id": "1_-1_detail",
@@ -339,7 +339,7 @@
       "meshes": 47,
       "vertices": 76873,
       "cpuBytes": 2768264,
-      "compressedBytes": 676774,
+      "compressedBytes": 676763,
       "materials": [
         "material-018",
         "material-019",
@@ -387,7 +387,7 @@
         "material-161",
         "material-165"
       ],
-      "sha256": "089ad3daaf78c179f9e3785a0cdb948c2d6f748f94cddf85ea89a8fa18dc1582"
+      "sha256": "1d8b61266990090277939c14857dd9f4ad2a68d2b5c0b51b0b2aa1f09451755f"
     },
     {
       "id": "1_0_detail",
@@ -402,7 +402,7 @@
       "meshes": 45,
       "vertices": 98111,
       "cpuBytes": 3511912,
-      "compressedBytes": 792037,
+      "compressedBytes": 792039,
       "materials": [
         "material-022",
         "material-023",
@@ -448,7 +448,7 @@
         "material-153",
         "material-162"
       ],
-      "sha256": "a7cf19287ddc5abbe921fc9c34b26df5d1b5650dc7feeda902f0272a0f23a30b"
+      "sha256": "6f5fddfe36f677e39bb714a723da9cd5dc81aad7d36f1fca4c647f795c05e83e"
     },
     {
       "id": "1_1_detail",
@@ -463,7 +463,7 @@
       "meshes": 48,
       "vertices": 72659,
       "cpuBytes": 2620720,
-      "compressedBytes": 653971,
+      "compressedBytes": 653965,
       "materials": [
         "material-026",
         "material-027",
@@ -512,7 +512,7 @@
         "material-161",
         "material-163"
       ],
-      "sha256": "0f2639b547327ae57f5a60ba27bb603341c7436d52d72fad7ee550ee42fec5bf"
+      "sha256": "bc21e75f3a691edbd6c11a5fed668e2708a30950b2d5626543a2557cca6fd8c3"
     },
     {
       "id": "-3_-2_detail",
@@ -527,7 +527,7 @@
       "meshes": 20,
       "vertices": 7214,
       "cpuBytes": 260536,
-      "compressedBytes": 55079,
+      "compressedBytes": 55081,
       "materials": [
         "material-030",
         "material-061",
@@ -550,7 +550,7 @@
         "material-093",
         "material-094"
       ],
-      "sha256": "e9c680940bad63edbef0ae7e53dc3bb869390663db5b2dc2fb9cdabf2344c471"
+      "sha256": "68436d5a84e223bd37e34613216659b81adfa4b163c64b64bcdbd2b1652dab5a"
     },
     {
       "id": "-3_1_detail",
@@ -565,7 +565,7 @@
       "meshes": 45,
       "vertices": 44238,
       "cpuBytes": 1632456,
-      "compressedBytes": 434427,
+      "compressedBytes": 434422,
       "materials": [
         "material-031",
         "material-048",
@@ -610,7 +610,7 @@
         "material-155",
         "material-158"
       ],
-      "sha256": "12a9e12d959eb9b8aadf99662fd779e93555dd8467c7c6f816d6a042d7003c1a"
+      "sha256": "be6c1c8d7a49f416dd75709168e6c99b0a51c76dbcb26c5efe31f82a69b9677c"
     },
     {
       "id": "-2_-2_detail",
@@ -655,7 +655,7 @@
         "material-093",
         "material-094"
       ],
-      "sha256": "6ae635f3f401e13c1272308bb8a7ea32e30f2b4b0fa285d9c4538a9955917497"
+      "sha256": "ee2948f8bfa49065dc03edc85c7a1822f81d6caa05f902be1cdc4c280652a1e5"
     },
     {
       "id": "-2_-1_detail",
@@ -670,7 +670,7 @@
       "meshes": 41,
       "vertices": 86966,
       "cpuBytes": 3184096,
-      "compressedBytes": 723078,
+      "compressedBytes": 723091,
       "materials": [
         "material-033",
         "material-034",
@@ -711,7 +711,7 @@
         "material-142",
         "material-060"
       ],
-      "sha256": "dcaf301f2d2fc5730dc21f3daeab0faf0a27c12c9abbc4916240092fc36d0ff4"
+      "sha256": "24dfb2da9d35341ab37fb1df55157e30a27bd13f0840caaab5b1d2a1068a9ef1"
     },
     {
       "id": "-2_0_detail",
@@ -726,7 +726,7 @@
       "meshes": 57,
       "vertices": 99616,
       "cpuBytes": 3710120,
-      "compressedBytes": 859918,
+      "compressedBytes": 859930,
       "materials": [
         "material-035",
         "material-036",
@@ -784,7 +784,7 @@
         "material-116",
         "material-153"
       ],
-      "sha256": "d5e2fd4061cb6b5d8851ed38c4d7d44d0a38e6d0b78c5aadab2591fc30cf9ceb"
+      "sha256": "7f3fa18decbba5da6fa859c75712dd2e87ffe8b535490f9fa06ac40ac2f3b690"
     },
     {
       "id": "-2_1_detail",
@@ -799,7 +799,7 @@
       "meshes": 44,
       "vertices": 93436,
       "cpuBytes": 3407840,
-      "compressedBytes": 743570,
+      "compressedBytes": 743578,
       "materials": [
         "material-040",
         "material-041",
@@ -844,7 +844,7 @@
         "material-115",
         "material-153"
       ],
-      "sha256": "2d46f7bdb3997ce3c3e83d38e8536c590ae5523a01e2778269e568393ee06e10"
+      "sha256": "3e14295ce7860e97582ed37788d4ff6d0bf963bb24f627c7ff8af8f1d334f561"
     },
     {
       "id": "-1_-2_detail",
@@ -859,7 +859,7 @@
       "meshes": 28,
       "vertices": 17052,
       "cpuBytes": 622440,
-      "compressedBytes": 178913,
+      "compressedBytes": 178919,
       "materials": [
         "material-042",
         "material-043",
@@ -889,7 +889,7 @@
         "material-093",
         "material-094"
       ],
-      "sha256": "388d466149788ce7e4020a8b9771594460ac214d1504b3ac086ebd67dc6276ce"
+      "sha256": "ab45e8f2504740e4af24f06167effa1ecaadb7cb496d4fce9c474aba2518b725"
     },
     {
       "id": "0_-2_detail",
@@ -904,7 +904,7 @@
       "meshes": 28,
       "vertices": 16836,
       "cpuBytes": 614880,
-      "compressedBytes": 179005,
+      "compressedBytes": 179010,
       "materials": [
         "material-044",
         "material-045",
@@ -934,7 +934,7 @@
         "material-093",
         "material-094"
       ],
-      "sha256": "93b97c3910683af69e7bc8cfaa33cbe621e60227d2372aceea52c6d252afb326"
+      "sha256": "54e6639f09239378e82b5b9e99d562ece28ab0ea813b61be2953ed51220d2b8e"
     },
     {
       "id": "1_-2_detail",
@@ -949,7 +949,7 @@
       "meshes": 36,
       "vertices": 28393,
       "cpuBytes": 1020272,
-      "compressedBytes": 246830,
+      "compressedBytes": 246834,
       "materials": [
         "material-046",
         "material-047",
@@ -986,7 +986,7 @@
         "material-090",
         "material-165"
       ],
-      "sha256": "f9964b358e75f5a7cba5efee8e425f9026dc0c0faf95107d068bc6b0b02f32f3"
+      "sha256": "40e70766cf72f3846f79101fd849f6bcfd54e42db4e545f3c742ba8c64400aa2"
     },
     {
       "id": "global",
@@ -1001,7 +1001,7 @@
       "meshes": 24,
       "vertices": 2488,
       "cpuBytes": 92744,
-      "compressedBytes": 24540,
+      "compressedBytes": 24529,
       "materials": [
         "material-056",
         "material-057",
@@ -1013,7 +1013,7 @@
         "material-169",
         "material-170"
       ],
-      "sha256": "7a6b3ecb7d07dde0e9af2eb5f104e27483ce6a09a0b12957ee7df2467d4cfdf9"
+      "sha256": "680f6fb4469d0e76c0c8315d66f5c39712001fde89aebf0f67f1f544cf2bfca9"
     },
     {
       "id": "-3_-1_detail",
@@ -1028,7 +1028,7 @@
       "meshes": 36,
       "vertices": 50276,
       "cpuBytes": 1833160,
-      "compressedBytes": 368479,
+      "compressedBytes": 368482,
       "materials": [
         "material-061",
         "material-062",
@@ -1065,7 +1065,7 @@
         "material-080",
         "material-140"
       ],
-      "sha256": "3b2920275f714ccc112e112eacec2e8c64b3d938e79496f606280e3c65235cb9"
+      "sha256": "57687920b156b092b3d04ee4d214a39f7b0f7d9f73890639b055021e9e776519"
     },
     {
       "id": "-3_0_detail",
@@ -1080,7 +1080,7 @@
       "meshes": 36,
       "vertices": 54720,
       "cpuBytes": 2004912,
-      "compressedBytes": 458326,
+      "compressedBytes": 458333,
       "materials": [
         "material-061",
         "material-062",
@@ -1117,7 +1117,7 @@
         "material-138",
         "material-140"
       ],
-      "sha256": "c1f3d40a27a5f682ddfea9cdaa60b4eb1cf219532617aaaaf731008ae495b48e"
+      "sha256": "d3e100503b8d1b779a1192d9147454b2af0d7e9850b78e7c83635e1817b91a07"
     },
     {
       "id": "-3_2_detail",
@@ -1139,7 +1139,7 @@
         "material-063",
         "material-067"
       ],
-      "sha256": "0622bb8a714489d72a8ae432ed262958e343422868fd18ac4535a0bd65f9a084"
+      "sha256": "ab6e6b75480409b6ed313eb835955a75e6ea3bc92d9e2e5fb87dc91a45b6881d"
     },
     {
       "id": "-2_2_detail",
@@ -1161,7 +1161,7 @@
         "material-063",
         "material-067"
       ],
-      "sha256": "158342717cc1bf01b9d3d25a4646cd8b6dbdb85d403503dd44cb53d30df1cc4c"
+      "sha256": "f6ab478ab088a6450456d022a63bff7d8868b927dd0d7ac557a09c8b420e4d65"
     },
     {
       "id": "-1_2_detail",
@@ -1183,7 +1183,7 @@
         "material-063",
         "material-067"
       ],
-      "sha256": "9b493e64696da2a81368a448cf7633875362f508a69e0d4dfa61487af3479ecf"
+      "sha256": "e50ad65ad72af750c114099dfe47ab52dad0dd7e965a7f65bc610dda67a11c67"
     },
     {
       "id": "0_-1_detail",
@@ -1198,7 +1198,7 @@
       "meshes": 41,
       "vertices": 164158,
       "cpuBytes": 5828072,
-      "compressedBytes": 1062090,
+      "compressedBytes": 1062056,
       "materials": [
         "material-061",
         "material-062",
@@ -1240,7 +1240,7 @@
         "material-116",
         "material-095"
       ],
-      "sha256": "8c8132bd12990e5800d875aa1b67826f6300f177a4d4d7f654c4e1aebc425bc0"
+      "sha256": "b13b0f4438232cc0c26f0c4b9b517202f306e316815267f97e6d5d546a9f1ca2"
     },
     {
       "id": "0_2_detail",
@@ -1255,14 +1255,14 @@
       "meshes": 4,
       "vertices": 1276,
       "cpuBytes": 44816,
-      "compressedBytes": 8687,
+      "compressedBytes": 8688,
       "materials": [
         "material-061",
         "material-062",
         "material-063",
         "material-067"
       ],
-      "sha256": "3626a01d55c43a4b0687cced1b3ab0c7ec3105dedfd1b682bdf18af61fff405e"
+      "sha256": "b719a43ee0dcf587be474e8e86f2590f5b0d31a59b672012cda7bf267a5482b1"
     },
     {
       "id": "1_2_detail",
@@ -1277,7 +1277,7 @@
       "meshes": 15,
       "vertices": 2566,
       "cpuBytes": 94520,
-      "compressedBytes": 38027,
+      "compressedBytes": 38030,
       "materials": [
         "material-061",
         "material-062",
@@ -1294,7 +1294,7 @@
         "material-074",
         "material-083"
       ],
-      "sha256": "d5e6274ff7f55200ed5e617bfcb459f9ce5c2dc24f03a8dd6cd50f6433ffe558"
+      "sha256": "1bc16272f91c198eaf0282164219fd30965adaa400e0b992644cebdec25bd82e"
     },
     {
       "id": "-3_-2_structure",
@@ -1309,13 +1309,13 @@
       "meshes": 3,
       "vertices": 72,
       "cpuBytes": 2520,
-      "compressedBytes": 1220,
+      "compressedBytes": 1222,
       "materials": [
         "material-068",
         "material-124",
         "material-125"
       ],
-      "sha256": "825eb313a815ff4cde556f551453800d4af581edef8156ef7dd834082b74e879"
+      "sha256": "587f44e11b7126624eace5050d4068e5fd8b9e1a6c38e36df3f4934f03b61cc4"
     },
     {
       "id": "-3_-1_structure",
@@ -1340,7 +1340,7 @@
         "material-137",
         "material-139"
       ],
-      "sha256": "75e58cd12f6ead6e45e6000338272b1b704f92df89182500183c0e45ee53964a"
+      "sha256": "982dd423eb06506ea6afe918bc7cae4df98111c8357f68cd57fe7b1e36037d7d"
     },
     {
       "id": "-3_0_structure",
@@ -1355,7 +1355,7 @@
       "meshes": 7,
       "vertices": 576,
       "cpuBytes": 20208,
-      "compressedBytes": 4089,
+      "compressedBytes": 4087,
       "materials": [
         "material-068",
         "material-127",
@@ -1365,7 +1365,7 @@
         "material-137",
         "material-139"
       ],
-      "sha256": "7509160db9f79c6d694389ef2032906758c5f93933c422661298b203964da2fc"
+      "sha256": "3dd681d1d405d7490cac548f522788f55eba62736f0f437ec0e4fc7f57afa559"
     },
     {
       "id": "-3_1_structure",
@@ -1380,7 +1380,7 @@
       "meshes": 13,
       "vertices": 646,
       "cpuBytes": 23096,
-      "compressedBytes": 6192,
+      "compressedBytes": 6195,
       "materials": [
         "material-068",
         "material-127",
@@ -1396,7 +1396,7 @@
         "material-155",
         "material-157"
       ],
-      "sha256": "115c203b42aa62fc2fe6c3d495e017af5a78ef82416895478aa0712f31dceab4"
+      "sha256": "4a4558e6e35f860291d59d164a611137c05467dcbfdd3a7a458fecca81339261"
     },
     {
       "id": "-2_-2_structure",
@@ -1411,13 +1411,13 @@
       "meshes": 3,
       "vertices": 144,
       "cpuBytes": 5040,
-      "compressedBytes": 1470,
+      "compressedBytes": 1469,
       "materials": [
         "material-068",
         "material-124",
         "material-125"
       ],
-      "sha256": "2dbbdfef499c02e851e2c09686a3427016ac99b57af30724ff5cc4fadd31923e"
+      "sha256": "22a080c19e5a78fa7fc8b6798f0e361b16abe085e02899520a70191d706f6641"
     },
     {
       "id": "-2_-1_structure",
@@ -1432,7 +1432,7 @@
       "meshes": 9,
       "vertices": 936,
       "cpuBytes": 32832,
-      "compressedBytes": 5836,
+      "compressedBytes": 5835,
       "materials": [
         "material-068",
         "material-127",
@@ -1444,7 +1444,7 @@
         "material-141",
         "material-142"
       ],
-      "sha256": "f9221626d5ea2f91ccd50c52a1639d4928457e8729d7833edacf7dd93c86373a"
+      "sha256": "76d4a23efda38348869cd1c690bb8c1f006d560d9e467cef344ec5925a92df98"
     },
     {
       "id": "-2_0_structure",
@@ -1459,7 +1459,7 @@
       "meshes": 17,
       "vertices": 1056,
       "cpuBytes": 37008,
-      "compressedBytes": 6566,
+      "compressedBytes": 6568,
       "materials": [
         "material-068",
         "material-127",
@@ -1477,7 +1477,7 @@
         "material-099",
         "material-116"
       ],
-      "sha256": "ef429c762c92da3126bd804eee8bbd3d67e9f6f1f6e99babe04c6bd4d1db06a7"
+      "sha256": "17020c486475a804b5f22fed418d42d711819da2726f0eeae9abda1a26061563"
     },
     {
       "id": "-2_1_structure",
@@ -1506,7 +1506,7 @@
         "material-083",
         "material-084"
       ],
-      "sha256": "ca42a8948f94f019a2fadb750a89f2856dd2c37081347082502373cb6970558e"
+      "sha256": "f101507e025d6516e816e2dc84f1b550ee5d977aed77f70d4b4d655fc614771f"
     },
     {
       "id": "-1_-2_structure",
@@ -1521,13 +1521,13 @@
       "meshes": 3,
       "vertices": 144,
       "cpuBytes": 5040,
-      "compressedBytes": 1468,
+      "compressedBytes": 1470,
       "materials": [
         "material-068",
         "material-124",
         "material-125"
       ],
-      "sha256": "3b271a667239142234056ecc1aabf61a3934c3a106e85fe5ffd3c870d5ad2a92"
+      "sha256": "51c38bf454343e0efb62a67ae01e44d8a4880d8a08690c8d978a7b2307fd5527"
     },
     {
       "id": "-1_-1_structure",
@@ -1542,7 +1542,7 @@
       "meshes": 18,
       "vertices": 1536,
       "cpuBytes": 53760,
-      "compressedBytes": 8073,
+      "compressedBytes": 8074,
       "materials": [
         "material-068",
         "material-081",
@@ -1557,7 +1557,7 @@
         "material-098",
         "material-101"
       ],
-      "sha256": "779d338bb0dfaa321c4466d28278c328b95bab7eece570a378cd1ef1f7c98e95"
+      "sha256": "163f0aea75f6214c05c0f94cbfe5e9213e7b3afe4fb96a031f07daf528791efd"
     },
     {
       "id": "-1_0_structure",
@@ -1590,7 +1590,7 @@
         "material-091",
         "material-114"
       ],
-      "sha256": "9007faabd106ccd880f7b723e6e35f0add714bb3df6df4cb566b9e693ec45c6f"
+      "sha256": "1ca7aaf51fdfa808fcedc25613d63b27d28f98c2252ee4de2f5d229c20044c45"
     },
     {
       "id": "-1_1_structure",
@@ -1605,7 +1605,7 @@
       "meshes": 20,
       "vertices": 1776,
       "cpuBytes": 62160,
-      "compressedBytes": 9195,
+      "compressedBytes": 9191,
       "materials": [
         "material-068",
         "material-095",
@@ -1621,7 +1621,7 @@
         "material-082",
         "material-115"
       ],
-      "sha256": "4c16c294e22de646bf0955bd62f4053a9afb78f72b420606df266dcb4a06425a"
+      "sha256": "f7b3af4b262965ea5844a95196ddcc79ae680924fb6f8f44987ce45f210cca0b"
     },
     {
       "id": "0_-2_structure",
@@ -1642,7 +1642,7 @@
         "material-124",
         "material-125"
       ],
-      "sha256": "d65b5d7a3e4f7664ff26d272f25f1e8ec1cbfd3f630cfeb17800542dd97c07b5"
+      "sha256": "e8d87a2854f787fac9eb12649d7dfe22d851ebac9b10d76f06be43a127360524"
     },
     {
       "id": "0_-1_structure",
@@ -1657,7 +1657,7 @@
       "meshes": 20,
       "vertices": 1920,
       "cpuBytes": 67200,
-      "compressedBytes": 10268,
+      "compressedBytes": 10266,
       "materials": [
         "material-068",
         "material-100",
@@ -1672,7 +1672,7 @@
         "material-096",
         "material-095"
       ],
-      "sha256": "f0fa1aa01165fe8964e6ddcb1b3617b65a111d65c8e42a6da3e51e77dc25d1fc"
+      "sha256": "67a0beeb1d82b3dc57f815b2ccbaf41d3a8cd60a27a7f9c77dc7f5a18a695dfd"
     },
     {
       "id": "0_0_structure",
@@ -1687,7 +1687,7 @@
       "meshes": 19,
       "vertices": 1200,
       "cpuBytes": 42000,
-      "compressedBytes": 6915,
+      "compressedBytes": 6911,
       "materials": [
         "material-068",
         "material-117",
@@ -1704,7 +1704,7 @@
         "material-082",
         "material-059"
       ],
-      "sha256": "5542c9d4d46eacc29e7de5b0d37269e8494b4aa3f56477e00f6374033ef64a61"
+      "sha256": "3d4c175814d7011b2803c98096c51a393d5af71304419013b09d13da5d340fa8"
     },
     {
       "id": "0_1_structure",
@@ -1719,7 +1719,7 @@
       "meshes": 19,
       "vertices": 1704,
       "cpuBytes": 59640,
-      "compressedBytes": 8140,
+      "compressedBytes": 8141,
       "materials": [
         "material-068",
         "material-099",
@@ -1735,7 +1735,7 @@
         "material-102",
         "material-115"
       ],
-      "sha256": "4d80d8ae8428ae230fcad483478c66654dfa5b1a0fbb579a2be45ceaf3fd496d"
+      "sha256": "c0990e893bb2247876c5f1bef5a78d77f535986264e9e3b86e24c7f0e23ae2fe"
     },
     {
       "id": "1_-2_structure",
@@ -1750,7 +1750,7 @@
       "meshes": 7,
       "vertices": 288,
       "cpuBytes": 10080,
-      "compressedBytes": 2667,
+      "compressedBytes": 2666,
       "materials": [
         "material-068",
         "material-101",
@@ -1758,7 +1758,7 @@
         "material-083",
         "material-084"
       ],
-      "sha256": "73f9503cd937a73194fb6d9a7e15b60eb8701bddfa18d5f5b32dee71a59818ee"
+      "sha256": "5f2d2160054161ab33907c2fb09269823d31ac5f68f9e67496c7532ec0b88f0b"
     },
     {
       "id": "1_-1_structure",
@@ -1783,7 +1783,7 @@
         "material-081",
         "material-082"
       ],
-      "sha256": "3a0f51511aac7c4976d7826bc7a9a394b3cb966df30bb3d3771d448ce25a9795"
+      "sha256": "dee0802788758ff3e4e5b4f30b16119acf5cbe7582e346952bffa7629e48c7c6"
     },
     {
       "id": "1_0_structure",
@@ -1798,7 +1798,7 @@
       "meshes": 11,
       "vertices": 576,
       "cpuBytes": 20160,
-      "compressedBytes": 3741,
+      "compressedBytes": 3739,
       "materials": [
         "material-068",
         "material-102",
@@ -1808,7 +1808,7 @@
         "material-081",
         "material-082"
       ],
-      "sha256": "1379409bc9b34f9775d57cc31719c432fedcd1f6754bfd4600afc387759770a1"
+      "sha256": "f02849ef11a511051a2d38112a73fb869ec26502bb309c1475f32da50208dbf6"
     },
     {
       "id": "1_1_structure",
@@ -1832,7 +1832,7 @@
         "material-084",
         "material-081"
       ],
-      "sha256": "21450f363e7b2d2201e6023b4f0f5f17e79427e61f3291b9fedf175d4ee95083"
+      "sha256": "b602efe528b9c1f0c9a4ec7081647d35fe4d3f025d8a6752c1ca435d07868858"
     },
     {
       "id": "-4_1_detail",
@@ -1847,12 +1847,12 @@
       "meshes": 3,
       "vertices": 2424,
       "cpuBytes": 84840,
-      "compressedBytes": 14032,
+      "compressedBytes": 14031,
       "materials": [
         "material-155",
         "material-086"
       ],
-      "sha256": "a3afb742c9f755785ca2bb296c3dcdd5a99cbc9be50aed212d6a40ea193ba5d2"
+      "sha256": "72ac563913a9eeb0adda1e94f4a8d4ea970842431a5426092fb09d8340a64964"
     },
     {
       "id": "-4_1_structure",
@@ -1867,12 +1867,12 @@
       "meshes": 2,
       "vertices": 120,
       "cpuBytes": 4200,
-      "compressedBytes": 1556,
+      "compressedBytes": 1557,
       "materials": [
         "material-156",
         "material-155"
       ],
-      "sha256": "082596573af359ea2bb7f1c15fef7476f6366bf782922ef51da96bac0a9bdd41"
+      "sha256": "0b65f351fcfd28ca3ba4e36676e6013e40f79bf420904ce3fe78bd42af5e8c8f"
     },
     {
       "id": "2_-1_structure",
@@ -1887,11 +1887,11 @@
       "meshes": 2,
       "vertices": 48,
       "cpuBytes": 1680,
-      "compressedBytes": 1064,
+      "compressedBytes": 1065,
       "materials": [
         "material-164"
       ],
-      "sha256": "2e93c3ef459a875660803ee99f15de8846c16bf729fc7da6a9a2be07c55fac78"
+      "sha256": "edb9c03ed6196a24dc188234614c989393b58dcd2654039ca0bbe9979acb97a7"
     },
     {
       "id": "2_-2_structure",
@@ -1910,7 +1910,7 @@
       "materials": [
         "material-164"
       ],
-      "sha256": "83b910df727955941539e25c609a34a1ee085e26c619643e85d689ae9b64ad60"
+      "sha256": "2d9e8f7c4703dc806042e036b2deba20f1379ddb12bf7bb436fc0e9a3bd49e44"
     },
     {
       "id": "2_-1_detail",
@@ -1930,7 +1930,7 @@
         "material-160",
         "material-165"
       ],
-      "sha256": "c6c69442a570d39e1d2694db1adb80a4899744e89ed8425f9754e6a3b1bbc5db"
+      "sha256": "219b0e19ee01f7a29753cecbada4596b19ae189db11e16ac30f2f72516011515"
     },
     {
       "id": "2_-2_detail",
@@ -1949,7 +1949,7 @@
       "materials": [
         "material-165"
       ],
-      "sha256": "bf23834213f181b27825d7fdd3a154d1c0b69cc62c47cf5ec6043a48336a8c7b"
+      "sha256": "eac2031e0e38a3826599b45824824fd38d8fce9b404ff066b63f4d775604f4e8"
     },
     {
       "id": "-3_10_structure",
@@ -1964,13 +1964,13 @@
       "meshes": 3,
       "vertices": 456,
       "cpuBytes": 15960,
-      "compressedBytes": 3620,
+      "compressedBytes": 3619,
       "materials": [
         "material-166",
         "material-167",
         "material-168"
       ],
-      "sha256": "3f61d006174ccbe94436daecc8e0283d40d9468b2f5a78ba402580dbc59ca83e"
+      "sha256": "31a0a9d50f96fdd39b33d50fe1a99189006ab0fb43bd0583a076d52b41646afc"
     },
     {
       "id": "-6_10_structure",
@@ -1985,12 +1985,12 @@
       "meshes": 2,
       "vertices": 432,
       "cpuBytes": 15120,
-      "compressedBytes": 3313,
+      "compressedBytes": 3312,
       "materials": [
         "material-168",
         "material-167"
       ],
-      "sha256": "e499ebba6ce9bbca322ce5a00fe8733e58a14b95c53bc5459d31da5e1f2291d1"
+      "sha256": "ad9e314ae2c96b5c0493c83619b9e43b082792779a229f3406d2ed37678642e3"
     },
     {
       "id": "-4_9_structure",
@@ -2005,13 +2005,13 @@
       "meshes": 3,
       "vertices": 1968,
       "cpuBytes": 68880,
-      "compressedBytes": 12596,
+      "compressedBytes": 12597,
       "materials": [
         "material-168",
         "material-167",
         "material-166"
       ],
-      "sha256": "e135f4f8d9dda4b9ac00bd2c2a79c2966f7ba27b9334430bbb4a7e0d69b4ad33"
+      "sha256": "6be6c1b0b1d974cc4be24c8affb459900adc546f1a0145c51e49fefa0b6a2d2e"
     },
     {
       "id": "-3_7_structure",
@@ -2032,7 +2032,7 @@
         "material-167",
         "material-168"
       ],
-      "sha256": "c61944ff83a702ecc74a4b3eaa38c00394735e5c5db8aa7040538ff18c04b378"
+      "sha256": "f61649c93a6017ea8af5c22d53b49d0b743a7a94eebfcd457e08f33956295518"
     },
     {
       "id": "-5_8_structure",
@@ -2053,7 +2053,7 @@
         "material-167",
         "material-166"
       ],
-      "sha256": "3e4b9d2cf340caea80e7ed65afa05f5ac6a1940788c4803f0234f4789699c9d5"
+      "sha256": "9ce8597889e95723cd63eb79ee8100d0d92b5514bf1e6da20b27b92deeb97e1f"
     },
     {
       "id": "-6_5_structure",
@@ -2073,7 +2073,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "c03753be8e4a6a41646953d82712a9f1c46a8e336fe0eb4de06f91a0cc1835a2"
+      "sha256": "cb86f2f8747dcaa8d3d8296d288ac85d83dc21c7d0c3daae2c5587c57775155d"
     },
     {
       "id": "-4_5_structure",
@@ -2094,7 +2094,7 @@
         "material-167",
         "material-168"
       ],
-      "sha256": "20950025c6ad875be1693fb9c0df9d7aedeb5fd6000ac176760fe5b421e75b5e"
+      "sha256": "b92a73eafae86c7ce8a9d543aff89886f6aa32dc0a98011de90c886af67d8e4c"
     },
     {
       "id": "-4_7_structure",
@@ -2109,13 +2109,13 @@
       "meshes": 3,
       "vertices": 1968,
       "cpuBytes": 68880,
-      "compressedBytes": 12355,
+      "compressedBytes": 12356,
       "materials": [
         "material-168",
         "material-167",
         "material-166"
       ],
-      "sha256": "a8177c97639beef354a27082e1f764bafc7cd4ae49955289c0d740253d8c4b34"
+      "sha256": "a514eda3a07a86bbbef98cd9dd799a324623424e354b05f3385c30185940bb69"
     },
     {
       "id": "-3_9_structure",
@@ -2130,13 +2130,13 @@
       "meshes": 3,
       "vertices": 984,
       "cpuBytes": 34440,
-      "compressedBytes": 6641,
+      "compressedBytes": 6642,
       "materials": [
         "material-168",
         "material-167",
         "material-166"
       ],
-      "sha256": "4da407737b218af636ae11437dc64318df17f4d0345f91d5b0d4b97afcc65414"
+      "sha256": "b312a22c6efd4b61293df04728ad7049eafcc497bdfa566d50d3e4905c57429e"
     },
     {
       "id": "-4_6_structure",
@@ -2157,7 +2157,7 @@
         "material-167",
         "material-168"
       ],
-      "sha256": "06a38e61db486753071bb7195e45380bc2bda0f9cad2c5cc72502873d4e885e5"
+      "sha256": "e6a2b04e71f6cff0f41727642ae3380a553d920f4f391ccd03296de59d9e340c"
     },
     {
       "id": "-6_6_structure",
@@ -2177,7 +2177,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "aed6e394bc89f9bf4857455f2d09ad4e0ca001e6efb37c2e5d0d821a66ad3588"
+      "sha256": "b33670fdb2f75e576ef3c5e9db8bdf487280dc85dfece137993e97f8013848f7"
     },
     {
       "id": "-5_9_structure",
@@ -2197,7 +2197,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "aee8099968f8ad7e41e6187b9a82e2c934423370eeea8be69d427fc5c1e211db"
+      "sha256": "5d170db7843421da5134393bc518a7b6bd8baafb9974943dd8236b7370cf1e04"
     },
     {
       "id": "-5_6_structure",
@@ -2217,7 +2217,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "8696ff7e84f1103b8d476ecdceee375cf828a2f5780ddfa981ea219b06fb4aae"
+      "sha256": "59bc5c8d5b2acf2a1af9b17116c697934959d72a821df73053303e36bda9e1b5"
     },
     {
       "id": "-3_4_structure",
@@ -2232,13 +2232,13 @@
       "meshes": 3,
       "vertices": 672,
       "cpuBytes": 23520,
-      "compressedBytes": 4953,
+      "compressedBytes": 4952,
       "materials": [
         "material-166",
         "material-167",
         "material-168"
       ],
-      "sha256": "543495ffda14e2675ed6709710edc3040617cb20a147da31fbcbd8657de55697"
+      "sha256": "b14532b52291a59ae2fa0816d4d793ffd2784dd74a3e84746fca3b8bdea61e80"
     },
     {
       "id": "-5_10_structure",
@@ -2258,7 +2258,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "3dd16a9ae62f331df48d9495a6ef9e0eebdc5de0273b70733398d82a95dfb7fa"
+      "sha256": "1bfa10da7d0b39c07bba1a0741f2ce7dcef23090f8188ea062def06e82860a02"
     },
     {
       "id": "-6_9_structure",
@@ -2273,12 +2273,12 @@
       "meshes": 2,
       "vertices": 888,
       "cpuBytes": 31080,
-      "compressedBytes": 5717,
+      "compressedBytes": 5718,
       "materials": [
         "material-168",
         "material-167"
       ],
-      "sha256": "51594ed895d386fabe4d465dfc50d4590a55ed667b7c0aa82387640bff29c631"
+      "sha256": "5a7a4c345c80727aad362f88c8a7bab475e891b5651e43fa85b42b27a98a2460"
     },
     {
       "id": "-4_10_structure",
@@ -2299,7 +2299,7 @@
         "material-167",
         "material-168"
       ],
-      "sha256": "5e93d9395108f0bd2ccc7dc150c495f1681f997f152a458670a87674002903a8"
+      "sha256": "7e08113e2cc61d0e195f48900066c55d0c975d7c7a544b39e97df55bfed1ab9b"
     },
     {
       "id": "-3_5_structure",
@@ -2314,13 +2314,13 @@
       "meshes": 3,
       "vertices": 384,
       "cpuBytes": 13440,
-      "compressedBytes": 3117,
+      "compressedBytes": 3118,
       "materials": [
         "material-166",
         "material-167",
         "material-168"
       ],
-      "sha256": "931570daf73c6753c778ad38a07597f7ed84cc913bbb51b00dcc89638ce61e73"
+      "sha256": "f5194710f88428cf845d6b95610ebca8a0a07da0fefadb83b5b942f3e854afb6"
     },
     {
       "id": "-6_4_structure",
@@ -2335,12 +2335,12 @@
       "meshes": 2,
       "vertices": 888,
       "cpuBytes": 31080,
-      "compressedBytes": 5732,
+      "compressedBytes": 5731,
       "materials": [
         "material-168",
         "material-167"
       ],
-      "sha256": "406be32d6c4ebfd7cec2615dcd1eb5b784582552f348558ae5b247ef2b55c3e0"
+      "sha256": "5014341f306637c981785cdfbab24546dd3a71466ff0d33fed396521ca9b3021"
     },
     {
       "id": "0_-3_structure",
@@ -2360,7 +2360,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "efb51be02d5f252f0683911cf400cffef17c55b2ea66126cf3698bdf7c9f1c37"
+      "sha256": "6bdaec9c15d0efd316914e713f30ddc07f4c0418fd4663783a6e2caee1bb2f59"
     },
     {
       "id": "1_-3_detail",
@@ -2383,7 +2383,7 @@
         "material-079",
         "material-080"
       ],
-      "sha256": "c814d9851094b9069d73dcce13ee9fe92259502a4248882da29016c032874274"
+      "sha256": "6f7fe92a05f0f2d7290836ed1658b41be62c0d4959bb89c2fc64bb26fb904e01"
     },
     {
       "id": "1_-3_structure",
@@ -2403,7 +2403,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "fa77b11c1ff751f65ea55024cb30bc94afbeb52122b557c0dda9d3fca807ddd3"
+      "sha256": "8bd23170b8e3eb27d6fd74566b67ce7eda3db41eb6fb2ea2d9d066b34120971a"
     },
     {
       "id": "0_-4_structure",
@@ -2423,7 +2423,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "59b617f968a2a8ba63c57adb591445eb8e00b4a612842a512a2e8397663c5f12"
+      "sha256": "ac2d3cd4277fe8167631a1fd0f5da6bb0b33e761ffc0c985d7ed24dc51d69b4a"
     },
     {
       "id": "1_-4_detail",
@@ -2438,7 +2438,7 @@
       "meshes": 6,
       "vertices": 2500,
       "cpuBytes": 95936,
-      "compressedBytes": 49834,
+      "compressedBytes": 49836,
       "materials": [
         "material-076",
         "material-077",
@@ -2446,7 +2446,7 @@
         "material-079",
         "material-080"
       ],
-      "sha256": "769582fe161673acf8856f8bfdb4f8289be6c20d51713bd1d775ee28077d02e8"
+      "sha256": "1d0e50d47b551dd0b8e8023c59ffa35905c08a93c5710fb74acce1b4ab1a5080"
     },
     {
       "id": "0_-5_structure",
@@ -2466,7 +2466,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "fc370e6f1ce44b6a8cad567fe85a4d919b46f676d1333bf4b73f9c4abf5176a6"
+      "sha256": "a6c96a718c7272db584debcc1db5d9b6c60aa9cfa6cde3d48e41414539d2306a"
     },
     {
       "id": "1_-5_detail",
@@ -2489,7 +2489,7 @@
         "material-079",
         "material-080"
       ],
-      "sha256": "bd18d0ca7e7b90b4563f3b70c3621894ce1bf2f2ba2e39909dff3e8a7bf324f1"
+      "sha256": "82fd3df04edb61ea521fad41cd33254a9faaeabfc3cf18a1bcf052053ca59180"
     },
     {
       "id": "1_3_structure",
@@ -2509,7 +2509,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "75abf6999d31ae3a2690f36308332121e958d532409c2495f3505668f71e1b30"
+      "sha256": "575ec5ab1619343257e4c36152aaafa28d43dd135d6a4f22a326a4f12f795ed0"
     },
     {
       "id": "1_3_detail",
@@ -2532,7 +2532,7 @@
         "material-079",
         "material-080"
       ],
-      "sha256": "4b359e03ff58e90be95a92aca3037139a2e07c9e4ccfd5c523305843d0bfa5cf"
+      "sha256": "ae251bce5cb0348a47d8edbb6c091c6db27b44541ad82294924c49e6a072b10f"
     },
     {
       "id": "1_4_structure",
@@ -2552,7 +2552,7 @@
         "material-168",
         "material-167"
       ],
-      "sha256": "f42156bb350c9ab3b346d91a6bcb052675517c0c6487899e315307b00d0533e2"
+      "sha256": "d62b080437deb14776d9f35f58d45fb6edc85cc0d6fe1595e2bd01e68bafe6c8"
     },
     {
       "id": "1_4_detail",
@@ -2567,7 +2567,7 @@
       "meshes": 6,
       "vertices": 2500,
       "cpuBytes": 95936,
-      "compressedBytes": 49725,
+      "compressedBytes": 49727,
       "materials": [
         "material-076",
         "material-077",
@@ -2575,7 +2575,7 @@
         "material-079",
         "material-080"
       ],
-      "sha256": "7466fe44e799fcf46d3c6efdcad5aed35b51c968f0f94bda5cc0f2f82e4b757f"
+      "sha256": "99c159aefc1ed99d3f2e434e953e89a6643cb1b43f831e0a5aefe1360e9c224f"
     },
     {
       "id": "1_5_structure",
@@ -2590,12 +2590,12 @@
       "meshes": 2,
       "vertices": 432,
       "cpuBytes": 15120,
-      "compressedBytes": 3201,
+      "compressedBytes": 3200,
       "materials": [
         "material-168",
         "material-167"
       ],
-      "sha256": "b2692a1f843f94a378fb79e7530027883dfbe243b0ec7645a7a5516bacbc1fe3"
+      "sha256": "aaf9a668dc2919ed500c2cb3f84842ea088e67eb3ef0c882d3a333bd06fe6343"
     },
     {
       "id": "1_5_detail",
@@ -2610,7 +2610,7 @@
       "meshes": 6,
       "vertices": 1250,
       "cpuBytes": 47968,
-      "compressedBytes": 26876,
+      "compressedBytes": 26877,
       "materials": [
         "material-076",
         "material-077",
@@ -2618,7 +2618,7 @@
         "material-079",
         "material-080"
       ],
-      "sha256": "fabbed6e832145b3350b0f6bd7ce5156dcd56d955e9e18319b35a484af327f76"
+      "sha256": "39fca4a66dd718f3d2ef899d2771bc692f099944ed008f6a575385950a94b041"
     }
   ],
   "materials": [
@@ -2968,7 +2968,7 @@
       "id": "material-057",
       "name": "world/sand",
       "url": "materials/material-057.json.gz",
-      "bytes": 2214
+      "bytes": 2256
     },
     {
       "id": "material-058",
@@ -2986,7 +2986,7 @@
       "id": "material-060",
       "name": "world/asphalt",
       "url": "materials/material-060.json.gz",
-      "bytes": 2199
+      "bytes": 2261
     },
     {
       "id": "material-061",
@@ -7837,7 +7837,7 @@
   "totals": {
     "meshes": 1221,
     "cpuGeometryBytes": 57932888,
-    "compressedBytes": 13134765,
-    "textureBytes": 722275
+    "compressedBytes": 13134887,
+    "textureBytes": 5116939
   }
 }
