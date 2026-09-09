@@ -348,6 +348,7 @@ export class Player {
     this.model.animate(dt, this.speed, this.aim, this.crouched);
     if (this.swimming) this.model.pose("swim", this.model.phase);
     else if (this.hitTime > 0) this.model.pose("hit", this.hitTime / 0.35);
+    if (this.aim && !this.swimming) this.model.aimToward(this.camera.getForwardRay().direction);
     if (this.position.y < -15) this.teleport(new Vector3(6, 1.2, -28));
   }
   render(dt: number, alpha = 1, allowLook = true) {
@@ -416,5 +417,7 @@ export class Player {
     );
     this.cameraTarget.copyFrom(target);
     this.camera.setTarget(this.cameraTarget);
+    if (this.aim && !this.vehicle && !this.transitioning && !this.climbing && !this.swimming)
+      this.model.aimToward(this.camera.getForwardRay().direction);
   }
 }

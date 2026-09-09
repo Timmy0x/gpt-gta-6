@@ -346,6 +346,28 @@ test("held models follow the skinned hand, hide for traversal and release pooled
   }
 });
 
+test("aimed weapon follows the firing direction at different pitches and yaws while its grip stays at the hand", () => {
+  const f = fixture(), model = new Character(f.scene, f.shadows, "aim-fixture"), held = new HeldWeapon(f.scene);
+  try {
+    for (const crouched of [false, true]) for (const yaw of [-2.3, 0, 1.4]) for (const pitch of [-.7, 0, 1.1]) {
+      const target = new Vector3(Math.sin(yaw) * Math.cos(pitch), Math.sin(pitch), Math.cos(yaw) * Math.cos(pitch));
+      model.root.rotation.y = yaw + .3; model.root.position.set(8, .2, -4);
+      for (let n = 0; n < 60; n++) model.animate(1 / 60, 0, true, crouched);
+      model.aimToward(target); held.update(model, 1, true, 1 / 60);
+      const barrel = held.root!.getDirection(Vector3.Forward()).normalize();
+      assert.ok(Vector3.Dot(barrel, target) > .9999, `barrel follows aim at yaw ${yaw}, pitch ${pitch}, crouch ${crouched}: ${barrel.asArray()}`);
+      const hand = model.skeleton.bones.find(b => b.name.endsWith("/rightHand"))!.getAbsolutePosition(model.torso);
+      assert.ok(Vector3.Distance(held.root!.getAbsolutePosition(), hand) < .1, "direction changes preserve the physical hand attachment");
+      const before = held.muzzle();
+      model.aimToward(target); held.update(model, 1, true, 1 / 60);
+      assert.ok(Vector3.Distance(before, held.muzzle()) < .0001, "same-frame camera correction does not accumulate pose drift");
+    }
+    model.animate(1 / 60, 0, true); model.aimToward(Vector3.Forward()); held.update(model, 0, true, 1 / 60);
+    held.recoil(); held.update(model, 0, true, 0);
+    assert.ok(held.root!.getDirection(Vector3.Forward()).y > .05, "authored recoil still lifts the barrel from its aim direction");
+  } finally { held.dispose(); model.dispose(); f.dispose(); }
+});
+
 test("fatal hit during recovery reactivates physics and bounded ragdolls release disposal observers", () => {
   const f = fixture(),
     model = new Character(f.scene, f.shadows, "repeat-reaction"),

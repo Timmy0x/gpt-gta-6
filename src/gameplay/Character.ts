@@ -56,6 +56,15 @@ export class Character {
   private readonly baseHeight: number;
   private readonly rotation = Quaternion.Identity();
   private readonly pelvisPosition = Vector3.Zero();
+  private readonly aimCorrection = Matrix.Identity();
+  private readonly aimAbsolute = Matrix.Identity();
+  private readonly aimLocal = Matrix.Identity();
+  private readonly aimInverse = Matrix.Identity();
+  private readonly aimRotation = Quaternion.Identity();
+  private readonly aimScale = Vector3.One();
+  private readonly aimPosition = Vector3.Zero();
+  private readonly aimSource = Vector3.Zero();
+  private readonly aimTarget = Vector3.Zero();
   private movement = 0;
   private aiming = 0;
   private crouching = 0;
@@ -811,6 +820,31 @@ export class Character {
       this.rotate(hand, -a * 0.08, 0, -side * a * 0.09);
     }
     this.root.scaling.y = 1 - c * 0.19;
+  }
+
+  /** Rotate the posed arms together so the held barrel follows the camera's firing direction. */
+  aimToward(worldDirection: Vector3): void {
+    if (this.dead || this.root.metadata?.ragdollActive || worldDirection.lengthSquared() < 1e-8) return;
+    this.skeleton.computeAbsoluteMatrices(true);
+    this.root.computeWorldMatrix(true).invertToRef(this.aimInverse);
+    Vector3.TransformNormalToRef(worldDirection, this.aimInverse, this.aimTarget);
+    this.aimTarget.normalize();
+    // HeldWeapon's +Z barrel rotates +90 degrees about X at the wrist: bone-local -Y.
+    Vector3.TransformNormalToRef(Vector3.DownReadOnly, this.bones.get("rightHand")!.getAbsoluteMatrix(), this.aimSource);
+    this.aimSource.normalize();
+    Quaternion.FromUnitVectorsToRef(this.aimSource, this.aimTarget, this.aimRotation);
+    this.aimRotation.toRotationMatrix(this.aimCorrection);
+    for (const name of ["rightArm", "leftArm"] as const) {
+      const arm = this.bones.get(name)!, absolute = arm.getAbsoluteMatrix();
+      absolute.multiplyToRef(this.aimCorrection, this.aimAbsolute);
+      // Change shoulder orientation without rotating its attachment point around the origin.
+      this.aimAbsolute.setTranslation(absolute.getTranslation());
+      arm.getParent()!.getAbsoluteMatrix().invertToRef(this.aimInverse);
+      this.aimAbsolute.multiplyToRef(this.aimInverse, this.aimLocal);
+      this.aimLocal.decompose(this.aimScale, this.aimRotation, this.aimPosition);
+      arm.setRotationQuaternion(this.aimRotation);
+    }
+    this.skeleton.computeAbsoluteMatrices(true);
   }
 
   /** Authored overlays on the same skin rig; call after locomotion animation. */

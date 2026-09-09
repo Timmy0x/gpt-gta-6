@@ -1,0 +1,2077 @@
+{
+  "origin": "http://127.0.0.1:4188",
+  "method": "Normal UI creative civilian spawn, pointer/mouse lethal shooting, police wanted control, ordinary arrest/recovery, normal save/load and fresh Continue. ?test only reads diagnostics. No game-object mutations.",
+  "checks": [
+    {
+      "label": "build",
+      "backend": "webgpu",
+      "module": "/assets/index-BZcSSHf8.js",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "spawned-civilian",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 2.7833333333333283,
+      "meshes": 2369,
+      "activeMeshes": 526,
+      "physicsBodies": 246,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 211,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 211,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.65507480797131,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 100,
+        "dead": false,
+        "activity": "walking",
+        "position": [
+          6.3,
+          0.12014999999999987,
+          -25.354166666666703
+        ]
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "outcome": "",
+      "aim": true
+    },
+    {
+      "label": "shooting-5",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 6.816666666666648,
+      "meshes": 2386,
+      "activeMeshes": 386,
+      "physicsBodies": 274,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 2,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 1,
+        "state": "running"
+      },
+      "fps": 60.01200240049116,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302348613739014,
+          0.12014999999999987,
+          -23.503067016601562
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302348613739014,
+            "y": 0.12014999999999987,
+            "z": -23.503067016601562,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "outcome": "",
+      "aim": true
+    },
+    {
+      "label": "lethal-result",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 6.966666666666647,
+      "meshes": 2386,
+      "activeMeshes": 386,
+      "physicsBodies": 274,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 2,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.99999999999992,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302341461181641,
+          0.12014999999999987,
+          -23.503049850463867
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302341461181641,
+            "y": 0.12014999999999987,
+            "z": -23.503049850463867,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "outcome": "",
+      "aim": true
+    },
+    {
+      "label": "after-ten-seconds",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.633333333333614,
+      "meshes": 2405,
+      "activeMeshes": 319,
+      "physicsBodies": 278,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 243,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 251,
+        "colliderDisposals": 8,
+        "pendingMeshes": 0,
+        "activeAnchors": 9,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": true,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 3,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.08411776483725,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-4s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 21.950000000000035,
+      "meshes": 2494,
+      "activeMeshes": 320,
+      "physicsBodies": 281,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 245,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 253,
+        "colliderDisposals": 8,
+        "pendingMeshes": 0,
+        "activeAnchors": 13,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.02400960386391,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-8s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 26.0999999999998,
+      "meshes": 2478,
+      "activeMeshes": 320,
+      "physicsBodies": 269,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 233,
+        "cpuGeometryBytes": 56393456,
+        "meshLoads": 1105,
+        "meshDisposals": 4,
+        "colliderLoads": 253,
+        "colliderDisposals": 20,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.964021587014166,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-12s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 30.249999999999563,
+      "meshes": 2480,
+      "activeMeshes": 320,
+      "physicsBodies": 271,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 235,
+        "cpuGeometryBytes": 56393456,
+        "meshLoads": 1105,
+        "meshDisposals": 4,
+        "colliderLoads": 265,
+        "colliderDisposals": 30,
+        "pendingMeshes": 0,
+        "activeAnchors": 13,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.02400960380777,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-16s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 34.366666666666,
+      "meshes": 2484,
+      "activeMeshes": 320,
+      "physicsBodies": 275,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 239,
+        "cpuGeometryBytes": 56393456,
+        "meshLoads": 1105,
+        "meshDisposals": 4,
+        "colliderLoads": 269,
+        "colliderDisposals": 30,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.96402158706971,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-20s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 38.51666666666576,
+      "meshes": 2484,
+      "activeMeshes": 319,
+      "physicsBodies": 275,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 239,
+        "cpuGeometryBytes": 56393456,
+        "meshLoads": 1105,
+        "meshDisposals": 4,
+        "colliderLoads": 273,
+        "colliderDisposals": 34,
+        "pendingMeshes": 0,
+        "activeAnchors": 10,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 1,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.048038430788885,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-24s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 1,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0.3749999999999997
+        }
+      },
+      "crashCount": 1,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 42.516666666665536,
+      "meshes": 2463,
+      "activeMeshes": 391,
+      "physicsBodies": 275,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1081,
+        "totalColliders": 249,
+        "residentColliders": 238,
+        "cpuGeometryBytes": 56132920,
+        "meshLoads": 1105,
+        "meshDisposals": 24,
+        "colliderLoads": 276,
+        "colliderDisposals": 38,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 48,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 2,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.97600959613872,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "arrest-28s",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 31,
+        "police": {
+          "officers": 1,
+          "activeFoot": 1,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0.8511904761904743
+        }
+      },
+      "crashCount": 1,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 46.6666666666653,
+      "meshes": 2463,
+      "activeMeshes": 406,
+      "physicsBodies": 260,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1096,
+        "totalColliders": 249,
+        "residentColliders": 223,
+        "cpuGeometryBytes": 56227440,
+        "meshLoads": 1120,
+        "meshDisposals": 24,
+        "colliderLoads": 277,
+        "colliderDisposals": 54,
+        "pendingMeshes": 0,
+        "activeAnchors": 9,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 2,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.92808629643273,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "BUSTED",
+      "aim": false
+    },
+    {
+      "label": "arrest-32s",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 1,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 50.76666666666507,
+      "meshes": 2375,
+      "activeMeshes": 397,
+      "physicsBodies": 257,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1096,
+        "totalColliders": 249,
+        "residentColliders": 222,
+        "cpuGeometryBytes": 56227440,
+        "meshLoads": 1120,
+        "meshDisposals": 24,
+        "colliderLoads": 290,
+        "colliderDisposals": 68,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 2,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.96402158706976,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "saved-after-recovery",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 1,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 51.23333333333171,
+      "meshes": 2375,
+      "activeMeshes": 397,
+      "physicsBodies": 257,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1096,
+        "totalColliders": 249,
+        "residentColliders": 222,
+        "cpuGeometryBytes": 56227440,
+        "meshLoads": 1120,
+        "meshDisposals": 24,
+        "colliderLoads": 290,
+        "colliderDisposals": 68,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 2,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.060060060059705,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.12014999999999987,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.12014999999999987,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "loaded-dead-civilian",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        0.9901000000000002,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 1,
+      "shots": 7,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 53.59999999999824,
+      "meshes": 2375,
+      "activeMeshes": 398,
+      "physicsBodies": 257,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1096,
+        "totalColliders": 249,
+        "residentColliders": 222,
+        "cpuGeometryBytes": 56227440,
+        "meshLoads": 1120,
+        "meshDisposals": 24,
+        "colliderLoads": 290,
+        "colliderDisposals": 68,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 169,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 2,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.07208650381544,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.18,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.18,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    },
+    {
+      "label": "fresh-continue",
+      "backend": "WebGPU",
+      "cash": 12200,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        0.9901000000000002,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 31,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [
+        "street-prop-11"
+      ],
+      "paused": false,
+      "simTime": 2.5166666666666626,
+      "meshes": 2371,
+      "activeMeshes": 486,
+      "physicsBodies": 251,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 27,
+        "totalMeshes": 1221,
+        "residentMeshes": 1097,
+        "totalColliders": 249,
+        "residentColliders": 211,
+        "cpuGeometryBytes": 56348640,
+        "meshLoads": 1097,
+        "meshDisposals": 0,
+        "colliderLoads": 211,
+        "colliderDisposals": 0,
+        "pendingMeshes": 4,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 48,
+        "totalPackages": 84,
+        "pendingPackages": 1,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12618298,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 48,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 56.947608200475784,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "victim": {
+        "id": "ped-30",
+        "health": 0,
+        "dead": true,
+        "activity": "dead",
+        "position": [
+          6.302351474761963,
+          0.18,
+          -23.503042221069336
+        ],
+        "ragdoll": true
+      },
+      "creative": [
+        "ped-30"
+      ],
+      "casualties": {
+        "version": 1,
+        "civilians": [
+          {
+            "id": "ped-30",
+            "x": 6.302351474761963,
+            "y": 0.18,
+            "z": -23.503042221069336,
+            "yaw": 0
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 2
+      },
+      "outcome": "",
+      "aim": false
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

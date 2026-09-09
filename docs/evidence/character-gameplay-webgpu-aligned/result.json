@@ -1,0 +1,1373 @@
+{
+  "origin": "http://127.0.0.1:4188",
+  "backend": "webgpu",
+  "method": "Ordinary play, keyboard movement/character switch, mouse aim and camera look. Test hooks read diagnostics only.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-BZcSSHf8.js",
+      "sha256": "a594bb4745f23df48e7b1782024369f5a551e414d3ac47993a1eab171f44c472",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "jason-idle",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 1.7999999999999985,
+      "meshes": 2365,
+      "activeMeshes": 485,
+      "physicsBodies": 243,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 208,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 208,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 1,
+        "state": "running"
+      },
+      "fps": 60.87662337664634,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          0.04471293338110532,
+          -0.9854136652245139,
+          0.164197021828188
+        ],
+        "aim": [
+          0,
+          -0.16803607538443802,
+          0.9857808465218806
+        ],
+        "angleDegrees": 70.88608851311906,
+        "position": [
+          3.574652671813965,
+          0.9578601121902466,
+          -27.898855209350586
+        ],
+        "hand": [
+          3.5710501670837402,
+          1.0360382795333862,
+          -27.934185028076172
+        ],
+        "handDistance": 0.08586617483413361,
+        "pitch": 0.08,
+        "aiming": false,
+        "crouched": false
+      }
+    },
+    {
+      "label": "jason-walk",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.6483333333333345,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 2.666666666666662,
+      "meshes": 2368,
+      "activeMeshes": 491,
+      "physicsBodies": 246,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 211,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 211,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.012002400491184,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          -0.41088419630063,
+          -0.9101340123009081,
+          0.05320015867867056
+        ],
+        "aim": [
+          -0.055344030650589564,
+          -0.16777853785830274,
+          0.9842699835438834
+        ],
+        "angleDegrees": 76.83216621889176,
+        "position": [
+          0.41954275965690613,
+          0.9940207004547119,
+          -27.72028160095215
+        ],
+        "hand": [
+          0.47368887066841125,
+          1.0604956150054932,
+          -27.725000381469727
+        ],
+        "handDistance": 0.08586607299613148,
+        "pitch": 0.08,
+        "aiming": false,
+        "crouched": false
+      }
+    },
+    {
+      "label": "jason-aim",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.03166666666666796,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 3.949999999999991,
+      "meshes": 2378,
+      "activeMeshes": 561,
+      "physicsBodies": 256,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 221,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 221,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.06006006005999,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          -0.2858402059950206,
+          -0.26432438112152595,
+          0.9211015135051328
+        ],
+        "aim": [
+          -0.2858402122984861,
+          -0.26432439592366275,
+          0.921101507301311
+        ],
+        "angleDegrees": 0.0000012074182697257333,
+        "position": [
+          0.1620202362537384,
+          1.311283826828003,
+          -27.46827507019043
+        ],
+        "hand": [
+          0.18724584579467773,
+          1.3120063543319702,
+          -27.550350189208984
+        ],
+        "handDistance": 0.08586721484138074,
+        "pitch": 0.07200000000000001,
+        "aiming": true,
+        "crouched": false
+      }
+    },
+    {
+      "label": "jason-aim-up",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.03166666666666796,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 5.016666666666654,
+      "meshes": 2384,
+      "activeMeshes": 639,
+      "physicsBodies": 262,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 227,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 227,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.96402158707003,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          -0.31527522634044675,
+          0.20445946416621746,
+          0.9267134719905843
+        ],
+        "aim": [
+          -0.3152752531708383,
+          0.20445942963383085,
+          0.9267134704815034
+        ],
+        "angleDegrees": 0.0000024148365394514667,
+        "position": [
+          0.1379147469997406,
+          1.582741379737854,
+          -27.423240661621094
+        ],
+        "hand": [
+          0.163906067609787,
+          1.5442759990692139,
+          -27.49547576904297
+        ],
+        "handDistance": 0.0858664369895912,
+        "pitch": -0.42799999999999994,
+        "aiming": true,
+        "crouched": false
+      }
+    },
+    {
+      "label": "jason-aim-down",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.03166666666666796,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 0.03166666666666796,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 6.21666666666665,
+      "meshes": 2474,
+      "activeMeshes": 275,
+      "physicsBodies": 266,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 230,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.98800239950884,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+          "vertices": 4688,
+          "bones": 80
+        },
+        {
+          "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+          "vertices": 4688,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          -0.2640893945702217,
+          -0.644654167440495,
+          0.7174104794865601
+        ],
+        "aim": [
+          -0.2640893744045284,
+          -0.6446541515314227,
+          0.7174105012054997
+        ],
+        "angleDegrees": 0.000002091309789151873,
+        "position": [
+          0.18026533722877502,
+          1.1000256538391113,
+          -27.618953704833984
+        ],
+        "hand": [
+          0.20515117049217224,
+          1.1367857456207275,
+          -27.692455291748047
+        ],
+        "handDistance": 0.08586671254853034,
+        "pitch": 0.5720000000000001,
+        "aiming": true,
+        "crouched": false
+      }
+    },
+    {
+      "label": "lucia-idle",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.03166666666666796,
+        1.02015,
+        -28
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 0.03166666666666796,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 7.033333333333314,
+      "meshes": 2472,
+      "activeMeshes": 270,
+      "physicsBodies": 264,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 2,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 57.55947812742906,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          0.04471293338110532,
+          -0.9854136652245139,
+          0.164197021828188
+        ],
+        "aim": [
+          -0.00009223453679318965,
+          -0.600449512454461,
+          0.7996626629310576
+        ],
+        "angleDegrees": 43.69816614383546,
+        "position": [
+          0.30631932616233826,
+          0.9614105224609375,
+          -27.898855209350586
+        ],
+        "hand": [
+          0.30271679162979126,
+          1.0395886898040771,
+          -27.934185028076172
+        ],
+        "handDistance": 0.08586617608449151,
+        "pitch": 0.5720000000000001,
+        "aiming": false,
+        "crouched": false
+      }
+    },
+    {
+      "label": "lucia-walk",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.03166666666666796,
+        1.02015,
+        -25.409999999999968
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 0.03166666666666796,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 7.949999999999977,
+      "meshes": 2472,
+      "activeMeshes": 269,
+      "physicsBodies": 264,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 228,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 2,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.02400960386378,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          0.04903540190287417,
+          -0.9443081954493381,
+          0.3253883239568353
+        ],
+        "aim": [
+          -1.4761150792676704e-9,
+          -0.5758073770882761,
+          0.8175853866665671
+        ],
+        "angleDegrees": 35.926303297876245,
+        "position": [
+          0.30891475081443787,
+          0.9901303052902222,
+          -25.22921371459961
+        ],
+        "hand": [
+          0.30467745661735535,
+          1.061333179473877,
+          -25.27701759338379
+        ],
+        "handDistance": 0.08586626101641172,
+        "pitch": 0.5720000000000001,
+        "aiming": false,
+        "crouched": false
+      }
+    },
+    {
+      "label": "lucia-aim",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.03166666666666796,
+        1.02015,
+        -24.66999999999996
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 0.03166666666666796,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 9.166666666666702,
+      "meshes": 2469,
+      "activeMeshes": 253,
+      "physicsBodies": 261,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 231,
+        "colliderDisposals": 6,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.9640215870142,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          -0.26408275870865083,
+          -0.6446789480879965,
+          0.7173906539989092
+        ],
+        "aim": [
+          -0.26408275870865083,
+          -0.6446789480879965,
+          0.7173906539989092
+        ],
+        "angleDegrees": 0,
+        "position": [
+          0.1802678406238556,
+          1.0994088649749756,
+          -24.28896713256836
+        ],
+        "hand": [
+          0.2051529735326767,
+          1.1361714601516724,
+          -24.36246681213379
+        ],
+        "handDistance": 0.08586594866555788,
+        "pitch": 0.5720000000000001,
+        "aiming": true,
+        "crouched": false
+      }
+    },
+    {
+      "label": "lucia-aim-crouch",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        0.03166666666666796,
+        0.7701499999999999,
+        -24.66999999999996
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 0.03166666666666796,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 1,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 9.916666666666739,
+      "meshes": 2469,
+      "activeMeshes": 251,
+      "physicsBodies": 261,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 231,
+        "colliderDisposals": 6,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": true,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 33.9597011546334,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "characterMeshes": [
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive0",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive1",
+          "vertices": 5436,
+          "bones": 80
+        },
+        {
+          "name": "Lucia/rocketbox/f001_hipoly_81_bones_opacity_primitive2",
+          "vertices": 5436,
+          "bones": 80
+        }
+      ],
+      "gun": {
+        "enabled": true,
+        "barrel": [
+          -0.26404508541018407,
+          -0.644820511214388,
+          0.7172772833346557
+        ],
+        "aim": [
+          -0.26404508821138345,
+          -0.6448205082350618,
+          0.7172772849818397
+        ],
+        "angleDegrees": 0,
+        "position": [
+          0.19344793260097504,
+          0.77964848279953,
+          -24.282970428466797
+        ],
+        "hand": [
+          0.215831458568573,
+          0.8159319758415222,
+          -24.352750778198242
+        ],
+        "handDistance": 0.08177292529140222,
+        "pitch": 0.5720000000000001,
+        "aiming": true,
+        "crouched": true
+      }
+    }
+  ],
+  "errors": []
+}
