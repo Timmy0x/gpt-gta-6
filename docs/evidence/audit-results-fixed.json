@@ -1,0 +1,421 @@
+{
+  "observations": [
+    {
+      "label": "environment",
+      "title": "Leonida — Free Roam",
+      "url": "http://127.0.0.1:4175/?backend=webgl",
+      "browser": "152.0.7977.83",
+      "platform": "darwin",
+      "release": "25.5.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5 Pro",
+      "totalMemory": 25769803776,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "headless": true
+    },
+    {
+      "label": "launched",
+      "wallTime": "2026-09-09T11:01:22.730Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 0.21666666666666665,
+      "meshes": 2074,
+      "activeMeshes": 694,
+      "physicsBodies": 133,
+      "fps": 32.92181069958847,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 4
+    },
+    {
+      "label": "walked-forward",
+      "wallTime": "2026-09-09T11:01:23.395Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -25.59499999999997
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 0.8666666666666677,
+      "meshes": 2074,
+      "activeMeshes": 691,
+      "physicsBodies": 133,
+      "fps": 59.98800239666015,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 44
+    },
+    {
+      "label": "entered-car",
+      "wallTime": "2026-09-09T11:01:24.007Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.6215232610702515,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 1.483333333333333,
+      "meshes": 2074,
+      "activeMeshes": 671,
+      "physicsBodies": 133,
+      "fps": 60.02400960598898,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 81
+    },
+    {
+      "label": "drove-straight",
+      "wallTime": "2026-09-09T11:01:27.997Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.000000476837158,
+        0.7404255867004395,
+        28.6685733795166
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 24.826154708862337,
+        "grounded": 2
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 5.466666666666653,
+      "meshes": 2074,
+      "activeMeshes": 480,
+      "physicsBodies": 133,
+      "fps": 59.999999999999986,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 320
+    },
+    {
+      "label": "driving-impact-attempt",
+      "wallTime": "2026-09-09T11:01:34.014Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        86.86177062988281,
+        0.6556563377380371,
+        103.15770721435547
+      ],
+      "character": "Jason",
+      "health": 88.19194894847195,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 25,
+        "speed": 6.304554236519444,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 11.483333333333483,
+      "meshes": 2076,
+      "activeMeshes": 585,
+      "physicsBodies": 135,
+      "fps": 59.97600959401758,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 681
+    },
+    {
+      "label": "repaired",
+      "wallTime": "2026-09-09T11:01:36.061Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        86.894287109375,
+        0.6324435472488403,
+        110.55108642578125
+      ],
+      "character": "Jason",
+      "health": 88.19194894847195,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 5.092109055338766e-10,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 91.16290283203125,
+          "z": 94.73717498779297
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 13.533333333333585,
+      "meshes": 2124,
+      "activeMeshes": 881,
+      "physicsBodies": 136,
+      "fps": 60.000000000000085,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 804
+    },
+    {
+      "label": "exited-car",
+      "wallTime": "2026-09-09T11:01:37.270Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        86.89788055419922,
+        0.6759258508682251,
+        111.07591247558594
+      ],
+      "character": "Jason",
+      "health": 88.19194894847195,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 1.5742160292984566,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 91.16290283203125,
+          "z": 94.73717498779297
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 14.116666666666948,
+      "meshes": 2124,
+      "activeMeshes": 871,
+      "physicsBodies": 136,
+      "fps": 60.01200239976459,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 839
+    },
+    {
+      "label": "switched-character",
+      "wallTime": "2026-09-09T11:01:37.678Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        86.89788055419922,
+        0.6759258508682251,
+        111.07591247558594
+      ],
+      "character": "Jason",
+      "health": 88.19194894847195,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 1.5742160292984566,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 91.16290283203125,
+          "z": 94.73717498779297
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 14.116666666666948,
+      "meshes": 2124,
+      "activeMeshes": 871,
+      "physicsBodies": 136,
+      "fps": 60.01200239976459,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 839
+    }
+  ],
+  "errors": [
+    {
+      "time": 1788951696648,
+      "message": "Failed to set the 'value' property on 'AudioParam': The provided float value is non-finite.",
+      "stack": "TypeError: Failed to set the 'value' property on 'AudioParam': The provided float value is non-finite.\n    at eXe.effect (http://127.0.0.1:4175/assets/index-D31uEw_5.js:29612:26833)\n    at eXe.update (http://127.0.0.1:4175/assets/index-D31uEw_5.js:29612:26618)\n    at http://127.0.0.1:4175/assets/index-D31uEw_5.js:29616:18399\n    at e._renderFrame (http://127.0.0.1:4175/assets/index-D31uEw_5.js:12:4085)\n    at e._processFrame (http://127.0.0.1:4175/assets/index-D31uEw_5.js:12:3824)\n    at e._renderLoop (http://127.0.0.1:4175/assets/index-D31uEw_5.js:12:3877)\n    at _boundRenderFunction (http://127.0.0.1:4175/assets/index-D31uEw_5.js:12:11488)"
+    },
+    {
+      "auditFailure": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#spawn-kind') to be visible\u001b[22m\n",
+      "stack": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#spawn-kind') to be visible\u001b[22m\n\n    at openCreative (/Users/timmymckeegan/Desktop/gpt-gta-6/tests/browser-audit.mjs:35:103)\n    at async file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/browser-audit.mjs:63:3"
+    }
+  ],
+  "consoleMessages": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+    }
+  ]
+}

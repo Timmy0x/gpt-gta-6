@@ -1,0 +1,414 @@
+{
+  "backend": "webgpu",
+  "browser": "152.0.7977.83",
+  "checks": [
+    {
+      "name": "launch",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 2.116666666666664,
+      "meshes": 1535,
+      "activeMeshes": 529,
+      "physicsBodies": 133,
+      "fps": 56.16925669412923,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "enter",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.6214539408683777,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 2.749999999999995,
+      "meshes": 1535,
+      "activeMeshes": 529,
+      "physicsBodies": 133,
+      "fps": 54.2691751073674,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "drive-crash",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        43.44973373413086,
+        0.6568951606750488,
+        81.83616638183594
+      ],
+      "character": "Jason",
+      "health": 93.51808019587203,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 24.773120187665857,
+        "speed": 8.51685422250761,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 11.466666666666816,
+      "meshes": 1537,
+      "activeMeshes": 205,
+      "physicsBodies": 135,
+      "fps": 59.999999999999176,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "recover-exit-switch",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        44.742792746438056,
+        1.2440079007742764,
+        79.4162043559533
+      ],
+      "character": "Lucia",
+      "health": 93.51808019587203,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 16.021671295166016,
+          "z": 82.94403076171875
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 12.316666666666858,
+      "meshes": 1585,
+      "activeMeshes": 205,
+      "physicsBodies": 136,
+      "fps": 59.97600959401667,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "three-star-pursuit",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        44.744352738177426,
+        1.0891201601517357,
+        79.4160998180745
+      ],
+      "character": "Lucia",
+      "health": 93.51808019587203,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 44.744352738177426,
+          "z": 79.4160998180745
+        }
+      },
+      "population": {
+        "traffic": 17,
+        "peds": 30
+      },
+      "crashCount": 5,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 25.5166666666665,
+      "meshes": 1778,
+      "activeMeshes": 272,
+      "physicsBodies": 141,
+      "fps": 60.084117763435216,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "save-load",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        44.744352738177426,
+        2.089188257922295,
+        79.4160998180745
+      ],
+      "character": "Lucia",
+      "health": 93.51808019587203,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 44.744352738177426,
+          "z": 79.4160998180745
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 5,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 26.24999999999979,
+      "meshes": 1535,
+      "activeMeshes": 237,
+      "physicsBodies": 133,
+      "fps": 44.99100179883513,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "boat-enter",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        239.00547790527344,
+        0.21701715886592865,
+        -230.00006103515625
+      ],
+      "character": "Lucia",
+      "health": 93.51808019587203,
+      "vehicle": {
+        "id": "vehicle-24",
+        "kind": "boat",
+        "health": 100,
+        "speed": 0.00916647777106835,
+        "grounded": 0
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 44.744352738177426,
+          "z": 79.4160998180745
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 5,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 26.6833333333331,
+      "meshes": 1547,
+      "activeMeshes": 42,
+      "physicsBodies": 134,
+      "fps": 46.14674665266783,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "boat-drive",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        262.65692138671875,
+        -0.23837009072303772,
+        -231.3798065185547
+      ],
+      "character": "Lucia",
+      "health": 93.51808019587203,
+      "vehicle": {
+        "id": "vehicle-24",
+        "kind": "boat",
+        "health": 100,
+        "speed": 15.00535806204368,
+        "grounded": 1
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 44.744352738177426,
+          "z": 79.4160998180745
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 5,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 29.71666666666626,
+      "meshes": 1547,
+      "activeMeshes": 26,
+      "physicsBodies": 134,
+      "fps": 59.96402158918988,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "helicopter-lift",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        0.033220887184143066,
+        15.87366008758545,
+        -111.9705810546875
+      ],
+      "character": "Lucia",
+      "health": 93.51808019587203,
+      "vehicle": {
+        "id": "vehicle-25",
+        "kind": "helicopter",
+        "health": 95.64768049982531,
+        "speed": 0.004868895586603385,
+        "grounded": 0
+      },
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": -1.4766771793365479,
+          "z": -111.0254135131836
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 6,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 37.16666666666584,
+      "meshes": 1659,
+      "activeMeshes": 387,
+      "physicsBodies": 137,
+      "fps": 60.024009605988034,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "performance": {
+    "samples": 1800,
+    "medianFps": 59.88023956370228,
+    "maxFrameMs": 136.09999999403954,
+    "note": "Short mixed-control smoke under concurrent development/browser audits; not acceptance benchmark.",
+    "p99EquivalentFps": 34.36426117542361,
+    "method": "Median FPS =1000/median frame; p99EquivalentFps=1000/p99 frame. This report does not compute average slowest1% FPS."
+  }
+}

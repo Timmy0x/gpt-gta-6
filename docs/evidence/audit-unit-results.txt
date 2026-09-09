@@ -1,0 +1,43 @@
+Independent unit/behavior test rerun, 2026-09-09. Command: npm test.
+Initial output:
+✔ unwitnessed crime does not dispatch police
+✔ report, pursuit, last known, search, reacquisition and escape
+✔ walls block witnesses; parallel and open lines remain clear
+✔ seeded world randomness is reproducible
+✔ police profile supports configured levels without claiming reference parity
+✔ last-known coordinates copy public getters used by Babylon vectors
+
+Remaining captured output:
+✔ tire demand respects friction circle and loses braking when sliding hard (0.692167ms)
+✔ suspension equilibrium supports the actual car weight (0.142875ms)
+✔ engine respects top speed, reverse cap, and mechanical damage (0.067708ms)
+✔ parking contact is harmless, high-speed impact is damaging (0.043209ms)
+✔ wing stalls at high angle of attack (0.052791ms)
+BJS - [13:07:13]: Babylon.js v9.25.0 - Null engine
+✔ Havok car settles, accelerates, steers and stops against a solid wall (100.144083ms)
+ℹ Coupe reached 20.80 m/s after 3 seconds of throttle.
+ℹ Impact Δv=3.30
+ℹ Impact Δv=13.36
+ℹ Sedan hit wall: health 53.9, 2 collision callbacks, position z=25.09.
+BJS - [13:07:13]: Babylon.js v9.25.0 - Null engine
+✔ Havok boat floats, helicopter takes off and lands, trainer rotates from runway (69.317875ms)
+ℹ Boat floating height -0.05 m; propulsion reached 17.98 m/s.
+ℹ Helicopter collective reached 23.91 m; rotor tilt produced 5.23 m/s horizontal speed.
+ℹ Trainer runway roll: 36.51 m/s; y=0.67.
+ℹ Trainer rotation: 25.37 m/s; y=62.08; forward={X: 0.00038983026752248406 Y: 0.4436272382736206 Z: 0.8962113261222839}.
+BJS - [13:07:13]: Babylon.js v9.25.0 - Null engine
+✔ 62 m/s impact cannot tunnel through an 8 cm wall; creative recovery restores upright motion (28.756875ms)
+ℹ 223 km/h crash: max center z=9.741 at wall z12, health=25.0.
+BJS - [13:07:13]: Babylon.js v9.25.0 - Null engine
+BJS - [13:07:13]: Babylon.js v9.25.0 - Null engine
+BJS - [13:07:13]: Babylon.js v9.25.0 - Null engine
+✔ fixed physics substeps preserve driving across 30, 60 and 144 Hz render cadence (68.888291ms)
+ℹ 30 Hz: 299 steps, 17.623 m/s, z=36.987; 60 Hz: 299 steps, 17.623 m/s, z=36.987; 144 Hz: 299 steps, 17.623 m/s, z=36.987
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2627.342791

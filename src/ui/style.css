@@ -1,0 +1,663 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap");
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #f6f1e5;
+  background: #142c34;
+  font-synthesis: none;
+  --accent: #f1bca0;
+  --muted: #b2beb8;
+  --panel: rgba(17, 31, 35, 0.97);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+#game {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  outline: 0;
+  touch-action: none;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  border: 1px solid #fff2;
+  background: #ffffff0a;
+  padding: 11px 15px;
+  transition: background 0.18s;
+}
+button:hover {
+  background: #ffffff1f;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.hidden,
+[hidden] {
+  display: none !important;
+}
+#ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+#ui button,
+#ui input,
+#ui select,
+#panel,
+#welcome {
+  pointer-events: auto;
+}
+kbd {
+  font:
+    10px Inter,
+    sans-serif;
+  background: #fff1;
+  border: 1px solid #fff3;
+  padding: 4px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #d0dcd2;
+}
+.primary {
+  background: var(--accent);
+  color: #1a2928;
+  border: 0;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 310px;
+}
+.primary:hover {
+  background: #ffd7b5;
+}
+.primary span {
+  font-size: 22px;
+}
+.wide {
+  width: 100%;
+}
+#loading {
+  position: absolute;
+  inset: 0;
+  background: #13282e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.wordmark {
+  font:
+    900 80px/0.8 "Barlow Condensed",
+    Impact,
+    sans-serif;
+  letter-spacing: 4px;
+}
+.wordmark span {
+  display: block;
+  text-align: center;
+  font:
+    500 13px Inter,
+    sans-serif;
+  letter-spacing: 15px;
+  margin-top: 22px;
+}
+#loading p {
+  font-size: 12px;
+  color: #a5b9b3;
+}
+.load-line {
+  width: 180px;
+  height: 2px;
+  background: #ffffff1c;
+}
+.load-line i {
+  display: block;
+  background: var(--accent);
+  height: 100%;
+  width: 40%;
+  animation: load 1.5s ease-in-out infinite;
+}
+@keyframes load {
+  50% {
+    transform: translateX(140%);
+  }
+}
+#welcome {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 28, 33, 0.95),
+    rgba(9, 28, 33, 0.73) 33%,
+    transparent 76%
+  );
+}
+.welcome-left {
+  padding: 7vh 6vw;
+}
+.edition {
+  font-size: 9px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10vh;
+}
+.edition i {
+  width: 6px;
+  height: 6px;
+  background: #94d5ae;
+  border-radius: 100%;
+}
+.edition span {
+  color: #a6bcb4;
+  margin-left: 30px;
+}
+h1 {
+  font:
+    800 clamp(55px, 7.2vw, 115px) / 0.9 "Barlow Condensed",
+    Impact,
+    sans-serif;
+  letter-spacing: -1px;
+  margin: 23px 0 24px;
+}
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.intro {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #cad8d1;
+  margin: 0 0 30px;
+}
+.text-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 310px;
+  border: 0;
+  background: none;
+  padding: 17px 0;
+  font-size: 11px;
+  color: #b8ccc2;
+}
+.welcome-controls {
+  display: flex;
+  gap: 22px;
+  font-size: 10px;
+  color: #bdccc3;
+  margin-top: 5vh;
+}
+.welcome-controls span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.welcome-foot {
+  position: absolute;
+  bottom: 26px;
+  left: 6vw;
+  right: 4vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: #b2c7bb;
+}
+.hud-header {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font:
+    800 27px "Barlow Condensed",
+    Impact,
+    sans-serif;
+  letter-spacing: 1.3px;
+  text-shadow: 0 2px 12px #0008;
+}
+.brand span {
+  font:
+    600 8px Inter,
+    sans-serif;
+  letter-spacing: 2px;
+  border-left: 1px solid #fff6;
+  margin-left: 12px;
+  padding-left: 12px;
+}
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+  text-shadow: 0 1px 5px #000;
+}
+.top-right button {
+  background: #102b3355;
+  backdrop-filter: blur(12px);
+  font-size: 9px;
+  padding: 8px 11px;
+  letter-spacing: 1px;
+}
+.top-right kbd {
+  margin-left: 5px;
+  font-size: 8px;
+}
+.weather {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+.wanted-area {
+  position: absolute;
+  top: 90px;
+  right: 34px;
+  text-align: right;
+}
+#stars {
+  letter-spacing: 6px;
+  font-size: 24px;
+  color: #ffffff4d;
+  text-shadow: 0 2px 4px #0006;
+}
+#stars.hot {
+  color: #f5d7ac;
+}
+#wanted-state {
+  margin-top: 8px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 5px #000;
+}
+.location-card {
+  position: absolute;
+  top: 110px;
+  left: 32px;
+  text-shadow: 0 2px 12px #0008;
+}
+.location-card h2 {
+  font:
+    600 32px "Barlow Condensed",
+    Impact,
+    sans-serif;
+  margin: 5px 0;
+}
+.location-card .eyebrow {
+  font-size: 8px;
+}
+.location-card #activity {
+  font-size: 10px;
+  color: #eee4d4;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 33px;
+  left: 30px;
+  width: 224px;
+}
+.map-wrap {
+  border: 1px solid #ffffff36;
+  box-shadow: 0 3px 25px #0004;
+  position: relative;
+  background: #263b38;
+}
+#minimap {
+  width: 224px;
+  height: 184px;
+  display: block;
+}
+.north {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  font-size: 9px;
+  font-weight: 700;
+}
+.map-caption {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  background: #122629;
+}
+.map-caption span {
+  color: var(--accent);
+}
+.vitals {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  background: #11282c99;
+  padding: 10px;
+}
+.vitals > span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-right: 3px;
+}
+.bar {
+  height: 4px;
+  background: #ffffff25;
+  flex: 1;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  background: #afd5a1;
+  transition: width 0.2s;
+}
+.bar.armor i {
+  background: #84bdce;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 38px;
+  right: 32px;
+  text-align: right;
+  text-shadow: 0 2px 9px #0009;
+}
+#vehicle-hud {
+  font:
+    600 24px "Barlow Condensed",
+    Impact,
+    sans-serif;
+  margin-bottom: 12px;
+}
+.weapon-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.weapon-info b {
+  font:
+    600 27px "Barlow Condensed",
+    Impact,
+    sans-serif;
+}
+#money {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #d8e8cb;
+}
+.keys-hint {
+  margin-top: 30px;
+  font-size: 9px;
+  color: #e6e9e1;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.keys-hint kbd:not(:first-child) {
+  margin-left: 7px;
+}
+#crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-shadow: 0 0 3px #000;
+}
+#prompt {
+  position: absolute;
+  bottom: 74px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 18px;
+  background: #122a2dbb;
+  border: 1px solid #ffffff29;
+  backdrop-filter: blur(10px);
+  font-size: 11px;
+  white-space: nowrap;
+}
+#prompt:empty {
+  display: none;
+}
+#toast {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 23px;
+  background: #102d30de;
+  border-left: 3px solid var(--accent);
+  font-size: 12px;
+  max-width: 460px;
+  line-height: 1.5;
+}
+#performance {
+  display: none;
+  position: absolute;
+  bottom: 9px;
+  left: 30px;
+  font: 9px monospace;
+  color: #d6e4d8;
+}
+#performance.visible {
+  display: block;
+}
+#panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 440px;
+  padding: 30px;
+  background: var(--panel);
+  box-shadow: -15px 0 70px #0003;
+  overflow-y: auto;
+  backdrop-filter: blur(24px);
+}
+.panel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel-top button {
+  border: 0;
+  padding: 6px;
+  font-size: 16px;
+}
+#panel h2 {
+  font:
+    600 38px "Barlow Condensed",
+    Impact,
+    sans-serif;
+  margin: 25px 0 7px;
+}
+.panel-sub {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+#panel section {
+  border-top: 1px solid #fff2;
+  padding: 20px 0 7px;
+}
+#panel h3 {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #d7cdb8;
+  margin: 0 0 18px;
+}
+#panel label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  margin: 17px 0;
+  gap: 15px;
+}
+input[type="range"] {
+  width: 160px;
+  accent-color: var(--accent);
+}
+input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+}
+select,
+input[type="text"],
+#location-search {
+  background: #243a3b;
+  border: 1px solid #fff2;
+  color: #ece6d9;
+  padding: 10px;
+  font-size: 11px;
+  max-width: 220px;
+  border-radius: 0;
+}
+#panel small {
+  font-size: 9px;
+  line-height: 1.6;
+  color: #adbeb4;
+  display: block;
+}
+#panel button {
+  font-size: 10px;
+}
+.spawn-row {
+  display: flex;
+  gap: 7px;
+}
+.spawn-row select {
+  min-width: 0;
+  flex: 1;
+  max-width: none;
+}
+.spawn-row button {
+  background: var(--accent);
+  color: #1a2928;
+  font-weight: 600;
+}
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin: 11px 0;
+}
+.button-row button {
+  flex: 1;
+  padding: 11px 7px;
+}
+.controls-grid {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  align-items: center;
+  font-size: 10px;
+  color: #c8d5cc;
+}
+.controls-grid kbd {
+  justify-self: start;
+}
+#bigmap {
+  width: 100%;
+  border: 1px solid #fff2;
+}
+#location-search {
+  margin: 18px 0;
+  width: 100%;
+  max-width: none;
+}
+#locations {
+  display: flex;
+  flex-direction: column;
+}
+#locations button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin: 3px 0;
+}
+#locations small {
+  margin-top: 5px;
+}
+#outcome {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font:
+    800 100px "Barlow Condensed",
+    Impact,
+    sans-serif;
+  letter-spacing: 10px;
+  color: #ec9f95;
+  background: #181e2566;
+  backdrop-filter: grayscale(1);
+}
+@media (max-width: 900px) {
+  .welcome-left {
+    padding: 6vh 5vw;
+  }
+  .welcome-controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .welcome-foot span:nth-child(2) {
+    display: none;
+  }
+  .edition {
+    margin-bottom: 7vh;
+  }
+  .top-right {
+    gap: 8px;
+  }
+  .brand span {
+    display: none;
+  }
+  #panel {
+    width: 390px;
+  }
+  .location-card {
+    top: 100px;
+  }
+  #minimap {
+    width: 180px;
+    height: 148px;
+  }
+  .bottom-left {
+    width: 180px;
+  }
+  .keys-hint {
+    display: none;
+  }
+}

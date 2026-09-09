@@ -1,0 +1,742 @@
+{
+  "observations": [
+    {
+      "label": "environment",
+      "title": "Leonida — Free Roam",
+      "url": "http://127.0.0.1:5174/?backend=webgl",
+      "browser": "152.0.7977.83",
+      "platform": "darwin",
+      "release": "25.5.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5 Pro",
+      "totalMemory": 25769803776,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "headless": true
+    },
+    {
+      "label": "launched",
+      "wallTime": "2026-09-09T10:59:19.411Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 0.3,
+      "meshes": 2074,
+      "activeMeshes": 674,
+      "physicsBodies": 133,
+      "fps": 42.53509144972768,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 6
+    },
+    {
+      "label": "walked-forward",
+      "wallTime": "2026-09-09T10:59:20.111Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -25.59499999999997
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 1.0000000000000013,
+      "meshes": 2074,
+      "activeMeshes": 674,
+      "physicsBodies": 133,
+      "fps": 59.67774020078152,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 48
+    },
+    {
+      "label": "entered-car",
+      "wallTime": "2026-09-09T10:59:20.732Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.621457040309906,
+        -22.9995059967041
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0.000004082815609317518,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 1.6166666666666658,
+      "meshes": 2074,
+      "activeMeshes": 659,
+      "physicsBodies": 133,
+      "fps": 59.952038368590486,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 86
+    },
+    {
+      "label": "drove-straight",
+      "wallTime": "2026-09-09T10:59:24.771Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        2.9949474334716797,
+        0.7402892112731934,
+        29.085111618041992
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 24.86210644361826,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 5.649999999999985,
+      "meshes": 2074,
+      "activeMeshes": 475,
+      "physicsBodies": 133,
+      "fps": 59.99999999999996,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 328
+    },
+    {
+      "label": "driving-impact-attempt",
+      "wallTime": "2026-09-09T10:59:30.835Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.26082611083984,
+        0.656387209892273,
+        103.90040588378906
+      ],
+      "character": "Jason",
+      "health": 88.19859684915241,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 25,
+        "speed": 6.256584213456822,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "reporting",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 11.716666666666828,
+      "meshes": 2076,
+      "activeMeshes": 586,
+      "physicsBodies": 135,
+      "fps": 59.47660586765558,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 678
+    },
+    {
+      "label": "repaired",
+      "wallTime": "2026-09-09T10:59:32.971Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        88.92877197265625,
+        0.6706566214561462,
+        113.28372192382812
+      ],
+      "character": "Jason",
+      "health": 88.19859684915241,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 3.2219911116146625,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 91.08953857421875,
+          "_y": 1.0676543712615967,
+          "_z": 94.95537567138672
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 13.850000000000268,
+      "meshes": 2124,
+      "activeMeshes": 1068,
+      "physicsBodies": 136,
+      "fps": 60.01200239976459,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 807
+    },
+    {
+      "label": "exited-car",
+      "wallTime": "2026-09-09T10:59:34.220Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Jason",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 91.08953857421875,
+          "_y": 1.0676543712615967,
+          "_z": 94.95537567138672
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 15.10000000000033,
+      "meshes": 2124,
+      "activeMeshes": 1070,
+      "physicsBodies": 136,
+      "fps": 59.99999999999999,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 882
+    },
+    {
+      "label": "switched-character",
+      "wallTime": "2026-09-09T10:59:34.657Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 91.08953857421875,
+          "_y": 1.0676543712615967,
+          "_z": 94.95537567138672
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 15.533333333333685,
+      "meshes": 2125,
+      "activeMeshes": 1054,
+      "physicsBodies": 136,
+      "fps": 59.988002400235096,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 908
+    },
+    {
+      "label": "creative-spawns-wanted-3",
+      "wallTime": "2026-09-09T10:59:36.455Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 87.09004131775355,
+          "_y": 1.0471956885127798,
+          "_z": 115.98560990959307
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 31
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 19,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.33333333333363,
+      "meshes": 2236,
+      "activeMeshes": 1077,
+      "physicsBodies": 139,
+      "fps": 60.012002399764555,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1014
+    },
+    {
+      "label": "pursuit-wait-5s",
+      "wallTime": "2026-09-09T10:59:41.467Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 87.09004131775355,
+          "_y": 1.0471956885127798,
+          "_z": 115.98560990959307
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 31
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 19,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.500000000000288,
+      "meshes": 2236,
+      "activeMeshes": 1074,
+      "physicsBodies": 139,
+      "fps": 60.01200240334226,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1024
+    },
+    {
+      "label": "pursuit-wait-10s",
+      "wallTime": "2026-09-09T10:59:46.474Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 87.09004131775355,
+          "_y": 1.0471956885127798,
+          "_z": 115.98560990959307
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 31
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 19,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.500000000000288,
+      "meshes": 2236,
+      "activeMeshes": 1074,
+      "physicsBodies": 139,
+      "fps": 60.01200240334226,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1024
+    },
+    {
+      "label": "pursuit-wait-15s",
+      "wallTime": "2026-09-09T10:59:51.484Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 87.09004131775355,
+          "_y": 1.0471956885127798,
+          "_z": 115.98560990959307
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 31
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 19,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.500000000000288,
+      "meshes": 2236,
+      "activeMeshes": 1074,
+      "physicsBodies": 139,
+      "fps": 60.01200240334226,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1024
+    },
+    {
+      "label": "pursuit-wait-20s",
+      "wallTime": "2026-09-09T10:59:56.491Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 87.09004131775355,
+          "_y": 1.0471956885127798,
+          "_z": 115.98560990959307
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 31
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 19,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.500000000000288,
+      "meshes": 2236,
+      "activeMeshes": 1074,
+      "physicsBodies": 139,
+      "fps": 60.01200240334226,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1024
+    },
+    {
+      "label": "pursuit-wait-25s",
+      "wallTime": "2026-09-09T11:00:01.499Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 87.09004131775355,
+          "_y": 1.0471956885127798,
+          "_z": 115.98560990959307
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 31
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 19,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.500000000000288,
+      "meshes": 2236,
+      "activeMeshes": 1074,
+      "physicsBodies": 139,
+      "fps": 60.01200240334226,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1024
+    },
+    {
+      "label": "pursuit-wait-30s",
+      "wallTime": "2026-09-09T11:00:06.507Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        87.09004131775355,
+        1.0471956885127798,
+        115.98560990959307
+      ],
+      "character": "Lucia",
+      "health": 88.19859684915241,
+      "vehicle": null,
+      "wanted": {
+        "stars": 3,
+        "phase": "pursuit",
+        "lastKnown": {
+          "_isDirty": true,
+          "_x": 87.09004131775355,
+          "_y": 1.0471956885127798,
+          "_z": 115.98560990959307
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 31
+      },
+      "crashCount": 1,
+      "shots": 0,
+      "props": 19,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.500000000000288,
+      "meshes": 2236,
+      "activeMeshes": 1074,
+      "physicsBodies": 139,
+      "fps": 60.01200240334226,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1024
+    }
+  ],
+  "errors": [
+    {
+      "time": 1788951576624,
+      "message": "Failed to set the 'value' property on 'AudioParam': The provided float value is non-finite.",
+      "stack": "TypeError: Failed to set the 'value' property on 'AudioParam': The provided float value is non-finite.\n    at GameAudio.effect (http://127.0.0.1:5174/src/core/Audio.ts:45:26)\n    at GameAudio.update (http://127.0.0.1:5174/src/core/Audio.ts:35:43)\n    at http://127.0.0.1:5174/src/main.ts?t=1788951489619:469:9\n    at Engine._renderFrame (http://127.0.0.1:5174/node_modules/.vite/deps/abstractEngine.pure-CWQd4VXB.js?v=89e7ec34:2969:4)\n    at Engine._processFrame (http://127.0.0.1:5174/node_modules/.vite/deps/abstractEngine.pure-CWQd4VXB.js?v=89e7ec34:2955:61)\n    at Engine._renderLoop (http://127.0.0.1:5174/node_modules/.vite/deps/abstractEngine.pure-CWQd4VXB.js?v=89e7ec34:2962:8)\n    at AbstractEngine._boundRenderFunction (http://127.0.0.1:5174/node_modules/.vite/deps/abstractEngine.pure-CWQd4VXB.js?v=89e7ec34:3500:51)"
+    },
+    {
+      "auditFailure": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#spawn-kind') to be visible\u001b[22m\n\u001b[2m    64 × locator resolved to hidden <select id=\"spawn-kind\" aria-label=\"Vehicle\">…</select>\u001b[22m\n",
+      "stack": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#spawn-kind') to be visible\u001b[22m\n\u001b[2m    64 × locator resolved to hidden <select id=\"spawn-kind\" aria-label=\"Vehicle\">…</select>\u001b[22m\n\n    at openCreative (/Users/timmymckeegan/Desktop/gpt-gta-6/tests/browser-audit.mjs:33:103)\n    at async file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/browser-audit.mjs:73:3"
+    }
+  ],
+  "consoleMessages": [
+    {
+      "type": "error",
+      "text": "[vite] failed to connect to websocket.\nyour current setup:\n  (browser) 127.0.0.1:5174/ <--[HTTP]--> 127.0.0.1:5173/ (server)\n  (browser) 127.0.0.1:5174/ <--[WebSocket (failing)]--> 127.0.0.1:5173/ (server)\nCheck out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr ."
+    },
+    {
+      "type": "error",
+      "text": "Failed to send error to Vite server: TypeError: Cannot read properties of undefined (reading 'send')\n    at Object.send (http://127.0.0.1:5174/@vite/client:452:7)\n    at Object.send (http://127.0.0.1:5174/@vite/client:907:16)\n    at Object.send (http://127.0.0.1:5174/@vite/client:311:21)\n    at Object.send (http://127.0.0.1:5174/@vite/client:391:30)\n    at sendError (http://127.0.0.1:5174/@vite/client:494:19)\n    at sendLog (http://127.0.0.1:5174/@vite/client:522:11)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to send error to Vite server: TypeError: Cannot read properties of undefined (reading 'send')\n    at Object.send (http://127.0.0.1:5174/@vite/client:452:7)\n    at Object.send (http://127.0.0.1:5174/@vite/client:907:16)\n    at Object.send (http://127.0.0.1:5174/@vite/client:311:21)\n    at Object.send (http://127.0.0.1:5174/@vite/client:391:30)\n    at sendError (http://127.0.0.1:5174/@vite/client:494:19)\n    at http://127.0.0.1:5174/@vite/client:541:11"
+    }
+  ]
+}

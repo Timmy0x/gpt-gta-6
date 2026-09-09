@@ -1,0 +1,1078 @@
+{
+  "observations": [
+    {
+      "label": "environment",
+      "title": "Leonida — Free Roam",
+      "url": "http://127.0.0.1:4175/?backend=webgl",
+      "browser": "152.0.7977.83",
+      "platform": "darwin",
+      "release": "25.5.0",
+      "architecture": "arm64",
+      "cpu": "Apple M5 Pro",
+      "totalMemory": 25769803776,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "headless": true
+    },
+    {
+      "label": "launched",
+      "wallTime": "2026-09-09T11:07:12.867Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 0.26666666666666666,
+      "meshes": 2074,
+      "activeMeshes": 695,
+      "physicsBodies": 133,
+      "fps": 43.76367614879651,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 5
+    },
+    {
+      "label": "arrest-0s",
+      "wallTime": "2026-09-09T11:07:13.030Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 0.4333333333333333,
+      "meshes": 2122,
+      "activeMeshes": 722,
+      "physicsBodies": 134,
+      "fps": 42.85714285714287,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 14
+    },
+    {
+      "label": "arrest-5s",
+      "wallTime": "2026-09-09T11:07:18.229Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 5.616666666666652,
+      "meshes": 2170,
+      "activeMeshes": 712,
+      "physicsBodies": 135,
+      "fps": 60.00000000000024,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 326
+    },
+    {
+      "label": "arrest-10s",
+      "wallTime": "2026-09-09T11:07:23.428Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 2,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 10.816666666666784,
+      "meshes": 2172,
+      "activeMeshes": 702,
+      "physicsBodies": 137,
+      "fps": 60.12024048096208,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 638
+    },
+    {
+      "label": "arrest-16s",
+      "wallTime": "2026-09-09T11:07:28.597Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.30001572094336,
+        1.02015,
+        -28.000018561456383
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.30001572094336,
+          "z": -28.000018561456383
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 11,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 15.983333333333707,
+      "meshes": 2175,
+      "activeMeshes": 728,
+      "physicsBodies": 140,
+      "fps": 60.00000000000012,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 948
+    },
+    {
+      "label": "arrest-outcome",
+      "value": "BUSTED",
+      "cash": "$12,500",
+      "at": "2026-09-09T11:07:32.853Z"
+    },
+    {
+      "label": "arrest-21s",
+      "wallTime": "2026-09-09T11:07:33.650Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.300031809580335,
+        1.02015,
+        -28.000036686419023
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.300031809580335,
+          "z": -28.000036686419023
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 11,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 21.03333333333342,
+      "meshes": 2173,
+      "activeMeshes": 762,
+      "physicsBodies": 138,
+      "fps": 60.00000000000015,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1243
+    },
+    {
+      "label": "arrest-outcome",
+      "value": "",
+      "cash": "$12,200",
+      "at": "2026-09-09T11:07:35.792Z"
+    },
+    {
+      "label": "arrest-26s",
+      "wallTime": "2026-09-09T11:07:38.834Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 11,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 26.21666666666646,
+      "meshes": 2074,
+      "activeMeshes": 692,
+      "physicsBodies": 133,
+      "fps": 59.988002396660484,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1554
+    },
+    {
+      "label": "arrest-31s",
+      "wallTime": "2026-09-09T11:07:44.012Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 11,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 31.399999999999498,
+      "meshes": 2074,
+      "activeMeshes": 692,
+      "physicsBodies": 133,
+      "fps": 60.01200239976477,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "arrest-36s",
+      "wallTime": "2026-09-09T11:07:49.170Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 11,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 36.54999999999921,
+      "meshes": 2074,
+      "activeMeshes": 692,
+      "physicsBodies": 133,
+      "fps": 59.9880024002353,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "arrest-41s",
+      "wallTime": "2026-09-09T11:07:54.333Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 11,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 41.71666666666558,
+      "meshes": 2074,
+      "activeMeshes": 713,
+      "physicsBodies": 133,
+      "fps": 59.98800240023529,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "arrest-cash",
+      "value": "$12,200"
+    },
+    {
+      "label": "arrest-end",
+      "wallTime": "2026-09-09T11:07:58.282Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30
+      },
+      "crashCount": 11,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 45.66666666666536,
+      "meshes": 2074,
+      "activeMeshes": 670,
+      "physicsBodies": 133,
+      "fps": 60.10819475126919,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-before-relocation",
+      "wallTime": "2026-09-09T11:08:07.633Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 13,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 55.016666666664825,
+      "meshes": 2171,
+      "activeMeshes": 758,
+      "physicsBodies": 136,
+      "fps": 60.00000000000025,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-map-teleport-garage",
+      "wallTime": "2026-09-09T11:08:08.198Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 13,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 55.53333333333146,
+      "meshes": 2171,
+      "activeMeshes": 809,
+      "physicsBodies": 136,
+      "fps": 59.96402158919117,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-method",
+      "value": "Normal map UI teleport to Sunset Customs; creative relocation, not continuous on-foot/driving evasion."
+    },
+    {
+      "label": "escape-0s",
+      "wallTime": "2026-09-09T11:08:08.304Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 13,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 55.64999999999812,
+      "meshes": 2171,
+      "activeMeshes": 824,
+      "physicsBodies": 136,
+      "fps": 59.53562214654741,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-5s",
+      "wallTime": "2026-09-09T11:08:13.470Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 13,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 60.79999999999783,
+      "meshes": 2170,
+      "activeMeshes": 806,
+      "physicsBodies": 135,
+      "fps": 60.0120024033424,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-10s",
+      "wallTime": "2026-09-09T11:08:18.634Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 13,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 65.96666666666421,
+      "meshes": 2170,
+      "activeMeshes": 868,
+      "physicsBodies": 135,
+      "fps": 60.03602161081954,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-16s",
+      "wallTime": "2026-09-09T11:08:23.799Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 15,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 71.13333333333058,
+      "meshes": 2170,
+      "activeMeshes": 764,
+      "physicsBodies": 135,
+      "fps": 59.88023952095824,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-21s",
+      "wallTime": "2026-09-09T11:08:28.979Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "cooldown",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 19,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 76.31666666666362,
+      "meshes": 2175,
+      "activeMeshes": 716,
+      "physicsBodies": 140,
+      "fps": 59.89219404999612,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-26s",
+      "wallTime": "2026-09-09T11:08:34.147Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 1,
+        "phase": "cooldown",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 20,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 81.48333333333,
+      "meshes": 2175,
+      "activeMeshes": 716,
+      "physicsBodies": 140,
+      "fps": 60.1202404809621,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-31s",
+      "wallTime": "2026-09-09T11:08:39.325Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 20,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 86.66666666666303,
+      "meshes": 2172,
+      "activeMeshes": 716,
+      "physicsBodies": 137,
+      "fps": 59.98800240023511,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-36s",
+      "wallTime": "2026-09-09T11:08:44.498Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 20,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 91.8333333333294,
+      "meshes": 2172,
+      "activeMeshes": 801,
+      "physicsBodies": 137,
+      "fps": 59.97600959759088,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-41s",
+      "wallTime": "2026-09-09T11:08:49.664Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 20,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 96.99999999999578,
+      "meshes": 2172,
+      "activeMeshes": 839,
+      "physicsBodies": 137,
+      "fps": 60.00000000000006,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "escape-cash",
+      "value": "$12,200"
+    },
+    {
+      "label": "escape-end",
+      "wallTime": "2026-09-09T11:08:53.317Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        -34,
+        1.083075,
+        -55
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30
+      },
+      "crashCount": 22,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 100.64999999999557,
+      "meshes": 2172,
+      "activeMeshes": 839,
+      "physicsBodies": 137,
+      "fps": 60.10819474767967,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "frameSamples": 1800
+    },
+    {
+      "label": "performance-short-session",
+      "samples": 1800,
+      "medianFrameMs": 16.69999998807907,
+      "medianFPS": 59.88023956370228,
+      "p99FrameMs": 17.69999998807907,
+      "onePercentLowFPS": 53.01914580265096,
+      "maxFrameMs": 27.700000017881393,
+      "backend": "WebGL2",
+      "quality": "high",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "heap": {
+        "used": 200094612,
+        "total": 261157040,
+        "limit": 4395630592
+      }
+    }
+  ],
+  "errors": [],
+  "consoleMessages": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+      "location": {
+        "url": "http://127.0.0.1:4175/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+      "location": {
+        "url": "http://127.0.0.1:4175/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ]
+}
