@@ -3,9 +3,7 @@ import glslangJS from "@babylonjs/core/assets/glslang/glslang.js?url";
 import glslangWASM from "@babylonjs/core/assets/glslang/glslang.wasm?url";
 import twgslJS from "@babylonjs/core/assets/twgsl/twgsl.js?url";
 import twgslWASM from "@babylonjs/core/assets/twgsl/twgsl.wasm?url";
-export async function createRenderer(
-  canvas: HTMLCanvasElement,
-): Promise<{
+export async function createRenderer(canvas: HTMLCanvasElement): Promise<{
   engine: AbstractEngine;
   backend: string;
   fallbackReason: string;

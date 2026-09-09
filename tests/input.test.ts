@@ -136,10 +136,13 @@ test("saved key bindings reject reserved/corrupt fields and keep every action re
     back: "KeyE",
     jump: "KeyE",
   });
-  assert.equal(Object.keys(duplicate).length, 14);
+  assert.equal(
+    Object.keys(duplicate).length,
+    Object.keys(DEFAULT_BINDINGS).length,
+  );
   assert.equal(
     new Set(Object.values(duplicate)).size,
-    14,
+    Object.keys(DEFAULT_BINDINGS).length,
     "duplicate save entries cannot strand an action",
   );
   assert.equal(
@@ -314,7 +317,10 @@ test("rebindings survive reload, swap duplicates and preserve keyboard/mouse rel
     browserFixture(t);
   assert.ok(input.rebind("forward", "KeyE"));
   assert.equal(input.bindings.interact, "KeyW");
-  assert.equal(new Set(Object.values(input.bindings)).size, 14);
+  assert.equal(
+    new Set(Object.values(input.bindings)).size,
+    Object.keys(DEFAULT_BINDINGS).length,
+  );
   assert.equal(input.rebind("jump", "Escape"), false);
   assert.equal(input.rebind("jump", "Digit1"), false);
   assert.equal(input.rebind("jump", "not-a-code"), false);
@@ -375,4 +381,60 @@ test("focus loss cancels firing/movement and held controller buttons must releas
   input.poll();
   assert.ok(input.mouseDown);
   assert.ok(input.take("jump"));
+});
+
+test('jump survives render frames without physics while render actions retain one-frame edges', (t) => {
+  const { input, emit, windowTarget, button } = browserFixture(t);
+  emit(windowTarget, 'keydown', { code: 'Space' });
+  emit(windowTarget, 'keydown', { code: 'KeyE' });
+  for (let frame = 0; frame < 4; frame++) input.endFrame();
+  assert.equal(input.take('interact'), false, 'render actions still expire normally');
+  assert.equal(input.take('jump'), true, 'next slow-motion physics step receives jump');
+  input.endFrame();
+  assert.equal(input.take('jump'), false, 'consumed edge cannot repeat while held');
+  input.clear();
+  button(0, true);button(3, true);input.poll();
+  for (let frame = 0; frame < 4; frame++) { input.endFrame(); input.poll(); }
+  assert.equal(input.take('interact'), false);
+  assert.equal(input.take('jump'), true, 'gamepad A survives the same no-step frames');
+  input.endFrame();input.poll();assert.equal(input.take('jump'), false);
+  input.clear();assert.equal(input.take('jump'), false, 'overlay/reset clears buffered physics input');
+});
+
+test('jump buffering follows remapping and clear discards unconsumed jump edges', (t) => {
+  const { input, emit, windowTarget } = browserFixture(t);
+  input.rebind('jump', 'KeyJ');emit(windowTarget, 'keydown', { code: 'KeyJ' });input.endFrame();assert.equal(input.take('jump'), true);
+  emit(windowTarget, 'keyup', { code: 'KeyJ' });emit(windowTarget, 'keydown', { code: 'KeyJ' });input.endFrame();input.clear();assert.equal(input.take('jump'), false);
+});
+
+test('pointer buttons aim and fire before mouse compatibility events and release outside canvas', (t) => {
+  const { input, emit, canvas, windowTarget } = browserFixture(t);
+  emit(canvas, 'pointerdown', { button: 2, buttons: 2 });
+  assert.equal(input.aim, true, 'first RMB pointerdown is sufficient without mousedown');
+  assert.equal(input.mouseDown, false);
+  emit(windowTarget, 'pointerup', { button: 2, buttons: 0 });
+  assert.equal(input.aim, false);
+  emit(canvas, 'pointerdown', { button: 0, buttons: 1 });
+  assert.equal(input.mouseDown, true, 'first LMB pointerdown is sufficient without mousedown');
+  emit(windowTarget, 'pointerup', { button: 0, buttons: 0 });
+  assert.equal(input.mouseDown, false);
+  emit(canvas, 'pointerdown', { button: 0, buttons: 1 });
+  emit(canvas, 'mousedown', { button: 0 });
+  emit(windowTarget, 'pointerup', { button: 0, buttons: 0 });
+  emit(windowTarget, 'mouseup', { button: 0 });
+  assert.equal(input.mouseDown, false, 'duplicate compatibility events cannot leave a held flag');
+});
+
+test('pointer-only aim/fire chords and cancellation clear flags without clearing controller triggers', (t) => {
+  const { input, emit, canvas, windowTarget, button } = browserFixture(t);
+  emit(canvas, 'pointerdown', { button: 2, buttons: 2 });
+  emit(windowTarget, 'pointermove', { button: 0, buttons: 3 });
+  assert.equal(input.aim, true);assert.equal(input.mouseDown, true, 'second chord button arrives as pointermove');
+  emit(windowTarget, 'pointermove', { button: 0, buttons: 2 });
+  assert.equal(input.mouseDown, false);assert.equal(input.aim, true);
+  emit(windowTarget, 'pointercancel', { button: -1, buttons: 0 });
+  assert.equal(input.mouseDown, false);assert.equal(input.aim, false);
+  emit(canvas, 'pointerdown', { button: 0, buttons: 1 });input.clear();
+  emit(windowTarget, 'pointermove', { button: -1, buttons: 1 });assert.equal(input.mouseDown, false, 'overlay clear does not reactivate a held pointer');
+  button(7, true);input.poll();emit(windowTarget, 'pointercancel', { buttons: 0 });assert.equal(input.mouseDown, true, 'pointer cancellation leaves independent RT input intact');
 });

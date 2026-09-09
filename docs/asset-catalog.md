@@ -81,3 +81,9 @@ Numerical mass/friction/impact thresholds belong in data, with values identified
 5. Establish an audio sample library or document why procedural audio is retained; no copyrighted trailer soundtrack is included.
 6. Import OSM/USGS only with the metadata and attribution process in the atlas; no GIS source has yet been incorporated.
 7. Review source references at street, coast, interior and aerial viewpoints. Do not close visual defects solely because assets use a PBR shader.
+
+## Second checkpoint original assets
+
+New source-authored families include skinned-hand pistol/SMG/grenade geometry; patrol/SWAT labels, helmets, vest/radio/weapon overlays; fence/gate assemblies and separate colliding fragments; fire meshes and a local rain streak texture; bungalow side elevations/gables/meters, market frontage and a creative training annex. All are original procedural meshes/textures produced in this repository, with no imported Rockstar model or Google imagery. They retain the existing procedural art license/provenance category. Their stylized construction and approximate human/vehicle details do not meet final requested realistic art fidelity.
+
+Audio is newly authored procedural Web Audio synthesis: noise buffers, oscillators, filters and HRTF spatialization. No external samples, music or performer likeness recording is embedded. The initial CSS still requests Google Fonts at runtime; offline typography falls back to system faces. Modular licensed high-detail art, compressed textures, verified animation clips and recorded vehicle/ambient audio remain acquisition work.

@@ -12,7 +12,8 @@ export type Action =
   | "map"
   | "creative"
   | "repair"
-  | "horn";
+  | "horn"
+  | "melee";
 export const DEFAULT_BINDINGS: Readonly<Record<Action, string>> = {
   forward: "KeyW",
   back: "KeyS",
@@ -28,6 +29,7 @@ export const DEFAULT_BINDINGS: Readonly<Record<Action, string>> = {
   creative: "F2",
   repair: "KeyG",
   horn: "KeyH",
+  melee: "KeyF",
 };
 const ACTIONS = Object.keys(DEFAULT_BINDINGS) as Action[];
 const STORAGE_KEY = "leonida.controls";
@@ -170,22 +172,32 @@ export class Input {
       },
       options,
     );
-    canvas.addEventListener(
-      "mousedown",
-      (e) => {
-        if (e.button === 0) this.mouseFire = true;
-        if (e.button === 2) this.mouseAim = true;
-      },
-      options,
-    );
-    window.addEventListener(
-      "mouseup",
-      (e) => {
-        if (e.button === 0) this.mouseFire = false;
-        if (e.button === 2) this.mouseAim = false;
-      },
-      options,
-    );
+    const pressMouseButton = (e: MouseEvent) => {
+      if (e.button === 0) this.mouseFire = true;
+      if (e.button === 2) this.mouseAim = true;
+    };
+    const releaseMouseButton = (e: MouseEvent) => {
+      if (e.button === 0) this.mouseFire = false;
+      if (e.button === 2) this.mouseAim = false;
+    };
+    // Babylon may cancel pointerdown and thereby suppress compatibility mouse
+    // events before pointer lock. Both paths safely write the same held flags.
+    canvas.addEventListener("pointerdown", pressMouseButton, options);
+    canvas.addEventListener("mousedown", pressMouseButton, options);
+    window.addEventListener("pointerup", releaseMouseButton, options);
+    window.addEventListener("mouseup", releaseMouseButton, options);
+    window.addEventListener("pointercancel", () => {
+      this.mouseFire = false;
+      this.mouseAim = false;
+    }, options);
+    window.addEventListener("pointermove", (e) => {
+      // Additional mouse-button chords use pointermove, rather than another
+      // pointerdown. This preserves RMB aim + LMB fire without mouse fallback.
+      if (this.mouseFire || this.mouseAim) {
+        this.mouseFire = (e.buttons & 1) !== 0;
+        this.mouseAim = (e.buttons & 2) !== 0;
+      }
+    }, options);
     canvas.addEventListener("contextmenu", (e) => e.preventDefault(), options);
     window.addEventListener(
       "mousemove",
@@ -336,8 +348,15 @@ export class Input {
     this.blockedButtons.clear();
   }
   endFrame() {
+    // Jump is consumed by fixed-step locomotion. A render frame may contain no
+    // physics step, especially on high-refresh displays or in slow motion.
+    const jumpKey = this.bindings.jump;
+    const keyboardJump = this.pressed.has(jumpKey);
+    const padJump = this.padPressed.has("jump");
     this.pressed.clear();
     this.padPressed.clear();
+    if (keyboardJump) this.pressed.add(jumpKey);
+    if (padJump) this.padPressed.add("jump");
     this.padRawPressed.clear();
     this.dx = 0;
     this.dy = 0;

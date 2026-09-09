@@ -1,0 +1,4250 @@
+{
+  "method": "Normal UI and keyboard/mouse, including canvas click to capture pointer. ?test enables read-only state inspection; no gameplay state mutations. Concurrent GPU testing, no performance gate.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-alOigFSS.js",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "level2-threat-start",
+      "wallTime": "2026-09-09T12:05:03.183Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 4.266666666666657,
+      "meshes": 2038,
+      "activeMeshes": 490,
+      "physicsBodies": 260,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1068,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1378,
+        "meshDisposals": 310,
+        "colliderLoads": 225,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.91611743701668,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -74.85000304904466,
+            -0.22930159134514327,
+            -83.86153886378787
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 4.0128335952758825,
+          "occupied": false,
+          "position": [
+            -75.30000305175781,
+            0.6687510013580322,
+            -83.82975006103516
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level2-threat-5s",
+      "wallTime": "2026-09-09T12:05:08.395Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 9.483333333333384,
+      "meshes": 2112,
+      "activeMeshes": 499,
+      "physicsBodies": 261,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1084,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1394,
+        "meshDisposals": 310,
+        "colliderLoads": 231,
+        "colliderDisposals": 6,
+        "pendingMeshes": 0,
+        "activeAnchors": 9,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 7,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.024009605988965,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -65.10856636922858,
+            -0.22368329949772403,
+            -143.685737587984
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-2",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -74.8500030444313,
+            -0.19969139837000183,
+            -95.92182660806822
+          ],
+          "vehicleId": "vehicle-17",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 10.831072718038298,
+          "occupied": false,
+          "position": [
+            -65.27472686767578,
+            0.6358267664909363,
+            -144.10946655273438
+          ]
+        },
+        {
+          "id": "vehicle-17",
+          "kind": "police",
+          "speed": 10.824992179870634,
+          "occupied": false,
+          "position": [
+            -75.30000305175781,
+            0.698266863822937,
+            -96.00347137451172
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level2-threat-10s",
+      "wallTime": "2026-09-09T12:05:13.399Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "search",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 14.483333333333633,
+      "meshes": 2141,
+      "activeMeshes": 500,
+      "physicsBodies": 290,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1095,
+        "totalColliders": 249,
+        "residentColliders": 243,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1408,
+        "meshDisposals": 313,
+        "colliderLoads": 249,
+        "colliderDisposals": 6,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.892194053559386,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            2.6064999020071244,
+            -0.24254006792378513,
+            -136.30806086820138
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-2",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -49.37873163326492,
+            -0.18334450539932956,
+            -145.78300374355786
+          ],
+          "vehicleId": "vehicle-17",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 8.60782081738934,
+          "occupied": false,
+          "position": [
+            3.026902198791504,
+            0.620873212814331,
+            -136.46304321289062
+          ]
+        },
+        {
+          "id": "vehicle-17",
+          "kind": "police",
+          "speed": 14.133862637406557,
+          "occupied": false,
+          "position": [
+            -49.24953079223633,
+            0.7131488919258118,
+            -146.23477172851562
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level2-threat-15s",
+      "wallTime": "2026-09-09T12:05:18.404Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.3,
+          "z": -28
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 19.48333333333351,
+      "meshes": 2126,
+      "activeMeshes": 500,
+      "physicsBodies": 277,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1082,
+        "totalColliders": 249,
+        "residentColliders": 241,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1410,
+        "meshDisposals": 328,
+        "colliderLoads": 251,
+        "colliderDisposals": 10,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 7,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.09615384758885,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            2.85731975926222,
+            -0.23102260271435693,
+            -53.881247995895784
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-2",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            3.463672278510053,
+            -0.18634097793632942,
+            -121.57248100079809
+          ],
+          "vehicleId": "vehicle-17",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 21.044212912297727,
+          "occupied": false,
+          "position": [
+            3.307262420654297,
+            0.6685522198677063,
+            -53.630577087402344
+          ]
+        },
+        {
+          "id": "vehicle-17",
+          "kind": "police",
+          "speed": 13.461128016078709,
+          "occupied": false,
+          "position": [
+            3.9105308055877686,
+            0.7101978063583374,
+            -121.4368667602539
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level2-threat-20s",
+      "wallTime": "2026-09-09T12:05:23.412Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.299975720466684,
+        1.02077801193041,
+        -27.99186641811495
+      ],
+      "character": "Jason",
+      "health": 91,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.299975720466684,
+          "z": -27.99186641811495
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 2,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 4,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 24.46666666666656,
+      "meshes": 2146,
+      "activeMeshes": 502,
+      "physicsBodies": 288,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1093,
+        "totalColliders": 249,
+        "residentColliders": 245,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1423,
+        "meshDisposals": 330,
+        "colliderLoads": 255,
+        "colliderDisposals": 10,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 7,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.916117437016595,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            0.8006463874813359,
+            0.1273749999999999,
+            -30.856789564308933
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-2",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            0.8014180155265951,
+            0.1273749999999999,
+            -35.75319456358525
+          ],
+          "vehicleId": "vehicle-17",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 0.02762956537451862,
+          "occupied": false,
+          "position": [
+            3.30239200592041,
+            0.6865910887718201,
+            -30.783456802368164
+          ]
+        },
+        {
+          "id": "vehicle-17",
+          "kind": "police",
+          "speed": 0.27603607707853317,
+          "occupied": false,
+          "position": [
+            3.305424213409424,
+            0.6163884401321411,
+            -35.92318344116211
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level2-threat-25s",
+      "wallTime": "2026-09-09T12:05:28.593Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        1.0320690388326337,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 79.75,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 2,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 4,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 29.649999999999597,
+      "meshes": 2150,
+      "activeMeshes": 472,
+      "physicsBodies": 288,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1097,
+        "totalColliders": 249,
+        "residentColliders": 245,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1428,
+        "meshDisposals": 331,
+        "colliderLoads": 256,
+        "colliderDisposals": 11,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.096153844001094,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "firing",
+          "health": 100,
+          "position": [
+            0.8006463874813359,
+            0.1273749999999999,
+            -30.856789564308933
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0.065
+        },
+        {
+          "id": "officer-2",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            0.8014180155265951,
+            0.1273749999999999,
+            -35.75319456358525
+          ],
+          "vehicleId": "vehicle-17",
+          "flashTime": 0.031666666666666676
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 0.00003977288537407859,
+          "occupied": false,
+          "position": [
+            3.3026015758514404,
+            0.6509248614311218,
+            -30.78894805908203
+          ]
+        },
+        {
+          "id": "vehicle-17",
+          "kind": "police",
+          "speed": 0.0005443002631389727,
+          "occupied": false,
+          "position": [
+            3.3086423873901367,
+            0.6513971090316772,
+            -35.92804718017578
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level2-threat-30s",
+      "wallTime": "2026-09-09T12:05:33.778Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        1.0434070720233357,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 70.75,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 2,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 6,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 34.83333333333264,
+      "meshes": 2109,
+      "activeMeshes": 470,
+      "physicsBodies": 265,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1079,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1429,
+        "meshDisposals": 350,
+        "colliderLoads": 256,
+        "colliderDisposals": 31,
+        "pendingMeshes": 0,
+        "activeAnchors": 9,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.072086503087625,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            0.8006463874813359,
+            0.1273749999999999,
+            -30.856789564308933
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-2",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            0.8014180155265951,
+            0.1273749999999999,
+            -35.75319456358525
+          ],
+          "vehicleId": "vehicle-17",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 0.00000852705303639741,
+          "occupied": false,
+          "position": [
+            3.3027029037475586,
+            0.651501476764679,
+            -30.789154052734375
+          ]
+        },
+        {
+          "id": "vehicle-17",
+          "kind": "police",
+          "speed": 0.0004409733960681086,
+          "occupied": false,
+          "position": [
+            3.3079864978790283,
+            0.6513896584510803,
+            -35.929176330566406
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level2-threat-35s",
+      "wallTime": "2026-09-09T12:05:38.963Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 59.5,
+      "vehicle": null,
+      "wanted": {
+        "stars": 2,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 14,
+        "peds": 30,
+        "police": {
+          "officers": 2,
+          "activeFoot": 2,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 6,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 40.01666666666568,
+      "meshes": 2057,
+      "activeMeshes": 469,
+      "physicsBodies": 249,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1043,
+        "totalColliders": 249,
+        "residentColliders": 209,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1430,
+        "meshDisposals": 387,
+        "colliderLoads": 256,
+        "colliderDisposals": 47,
+        "pendingMeshes": 0,
+        "activeAnchors": 4,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.98800239666033,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-1",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            0.8006463874813359,
+            0.1273749999999999,
+            -30.856789564308933
+          ],
+          "vehicleId": "vehicle-16",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-2",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            0.8014180155265951,
+            0.1273749999999999,
+            -35.75319456358525
+          ],
+          "vehicleId": "vehicle-17",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-16",
+          "kind": "police",
+          "speed": 1.6413998998820162e-9,
+          "occupied": false,
+          "position": [
+            3.3027029037475586,
+            0.6514961123466492,
+            -30.789154052734375
+          ]
+        },
+        {
+          "id": "vehicle-17",
+          "kind": "police",
+          "speed": 0.0004270937252594768,
+          "occupied": false,
+          "position": [
+            3.3076670169830322,
+            0.6513841152191162,
+            -35.930233001708984
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-start",
+      "wallTime": "2026-09-09T12:05:40.292Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 13,
+        "peds": 30,
+        "police": {
+          "officers": 1,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 6,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 41.349999999998936,
+      "meshes": 2073,
+      "activeMeshes": 448,
+      "physicsBodies": 272,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1091,
+        "totalColliders": 249,
+        "residentColliders": 237,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1478,
+        "meshDisposals": 387,
+        "colliderLoads": 284,
+        "colliderDisposals": 47,
+        "pendingMeshes": 0,
+        "activeAnchors": 13,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.21678041091509,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -2.8500004948476496,
+            -0.22971865620722287,
+            -135.79462944734306
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 3.936950683594027,
+          "occupied": false,
+          "position": [
+            -3.3000004291534424,
+            0.6683624386787415,
+            -135.76156616210938
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-5s",
+      "wallTime": "2026-09-09T12:05:45.492Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 15,
+        "peds": 30,
+        "police": {
+          "officers": 3,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 6,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 46.54999999999864,
+      "meshes": 2194,
+      "activeMeshes": 498,
+      "physicsBodies": 276,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1094,
+        "totalColliders": 249,
+        "residentColliders": 239,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1481,
+        "meshDisposals": 387,
+        "colliderLoads": 286,
+        "colliderDisposals": 47,
+        "pendingMeshes": 0,
+        "activeAnchors": 13,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 6,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.00000000000006,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -4.199711900138616,
+            -0.27050198698047734,
+            -208.7419251114745
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -58.61585024027253,
+            -0.1876745125373247,
+            -74.85000302093233
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            69.14999694911306,
+            -0.265467587928526,
+            61.49576838340194
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 19.72086390618343,
+          "occupied": false,
+          "position": [
+            -4.6720476150512695,
+            0.66927570104599,
+            -208.83035278320312
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 13.742877006530822,
+          "occupied": false,
+          "position": [
+            -58.485626220703125,
+            0.7102873921394348,
+            -75.30000305175781
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 1.9275200366973881,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6347166895866394,
+            61.56230926513672
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-10s",
+      "wallTime": "2026-09-09T12:05:50.496Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 16,
+        "peds": 30,
+        "police": {
+          "officers": 5,
+          "activeFoot": 0,
+          "swat": 2,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 6,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 51.549999999998356,
+      "meshes": 2231,
+      "activeMeshes": 453,
+      "physicsBodies": 267,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 32,
+        "totalMeshes": 1211,
+        "residentMeshes": 1071,
+        "totalColliders": 249,
+        "residentColliders": 229,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1505,
+        "meshDisposals": 434,
+        "colliderLoads": 311,
+        "colliderDisposals": 82,
+        "pendingMeshes": 0,
+        "activeAnchors": 16,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 7,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.99999999999999,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -54.259758046648074,
+            -0.17855394705243866,
+            -215.6999736191102
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            5.036853247661952,
+            -0.16977544454771543,
+            -56.20255828400022
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            69.14999694654092,
+            -0.16440690409712544,
+            0.501060402828605
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            -74.85000304422017,
+            -0.19746711977338305,
+            -97.40540829921004
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            -75.75000304422018,
+            -0.197467121773085,
+            -97.40540836711331
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 17.66296397034345,
+          "occupied": false,
+          "position": [
+            -54.30024719238281,
+            0.7245609164237976,
+            -215.20901489257812
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 10.559212650730789,
+          "occupied": false,
+          "position": [
+            5.4813408851623535,
+            0.7092791795730591,
+            -56.10585021972656
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 20.788311004638707,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.7336358428001404,
+            0.2535831928253174
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 11.349021911621124,
+          "occupied": false,
+          "position": [
+            -75.30000305175781,
+            0.7004908323287964,
+            -97.49578094482422
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-15s",
+      "wallTime": "2026-09-09T12:05:55.510Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 18,
+        "peds": 30,
+        "police": {
+          "officers": 8,
+          "activeFoot": 2,
+          "swat": 4,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 7,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 56.56666666666474,
+      "meshes": 2378,
+      "activeMeshes": 574,
+      "physicsBodies": 274,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 32,
+        "totalMeshes": 1211,
+        "residentMeshes": 1086,
+        "totalColliders": 249,
+        "residentColliders": 231,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1520,
+        "meshDisposals": 434,
+        "colliderLoads": 313,
+        "colliderDisposals": 82,
+        "pendingMeshes": 0,
+        "activeAnchors": 15,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.988002400235,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -69.34862539172441,
+            -0.14692580232034136,
+            -151.59435574506577
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.6124528299612049,
+            0.1273749999999999,
+            -36.815043738564896
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            59.18137963663476,
+            -0.1431432181919412,
+            -93.8148955288442
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            -47.19985850419786,
+            -0.18465455428900124,
+            -145.8164342620926
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            -47.219410936500694,
+            -0.18256838510051177,
+            -146.71621943105745
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            -32.79420338721322,
+            -0.16933421020797357,
+            -74.84999538738796
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            -32.794203071356215,
+            -0.16933425733437546,
+            -75.74999538738791
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            193.96666666666795
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 20.11735524377767,
+          "occupied": false,
+          "position": [
+            -68.89226531982422,
+            0.734390139579773,
+            -151.36720275878906
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 6.711713875066957e-10,
+          "occupied": false,
+          "position": [
+            3.9821979999542236,
+            0.6514961123466492,
+            -37.02894973754883
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 5.724504171820613,
+          "occupied": false,
+          "position": [
+            58.731754302978516,
+            0.7669753432273865,
+            -93.81035614013672
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 14.67634921957137,
+          "occupied": false,
+          "position": [
+            -47.063899993896484,
+            0.7142831683158875,
+            -146.26910400390625
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 18.98524856567407,
+          "occupied": false,
+          "position": [
+            -32.57672882080078,
+            0.7286757230758667,
+            -75.29999542236328
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 2.626042946447306e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514949798583984,
+            206
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-20s",
+      "wallTime": "2026-09-09T12:06:00.712Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 3,
+          "swat": 4,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 10,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 61.43333333333113,
+      "meshes": 2452,
+      "activeMeshes": 716,
+      "physicsBodies": 280,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 32,
+        "totalMeshes": 1211,
+        "residentMeshes": 1072,
+        "totalColliders": 249,
+        "residentColliders": 232,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1560,
+        "meshDisposals": 488,
+        "colliderLoads": 353,
+        "colliderDisposals": 121,
+        "pendingMeshes": 0,
+        "activeAnchors": 17,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 2,
+        "state": "running"
+      },
+      "fps": 59.99999999999986,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -52.46968802388917,
+            -0.22014154409546938,
+            -50.877089385964055
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.6124528299612049,
+            0.1273749999999999,
+            -36.815043738564896
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0.031666666666666676
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            59.18467456887577,
+            -0.1427039751668513,
+            -118.39383167220646
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            3.46287914645201,
+            -0.18674644224282477,
+            -121.3668150729205
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            4.3626538587149275,
+            -0.18849023992093683,
+            -121.34675450608299
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            3.8446003927247294,
+            -0.2808651135215052,
+            -41.262365215918855
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "riding",
+          "health": 150,
+          "position": [
+            4.742415512144628,
+            -0.27956060064127275,
+            -41.19970494471631
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            172.5533333333375
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -130.64747035966,
+            0.1316167865310246,
+            147.99551770809705
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -69.11419223516748,
+            -0.05250257476305609,
+            62.82350157491431
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 11.062292454907078,
+          "occupied": false,
+          "position": [
+            -52.174808502197266,
+            0.7191010117530823,
+            -51.225608825683594
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 3.4489427723431096,
+          "occupied": false,
+          "position": [
+            3.9179654121398926,
+            0.6415538787841797,
+            -36.165809631347656
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 4.509307654982283,
+          "occupied": false,
+          "position": [
+            58.734954833984375,
+            0.7721772193908691,
+            -118.36898803710938
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 13.508637627566182,
+          "occupied": false,
+          "position": [
+            3.90974497795105,
+            0.7102184891700745,
+            -121.2304916381836
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 2.477164400361883,
+          "occupied": false,
+          "position": [
+            4.2973785400390625,
+            0.6234895586967468,
+            -41.29166030883789
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 3.088568141526606e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 4.986908387520511e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 0.000513131210964636,
+          "occupied": true,
+          "position": [
+            -68.7008285522461,
+            0.8470838069915771,
+            62.00395202636719
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-25s",
+      "wallTime": "2026-09-09T12:06:05.717Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 7,
+          "swat": 4,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 15,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 66.43333333333085,
+      "meshes": 2484,
+      "activeMeshes": 722,
+      "physicsBodies": 293,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 32,
+        "totalMeshes": 1211,
+        "residentMeshes": 1095,
+        "totalColliders": 249,
+        "residentColliders": 237,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1583,
+        "meshDisposals": 488,
+        "colliderLoads": 358,
+        "colliderDisposals": 121,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.988002400234905,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -45.03264278152596,
+            -0.14184862861468217,
+            -50.473484519577475
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.5868076214689106,
+            0.1273749999999999,
+            -36.801772303838064
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            43.272078309801785,
+            -0.14343857545212835,
+            -124.46321338653006
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            0.7387699920367121,
+            0.1273749999999999,
+            -39.7190790433089
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "pursuit",
+          "health": 150,
+          "position": [
+            4.715091164396449,
+            0.12701599766972038,
+            -41.60867510364521
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            2.3756473862204306,
+            0.1273749999999999,
+            -36.866728105941725
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0.04833333333333334
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            5.605210470913728,
+            0.12737502682746704,
+            -36.609530098670724
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0.04833333333333334
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            150.55333333334045
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -132.7922537544679,
+            0.1316167865310246,
+            147.3014329101039
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -67.71941405493743,
+            12.449468202372413,
+            61.651292463026195
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 0.12249826688847032,
+          "occupied": false,
+          "position": [
+            -45.08088302612305,
+            0.7605138421058655,
+            -50.93380355834961
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 0.04400821769320032,
+          "occupied": false,
+          "position": [
+            3.643070936203003,
+            0.6496632099151611,
+            -31.60550308227539
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 0.6819976008294119,
+          "occupied": false,
+          "position": [
+            43.582584381103516,
+            0.7648559808731079,
+            -124.12913513183594
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 0.08259275409651581,
+          "occupied": false,
+          "position": [
+            2.543246030807495,
+            0.6496835350990295,
+            -42.340782165527344
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 0.041446143044875684,
+          "occupied": false,
+          "position": [
+            4.268367290496826,
+            0.6573148369789124,
+            -36.54248809814453
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 4.353906502691532e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 4.082773444968976e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 0.03523566277283289,
+          "occupied": true,
+          "position": [
+            -68.6073989868164,
+            13.416742324829102,
+            61.88227081298828
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-30s",
+      "wallTime": "2026-09-09T12:06:10.728Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 7,
+          "swat": 4,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 16,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 71.44999999999723,
+      "meshes": 2494,
+      "activeMeshes": 691,
+      "physicsBodies": 294,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 32,
+        "totalMeshes": 1211,
+        "residentMeshes": 1104,
+        "totalColliders": 249,
+        "residentColliders": 240,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1608,
+        "meshDisposals": 504,
+        "colliderLoads": 389,
+        "colliderDisposals": 149,
+        "pendingMeshes": 0,
+        "activeAnchors": 13,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 1,
+        "state": "running"
+      },
+      "fps": 59.99999999999973,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -44.86429887108303,
+            -0.1380753227001782,
+            -51.07945548283497
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.5868076214689106,
+            0.1273749999999999,
+            -36.801772303838064
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            36.09540179178866,
+            -0.1324945985217887,
+            -122.25978874909094
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            0.836537993027214,
+            0.1273749999999999,
+            -36.59107589837266
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            4.44536823218671,
+            1.7150336288165007,
+            -36.86370432120609
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            2.3756473862204306,
+            0.1273749999999999,
+            -36.866728105941725
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            5.605210470913728,
+            0.12737539920418472,
+            -36.609530098670724
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            128.92000000001002
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -130.6655868545555,
+            0.1316167865310246,
+            147.30001075606629
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -66.37658680288882,
+            33.3726707450327,
+            59.68233642547409
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 0.1442455359330786,
+          "occupied": false,
+          "position": [
+            -44.8126335144043,
+            0.7625131011009216,
+            -51.53968811035156
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 2.1286229436894515e-8,
+          "occupied": false,
+          "position": [
+            3.644576072692871,
+            0.651496171951294,
+            -31.625259399414062
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 2.9652715348788585,
+          "occupied": false,
+          "position": [
+            36.43013381958008,
+            0.7808060050010681,
+            -121.90840911865234
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 5.715920594469186e-9,
+          "occupied": false,
+          "position": [
+            2.543048620223999,
+            0.6514961123466492,
+            -42.35445785522461
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 0.001108338560519783,
+          "occupied": false,
+          "position": [
+            4.271852016448975,
+            0.6468378901481628,
+            -36.56351852416992
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 2.453954200604673e-10,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 2.42678331435506e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 2.4619615302459343,
+          "occupied": true,
+          "position": [
+            -67.19255065917969,
+            34.47931671142578,
+            59.98998260498047
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-35s",
+      "wallTime": "2026-09-09T12:06:15.928Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 7,
+          "swat": 4,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 16,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 76.64999999999694,
+      "meshes": 2495,
+      "activeMeshes": 693,
+      "physicsBodies": 284,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1115,
+        "totalColliders": 249,
+        "residentColliders": 233,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1620,
+        "meshDisposals": 505,
+        "colliderLoads": 395,
+        "colliderDisposals": 162,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.98800239666001,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -44.49301511913493,
+            -0.1365277855233673,
+            -51.690449271772906
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.5868076214689106,
+            0.1273749999999999,
+            -36.801772303838064
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            34.38412693389199,
+            -0.11304081079289807,
+            -105.46977658918544
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            0.836537993027214,
+            0.1273749999999999,
+            -36.59107589837266
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            4.44536823218671,
+            1.7150336288165007,
+            -36.86370432120609
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            2.3756473862204306,
+            0.1273749999999999,
+            -36.866728105941725
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            5.605210470913728,
+            0.12737578518935389,
+            -36.609530098670724
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            132.0000000000096
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -132.13225352120924,
+            0.1316167865310246,
+            147.3000000193362
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -51.46504546188899,
+            54.508126688657356,
+            40.84693967408515
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 0.1651301711844448,
+          "occupied": false,
+          "position": [
+            -44.32802963256836,
+            0.7630242705345154,
+            -52.12346267700195
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 1.6326928440916216e-8,
+          "occupied": false,
+          "position": [
+            3.644576072692871,
+            0.6514961123466492,
+            -31.625259399414062
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 4.011518867592835,
+          "occupied": false,
+          "position": [
+            34.83390808105469,
+            0.7717891335487366,
+            -105.5025863647461
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 1.006445344238446e-8,
+          "occupied": false,
+          "position": [
+            2.543048620223999,
+            0.6514961123466492,
+            -42.35445785522461
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 0.0005195009408884648,
+          "occupied": false,
+          "position": [
+            4.272268295288086,
+            0.6471680402755737,
+            -36.56649398803711
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 2.239086470441499e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 2.245041382134714e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 5.854982185037805,
+          "occupied": true,
+          "position": [
+            -52.25068664550781,
+            55.577091217041016,
+            41.10552978515625
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-40s",
+      "wallTime": "2026-09-09T12:06:20.933Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 7,
+          "swat": 4,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 16,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 81.64999999999665,
+      "meshes": 2498,
+      "activeMeshes": 694,
+      "physicsBodies": 293,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1109,
+        "totalColliders": 249,
+        "residentColliders": 242,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1665,
+        "meshDisposals": 556,
+        "colliderLoads": 455,
+        "colliderDisposals": 213,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.01200239976436,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -43.90720649836568,
+            -0.13892513360667358,
+            -52.1852287431733
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.5868076214689106,
+            0.1273749999999999,
+            -36.801772303838064
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            23.272649553256787,
+            -0.09045370876559322,
+            -81.792072646451
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            0.836537993027214,
+            0.1273749999999999,
+            -36.59107589837266
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            4.44536823218671,
+            1.7150336288165007,
+            -36.86370432120609
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            2.3756473862204306,
+            0.1273749999999999,
+            -36.866728105941725
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            5.605210470913728,
+            0.12737615632893962,
+            -36.609530098670724
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            129.8000000000099
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -131.61679945202178,
+            0.1316167865310246,
+            147.3068149603377
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -32.50053577153709,
+            57.26170319089828,
+            17.17126247699426
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 0.16570106195785722,
+          "occupied": false,
+          "position": [
+            -43.616764068603516,
+            0.7610164284706116,
+            -52.54631423950195
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 1.1389814665681633e-8,
+          "occupied": false,
+          "position": [
+            3.64457631111145,
+            0.651496171951294,
+            -31.625259399414062
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 11.73839858724695,
+          "occupied": false,
+          "position": [
+            23.509662628173828,
+            0.8068289160728455,
+            -81.3975601196289
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 3.1773115789649188e-9,
+          "occupied": false,
+          "position": [
+            2.543048620223999,
+            0.6514961123466492,
+            -42.35445785522461
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 0.0005149529353226678,
+          "occupied": false,
+          "position": [
+            4.272675037384033,
+            0.6471680402755737,
+            -36.56924057006836
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 2.7575412199402375e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 3.158804091192365e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 6.332623841234934,
+          "occupied": true,
+          "position": [
+            -33.28144454956055,
+            58.27055358886719,
+            17.423452377319336
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-threat-45s",
+      "wallTime": "2026-09-09T12:06:25.945Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 8,
+          "swat": 4,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 18,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 86.66666666666303,
+      "meshes": 2497,
+      "activeMeshes": 656,
+      "physicsBodies": 298,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1104,
+        "totalColliders": 249,
+        "residentColliders": 242,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1665,
+        "meshDisposals": 561,
+        "colliderLoads": 456,
+        "colliderDisposals": 214,
+        "pendingMeshes": 0,
+        "activeAnchors": 9,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.9999999999998,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -43.13393890722951,
+            -0.13711420156270815,
+            -52.5040171494034
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.5868076214689106,
+            0.1273749999999999,
+            -36.801772303838064
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -0.02472476963150146,
+            0.06651924752894556,
+            -43.138610494225894
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            0.836537993027214,
+            0.1273749999999999,
+            -36.59107589837266
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            4.44536823218671,
+            1.7150336288165007,
+            -36.86370432120609
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            2.3756473862204306,
+            0.1273749999999999,
+            -36.866728105941725
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            5.605245471606015,
+            0.12737687242699314,
+            -36.60952489617895
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            131.92666666667628
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -132.13012618974653,
+            0.1316167865310246,
+            147.300016152973
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -12.134784225416174,
+            57.06794294045119,
+            -8.15847475075276
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 0.189201691811173,
+          "occupied": false,
+          "position": [
+            -42.75005340576172,
+            0.7616893649101257,
+            -52.7640495300293
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 0.00004492724515451444,
+          "occupied": false,
+          "position": [
+            3.617488145828247,
+            0.6515013575553894,
+            -31.55306053161621
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 0.00006073627230658184,
+          "occupied": false,
+          "position": [
+            2.6138460636138916,
+            0.6514711976051331,
+            -46.42240905761719
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 0.0011658390187897594,
+          "occupied": false,
+          "position": [
+            2.3950984477996826,
+            0.6512690186500549,
+            -41.20610427856445
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 0.0011504093900934515,
+          "occupied": false,
+          "position": [
+            4.255744934082031,
+            0.6471501588821411,
+            -36.48354721069336
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 3.335562907801265e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 4.370197348523697e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 5.804401330333656,
+          "occupied": true,
+          "position": [
+            -12.92691421508789,
+            57.96501159667969,
+            -7.893406391143799
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-fire",
+      "wallTime": "2026-09-09T12:06:26.550Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 8,
+          "swat": 4,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 18,
+      "shots": 2,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 87.266666666663,
+      "meshes": 2472,
+      "activeMeshes": 657,
+      "physicsBodies": 289,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1087,
+        "totalColliders": 249,
+        "residentColliders": 231,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1665,
+        "meshDisposals": 578,
+        "colliderLoads": 456,
+        "colliderDisposals": 225,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 1,
+        "state": "running"
+      },
+      "fps": 59.28853754940689,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -43.03051066766405,
+            -0.13722938837735665,
+            -52.52246505464629
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.5868076214689106,
+            0.1273749999999999,
+            -36.801772303838064
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            0.3051310172230303,
+            0.08139084154343013,
+            -40.73871391753624
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            0.836537993027214,
+            0.1273749999999999,
+            -36.59107589837266
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            4.44536823218671,
+            1.7150336288165007,
+            -36.86370432120609
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            2.3756473862204306,
+            0.1273749999999999,
+            -36.866728105941725
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            5.605245579141093,
+            0.12737709025350996,
+            -36.609524879778746
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            129.28666666667664
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -129.93012618974547,
+            0.1316167865310246,
+            147.30001458480635
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -10.102527675321426,
+            57.14254944611138,
+            -10.683290327805533
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 0.1895051048983553,
+          "occupied": false,
+          "position": [
+            -42.635948181152344,
+            0.7615974545478821,
+            -52.76598358154297
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 0.000002090364572737212,
+          "occupied": false,
+          "position": [
+            3.6174957752227783,
+            0.6514961123466492,
+            -31.55305290222168
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 0.0000024421019898371597,
+          "occupied": false,
+          "position": [
+            2.6138522624969482,
+            0.6514971852302551,
+            -46.42238998413086
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 0.0002769439905314521,
+          "occupied": false,
+          "position": [
+            2.39571213722229,
+            0.6513053178787231,
+            -41.20703887939453
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 0.0007176967438770361,
+          "occupied": false,
+          "position": [
+            4.255810737609863,
+            0.647165060043335,
+            -36.48405456542969
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 2.4943502182561473e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 2.565515268710404e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 5.016838066825402,
+          "occupied": true,
+          "position": [
+            -10.90268611907959,
+            58.02056884765625,
+            -10.408446311950684
+          ]
+        }
+      ],
+      "outcome": ""
+    },
+    {
+      "label": "level5-air-view",
+      "wallTime": "2026-09-09T12:06:27.661Z",
+      "backend": "WebGL2",
+      "fallbackReason": "",
+      "position": [
+        3.2999671851883527,
+        0.9005317581089142,
+        -27.98888447181739
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 5,
+        "phase": "pursuit",
+        "lastKnown": {
+          "x": 3.2999671851883527,
+          "z": -27.98888447181739
+        }
+      },
+      "population": {
+        "traffic": 20,
+        "peds": 30,
+        "police": {
+          "officers": 10,
+          "activeFoot": 8,
+          "swat": 4,
+          "resisting": true,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 18,
+      "shots": 2,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 88.3833333333296,
+      "meshes": 2471,
+      "activeMeshes": 488,
+      "physicsBodies": 289,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1211,
+        "residentMeshes": 1087,
+        "totalColliders": 249,
+        "residentColliders": 231,
+        "cpuGeometryBytes": 58206120,
+        "meshLoads": 1665,
+        "meshDisposals": 578,
+        "colliderLoads": 456,
+        "colliderDisposals": 225,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.9999999999998,
+      "resolution": [
+        1600,
+        900
+      ],
+      "quality": "high",
+      "errors": [],
+      "aim": true,
+      "inputAim": true,
+      "inputFire": false,
+      "officers": [
+        {
+          "id": "officer-3",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -42.839634678293756,
+            -0.13582958655026955,
+            -52.548925438172965
+          ],
+          "vehicleId": "vehicle-18",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-4",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.5868076214689106,
+            0.1273749999999999,
+            -36.801772303838064
+          ],
+          "vehicleId": "vehicle-19",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-5",
+          "role": "patrol",
+          "state": "challenge",
+          "health": 100,
+          "position": [
+            1.047251297398729,
+            0.109451091908919,
+            -37.301401100989054
+          ],
+          "vehicleId": "vehicle-20",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-6",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            0.836537993027214,
+            0.1273749999999999,
+            -36.59107589837266
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-7",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            4.44536823218671,
+            1.7150336288165007,
+            -36.86370432120609
+          ],
+          "vehicleId": "vehicle-21",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-8",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            2.3756473862204306,
+            0.1273749999999999,
+            -36.866728105941725
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-9",
+          "role": "swat",
+          "state": "challenge",
+          "health": 150,
+          "position": [
+            5.605245597309077,
+            0.12737749565286072,
+            -36.60952487700767
+          ],
+          "vehicleId": "vehicle-22",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-10",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            68.7,
+            0.13402499999999995,
+            132.8800000000095
+          ],
+          "vehicleId": "vehicle-23",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-11",
+          "role": "patrol",
+          "state": "pursuit",
+          "health": 100,
+          "position": [
+            -132.4967928563923,
+            0.1316167865310246,
+            147.3000025018349
+          ],
+          "vehicleId": "vehicle-24",
+          "flashTime": 0
+        },
+        {
+          "id": "officer-12",
+          "role": "patrol",
+          "state": "riding",
+          "health": 100,
+          "position": [
+            -7.069133059811036,
+            57.220730946997634,
+            -14.452000650918546
+          ],
+          "vehicleId": "vehicle-25",
+          "flashTime": 0
+        }
+      ],
+      "responseVehicles": [
+        {
+          "id": "vehicle-18",
+          "kind": "police",
+          "speed": 0.147654627660887,
+          "occupied": false,
+          "position": [
+            -42.42939376831055,
+            0.7619816064834595,
+            -52.763893127441406
+          ]
+        },
+        {
+          "id": "vehicle-19",
+          "kind": "police",
+          "speed": 9.34619711637657e-9,
+          "occupied": false,
+          "position": [
+            3.6174962520599365,
+            0.6514961123466492,
+            -31.55305290222168
+          ]
+        },
+        {
+          "id": "vehicle-20",
+          "kind": "police",
+          "speed": 6.3589546985356245e-9,
+          "occupied": false,
+          "position": [
+            2.6138527393341064,
+            0.6514961123466492,
+            -46.42238998413086
+          ]
+        },
+        {
+          "id": "vehicle-21",
+          "kind": "police",
+          "speed": 0.0003155952001588514,
+          "occupied": false,
+          "position": [
+            2.3956491947174072,
+            0.6512959599494934,
+            -41.2072639465332
+          ]
+        },
+        {
+          "id": "vehicle-22",
+          "kind": "police",
+          "speed": 0.0004181329367009273,
+          "occupied": false,
+          "position": [
+            4.2559099197387695,
+            0.6471580266952515,
+            -36.48468017578125
+          ]
+        },
+        {
+          "id": "vehicle-23",
+          "kind": "police",
+          "speed": 4.09531229217098e-9,
+          "occupied": false,
+          "position": [
+            68.69999694824219,
+            0.6514961123466492,
+            206
+          ]
+        },
+        {
+          "id": "vehicle-24",
+          "kind": "police",
+          "speed": 2.495415157304282e-9,
+          "occupied": false,
+          "position": [
+            -140.6999969482422,
+            0.6514961123466492,
+            153.99871826171875
+          ]
+        },
+        {
+          "id": "vehicle-25",
+          "kind": "helicopter",
+          "speed": 3.7328878015860907,
+          "occupied": true,
+          "position": [
+            -7.882877826690674,
+            58.10737228393555,
+            -14.160724639892578
+          ]
+        }
+      ],
+      "outcome": ""
+    }
+  ],
+  "errors": []
+}

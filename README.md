@@ -1,6 +1,6 @@
 # Leonida — Free Roam
 
-A local Babylon.js / TypeScript single-player open-world recreation project. The first playable area is an authored Vice City beachfront district. This is a development build with original procedural assets, **not a finished GTA VI recreation or an exact reconstruction of Rockstar geography**.
+A local Babylon.js / TypeScript single-player open-world recreation project. The current playable area connects an authored Vice City beachfront district with a western market, bungalow neighborhood and southern workshops. This is a development build with original procedural assets, **not a finished GTA VI recreation or an exact reconstruction of Rockstar geography**.
 
 ## Run locally
 
@@ -27,21 +27,22 @@ Vite writes a static application to `dist/`. Havok and shader compiler WASM file
 |---|---|
 | WASD | Walk / steer and accelerate |
 | Shift | Sprint / aircraft climb |
-| Space | Jump / handbrake |
+| Space | Jump / mantle low ledge / handbrake |
 | C | Crouch / aircraft descend |
 | E | Enter or exit a nearby vehicle / contextual interaction |
 | Mouse | Look after clicking the game canvas |
 | Right / left mouse | Aim / fire |
 | 1, 2, 3 / R | Pistol, SMG, grenade / reload |
+| F | Melee (RB on controller while on foot) |
 | Tab | Switch Jason / Lucia representation |
 | G / H | Repair and recover vehicle / horn |
 | T | Start coastal sprint while driving |
 | M / F2 | Map / creative tools |
 | Escape | Pause and settings |
 
-Standard gamepads support movement/look, A jump, Y interact, X reload, B crouch, L3 sprint/lift, LT aim, RT fire, Start map, Select creative, and D-pad up switching. Keyboard actions can be remapped in settings. Controller navigation of menu widgets remains unfinished.
+Standard gamepads support movement/look, A jump, Y interact, X reload, B crouch, L3 sprint/lift, LT aim, RT fire, Start map, Select creative, and D-pad up switching. Keyboard actions can be remapped in settings. Controller menus use D-pad/left stick to focus, A to activate/cycle, B to close, and left/right to adjust ranges. Physical-device validation remains pending.
 
-Map destinations, creative spawning, wanted level, density, weather/time, invulnerability, ammunition, noclip, simulation speed and browser-local save/load are available in the normal interface. Spawn boats and aircraft from the sandbox panel and press E nearby. Helicopters need a few seconds for their rotor to spool up; use Shift to climb. Planes need runway speed before holding Shift to rotate.
+Map routes and fast travel, creative spawning/materials/barriers/fire, wanted level, density, weather/time, invulnerability, ammunition, noclip, simulation speed and browser-local save/load are available in the normal interface. Visible patrol and SWAT crews can pursue, challenge, arrest or engage a resisting player; higher levels add roadblocks and physical helicopter observation. Spawn boats and aircraft from the sandbox panel and press E nearby. Helicopters need a few seconds for their rotor to spool up; use Shift to climb. Planes need runway speed before holding Shift to rotate.
 
 ## Rendering and testing
 
@@ -62,6 +63,6 @@ The tests in `tests/vehicles.test.ts` instantiate actual Havok physics, includin
 - [Independent gameplay audit](docs/verification-audit.md)
 - [Continuation checkpoint](docs/continuation.md)
 
-The five other Leonida regions remain planned. Major remaining work includes reference-quality assets, comprehensive character animations, foot police/SWAT/military, more complete combat and world persistence, true chunk unloading/streamed assets, full geography and the 30-minute performance/stability gate. Short successful tests do not satisfy the full objective.
+The five other Leonida regions remain planned. Major remaining work includes realistic licensed assets, complete character/door/passenger animations, advanced police tactics and military units, more activities, full regional persistence, network-loaded modular assets, full geography and the 30-minute performance/stability gate. GPU meshes and Havok colliders now unload/rebuild, while CPU geometry is retained. Short successful tests do not satisfy the full objective.
 
 Rockstar material is used as reference. No extracted Rockstar game assets are included. Geographic dimensions and physics tuning are explicit project decisions where sources do not disclose them.

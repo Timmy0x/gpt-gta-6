@@ -1,0 +1,943 @@
+{
+  "method": "Normal keyboard/mouse controls; ?test only exposes read-only input state; passive DOM event observation only",
+  "checks": [
+    {
+      "label": "before-mouse",
+      "activeElement": "<canvas id=\"game\" tabindex=\"1\" aria-label=\"Leonida game world\" touch-action=\"none\" width=\"1600\" height=\"900\" data-engine=\"Babylon.js v9.25.0\" style=\"t",
+      "target": [
+        [
+          "CANVAS",
+          "game",
+          "auto"
+        ],
+        [
+          "BODY",
+          "",
+          "auto"
+        ],
+        [
+          "HTML",
+          "",
+          "auto"
+        ]
+      ],
+      "focus": true,
+      "visibility": "visible",
+      "inputAim": false,
+      "inputFire": false,
+      "playerAim": false,
+      "health": 100,
+      "shots": 0,
+      "snapshot": {
+        "backend": "WebGL2",
+        "fallbackReason": "",
+        "position": [
+          3.3,
+          1.02015,
+          -28
+        ],
+        "character": "Jason",
+        "health": 100,
+        "vehicle": null,
+        "wanted": {
+          "stars": 2,
+          "phase": "pursuit",
+          "lastKnown": {
+            "x": 3.3,
+            "z": -28
+          }
+        },
+        "population": {
+          "traffic": 13,
+          "peds": 30,
+          "police": {
+            "officers": 1,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": false,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 0,
+        "shots": 0,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 3.299999999999993,
+        "meshes": 2023,
+        "activeMeshes": 418,
+        "physicsBodies": 256,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 33,
+          "totalMeshes": 1211,
+          "residentMeshes": 1057,
+          "totalColliders": 249,
+          "residentColliders": 221,
+          "cpuGeometryBytes": 58206120,
+          "meshLoads": 1367,
+          "meshDisposals": 310,
+          "colliderLoads": 221,
+          "colliderDisposals": 0,
+          "pendingMeshes": 0,
+          "activeAnchors": 11,
+          "lastMeshOperations": 1
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "audio": {
+          "voices": 6,
+          "effects": 0,
+          "state": "running"
+        },
+        "fps": 59.74905397402151,
+        "resolution": [
+          1600,
+          900
+        ],
+        "quality": "high",
+        "errors": []
+      }
+    },
+    {
+      "label": "after-right",
+      "activeElement": "<canvas id=\"game\" tabindex=\"1\" aria-label=\"Leonida game world\" touch-action=\"none\" width=\"1600\" height=\"900\" data-engine=\"Babylon.js v9.25.0\" style=\"t",
+      "target": [
+        [
+          "CANVAS",
+          "game",
+          "auto"
+        ],
+        [
+          "BODY",
+          "",
+          "auto"
+        ],
+        [
+          "HTML",
+          "",
+          "auto"
+        ]
+      ],
+      "focus": true,
+      "visibility": "visible",
+      "inputAim": false,
+      "inputFire": false,
+      "playerAim": false,
+      "health": 100,
+      "shots": 0,
+      "snapshot": {
+        "backend": "WebGL2",
+        "fallbackReason": "",
+        "position": [
+          3.3,
+          1.02015,
+          -28
+        ],
+        "character": "Jason",
+        "health": 100,
+        "vehicle": null,
+        "wanted": {
+          "stars": 2,
+          "phase": "pursuit",
+          "lastKnown": {
+            "x": 3.3,
+            "z": -28
+          }
+        },
+        "population": {
+          "traffic": 13,
+          "peds": 30,
+          "police": {
+            "officers": 1,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": false,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 0,
+        "shots": 0,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 3.7999999999999914,
+        "meshes": 2025,
+        "activeMeshes": 418,
+        "physicsBodies": 256,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 33,
+          "totalMeshes": 1211,
+          "residentMeshes": 1059,
+          "totalColliders": 249,
+          "residentColliders": 221,
+          "cpuGeometryBytes": 58206120,
+          "meshLoads": 1369,
+          "meshDisposals": 310,
+          "colliderLoads": 221,
+          "colliderDisposals": 0,
+          "pendingMeshes": 0,
+          "activeAnchors": 12,
+          "lastMeshOperations": 1
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "audio": {
+          "voices": 6,
+          "effects": 0,
+          "state": "running"
+        },
+        "fps": 60.25306286330775,
+        "resolution": [
+          1600,
+          900
+        ],
+        "quality": "high",
+        "errors": []
+      }
+    },
+    {
+      "label": "during-left",
+      "activeElement": "<canvas id=\"game\" tabindex=\"1\" aria-label=\"Leonida game world\" touch-action=\"none\" width=\"1600\" height=\"900\" data-engine=\"Babylon.js v9.25.0\" style=\"t",
+      "target": [
+        [
+          "CANVAS",
+          "game",
+          "auto"
+        ],
+        [
+          "BODY",
+          "",
+          "auto"
+        ],
+        [
+          "HTML",
+          "",
+          "auto"
+        ]
+      ],
+      "focus": true,
+      "visibility": "visible",
+      "inputAim": false,
+      "inputFire": false,
+      "playerAim": false,
+      "health": 100,
+      "shots": 0,
+      "snapshot": {
+        "backend": "WebGL2",
+        "fallbackReason": "",
+        "position": [
+          3.3,
+          1.02015,
+          -28
+        ],
+        "character": "Jason",
+        "health": 100,
+        "vehicle": null,
+        "wanted": {
+          "stars": 2,
+          "phase": "pursuit",
+          "lastKnown": {
+            "x": 3.3,
+            "z": -28
+          }
+        },
+        "population": {
+          "traffic": 13,
+          "peds": 30,
+          "police": {
+            "officers": 1,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": false,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 0,
+        "shots": 0,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 4.416666666666656,
+        "meshes": 2042,
+        "activeMeshes": 418,
+        "physicsBodies": 260,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 33,
+          "totalMeshes": 1211,
+          "residentMeshes": 1072,
+          "totalColliders": 249,
+          "residentColliders": 225,
+          "cpuGeometryBytes": 58206120,
+          "meshLoads": 1382,
+          "meshDisposals": 310,
+          "colliderLoads": 225,
+          "colliderDisposals": 0,
+          "pendingMeshes": 0,
+          "activeAnchors": 12,
+          "lastMeshOperations": 0
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "audio": {
+          "voices": 6,
+          "effects": 0,
+          "state": "running"
+        },
+        "fps": 60.012002399764576,
+        "resolution": [
+          1600,
+          900
+        ],
+        "quality": "high",
+        "errors": []
+      }
+    },
+    {
+      "label": "after-release",
+      "activeElement": "<canvas id=\"game\" tabindex=\"1\" aria-label=\"Leonida game world\" touch-action=\"none\" width=\"1600\" height=\"900\" data-engine=\"Babylon.js v9.25.0\" style=\"t",
+      "target": [
+        [
+          "CANVAS",
+          "game",
+          "auto"
+        ],
+        [
+          "BODY",
+          "",
+          "auto"
+        ],
+        [
+          "HTML",
+          "",
+          "auto"
+        ]
+      ],
+      "focus": true,
+      "visibility": "visible",
+      "pointerLock": "game",
+      "inputAim": false,
+      "inputFire": false,
+      "playerAim": false,
+      "health": 100,
+      "shots": 0,
+      "snapshot": {
+        "backend": "WebGL2",
+        "fallbackReason": "",
+        "position": [
+          3.3,
+          1.02015,
+          -28
+        ],
+        "character": "Jason",
+        "health": 100,
+        "vehicle": null,
+        "wanted": {
+          "stars": 2,
+          "phase": "pursuit",
+          "lastKnown": {
+            "x": 3.3,
+            "z": -28
+          }
+        },
+        "population": {
+          "traffic": 13,
+          "peds": 30,
+          "police": {
+            "officers": 1,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": false,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 0,
+        "shots": 0,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 4.433333333333323,
+        "meshes": 2042,
+        "activeMeshes": 418,
+        "physicsBodies": 260,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 33,
+          "totalMeshes": 1211,
+          "residentMeshes": 1072,
+          "totalColliders": 249,
+          "residentColliders": 225,
+          "cpuGeometryBytes": 58206120,
+          "meshLoads": 1382,
+          "meshDisposals": 310,
+          "colliderLoads": 225,
+          "colliderDisposals": 0,
+          "pendingMeshes": 0,
+          "activeAnchors": 12,
+          "lastMeshOperations": 0
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "audio": {
+          "voices": 6,
+          "effects": 0,
+          "state": "running"
+        },
+        "fps": 59.90415335677154,
+        "resolution": [
+          1600,
+          900
+        ],
+        "quality": "high",
+        "errors": []
+      }
+    },
+    {
+      "label": "canvas-right-locator",
+      "activeElement": "<canvas id=\"game\" tabindex=\"1\" aria-label=\"Leonida game world\" touch-action=\"none\" width=\"1600\" height=\"900\" data-engine=\"Babylon.js v9.25.0\" style=\"t",
+      "target": [
+        [
+          "CANVAS",
+          "game",
+          "auto"
+        ],
+        [
+          "BODY",
+          "",
+          "auto"
+        ],
+        [
+          "HTML",
+          "",
+          "auto"
+        ]
+      ],
+      "focus": true,
+      "visibility": "visible",
+      "pointerLock": "game",
+      "inputAim": false,
+      "inputFire": false,
+      "playerAim": true,
+      "health": 100,
+      "shots": 0,
+      "snapshot": {
+        "backend": "WebGL2",
+        "fallbackReason": "",
+        "position": [
+          3.3,
+          1.02015,
+          -28
+        ],
+        "character": "Jason",
+        "health": 100,
+        "vehicle": null,
+        "wanted": {
+          "stars": 2,
+          "phase": "pursuit",
+          "lastKnown": {
+            "x": 3.3,
+            "z": -28
+          }
+        },
+        "population": {
+          "traffic": 13,
+          "peds": 30,
+          "police": {
+            "officers": 1,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": false,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 0,
+        "shots": 0,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 4.983333333333321,
+        "meshes": 2045,
+        "activeMeshes": 580,
+        "physicsBodies": 262,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 33,
+          "totalMeshes": 1211,
+          "residentMeshes": 1073,
+          "totalColliders": 249,
+          "residentColliders": 227,
+          "cpuGeometryBytes": 58206120,
+          "meshLoads": 1383,
+          "meshDisposals": 310,
+          "colliderLoads": 227,
+          "colliderDisposals": 0,
+          "pendingMeshes": 0,
+          "activeAnchors": 12,
+          "lastMeshOperations": 0
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "audio": {
+          "voices": 6,
+          "effects": 0,
+          "state": "running"
+        },
+        "fps": 60.132291039570276,
+        "resolution": [
+          1600,
+          900
+        ],
+        "quality": "high",
+        "errors": []
+      }
+    },
+    {
+      "label": "off-center-fire",
+      "activeElement": "<canvas id=\"game\" tabindex=\"1\" aria-label=\"Leonida game world\" touch-action=\"none\" width=\"1600\" height=\"900\" data-engine=\"Babylon.js v9.25.0\" style=\"t",
+      "target": [
+        [
+          "CANVAS",
+          "game",
+          "auto"
+        ],
+        [
+          "BODY",
+          "",
+          "auto"
+        ],
+        [
+          "HTML",
+          "",
+          "auto"
+        ]
+      ],
+      "focus": true,
+      "visibility": "visible",
+      "pointerLock": "game",
+      "inputAim": true,
+      "inputFire": false,
+      "playerAim": true,
+      "health": 100,
+      "shots": 2,
+      "snapshot": {
+        "backend": "WebGL2",
+        "fallbackReason": "",
+        "position": [
+          3.3,
+          1.02015,
+          -28
+        ],
+        "character": "Jason",
+        "health": 100,
+        "vehicle": null,
+        "wanted": {
+          "stars": 3,
+          "phase": "pursuit",
+          "lastKnown": {
+            "x": 3.3,
+            "z": -28
+          }
+        },
+        "population": {
+          "traffic": 13,
+          "peds": 30,
+          "police": {
+            "officers": 1,
+            "activeFoot": 0,
+            "swat": 0,
+            "resisting": true,
+            "arrestProgress": 0
+          }
+        },
+        "crashCount": 0,
+        "shots": 2,
+        "props": 18,
+        "destroyed": [],
+        "paused": false,
+        "simTime": 5.666666666666652,
+        "meshes": 2056,
+        "activeMeshes": 583,
+        "physicsBodies": 267,
+        "streaming": {
+          "totalChunks": 56,
+          "residentChunks": 33,
+          "totalMeshes": 1211,
+          "residentMeshes": 1078,
+          "totalColliders": 249,
+          "residentColliders": 230,
+          "cpuGeometryBytes": 58206120,
+          "meshLoads": 1388,
+          "meshDisposals": 310,
+          "colliderLoads": 230,
+          "colliderDisposals": 0,
+          "pendingMeshes": 0,
+          "activeAnchors": 11,
+          "lastMeshOperations": 0
+        },
+        "movement": {
+          "climbing": false,
+          "crouched": false,
+          "transitioning": false
+        },
+        "atmosphere": {
+          "wetness": 0,
+          "sheltered": false,
+          "particles": 0
+        },
+        "audio": {
+          "voices": 6,
+          "effects": 1,
+          "state": "running"
+        },
+        "fps": 58.252427184466086,
+        "resolution": [
+          1600,
+          900
+        ],
+        "quality": "high",
+        "errors": []
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "mousedown",
+      "target": "",
+      "button": 0,
+      "buttons": 1,
+      "x": 251,
+      "y": 545,
+      "time": 18335.40000000596
+    },
+    {
+      "type": "focus",
+      "target": "",
+      "time": 18336.100000023842
+    },
+    {
+      "type": "mouseup",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 251,
+      "y": 545,
+      "time": 18336.100000023842
+    },
+    {
+      "type": "click",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 251,
+      "y": 545,
+      "time": 18336.20000001788
+    },
+    {
+      "type": "blur",
+      "target": "",
+      "time": 18460.40000000596
+    },
+    {
+      "type": "focus",
+      "target": "game",
+      "time": 18466
+    },
+    {
+      "type": "mousedown",
+      "target": "",
+      "button": 0,
+      "buttons": 1,
+      "x": 1380,
+      "y": 741,
+      "time": 21601.90000000596
+    },
+    {
+      "type": "blur",
+      "target": "game",
+      "time": 21601.90000000596
+    },
+    {
+      "type": "focus",
+      "target": "",
+      "time": 21602.100000023842
+    },
+    {
+      "type": "mouseup",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 1380,
+      "y": 741,
+      "time": 21602.100000023842
+    },
+    {
+      "type": "click",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 1380,
+      "y": 741,
+      "time": 21602.100000023842
+    },
+    {
+      "type": "mousedown",
+      "target": "",
+      "button": 0,
+      "buttons": 1,
+      "x": 1559,
+      "y": 617,
+      "time": 21633.80000001192
+    },
+    {
+      "type": "blur",
+      "target": "",
+      "time": 21633.80000001192
+    },
+    {
+      "type": "focus",
+      "target": "",
+      "time": 21633.90000000596
+    },
+    {
+      "type": "mouseup",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 1559,
+      "y": 617,
+      "time": 21634
+    },
+    {
+      "type": "click",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 1559,
+      "y": 617,
+      "time": 21634
+    },
+    {
+      "type": "mousedown",
+      "target": "",
+      "button": 0,
+      "buttons": 1,
+      "x": 1560,
+      "y": 42,
+      "time": 21688
+    },
+    {
+      "type": "blur",
+      "target": "",
+      "time": 21688.100000023842
+    },
+    {
+      "type": "focus",
+      "target": "",
+      "time": 21688.100000023842
+    },
+    {
+      "type": "mouseup",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 1560,
+      "y": 42,
+      "time": 21688.100000023842
+    },
+    {
+      "type": "click",
+      "target": "",
+      "button": 0,
+      "buttons": 0,
+      "x": 1560,
+      "y": 42,
+      "time": 21688.100000023842
+    },
+    {
+      "type": "blur",
+      "target": "",
+      "time": 21688.40000000596
+    },
+    {
+      "type": "focus",
+      "target": "game",
+      "time": 21688.5
+    },
+    {
+      "type": "contextmenu",
+      "target": "game",
+      "button": 2,
+      "buttons": 2,
+      "x": 800,
+      "y": 450,
+      "time": 21723.40000000596
+    },
+    {
+      "type": "click",
+      "target": "game",
+      "button": 0,
+      "buttons": 2,
+      "x": 800,
+      "y": 450,
+      "time": 22840
+    },
+    {
+      "type": "mouseup",
+      "target": "game",
+      "button": 2,
+      "buttons": 0,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 22850.20000001788
+    },
+    {
+      "type": "click",
+      "target": "game",
+      "button": 2,
+      "buttons": 0,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 22850.30000001192
+    },
+    {
+      "type": "pointerlockchange",
+      "pointerLock": "game",
+      "time": 22865.70000001788
+    },
+    {
+      "type": "mousedown",
+      "target": "game",
+      "button": 2,
+      "buttons": 2,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 22901.30000001192
+    },
+    {
+      "type": "mouseup",
+      "target": "game",
+      "button": 2,
+      "buttons": 0,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 23402.80000001192
+    },
+    {
+      "type": "click",
+      "target": "game",
+      "button": 2,
+      "buttons": 0,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 23402.90000000596
+    },
+    {
+      "type": "mousedown",
+      "target": "game",
+      "button": 2,
+      "buttons": 2,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 23418.5
+    },
+    {
+      "type": "mousedown",
+      "target": "game",
+      "button": 0,
+      "buttons": 3,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 23672.90000000596
+    },
+    {
+      "type": "mouseup",
+      "target": "game",
+      "button": 0,
+      "buttons": 2,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 24084.80000001192
+    },
+    {
+      "type": "click",
+      "target": "game",
+      "button": 0,
+      "buttons": 2,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 24084.80000001192
+    },
+    {
+      "type": "mouseup",
+      "target": "game",
+      "button": 2,
+      "buttons": 0,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 24089.600000023842
+    },
+    {
+      "type": "click",
+      "target": "game",
+      "button": 2,
+      "buttons": 0,
+      "x": 800,
+      "y": 450,
+      "pointerLock": "game",
+      "time": 24089.70000001788
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,207 @@
+{
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   grounded: 4,\n+   health: 100,\n+   id: 'vehicle-1',\n+   kind: 'coupe',\n+   speed: 14.420055389406167\n+ }\n- null\n\n    at file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/integrated-checkpoint.mjs:16:331"
+  ],
+  "checks": [
+    {
+      "name": "seated",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3,
+        0.6214540004730225,
+        -23
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 0,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 5.6833333333333185,
+      "meshes": 2006,
+      "activeMeshes": 417,
+      "physicsBodies": 283,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1199,
+        "residentMeshes": 1070,
+        "totalColliders": 249,
+        "residentColliders": 249,
+        "cpuGeometryBytes": 56624976,
+        "meshLoads": 1374,
+        "meshDisposals": 304,
+        "colliderLoads": 249,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.916117433449266,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "ammo": [
+        12,
+        30,
+        3
+      ],
+      "reserves": [
+        180,
+        180,
+        6
+      ],
+      "held": false,
+      "mounted": "vehicle-1",
+      "projectiles": 0,
+      "ragdolls": 0,
+      "customProps": []
+    },
+    {
+      "name": "drive",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3.000000238418579,
+        0.7393025755882263,
+        22.190893173217773
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "coupe",
+        "health": 100,
+        "speed": 23.50741195678711,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 9.400000000000047,
+      "meshes": 2021,
+      "activeMeshes": 374,
+      "physicsBodies": 280,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1199,
+        "residentMeshes": 1088,
+        "totalColliders": 249,
+        "residentColliders": 246,
+        "cpuGeometryBytes": 56624976,
+        "meshLoads": 1392,
+        "meshDisposals": 304,
+        "colliderLoads": 249,
+        "colliderDisposals": 3,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 3,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.07208650308646,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": [],
+      "ammo": [
+        12,
+        30,
+        3
+      ],
+      "reserves": [
+        180,
+        180,
+        6
+      ],
+      "held": false,
+      "mounted": "vehicle-1",
+      "projectiles": 0,
+      "ragdolls": 0,
+      "customProps": []
+    }
+  ]
+}

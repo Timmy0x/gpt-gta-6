@@ -18,3 +18,9 @@ The requested targets remain **60 FPS median and 30 FPS 1% low at 1080p**, with 
 Havok deterministic tests are separate from graphics measurements: the same controls under simulated 30, 60 and 144 Hz render cadence resulted in 299 physics steps, 17.623 m/s and Z=36.987 m in the recorded test scenario.
 
 Next profiling should isolate one browser, retain every raw frame, measure JavaScript heap plus browser/process memory where available, traverse all completed areas, repeatedly create/remove/damage entities and save/load, and compare entity/resource counts and memory trends. A single endpoint heap number cannot demonstrate bounded memory.
+
+## Second checkpoint functional measurements
+
+The current world traversal record (`docs/evidence/streaming-world.json`) is a short1440×900WebGPU five-destination review, with approximately60FPS sampled at each stop. It records actual GPU mesh disposal/reload and collider disposal/reload rather than distance disable alone. Retained CPU geometry is58,206,120bytes and remains constant by design; this does not measure the whole JS/GPU heap. Traffic anchors intentionally keep collision alive away from the player.
+
+The combined1920×1080WebGPU control audit samples approximately60FPS across driving/combat/rain/save-load. Concurrent independent browser work occurred during some samples, so no performance target result is inferred. Frame telemetry and scene counts are diagnostic only; no30-minute stability or bounded-total-memory claim is made. The final initial JS module remains about6.9MB uncompressed/1.54MB gzip plus bundled physics/shader WASM. Asset/code partitioning remains an important open loading gate.

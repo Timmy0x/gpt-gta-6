@@ -1,0 +1,400 @@
+{
+  "errors": [],
+  "snapshots": [
+    {
+      "name": "spawn",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 7.399999999999979,
+      "meshes": 2004,
+      "activeMeshes": 418,
+      "physicsBodies": 283,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1199,
+        "residentMeshes": 1070,
+        "totalColliders": 249,
+        "residentColliders": 249,
+        "cpuGeometryBytes": 56624976,
+        "meshLoads": 1374,
+        "meshDisposals": 304,
+        "colliderLoads": 249,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.132291039570624,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "seated",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 9.133333333333367,
+      "meshes": 2008,
+      "activeMeshes": 418,
+      "physicsBodies": 283,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1199,
+        "residentMeshes": 1074,
+        "totalColliders": 249,
+        "residentColliders": 249,
+        "cpuGeometryBytes": 56624976,
+        "meshLoads": 1378,
+        "meshDisposals": 304,
+        "colliderLoads": 249,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.844404550309825,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "drive",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3.3551506786664684,
+        1.9493676052644655,
+        -24.2876405522232
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 13.350000000000243,
+      "meshes": 2019,
+      "activeMeshes": 415,
+      "physicsBodies": 283,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1199,
+        "residentMeshes": 1085,
+        "totalColliders": 249,
+        "residentColliders": 249,
+        "cpuGeometryBytes": 56624976,
+        "meshLoads": 1389,
+        "meshDisposals": 304,
+        "colliderLoads": 249,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 59.77286311943407,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "rain",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3.3551674123139894,
+        1.949367368128418,
+        -24.287694727742707
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.616666666666948,
+      "meshes": 2010,
+      "activeMeshes": 416,
+      "physicsBodies": 283,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1199,
+        "residentMeshes": 1076,
+        "totalColliders": 249,
+        "residentColliders": 249,
+        "cpuGeometryBytes": 56624976,
+        "meshLoads": 1394,
+        "meshDisposals": 318,
+        "colliderLoads": 249,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0.962047509962541,
+        "sheltered": false,
+        "particles": 336
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.192616375271484,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    },
+    {
+      "name": "night",
+      "backend": "WebGPU",
+      "fallbackReason": "",
+      "position": [
+        3.3551707428254707,
+        1.9493673203763662,
+        -24.287705571017273
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 19.883333333333486,
+      "meshes": 2004,
+      "activeMeshes": 416,
+      "physicsBodies": 283,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 33,
+        "totalMeshes": 1199,
+        "residentMeshes": 1070,
+        "totalColliders": 249,
+        "residentColliders": 249,
+        "cpuGeometryBytes": 56624976,
+        "meshLoads": 1394,
+        "meshDisposals": 324,
+        "colliderLoads": 249,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0.9938844744518548,
+        "sheltered": false,
+        "particles": 350
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 60.02400960598943,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "errors": []
+    }
+  ]
+}

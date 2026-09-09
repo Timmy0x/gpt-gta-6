@@ -806,6 +806,39 @@ export class Character {
     this.root.scaling.y = 1 - c * 0.19;
   }
 
+  /** Authored overlays on the same skin rig; call after locomotion animation. */
+  pose(kind: "seated" | "mount" | "climb" | "swim" | "hit", phase = 1): void {
+    const seated = kind === "seated" || kind === "mount";
+    const amount = kind === "mount" ? Math.max(0, Math.min(1, phase)) : 1;
+    if (seated) {
+      this.rotate("leftThigh", -1.42 * amount);
+      this.rotate("rightThigh", -1.42 * amount);
+      this.rotate("leftCalf", 1.48 * amount);
+      this.rotate("rightCalf", 1.48 * amount);
+      this.rotate("leftArm", -0.98 * amount);
+      this.rotate("rightArm", -0.98 * amount);
+      this.rotate("leftForearm", -0.45 * amount);
+      this.rotate("rightForearm", -0.45 * amount);
+      this.rotate("spine", 0.1 * amount);
+    } else if (kind === "climb") {
+      this.rotate("leftArm", -2.65);
+      this.rotate("rightArm", -2.65);
+      this.rotate("leftForearm", -0.2);
+      this.rotate("rightForearm", -0.2);
+      this.rotate("leftThigh", -1.0);
+      this.rotate("leftCalf", 1.1);
+      this.rotate("spine", 0.22);
+    } else if (kind === "swim") {
+      this.rotate("spine", 0.52);
+      this.rotate("leftArm", -1.7 + Math.sin(phase) * 0.8, -0.5);
+      this.rotate("rightArm", -1.7 - Math.sin(phase) * 0.8, 0.5);
+      this.rotate("leftThigh", Math.sin(phase * 1.4) * 0.32);
+      this.rotate("rightThigh", -Math.sin(phase * 1.4) * 0.32);
+    } else {
+      this.rotate("chest", -0.24 * Math.sin(phase * Math.PI));
+    }
+  }
+
   position(p: Vector3): void {
     this.root.position.copyFrom(p);
   }

@@ -29,6 +29,9 @@ export class WantedSystem {
   reportPosition: Point2 | null = null;
   evidence = 0;
   visibility = 0;
+  private hasIdentity = false;
+  private knownVehicles = new Set<string>();
+  private knownCharacters = new Set<string>();
   constructor(public profile: WantedProfile = { ...FALLBACK_PROFILE }) {}
   crime(severity: number, position: Point2, witnessed: boolean) {
     if (!witnessed) return false;
@@ -49,6 +52,10 @@ export class WantedSystem {
     this.phase = this.stars ? "pursuit" : "clear";
     this.lastKnown = { x: position.x, z: position.z };
     this.timer = 0;
+    this.reportPosition = null;
+    this.hasIdentity = false;
+    this.knownVehicles.clear();
+    this.knownCharacters.clear();
   }
   update(
     dt: number,
@@ -80,6 +87,9 @@ export class WantedSystem {
       this.lastKnown = { x: position.x, z: position.z };
       this.identifiedVehicle = vehicleId;
       this.identifiedCharacter = character;
+      this.hasIdentity = true;
+      this.knownCharacters.add(character);
+      if (vehicleId) this.knownVehicles.add(vehicleId);
       this.phase = "pursuit";
       this.timer = 0;
       return;
@@ -104,12 +114,24 @@ export class WantedSystem {
       this.timer = 0;
     }
   }
-  recognizes(position: Point2, vehicleId: string | null, character: string) {
+  recognizes(
+    position: Point2,
+    vehicleId: string | null,
+    character: string,
+    observerDistance = 30,
+  ) {
+    if (!this.stars) return false;
+    if (!this.hasIdentity) return distance(position, this.lastKnown) < 28;
+    if (vehicleId) {
+      // A new car conceals the occupant at range; close identification requires a known face.
+      return (
+        this.knownVehicles.has(vehicleId) ||
+        (observerDistance < 17 && this.knownCharacters.has(character))
+      );
+    }
     return (
-      this.phase === "pursuit" ||
-      (vehicleId === this.identifiedVehicle &&
-        character === this.identifiedCharacter) ||
-      distance(position, this.lastKnown) < 25
+      this.knownCharacters.has(character) ||
+      distance(position, this.lastKnown) < 12
     );
   }
 }

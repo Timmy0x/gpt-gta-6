@@ -6,61 +6,90 @@ import {
   PBRMaterial,
   PhysicsAggregate,
   PhysicsShapeType,
-  PhysicsEngineV2,
+  PhysicsMotionType,
   Quaternion,
   Vector3,
+  VertexBuffer,
+  type Material,
+  type PhysicsEngineV2,
   type Scene,
   type ShadowGenerator,
 } from "@babylonjs/core";
-import { distance, lineBlocked, random } from "../core/math";
-import type { WorldContract } from "../core/contracts";
+import { random } from "../core/math";
+import type { WorldContract, Obstacle } from "../core/contracts";
 import type { SavedProp } from "../core/Persistence";
-interface Prop {
+import {
+  MATERIAL_RESPONSE,
+  materialDamage,
+  type PhysicalMaterial,
+  type DamageKind,
+} from "./combat/materials";
+import { blastFalloff, obstructed } from "./combat/queries";
+import { FireEffects } from "./combat/FireEffects";
+export type PropKind = "street" | "fence" | "gate";
+export interface SerializableProp extends SavedProp {
+  kind?: PropKind;
+  vertices?: number[][];
+}
+export interface Prop {
   id: string;
   mesh: Mesh;
   parts: Mesh[];
   physics: PhysicsAggregate;
   health: number;
-  material: "wood" | "metal" | "glass";
+  material: PhysicalMaterial;
   burning: number;
+  kind: PropKind;
+  ownedMaterials: Material[];
+  obstacle?: Obstacle;
 }
 export class DamageSystem {
   props: Prop[] = [];
   destroyed = new Set<string>();
-  debris: { mesh: Mesh; physics: PhysicsAggregate; life: number }[] = [];
+  debris: {
+    mesh: Mesh;
+    physics: PhysicsAggregate;
+    life: number;
+    owner: string;
+  }[] = [];
+  readonly fire: FireEffects;
   private rng = random(800);
+  private sequence = 0;
+  private pendingHits: { prop: Prop; amount: number; point: Vector3 }[] = [];
   onBreak = (position: Vector3) => {};
   constructor(
     public scene: Scene,
     public shadows: ShadowGenerator,
     public world: WorldContract,
+    seedStreetProps = true,
   ) {
-    for (let i = 0; i < 18; i++)
-      this.spawn(
-        new Vector3(i < 8 ? 10 : -60, 0.55, -52 + i * 5),
-        i % 3 === 0 ? "glass" : i % 2 ? "wood" : "metal",
-        "street-prop-" + i,
-      );
+    this.fire = new FireEffects(scene);
+    if (seedStreetProps)
+      for (let i = 0; i < 18; i++)
+        this.spawn(
+          new Vector3(i < 8 ? 10 : -60, 0.55, -52 + i * 5),
+          i % 3 === 0 ? "glass" : i % 2 ? "wood" : "metal",
+          "street-prop-" + i,
+        );
   }
   spawn(
     p: Vector3,
-    material: "wood" | "metal" | "glass" = "wood",
-    id = "creative-prop-" + Date.now(),
+    material: PhysicalMaterial = "wood",
+    id = "creative-prop-" + Date.now() + "-" + ++this.sequence,
     rotation?: Quaternion,
-  ) {
-    const height = material === "glass" ? 2.25 : 1.1;
-    const m = MeshBuilder.CreateBox(
-      id,
-      {
-        width: material === "glass" ? 1.05 : 0.9,
-        height,
-        depth: material === "glass" ? 1.05 : 0.85,
-      },
-      this.scene,
-    );
+    kind: PropKind = "street",
+  ): Prop {
+    if (this.props.some((prop) => prop.id === id))
+      throw new Error("Duplicate prop ID: " + id);
+    const barrier = kind !== "street",
+      height = barrier ? 1.8 : material === "glass" ? 2.25 : 1.1,
+      width = barrier ? 3.4 : material === "glass" ? 1.05 : 0.9,
+      depth = barrier ? 0.18 : material === "glass" ? 1.05 : 0.85;
+    const before = new Set(this.scene.materials);
+    const m = MeshBuilder.CreateBox(id, { width, height, depth }, this.scene);
     m.position.copyFrom(p);
-    if (rotation) m.rotationQuaternion = rotation.clone();
     m.position.y += (height - 1.1) / 2;
+    if (rotation) m.rotationQuaternion = rotation.clone();
     const mat = new PBRMaterial(id + "-material", this.scene);
     mat.albedoColor = Color3.FromHexString(
       material === "wood"
@@ -70,16 +99,18 @@ export class DamageSystem {
           : "#96c4c2",
     );
     mat.roughness = material === "glass" ? 0.18 : 0.79;
-    mat.metallic = material === "metal" ? 0.2 : 0;
+    mat.metallic = material === "metal" ? 0.5 : 0;
     if (material === "glass") mat.alpha = 0.28;
     m.material = mat;
     m.isVisible = false;
-    const parts = this.buildPropGeometry(m, material, mat);
+    const parts = barrier
+      ? this.buildBarrier(m, kind, material, mat)
+      : this.buildPropGeometry(m, material, mat);
     const physics = new PhysicsAggregate(
       m,
       PhysicsShapeType.BOX,
       {
-        mass: material === "metal" ? 55 : 18,
+        mass: barrier ? 0 : MATERIAL_RESPONSE[material].mass,
         friction: 0.65,
         restitution: 0.1,
       },
@@ -90,77 +121,222 @@ export class DamageSystem {
       mesh: m,
       parts,
       physics,
-      health: material === "metal" ? 120 : 45,
+      health: MATERIAL_RESPONSE[material].health * (barrier ? 1.6 : 1),
       material,
       burning: 0,
+      kind,
+      ownedMaterials: this.scene.materials.filter(
+        (value) => !before.has(value),
+      ),
     };
     m.metadata = { prop, cameraBlocker: true };
-    for (const part of parts) part.metadata = { prop, cameraBlocker: true };
+    for (const part of parts) {
+      part.metadata = { prop, cameraBlocker: true };
+      part.markVerticesDataAsUpdatable(VertexBuffer.PositionKind, true);
+    }
     this.shadows.addShadowCaster(m, true);
     this.props.push(prop);
+    if (barrier) {
+      const yaw = rotation?.toEulerAngles().y ?? 0;
+      prop.obstacle = {
+        x: m.position.x,
+        z: m.position.z,
+        w: Math.abs(Math.cos(yaw)) * width + Math.abs(Math.sin(yaw)) * depth,
+        d: Math.abs(Math.sin(yaw)) * width + Math.abs(Math.cos(yaw)) * depth,
+        height,
+        mesh: m,
+      };
+      this.world.obstacles.push(prop.obstacle);
+    }
     physics.body.setCollisionCallbackEnabled(true);
     physics.body.getCollisionObservable().add((e) => {
-      if (e.impulse > 180)
-        this.hit(prop, Math.min(75, e.impulse / 12), e.point || m.position);
+      if (e.impulse > 180 && this.pendingHits.length < 64)
+        this.pendingHits.push({
+          prop,
+          amount: Math.min(150, e.impulse / 12),
+          point: e.point?.clone() ?? m.position.clone(),
+        });
     });
     return prop;
   }
-  hit(prop: Prop, amount: number, point: Vector3) {
-    if (prop.health <= 0) return;
-    prop.health -= amount;
-    prop.physics.body.applyImpulse(
-      prop.mesh.position
-        .subtract(point)
-        .normalize()
-        .scale(amount * 2),
-      point,
+  spawnBarrier(
+    position: Vector3,
+    kind: "fence" | "gate" = "fence",
+    material: PhysicalMaterial = "wood",
+    heading = 0,
+  ): Prop {
+    return this.spawn(
+      position.add(new Vector3(0, 0.55, 0)),
+      material,
+      undefined,
+      Quaternion.RotationYawPitchRoll(heading, 0, 0),
+      kind,
     );
+  }
+  private buildBarrier(
+    root: Mesh,
+    kind: PropKind,
+    material: PhysicalMaterial,
+    base: PBRMaterial,
+  ): Mesh[] {
+    const pieces: Mesh[] = [];
+    const box = (
+      name: string,
+      x: number,
+      y: number,
+      w: number,
+      h: number,
+      d: number,
+    ) => {
+      const mesh = MeshBuilder.CreateBox(
+        root.name + "/" + name,
+        { width: w, height: h, depth: d },
+        this.scene,
+      );
+      mesh.position.set(x, y, 0);
+      mesh.material = base;
+      pieces.push(mesh);
+    };
+    for (const x of [-1.62, 1.62]) box("post", x, 0, 0.14, 1.8, 0.18);
+    for (const y of [-0.5, 0.5]) box("rail", 0, y, 3.18, 0.12, 0.14);
+    const count = material === "glass" ? 3 : 15;
+    for (let i = 0; i < count; i++)
+      box(
+        material === "glass" ? "glass-panel" : "picket",
+        -1.48 + ((i + 0.5) * 2.96) / count,
+        0,
+        material === "glass" ? 0.94 : material === "metal" ? 0.042 : 0.155,
+        1.57,
+        material === "glass" ? 0.04 : 0.075,
+      );
+    if (kind === "gate") {
+      box("latch", 1.12, 0.07, 0.35, 0.09, 0.22);
+      for (const y of [-0.5, 0.5]) box("hinge", -1.5, y, 0.3, 0.17, 0.24);
+    }
+    const merged = Mesh.MergeMeshes(
+      pieces,
+      true,
+      true,
+      undefined,
+      false,
+      false,
+    )!;
+    merged.name = root.name + "/" + kind;
+    merged.parent = root;
+    merged.material = base;
+    return [merged];
+  }
+  hit(
+    prop: Prop,
+    amount: number,
+    point: Vector3,
+    kind: DamageKind = "impact",
+    direction?: Vector3,
+  ): void {
+    if (prop.health <= 0 || !this.props.includes(prop)) return;
+    const applied = materialDamage(prop.material, amount, kind);
+    if (applied <= 0) return;
+    prop.health = Math.max(0, prop.health - applied);
+    if (kind !== "fire") {
+      const impulse =
+        direction?.normalizeToNew() ??
+        prop.mesh.position.subtract(point).normalize();
+      if (prop.physics.body.getMotionType() === PhysicsMotionType.DYNAMIC)
+        prop.physics.body.applyImpulse(
+          impulse.scale(Math.min(220, applied * 2)),
+          point,
+        );
+      this.deform(prop, point, Math.min(0.22, applied * 0.003), direction);
+    }
     if (prop.health <= 0) this.break(prop);
   }
-  private break(prop: Prop) {
-    const p = prop.mesh.position.clone();
+  private deform(
+    prop: Prop,
+    point: Vector3,
+    strength: number,
+    direction?: Vector3,
+  ): void {
+    const worldDirection =
+      direction?.normalizeToNew() ??
+      prop.mesh.position.subtract(point).normalize();
+    for (const part of prop.parts) {
+      const world = part.computeWorldMatrix(true),
+        inverse = world.clone().invert(),
+        localPoint = Vector3.TransformCoordinates(point, inverse),
+        localDirection = Vector3.TransformNormal(worldDirection, inverse),
+        positions = part.getVerticesData(VertexBuffer.PositionKind);
+      if (!positions) continue;
+      for (let i = 0; i < positions.length; i += 3) {
+        const vertex = new Vector3(
+            positions[i],
+            positions[i + 1],
+            positions[i + 2],
+          ),
+          weight = Math.max(0, 1 - Vector3.Distance(vertex, localPoint) / 0.85);
+        if (weight > 0) {
+          vertex.addInPlace(localDirection.scale(strength * weight));
+          positions[i] = vertex.x;
+          positions[i + 1] = vertex.y;
+          positions[i + 2] = vertex.z;
+        }
+      }
+      part.updateVerticesData(VertexBuffer.PositionKind, positions, true);
+      part.refreshBoundingInfo();
+    }
+  }
+  private break(prop: Prop): void {
+    if (this.destroyed.has(prop.id)) return;
+    prop.health = 0;
     this.destroyed.add(prop.id);
     prop.physics.dispose();
     prop.mesh.setEnabled(false);
-    for (const part of prop.parts) part.dispose();
-    prop.parts = [];
-    for (let i = 0; i < 5; i++) {
-      if (this.debris.length >= 45) break;
-      const m = MeshBuilder.CreateBox(
-        "debris",
+    this.removeObstacle(prop);
+    const p = prop.mesh.position.clone();
+    // Fragments retain the material owner until all corresponding physics bodies have expired.
+    for (let i = 0; i < (prop.kind === "street" ? 6 : 12); i++) {
+      if (this.debris.length >= 60) this.disposeDebris(0);
+      const mesh = MeshBuilder.CreateBox(
+        "debris/" + prop.id,
         {
-          width: 0.15 + this.rng() * 0.35,
-          height: 0.15,
-          depth: 0.2 + this.rng() * 0.4,
+          width: prop.kind === "street" ? 0.16 + this.rng() * 0.25 : 0.12,
+          height: prop.kind === "street" ? 0.12 : 0.45 + this.rng() * 0.6,
+          depth: prop.material === "glass" ? 0.025 : 0.12,
         },
         this.scene,
       );
-      m.position.copyFrom(
-        p.add(
+      mesh.position
+        .copyFrom(p)
+        .addInPlace(
           new Vector3(
-            (this.rng() - 0.5) * 0.8,
-            this.rng() * 0.6,
-            (this.rng() - 0.5) * 0.8,
+            (this.rng() - 0.5) * (prop.kind === "street" ? 0.8 : 3),
+            (this.rng() - 0.5) * 0.7,
+            (this.rng() - 0.5) * 0.5,
           ),
-        ),
-      );
-      m.material = prop.mesh.material;
+        );
+      mesh.material = prop.mesh.material;
+      mesh.metadata = { combatEffect: true };
+      mesh.isPickable = false;
       const physics = new PhysicsAggregate(
-        m,
+        mesh,
         PhysicsShapeType.BOX,
-        { mass: 1.5, friction: 0.6, restitution: 0.2 },
+        {
+          mass: prop.material === "glass" ? 0.35 : 1.5,
+          friction: 0.65,
+          restitution: 0.18,
+        },
         this.scene,
       );
       physics.body.applyImpulse(
         new Vector3(
-          (this.rng() - 0.5) * 8,
-          4 + this.rng() * 4,
-          (this.rng() - 0.5) * 8,
+          (this.rng() - 0.5) * 6,
+          2 + this.rng() * 4,
+          (this.rng() - 0.5) * 6,
         ),
-        m.position,
+        mesh.position,
       );
-      this.debris.push({ mesh: m, physics, life: 18 });
+      this.debris.push({ mesh, physics, life: 14, owner: prop.id });
     }
+    if (prop.burning > 0) this.fire.set(prop.id, p);
     this.onBreak(p);
   }
   /** Original street-prop art; each material is merged to bound the extra draw calls. */
@@ -344,32 +520,37 @@ export class DamageSystem {
             0.008,
             trim,
           );
-      const texture = new DynamicTexture(
-        root.name + "/telephone-sign",
-        { width: 256, height: 64 },
-        this.scene,
-        true,
-      );
-      texture.drawText(
-        "TELEPHONE",
-        null,
-        44,
-        "bold 31px sans-serif",
-        "#e9e4cf",
-        "#3b5d59",
-        true,
-      );
-      const signMat = makeMaterial("telephone-lettering", "#ffffff", 0.8);
-      signMat.albedoTexture = texture;
-      signMat.emissiveTexture = texture;
-      signMat.emissiveColor.set(0.14, 0.14, 0.14);
-      const sign = MeshBuilder.CreatePlane(
-        root.name + "/telephone-lettering",
-        { width: 0.88, height: 0.18 },
-        this.scene,
-      );
-      sign.position.set(0, 0.855, -0.519);
-      add(sign, signMat);
+      if (
+        typeof document !== "undefined" ||
+        typeof OffscreenCanvas !== "undefined"
+      ) {
+        const texture = new DynamicTexture(
+          root.name + "/telephone-sign",
+          { width: 256, height: 64 },
+          this.scene,
+          true,
+        );
+        texture.drawText(
+          "TELEPHONE",
+          null,
+          44,
+          "bold 31px sans-serif",
+          "#e9e4cf",
+          "#3b5d59",
+          true,
+        );
+        const signMat = makeMaterial("telephone-lettering", "#ffffff", 0.8);
+        signMat.albedoTexture = texture;
+        signMat.emissiveTexture = texture;
+        signMat.emissiveColor.set(0.14, 0.14, 0.14);
+        const sign = MeshBuilder.CreatePlane(
+          root.name + "/telephone-lettering",
+          { width: 0.88, height: 0.18 },
+          this.scene,
+        );
+        sign.position.set(0, 0.855, -0.519);
+        add(sign, signMat);
+      }
     }
     const parts: Mesh[] = [];
     for (const [material, meshes] of batches) {
@@ -391,98 +572,202 @@ export class DamageSystem {
     }
     return parts;
   }
-  explosion(position: Vector3, power = 240) {
-    for (const prop of this.props) {
-      const d = distance(position, prop.mesh.position);
-      if (
+  explosion(position: Vector3, power = 240): void {
+    // Resolve every exposure before destroying cover; one blast cannot propagate through a wall it just broke.
+    const exposed = this.props.filter(
+      (prop) =>
         prop.health > 0 &&
-        d < 14 &&
-        !lineBlocked(position, prop.mesh.position, this.world.obstacles)
-      ) {
-        this.hit(prop, power * (1 - d / 14), position);
-        if (prop.health > 0) prop.burning = 8;
-      }
+        Vector3.Distance(position, prop.mesh.position) < 14 &&
+        !obstructed(this.scene, position, prop.mesh.position, {
+          roots: [prop.mesh],
+        }),
+    );
+    const physics = this.scene.getPhysicsEngine() as PhysicsEngineV2;
+    const bodies = physics
+      .getBodies()
+      .filter(
+        (body) =>
+          !body.isDisposed &&
+          body.getMotionType() === PhysicsMotionType.DYNAMIC,
+      )
+      .map((body) => ({
+        body,
+        p: body.transformNode.getAbsolutePosition().clone(),
+      }))
+      .filter(
+        ({ body, p }) =>
+          Vector3.Distance(p, position) < 14 &&
+          !obstructed(this.scene, position, p, { roots: [body.transformNode] }),
+      );
+    for (const prop of exposed) {
+      const scale = blastFalloff(
+        Vector3.Distance(position, prop.mesh.position),
+      );
+      this.hit(prop, power * scale, position, "blast");
+      if (scale > 0.28) this.ignite(prop, 8);
     }
-    for (const body of (
-      this.scene.getPhysicsEngine() as PhysicsEngineV2
-    ).getBodies()) {
-      const p = body.transformNode.position;
-      const d = Vector3.Distance(p, position);
-      if (d > 0 && d < 14 && !lineBlocked(position, p, this.world.obstacles))
-        body.applyImpulse(
-          p
-            .subtract(position)
-            .normalize()
-            .scale(power * 12 * (1 - d / 14)),
-          p,
-        );
+    for (const { body, p } of bodies) {
+      if (body.isDisposed) continue;
+      const delta = p.subtract(position),
+        scale = blastFalloff(delta.length()),
+        mass = body.getMassProperties().mass ?? 1;
+      body.applyImpulse(
+        delta
+          .add(new Vector3(0, 0.65, 0))
+          .normalize()
+          .scale(Math.min(9000, power * 0.04 * mass) * scale),
+        p,
+      );
     }
   }
-  update(dt: number, weather: string) {
+  ignite(prop: Prop, duration = 8): boolean {
+    if (
+      !MATERIAL_RESPONSE[prop.material].ignitable ||
+      !this.props.includes(prop)
+    )
+      return false;
+    prop.burning = Math.max(prop.burning, Math.min(30, duration));
+    this.fire.set(prop.id, prop.mesh.position);
+    return true;
+  }
+  extinguish(prop: Prop): void {
+    prop.burning = 0;
+    this.fire.remove(prop.id);
+  }
+  heatAt(position: Vector3): number {
+    let heat = 0;
     for (const prop of this.props)
-      if (prop.health > 0 && prop.burning > 0) {
-        prop.burning -= dt * (weather === "Rain" ? 5 : 1);
-        this.hit(prop, dt * 12, prop.mesh.position);
-        (prop.mesh.material as PBRMaterial).emissiveColor.set(0.8, 0.1, 0);
+      if (prop.burning > 0) {
+        const d = Vector3.Distance(prop.mesh.position, position);
+        if (
+          d < 2 &&
+          !obstructed(
+            this.scene,
+            prop.mesh.position.add(new Vector3(0, 0.5, 0)),
+            position,
+            { roots: [prop.mesh] },
+          )
+        )
+          heat += 10 * (1 - d / 2);
       }
+    return heat;
+  }
+  update(dt: number, weather: string): void {
+    const pending = this.pendingHits.splice(0);
+    for (const hit of pending)
+      this.hit(hit.prop, hit.amount, hit.point, "impact");
+    for (const prop of this.props)
+      if (prop.burning > 0) {
+        prop.burning = Math.max(
+          0,
+          prop.burning - dt * (weather === "Rain" ? 5 : 1),
+        );
+        if (prop.burning > 0) {
+          this.hit(prop, dt * 12, prop.mesh.position, "fire");
+          this.fire.set(prop.id, prop.mesh.position);
+        } else this.fire.remove(prop.id);
+      }
+    this.fire.update(dt);
     for (let i = this.debris.length - 1; i >= 0; i--) {
-      const d = this.debris[i];
-      d.life -= dt;
-      if (d.life <= 0) {
-        d.physics.dispose();
-        d.mesh.dispose();
-        this.debris.splice(i, 1);
-      }
+      this.debris[i].life -= dt;
+      if (this.debris[i].life <= 0) this.disposeDebris(i);
     }
   }
-  restore(ids: string[]) {
+  private disposeDebris(index: number): void {
+    const item = this.debris[index];
+    item.physics.dispose();
+    item.mesh.dispose();
+    this.debris.splice(index, 1);
+  }
+  private removeObstacle(prop: Prop): void {
+    if (!prop.obstacle) return;
+    const index = this.world.obstacles.indexOf(prop.obstacle);
+    if (index >= 0) this.world.obstacles.splice(index, 1);
+    prop.obstacle = undefined;
+  }
+  restore(ids: string[]): void {
     for (const id of ids) {
-      const p = this.props.find((p) => p.id === id);
-      if (p && p.health > 0) {
-        p.health = 0;
-        this.break(p);
-      }
+      const prop = this.props.find((value) => value.id === id);
+      if (prop && prop.health > 0) this.break(prop);
       this.destroyed.add(id);
     }
   }
-  serialize(): SavedProp[] {
-    return this.props.map((p) => ({
-      id: p.id,
-      x: p.mesh.position.x,
-      y: p.mesh.position.y,
-      z: p.mesh.position.z,
-      rotation: (p.mesh.rotationQuaternion || Quaternion.Identity()).asArray(),
-      material: p.material,
-      health: p.health,
-      burning: p.burning,
+  serialize(): SerializableProp[] {
+    return this.props.map((prop) => ({
+      id: prop.id,
+      x: prop.mesh.position.x,
+      y: prop.mesh.position.y,
+      z: prop.mesh.position.z,
+      rotation: (
+        prop.mesh.rotationQuaternion ??
+        Quaternion.FromEulerVector(prop.mesh.rotation)
+      ).asArray(),
+      material: prop.material,
+      kind: prop.kind,
+      health: prop.health,
+      burning: prop.burning,
+      vertices: prop.parts.map((part) =>
+        Array.from(part.getVerticesData(VertexBuffer.PositionKind) ?? []),
+      ),
     }));
   }
-  remove(prop: Prop) {
-    if (prop.health > 0) prop.physics.dispose();
+  remove(prop: Prop): void {
+    if (!this.props.includes(prop)) return;
+    this.extinguish(prop);
+    this.removeObstacle(prop);
+    if (!prop.physics.body.isDisposed) prop.physics.dispose();
+    for (let i = this.debris.length - 1; i >= 0; i--)
+      if (this.debris[i].owner === prop.id) this.disposeDebris(i);
     this.shadows.removeShadowCaster(prop.mesh, true);
-    prop.mesh.dispose(false, true);
-    this.props = this.props.filter((p) => p !== prop);
+    prop.mesh.dispose();
+    for (const material of prop.ownedMaterials) material.dispose(false, true);
+    this.props = this.props.filter((value) => value !== prop);
     this.destroyed.delete(prop.id);
+    this.pendingHits = this.pendingHits.filter((hit) => hit.prop !== prop);
   }
-  restoreState(saved: SavedProp[]) {
-    for (const d of this.debris) {
-      d.physics.dispose();
-      d.mesh.dispose();
-    }
-    this.debris = [];
-    for (const p of [...this.props]) this.remove(p);
+  restoreState(saved: SavedProp[]): void {
+    for (const prop of [...this.props]) this.remove(prop);
     this.destroyed.clear();
-    for (const s of saved) {
-      const offset = s.material === "glass" ? 0.575 : 0;
-      const p = this.spawn(
-        new Vector3(s.x, s.y - offset, s.z),
-        s.material,
-        s.id,
-        Quaternion.FromArray(s.rotation),
+    for (const state of saved) {
+      const snapshot = state as SerializableProp,
+        kind =
+          snapshot.kind === "fence" || snapshot.kind === "gate"
+            ? snapshot.kind
+            : "street",
+        offset =
+          kind !== "street" ? 0.35 : state.material === "glass" ? 0.575 : 0;
+      const prop = this.spawn(
+        new Vector3(state.x, state.y - offset, state.z),
+        state.material,
+        state.id,
+        Quaternion.FromArray(state.rotation),
+        kind,
       );
-      p.burning = s.burning;
-      p.health = Math.max(0, s.health);
-      if (p.health <= 0) this.break(p);
+      if (snapshot.vertices)
+        for (let i = 0; i < prop.parts.length; i++) {
+          const vertices = snapshot.vertices[i],
+            current = prop.parts[i].getVerticesData(VertexBuffer.PositionKind);
+          if (
+            vertices &&
+            current &&
+            vertices.length === current.length &&
+            vertices.every(Number.isFinite)
+          ) {
+            prop.parts[i].updateVerticesData(
+              VertexBuffer.PositionKind,
+              vertices,
+              true,
+            );
+            prop.parts[i].refreshBoundingInfo();
+          }
+        }
+      prop.health = Math.max(0, state.health);
+      if (prop.health <= 0) this.break(prop);
+      if (state.burning > 0) this.ignite(prop, state.burning);
     }
+  }
+  dispose(): void {
+    for (const prop of [...this.props]) this.remove(prop);
+    this.fire.dispose();
   }
 }

@@ -21,6 +21,8 @@ export interface HudState {
   heading: number;
   prompt: string;
   activity: string;
+  route: { x: number; z: number }[];
+  destination: string;
   police: { x: number; z: number }[];
   peds: { x: number; z: number }[];
   vehicles: { x: number; z: number }[];
@@ -32,6 +34,9 @@ export class UI {
   onAction = (action: string, value?: string) => {};
   map: HTMLCanvasElement;
   world: WorldContract | null = null;
+  settings: Record<string, string | number | boolean> = {};
+  private padButtons: boolean[] = [];
+  private padRepeat = 0;
   toastTimer: ReturnType<typeof setTimeout> | null = null;
   constructor() {
     document.querySelector("#ui")!.innerHTML = `
@@ -56,6 +61,61 @@ export class UI {
   }
   loading(s: string) {
     document.querySelector("#loading-text")!.textContent = s;
+  }
+  /** Standard controller menu navigation: D-pad/stick, A activate, B back. */
+  pollGamepad(pad: Gamepad | null, dt: number) {
+    const buttons = pad?.buttons.map((b) => b.pressed || b.value > 0.5) || [];
+    const fresh = (i: number) => buttons[i] && !this.padButtons[i];
+    let acted = false;
+    if (pad && this.ready && (!this.started || this.panel)) {
+      const scope = document.querySelector(
+        this.started ? "#panel" : "#welcome",
+      )!;
+      const targets = [
+        ...scope.querySelectorAll<HTMLElement>("button,input,select"),
+      ].filter((e) => !e.hidden && e.offsetParent !== null);
+      let index = targets.indexOf(document.activeElement as HTMLElement);
+      const direction =
+        buttons[12] || pad.axes[1] < -0.5
+          ? -1
+          : buttons[13] || pad.axes[1] > 0.5
+            ? 1
+            : 0;
+      this.padRepeat -= dt;
+      if (direction && this.padRepeat <= 0 && targets.length) {
+        index = (index + direction + targets.length) % targets.length;
+        targets[index].focus();
+        targets[index].scrollIntoView({ block: "nearest" });
+        this.padRepeat = 0.22;
+      }
+      if (!direction) this.padRepeat = 0;
+      const element = targets[index];
+      if (fresh(0)) {
+        if (!element) targets[0]?.focus();
+        else if (element instanceof HTMLSelectElement) {
+          element.selectedIndex =
+            (element.selectedIndex + 1) % element.options.length;
+          element.dispatchEvent(new Event("change", { bubbles: true }));
+        } else element.click();
+        acted = true;
+      }
+      const horizontal = fresh(14) ? -1 : fresh(15) ? 1 : 0;
+      if (
+        horizontal &&
+        element instanceof HTMLInputElement &&
+        element.type === "range"
+      ) {
+        horizontal > 0 ? element.stepUp() : element.stepDown();
+        element.dispatchEvent(new Event("change", { bubbles: true }));
+        acted = true;
+      }
+      if (fresh(1) && this.started) {
+        this.onAction("close");
+        acted = true;
+      }
+    }
+    this.padButtons = buttons;
+    return acted;
   }
   loaded() {
     this.ready = true;
@@ -89,22 +149,31 @@ export class UI {
     if (panel === "creative")
       el.innerHTML =
         head("The world is yours.", "CREATIVE MODE") +
-        `<p class="panel-sub">Build a little chaos. Every change happens in your sandbox.</p><div class="panel-scroll"><section><h3>YOUR NEXT RIDE</h3><div class="spawn-row"><select id="spawn-kind" aria-label="Vehicle"><option value="coupe">Coastal GT · Sports coupe</option><option value="sedan">Executive · Sedan</option><option value="suv">Trailrunner · SUV</option><option value="truck">Hauler · Pickup</option><option value="police">Patrol · Police cruiser</option><option value="motorcycle">Street twin · Motorcycle</option><option value="boat">Squalo study · Runabout</option><option value="helicopter">Utility · Helicopter</option><option value="plane">Trainer · Prop aircraft</option></select><button data-action="spawn">Spawn ↗</button></div><div class="button-row"><button data-action="repair">Repair ride</button><button data-action="remove-vehicle">Remove nearest</button></div><div class="button-row"><button data-action="prop">Spawn crate</button><button data-action="ped">Spawn civilian</button><button data-action="weapons">Refill weapons</button></div><div class="button-row"><button data-action="remove-prop">Remove prop</button><button data-action="remove-ped">Remove civilian</button><button data-action="clear-weapons">Clear weapons</button></div></section><section><h3>SET THE SCENE</h3><label>Time of day<input type="range" min="0" max="23.9" step=".1" value="17.5" data-change="time" aria-label="Time of day"/></label><label>Weather<select data-change="weather"><option>Clear</option><option>Rain</option><option>Haze</option></select></label><label>Pedestrian density<input type="range" min="0" max="1" step=".1" value="1" data-change="peds"/></label><label>Traffic density<input type="range" min="0" max="1" step=".1" value="1" data-change="traffic"/></label><label>Simulation speed<select data-change="sim-speed"><option value="1">Normal</option><option value=".5">Half speed</option><option value=".25">Quarter speed</option><option value="2">Double speed</option></select></label></section><section><h3>MAKE THE RULES</h3><label>Wanted level <select data-change="wanted"><option value="0">Clear</option><option value="1">★</option><option value="2">★★</option><option value="3">★★★</option><option value="4">★★★★</option><option value="5">★★★★★</option></select></label><small>Five-star GTA V fallback profile. VI parity unverified.</small><label>Police response<input type="checkbox" checked data-change="police"/></label><label>Invulnerability<input type="checkbox" data-change="god"/></label><label>Unlimited ammunition<input type="checkbox" data-change="ammo"/></label><label>Flight / noclip<input type="checkbox" data-change="noclip"/></label><button class="wide" data-action="reset">Reset encounter</button></section><section><h3>KEEP THIS MOMENT</h3><div class="button-row"><button data-action="save">Save sandbox</button><button data-action="load">Load sandbox</button></div></section></div>`;
+        `<p class="panel-sub">Build a little chaos. Every change happens in your sandbox.</p><div class="panel-scroll"><section><h3>YOUR NEXT RIDE</h3><div class="spawn-row"><select id="spawn-kind" aria-label="Vehicle"><option value="coupe">Coastal GT · Sports coupe</option><option value="sedan">Executive · Sedan</option><option value="suv">Trailrunner · SUV</option><option value="truck">Hauler · Pickup</option><option value="police">Patrol · Police cruiser</option><option value="motorcycle">Street twin · Motorcycle</option><option value="boat">Squalo study · Runabout</option><option value="helicopter">Utility · Helicopter</option><option value="plane">Trainer · Prop aircraft</option></select><button data-action="spawn">Spawn ↗</button></div><div class="button-row"><button data-action="repair">Repair ride</button><button data-action="remove-vehicle">Remove nearest</button></div><div class="button-row"><select id="prop-kind" aria-label="Prop"><option value="wood">Crate</option><option value="metal">Bin</option><option value="glass">Glass kiosk</option><option value="fence">Wood fence</option><option value="gate">Metal gate</option></select><button data-action="prop">Place prop</button><button data-action="ped">Spawn civilian</button><button data-action="weapons">Refill weapons</button></div><div class="button-row"><button data-action="remove-prop">Remove prop</button><button data-action="remove-ped">Remove civilian</button><button data-action="clear-weapons">Clear weapons</button></div><div class="button-row"><button data-action="ignite">Ignite nearest prop</button><button data-action="extinguish">Extinguish</button></div></section><section><h3>SET THE SCENE</h3><label>Time of day<input type="range" min="0" max="23.9" step=".1" value="17.5" data-change="time" aria-label="Time of day"/></label><label>Weather<select data-change="weather"><option>Clear</option><option>Rain</option><option>Haze</option></select></label><label>Pedestrian density<input type="range" min="0" max="1" step=".1" value="1" data-change="peds"/></label><label>Traffic density<input type="range" min="0" max="1" step=".1" value="1" data-change="traffic"/></label><label>Simulation speed<select data-change="sim-speed"><option value="1">Normal</option><option value=".5">Half speed</option><option value=".25">Quarter speed</option><option value="2">Double speed</option></select></label></section><section><h3>MAKE THE RULES</h3><label>Wanted level <select data-change="wanted"><option value="0">Clear</option><option value="1">★</option><option value="2">★★</option><option value="3">★★★</option><option value="4">★★★★</option><option value="5">★★★★★</option></select></label><small>Five-star GTA V fallback profile. VI parity unverified.</small><label>Police response<input type="checkbox" checked data-change="police"/></label><label>Invulnerability<input type="checkbox" data-change="god"/></label><label>Unlimited ammunition<input type="checkbox" data-change="ammo"/></label><label>Flight / noclip<input type="checkbox" data-change="noclip"/></label><button class="wide" data-action="reset">Reset encounter</button></section><section><h3>KEEP THIS MOMENT</h3><div class="button-row"><button data-action="save">Save sandbox</button><button data-action="load">Load sandbox</button></div></section></div>`;
     if (panel === "map")
       el.innerHTML =
         head("Somewhere to go.", "WORLD MAP") +
-        `<p class="panel-sub">Central district prototype · Additional regions remain unbuilt.</p><canvas id="bigmap" width="620" height="420"></canvas><input id="location-search" placeholder="Search locations…" aria-label="Search locations"/><div id="locations">${this.world?.locations.map((l) => `<button data-action="teleport" data-value="${l.id}"><span>${l.name}<small>${l.type}</small></span>↗</button>`).join("")}</div>`;
+        `<p class="panel-sub">Explore the connected district. Set a road route or use sandbox fast travel.</p><button data-action="clear-route">Clear route</button><canvas id="bigmap" width="620" height="420"></canvas><input id="location-search" placeholder="Search locations…" aria-label="Search locations"/><div id="locations">${this.world?.locations.map((l) => `<div class="location-row"><button data-action="route" data-value="${l.id}"><span>${l.name}<small>${l.type}</small></span>Route →</button><button data-action="teleport" data-value="${l.id}" aria-label="Fast travel to ${l.name}">Travel ↗</button></div>`).join("")}</div>`;
     if (panel === "pause" || panel === "settings")
       el.innerHTML =
         head("Take a breath.", "PAUSED") +
-        `<p class="panel-sub">The world will be here when you get back.</p><button class="primary wide" data-action="close">RESUME <span>→</span></button><div class="button-row"><button data-action="save">Save sandbox</button><button data-action="load">Load sandbox</button></div><section><h3>CONTROLS</h3><div class="controls-grid"><kbd>W A S D</kbd><span>Move / steer</span><kbd>SHIFT</kbd><span>Sprint / aircraft lift</span><kbd>SPACE</kbd><span>Jump / handbrake</span><kbd>E</kbd><span>Enter, exit, interact</span><kbd>C</kbd><span>Crouch / aircraft descend</span><kbd>MOUSE</kbd><span>Look · click world to capture</span><kbd>RMB / LMB</kbd><span>Aim / fire</span><kbd>1 2 3 / R</kbd><span>Weapon / reload</span><kbd>TAB</kbd><span>Jason / Lucia</span><kbd>G / H</kbd><span>Recover vehicle / horn</span><kbd>M / F2</kbd><span>Map / creative mode</span></div></section><section><h3>DISPLAY & AUDIO</h3><label>Quality<select data-change="quality"><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select></label><label>Sound<input type="checkbox" checked data-change="sound"/></label><label>Performance display<input type="checkbox" data-change="stats"/></label><label>Remap action<select id="binding-action"><option value="forward">Forward</option><option value="back">Back</option><option value="left">Left</option><option value="right">Right</option><option value="sprint">Sprint</option><option value="jump">Jump</option><option value="interact">Interact</option><option value="crouch">Crouch</option><option value="reload">Reload</option><option value="switch">Switch</option><option value="map">Map</option><option value="creative">Creative</option><option value="repair">Repair</option><option value="horn">Horn</option></select></label><label>New key code<input type="text" placeholder="KeyW or Space" data-change="bind-key"/></label><small>Use keyboard codes such as KeyF, Space, ShiftLeft. Existing mappings swap when needed.</small></section>`;
+        `<p class="panel-sub">The world will be here when you get back.</p><button class="primary wide" data-action="close">RESUME <span>→</span></button><div class="button-row"><button data-action="save">Save sandbox</button><button data-action="load">Load sandbox</button></div><section><h3>CONTROLS</h3><div class="controls-grid"><kbd>W A S D</kbd><span>Move / steer</span><kbd>SHIFT</kbd><span>Sprint / aircraft lift</span><kbd>SPACE</kbd><span>Jump / handbrake</span><kbd>E</kbd><span>Enter, exit, interact</span><kbd>C</kbd><span>Crouch / aircraft descend</span><kbd>MOUSE</kbd><span>Look · click world to capture</span><kbd>RMB / LMB</kbd><span>Aim / fire</span><kbd>F / RB</kbd><span>Melee on foot</span><kbd>1 2 3 / R</kbd><span>Weapon / reload</span><kbd>TAB</kbd><span>Jason / Lucia</span><kbd>G / H</kbd><span>Recover vehicle / horn</span><kbd>M / F2</kbd><span>Map / creative mode</span></div></section><section><h3>DISPLAY & AUDIO</h3><label>Quality<select data-change="quality"><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select></label><label>Sound<input type="checkbox" checked data-change="sound"/></label><label>Performance display<input type="checkbox" data-change="stats"/></label><label>Remap action<select id="binding-action"><option value="forward">Forward</option><option value="back">Back</option><option value="left">Left</option><option value="right">Right</option><option value="sprint">Sprint</option><option value="jump">Jump</option><option value="interact">Interact</option><option value="crouch">Crouch</option><option value="reload">Reload</option><option value="switch">Switch</option><option value="map">Map</option><option value="creative">Creative</option><option value="repair">Repair</option><option value="horn">Horn</option><option value="melee">Melee</option></select></label><label>New key code<input type="text" placeholder="KeyW or Space" data-change="bind-key"/></label><small>Use keyboard codes such as KeyF, Space, ShiftLeft. Existing mappings swap when needed.</small></section>`;
+    for (const element of el.querySelectorAll<
+      HTMLInputElement | HTMLSelectElement
+    >("[data-change]")) {
+      const value = this.settings[element.dataset.change!];
+      if (value === undefined) continue;
+      if (element instanceof HTMLInputElement && element.type === "checkbox")
+        element.checked = Boolean(value);
+      else element.value = String(value);
+    }
     if (panel === "map") {
       document
         .querySelector("#location-search")
         ?.addEventListener("input", (e) => {
           const term = (e.target as HTMLInputElement).value.toLowerCase();
           document
-            .querySelectorAll<HTMLElement>("#locations button")
+            .querySelectorAll<HTMLElement>("#locations .location-row")
             .forEach(
               (b) => (b.hidden = !b.textContent?.toLowerCase().includes(term)),
             );
@@ -142,7 +211,7 @@ export class UI {
     text("ammo", `${s.ammo} / ${s.reserve}`);
     text("money", `$${s.cash.toLocaleString()}`);
     text("prompt", s.prompt);
-    text("activity", s.activity || "Your city. Your rules.");
+    text("activity", s.destination || s.activity || "Your city. Your rules.");
     text(
       "district",
       s.position.x > 155
@@ -167,9 +236,16 @@ export class UI {
     const w = canvas.width,
       h = canvas.height;
     const big = w > 300;
-    const zoom = big ? 0.82 : 1.5;
-    const ox = big ? 0 : s.position.x,
-      oz = big ? 0 : s.position.z;
+    const points = this.world?.roads || [];
+    const minX = Math.min(-215, ...points.map((p) => p.x)),
+      maxX = Math.max(260, ...points.map((p) => p.x));
+    const minZ = Math.min(-250, ...points.map((p) => p.z)),
+      maxZ = Math.max(250, ...points.map((p) => p.z));
+    const zoom = big
+      ? Math.min((w - 50) / (maxX - minX), (h - 50) / (maxZ - minZ))
+      : 1.5;
+    const ox = big ? (minX + maxX) / 2 : s.position.x,
+      oz = big ? (minZ + maxZ) / 2 : s.position.z;
     const xy = (p: { x: number; z: number }) => [
       w / 2 + (p.x - ox) * zoom,
       h / 2 - (p.z - oz) * zoom,
@@ -186,18 +262,28 @@ export class UI {
     ctx.lineWidth = 12;
     ctx.strokeStyle = "#72807c";
     ctx.beginPath();
-    for (const x of [-144, -72, 0, 72, 144]) {
-      ctx.moveTo(x, -240);
-      ctx.lineTo(x, 240);
-    }
-    for (const z of [-216, -144, -72, 0, 72, 144, 216]) {
-      ctx.moveTo(-215, z);
-      ctx.lineTo(155, z);
-    }
+    const roads = this.world?.roads || [];
+    const byId = new Map(roads.map((p) => [p.id, p]));
+    for (const node of roads)
+      for (const id of node.next) {
+        const next = byId.get(id);
+        if (!next) continue;
+        ctx.moveTo(node.x, node.z);
+        ctx.lineTo(next.x, next.z);
+      }
     ctx.stroke();
     ctx.fillStyle = "#465450";
     for (const o of this.world?.obstacles || [])
       ctx.fillRect(o.x - o.w / 2, o.z - o.d / 2, o.w, o.d);
+    if (s.route.length > 1) {
+      ctx.beginPath();
+      ctx.strokeStyle = "#c6a1ff";
+      ctx.lineWidth = big ? 4 / zoom : 3 / zoom;
+      s.route.forEach((p, i) =>
+        i ? ctx.lineTo(p.x, p.z) : ctx.moveTo(p.x, p.z),
+      );
+      ctx.stroke();
+    }
     ctx.restore();
     const dot = (p: { x: number; z: number }, color: string, r: number) => {
       const [x, y] = xy(p);

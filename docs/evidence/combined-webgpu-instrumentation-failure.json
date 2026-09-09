@@ -1,0 +1,6 @@
+{
+  "errors": [
+    "page.evaluate: TypeError: Cannot read properties of undefined (reading 'length')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:306)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at snapshot (/Users/timmymckeegan/Desktop/gpt-gta-6/tests/integrated-checkpoint.mjs:8:25)\n    at capture (/Users/timmymckeegan/Desktop/gpt-gta-6/tests/integrated-checkpoint.mjs:9:44)\n    at /Users/timmymckeegan/Desktop/gpt-gta-6/tests/integrated-checkpoint.mjs:15:13"
+  ],
+  "checks": []
+}

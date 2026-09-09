@@ -1,26 +1,29 @@
-# Initial playable checkpoint
+# Second playable checkpoint
 
-**Ready for local playtesting. The full goal is not complete.** Nothing has been pushed, deployed or configured for hosting.
+**Ready for further local playtesting; the full requested goal remains incomplete.** Nothing has been pushed, deployed or configured for hosting.
 
-## What can be played
+## Playable additions
 
-The central Vice City study has connected streets, sidewalks, traffic and pedestrians, an accessible shop and garage, beach and marina. Jason and Lucia use original skinned character representations. Players can walk, sprint, crouch, jump, switch characters, enter vehicles, drive, crash and damage vehicles, attract police, be arrested and resume play. Boats and helicopters have also been exercised through the normal controls; trainer takeoff has actual Havok test coverage. Creative tools provide spawning/removal, map search/teleport, time/weather, density, wanted rules, cheats, simulation speed and browser-local saves. Vehicle saves preserve deformed geometry and component damage.
+The original coastal district now connects to an authored western market, bungalow neighborhood, southern workshops and a small explicitly creative training compound. Real GPU mesh and Havok collider residency rebuilds scenery as needed. A 508-node road graph powers traffic and user map routes.
 
-The central loop has separate normal-control evidence for witnessed crash/reporting/pursuit, actual police arrival, arrest/recovery and sandbox-assisted loss of contact. Continuous driving evasion and vehicle-switch identification need more testing. Do not read this checkpoint as complete GTA VI behavior or geography.
+Jason/Lucia can mantle low ledges, respect crouch headroom, blend into a visible driver seat and exit only through a capsule-clear path. Combat now has hand-attached weapons, conserved magazines, muzzle obstruction, melee, physical grenades, breakable barriers, material-aware fire/destruction and Babylon constrained ragdoll reactions. Visible patrol/SWAT crews, foot pursuit, compliance/resistance, vehicle/face memory, roadblocks and a physical observation helicopter deepen police response.
 
-## Checks completed
+Creative controls add material/barrier placement, ignition/extinction and complete weapon refill/clear. Saves preserve armor, stable civilians, all weapon magazines/reserves, damaged prop geometry and current settings. Controller menu navigation, render interpolation, rain, night illumination and bounded spatial audio are integrated.
 
-- 29 behavior, real-Havok, rig and input tests pass.
-- TypeScript and production build pass; the main JavaScript bundle still produces a size warning.
-- Updated production WebGPU smoke at 1920 × 1080: normal driving/crash/switch/pursuit, save/load, boat propulsion and helicopter lift; zero console errors.
-- Independent updated WebGL2 audit at 1920 × 1080: core loop, police response, weather, pause, map filtering, visible moving creative civilians, vehicle ID/component save round trips and removal of unsaved custom entities; zero errors or warnings.
-- Earlier independent outcome audit verifies one-star BUSTED/recovery and search → cooldown → clear after a map-assisted relocation.
-- Screenshots, raw audit records and logs are retained in `docs/evidence/`. Hardware and measurement limits are in `docs/performance.md`.
+## Verification
 
-## Open scope
+- **70 tests pass**, including actual Havok movement, vehicles, officers, grenades, barrier/destruction/navigation, ragdoll recovery/reset, streaming lifecycle and resource limits; input, interpolation, routing and malformed-save tests also pass.
+- TypeScript and production build pass. The large initial JS bundle still triggers a size warning.
+- Combined normal-control WebGPU audit at1920×1080 verifies visible seated driving (~23m/s), service braking/safe exit, map search/road route, pistol destruction of a physics crate, grenade flight/detonation, conserved ammunition, saved barrier/civilian/inventory restoration and night rain. Both final WebGPU and WebGL2 combined audits pass eight stages with zero errors, including grenade timers while creative is open. Consult `combined-webgpu.json`, `combined-webgl.json` and their logs.
+- Independent WebGL2 police audits verify physical arrival, visible dismount and compliant BUSTED/recovery at all five levels. A separate normal threat run verifies officer gunfire (health100→59.5), four tactical officers and a helicopter reaching58.27m. Initial failed mouse attempts are preserved; the first-press compatibility issue has since been fixed with pointer events. Some urban cruiser/foot routing remains rough.
+- Independent WebGPU world review at1440×900 traversed five places with zero errors. Real mesh/collider disposals and reload counters changed while retained CPU geometry bytes stayed constant. This is a short functional review, not a long-run memory result.
 
-The full Leonida map is still planned beyond this small district. Art remains stylized procedural reconstruction and does not meet the requested final realism. Foot officers, SWAT, military, tactical roadblocks/helicopters, full ragdolls and combat, complete animation/entry/exit/passenger interactions, additional activities, rigorous destruction/navigation updates, true streamed asset/chunk unloading, full world persistence and long-run profiling remain incomplete. Gamepad gameplay works in synthetic event tests; controller menu navigation and physical-device validation remain open.
+Browser evidence is under `docs/evidence/`. Initial harness mistakes (wrong projectile field and exit attempted above the safe-speed limit) are retained. They were corrected before the passing combined audit. Unit physics tests do not substitute for normal-controls browser evidence.
 
-The 30-minute memory/stability test and full performance gate have not passed. Short near-60 FPS samples are evidence only for those sampled scenes and conditions.
+## Remaining scope and risk
 
-See `docs/goal-objective.md`, `docs/feature-index.md` and `docs/continuation.md` for the continuing scope. Keep this build playable while expanding it.
+Only a small part of the planned Leonida map is built. The other five regions and most of Vice City remain unbuilt. Procedural assets remain visibly stylized and do not satisfy the requested final realism. Current police/tactical, weapon, melee/reload/door/passenger, swimming/water-region, service/activity and acoustic systems remain partial implementations, not GTA VI parity.
+
+GPU/physics residency is real, but CPU geometry remains resident (~58MB for current authored records), all procedural content code loads initially, and network asset modules are not implemented. Browser localStorage is still quota-limited. The 30-minute mixed traversal/pursuit/destruction stability and memory gate has not run to completion. Short near60FPS observations cannot establish that gate or the1080p median60/slowest1%30FPS target.
+
+Read `goal-objective.md`, `feature-index.md`, the dedicated implementation design documents and `continuation.md` before continuing. This checkpoint preserves a playable base for the full outstanding scope.

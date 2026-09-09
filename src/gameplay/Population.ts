@@ -5,13 +5,8 @@ import type { Vehicle, VehicleSystem } from "../vehicles/VehicleSystem";
 import { Character } from "./Character";
 import type { Player } from "./Player";
 import type { WantedSystem } from "./Wanted";
-interface Driver {
-  v: Vehicle;
-  target: number;
-  previous: number;
-  police: boolean;
-  stuck: number;
-}
+import { PoliceDirector, type Driver } from "./police/PoliceDirector";
+import type { Officer } from "./police/Officer";
 export interface Pedestrian {
   id: string;
   model: Character;
@@ -31,8 +26,11 @@ export class Population {
   policeEnabled = true;
   private rng = random(417);
   private ticks = 0;
-  private spawnTimer = 0;
-  private arrest = 0;
+  readonly police: PoliceDirector;
+  private nextPedId = 0;
+  onCharacterHit:
+    | ((model: Character, impulse: Vector3, fatal: boolean) => void)
+    | null = null;
   onArrest = () => {};
   onMessage = (s: string) => {};
   constructor(
@@ -43,6 +41,16 @@ export class Population {
     public player: Player,
     public wanted: WantedSystem,
   ) {
+    this.police = new PoliceDirector(
+      scene,
+      shadows,
+      world,
+      vehicles,
+      player,
+      wanted,
+    );
+    this.police.onArrest = () => this.onArrest();
+    this.police.onMessage = (message) => this.onMessage(message);
     for (let i = 0; i < 30; i++) {
       const roadX = [-144, -72, 0, 72, 144][i % 5];
       const x = roadX + (i % 2 ? 11 : -11);
@@ -56,17 +64,34 @@ export class Population {
       this.spawnDriver(node, false, i);
     }
   }
-  spawnPed(p: Vector3, i = this.pedestrians.length, creative = true) {
+  spawnPed(
+    p: Vector3,
+    i = this.nextPedId++,
+    creative = true,
+    stableId?: string,
+  ) {
+    this.nextPedId = Math.max(this.nextPedId, i + 1);
+    let id =
+      stableId && /^[A-Za-z0-9_.:-]{1,96}$/.test(stableId)
+        ? stableId
+        : "ped-" + i;
+    while (this.pedestrians.some((ped) => ped.id === id))
+      id = "ped-" + this.nextPedId++;
+    const appearance = /^ped-(\d+)$/.test(id)
+      ? Number(id.slice(4))
+      : [...id].reduce((sum, c) => sum + c.charCodeAt(0), 0);
     const model = new Character(
       this.scene,
       this.shadows,
-      "ped-" + i,
-      ["#b26759", "#e3d7ad", "#517e88", "#233e50", "#d09450", "#e0ddd3"][i % 6],
-      i % 3 === 0,
+      id,
+      ["#b26759", "#e3d7ad", "#517e88", "#233e50", "#d09450", "#e0ddd3"][
+        appearance % 6
+      ],
+      appearance % 3 === 0,
     );
     model.position(p);
     const ped: Pedestrian = {
-      id: "ped-" + i,
+      id,
       model,
       target: p.add(new Vector3(0, 0, 24)),
       health: 100,
@@ -99,14 +124,16 @@ export class Population {
       this.pedestrians.some(
         (ped) =>
           ped.health > 0 &&
+          ped.model.root.isEnabled() &&
+          !ped.model.root.metadata?.ragdollActive &&
           distance(ped.model.root.position, p) < range &&
           !lineBlocked(ped.model.root.position, p, this.world.obstacles),
       ) ||
-      this.drivers.some(
-        (d) =>
-          d.police &&
-          distance(d.v.root.position, p) < 100 &&
-          !lineBlocked(d.v.root.position, p, this.world.obstacles),
+      this.officers.some(
+        (o) =>
+          o.health > 0 &&
+          distance(o.position, p) < 100 &&
+          !lineBlocked(o.position, p, this.world.obstacles),
       )
     );
   }
@@ -121,9 +148,16 @@ export class Population {
       }
   }
   hurtPed(ped: Pedestrian, damage: number) {
+    if (ped.health <= 0 || !Number.isFinite(damage) || damage <= 0) return;
     ped.health = Math.max(0, ped.health - damage);
     ped.panic = 20;
-    if (ped.health <= 0) {
+    const impulse = ped.model.root.position
+      .subtract(this.player.position)
+      .normalize()
+      .scale(Math.min(10, damage * 0.15));
+    impulse.y = 1.4;
+    this.onCharacterHit?.(ped.model, impulse, ped.health <= 0);
+    if (ped.health <= 0 && !this.onCharacterHit) {
       ped.model.root.rotation.z = Math.PI / 2;
       ped.model.root.position.y = 0.35;
       ped.activity = "injured";
@@ -132,45 +166,11 @@ export class Population {
   }
   update(dt: number) {
     this.ticks += dt;
-    this.spawnTimer -= dt;
     const position = this.player.position;
-    const police = this.drivers.filter((d) => d.police && !d.v.occupied);
-    let seen = false;
-    for (const d of police) {
-      const range = this.wanted.stars > 2 ? 125 : 90;
-      if (
-        distance(d.v.root.position, position) < range &&
-        !lineBlocked(d.v.root.position, position, this.world.obstacles) &&
-        this.wanted.recognizes(
-          position,
-          this.player.vehicle?.id || null,
-          this.player.name,
-        )
-      ) {
-        seen = true;
-        break;
-      }
-    }
-    this.wanted.update(
-      dt,
-      position,
-      seen,
-      this.player.vehicle?.id || null,
-      this.player.name,
-    );
-    const desiredPolice = this.policeEnabled
-      ? Math.min(8, this.wanted.stars * 2)
-      : 0;
-    if (police.length < desiredPolice && this.spawnTimer <= 0) {
-      const nodes = this.world.roads.filter(
-        (n) => distance(n, position) > 90 && distance(n, position) < 210,
-      );
-      const node = nodes[Math.floor(this.rng() * nodes.length)];
-      if (node) this.spawnDriver(node, true, 0);
-      this.spawnTimer = 3;
-    }
+    this.police.onCharacterHit = this.onCharacterHit;
+    this.police.update(dt, this.drivers, this.policeEnabled);
     for (const d of this.drivers) {
-      if (d.v.occupied) continue;
+      if (d.police || d.v.occupied) continue;
       if (
         !d.police &&
         this.drivers.indexOf(d) > Math.floor(12 * this.trafficDensity)
@@ -190,36 +190,16 @@ export class Population {
       if (distance(p, target) < 9) {
         const options = target.next.filter((n) => n !== d.previous);
         d.previous = target.id;
-        if (d.police && this.wanted.stars) {
-          const goal = this.wanted.lastKnown;
-          options.sort(
-            (a, b) =>
-              distance(this.world.roads.find((n) => n.id === a)!, goal) -
-              distance(this.world.roads.find((n) => n.id === b)!, goal),
-          );
-          d.target = options[0] ?? target.next[0];
-        } else
-          d.target =
-            options[Math.floor(this.rng() * options.length)] ?? target.next[0];
+        d.target =
+          options[Math.floor(this.rng() * options.length)] ?? target.next[0];
         target = this.world.roads.find((n) => n.id === d.target) || target;
       }
-      let tx = target.x,
+      const tx = target.x,
         tz = target.z;
-      const pursuit = d.police && this.wanted.stars > 0;
-      if (
-        pursuit &&
-        distance(p, this.wanted.lastKnown) < 40 &&
-        !lineBlocked(p, this.wanted.lastKnown, this.world.obstacles)
-      ) {
-        tx = this.wanted.lastKnown.x;
-        tz = this.wanted.lastKnown.z;
-      }
       const heading = Math.atan2(d.v.root.forward.x, d.v.root.forward.z);
       const error = angleDelta(heading, Math.atan2(tx - p.x, tz - p.z));
       const steer = clamp(error * 1.8, -1, 1);
-      let cruise = pursuit
-        ? 18 + this.wanted.stars * 2
-        : 9 + (this.drivers.indexOf(d) % 5);
+      let cruise = 9 + (this.drivers.indexOf(d) % 5);
       if (Math.abs(error) > 0.4) cruise = Math.min(cruise, 5);
       for (const other of this.vehicles.list) {
         if (other === d.v) continue;
@@ -235,7 +215,6 @@ export class Population {
       }
       // Deterministic alternating 10 second signal phases on the authored orthogonal grid.
       if (
-        !pursuit &&
         distance(p, target) < 21 &&
         Math.abs(tx - p.x) > Math.abs(tz - p.z) !==
           (Math.floor(this.ticks / 10) % 2 === 0)
@@ -250,28 +229,13 @@ export class Population {
         lift: 0,
       });
       if (d.stuck > 8) d.stuck = 0;
-      if (pursuit && distance(p, position) < 9) {
-        if (this.player.vehicle && Math.abs(this.player.vehicle.speed) > 1.5)
-          this.arrest = 0;
-        else this.arrest += dt / police.length;
-        if (this.arrest > 4) {
-          this.arrest = 0;
-          this.onArrest();
-        }
-        if (
-          this.wanted.stars >= 3 &&
-          distance(p, position) > 4 &&
-          this.ticks % 1 < dt
-        )
-          this.player.hurt(this.wanted.stars * 1.6);
-      }
     }
-    if (!seen) this.arrest = 0;
     for (let i = 0; i < this.pedestrians.length; i++) {
       const ped = this.pedestrians[i];
       const active = ped.creative || i < 30 * this.density;
       ped.model.root.setEnabled(active);
-      if (!active || ped.health <= 0) continue;
+      if (!active || ped.health <= 0 || ped.model.root.metadata?.ragdollActive)
+        continue;
       const p = ped.model.root.position;
       ped.panic = Math.max(0, ped.panic - dt);
       const far = distance(p, position) > 150;
@@ -317,10 +281,7 @@ export class Population {
     }
   }
   reset() {
-    for (const d of this.drivers.filter((d) => d.police))
-      this.vehicles.remove(d.v);
-    this.drivers = this.drivers.filter((d) => !d.police);
-    this.wanted.setLevel(0, this.player.position);
+    this.police.reset(this.drivers);
     for (const p of this.pedestrians) {
       p.health = 100;
       p.panic = 0;
@@ -328,7 +289,20 @@ export class Population {
       p.model.position(p.home);
     }
   }
+  get officers() {
+    return this.police.officers;
+  }
+  hurtOfficer(officer: Officer, damage: number) {
+    this.police.onCharacterHit = this.onCharacterHit;
+    this.police.hurtOfficer(officer, damage);
+  }
+  resist(seconds = 12) {
+    this.police.resist(seconds);
+  }
+  get policeStats() {
+    return this.police.stats;
+  }
   get arrestProgress() {
-    return this.arrest / 4;
+    return this.police.arrestProgress;
   }
 }

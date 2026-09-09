@@ -43,3 +43,15 @@ Pedestrian and traffic targets are bounded in the initial district; debris expir
 ## Verified integration defects
 
 Object spread on Babylon vectors discarded public x/z getters; explicit public coordinate copies fixed police last-known routing and have a regression test. Passing a plain object cast to Vector3 into `Vector3.add()` produced non-finite audio coordinates and froze the loop; a real Vector3 and finite guards fixed it. Both failures were found by independent normal-control tests and retested in a frozen production build.
+
+## Second checkpoint modules
+
+- `gameplay/police/`: dedicated response director, rules/navigation and controller-backed officers. Population owns ambient actors and delegates police lifecycle.
+- `gameplay/combat/`: per-weapon inventory/held geometry, combined visual+Havok rays, real grenade bodies, fire presentation, material rules and Babylon V2 constrained ragdoll lifecycle.
+- `gameplay/MovementQueries.ts`: standing capsule proximity/casts shared by safe exit and ledge planning. Player follows a checked ledge path through its Havok character controller.
+- `gameplay/Navigation.ts`: directed road A* and periodically refreshed user waypoint route.
+- `core/PhysicsInterpolation.ts`: capture physical states around fixed steps, draw interpolated transforms, restore physical transforms after render. Recovery invalidates both positional and rotational history even on a render with no physics step.
+- `core/Atmosphere.ts` / `Audio.ts`: bounded local rain/streetlights and spatial procedural voices. Presentation does not change fixed step size.
+- `world/ChunkResidency.ts`: immutable CPU geometry/collider records with actual render-buffer/shape creation and disposal. Player safety radius220m; moving remote vehicle radius90m; hysteresis310/150m. The 144m cells describe coverage; visual operations budget12 per update. Network/CPU eviction remains unimplemented.
+
+Creative mode keeps physical simulation active. Combat autonomous timers/reactions/fire exposure keep ticking while its fire input is disabled. Map/pause stop physical simulation. Death blocks movement actions/vehicle input while world simulation and recovery timers continue. The main composition module remains larger than desired and should continue to shed encounter/service/persistence orchestration into dedicated modules.

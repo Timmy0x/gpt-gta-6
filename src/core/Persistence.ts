@@ -12,6 +12,8 @@ export interface SavedProp {
   material: "wood" | "metal" | "glass";
   health: number;
   burning: number;
+  kind?: "street" | "fence" | "gate";
+  vertices?: number[][];
 }
 export interface SaveData {
   version: 1;
@@ -22,6 +24,7 @@ export interface SaveData {
     z: number;
     character: string;
     health: number;
+    armor?: number;
   };
   time: number;
   weather: string;
@@ -29,8 +32,15 @@ export interface SaveData {
   vehicles: (LegacyVehicleSnapshot | SerializableVehicle)[];
   destroyed: string[];
   props?: SavedProp[];
-  civilians?: { x: number; y: number; z: number; health: number }[];
+  civilians?: {
+    id?: string;
+    x: number;
+    y: number;
+    z: number;
+    health: number;
+  }[];
   settings: Record<string, number | boolean | string>;
+  combat?: { selected: number; magazines: number[]; reserves: number[] };
 }
 export class Persistence {
   static save(data: Omit<SaveData, "version" | "savedAt">) {
@@ -84,6 +94,39 @@ export class Persistence {
       )
         return null;
       for (const vehicle of s.vehicles) validateVehicleSnapshot(vehicle);
+      const vehicleIds = s.vehicles
+        .map((v: SaveData["vehicles"][number]) => v.id)
+        .filter(Boolean);
+      if (
+        new Set(vehicleIds).size !== vehicleIds.length ||
+        s.destroyed.some((id: unknown) => typeof id !== "string")
+      )
+        return null;
+      if (
+        s.player.armor !== undefined &&
+        (!Number.isFinite(s.player.armor) ||
+          s.player.armor < 0 ||
+          s.player.armor > 100)
+      )
+        return null;
+      if (
+        s.combat &&
+        (!Number.isInteger(s.combat.selected) ||
+          s.combat.selected < 0 ||
+          s.combat.selected > 2 ||
+          !Array.isArray(s.combat.magazines) ||
+          !Array.isArray(s.combat.reserves) ||
+          s.combat.magazines.length !== 3 ||
+          s.combat.reserves.length !== 3 ||
+          [...s.combat.magazines, ...s.combat.reserves].some(
+            (n) => !Number.isInteger(n) || n < 0 || n > 1000000,
+          ))
+      )
+        return null;
+      if (
+        s.combat?.magazines.some((n: number, i: number) => n > [12, 30, 3][i])
+      )
+        return null;
       if (
         s.props &&
         (!Array.isArray(s.props) ||
@@ -92,6 +135,20 @@ export class Persistence {
             (p: SavedProp) =>
               !p ||
               typeof p.id !== "string" ||
+              !Array.isArray(p.rotation) ||
+              p.rotation.length !== 4 ||
+              p.rotation.reduce((sum, n) => sum + n * n, 0) < 1e-9 ||
+              (p.kind !== undefined &&
+                !["street", "fence", "gate"].includes(p.kind)) ||
+              (p.vertices !== undefined &&
+                (!Array.isArray(p.vertices) ||
+                  p.vertices.length > 100 ||
+                  p.vertices.some(
+                    (a) =>
+                      !Array.isArray(a) ||
+                      a.length > 50000 ||
+                      a.some((n) => !Number.isFinite(n)),
+                  ))) ||
               !["wood", "metal", "glass"].includes(p.material) ||
               [p.x, p.y, p.z, p.health, p.burning, ...(p.rotation || [])].some(
                 (n) => !Number.isFinite(n),
@@ -100,15 +157,27 @@ export class Persistence {
       )
         return null;
       if (
+        s.props &&
+        new Set(s.props.map((p: SavedProp) => p.id)).size !== s.props.length
+      )
+        return null;
+      if (
         s.civilians &&
         (!Array.isArray(s.civilians) ||
           s.civilians.length > 60 ||
           s.civilians.some(
             (p: NonNullable<SaveData["civilians"]>[number]) =>
-              !p || [p.x, p.y, p.z, p.health].some((n) => !Number.isFinite(n)),
+              !p ||
+              (p.id !== undefined &&
+                (typeof p.id !== "string" || p.id.length > 120)) ||
+              [p.x, p.y, p.z, p.health].some((n) => !Number.isFinite(n)),
           ))
       )
         return null;
+      const civilianIds = (s.civilians || [])
+        .map((p: { id?: string }) => p.id)
+        .filter(Boolean);
+      if (new Set(civilianIds).size !== civilianIds.length) return null;
       return s;
     } catch {
       return null;

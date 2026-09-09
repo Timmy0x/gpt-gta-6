@@ -747,12 +747,25 @@ test("stable IDs reject collisions; invalid restoration leaves existing body int
   // Legacy saves did not contain damage geometry. Migration does not fabricate random dents.
   assert.ok(legacy.model.wheels.every((w) => !w.damaged));
   assert.ok(legacy.model.windows.every((w) => w.isEnabled()));
-  for (const kind of Object.keys(VEHICLE_TUNING) as (keyof typeof VEHICLE_TUNING)[]) {
-    const sample = system.spawn(kind, new Vector3(100, 10, 100), .4, `roundtrip-${kind}`);
+  for (const kind of Object.keys(
+    VEHICLE_TUNING,
+  ) as (keyof typeof VEHICLE_TUNING)[]) {
+    const sample = system.spawn(
+      kind,
+      new Vector3(100, 10, 100),
+      0.4,
+      `roundtrip-${kind}`,
+    );
     system.damage(sample, 65);
-    const snapshot = JSON.parse(JSON.stringify(system.serialize(sample))) as SerializableVehicle;
+    const snapshot = JSON.parse(
+      JSON.stringify(system.serialize(sample)),
+    ) as SerializableVehicle;
     const loaded = system.restore(snapshot);
-    assert.deepEqual(system.serialize(loaded).damage, snapshot.damage, `${kind} damage layout survives restoration`);
+    assert.deepEqual(
+      system.serialize(loaded).damage,
+      snapshot.damage,
+      `${kind} damage layout survives restoration`,
+    );
     system.remove(loaded);
   }
   system.update(1 / 60);

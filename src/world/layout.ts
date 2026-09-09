@@ -5,11 +5,11 @@ export const CITY_LAYOUT = {
   roadWidth: 14,
   sidewalkWidth: 3,
   blockPitch: 72,
-  xStreets: [-216, -144, -72, 0, 72, 144],
-  zStreets: [-216, -144, -72, 0, 72, 144, 216],
+  xStreets: [-432, -360, -288, -216, -144, -72, 0, 72, 144],
+  zStreets: [-288, -216, -144, -72, 0, 72, 144, 216],
   beachStart: 155,
   shoreline: 210,
-  districtBounds: { minX: -230, maxX: 210, minZ: -252, maxZ: 252 },
+  districtBounds: { minX: -552, maxX: 210, minZ: -310, maxZ: 252 },
 } as const;
 
 /**
@@ -75,6 +75,34 @@ export function createLaneGraph(): RoadNode[] {
 }
 
 export const CENTRAL_LOCATIONS: WorldLocation[] = [
+  {
+    id: "palma-market",
+    name: "Mercado Palma · authored district",
+    x: -324,
+    z: 18,
+    type: "market",
+  },
+  {
+    id: "mangrove-estates",
+    name: "Mangrove Estates · authored neighborhood",
+    x: -408.5,
+    z: -63.5,
+    type: "district",
+  },
+  {
+    id: "south-wharf",
+    name: "South Wharf workshops",
+    x: -34,
+    z: -279,
+    type: "district",
+  },
+  {
+    id: "restricted-compound",
+    name: "Coastal Reserve · creative facility",
+    x: -449,
+    z: 144,
+    type: "military",
+  },
   { id: "ocean-beach", name: "Ocean Beach", x: 180, z: -30, type: "beach" },
   { id: "ocean-drive", name: "Ocean Drive", x: 144, z: -80, type: "district" },
   { id: "nacre-hotel", name: "Nacre Hotel", x: 110, z: -58, type: "landmark" },
@@ -104,6 +132,18 @@ export const CENTRAL_LOCATIONS: WorldLocation[] = [
     type: "police",
   },
 ];
+
+/** Creative local training annex; does not replace the planned regional military base. */
+export const RESTRICTED_COMPOUND = {
+  id: "coastal-reserve-annex",
+  minX: -548,
+  maxX: -456,
+  minZ: 78,
+  maxZ: 198,
+  entrance: { x: -452, z: 144 },
+  warningRadius: 16,
+  classification: "creative-mode addition",
+} as const;
 
 export function seededRandom(seed: number): () => number {
   let state = seed >>> 0;

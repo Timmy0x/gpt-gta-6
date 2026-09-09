@@ -1,0 +1,10 @@
+{
+  "entry": "/assets/index-kfpWzMeq.js",
+  "sha256": "d93125df258fd0ae3e0c2619a69b33f5a911e4326fec55ffb3559601c5ca12df",
+  "tests": 70,
+  "backends": [
+    "WebGPU",
+    "WebGL2"
+  ],
+  "note": "Final source production bundle. See separate normal-control reports and retained earlier build evidence. No30minuteperformancegate."
+}

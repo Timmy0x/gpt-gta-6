@@ -661,3 +661,25 @@ input[type="text"],
     display: none;
   }
 }
+
+.location-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+#locations .location-row > button:first-child {
+  flex: 1;
+  min-width: 0;
+}
+#locations .location-row > button:last-child {
+  width: 92px;
+  flex: 0 0 92px;
+  font-size: 11px;
+  justify-content: center;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #baf2d1;
+  outline-offset: 3px;
+}

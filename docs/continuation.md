@@ -31,3 +31,11 @@ Map search used `hidden` but button CSS overrode it; source now enforces `[hidde
 7. Perform isolated 30-minute traversal/pursuit/destruction profiling at 1080p, median60/1%low30 targets and bounded memory. Resolve failures rather than lowering targets.
 
 The full source objective is copied to `docs/goal-objective.md`; read it and the feature index before continuing. Evidence of one passing loop never replaces the full map, feature, visual and stability requirements.
+
+## Second checkpoint continuation (supersedes earlier next-step statuses)
+
+70 tests and the production build pass. The combined code now includes police/Combat submodules, MovementQueries, directed waypoint Navigation, PhysicsInterpolation, Atmosphere/audio, and real ChunkResidency. The parent fixed integration defects in no-step jump buffering, recovery interpolation, autonomous grenade/ragdoll updates behind creative UI, malformed/duplicate save validation, dead-state controls, paused camera, race material disposal, destroyed-prop removal and burning-wreck extinction. Ragdoll reset is wired before reset/load; save captures every weapon and armor. Read the new police/combat/movement/world design documents.
+
+Current browser commands: `node tests/integrated-checkpoint.mjs webgpu` and `node tests/police-browser-audit.mjs`. The frozen production snapshot remains4175; update `/tmp/leonida-audit-build` only between active audits. The world agent's4181 helper is stopped. Combined audit uses normal UI/keyboard/mouse with read-only test diagnostics; its earlier failed harness records are retained.
+
+Normal armed-threat urban evidence is now retained in `verification-police-checkpoint.md`; both combined renderer audits pass. Next priorities: improve blocked/oscillating urban AI routes, capture close-up tactical behavior, and run isolated30-minute mixed-world performance/memory profiling; acquire/create higher-fidelity licensed assets; continue contiguous district/regional construction following the atlas with modular network assets, regional water/terrain and actual military/emergency/activities systems. Do not treat this expanded local district as the full planned map. The user explicitly prohibited pushing or deployment configuration until their later decision.
