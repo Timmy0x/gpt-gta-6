@@ -1,0 +1,6093 @@
+{
+  "origin": "http://127.0.0.1:4203",
+  "backend": "webgpu",
+  "fingerprint": {
+    "entry": "/assets/index-YQcdl3e9.js",
+    "sha256": "8b2d91ad56e81532aae1b922e3ae19fe4ba5397735dd4ba34b669290848f9f9f",
+    "worldBuild": "authored-860409-v7-inner-city"
+  },
+  "method": "Normal fresh play and moving traffic observation; Sandbox traffic-density slider stops cars for approach and returns to full density immediately before E theft; telemetry-guided keyboard walking along the authored accessible graph, E carjacking, held W during transition, Tab character switch, W driving, Space braking and E exit. Read-only state/actor telemetry; no transform, pose, spawn or gameplay hooks.",
+  "checks": [
+    {
+      "label": "traffic-start",
+      "backend": "WebGPU",
+      "player": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "name": "Jason",
+      "phase": "on-foot",
+      "transitioning": false,
+      "message": "",
+      "vehicle": null,
+      "traffic": [
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -416.84857177734375,
+            0.6596259474754333,
+            -291.3006286621094
+          ],
+          "health": 100,
+          "speed": 5.736632347384274,
+          "heading": 1.5707878430909008,
+          "right": [
+            0.000008480080901258703,
+            2.0964472296871775e-7,
+            -0.9999999999640221
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.000009220573003521081,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -419.3487979021541,
+              -0.08919697464827975,
+              -292.44602758034404
+            ],
+            "max": [
+              -414.34730805487715,
+              1.6167284479319037,
+              -290.1551971659131
+            ]
+          },
+          "driver": "driver-vehicle-4"
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -292.47821044921875,
+            0.7992291450500488,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 5.766822338104251,
+          "heading": 1.5707963137115708,
+          "right": [
+            1.3296650003269406e-8,
+            -9.218984686754084e-9,
+            -1
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0.65,
+            "steer": -2.1763811832720137e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -295.01833206034644,
+              -0.024365786461470973,
+              -220.53539933947187
+            ],
+            "max": [
+              -289.9366850294973,
+              2.179205624719588,
+              -218.06460676002044
+            ]
+          },
+          "driver": "driver-vehicle-5"
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -355.3761901855469,
+            0.8012318015098572,
+            -140.6999969482422
+          ],
+          "health": 100,
+          "speed": 5.520754814148184,
+          "heading": -1.5707966961734006,
+          "right": [
+            -3.6963837146683743e-7,
+            -1.6379374301321847e-8,
+            0.9999999999999316
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": 3.988811864807928e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -358.4073173555124,
+              -0.1657397684886479,
+              -141.9754018267986
+            ],
+            "max": [
+              -352.3460090605032,
+              2.174999413247854,
+              -139.42459215574
+            ]
+          },
+          "driver": "driver-vehicle-6"
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -341.62646484375,
+            0.6763726472854614,
+            -75.300048828125
+          ],
+          "health": 100,
+          "speed": 9.46775913257998,
+          "heading": 1.570787233082052,
+          "right": [
+            0.000008831451850124917,
+            0.000007389472102169138,
+            -0.9999999999337006
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.000013942232502106578,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -343.66946482042005,
+              -0.1497036493737205,
+              -76.46899760947147
+            ],
+            "max": [
+              -339.2790448668444,
+              1.3067443464743531,
+              -74.1310851059596
+            ]
+          },
+          "driver": "driver-vehicle-7"
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -425.6419982910156,
+            0.6596317887306213,
+            -0.348701149225235
+          ],
+          "health": 100,
+          "speed": 5.7382427754269925,
+          "heading": -2.3559040131069584,
+          "right": [
+            -0.7069012941455362,
+            0.0000034016994421373865,
+            0.7073122085216645
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.00010425586021289845,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -428.02338335983006,
+              -0.09161987825659024,
+              -2.7294276155136528
+            ],
+            "max": [
+              -423.2637870503262,
+              1.6167368040248549,
+              2.0288571513794365
+            ]
+          },
+          "driver": "driver-vehicle-8"
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            140.6999969482422,
+            0.7992282509803772,
+            -15.521714210510254
+          ],
+          "health": 100,
+          "speed": 5.766829013824472,
+          "heading": 3.141592601441012,
+          "right": [
+            -0.9999999999999987,
+            1.150957551487862e-9,
+            -5.212169540413918e-8
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0.65,
+            "steer": -2.4856334590594998e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              139.4646006661973,
+              -0.024366260056696287,
+              -18.063246293415524
+            ],
+            "max": [
+              141.93539324436867,
+              2.1792043794047977,
+              -12.981593565593267
+            ]
+          },
+          "driver": "driver-vehicle-9"
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.8012318015098572,
+            87.3762435913086
+          ],
+          "health": 100,
+          "speed": 5.520752906799323,
+          "heading": -4.4658216127306866e-8,
+          "right": [
+            0.9999999999999991,
+            -5.016176363170639e-9,
+            4.473908887803187e-8
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": -3.791537631804298e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.02459821131902,
+              -0.1657395834291262,
+              84.34607016216269
+            ],
+            "max": [
+              148.57540788012668,
+              2.174999368651446,
+              90.40737832416544
+            ]
+          },
+          "driver": "driver-vehicle-10"
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214467287063599,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 0.0000060639884277239924,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238823931,
+            0.000005022361237631719,
+            -0.00039014097942367067
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0.0013001563609699365,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.55659715383202,
+              -0.0023644403703292904,
+              151.69628378406156
+            ],
+            "max": [
+              69.85740752496868,
+              1.5614510967028503,
+              156.29642251476656
+            ]
+          },
+          "driver": "driver-vehicle-11"
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -919.155517578125,
+            0.6596315503120422,
+            -212.70477294921875
+          ],
+          "health": 100,
+          "speed": 5.73821090382975,
+          "heading": -1.5705290910495708,
+          "right": [
+            0.0002672835025969604,
+            0.0000027695853738995696,
+            0.9999999642759286
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.00010108093046259371,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -921.6568622523886,
+              -0.09158534586436301,
+              -213.84994259456298
+            ],
+            "max": [
+              -916.6552105015177,
+              1.6167357536404834,
+              -211.55912641415247
+            ]
+          },
+          "driver": "driver-vehicle-12"
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -1013.6265869140625,
+            0.6763715147972107,
+            -3.3000447750091553
+          ],
+          "health": 100,
+          "speed": 9.467759132551473,
+          "heading": 1.5707875763503385,
+          "right": [
+            0.00000849606112699157,
+            0.000007167524017416454,
+            -0.9999999999382219
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.00001399815001632554,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -1015.6695866008387,
+              -0.14970368425044556,
+              -4.468996469791495
+            ],
+            "max": [
+              -1011.2791673024525,
+              1.306743243224731,
+              -2.1310821855068127
+            ]
+          },
+          "driver": "driver-vehicle-13"
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -692.6239013671875,
+            0.8012312054634094,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 5.520760536194147,
+          "heading": 1.570796860424109,
+          "right": [
+            -5.328167025423604e-7,
+            -5.085258739670022e-8,
+            -0.9999999999998568
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.0000011359592710480371,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -695.6540519664073,
+              -0.16573891227909465,
+              104.92458442406054
+            ],
+            "max": [
+              -689.5927742054677,
+              2.174998143245525,
+              107.47540171271865
+            ]
+          },
+          "driver": "driver-vehicle-14"
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7068481445312,
+            0.6655679941177368,
+            341.748779296875
+          ],
+          "health": 100,
+          "speed": 8.715109855691106,
+          "heading": 0.00008566217659929654,
+          "right": [
+            0.9999999963292276,
+            -0.000005528663202936515,
+            -0.0000855042596002931
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.0000012187193238784278,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.857212276868,
+              -0.09893123608512278,
+              339.4487027926254
+            ],
+            "max": [
+              -811.5563411417982,
+              1.6337418457142818,
+              344.0505647854996
+            ]
+          },
+          "driver": "driver-vehicle-15"
+        }
+      ],
+      "actors": [
+        {
+          "id": "driver-vehicle-4",
+          "vehicleId": "vehicle-4",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -416.95923000752,
+            -0.2609240378005405,
+            -290.9079289564504
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-4/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-5",
+          "vehicleId": "vehicle-5",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -292.5887109624178,
+            0.09848384628434081,
+            -218.8695030754615
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-5/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-6",
+          "vehicleId": "vehicle-6",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -355.26464892297736,
+            0.10068755628985537,
+            -141.14729700166365
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-6/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-7",
+          "vehicleId": "vehicle-7",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -341.63977792875403,
+            -0.6199246774179301,
+            -74.80005705618842
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-7/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-8",
+          "vehicleId": "vehicle-8",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -425.286108394815,
+            -0.2609189530182978,
+            -0.5482113767504693
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-8/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-9",
+          "vehicleId": "vehicle-9",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            141.13049694674345,
+            0.098482960734529,
+            -15.411209620300516
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-9/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-10",
+          "vehicleId": "vehicle-10",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            146.8527030489166,
+            0.10068749256169407,
+            87.26470251700059
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-10/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-11",
+          "vehicleId": "vehicle-11",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            69.10142544738636,
+            -0.2985560713341806,
+            154.026507204006
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-11/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-12",
+          "vehicleId": "vehicle-12",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -919.0449357494771,
+            -0.26091891022637625,
+            -213.09750498570122
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-12/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-13",
+          "vehicleId": "vehicle-13",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -1013.6399302052766,
+            -0.6199256216873892,
+            -2.80005367272297
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-13/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-14",
+          "vehicleId": "vehicle-14",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -692.7354425069799,
+            0.10068693194983735,
+            106.6472969950026
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-14/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-15",
+          "vehicleId": "vehicle-15",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -813.1016539590089,
+            -0.25534160090830027,
+            341.59842426359944
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-15/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        }
+      ],
+      "vehicles": [
+        {
+          "id": "vehicle-1",
+          "kind": "concept",
+          "position": [
+            2.9998395442962646,
+            0.6124876737594604,
+            -22.997743606567383
+          ],
+          "health": 100,
+          "speed": 0.000028950586493697594,
+          "heading": 6.414121571650896e-7,
+          "right": [
+            0.9999999997894837,
+            0.000020509034580075307,
+            -6.422046679757405e-7
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              1.830875900493623,
+              -0.0014754669952951605,
+              -25.02299718514197
+            ],
+            "max": [
+              4.1687877947335705,
+              1.1612548923635262,
+              -20.665569859349997
+            ]
+          }
+        },
+        {
+          "id": "vehicle-2",
+          "kind": "motorcycle",
+          "position": [
+            11.004632949829102,
+            0.7112044095993042,
+            -41.999088287353516
+          ],
+          "health": 100,
+          "speed": 0.000005911908134776086,
+          "heading": -3.1415884445465387,
+          "right": [
+            -0.9999999999079625,
+            0.000012898032763309644,
+            0.000004209043253989931
+          ],
+          "width": 0.74,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 3,
+          "mass": 310,
+          "bounds": {
+            "min": [
+              10.614638148817368,
+              0.10976358310471823,
+              -43.07932481725928
+            ],
+            "max": [
+              11.394639194932632,
+              1.3787094258510602,
+              -40.91885025704285
+            ]
+          }
+        },
+        {
+          "id": "vehicle-3",
+          "kind": "boat",
+          "position": [
+            239,
+            -0.2599313259124756,
+            -230
+          ],
+          "health": 100,
+          "speed": 0,
+          "heading": 0,
+          "right": [
+            1,
+            0,
+            0
+          ],
+          "width": 2.38,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 1,
+          "mass": 1650,
+          "bounds": {
+            "min": [
+              237.80999994277954,
+              -0.8099313378334045,
+              -233.4349969482422
+            ],
+            "max": [
+              240.19000005722046,
+              0.9650686502456665,
+              -226.95000004768372
+            ]
+          }
+        },
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -416.84857177734375,
+            0.6596259474754333,
+            -291.3006286621094
+          ],
+          "health": 100,
+          "speed": 5.736632347384274,
+          "heading": 1.5707878430909008,
+          "right": [
+            0.000008480080901258703,
+            2.0964472296871775e-7,
+            -0.9999999999640221
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.000009220573003521081,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -419.3487979021541,
+              -0.08919697464827975,
+              -292.44602758034404
+            ],
+            "max": [
+              -414.34730805487715,
+              1.6167284479319037,
+              -290.1551971659131
+            ]
+          }
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -292.47821044921875,
+            0.7992291450500488,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 5.766822338104251,
+          "heading": 1.5707963137115708,
+          "right": [
+            1.3296650003269406e-8,
+            -9.218984686754084e-9,
+            -1
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0.65,
+            "steer": -2.1763811832720137e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -295.01833206034644,
+              -0.024365786461470973,
+              -220.53539933947187
+            ],
+            "max": [
+              -289.9366850294973,
+              2.179205624719588,
+              -218.06460676002044
+            ]
+          }
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -355.3761901855469,
+            0.8012318015098572,
+            -140.6999969482422
+          ],
+          "health": 100,
+          "speed": 5.520754814148184,
+          "heading": -1.5707966961734006,
+          "right": [
+            -3.6963837146683743e-7,
+            -1.6379374301321847e-8,
+            0.9999999999999316
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": 3.988811864807928e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -358.4073173555124,
+              -0.1657397684886479,
+              -141.9754018267986
+            ],
+            "max": [
+              -352.3460090605032,
+              2.174999413247854,
+              -139.42459215574
+            ]
+          }
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -341.62646484375,
+            0.6763726472854614,
+            -75.300048828125
+          ],
+          "health": 100,
+          "speed": 9.46775913257998,
+          "heading": 1.570787233082052,
+          "right": [
+            0.000008831451850124917,
+            0.000007389472102169138,
+            -0.9999999999337006
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.000013942232502106578,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -343.66946482042005,
+              -0.1497036493737205,
+              -76.46899760947147
+            ],
+            "max": [
+              -339.2790448668444,
+              1.3067443464743531,
+              -74.1310851059596
+            ]
+          }
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -425.6419982910156,
+            0.6596317887306213,
+            -0.348701149225235
+          ],
+          "health": 100,
+          "speed": 5.7382427754269925,
+          "heading": -2.3559040131069584,
+          "right": [
+            -0.7069012941455362,
+            0.0000034016994421373865,
+            0.7073122085216645
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.00010425586021289845,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -428.02338335983006,
+              -0.09161987825659024,
+              -2.7294276155136528
+            ],
+            "max": [
+              -423.2637870503262,
+              1.6167368040248549,
+              2.0288571513794365
+            ]
+          }
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            140.6999969482422,
+            0.7992282509803772,
+            -15.521714210510254
+          ],
+          "health": 100,
+          "speed": 5.766829013824472,
+          "heading": 3.141592601441012,
+          "right": [
+            -0.9999999999999987,
+            1.150957551487862e-9,
+            -5.212169540413918e-8
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0.65,
+            "steer": -2.4856334590594998e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              139.4646006661973,
+              -0.024366260056696287,
+              -18.063246293415524
+            ],
+            "max": [
+              141.93539324436867,
+              2.1792043794047977,
+              -12.981593565593267
+            ]
+          }
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.8012318015098572,
+            87.3762435913086
+          ],
+          "health": 100,
+          "speed": 5.520752906799323,
+          "heading": -4.4658216127306866e-8,
+          "right": [
+            0.9999999999999991,
+            -5.016176363170639e-9,
+            4.473908887803187e-8
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": -3.791537631804298e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.02459821131902,
+              -0.1657395834291262,
+              84.34607016216269
+            ],
+            "max": [
+              148.57540788012668,
+              2.174999368651446,
+              90.40737832416544
+            ]
+          }
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214467287063599,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 0.0000060639884277239924,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238823931,
+            0.000005022361237631719,
+            -0.00039014097942367067
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0.0013001563609699365,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.55659715383202,
+              -0.0023644403703292904,
+              151.69628378406156
+            ],
+            "max": [
+              69.85740752496868,
+              1.5614510967028503,
+              156.29642251476656
+            ]
+          }
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -919.155517578125,
+            0.6596315503120422,
+            -212.70477294921875
+          ],
+          "health": 100,
+          "speed": 5.73821090382975,
+          "heading": -1.5705290910495708,
+          "right": [
+            0.0002672835025969604,
+            0.0000027695853738995696,
+            0.9999999642759286
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.00010108093046259371,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -921.6568622523886,
+              -0.09158534586436301,
+              -213.84994259456298
+            ],
+            "max": [
+              -916.6552105015177,
+              1.6167357536404834,
+              -211.55912641415247
+            ]
+          }
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -1013.6265869140625,
+            0.6763715147972107,
+            -3.3000447750091553
+          ],
+          "health": 100,
+          "speed": 9.467759132551473,
+          "heading": 1.5707875763503385,
+          "right": [
+            0.00000849606112699157,
+            0.000007167524017416454,
+            -0.9999999999382219
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.00001399815001632554,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -1015.6695866008387,
+              -0.14970368425044556,
+              -4.468996469791495
+            ],
+            "max": [
+              -1011.2791673024525,
+              1.306743243224731,
+              -2.1310821855068127
+            ]
+          }
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -692.6239013671875,
+            0.8012312054634094,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 5.520760536194147,
+          "heading": 1.570796860424109,
+          "right": [
+            -5.328167025423604e-7,
+            -5.085258739670022e-8,
+            -0.9999999999998568
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.0000011359592710480371,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -695.6540519664073,
+              -0.16573891227909465,
+              104.92458442406054
+            ],
+            "max": [
+              -689.5927742054677,
+              2.174998143245525,
+              107.47540171271865
+            ]
+          }
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7068481445312,
+            0.6655679941177368,
+            341.748779296875
+          ],
+          "health": 100,
+          "speed": 8.715109855691106,
+          "heading": 0.00008566217659929654,
+          "right": [
+            0.9999999963292276,
+            -0.000005528663202936515,
+            -0.0000855042596002931
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.0000012187193238784278,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.857212276868,
+              -0.09893123608512278,
+              339.4487027926254
+            ],
+            "max": [
+              -811.5563411417982,
+              1.6337418457142818,
+              344.0505647854996
+            ]
+          }
+        }
+      ],
+      "wanted": "clear",
+      "simTime": 1.9166666666666647
+    },
+    {
+      "label": "traffic-driving",
+      "backend": "WebGPU",
+      "player": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "name": "Jason",
+      "phase": "on-foot",
+      "transitioning": false,
+      "message": "",
+      "vehicle": null,
+      "traffic": [
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -357.2240295410156,
+            0.6446818113327026,
+            -291.30047607421875
+          ],
+          "health": 100,
+          "speed": 9.002876287914034,
+          "heading": 1.5707580508248953,
+          "right": [
+            0.00003827537145222604,
+            4.938883076667106e-7,
+            -0.999999999267376
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0.00005545236100621408,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -359.7240752230902,
+              -0.14467756063521098,
+              -292.4458714089239
+            ],
+            "max": [
+              -354.7239228237848,
+              1.5858893881099254,
+              -290.1550409262931
+            ]
+          },
+          "driver": "driver-vehicle-4"
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -227.51522827148438,
+            0.778100848197937,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 10.052788734436035,
+          "heading": 1.5707962566554088,
+          "right": [
+            7.010341107616097e-8,
+            1.230682400432667e-8,
+            -0.9999999999999976
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": -3.653180833840253e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -230.0553263403866,
+              -0.020037093686398222,
+              -220.53539933262988
+            ],
+            "max": [
+              -224.97496235590245,
+              2.140635059402891,
+              -218.06460675278083
+            ]
+          },
+          "driver": "driver-vehicle-5"
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -420.8604736328125,
+            0.7762134075164795,
+            -142.40914916992188
+          ],
+          "health": 100,
+          "speed": 7.044143553067429,
+          "heading": -1.9911827003322153,
+          "right": [
+            -0.4081953046110384,
+            -0.04574788148228828,
+            0.911747621128448
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.4709697267232335,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -424.02111390262564,
+              -0.15125632401555777,
+              -144.59347849226705
+            ],
+            "max": [
+              -417.69788023799936,
+              2.1804873705329375,
+              -140.2140695899975
+            ]
+          },
+          "driver": "driver-vehicle-6"
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -286.0692443847656,
+            0.6797789335250854,
+            -91.22201538085938
+          ],
+          "health": 96.49966059803249,
+          "speed": 9.372506178551053,
+          "heading": -3.069910942282423,
+          "right": [
+            -0.9970087526711003,
+            0.026589440768761533,
+            0.07257099101446132
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.0962359980851387,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -287.35678480968113,
+              -0.15602318545873695,
+              -93.64360081323842
+            ],
+            "max": [
+              -284.79396974095414,
+              1.3425098857996027,
+              -89.1035569916948
+            ]
+          },
+          "driver": "driver-vehicle-7"
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -434.62017822265625,
+            0.6416356563568115,
+            -51.29104232788086
+          ],
+          "health": 100,
+          "speed": 0.1406831246186759,
+          "heading": -3.0781924379318375,
+          "right": [
+            -0.9979908797028579,
+            -4.3964640180721977e-7,
+            0.06335774640659421
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": -0.000009803152803922189,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -435.82161896109704,
+              -0.12289218455457152,
+              -53.826899987799905
+            ],
+            "max": [
+              -433.4511838598363,
+              1.5823915586427846,
+              -48.75537921752236
+            ]
+          },
+          "driver": "driver-vehicle-8"
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            140.6999969482422,
+            0.772346019744873,
+            -46.62965774536133
+          ],
+          "health": 100,
+          "speed": 8.157322653484577e-9,
+          "heading": 3.1415924908933412,
+          "right": [
+            -0.9999999999999869,
+            1.1472556238345382e-9,
+            -1.6269645186639322e-7
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": -6.453361605096574e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              139.46460068120973,
+              -0.10491332396878061,
+              -49.16965655651778
+            ],
+            "max": [
+              141.9353932595311,
+              2.132346183781239,
+              -44.08965893420488
+            ]
+          },
+          "driver": "driver-vehicle-9"
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.7830395102500916,
+            119.62676239013672
+          ],
+          "health": 100,
+          "speed": 1.4108280766341974e-8,
+          "heading": -1.6156579363268834e-7,
+          "right": [
+            0.9999999999999869,
+            2.94212681994917e-10,
+            1.6156579363268763e-7
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": -9.135881529257341e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.02459819560673,
+              -0.1744826054955535,
+              116.59676571520177
+            ],
+            "max": [
+              148.57540786365243,
+              2.143039498681108,
+              122.65675906507167
+            ]
+          },
+          "driver": "driver-vehicle-10"
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214540600776672,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 7.092365530013814e-10,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238950052,
+            2.655276019039824e-9,
+            -0.00039014097942859116
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0.0013001563609699365,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.5565975052122,
+              -0.002364098495551026,
+              151.69628378572142
+            ],
+            "max": [
+              69.8574071735885,
+              1.5614541245304956,
+              156.2964225131067
+            ]
+          },
+          "driver": "driver-vehicle-11"
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -994.2364501953125,
+            0.6468452215194702,
+            -212.70123291015625
+          ],
+          "health": 100,
+          "speed": 12.0203161324276,
+          "heading": -1.5707595292514314,
+          "right": [
+            0.000036800864458509854,
+            0.0000014367007844014701,
+            0.999999999321816
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.000013397408478610373,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -996.7366588444478,
+              -0.1450683315693697,
+              -213.84659797457016
+            ],
+            "max": [
+              -991.7363636164897,
+              1.5891551776172212,
+              -211.5557826149001
+            ]
+          },
+          "driver": "driver-vehicle-12"
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -930.873291015625,
+            0.6990733742713928,
+            1.7573601007461548
+          ],
+          "health": 100,
+          "speed": 12.014160041433321,
+          "heading": 0.8464590540737373,
+          "right": [
+            0.6631536271203496,
+            -0.048451388564390685,
+            -0.74691346873872
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.06975223247701837,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -933.131877183369,
+              -0.1653293117099851,
+              -0.4509890310927194
+            ],
+            "max": [
+              -928.3927407414081,
+              1.3829839657682825,
+              4.156112449698213
+            ]
+          },
+          "driver": "driver-vehicle-13"
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -633.5615234375,
+            0.7866368889808655,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 9.074771881103528,
+          "heading": 1.5707964962022627,
+          "right": [
+            -1.6946137293416292e-7,
+            2.8817975561423313e-8,
+            -0.9999999999999853
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": -5.835973580392562e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -636.5916037623012,
+              -0.03126719283182039,
+              104.92459208906651
+            ],
+            "max": [
+              -630.5313210423863,
+              2.148255609175378,
+              107.47540176114977
+            ]
+          },
+          "driver": "driver-vehicle-14"
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7034912109375,
+            0.5957993268966675,
+            406.5046081542969
+          ],
+          "health": 100,
+          "speed": 2.610169936709897,
+          "heading": 0.00018501781347986663,
+          "right": [
+            0.9999999828912259,
+            0.0000010095029492821967,
+            -0.00018497710381811056
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0.000072138838340184,
+            "brake": 0.75,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.8537214524903,
+              -0.1386045409300573,
+              404.2026240190836
+            ],
+            "max": [
+              -811.5529108822487,
+              1.573314962389342,
+              408.8041814008383
+            ]
+          },
+          "driver": "driver-vehicle-15"
+        }
+      ],
+      "actors": [
+        {
+          "id": "driver-vehicle-4",
+          "vehicleId": "vehicle-4",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -357.40275104580763,
+            -0.27536058900892113,
+            -290.9077773033766
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-4/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-5",
+          "vehicleId": "vehicle-5",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -227.71065514066618,
+            0.07802354752015106,
+            -218.86950300675437
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-5/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-6",
+          "vehicleId": "vehicle-6",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -420.5425645050861,
+            0.09504266844503584,
+            -142.78454518341422
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-6/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-7",
+          "vehicleId": "vehicle-7",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -285.6034656351432,
+            -0.6295012239366771,
+            -91.24420530162752
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-7/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-8",
+          "vehicleId": "vehicle-8",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -434.2262872378331,
+            -0.2784267400101721,
+            -51.28444298719
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-8/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-9",
+          "vehicleId": "vehicle-9",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            141.13049694256196,
+            0.07234601916172556,
+            -46.59965767745672
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-9/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-10",
+          "vehicleId": "vehicle-10",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            146.85270305681127,
+            0.0830395098946567,
+            119.59676232308306
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-10/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-11",
+          "vehicleId": "vehicle-11",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            69.10143044409483,
+            -0.2985459409908361,
+            154.02650717791983
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-11/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-12",
+          "vehicleId": "vehicle-12",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -994.0071164492522,
+            -0.27319467930036245,
+            -213.09393251154953
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-12/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-13",
+          "vehicleId": "vehicle-13",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -931.2874920187984,
+            -0.5711169369518756,
+            2.14377057030797
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-13/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-14",
+          "vehicleId": "vehicle-14",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -633.7415067015322,
+            0.0865980852096272,
+            106.64729693556744
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-14/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-15",
+          "vehicleId": "vehicle-15",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -813.0983025701237,
+            -0.32336605925338413,
+            406.3964519199264
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-15/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        }
+      ],
+      "vehicles": [
+        {
+          "id": "vehicle-1",
+          "kind": "concept",
+          "position": [
+            2.9997808933258057,
+            0.6124943494796753,
+            -22.99794578552246
+          ],
+          "health": 100,
+          "speed": 0.000029078482542910792,
+          "heading": 6.521409545711307e-7,
+          "right": [
+            0.9999999997930393,
+            0.000020334582582447865,
+            -6.529290315951787e-7
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              1.8308173063661421,
+              -0.0012692554425625113,
+              -25.023199456179924
+            ],
+            "max": [
+              4.168729195249923,
+              1.1612616339249653,
+              -20.66577202111376
+            ]
+          }
+        },
+        {
+          "id": "vehicle-2",
+          "kind": "motorcycle",
+          "position": [
+            11.004629135131836,
+            0.711210310459137,
+            -41.999088287353516
+          ],
+          "health": 100,
+          "speed": 5.6005957179859834e-11,
+          "heading": -3.1415884445465387,
+          "right": [
+            -0.999999999991142,
+            2.8945400763501557e-13,
+            0.0000042090432543400366
+          ],
+          "width": 0.74,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 3,
+          "mass": 310,
+          "bounds": {
+            "min": [
+              10.614627059421466,
+              0.10976402145109476,
+              -43.07932481959457
+            ],
+            "max": [
+              11.39462739614494,
+              1.378710236552426,
+              -40.91885025468777
+            ]
+          }
+        },
+        {
+          "id": "vehicle-3",
+          "kind": "boat",
+          "position": [
+            239,
+            -0.2322893589735031,
+            -230
+          ],
+          "health": 100,
+          "speed": 0,
+          "heading": 0,
+          "right": [
+            1,
+            0,
+            0
+          ],
+          "width": 2.38,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 1,
+          "mass": 1650,
+          "bounds": {
+            "min": [
+              237.80999994277954,
+              -0.7822893708944321,
+              -233.4349969482422
+            ],
+            "max": [
+              240.19000005722046,
+              0.9927106022834777,
+              -226.95000004768372
+            ]
+          }
+        },
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -357.2240295410156,
+            0.6446818113327026,
+            -291.30047607421875
+          ],
+          "health": 100,
+          "speed": 9.002876287914034,
+          "heading": 1.5707580508248953,
+          "right": [
+            0.00003827537145222604,
+            4.938883076667106e-7,
+            -0.999999999267376
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0.00005545236100621408,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -359.7240752230902,
+              -0.14467756063521098,
+              -292.4458714089239
+            ],
+            "max": [
+              -354.7239228237848,
+              1.5858893881099254,
+              -290.1550409262931
+            ]
+          }
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -227.51522827148438,
+            0.778100848197937,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 10.052788734436035,
+          "heading": 1.5707962566554088,
+          "right": [
+            7.010341107616097e-8,
+            1.230682400432667e-8,
+            -0.9999999999999976
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": -3.653180833840253e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -230.0553263403866,
+              -0.020037093686398222,
+              -220.53539933262988
+            ],
+            "max": [
+              -224.97496235590245,
+              2.140635059402891,
+              -218.06460675278083
+            ]
+          }
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -420.8604736328125,
+            0.7762134075164795,
+            -142.40914916992188
+          ],
+          "health": 100,
+          "speed": 7.044143553067429,
+          "heading": -1.9911827003322153,
+          "right": [
+            -0.4081953046110384,
+            -0.04574788148228828,
+            0.911747621128448
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.4709697267232335,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -424.02111390262564,
+              -0.15125632401555777,
+              -144.59347849226705
+            ],
+            "max": [
+              -417.69788023799936,
+              2.1804873705329375,
+              -140.2140695899975
+            ]
+          }
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -286.0692443847656,
+            0.6797789335250854,
+            -91.22201538085938
+          ],
+          "health": 96.49966059803249,
+          "speed": 9.372506178551053,
+          "heading": -3.069910942282423,
+          "right": [
+            -0.9970087526711003,
+            0.026589440768761533,
+            0.07257099101446132
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.0962359980851387,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -287.35678480968113,
+              -0.15602318545873695,
+              -93.64360081323842
+            ],
+            "max": [
+              -284.79396974095414,
+              1.3425098857996027,
+              -89.1035569916948
+            ]
+          }
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -434.62017822265625,
+            0.6416356563568115,
+            -51.29104232788086
+          ],
+          "health": 100,
+          "speed": 0.1406831246186759,
+          "heading": -3.0781924379318375,
+          "right": [
+            -0.9979908797028579,
+            -4.3964640180721977e-7,
+            0.06335774640659421
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": -0.000009803152803922189,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -435.82161896109704,
+              -0.12289218455457152,
+              -53.826899987799905
+            ],
+            "max": [
+              -433.4511838598363,
+              1.5823915586427846,
+              -48.75537921752236
+            ]
+          }
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            140.6999969482422,
+            0.772346019744873,
+            -46.62965774536133
+          ],
+          "health": 100,
+          "speed": 8.157322653484577e-9,
+          "heading": 3.1415924908933412,
+          "right": [
+            -0.9999999999999869,
+            1.1472556238345382e-9,
+            -1.6269645186639322e-7
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": -6.453361605096574e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              139.46460068120973,
+              -0.10491332396878061,
+              -49.16965655651778
+            ],
+            "max": [
+              141.9353932595311,
+              2.132346183781239,
+              -44.08965893420488
+            ]
+          }
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.7830395102500916,
+            119.62676239013672
+          ],
+          "health": 100,
+          "speed": 1.4108280766341974e-8,
+          "heading": -1.6156579363268834e-7,
+          "right": [
+            0.9999999999999869,
+            2.94212681994917e-10,
+            1.6156579363268763e-7
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": -9.135881529257341e-8,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.02459819560673,
+              -0.1744826054955535,
+              116.59676571520177
+            ],
+            "max": [
+              148.57540786365243,
+              2.143039498681108,
+              122.65675906507167
+            ]
+          }
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214540600776672,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 7.092365530013814e-10,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238950052,
+            2.655276019039824e-9,
+            -0.00039014097942859116
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0.0013001563609699365,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.5565975052122,
+              -0.002364098495551026,
+              151.69628378572142
+            ],
+            "max": [
+              69.8574071735885,
+              1.5614541245304956,
+              156.2964225131067
+            ]
+          }
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -994.2364501953125,
+            0.6468452215194702,
+            -212.70123291015625
+          ],
+          "health": 100,
+          "speed": 12.0203161324276,
+          "heading": -1.5707595292514314,
+          "right": [
+            0.000036800864458509854,
+            0.0000014367007844014701,
+            0.999999999321816
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0.65,
+            "steer": 0.000013397408478610373,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -996.7366588444478,
+              -0.1450683315693697,
+              -213.84659797457016
+            ],
+            "max": [
+              -991.7363636164897,
+              1.5891551776172212,
+              -211.5557826149001
+            ]
+          }
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -930.873291015625,
+            0.6990733742713928,
+            1.7573601007461548
+          ],
+          "health": 100,
+          "speed": 12.014160041433321,
+          "heading": 0.8464590540737373,
+          "right": [
+            0.6631536271203496,
+            -0.048451388564390685,
+            -0.74691346873872
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0.65,
+            "steer": -0.06975223247701837,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -933.131877183369,
+              -0.1653293117099851,
+              -0.4509890310927194
+            ],
+            "max": [
+              -928.3927407414081,
+              1.3829839657682825,
+              4.156112449698213
+            ]
+          }
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -633.5615234375,
+            0.7866368889808655,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 9.074771881103528,
+          "heading": 1.5707964962022627,
+          "right": [
+            -1.6946137293416292e-7,
+            2.8817975561423313e-8,
+            -0.9999999999999853
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": -5.835973580392562e-7,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -636.5916037623012,
+              -0.03126719283182039,
+              104.92459208906651
+            ],
+            "max": [
+              -630.5313210423863,
+              2.148255609175378,
+              107.47540176114977
+            ]
+          }
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7034912109375,
+            0.5957993268966675,
+            406.5046081542969
+          ],
+          "health": 100,
+          "speed": 2.610169936709897,
+          "heading": 0.00018501781347986663,
+          "right": [
+            0.9999999828912259,
+            0.0000010095029492821967,
+            -0.00018497710381811056
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0.000072138838340184,
+            "brake": 0.75,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.8537214524903,
+              -0.1386045409300573,
+              404.2026240190836
+            ],
+            "max": [
+              -811.5529108822487,
+              1.573314962389342,
+              408.8041814008383
+            ]
+          }
+        }
+      ],
+      "wanted": "clear",
+      "simTime": 8.700000000000012
+    },
+    {
+      "label": "traffic-distances",
+      "travel": [
+        {
+          "id": "vehicle-4",
+          "distance": 59.62454223652337
+        },
+        {
+          "id": "vehicle-5",
+          "distance": 64.96298217773438
+        },
+        {
+          "id": "vehicle-6",
+          "distance": 65.50658424859824
+        },
+        {
+          "id": "vehicle-7",
+          "distance": 57.79371734050842
+        },
+        {
+          "id": "vehicle-8",
+          "distance": 51.72745730893282
+        },
+        {
+          "id": "vehicle-9",
+          "distance": 31.107943534851074
+        },
+        {
+          "id": "vehicle-10",
+          "distance": 32.250518798828125
+        },
+        {
+          "id": "vehicle-11",
+          "distance": 0
+        },
+        {
+          "id": "vehicle-12",
+          "distance": 75.08093270064327
+        },
+        {
+          "id": "vehicle-13",
+          "distance": 82.90769159813621
+        },
+        {
+          "id": "vehicle-14",
+          "distance": 59.0623779296875
+        },
+        {
+          "id": "vehicle-15",
+          "distance": 64.75582894443336
+        }
+      ]
+    },
+    {
+      "label": "normal-ui-traffic-paused-for-approach",
+      "backend": "WebGPU",
+      "player": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "name": "Jason",
+      "phase": "on-foot",
+      "transitioning": false,
+      "message": "",
+      "vehicle": null,
+      "traffic": [
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -335.0733337402344,
+            0.6445542573928833,
+            -291.30047607421875
+          ],
+          "health": 100,
+          "speed": 9.019111633724947,
+          "heading": 1.5707876363947966,
+          "right": [
+            0.000008690896720180393,
+            -3.163670214570137e-7,
+            -0.9999999999621842
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": -0.000007330423169271683,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -337.57339715983903,
+              -0.11192584368129077,
+              -292.44587499015313
+            ],
+            "max": [
+              -332.57317876789534,
+              1.5861228982423718,
+              -290.1550445239963
+            ]
+          },
+          "driver": "driver-vehicle-4"
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -217.16912841796875,
+            0.7725718021392822,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 0.000036185644554127255,
+          "heading": 1.5707968702269701,
+          "right": [
+            -5.434320655694244e-7,
+            -5.329633262495571e-11,
+            -0.9999999999998523
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -219.70914690127876,
+              -0.17283525109983922,
+              -220.5353994070146
+            ],
+            "max": [
+              -214.62907941708062,
+              2.13303547470789,
+              -218.06460682882334
+            ]
+          },
+          "driver": "driver-vehicle-5"
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -427.055908203125,
+            0.7830421328544617,
+            -146.46444702148438
+          ],
+          "health": 100,
+          "speed": 0.0006452546964538551,
+          "heading": -2.194615568609199,
+          "right": [
+            -0.5841392856115152,
+            -0.00001673673790846446,
+            0.8116534326454552
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -430.0878672672263,
+              -0.1820139016784924,
+              -149.04626463775185
+            ],
+            "max": [
+              -424.02401017418,
+              2.1432246316371586,
+              -143.88259996306627
+            ]
+          },
+          "driver": "driver-vehicle-6"
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -287.47119140625,
+            0.6126431226730347,
+            -102.94141387939453
+          ],
+          "health": 96.49966059803249,
+          "speed": 0.0004766716187800608,
+          "heading": -3.0113103609179457,
+          "right": [
+            -0.9915252572892468,
+            0.00002152582395793448,
+            0.12991406272660333
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -288.87331859443987,
+              -0.15907998479188357,
+              -105.39794943785623
+            ],
+            "max": [
+              -286.09952634947854,
+              1.1618957806284014,
+              -100.7879678533575
+            ]
+          },
+          "driver": "driver-vehicle-7"
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -434.6216125488281,
+            0.641372561454773,
+            -51.313621520996094
+          ],
+          "health": 100,
+          "speed": 5.231590848316705e-9,
+          "heading": -3.078192467908726,
+          "right": [
+            -0.9979908813481033,
+            2.976351935192439e-9,
+            0.06335772049273833
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -435.8230804754599,
+              -0.13191161194393253,
+              -53.849312105706886
+            ],
+            "max": [
+              -433.4534702451341,
+              1.581372685515904,
+              -48.7779309362853
+            ]
+          },
+          "driver": "driver-vehicle-8"
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            140.6999969482422,
+            0.7723460793495178,
+            -46.62965774536133
+          ],
+          "health": 100,
+          "speed": 4.653818654946596e-9,
+          "heading": 3.1415924908933412,
+          "right": [
+            -0.9999999999999869,
+            -4.6278791909770084e-10,
+            -1.6269645186639322e-7
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              139.46460068125762,
+              -0.10491332387979968,
+              -49.16965655640804
+            ],
+            "max": [
+              141.9353932594832,
+              2.132346182219418,
+              -44.08965893431461
+            ]
+          },
+          "driver": "driver-vehicle-9"
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.7830395698547363,
+            119.62676239013672
+          ],
+          "health": 100,
+          "speed": 3.4593375704616896e-10,
+          "heading": -1.6153727244727493e-7,
+          "right": [
+            0.9999999999999869,
+            7.212838104564318e-10,
+            1.6153727244727422e-7
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.02459819557683,
+              -0.1744825459464281,
+              116.59676571557054
+            ],
+            "max": [
+              148.57540786368233,
+              2.143039731997402,
+              122.6567590647029
+            ]
+          },
+          "driver": "driver-vehicle-10"
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214540004730225,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 2.124778782247824e-9,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238950052,
+            -5.948716001598064e-13,
+            -0.00039014097942859116
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.55659750539806,
+              -0.002364097833710832,
+              151.6962837857725
+            ],
+            "max": [
+              69.85740717340265,
+              1.561454005246477,
+              156.29642251305563
+            ]
+          },
+          "driver": "driver-vehicle-11"
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -1007.227294921875,
+            0.6415398120880127,
+            -212.70077514648438
+          ],
+          "health": 100,
+          "speed": 0.0011074879439901995,
+          "heading": -1.5707640961524871,
+          "right": [
+            0.00003223064240397493,
+            1.1960068309619792e-8,
+            0.9999999994805928
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -1009.7272991538863,
+              -0.14373722529920108,
+              -213.84615591949424
+            ],
+            "max": [
+              -1004.7272906898637,
+              1.5816584854909075,
+              -211.55534077064493
+            ]
+          },
+          "driver": "driver-vehicle-12"
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -923.1908569335938,
+            0.6125661730766296,
+            10.725818634033203
+          ],
+          "health": 100,
+          "speed": 0.00003891378808164728,
+          "heading": 0.5825492957239768,
+          "right": [
+            0.8350628488943671,
+            0.000012667229194187086,
+            -0.5501545584978504
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -925.2387374457415,
+              -0.15654329191297778,
+              8.419438260436474
+            ],
+            "max": [
+              -920.9841272009426,
+              1.161789792538444,
+              13.281900711451783
+            ]
+          },
+          "driver": "driver-vehicle-13"
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -624.873291015625,
+            0.7830816507339478,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 0.0005991713260323832,
+          "heading": 1.5707966473726702,
+          "right": [
+            -3.2057707244346775e-7,
+            -2.678948840539737e-9,
+            -0.9999999999999487
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -627.903327870492,
+              -0.13979050075071386,
+              104.92459207706654
+            ],
+            "max": [
+              -621.843254160758,
+              2.143311332118645,
+              107.47540174543357
+            ]
+          },
+          "driver": "driver-vehicle-14"
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7034912109375,
+            0.6214540004730225,
+            406.9615173339844
+          ],
+          "health": 100,
+          "speed": 5.993776713075456e-8,
+          "heading": 0.00019088078756888263,
+          "right": [
+            0.9999999817822626,
+            1.7615559800781977e-9,
+            -0.00019088078640974395
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.8537202709284,
+              -0.14075940035832057,
+              404.66147156708683
+            ],
+            "max": [
+              -811.5529106026772,
+              1.5614540053704025,
+              409.2615631008819
+            ]
+          },
+          "driver": "driver-vehicle-15"
+        }
+      ],
+      "actors": [
+        {
+          "id": "driver-vehicle-4",
+          "vehicleId": "vehicle-4",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -335.25200401431727,
+            -0.27552055991254054,
+            -290.9077759931379
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-4/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-5",
+          "vehicleId": "vehicle-5",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -217.19874391678442,
+            0.07259074495704254,
+            -218.8695030354201
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-5/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-6",
+          "vehicleId": "vehicle-6",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -426.77038599444575,
+            0.08305133246655327,
+            -146.81005691493263
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-6/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-7",
+          "vehicleId": "vehicle-7",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -286.98848893078866,
+            -0.687317529075699,
+            -103.10583341292514
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-7/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-8",
+          "vehicleId": "vehicle-8",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -434.22780081450173,
+            -0.278627439694333,
+            -51.30856237071572
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-8/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-9",
+          "vehicleId": "vehicle-9",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            141.1304969436822,
+            0.0723460795357932,
+            -46.59965767557929
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-9/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-10",
+          "vehicleId": "vehicle-10",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            146.8527030571085,
+            0.08303956953231129,
+            119.59676231788143
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-10/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-11",
+          "vehicleId": "vehicle-11",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            69.10143044653783,
+            -0.2985459995708205,
+            154.02650717719746
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-11/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-12",
+          "vehicleId": "vehicle-12",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -1007.1974606393838,
+            -0.27843643134684315,
+            -213.09347607496602
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-12/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-13",
+          "vehicleId": "vehicle-13",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -923.5531840004245,
+            -0.6873980288466555,
+            11.08465758832899
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-13/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-14",
+          "vehicleId": "vehicle-14",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -624.903093484521,
+            0.08308586724569389,
+            106.64729695469704
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-14/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-15",
+          "vehicleId": "vehicle-15",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -813.0982969355154,
+            -0.29854600046377333,
+            406.9315926981674
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-15/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        }
+      ],
+      "vehicles": [
+        {
+          "id": "vehicle-1",
+          "kind": "concept",
+          "position": [
+            2.9997599124908447,
+            0.6124942898750305,
+            -22.998018264770508
+          ],
+          "health": 100,
+          "speed": 0.000029079498406526903,
+          "heading": 6.561589316333052e-7,
+          "right": [
+            0.9999999997929836,
+            0.00002033719283224028,
+            -6.569470086564868e-7
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              1.8307963215970806,
+              -0.0011954524476544548,
+              -25.02327193692911
+            ],
+            "max": [
+              4.168708211971311,
+              1.161261567524018,
+              -20.665844496116783
+            ]
+          }
+        },
+        {
+          "id": "vehicle-2",
+          "kind": "motorcycle",
+          "position": [
+            11.004629135131836,
+            0.711210310459137,
+            -41.999088287353516
+          ],
+          "health": 100,
+          "speed": 1.4209475654587878e-11,
+          "heading": -3.1415884445465387,
+          "right": [
+            -0.999999999991142,
+            -2.7846618422322283e-16,
+            0.0000042090432543400366
+          ],
+          "width": 0.74,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 3,
+          "mass": 310,
+          "bounds": {
+            "min": [
+              10.614627059421473,
+              0.10976402155007231,
+              -43.079324819515406
+            ],
+            "max": [
+              11.394627396144934,
+              1.3787102365501225,
+              -40.91885025478672
+            ]
+          }
+        },
+        {
+          "id": "vehicle-3",
+          "kind": "boat",
+          "position": [
+            239,
+            -0.2322857826948166,
+            -230
+          ],
+          "health": 100,
+          "speed": 0,
+          "heading": 0,
+          "right": [
+            1,
+            0,
+            0
+          ],
+          "width": 2.38,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 1,
+          "mass": 1650,
+          "bounds": {
+            "min": [
+              237.80999994277954,
+              -0.7822857946157455,
+              -233.4349969482422
+            ],
+            "max": [
+              240.19000005722046,
+              0.9927141785621643,
+              -226.95000004768372
+            ]
+          }
+        },
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -335.0733337402344,
+            0.6445542573928833,
+            -291.30047607421875
+          ],
+          "health": 100,
+          "speed": 9.019111633724947,
+          "heading": 1.5707876363947966,
+          "right": [
+            0.000008690896720180393,
+            -3.163670214570137e-7,
+            -0.9999999999621842
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": -0.000007330423169271683,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -337.57339715983903,
+              -0.11192584368129077,
+              -292.44587499015313
+            ],
+            "max": [
+              -332.57317876789534,
+              1.5861228982423718,
+              -290.1550445239963
+            ]
+          }
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -217.16912841796875,
+            0.7725718021392822,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 0.000036185644554127255,
+          "heading": 1.5707968702269701,
+          "right": [
+            -5.434320655694244e-7,
+            -5.329633262495571e-11,
+            -0.9999999999998523
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -219.70914690127876,
+              -0.17283525109983922,
+              -220.5353994070146
+            ],
+            "max": [
+              -214.62907941708062,
+              2.13303547470789,
+              -218.06460682882334
+            ]
+          }
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -427.055908203125,
+            0.7830421328544617,
+            -146.46444702148438
+          ],
+          "health": 100,
+          "speed": 0.0006452546964538551,
+          "heading": -2.194615568609199,
+          "right": [
+            -0.5841392856115152,
+            -0.00001673673790846446,
+            0.8116534326454552
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -430.0878672672263,
+              -0.1820139016784924,
+              -149.04626463775185
+            ],
+            "max": [
+              -424.02401017418,
+              2.1432246316371586,
+              -143.88259996306627
+            ]
+          }
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -287.47119140625,
+            0.6126431226730347,
+            -102.94141387939453
+          ],
+          "health": 96.49966059803249,
+          "speed": 0.0004766716187800608,
+          "heading": -3.0113103609179457,
+          "right": [
+            -0.9915252572892468,
+            0.00002152582395793448,
+            0.12991406272660333
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -288.87331859443987,
+              -0.15907998479188357,
+              -105.39794943785623
+            ],
+            "max": [
+              -286.09952634947854,
+              1.1618957806284014,
+              -100.7879678533575
+            ]
+          }
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -434.6216125488281,
+            0.641372561454773,
+            -51.313621520996094
+          ],
+          "health": 100,
+          "speed": 5.231590848316705e-9,
+          "heading": -3.078192467908726,
+          "right": [
+            -0.9979908813481033,
+            2.976351935192439e-9,
+            0.06335772049273833
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -435.8230804754599,
+              -0.13191161194393253,
+              -53.849312105706886
+            ],
+            "max": [
+              -433.4534702451341,
+              1.581372685515904,
+              -48.7779309362853
+            ]
+          }
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            140.6999969482422,
+            0.7723460793495178,
+            -46.62965774536133
+          ],
+          "health": 100,
+          "speed": 4.653818654946596e-9,
+          "heading": 3.1415924908933412,
+          "right": [
+            -0.9999999999999869,
+            -4.6278791909770084e-10,
+            -1.6269645186639322e-7
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              139.46460068125762,
+              -0.10491332387979968,
+              -49.16965655640804
+            ],
+            "max": [
+              141.9353932594832,
+              2.132346182219418,
+              -44.08965893431461
+            ]
+          }
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.7830395698547363,
+            119.62676239013672
+          ],
+          "health": 100,
+          "speed": 3.4593375704616896e-10,
+          "heading": -1.6153727244727493e-7,
+          "right": [
+            0.9999999999999869,
+            7.212838104564318e-10,
+            1.6153727244727422e-7
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.02459819557683,
+              -0.1744825459464281,
+              116.59676571557054
+            ],
+            "max": [
+              148.57540786368233,
+              2.143039731997402,
+              122.6567590647029
+            ]
+          }
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214540004730225,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 2.124778782247824e-9,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238950052,
+            -5.948716001598064e-13,
+            -0.00039014097942859116
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.55659750539806,
+              -0.002364097833710832,
+              151.6962837857725
+            ],
+            "max": [
+              69.85740717340265,
+              1.561454005246477,
+              156.29642251305563
+            ]
+          }
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -1007.227294921875,
+            0.6415398120880127,
+            -212.70077514648438
+          ],
+          "health": 100,
+          "speed": 0.0011074879439901995,
+          "heading": -1.5707640961524871,
+          "right": [
+            0.00003223064240397493,
+            1.1960068309619792e-8,
+            0.9999999994805928
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -1009.7272991538863,
+              -0.14373722529920108,
+              -213.84615591949424
+            ],
+            "max": [
+              -1004.7272906898637,
+              1.5816584854909075,
+              -211.55534077064493
+            ]
+          }
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -923.1908569335938,
+            0.6125661730766296,
+            10.725818634033203
+          ],
+          "health": 100,
+          "speed": 0.00003891378808164728,
+          "heading": 0.5825492957239768,
+          "right": [
+            0.8350628488943671,
+            0.000012667229194187086,
+            -0.5501545584978504
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -925.2387374457415,
+              -0.15654329191297778,
+              8.419438260436474
+            ],
+            "max": [
+              -920.9841272009426,
+              1.161789792538444,
+              13.281900711451783
+            ]
+          }
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -624.873291015625,
+            0.7830816507339478,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 0.0005991713260323832,
+          "heading": 1.5707966473726702,
+          "right": [
+            -3.2057707244346775e-7,
+            -2.678948840539737e-9,
+            -0.9999999999999487
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -627.903327870492,
+              -0.13979050075071386,
+              104.92459207706654
+            ],
+            "max": [
+              -621.843254160758,
+              2.143311332118645,
+              107.47540174543357
+            ]
+          }
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7034912109375,
+            0.6214540004730225,
+            406.9615173339844
+          ],
+          "health": 100,
+          "speed": 5.993776713075456e-8,
+          "heading": 0.00019088078756888263,
+          "right": [
+            0.9999999817822626,
+            1.7615559800781977e-9,
+            -0.00019088078640974395
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.8537202709284,
+              -0.14075940035832057,
+              404.66147156708683
+            ],
+            "max": [
+              -811.5529106026772,
+              1.5614540053704025,
+              409.2615631008819
+            ]
+          }
+        }
+      ],
+      "wanted": "clear",
+      "simTime": 11.150000000000134
+    },
+    {
+      "label": "failure",
+      "backend": "WebGPU",
+      "player": [
+        140.99855996169663,
+        1.0392520749590455,
+        -46.97194957073397
+      ],
+      "yaw": 0,
+      "name": "Jason",
+      "phase": "on-foot",
+      "transitioning": false,
+      "message": "",
+      "vehicle": null,
+      "traffic": [
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -211.9830322265625,
+            0.641372561454773,
+            -14.601686477661133
+          ],
+          "health": 97.5864652366636,
+          "speed": 1.1385258649921269e-8,
+          "heading": 0.2642741838078238,
+          "right": [
+            0.9652823446425769,
+            -1.149605772118551e-8,
+            -0.2612087194588444
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0.40069851956083513,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -213.5150842218914,
+              -0.14468650073250167,
+              -17.229989727546716
+            ],
+            "max": [
+              -210.4165088852495,
+              1.5813725846011897,
+              -11.973383227775551
+            ]
+          },
+          "driver": "driver-vehicle-4"
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -217.168701171875,
+            0.7723460793495178,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 1.0195287560262439e-10,
+          "heading": 1.5707967983286204,
+          "right": [
+            -4.715337237506687e-7,
+            1.3012873776998598e-9,
+            -0.9999999999998888
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -219.70870004258225,
+              -0.1727900447152947,
+              -220.53539939077368
+            ],
+            "max": [
+              -214.62870230116775,
+              2.132346182709449,
+              -218.06460682695936
+            ]
+          },
+          "driver": "driver-vehicle-5"
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -427.0560607910156,
+            0.7830395698547363,
+            -146.4645538330078
+          ],
+          "health": 100,
+          "speed": 1.7936862647941796e-8,
+          "heading": -2.1946157485615534,
+          "right": [
+            -0.5841394600119373,
+            -1.7192020955387818e-9,
+            0.8116533073036555
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -430.0879760821163,
+              -0.18197503827510153,
+              -149.04633472663707
+            ],
+            "max": [
+              -424.02414549991494,
+              2.1430397369613776,
+              -143.88277293833238
+            ]
+          },
+          "driver": "driver-vehicle-6"
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -287.47015380859375,
+            0.6124942898750305,
+            -102.9413070678711
+          ],
+          "health": 96.49966059803249,
+          "speed": 0.000011116206478090193,
+          "heading": -3.0113103461430692,
+          "right": [
+            -0.9915252572647526,
+            0.000022644384099398052,
+            0.12991406272339398
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -288.87226831269544,
+              -0.15906080342063633,
+              -105.39774896748321
+            ],
+            "max": [
+              -286.09850719523405,
+              1.1612681447125914,
+              -100.78796980414467
+            ]
+          },
+          "driver": "driver-vehicle-7"
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -434.6216125488281,
+            0.641372561454773,
+            -51.313621520996094
+          ],
+          "health": 100,
+          "speed": 1.5722897173289053e-9,
+          "heading": -3.078192467908726,
+          "right": [
+            -0.9979908813481033,
+            4.358026313755554e-10,
+            0.06335772049273833
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -435.82308047528716,
+              -0.13191161161366116,
+              -53.84931210562657
+            ],
+            "max": [
+              -433.4534702464379,
+              1.5813725662371705,
+              -48.77793093636562
+            ]
+          },
+          "driver": "driver-vehicle-8"
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            142.4612579345703,
+            0.7724120616912842,
+            -46.60178756713867
+          ],
+          "health": 100,
+          "speed": 0.027874729163607722,
+          "heading": 3.1058270379262205,
+          "right": [
+            -0.9993564334816901,
+            0.00284157073100431,
+            -0.03575813662003236
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              141.2452525207199,
+              -0.16567679851083095,
+              -49.15962416366832
+            ],
+            "max": [
+              143.73105667609488,
+              2.134614746617044,
+              -44.043950970609025
+            ]
+          },
+          "driver": "driver-vehicle-9"
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.7830395698547363,
+            119.62676239013672
+          ],
+          "health": 100,
+          "speed": 3.281187871374287e-10,
+          "heading": -1.5942168829496815e-7,
+          "right": [
+            0.9999999999999873,
+            7.049821837412562e-10,
+            1.594216882949675e-7
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.0245981965838,
+              -0.1744825459443088,
+              116.59676571598308
+            ],
+            "max": [
+              148.575407864687,
+              2.143039731996995,
+              122.65675906429036
+            ]
+          },
+          "driver": "driver-vehicle-10"
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214539408683777,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 2.0748916634424676e-9,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238950052,
+            -8.126713960576209e-11,
+            -0.00039014097942859116
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.55659750539242,
+              -0.0023640946777014338,
+              151.69628378577158
+            ],
+            "max": [
+              69.85740717340829,
+              1.56145400524847,
+              156.29642251305654
+            ]
+          },
+          "driver": "driver-vehicle-11"
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -1007.2273559570312,
+            0.641372561454773,
+            -212.70077514648438
+          ],
+          "health": 100,
+          "speed": 2.7433064330985337e-11,
+          "heading": -1.5707640926309234,
+          "right": [
+            0.00003223416396766461,
+            -5.738485720382741e-11,
+            0.9999999994804794
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -1009.7273524764757,
+              -0.1437143683508133,
+              -213.84615591839358
+            ],
+            "max": [
+              -1004.7273594375868,
+              1.5813725662259719,
+              -211.5553407717456
+            ]
+          },
+          "driver": "driver-vehicle-12"
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -923.1917114257812,
+            0.6124942898750305,
+            10.726107597351074
+          ],
+          "health": 100,
+          "speed": 0.000009915657864542998,
+          "heading": 0.5825495276102399,
+          "right": [
+            0.8350627305676801,
+            0.000019759885341491683,
+            -0.5501547378932558
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -925.239517871377,
+              -0.15650608866910176,
+              8.4198188868569
+            ],
+            "max": [
+              -920.9850477711254,
+              1.1612652249917252,
+              13.282109310874645
+            ]
+          },
+          "driver": "driver-vehicle-13"
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -624.873046875,
+            0.7830395698547363,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 8.316762164099013e-9,
+          "heading": 1.570796461153761,
+          "right": [
+            -1.343588644934618e-7,
+            2.220445784552481e-16,
+            -0.9999999999999909
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -627.9030664320252,
+              -0.13976205706596379,
+              104.92459210339933
+            ],
+            "max": [
+              -621.8430273179748,
+              2.143039734389643,
+              107.47540175687521
+            ]
+          },
+          "driver": "driver-vehicle-14"
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7034912109375,
+            0.6214540004730225,
+            406.9615173339844
+          ],
+          "health": 100,
+          "speed": 5.720444579695316e-10,
+          "heading": 0.00019088078756888263,
+          "right": [
+            0.9999999817822626,
+            -2.694394658261894e-10,
+            -0.00019088078640974395
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.8537202708239,
+              -0.14075934055970063,
+              404.661471567307
+            ],
+            "max": [
+              -811.5529106027817,
+              1.5614540052474075,
+              409.26156310066176
+            ]
+          },
+          "driver": "driver-vehicle-15"
+        }
+      ],
+      "actors": [
+        {
+          "id": "driver-vehicle-4",
+          "vehicleId": "vehicle-4",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -212.36993486197693,
+            -0.27862743444934357,
+            -14.528068269045301
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-4/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-5",
+          "vehicleId": "vehicle-5",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -217.19870096770916,
+            0.07234601921125838,
+            -218.8695030641823
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-5/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-6",
+          "vehicleId": "vehicle-6",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -426.7704256106293,
+            0.0830395704618001,
+            -146.81008218045937
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-6/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-7",
+          "vehicleId": "vehicle-7",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -286.98741855620045,
+            -0.6875129814865433,
+            -103.10546499104275
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-7/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-8",
+          "vehicleId": "vehicle-8",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -434.2278008122323,
+            -0.278627438728434,
+            -51.30856237172556
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-8/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-9",
+          "vehicleId": "vehicle-9",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            142.88805549355223,
+            0.07119647447233735,
+            -46.556430448098624
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-9/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+              "vertices": 4427
+            },
+            {
+              "name": "driver-vehicle-9/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+              "vertices": 4427
+            },
+            {
+              "name": "driver-vehicle-9/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+              "vertices": 4427
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-10",
+          "vehicleId": "vehicle-10",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            146.8527030570338,
+            0.08303956953949054,
+            119.59676231882717
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-10/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-11",
+          "vehicleId": "vehicle-11",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            69.10143044660583,
+            -0.2985460591441108,
+            154.02650717726388
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-11/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-12",
+          "vehicleId": "vehicle-12",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -1007.1973686171186,
+            -0.27862743852087135,
+            -213.09347609015526
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-12/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-13",
+          "vehicleId": "vehicle-13",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -923.554176836308,
+            -0.6875114629794552,
+            11.084720258012748
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-13/skinned-body",
+              "vertices": 4662
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-14",
+          "vehicleId": "vehicle-14",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -624.9030468149571,
+            0.0830395699337616,
+            106.6472969256118
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-14/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        },
+        {
+          "id": "driver-vehicle-15",
+          "vehicleId": "vehicle-15",
+          "formerDriver": false,
+          "activity": "driving",
+          "health": 100,
+          "panic": 0,
+          "position": [
+            -813.0982969374982,
+            -0.2985460590721599,
+            406.9315926936994
+          ],
+          "visible": true,
+          "skins": [
+            {
+              "name": "driver-vehicle-15/skinned-body",
+              "vertices": 4692
+            }
+          ]
+        }
+      ],
+      "vehicles": [
+        {
+          "id": "vehicle-1",
+          "kind": "concept",
+          "position": [
+            2.998936414718628,
+            0.6124942898750305,
+            -23.00084686279297
+          ],
+          "health": 100,
+          "speed": 0.000029079723000808732,
+          "heading": 8.110361022771071e-7,
+          "right": [
+            0.9999999997930376,
+            0.000020328943715298005,
+            -8.11823838207841e-7
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              1.8299728318000912,
+              -0.0016896333785397788,
+              -25.02610070677682
+            ],
+            "max": [
+              4.167885131651392,
+              1.1612615540508933,
+              -20.66867292292707
+            ]
+          }
+        },
+        {
+          "id": "vehicle-2",
+          "kind": "motorcycle",
+          "position": [
+            11.004629135131836,
+            0.711210310459137,
+            -41.999088287353516
+          ],
+          "health": 100,
+          "speed": 4.907068857164114e-16,
+          "heading": -3.1415884445465387,
+          "right": [
+            -0.999999999991142,
+            -1.7911402377617118e-16,
+            0.0000042090432543400366
+          ],
+          "width": 0.74,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 3,
+          "mass": 310,
+          "bounds": {
+            "min": [
+              10.614627059421473,
+              0.10976402158965354,
+              -43.07932481947582
+            ],
+            "max": [
+              11.394627396144934,
+              1.378710355758667,
+              -40.9188502548263
+            ]
+          }
+        },
+        {
+          "id": "vehicle-3",
+          "kind": "boat",
+          "position": [
+            239,
+            -0.2322857677936554,
+            -230
+          ],
+          "health": 100,
+          "speed": 0,
+          "heading": 0,
+          "right": [
+            1,
+            0,
+            0
+          ],
+          "width": 2.38,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [],
+          "bodyChildren": 1,
+          "mass": 1650,
+          "bounds": {
+            "min": [
+              237.80999994277954,
+              -0.7822857797145844,
+              -233.4349969482422
+            ],
+            "max": [
+              240.19000005722046,
+              0.992714238166809,
+              -226.95000004768372
+            ]
+          }
+        },
+        {
+          "id": "vehicle-4",
+          "kind": "sedan",
+          "position": [
+            -211.9830322265625,
+            0.641372561454773,
+            -14.601686477661133
+          ],
+          "health": 97.5864652366636,
+          "speed": 1.1385258649921269e-8,
+          "heading": 0.2642741838078238,
+          "right": [
+            0.9652823446425769,
+            -1.149605772118551e-8,
+            -0.2612087194588444
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0.40069851956083513,
+            "brake": 0,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -213.5150842218914,
+              -0.14468650073250167,
+              -17.229989727546716
+            ],
+            "max": [
+              -210.4165088852495,
+              1.5813725846011897,
+              -11.973383227775551
+            ]
+          }
+        },
+        {
+          "id": "vehicle-5",
+          "kind": "suv",
+          "position": [
+            -217.168701171875,
+            0.7723460793495178,
+            -219.3000030517578
+          ],
+          "health": 100,
+          "speed": 1.0195287560262439e-10,
+          "heading": 1.5707967983286204,
+          "right": [
+            -4.715337237506687e-7,
+            1.3012873776998598e-9,
+            -0.9999999999998888
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              -219.70870004258225,
+              -0.1727900447152947,
+              -220.53539939077368
+            ],
+            "max": [
+              -214.62870230116775,
+              2.132346182709449,
+              -218.06460682695936
+            ]
+          }
+        },
+        {
+          "id": "vehicle-6",
+          "kind": "truck",
+          "position": [
+            -427.0560607910156,
+            0.7830395698547363,
+            -146.4645538330078
+          ],
+          "health": 100,
+          "speed": 1.7936862647941796e-8,
+          "heading": -2.1946157485615534,
+          "right": [
+            -0.5841394600119373,
+            -1.7192020955387818e-9,
+            0.8116533073036555
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -430.0879760821163,
+              -0.18197503827510153,
+              -149.04633472663707
+            ],
+            "max": [
+              -424.02414549991494,
+              2.1430397369613776,
+              -143.88277293833238
+            ]
+          }
+        },
+        {
+          "id": "vehicle-7",
+          "kind": "concept",
+          "position": [
+            -287.47015380859375,
+            0.6124942898750305,
+            -102.9413070678711
+          ],
+          "health": 96.49966059803249,
+          "speed": 0.000011116206478090193,
+          "heading": -3.0113103461430692,
+          "right": [
+            -0.9915252572647526,
+            0.000022644384099398052,
+            0.12991406272339398
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -288.87226831269544,
+              -0.15906080342063633,
+              -105.39774896748321
+            ],
+            "max": [
+              -286.09850719523405,
+              1.1612681447125914,
+              -100.78796980414467
+            ]
+          }
+        },
+        {
+          "id": "vehicle-8",
+          "kind": "sedan",
+          "position": [
+            -434.6216125488281,
+            0.641372561454773,
+            -51.313621520996094
+          ],
+          "health": 100,
+          "speed": 1.5722897173289053e-9,
+          "heading": -3.078192467908726,
+          "right": [
+            -0.9979908813481033,
+            4.358026313755554e-10,
+            0.06335772049273833
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -435.82308047528716,
+              -0.13191161161366116,
+              -53.84931210562657
+            ],
+            "max": [
+              -433.4534702464379,
+              1.5813725662371705,
+              -48.77793093636562
+            ]
+          }
+        },
+        {
+          "id": "vehicle-9",
+          "kind": "suv",
+          "position": [
+            142.4612579345703,
+            0.7724120616912842,
+            -46.60178756713867
+          ],
+          "health": 100,
+          "speed": 0.027874729163607722,
+          "heading": 3.1058270379262205,
+          "right": [
+            -0.9993564334816901,
+            0.00284157073100431,
+            -0.03575813662003236
+          ],
+          "width": 2.05,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 2260,
+          "bounds": {
+            "min": [
+              141.2452525207199,
+              -0.16567679851083095,
+              -49.15962416366832
+            ],
+            "max": [
+              143.73105667609488,
+              2.134614746617044,
+              -44.043950970609025
+            ]
+          }
+        },
+        {
+          "id": "vehicle-10",
+          "kind": "truck",
+          "position": [
+            147.3000030517578,
+            0.7830395698547363,
+            119.62676239013672
+          ],
+          "health": 100,
+          "speed": 3.281187871374287e-10,
+          "heading": -1.5942168829496815e-7,
+          "right": [
+            0.9999999999999873,
+            7.049821837412562e-10,
+            1.594216882949675e-7
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              146.0245981965838,
+              -0.1744825459443088,
+              116.59676571598308
+            ],
+            "max": [
+              148.575407864687,
+              2.143039731996995,
+              122.65675906429036
+            ]
+          }
+        },
+        {
+          "id": "vehicle-11",
+          "kind": "coupe",
+          "position": [
+            68.7066421508789,
+            0.6214539408683777,
+            153.99635314941406
+          ],
+          "health": 100,
+          "speed": 2.0748916634424676e-9,
+          "heading": 3.1412025126004672,
+          "right": [
+            -0.9999999238950052,
+            -8.126713960576209e-11,
+            -0.00039014097942859116
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              67.55659750539242,
+              -0.0023640946777014338,
+              151.69628378577158
+            ],
+            "max": [
+              69.85740717340829,
+              1.56145400524847,
+              156.29642251305654
+            ]
+          }
+        },
+        {
+          "id": "vehicle-12",
+          "kind": "sedan",
+          "position": [
+            -1007.2273559570312,
+            0.641372561454773,
+            -212.70077514648438
+          ],
+          "health": 100,
+          "speed": 2.7433064330985337e-11,
+          "heading": -1.5707640926309234,
+          "right": [
+            0.00003223416396766461,
+            -5.738485720382741e-11,
+            0.9999999994804794
+          ],
+          "width": 1.87,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bodyChildren": 36,
+          "mass": 1680,
+          "bounds": {
+            "min": [
+              -1009.7273524764757,
+              -0.1437143683508133,
+              -213.84615591839358
+            ],
+            "max": [
+              -1004.7273594375868,
+              1.5813725662259719,
+              -211.5553407717456
+            ]
+          }
+        },
+        {
+          "id": "vehicle-13",
+          "kind": "concept",
+          "position": [
+            -923.1917114257812,
+            0.6124942898750305,
+            10.726107597351074
+          ],
+          "health": 100,
+          "speed": 0.000009915657864542998,
+          "heading": 0.5825495276102399,
+          "right": [
+            0.8350627305676801,
+            0.000019759885341491683,
+            -0.5501547378932558
+          ],
+          "width": 2.23,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 43,
+          "mass": 1630,
+          "bounds": {
+            "min": [
+              -925.239517871377,
+              -0.15650608866910176,
+              8.4198188868569
+            ],
+            "max": [
+              -920.9850477711254,
+              1.1612652249917252,
+              13.282109310874645
+            ]
+          }
+        },
+        {
+          "id": "vehicle-14",
+          "kind": "truck",
+          "position": [
+            -624.873046875,
+            0.7830395698547363,
+            106.19999694824219
+          ],
+          "health": 100,
+          "speed": 8.316762164099013e-9,
+          "heading": 1.570796461153761,
+          "right": [
+            -1.343588644934618e-7,
+            2.220445784552481e-16,
+            -0.9999999999999909
+          ],
+          "width": 2.13,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 24,
+          "mass": 2680,
+          "bounds": {
+            "min": [
+              -627.9030664320252,
+              -0.13976205706596379,
+              104.92459210339933
+            ],
+            "max": [
+              -621.8430273179748,
+              2.143039734389643,
+              107.47540175687521
+            ]
+          }
+        },
+        {
+          "id": "vehicle-15",
+          "kind": "coupe",
+          "position": [
+            -812.7034912109375,
+            0.6214540004730225,
+            406.9615173339844
+          ],
+          "health": 100,
+          "speed": 5.720444579695316e-10,
+          "heading": 0.00019088078756888263,
+          "right": [
+            0.9999999817822626,
+            -2.694394658261894e-10,
+            -0.00019088078640974395
+          ],
+          "width": 1.88,
+          "input": {
+            "throttle": 0,
+            "steer": 0,
+            "brake": 1,
+            "handbrake": false,
+            "lift": 0
+          },
+          "occupied": false,
+          "locked": false,
+          "doorAngles": [
+            0,
+            0
+          ],
+          "bodyChildren": 26,
+          "mass": 1420,
+          "bounds": {
+            "min": [
+              -813.8537202708239,
+              -0.14075934055970063,
+              404.661471567307
+            ],
+            "max": [
+              -811.5529106027817,
+              1.5614540052474075,
+              409.26156310066176
+            ]
+          }
+        }
+      ],
+      "wanted": "clear",
+      "simTime": 106.31666666666192
+    }
+  ],
+  "consoleMessages": [],
+  "errors": [
+    "Error: Could not approach a slow traffic driver using normal walking controls within 95 seconds\n    at approachTraffic (file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/vehicle-occupancy-audit.mjs:77:9)\n    at async file:///Users/timmymckeegan/Desktop/gpt-gta-6/tests/vehicle-occupancy-audit.mjs:100:21"
+  ]
+}

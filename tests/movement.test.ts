@@ -201,10 +201,10 @@ test("vehicle exit finds the opposite door and refuses when every exit is blocke
   // The clearance fixture places a wall through the animated open door. Remove
   // that contact before measuring powered drift, then allow the door to close.
   leftWall.dispose();
-  for (let n = 0; n < 90; n++) { vehicles.update(1 / 60); f.physics._step(1 / 60); }
+  for (let n = 0; n < 240; n++) { vehicles.update(1 / 60); f.physics._step(1 / 60); }
   const parked = car.root.position.clone();
   for (let n = 0; n < 180; n++) { vehicles.update(1 / 60); f.physics._step(1 / 60); }
-  assert.ok(Vector3.Distance(car.root.position, parked) < .1, "an exited vehicle cannot retain powered reverse/throttle");
+  assert.ok(Vector3.Distance(car.root.position, parked) < .1, `an exited vehicle cannot retain powered reverse/throttle: ${JSON.stringify({ start: parked.asArray(), end: car.root.position.asArray(), input: car.input, velocity: car.body.getLinearVelocity().asArray(), doors: car.model.doors.map(door => door.angle) })}`);
   assert.deepEqual(car.input, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
   assert.equal(player.enter(car), true);
   for (let n = 0; n < 65; n++) player.update(1 / 60);

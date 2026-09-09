@@ -1,5 +1,6 @@
 import { Color3, SpotLight, Vector3, type Scene } from "@babylonjs/core";
 import type { Vehicle } from "./VehicleSystem";
+import type { DoorVisual } from "./models";
 
 /** Entry and exit open the nearest front door; its spring closes it after the animation. */
 export function openVehicleDoor(v: Vehicle, side: number, seconds = 0.85): void {
@@ -11,7 +12,7 @@ export function openVehicleDoor(v: Vehicle, side: number, seconds = 0.85): void 
 export class VehicleEquipment {
   readonly beams: SpotLight[];
   private elapsed = 0;
-  constructor(scene: Scene) {
+  constructor(scene: Scene, private limitDoorAngle?: (vehicle: Vehicle, door: DoorVisual, angle: number) => number) {
     this.beams = Array.from({ length: 4 }, (_, i) => {
       const light = new SpotLight(`vehicle-beam-${i}`, Vector3.Zero(), Vector3.Forward(), 0.58, 2, scene);
       light.diffuse = new Color3(0.95, 0.96, 1);
@@ -29,7 +30,7 @@ export class VehicleEquipment {
         door.hold = Math.max(0, door.hold - dt);
         const target = door.hold > 0 && v.speed < 5 ? 1.12 : 0;
         const change = Math.max(-dt * 3.8, Math.min(dt * 3.8, target - door.angle));
-        door.angle += change;
+        door.angle = this.limitDoorAngle?.(v, door, door.angle + change) ?? door.angle + change;
         door.mesh.rotation.y = -door.side * door.angle;
       }
       for (const mat of v.model.materials) {

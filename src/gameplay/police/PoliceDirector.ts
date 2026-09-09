@@ -24,12 +24,12 @@ import type { Character } from "../Character";
 import type { Player } from "../Player";
 import type { WantedSystem } from "../Wanted";
 import { Officer, type OfficerRole } from "./Officer";
+import { vehicleFootRoute } from "./vehicleFootRoute";
 import {
   accessible,
   ARREST_SECONDS,
   clearSight,
   compliant,
-  footRoute,
   laneNext,
   OFFICER_LIMIT,
   responseFor,
@@ -451,10 +451,10 @@ export class PoliceDirector {
       if (nearestLane && distance(nearestLane, goal) > 55) goal = nearestLane;
       o.routeTimer -= dt;
       if (o.routeTimer <= 0) {
-        o.path = footRoute(p, goal, this.world.roads, this.world.obstacles);
+        o.path = vehicleFootRoute(p, goal, this.world.roads, this.world.obstacles, this.vehicles.list);
         o.routeTimer = 1 + o.seat * 0.12;
       }
-      while (o.path.length && distance(p, o.path[0]) < 1.1) o.path.shift();
+      while (o.path.length && distance(p, o.path[0]) < .45) o.path.shift();
       const target = o.path[0];
       const direction = target
         ? new Vector3(target.x - p.x, 0, target.z - p.z).normalize()

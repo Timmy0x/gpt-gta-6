@@ -220,10 +220,12 @@ export class Player {
   }
 
   private findSafeExit(v: Vehicle, side?: -1 | 1): Vector3 | null {
-    // Both doors first, then the rear. Sweep against world geometry while ignoring the source car.
+    // Land behind the front door swing so its physical panel can open beside the
+    // actor. Both sides first, then the rear; world obstacles remain swept.
+    const doorLandingZ = v.model.doors.length ? -.65 : 0;
     const candidates = side ? [new Vector3(side * (v.tuning.width / 2 + .7), 0, -.65)] : [
-      new Vector3(-v.tuning.width / 2 - 0.62, 0, 0),
-      new Vector3(v.tuning.width / 2 + 0.62, 0, 0),
+      new Vector3(-v.tuning.width / 2 - 0.62, 0, doorLandingZ),
+      new Vector3(v.tuning.width / 2 + 0.62, 0, doorLandingZ),
       new Vector3(0, 0, -v.tuning.length / 2 - 0.65),
     ];
     for (const local of candidates) {

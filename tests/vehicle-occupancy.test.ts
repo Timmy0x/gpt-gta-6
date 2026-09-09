@@ -65,7 +65,7 @@ test('carjacking preserves the visible driver actor and locks held throttle unti
   assert.equal(f.player.exit(), true); assert.equal(f.player.vehiclePhase, 'exiting');
   f.vehicles.control(f.car, { throttle: 1, steer: 1, lift: 1, brake: 0, handbrake: false });
   assert.deepEqual(f.car.input, parkedVehicleInput(f.car));
-  f.step(45); assert.equal(f.player.vehicle, null); assert.equal(f.player.vehiclePhase, 'on-foot');
+  f.step(45); assert.ok(f.player.vehicle === null, `dismount must complete: ${f.player.vehiclePhase}; ${f.player.interactionMessage}`); assert.equal(f.player.vehiclePhase, 'on-foot');
   assert.equal(f.player.model.root.parent, null); assert.deepEqual(f.car.input, parkedVehicleInput(f.car));
 });
 

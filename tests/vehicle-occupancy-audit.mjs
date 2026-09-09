@@ -3,10 +3,11 @@ import { chromium } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
-import { footRoute } from '../src/gameplay/police/rules.ts';
+import { vehicleFootRoute } from '../src/gameplay/police/vehicleFootRoute.ts';
 
 const origin = process.env.AUDIT_URL || 'http://127.0.0.1:4201';
 const backend = process.env.AUDIT_BACKEND || 'webgpu';
+const auditExterior = process.env.AUDIT_EXTERIOR === '1';
 const output = process.env.AUDIT_OUTPUT || `docs/evidence/vehicle-occupancy-v10-${backend}`;
 await mkdir(output, { recursive: true });
 const index = await (await fetch(origin)).text(), entry = index.match(/<script[^>]*src="([^"]+)"/)[1];
@@ -19,7 +20,11 @@ page.on('pageerror', error => errors.push(error.stack || error.message));
 page.on('console', message => { if (['warning', 'error'].includes(message.type())) consoleMessages.push({ type: message.type(), elapsedMs: performance.now() - started, text: message.text(), location: message.location() }); });
 const state = () => page.evaluate(() => {
   const g = window.__leonida.game, p = g.player;
-  const car = v => ({ id: v.id, kind: v.kind, position: v.root.position.asArray(), health: v.health, speed: v.speed, heading: v.heading, right: v.root.right.asArray(), width: v.tuning.width, input: { ...v.input }, occupied: v.occupied, locked: !!v.controlLocked, doorAngles: v.model.doors.map(d => d.angle) });
+  const car = v => {
+    const bounds = v.root.getHierarchyBoundingVectors(true, mesh => mesh.isEnabled());
+    return { id: v.id, kind: v.kind, position: v.root.position.asArray(), health: v.health, speed: v.speed, heading: v.heading, right: v.root.right.asArray(), width: v.tuning.width, input: { ...v.input }, occupied: v.occupied, locked: !!v.controlLocked, doorAngles: v.model.doors.map(d => d.angle), bodyChildren: v.body.shape.getNumChildren(), mass: v.body.getMassProperties().mass,
+      bounds: { min: bounds.min.asArray(), max: bounds.max.asArray() } };
+  };
   return { backend: window.__leonida.snapshot().backend, player: p.position.asArray(), yaw: p.yaw, name: p.name, phase: p.vehiclePhase, transitioning: p.transitioning, message: p.interactionMessage, vehicle: p.vehicle ? car(p.vehicle) : null,
     traffic: g.population.drivers.filter(d => !d.police).map(d => ({ ...car(d.v), driver: g.population.pedestrians.find(ped => ped.vehicleId === d.v.id)?.id })),
     actors: g.population.pedestrians.filter(ped => ped.vehicleId || ped.formerDriver).map(ped => ({ id: ped.id, vehicleId: ped.vehicleId, formerDriver: !!ped.formerDriver, activity: ped.activity, health: ped.health, panic: ped.panic, position: ped.model.root.position.asArray(), visible: ped.model.root.isEnabled(), skins: ped.model.parts.filter(m => m.isVisible).map(m => ({ name: m.name, vertices: m.getTotalVertices() })) })),
@@ -35,7 +40,7 @@ async function capture(label) {
   console.log(JSON.stringify({ label, player: s.player, phase: s.phase, vehicle: s.vehicle, actors: s.actors.filter(actor => actor.formerDriver) })); return s;
 }
 const dist = (a, b) => Math.hypot(a[0] - b[0], a[2] - b[2]);
-function driverDoor(v) { return [v.position[0] - v.right[0] * (v.width / 2 + .85), .94, v.position[2] - v.right[2] * (v.width / 2 + .85)]; }
+function driverDoor(v) { return [v.position[0] - v.right[0] * (v.width / 2 + 1.3), .94, v.position[2] - v.right[2] * (v.width / 2 + 1.3)]; }
 async function approachTraffic() {
   const map = await page.evaluate(() => ({ roads: window.__leonida.game.world.roads, obstacles: window.__leonida.game.world.obstacles.map(({ x, z, w, d, height }) => ({ x, z, w, d, height })) }));
   let selected, route = [], routeTime = 0, lastProgress = performance.now(), previousDistance = Infinity;
@@ -54,9 +59,13 @@ async function approachTraffic() {
     if (distance < .65 && Math.abs(selected.speed) < 5) { await keys(); return selected.id; }
     if (distance < previousDistance - .4) { previousDistance = distance; lastProgress = performance.now(); }
     if (performance.now() - routeTime > 1500 || !route.length) {
-      route = footRoute({ x: s.player[0], z: s.player[2] }, { x: goal[0], z: goal[2] }, map.roads, map.obstacles); routeTime = performance.now();
+      const p = a => ({ x: a[0], y: a[1], z: a[2] });
+      const observedVehicles = s.vehicles.map(v => ({ root: { position: p(v.position), isEnabled: () => true,
+        getHierarchyBoundingVectors: () => ({ min: p(v.bounds.min), max: p(v.bounds.max) }) } }));
+      route = vehicleFootRoute(p(s.player), p(goal), map.roads, map.obstacles, observedVehicles); routeTime = performance.now();
+      if (distance < 12) console.log(JSON.stringify({ label: 'door-approach-route', player: s.player, goal, route }));
     }
-    while (route.length > 1 && Math.hypot(route[0].x - s.player[0], route[0].z - s.player[2]) < 1.1) route.shift();
+    while (route.length > 1 && Math.hypot(route[0].x - s.player[0], route[0].z - s.player[2]) < .45) route.shift();
     const target = route[0] ?? { x: goal[0], z: goal[2] }, dx = target.x - s.player[0], dz = target.z - s.player[2];
     const localX = dx * Math.cos(s.yaw) - dz * Math.sin(s.yaw), localZ = dx * Math.sin(s.yaw) + dz * Math.cos(s.yaw);
     const threshold = Math.hypot(localX, localZ) * .25, next = [];
@@ -76,7 +85,8 @@ try {
     window.occupancySamples = [];
     g.scene.onAfterPhysicsObservable.add(() => {
       const p = g.player;
-      if (p.transitioning && p.vehicle) window.occupancySamples.push({ phase: p.vehiclePhase, input: { ...p.vehicle.input }, locked: p.vehicle.controlLocked });
+      if (p.transitioning && p.vehicle) window.occupancySamples.push({ phase: p.vehiclePhase, input: { ...p.vehicle.input }, locked: p.vehicle.controlLocked,
+        doorAngles: p.vehicle.model.doors.map(d => d.angle), bodyChildren: p.vehicle.body.shape.getNumChildren(), mass: p.vehicle.body.getMassProperties().mass });
     });
   });
   await page.waitForTimeout(1800);
@@ -89,6 +99,7 @@ try {
   checks.push({ label: 'normal-ui-traffic-paused-for-approach', ...(await state()) });
   const vehicleId = await approachTraffic();
   const before = await capture('driver-door'); const victimId = before.traffic.find(v => v.id === vehicleId).driver;
+  if (auditExterior) assert.ok(before.traffic.find(v => v.id === vehicleId).bodyChildren > 15, 'the frozen runtime includes the actual exterior compound, beyond its old chassis/roof proxies');
   await page.keyboard.press('F2'); await page.locator('[data-change="traffic"]').press('End'); await page.locator('[data-action="close"]').click();
   checks.push({ label: 'normal-ui-full-traffic-restored', ...(await state()) });
   await page.keyboard.press('e'); await keys('w');
@@ -124,6 +135,12 @@ try {
   assert.ok(samples.some(s => s.phase === 'ejecting-driver'), 'physics samples cover driver removal');
   assert.ok(samples.every(s => s.locked && s.input.throttle === 0 && s.input.steer === 0 && s.input.lift === 0 && s.input.brake === 1), 'every transition physics step keeps powered inputs parked');
   checks.push({ label: 'transition-physics-inputs', samples });
+  if (auditExterior) {
+    assert.ok(samples.every(s => s.bodyChildren > 15), 'physical exterior remains attached during every transition sample');
+    assert.ok(samples.some(s => s.phase === 'ejecting-driver' && Math.max(...s.doorAngles) > .7), 'physical door opens during visible driver extraction');
+    assert.ok(samples.some(s => s.phase === 'exiting' && Math.max(...s.doorAngles) > .7), 'physical door opens during normal exit');
+    assert.ok(samples.every(s => s.mass === samples[0].mass), 'animation and compound updates preserve vehicle mass');
+  }
   const afterVictim = exited.actors.find(actor => actor.id === victimId);
   assert.ok(afterVictim && dist(afterVictim.position, victim.position) > 3, 'victim persists and flees under normal gameplay');
 } catch (error) {

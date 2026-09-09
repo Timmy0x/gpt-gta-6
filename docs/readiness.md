@@ -90,3 +90,12 @@ Fire and aim now turn the body before shots are allowed; the arms do not twist b
 The exact staged interaction build matches tested `index-DSBrBJ_2.js` (SHA-256 `e95167f3234ae901af6966d2bccf8dfa386d340f3474ca60f14533750caaec65`), using the existing v6 world. Its135 tests and production build pass. Both normal carjacking runs pass16 checkpoints with zero errors/warnings; both weapon runs pass8 checkpoints, with no errors but24 WebGL driver warnings documented in weapon-facing.md. Serious-injury normal-control evidence on the preceding v9 candidate passes9 stages per backend with no errors/warnings; those injury sources are unchanged here.
 
 This does not complete animation realism: driver withdrawal is still procedural, the firearms remain simplified, and most vehicle/world assets remain provisional. The larger map, water/swimming, world bounds and finer vehicle collision are separate work in progress and are excluded from this checkpoint. See vehicle-occupancy.md, casualty-lifecycle.md and weapon-facing.md.
+
+
+## Physical road-vehicle exterior checkpoint (9 September 2026)
+
+Road-car wheels, mirrors, doors, glass and bumpers now participate in the chassis compound. Opening doors stop at physical obstructions; detached assemblies retain their enabled components as independent collision. Exit destinations sit behind the front-door swing, and dismounted police navigate around nearby vehicles. Damage and repair update the attached shapes without changing chassis mass.
+
+The exact staged source was reconstructed and passes all143 tests plus the production build (`index-CHvKUYeM.js`). Normal keyboard carjacking/driving/exit tests in the frozen coastal-v12 integration candidate pass16 checks and148 locked transition physics samples per renderer, with zero errors/warnings. Both retain36 SUV compound children and2260kg mass. See vehicle-exterior-collision.md for source fingerprints, evidence, wall-blocked swing tests and retained harness failures.
+
+This checkpoint does not include the later western district, water, swimming, map selection or contact-animation work. Road vehicles still use bounded hull/component proxies; aircraft blades and watercraft fine geometry remain separate. Most vehicle art is still provisional, and the sustained performance goal remains unmet.

@@ -33,6 +33,7 @@ import {
 } from "./handling";
 import { createVehicleModel, type VehicleModel } from "./models";
 import { VehicleEquipment } from "./VehicleEquipment";
+import { VehicleExterior, detachedComponentShape } from "./VehicleExterior";
 import { ConceptCarAssets } from "./ConceptCar";
 import {
   validVehicleId,
@@ -83,6 +84,7 @@ interface VehicleRuntime {
   appearanceSeed: number;
   paint?: string;
   shapes: PhysicsShape[];
+  exterior: VehicleExterior;
   lastVelocity: Vector3;
   crashCooldown: number;
   lastImpactSeverity: number;
@@ -93,6 +95,7 @@ interface VehicleRuntime {
 }
 interface Debris {
   aggregate: PhysicsAggregate;
+  shapes: PhysicsShape[];
   mesh: Mesh;
   life: number;
   owner: string;
@@ -121,7 +124,8 @@ export class VehicleSystem {
 
   constructor(private ctx: BuildContext, conceptSource?: Uint8Array, skipAssetMaterials = false) {
     this.physics = ctx.scene.getPhysicsEngine() as PhysicsEngineV2;
-    this.equipment = new VehicleEquipment(ctx.scene);
+    this.equipment = new VehicleEquipment(ctx.scene, (vehicle, door, angle) =>
+      this.runtime.get(vehicle.id)?.exterior.limitDoorAngle(door, angle) ?? angle);
     this.concept = new ConceptCarAssets(ctx, conceptSource, skipAssetMaterials);
   }
 
@@ -279,6 +283,7 @@ export class VehicleSystem {
       vehicle: v,
       appearanceSeed: seed,
       shapes,
+      exterior: new VehicleExterior(v, shape, this.ctx.scene),
       lastVelocity: Vector3.Zero(),
       crashCooldown: 0,
       lastImpactSeverity: 0,
@@ -478,6 +483,7 @@ export class VehicleSystem {
       door.angle = saved.angle;
       door.mesh.rotation.y = -door.side * door.angle;
     });
+    this.runtime.get(v.id)!.exterior.update();
   }
 
   control(v: Vehicle, input: VehicleInput): void {
@@ -563,11 +569,13 @@ export class VehicleSystem {
       r.lastVelocity.copyFrom(velocity);
     }
     this.equipment.update(dt, this.list, this.ctx.scene.activeCamera?.globalPosition ?? Vector3.Zero());
+    for (const runtime of this.runtime.values()) runtime.exterior.update();
     for (let i = this.debris.length - 1; i >= 0; i--) {
       const d = this.debris[i];
       d.life -= dt;
       if (d.life <= 0) {
         d.aggregate.dispose();
+        for (const shape of d.shapes) shape.dispose();
         d.mesh.dispose();
         this.debris.splice(i, 1);
       }
@@ -927,6 +935,7 @@ export class VehicleSystem {
       if (door && Vector3.Distance(door.mesh.getBoundingInfo().boundingBox.centerWorld, impact) < 1.35)
         this.detach(v, door.mesh, 32, 26);
     }
+    this.runtime.get(v.id)!.exterior.update();
   }
 
   private detach(v: Vehicle, part: Mesh, mass: number, lifetime: number): void {
@@ -947,9 +956,10 @@ export class VehicleSystem {
     part.setEnabled(false);
     clone.setEnabled(true);
     clone.computeWorldMatrix(true);
+    const detached = detachedComponentShape(clone, this.ctx.scene);
     const aggregate = new PhysicsAggregate(
       clone,
-      PhysicsShapeType.BOX,
+      detached.shape,
       { mass, friction: 0.65, restitution: 0.15 },
       this.ctx.scene,
     );
@@ -965,10 +975,11 @@ export class VehicleSystem {
         ),
     );
     aggregate.body.setAngularVelocity(new Vector3(1, 0.4, 0.5));
-    this.debris.push({ aggregate, mesh: clone, life: lifetime, owner: v.id });
+    this.debris.push({ aggregate, shapes: detached.owned, mesh: clone, life: lifetime, owner: v.id });
     while (this.debris.length > 32) {
       const oldest = this.debris.shift()!;
       oldest.aggregate.dispose();
+      for (const shape of oldest.shapes) shape.dispose();
       oldest.mesh.dispose();
     }
   }
@@ -998,6 +1009,7 @@ export class VehicleSystem {
       wheel.damaged = false;
       wheel.tire.scaling.setAll(1);
     }
+    runtime.exterior.update();
   }
 
   setPaint(v: Vehicle, color: string): boolean {
@@ -1052,12 +1064,14 @@ export class VehicleSystem {
     if (!runtime || runtime.vehicle !== v) return;
     this.impacts = this.impacts.filter((hit) => hit.v !== v);
     v.body.dispose();
+    runtime.exterior.dispose();
     for (const shape of runtime.shapes) shape.dispose();
     this.ctx.shadows.removeShadowCaster(v.root, true);
     v.root.dispose();
     for (let i = this.debris.length - 1; i >= 0; i--)
       if (this.debris[i].owner === v.id) {
         this.debris[i].aggregate.dispose();
+        for (const shape of this.debris[i].shapes) shape.dispose();
         this.debris[i].mesh.dispose();
         this.debris.splice(i, 1);
       }
@@ -1073,6 +1087,7 @@ export class VehicleSystem {
     this.concept.dispose();
     for (const d of this.debris) {
       d.aggregate.dispose();
+      for (const shape of d.shapes) shape.dispose();
       d.mesh.dispose();
     }
     this.debris = [];
