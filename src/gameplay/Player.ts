@@ -207,6 +207,8 @@ export class Player {
     );
     this.teleport(p);
     v.occupied = false;
+    // Stop feeding the last driver's throttle after leaving the seat.
+    v.input = { throttle: 0, steer: 0, brake: 1, handbrake: !["boat", "plane", "helicopter"].includes(v.kind), lift: 0 };
     this.vehicle = null;
     this.model.root.setEnabled(true);
     return true;

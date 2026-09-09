@@ -1,6 +1,6 @@
 # Car Concept: source preparation and adapter reference
 
-The debranded asset at `public/vehicles/concept/car.glb` now powers the drivable Aster Concept. Runtime implementation and final verification are recorded in [concept-vehicle-design.md](concept-vehicle-design.md); the preparation measurements below describe the original posed source. The GLB contains a detailed cabin, separate doors, hood, rear hatch, wheels, brakes and lights. It is a concept-car asset rather than a GTA VI vehicle replica.
+The debranded source at `public/vehicles/concept/car.glb` supplies the drivable Aster Concept. Runtime now uses its simplified/batched derivative; see detailed-street-cars.md. Runtime implementation and final verification are recorded in [concept-vehicle-design.md](concept-vehicle-design.md); the preparation measurements below describe the original posed source. The GLB contains a detailed cabin, separate doors, hood, rear hatch, wheels, brakes and lights. It is a concept-car asset rather than a GTA VI vehicle replica.
 
 ## Provenance and rights
 

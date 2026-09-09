@@ -5,7 +5,12 @@ import { LatticeDeformation } from "./LatticeDeformation";
 
 type Part = { mesh: Mesh; group: string; origin: Vector3; panel: boolean; window: boolean; lamp: boolean };
 const OFFSET = new Vector3(0, -0.6, -0.085);
-const EXPECTED_HASH = "6923a315ac3656ddab95c281a8113055f0a4051ced2c35b35706fc1095d860ab";
+export const CONCEPT_ASSETS = {
+  game: { file: "car-lod1-batched.glb", hash: "17e0f6867d1992d2cbef00fbcd5079099480385f03bbbe084adc4024060a52a6" },
+  source: { file: "car.glb", hash: "6923a315ac3656ddab95c281a8113055f0a4051ced2c35b35706fc1095d860ab" },
+  simplified: { file: "car-lod1.glb", hash: "c4eb13e341f74c516f47f91f4a40d778a3c1ac8beaa1ed63543e993f6a04493c" },
+} as const;
+export const DETAILED_CAR_LIMIT = 6;
 const WHEELS = ["WheelFrontL", "WheelFrontR", "WheelRearL", "WheelRearR"];
 const DOORS = ["BodyDoorLColor1", "BodyDoorRColor1"];
 const COVERS = ["BodyHood", "BodyRearPanelsColor1"];
@@ -49,14 +54,14 @@ function cloneMaterial(source: PBRMaterial, name: string): PBRMaterial {
   return material;
 }
 
-/** One on-demand, licensed asset cache. Only explicit creative spawns use this detailed model. */
+/** Shared licensed game asset. Source variants are retained for offline visual comparisons. */
 export class ConceptCarAssets {
   private container?: AssetContainer;
   private pending?: Promise<void>;
   private parts: Part[] = [];
   private origins = new Map<string, Vector3>();
   private disposed = false;
-  constructor(private ctx: BuildContext, private source?: Uint8Array, private skipMaterials = false) {}
+  constructor(private ctx: BuildContext, private source?: Uint8Array, private skipMaterials = false, private variant: keyof typeof CONCEPT_ASSETS = "game") {}
   get ready(): boolean { return !!this.container; }
 
   async prepare(): Promise<void> {
@@ -69,15 +74,16 @@ export class ConceptCarAssets {
 
   private async load(): Promise<void> {
     await import("@babylonjs/loaders/glTF/index.js");
+    const asset = CONCEPT_ASSETS[this.variant];
     let data = this.source;
     if (!data) {
-      const response = await fetch("/vehicles/concept/car.glb", { signal: AbortSignal.timeout(20000) });
+      const response = await fetch(`/vehicles/concept/${asset.file}`, { signal: AbortSignal.timeout(20000) });
       if (!response.ok) throw new Error(`Detailed car download failed: HTTP ${response.status}`);
       data = new Uint8Array(await response.arrayBuffer());
     }
     const hash = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", Uint8Array.from(data)))).map(n => n.toString(16).padStart(2, "0")).join("");
-    if (hash !== EXPECTED_HASH) throw new Error("Detailed car asset integrity check failed");
-    const container = await LoadAssetContainerAsync(data, this.ctx.scene, { pluginExtension: ".glb", name: "car.glb", pluginOptions: { gltf: { createInstances: false, animationStartMode: 0, skipMaterials: this.skipMaterials } } });
+    if (hash !== asset.hash) throw new Error("Detailed car asset integrity check failed");
+    const container = await LoadAssetContainerAsync(data, this.ctx.scene, { pluginExtension: ".glb", name: asset.file, pluginOptions: { gltf: { createInstances: false, animationStartMode: 0, skipMaterials: this.skipMaterials } } });
     if (this.disposed) { container.dispose(); throw new Error("Vehicle asset cache disposed"); }
     try {
       const nodes = [...container.meshes, ...container.transformNodes];

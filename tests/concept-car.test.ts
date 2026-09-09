@@ -15,7 +15,7 @@ async function fixture() {
   const shadows = new ShadowGenerator(128, new DirectionalLight("sun", new Vector3(0, -1, 0), scene));
   const ground = MeshBuilder.CreateBox("ground", { width: 500, depth: 500, height: 1 }, scene); ground.position.y = -0.5;
   const aggregate = new PhysicsAggregate(ground, PhysicsShapeType.BOX, { mass: 0 }, scene);
-  const asset = await readFile(new URL("../public/vehicles/concept/car.glb", import.meta.url));
+  const asset = await readFile(new URL("../public/vehicles/concept/car-lod1-batched.glb", import.meta.url));
   const system = new VehicleSystem({ scene, shadows }, new Uint8Array(asset), true);
   await system.prepareModel("concept");
   return { scene, system, physics, step(n: number) { for (let i = 0; i < n; i++) { system.update(1 / 60); physics._step(1 / 60); } }, dispose() { system.dispose(); aggregate.dispose(); scene.dispose(); engine.dispose(); } };
@@ -28,7 +28,7 @@ test("licensed concept car has neutral wheel axles and real suspension, accelera
     assert.equal(car.model.wheels.length, 4);
     assert.equal(car.model.doors.length, 2);
     assert.ok(car.model.windows.length >= 5);
-    assert.ok(car.model.panels.length >= 10);
+    assert.ok(car.model.panels.length >= 9);
     for (const wheel of car.model.wheels) {
       const bounds = wheel.tire.getHierarchyBoundingVectors(true), size = bounds.max.subtract(bounds.min);
       assert.ok(size.x < 0.4 && size.y > 0.7 && size.z > 0.7, `neutral wheel extents ${size.asArray()}`);

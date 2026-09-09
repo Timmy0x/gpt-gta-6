@@ -192,13 +192,20 @@ test("vehicle exit finds the opposite door and refuses when every exit is blocke
   assert.equal(player.model.root.parent, car.root);
   f.box("left wall", new Vector3(-1.5, 1, 0), 0.3, 2, 8);
   f.physics._step(1 / 60);
+  vehicles.control(car, { throttle: -1, steer: .5, brake: 0, handbrake: false, lift: 1 });
   assert.equal(player.exit(), true);
   assert.ok(player.position.x > 1, "other door chosen");
+  const parked = car.root.position.clone();
+  for (let n = 0; n < 180; n++) { vehicles.update(1 / 60); f.physics._step(1 / 60); }
+  assert.ok(Vector3.Distance(car.root.position, parked) < .1, "an exited vehicle cannot retain powered reverse/throttle");
+  assert.deepEqual(car.input, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
   assert.equal(player.enter(car), true);
   f.box("right wall", new Vector3(1.5, 1, 0), 0.3, 2, 8);
   f.box("back wall", new Vector3(0, 1, -2.85), 5, 2, 0.3);
   f.physics._step(1 / 60);
+  vehicles.control(car, { throttle: .25, steer: .1, brake: 0, handbrake: false, lift: 0 });
   assert.equal(player.exit(), false);
+  assert.equal(car.input.throttle, .25, "a rejected exit retains driver control");
   assert.equal(player.vehicle, car);
   assert.match(player.interactionMessage, /No safe exit/);
   player.exit(true);

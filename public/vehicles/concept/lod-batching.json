@@ -1,0 +1,1506 @@
+{
+  "sourceSha256": "c4eb13e341f74c516f47f91f4a40d778a3c1ac8beaa1ed63543e993f6a04493c",
+  "output": {
+    "path": "car-lod1-batched.glb",
+    "sha256": "17e0f6867d1992d2cbef00fbcd5079099480385f03bbbe084adc4024060a52a6",
+    "bytes": 5920756,
+    "triangles": 61879,
+    "vertices": 66017
+  },
+  "meshes": 65,
+  "primitives": 76,
+  "nodeTransformsAndHierarchyPreserved": true,
+  "componentAnchorsPreserved": true,
+  "mapping": [
+    {
+      "destinationNode": 0,
+      "destinationName": "BodyUnderside",
+      "role": "panel",
+      "material": 0,
+      "triangles": 794,
+      "vertices": 698,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 0,
+          "name": "BodyUnderside",
+          "mesh": 0,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 1,
+      "destinationName": "BodyWindshield",
+      "role": "independent-1",
+      "material": 1,
+      "triangles": 720,
+      "vertices": 455,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 1,
+          "name": "BodyWindshield",
+          "mesh": 1,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 2,
+      "destinationName": "BodyWindshieldGasket",
+      "role": "rigid",
+      "material": 2,
+      "triangles": 14477,
+      "vertices": 21085,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 2,
+          "name": "BodyWindshieldGasket",
+          "mesh": 2,
+          "primitive": 0
+        },
+        {
+          "node": 3,
+          "name": "BodyWindshieldWipers",
+          "mesh": 3,
+          "primitive": 0
+        },
+        {
+          "node": 4,
+          "name": "BodyWindshieldWipersBase",
+          "mesh": 4,
+          "primitive": 0
+        },
+        {
+          "node": 6,
+          "name": "InteriorCage",
+          "mesh": 6,
+          "primitive": 0
+        },
+        {
+          "node": 9,
+          "name": "InteriorFloor",
+          "mesh": 9,
+          "primitive": 0
+        },
+        {
+          "node": 16,
+          "name": "InteriorPillar",
+          "mesh": 15,
+          "primitive": 0
+        },
+        {
+          "node": 19,
+          "name": "InteriorSeatsFrame1",
+          "mesh": 18,
+          "primitive": 0
+        },
+        {
+          "node": 20,
+          "name": "InteriorSeatsFrame2",
+          "mesh": 19,
+          "primitive": 0
+        },
+        {
+          "node": 21,
+          "name": "InteriorSteeringBase",
+          "mesh": 20,
+          "primitive": 0
+        },
+        {
+          "node": 22,
+          "name": "InteriorSteeringCylinder",
+          "mesh": 21,
+          "primitive": 0
+        },
+        {
+          "node": 29,
+          "name": "InteriorSteeringDashColumn",
+          "mesh": 28,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 5,
+      "destinationName": "Engine",
+      "role": "rigid",
+      "material": 0,
+      "triangles": 240,
+      "vertices": 300,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 5,
+          "name": "Engine",
+          "mesh": 5,
+          "primitive": 0
+        },
+        {
+          "node": 100,
+          "name": "Axles",
+          "mesh": 84,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 7,
+      "destinationName": "InteriorDashMid",
+      "role": "rigid",
+      "material": 3,
+      "triangles": 326,
+      "vertices": 313,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 7,
+          "name": "InteriorDashMid",
+          "mesh": 7,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 8,
+      "destinationName": "InteriorDashSides",
+      "role": "rigid",
+      "material": 6,
+      "triangles": 1378,
+      "vertices": 1253,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 8,
+          "name": "InteriorDashSides",
+          "mesh": 8,
+          "primitive": 0
+        },
+        {
+          "node": 17,
+          "name": "InteriorSeatsColor1",
+          "mesh": 16,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 10,
+      "destinationName": "InteriorFloormats",
+      "role": "rigid",
+      "material": 4,
+      "triangles": 904,
+      "vertices": 1108,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 10,
+          "name": "InteriorFloormats",
+          "mesh": 10,
+          "primitive": 0
+        },
+        {
+          "node": 12,
+          "name": "InteriorPedalAccel",
+          "mesh": 11,
+          "primitive": 0
+        },
+        {
+          "node": 14,
+          "name": "InteriorPedalBrake",
+          "mesh": 13,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 11,
+      "destinationName": "InteriorMid",
+      "role": "rigid",
+      "material": 28,
+      "triangles": 1988,
+      "vertices": 2390,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 11,
+          "name": "InteriorMid",
+          "mesh": 85,
+          "primitive": 0
+        },
+        {
+          "node": 11,
+          "name": "InteriorMid",
+          "mesh": 85,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 13,
+      "destinationName": "InteriorPedalAccelArm",
+      "role": "rigid",
+      "material": 5,
+      "triangles": 322,
+      "vertices": 367,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 13,
+          "name": "InteriorPedalAccelArm",
+          "mesh": 12,
+          "primitive": 0
+        },
+        {
+          "node": 15,
+          "name": "InteriorPedalBrakeArm",
+          "mesh": 14,
+          "primitive": 0
+        },
+        {
+          "node": 30,
+          "name": "InteriorSteeringHandleL",
+          "mesh": 29,
+          "primitive": 0
+        },
+        {
+          "node": 31,
+          "name": "InteriorSteeringHandleR",
+          "mesh": 30,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 18,
+      "destinationName": "InteriorSeatsColor2",
+      "role": "rigid",
+      "material": 7,
+      "triangles": 918,
+      "vertices": 891,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 18,
+          "name": "InteriorSeatsColor2",
+          "mesh": 17,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 23,
+      "destinationName": "InteriorSteeringEmblem",
+      "role": "rigid",
+      "material": 5,
+      "triangles": 118,
+      "vertices": 72,
+      "maxCommonParentPositionError": 7.2964226422993426e-9,
+      "sources": [
+        {
+          "node": 23,
+          "name": "InteriorSteeringEmblem",
+          "mesh": 22,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 24,
+      "destinationName": "InteriorSteeringWheel04",
+      "role": "rigid",
+      "material": 2,
+      "triangles": 96,
+      "vertices": 120,
+      "maxCommonParentPositionError": 1.1051684174760771e-8,
+      "sources": [
+        {
+          "node": 24,
+          "name": "InteriorSteeringWheel04",
+          "mesh": 23,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 25,
+      "destinationName": "InteriorSteeringWheel01",
+      "role": "rigid",
+      "material": 6,
+      "triangles": 300,
+      "vertices": 334,
+      "maxCommonParentPositionError": 9.364022900816265e-9,
+      "sources": [
+        {
+          "node": 25,
+          "name": "InteriorSteeringWheel01",
+          "mesh": 24,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 26,
+      "destinationName": "InteriorSteeringWheel02",
+      "role": "rigid",
+      "material": 3,
+      "triangles": 220,
+      "vertices": 225,
+      "maxCommonParentPositionError": 9.357344434459995e-9,
+      "sources": [
+        {
+          "node": 26,
+          "name": "InteriorSteeringWheel02",
+          "mesh": 25,
+          "primitive": 0
+        },
+        {
+          "node": 27,
+          "name": "InteriorSteeringWheel03",
+          "mesh": 26,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 28,
+      "destinationName": "InteriorSteeringDash",
+      "role": "rigid",
+      "material": 8,
+      "triangles": 118,
+      "vertices": 136,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 28,
+          "name": "InteriorSteeringDash",
+          "mesh": 27,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 32,
+      "destinationName": "License Plate",
+      "role": "rigid",
+      "material": 9,
+      "triangles": 34,
+      "vertices": 48,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 32,
+          "name": "License Plate",
+          "mesh": 31,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 33,
+      "destinationName": "BodyRoofPanel",
+      "role": "panel",
+      "material": 10,
+      "triangles": 2854,
+      "vertices": 2965,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 33,
+          "name": "BodyRoofPanel",
+          "mesh": 32,
+          "primitive": 0
+        },
+        {
+          "node": 43,
+          "name": "BodyPanelsColor2",
+          "mesh": 41,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 34,
+      "destinationName": "BodyRearPanelsColor1",
+      "role": "independent-34",
+      "material": 11,
+      "triangles": 2336,
+      "vertices": 1869,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 34,
+          "name": "BodyRearPanelsColor1",
+          "mesh": 33,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 35,
+      "destinationName": "InteriorRearHatch",
+      "role": "rigid",
+      "material": 2,
+      "triangles": 1216,
+      "vertices": 1145,
+      "maxCommonParentPositionError": 3.38704562838948e-8,
+      "sources": [
+        {
+          "node": 35,
+          "name": "InteriorRearHatch",
+          "mesh": 34,
+          "primitive": 0
+        },
+        {
+          "node": 39,
+          "name": "BodyTaillightsPanels",
+          "mesh": 37,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 36,
+      "destinationName": "InteriorRearPanels",
+      "role": "rigid",
+      "material": 0,
+      "triangles": 122,
+      "vertices": 139,
+      "maxCommonParentPositionError": 3.38704562838948e-8,
+      "sources": [
+        {
+          "node": 36,
+          "name": "InteriorRearPanels",
+          "mesh": 86,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 36,
+      "destinationName": "InteriorRearPanels",
+      "role": "rigid",
+      "material": 3,
+      "triangles": 1552,
+      "vertices": 1488,
+      "maxCommonParentPositionError": 3.38704562838948e-8,
+      "sources": [
+        {
+          "node": 36,
+          "name": "InteriorRearPanels",
+          "mesh": 86,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 37,
+      "destinationName": "BodyWindowsRearSides",
+      "role": "independent-37",
+      "material": 1,
+      "triangles": 344,
+      "vertices": 234,
+      "maxCommonParentPositionError": 3.38704562838948e-8,
+      "sources": [
+        {
+          "node": 37,
+          "name": "BodyWindowsRearSides",
+          "mesh": 35,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 38,
+      "destinationName": "BodyTurnsignalsRear",
+      "role": "rigid",
+      "material": 12,
+      "triangles": 64,
+      "vertices": 64,
+      "maxCommonParentPositionError": 3.387023716546797e-8,
+      "sources": [
+        {
+          "node": 38,
+          "name": "BodyTurnsignalsRear",
+          "mesh": 36,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 40,
+      "destinationName": "BodyTaillights",
+      "role": "independent-40",
+      "material": 13,
+      "triangles": 100,
+      "vertices": 92,
+      "maxCommonParentPositionError": 3.387023716546797e-8,
+      "sources": [
+        {
+          "node": 40,
+          "name": "BodyTaillights",
+          "mesh": 38,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 41,
+      "destinationName": "BodyRearwindow",
+      "role": "independent-41",
+      "material": 1,
+      "triangles": 712,
+      "vertices": 429,
+      "maxCommonParentPositionError": 3.38704562838948e-8,
+      "sources": [
+        {
+          "node": 41,
+          "name": "BodyRearwindow",
+          "mesh": 39,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 42,
+      "destinationName": "BodyPillars",
+      "role": "panel",
+      "material": 11,
+      "triangles": 1034,
+      "vertices": 907,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 42,
+          "name": "BodyPillars",
+          "mesh": 40,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 44,
+      "destinationName": "BodyHood",
+      "role": "independent-44",
+      "material": 11,
+      "triangles": 2392,
+      "vertices": 1978,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 44,
+          "name": "BodyHood",
+          "mesh": 42,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 45,
+      "destinationName": "BodyHoodInterior01",
+      "role": "rigid",
+      "material": 2,
+      "triangles": 2012,
+      "vertices": 1581,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 45,
+          "name": "BodyHoodInterior01",
+          "mesh": 43,
+          "primitive": 0
+        },
+        {
+          "node": 46,
+          "name": "BodyHoodInterior02",
+          "mesh": 44,
+          "primitive": 0
+        },
+        {
+          "node": 48,
+          "name": "BodyHoodUnder",
+          "mesh": 46,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 47,
+      "destinationName": "BodyHoodTopgrill",
+      "role": "rigid",
+      "material": 10,
+      "triangles": 480,
+      "vertices": 397,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 47,
+          "name": "BodyHoodTopgrill",
+          "mesh": 45,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 49,
+      "destinationName": "BodyHeadlights",
+      "role": "independent-49",
+      "material": 14,
+      "triangles": 114,
+      "vertices": 61,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 49,
+          "name": "BodyHeadlights",
+          "mesh": 47,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 50,
+      "destinationName": "BodyDoorRColor1",
+      "role": "independent-50",
+      "material": 11,
+      "triangles": 468,
+      "vertices": 402,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 50,
+          "name": "BodyDoorRColor1",
+          "mesh": 48,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 51,
+      "destinationName": "BodyDoorRColor2",
+      "role": "panel",
+      "material": 10,
+      "triangles": 278,
+      "vertices": 227,
+      "maxCommonParentPositionError": 3.7316561752974384e-8,
+      "sources": [
+        {
+          "node": 51,
+          "name": "BodyDoorRColor2",
+          "mesh": 49,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 52,
+      "destinationName": "BodyDoorRHandle01",
+      "role": "rigid",
+      "material": 2,
+      "triangles": 243,
+      "vertices": 199,
+      "maxCommonParentPositionError": 3.7316561662643515e-8,
+      "sources": [
+        {
+          "node": 52,
+          "name": "BodyDoorRHandle01",
+          "mesh": 50,
+          "primitive": 0
+        },
+        {
+          "node": 58,
+          "name": "BodyDoorRWindowGasket",
+          "mesh": 56,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 53,
+      "destinationName": "BodyDoorRHandle02",
+      "role": "rigid",
+      "material": 10,
+      "triangles": 480,
+      "vertices": 551,
+      "maxCommonParentPositionError": 3.7316561752974384e-8,
+      "sources": [
+        {
+          "node": 53,
+          "name": "BodyDoorRHandle02",
+          "mesh": 51,
+          "primitive": 0
+        },
+        {
+          "node": 56,
+          "name": "BodyDoorRMirrorColor2",
+          "mesh": 54,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 54,
+      "destinationName": "BodyDoorRMirror",
+      "role": "rigid",
+      "material": 15,
+      "triangles": 114,
+      "vertices": 83,
+      "maxCommonParentPositionError": 3.7316561752974384e-8,
+      "sources": [
+        {
+          "node": 54,
+          "name": "BodyDoorRMirror",
+          "mesh": 52,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 55,
+      "destinationName": "BodyDoorRMirrorColor1",
+      "role": "rigid",
+      "material": 11,
+      "triangles": 148,
+      "vertices": 153,
+      "maxCommonParentPositionError": 3.7316561752974384e-8,
+      "sources": [
+        {
+          "node": 55,
+          "name": "BodyDoorRMirrorColor1",
+          "mesh": 53,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 57,
+      "destinationName": "BodyDoorRWindow",
+      "role": "independent-57",
+      "material": 1,
+      "triangles": 348,
+      "vertices": 221,
+      "maxCommonParentPositionError": 3.7316561752974384e-8,
+      "sources": [
+        {
+          "node": 57,
+          "name": "BodyDoorRWindow",
+          "mesh": 55,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 59,
+      "destinationName": "InteriorDoorR01",
+      "role": "rigid",
+      "material": 0,
+      "triangles": 304,
+      "vertices": 346,
+      "maxCommonParentPositionError": 3.7316561752974384e-8,
+      "sources": [
+        {
+          "node": 59,
+          "name": "InteriorDoorR01",
+          "mesh": 87,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 59,
+      "destinationName": "InteriorDoorR01",
+      "role": "rigid",
+      "material": 3,
+      "triangles": 518,
+      "vertices": 477,
+      "maxCommonParentPositionError": 3.7316561752974384e-8,
+      "sources": [
+        {
+          "node": 59,
+          "name": "InteriorDoorR01",
+          "mesh": 87,
+          "primitive": 1
+        },
+        {
+          "node": 60,
+          "name": "InteriorDoorR02",
+          "mesh": 57,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 61,
+      "destinationName": "InteriorDoorR03",
+      "role": "rigid",
+      "material": 6,
+      "triangles": 297,
+      "vertices": 333,
+      "maxCommonParentPositionError": 3.7316561662643515e-8,
+      "sources": [
+        {
+          "node": 61,
+          "name": "InteriorDoorR03",
+          "mesh": 58,
+          "primitive": 0
+        },
+        {
+          "node": 62,
+          "name": "InteriorDoorR04",
+          "mesh": 59,
+          "primitive": 0
+        },
+        {
+          "node": 63,
+          "name": "InteriorDoorR05",
+          "mesh": 60,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 64,
+      "destinationName": "InteriorDoorR06",
+      "role": "rigid",
+      "material": 5,
+      "triangles": 168,
+      "vertices": 197,
+      "maxCommonParentPositionError": 3.7316561662643515e-8,
+      "sources": [
+        {
+          "node": 64,
+          "name": "InteriorDoorR06",
+          "mesh": 61,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 65,
+      "destinationName": "BodyDoorLColor1",
+      "role": "independent-65",
+      "material": 11,
+      "triangles": 467,
+      "vertices": 404,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 65,
+          "name": "BodyDoorLColor1",
+          "mesh": 62,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 66,
+      "destinationName": "InteriorDoorL04",
+      "role": "rigid",
+      "material": 6,
+      "triangles": 297,
+      "vertices": 324,
+      "maxCommonParentPositionError": 1.5940079982733218e-8,
+      "sources": [
+        {
+          "node": 66,
+          "name": "InteriorDoorL04",
+          "mesh": 63,
+          "primitive": 0
+        },
+        {
+          "node": 69,
+          "name": "InteriorDoorL03",
+          "mesh": 65,
+          "primitive": 0
+        },
+        {
+          "node": 70,
+          "name": "InteriorDoorL05",
+          "mesh": 66,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 67,
+      "destinationName": "InteriorDoorL01",
+      "role": "rigid",
+      "material": 0,
+      "triangles": 308,
+      "vertices": 347,
+      "maxCommonParentPositionError": 1.5940080003440715e-8,
+      "sources": [
+        {
+          "node": 67,
+          "name": "InteriorDoorL01",
+          "mesh": 88,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 67,
+      "destinationName": "InteriorDoorL01",
+      "role": "rigid",
+      "material": 3,
+      "triangles": 498,
+      "vertices": 458,
+      "maxCommonParentPositionError": 1.5940079982733218e-8,
+      "sources": [
+        {
+          "node": 67,
+          "name": "InteriorDoorL01",
+          "mesh": 88,
+          "primitive": 1
+        },
+        {
+          "node": 68,
+          "name": "InteriorDoorL02",
+          "mesh": 64,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 71,
+      "destinationName": "InteriorDoorL06",
+      "role": "rigid",
+      "material": 5,
+      "triangles": 168,
+      "vertices": 197,
+      "maxCommonParentPositionError": 1.5940079873659154e-8,
+      "sources": [
+        {
+          "node": 71,
+          "name": "InteriorDoorL06",
+          "mesh": 67,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 72,
+      "destinationName": "BodyDoorLColor2",
+      "role": "panel",
+      "material": 10,
+      "triangles": 278,
+      "vertices": 217,
+      "maxCommonParentPositionError": 1.5940080003440715e-8,
+      "sources": [
+        {
+          "node": 72,
+          "name": "BodyDoorLColor2",
+          "mesh": 68,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 73,
+      "destinationName": "BodyDoorLHandle01",
+      "role": "rigid",
+      "material": 2,
+      "triangles": 262,
+      "vertices": 214,
+      "maxCommonParentPositionError": 1.5940079982733218e-8,
+      "sources": [
+        {
+          "node": 73,
+          "name": "BodyDoorLHandle01",
+          "mesh": 69,
+          "primitive": 0
+        },
+        {
+          "node": 77,
+          "name": "BodyDoorLWindowGasket",
+          "mesh": 73,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 74,
+      "destinationName": "BodyDoorLHandle02",
+      "role": "rigid",
+      "material": 10,
+      "triangles": 470,
+      "vertices": 548,
+      "maxCommonParentPositionError": 1.5940079982733218e-8,
+      "sources": [
+        {
+          "node": 74,
+          "name": "BodyDoorLHandle02",
+          "mesh": 70,
+          "primitive": 0
+        },
+        {
+          "node": 79,
+          "name": "BodyDoorLMirrorColor2",
+          "mesh": 75,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 75,
+      "destinationName": "BodyDoorLMirror",
+      "role": "rigid",
+      "material": 15,
+      "triangles": 114,
+      "vertices": 83,
+      "maxCommonParentPositionError": 1.5940079894366655e-8,
+      "sources": [
+        {
+          "node": 75,
+          "name": "BodyDoorLMirror",
+          "mesh": 71,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 76,
+      "destinationName": "BodyDoorLMirrorColor1",
+      "role": "rigid",
+      "material": 11,
+      "triangles": 162,
+      "vertices": 168,
+      "maxCommonParentPositionError": 1.5940079894366655e-8,
+      "sources": [
+        {
+          "node": 76,
+          "name": "BodyDoorLMirrorColor1",
+          "mesh": 72,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 78,
+      "destinationName": "BodyDoorLWindow",
+      "role": "independent-78",
+      "material": 1,
+      "triangles": 348,
+      "vertices": 221,
+      "maxCommonParentPositionError": 1.5940079982733218e-8,
+      "sources": [
+        {
+          "node": 78,
+          "name": "BodyDoorLWindow",
+          "mesh": 74,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 81,
+      "destinationName": "WheelFrontLRim",
+      "role": "rim",
+      "material": 20,
+      "triangles": 592,
+      "vertices": 667,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 81,
+          "name": "WheelFrontLRim",
+          "mesh": 90,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 81,
+      "destinationName": "WheelFrontLRim",
+      "role": "rim",
+      "material": 21,
+      "triangles": 2604,
+      "vertices": 2552,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 81,
+          "name": "WheelFrontLRim",
+          "mesh": 90,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 82,
+      "destinationName": "WheelFrontLBrakePad",
+      "role": "caliper",
+      "material": 16,
+      "triangles": 472,
+      "vertices": 431,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 82,
+          "name": "WheelFrontLBrakePad",
+          "mesh": 76,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 83,
+      "destinationName": "WheelFrontLBrakeDisc",
+      "role": "disc",
+      "material": 17,
+      "triangles": 110,
+      "vertices": 128,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 83,
+          "name": "WheelFrontLBrakeDisc",
+          "mesh": 77,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 84,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 18,
+      "triangles": 216,
+      "vertices": 180,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 84,
+          "name": null,
+          "mesh": 89,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 84,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 19,
+      "triangles": 216,
+      "vertices": 185,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 84,
+          "name": null,
+          "mesh": 89,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 86,
+      "destinationName": "WheelFrontRRim",
+      "role": "rim",
+      "material": 20,
+      "triangles": 588,
+      "vertices": 662,
+      "maxCommonParentPositionError": 5.3173465899040764e-11,
+      "sources": [
+        {
+          "node": 86,
+          "name": "WheelFrontRRim",
+          "mesh": 92,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 86,
+      "destinationName": "WheelFrontRRim",
+      "role": "rim",
+      "material": 21,
+      "triangles": 2622,
+      "vertices": 2539,
+      "maxCommonParentPositionError": 5.3173465899040764e-11,
+      "sources": [
+        {
+          "node": 86,
+          "name": "WheelFrontRRim",
+          "mesh": 92,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 87,
+      "destinationName": "WheelFrontRBrakePad",
+      "role": "caliper",
+      "material": 16,
+      "triangles": 472,
+      "vertices": 427,
+      "maxCommonParentPositionError": 5.315570206221314e-11,
+      "sources": [
+        {
+          "node": 87,
+          "name": "WheelFrontRBrakePad",
+          "mesh": 78,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 88,
+      "destinationName": "WheelFrontRBrakeDisc",
+      "role": "disc",
+      "material": 17,
+      "triangles": 106,
+      "vertices": 126,
+      "maxCommonParentPositionError": 5.315570206221312e-11,
+      "sources": [
+        {
+          "node": 88,
+          "name": "WheelFrontRBrakeDisc",
+          "mesh": 79,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 89,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 18,
+      "triangles": 218,
+      "vertices": 181,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 89,
+          "name": null,
+          "mesh": 91,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 89,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 19,
+      "triangles": 216,
+      "vertices": 185,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 89,
+          "name": null,
+          "mesh": 91,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 91,
+      "destinationName": "WheelRearLBrakeDisc",
+      "role": "disc",
+      "material": 17,
+      "triangles": 106,
+      "vertices": 126,
+      "maxCommonParentPositionError": 3.0411229090532288e-12,
+      "sources": [
+        {
+          "node": 91,
+          "name": "WheelRearLBrakeDisc",
+          "mesh": 80,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 92,
+      "destinationName": "WheelRearLBrakePad",
+      "role": "caliper",
+      "material": 16,
+      "triangles": 472,
+      "vertices": 431,
+      "maxCommonParentPositionError": 3.0411229090532288e-12,
+      "sources": [
+        {
+          "node": 92,
+          "name": "WheelRearLBrakePad",
+          "mesh": 81,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 93,
+      "destinationName": "WheelRearLRim",
+      "role": "rim",
+      "material": 20,
+      "triangles": 604,
+      "vertices": 678,
+      "maxCommonParentPositionError": 3.0411229090532288e-12,
+      "sources": [
+        {
+          "node": 93,
+          "name": "WheelRearLRim",
+          "mesh": 94,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 93,
+      "destinationName": "WheelRearLRim",
+      "role": "rim",
+      "material": 21,
+      "triangles": 2588,
+      "vertices": 2523,
+      "maxCommonParentPositionError": 3.0411229090532288e-12,
+      "sources": [
+        {
+          "node": 93,
+          "name": "WheelRearLRim",
+          "mesh": 94,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 94,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 18,
+      "triangles": 216,
+      "vertices": 180,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 94,
+          "name": null,
+          "mesh": 93,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 94,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 19,
+      "triangles": 216,
+      "vertices": 185,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 94,
+          "name": null,
+          "mesh": 93,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 96,
+      "destinationName": "WheelRearRBrakeDisc",
+      "role": "disc",
+      "material": 17,
+      "triangles": 110,
+      "vertices": 130,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 96,
+          "name": "WheelRearRBrakeDisc",
+          "mesh": 82,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 97,
+      "destinationName": "WheelRearRBrakePad",
+      "role": "caliper",
+      "material": 16,
+      "triangles": 472,
+      "vertices": 427,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 97,
+          "name": "WheelRearRBrakePad",
+          "mesh": 83,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 98,
+      "destinationName": "WheelRearRRim",
+      "role": "rim",
+      "material": 20,
+      "triangles": 594,
+      "vertices": 665,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 98,
+          "name": "WheelRearRRim",
+          "mesh": 96,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 98,
+      "destinationName": "WheelRearRRim",
+      "role": "rim",
+      "material": 21,
+      "triangles": 2614,
+      "vertices": 2530,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 98,
+          "name": "WheelRearRRim",
+          "mesh": 96,
+          "primitive": 1
+        }
+      ]
+    },
+    {
+      "destinationNode": 99,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 18,
+      "triangles": 216,
+      "vertices": 180,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 99,
+          "name": null,
+          "mesh": 95,
+          "primitive": 0
+        }
+      ]
+    },
+    {
+      "destinationNode": 99,
+      "destinationName": null,
+      "role": "rigid",
+      "material": 19,
+      "triangles": 216,
+      "vertices": 185,
+      "maxCommonParentPositionError": 0,
+      "sources": [
+        {
+          "node": 99,
+          "name": null,
+          "mesh": 95,
+          "primitive": 1
+        }
+      ]
+    }
+  ]
+}

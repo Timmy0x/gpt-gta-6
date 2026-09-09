@@ -344,3 +344,8 @@ The latest user reports aircraft staying grounded and widespread rapid respawnin
 - Lighting: verified local CC0 HDR prefilter supplies PBR reflections/ambient radiance on both backends. Static generic probe, no live reflections or performance claim.
 - Ground spawning: level collision-free candidate search prevents newly spawned detailed cars overlapping the starter vehicle. Three Havok cases and normal two-car WebGPU evidence pass.
 - Aircraft: normal launch positions, Space/A lift controls, speed instructions and takeoff/landing/exit verified on both renderers in 02e4363. Beach launch is an authored connection, not a completed airport.
+
+
+### Detailed street-car follow-up
+
+Aster now supplies the starter car and two traffic slots through a shared verified 61,879-triangle/79-renderable-mesh asset. Total detailed-class budget is six; saved ownership takes priority over ambient cars. Normal starter driving, traffic movement, parked exit, switching, spawn budget and saves pass ten stages on both renderer paths. Damage/retry/night-light/garage/fresh-Continue review passes fourteen stages on each path (WebGPU before the separately verified exit correction, WebGL2 after). Automatic distance LOD and distinct realistic models for other vehicle classes remain unbuilt. Full performance target remains unmet.

@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 const backend = process.argv[2] || 'webgpu';
+const prefix = `docs/evidence/concept-${backend}${process.env.AUDIT_SUFFIX || ''}`;
 const url = process.env.AUDIT_URL || 'http://127.0.0.1:4177';
 const html = await (await fetch(url)).text();
 const buildFingerprint = await Promise.all([...html.matchAll(/src="([^"]+\.js)"/g)].map(async match => { const bytes = Buffer.from(await (await fetch(new URL(match[1], url))).arrayBuffer()); return { url:match[1], sha256:createHash('sha256').update(bytes).digest('hex') }; }));
@@ -18,16 +19,20 @@ const state = () => page.evaluate(() => {
   const g = window.__leonida.game, { frameTimes, ...snapshot } = window.__leonida.snapshot();
   return { ...snapshot, beams: g.vehicles.equipment.beams.filter(b => b.isEnabled()).map(b => b.position.asArray()), cars: g.vehicles.list.filter(v => v.kind === 'concept').map(v => ({ saved: g.vehicles.serialize(v), headlights: v.model.lights.filter(m => m.name.startsWith('headlight-') && m.isEnabled()).map(m => m.getAbsolutePosition().asArray()), doors: v.model.doors.map(d => ({ angle: d.angle, enabled: d.mesh.isEnabled() })), meshes: v.root.getChildMeshes().length, paint: v.model.materials.filter(m => m.name.startsWith('paint-')).map(m => m.albedoColor.toHexString()), materials: v.model.materials.length })) };
 });
-async function capture(name) { const snapshot = await state(); checks.push({ name, ...snapshot }); await page.screenshot({ path: `docs/evidence/concept-${backend}-${name}.png` }); console.log(name, JSON.stringify({ vehicle: snapshot.vehicle, cars: snapshot.cars.map(c => ({ id: c.saved.id, health: c.saved.health, meshes: c.meshes })), errors: errors.length })); return snapshot; }
+async function capture(name) { const snapshot = await state(); checks.push({ name, ...snapshot }); await page.screenshot({ path: `${prefix}-${name}.png` }); console.log(name, JSON.stringify({ vehicle: snapshot.vehicle, cars: snapshot.cars.map(c => ({ id: c.saved.id, health: c.saved.health, meshes: c.meshes })), errors: errors.length })); return snapshot; }
 async function panel(key = 'F2') { await page.keyboard.press(key); await page.locator('#panel:not(.hidden)').waitFor(); }
 async function close() { await page.locator('[data-action="close"]').first().click(); }
 async function ready() { await page.waitForFunction(() => !window.__leonida.snapshot().streamingBusy, {}, { timeout: 45000 }); }
 async function travel(id) { await panel('m'); await page.locator(`[data-action="teleport"][data-value="${id}"]`).click(); await ready(); }
 async function enter() { await page.keyboard.down('w'); await page.waitForTimeout(750); await page.keyboard.up('w'); await page.keyboard.press('e'); await page.waitForFunction(() => window.__leonida.snapshot().vehicle?.kind === 'concept'); }
 try {
+  injecting = true;
+  await page.route('**/vehicles/concept/car-lod1-batched.glb', route => route.fulfill({ status: 503, body: 'Deliberate asset-load failure' }));
   await page.goto(`${url}/?backend=${backend}&test`, { waitUntil: 'networkidle' });
   await page.locator('#welcome:not(.hidden)').waitFor({ timeout: 120000 });
-  assert.equal(assetRequests.length, 0, 'fresh game does not download the detailed vehicle');
+  assert.equal(assetRequests.length, 1, 'fresh startup attempts the shared detailed-car asset once');
+  assert.equal((await state()).cars.length, 0, 'failed startup keeps playable procedural cars');
+  await capture('startup-asset-fallback');
   await page.locator('[data-action="play"]').click();
   await panel();
   await page.locator('[data-change="god"]').check(); await page.locator('[data-change="police"]').uncheck();
@@ -36,18 +41,17 @@ try {
   await close(); await travel('race'); await panel();
   await page.locator('#spawn-kind').selectOption('concept');
   injecting = true;
-  await page.route('**/vehicles/concept/car.glb', route => route.fulfill({ status: 503, body: 'Deliberate asset-load failure' }));
   await page.locator('[data-action="spawn"]').click();
   await page.waitForFunction(() => document.querySelector('#toast').textContent.includes('could not load'));
   await ready(); assert.equal((await state()).cars.length, 0);
   await capture('failed-load-preserves-game');
-  await page.unroute('**/vehicles/concept/car.glb'); injecting = false;
+  await page.unroute('**/vehicles/concept/car-lod1-batched.glb'); injecting = false;
   await page.locator('[data-action="spawn"]').click(); await ready();
   await page.waitForFunction(() => window.__leonida.game.vehicles.list.some(v => v.kind === 'concept'));
   await close(); await page.waitForTimeout(1800); await capture('spawned');
   await enter(); await page.waitForTimeout(200); await capture('entry-door');
   await page.waitForTimeout(1000); let s = await capture('seated-jason');
-  assert.ok(s.cars[0].meshes > 120); // Includes the seated character's visible mesh.
+  assert.ok(s.cars[0].meshes > 87); // Includes the seated character's visible mesh.
   await page.keyboard.press('Tab'); await page.waitForTimeout(300); await capture('seated-lucia');
   await page.keyboard.down('w'); await page.waitForTimeout(3300); await page.keyboard.up('w');
   s = await capture('driving'); assert.ok(s.vehicle.speed > 10);
@@ -98,8 +102,8 @@ try {
   await page.keyboard.press('Escape'); await page.locator('[data-action="credits"]').click();
   assert.match(await page.locator('#panel').textContent(), /Eric Chadwick/); await capture('credits');
   assert.equal(errors.length, 0);
-} catch (error) { errors.push(error.stack || String(error)); console.error(error); await page.screenshot({ path:`docs/evidence/concept-${backend}-failure.png` }).catch(()=>{}); }
-await fs.writeFile(`docs/evidence/concept-${backend}.json`, JSON.stringify({ backend, url, buildFingerprint, method:'Normal keyboard/mouse/UI mutations; read-only game diagnostics and building selection for closed-loop driving.',errors,expectedErrors,assetRequests,checks },null,2));
+} catch (error) { errors.push(error.stack || String(error)); console.error(error); await page.screenshot({ path:`${prefix}-failure.png` }).catch(()=>{}); }
+await fs.writeFile(`${prefix}.json`, JSON.stringify({ backend, url, buildFingerprint, method:'Normal keyboard/mouse/UI mutations; read-only game diagnostics and building selection for closed-loop driving.',errors,expectedErrors,assetRequests,checks },null,2));
 console.log('RESULT',JSON.stringify({backend,errors,checks:checks.length,assetRequests:assetRequests.length}));
 await Promise.race([browser.close(),new Promise(resolve=>setTimeout(resolve,5000))]);
 process.exit(errors.length ? 1 : 0);

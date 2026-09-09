@@ -30,6 +30,7 @@ import { AIRCRAFT_SPAWNS, aircraftInput, aircraftPrompt, isAircraft } from "./ve
 import { findGroundVehicleSpawn } from "./vehicles/spawnPlacement";
 import { Player } from "./gameplay/Player";
 import { prepareCharacterAssets } from "./gameplay/characters/RocketboxSkin";
+import { DETAILED_CAR_LIMIT } from "./vehicles/ConceptCar";
 import { WantedSystem } from "./gameplay/Wanted";
 import { Population } from "./gameplay/Population";
 import { DamageSystem } from "./gameplay/Damage";
@@ -93,7 +94,10 @@ async function boot() {
   const vehicles = new VehicleSystem(ctx);
   const interpolation = new PhysicsInterpolation();
   vehicles.waterLevel = world.waterLevel;
-  const startCar = vehicles.spawn("coupe", new Vector3(3, 1, -23), 0);
+  ui.loading("Preparing the starter car…");
+  try { await vehicles.prepareModel("concept"); }
+  catch (error) { console.warn("Using the starter coupe fallback", error); }
+  const startCar = vehicles.spawn(vehicles.concept.ready ? "concept" : "coupe", new Vector3(3, 1, -23), 0);
   vehicles.spawn("motorcycle", new Vector3(11, 1, -42), Math.PI);
   vehicles.spawn("boat", new Vector3(239, 0.4, -230), 0);
   const wanted = new WantedSystem();
@@ -296,7 +300,7 @@ async function boot() {
       ui.toast("No compatible saved sandbox in this browser.");
       return false;
     }
-    if (s.vehicles.filter(v => v.kind === "concept").length > 4) { ui.toast("Saved sandbox exceeds the four detailed-car limit."); return false; }
+    if (s.vehicles.filter(v => v.kind === "concept").length > DETAILED_CAR_LIMIT) { ui.toast("Saved sandbox exceeds the six detailed-car limit."); return false; }
     if (!await prepareVehicleModels(s.vehicles.map(v => v.kind as VehicleKind))) return false;
     if (!await prepareTravel(new Vector3(s.player.x, s.player.y, s.player.z))) return false;
     combat.reactions.reset();
@@ -307,6 +311,14 @@ async function boot() {
     population.drivers = population.drivers.filter(
       (d) => !savedIds.has(d.v.id),
     );
+    // Saved owned cars take priority over disposable ambient traffic within the same visual budget.
+    let detailedCount = s.vehicles.filter(v => v.kind === "concept").length;
+    population.drivers = population.drivers.filter(d => {
+      if (d.v.kind !== "concept") return true;
+      if (++detailedCount <= DETAILED_CAR_LIMIT) return true;
+      vehicles.remove(d.v);
+      return false;
+    });
     for (const v of s.vehicles) vehicles.restore(v);
     player.teleport(new Vector3(s.player.x, s.player.y + 1, s.player.z));
     if (s.player.character !== player.name) player.switchCharacter();
@@ -483,7 +495,7 @@ async function boot() {
       ui.showPanel("");
       setPause(false);
       canvas.focus();
-      ui.toast(action === "continue" ? "Saved sandbox restored." : "Walk to the sports coupe ahead. Press E to get in.");
+      ui.toast(action === "continue" ? "Saved sandbox restored." : "Walk to the car ahead. Press E to get in.");
       return;
     }
     if (["creative", "map", "pause", "credits"].includes(action)) {
@@ -516,7 +528,7 @@ async function boot() {
       }
       const kind = (document.querySelector<HTMLSelectElement>("#spawn-kind")
         ?.value || "coupe") as VehicleKind;
-      if (kind === "concept" && vehicles.list.filter(v => v.kind === "concept").length >= 4) { ui.toast("Four detailed cars are already in the sandbox. Remove one first."); return; }
+      if (kind === "concept" && vehicles.list.filter(v => v.kind === "concept").length >= DETAILED_CAR_LIMIT) { ui.toast("Six detailed cars are already nearby. Remove one first."); return; }
       if (!await prepareVehicleModels([kind])) return;
       let p = player.position.clone();
       if (!isAircraft(kind) && kind !== "boat") {

@@ -7,3 +7,6 @@ Modified for Leonida: Khronos and 3DCommerce logo texture references and image p
 Runtime adapter modifications: transforms rebased to the physics chassis; front wheel steering neutralized; movable component groups rebuilt; lamp/glazing slots separated; PBR textures shared with per-vehicle paint and lamp materials; bounded body deformation and mechanical controls added. The prepared GLB bytes remain unchanged by this runtime adaptation.
 
 Reproduce: `node scripts/assets/prepare-car-concept.mjs`. Optionally pass `--source /path/to/original.glb`; the source SHA-256 is always checked.
+
+
+The runtime uses `car-lod1-batched.glb`, a derivative simplified with meshoptimizer 0.25 (MIT) and batched by material within compatible interactive groups. Geometry was reduced from 213,347 to 61,879 triangles while retaining original embedded textures, body/cabin proportions, named component anchors and material definitions. Source and derivative hashes and component mapping are in `lod-provenance.json` and `lod-batching.json`. The original CC BY 4.0 author, copyright and excluded-logo terms continue to apply.

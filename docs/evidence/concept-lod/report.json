@@ -1,0 +1,166 @@
+{
+  "scope": "Fixed-camera WebGL2 offline visual fixture using the current ConceptCar adapter. Only test-server integrity allowlist extended with the two pinned derivative hashes; no runtime game source changed. Actual movement, damage, save/load and performance require separate integration checks.",
+  "reports": [
+    {
+      "path": "car.glb",
+      "meshes": 112,
+      "allChildMeshes": 120,
+      "triangles": 213347,
+      "materials": 23,
+      "wheels": 4,
+      "doors": 2,
+      "windows": 6,
+      "lamps": 4,
+      "covers": 2,
+      "panels": 10
+    },
+    {
+      "path": "car-lod1.glb",
+      "meshes": 112,
+      "allChildMeshes": 120,
+      "triangles": 61879,
+      "materials": 23,
+      "wheels": 4,
+      "doors": 2,
+      "windows": 6,
+      "lamps": 4,
+      "covers": 2,
+      "panels": 10
+    },
+    {
+      "path": "car-lod1-batched.glb",
+      "meshes": 79,
+      "allChildMeshes": 87,
+      "triangles": 61879,
+      "materials": 23,
+      "wheels": 4,
+      "doors": 2,
+      "windows": 6,
+      "lamps": 4,
+      "covers": 2,
+      "panels": 9
+    }
+  ],
+  "comparisons": [
+    {
+      "view": "front",
+      "asset": "car.glb",
+      "reference": true
+    },
+    {
+      "view": "front",
+      "asset": "car-lod1.glb",
+      "meanAbsoluteChannelDifference255": 0.2797312378167641,
+      "fractionPixelsAnyChannelOver16": 0.006758040935672515
+    },
+    {
+      "view": "front",
+      "asset": "car-lod1-batched.glb",
+      "meanAbsoluteChannelDifference255": 0.27973781676413256,
+      "fractionPixelsAnyChannelOver16": 0.006758771929824561
+    },
+    {
+      "view": "rear",
+      "asset": "car.glb",
+      "reference": true
+    },
+    {
+      "view": "rear",
+      "asset": "car-lod1.glb",
+      "meanAbsoluteChannelDifference255": 0.30401169590643273,
+      "fractionPixelsAnyChannelOver16": 0.006562865497076024
+    },
+    {
+      "view": "rear",
+      "asset": "car-lod1-batched.glb",
+      "meanAbsoluteChannelDifference255": 0.3040289961013645,
+      "fractionPixelsAnyChannelOver16": 0.00656359649122807
+    },
+    {
+      "view": "side",
+      "asset": "car.glb",
+      "reference": true
+    },
+    {
+      "view": "side",
+      "asset": "car-lod1.glb",
+      "meanAbsoluteChannelDifference255": 0.41531652046783624,
+      "fractionPixelsAnyChannelOver16": 0.010709795321637426
+    },
+    {
+      "view": "side",
+      "asset": "car-lod1-batched.glb",
+      "meanAbsoluteChannelDifference255": 0.4153206627680312,
+      "fractionPixelsAnyChannelOver16": 0.010709795321637426
+    },
+    {
+      "view": "wheel",
+      "asset": "car.glb",
+      "reference": true
+    },
+    {
+      "view": "wheel",
+      "asset": "car-lod1.glb",
+      "meanAbsoluteChannelDifference255": 2.258563596491228,
+      "fractionPixelsAnyChannelOver16": 0.07202485380116959
+    },
+    {
+      "view": "wheel",
+      "asset": "car-lod1-batched.glb",
+      "meanAbsoluteChannelDifference255": 2.258567007797271,
+      "fractionPixelsAnyChannelOver16": 0.07202485380116959
+    },
+    {
+      "view": "cabin",
+      "asset": "car.glb",
+      "reference": true
+    },
+    {
+      "view": "cabin",
+      "asset": "car-lod1.glb",
+      "meanAbsoluteChannelDifference255": 1.99820955165692,
+      "fractionPixelsAnyChannelOver16": 0.03866008771929825
+    },
+    {
+      "view": "cabin",
+      "asset": "car-lod1-batched.glb",
+      "meanAbsoluteChannelDifference255": 1.998202485380117,
+      "fractionPixelsAnyChannelOver16": 0.03866154970760234
+    },
+    {
+      "view": "driving",
+      "asset": "car.glb",
+      "reference": true
+    },
+    {
+      "view": "driving",
+      "asset": "car-lod1.glb",
+      "meanAbsoluteChannelDifference255": 0.13408455165692007,
+      "fractionPixelsAnyChannelOver16": 0.0033457602339181285
+    },
+    {
+      "view": "driving",
+      "asset": "car-lod1-batched.glb",
+      "meanAbsoluteChannelDifference255": 0.1340811403508772,
+      "fractionPixelsAnyChannelOver16": 0.0033457602339181285
+    },
+    {
+      "view": "door",
+      "asset": "car.glb",
+      "reference": true
+    },
+    {
+      "view": "door",
+      "asset": "car-lod1.glb",
+      "meanAbsoluteChannelDifference255": 0.3039237329434698,
+      "fractionPixelsAnyChannelOver16": 0.0071842105263157895
+    },
+    {
+      "view": "door",
+      "asset": "car-lod1-batched.glb",
+      "meanAbsoluteChannelDifference255": 0.3039288499025341,
+      "fractionPixelsAnyChannelOver16": 0.0071842105263157895
+    }
+  ],
+  "errors": []
+}

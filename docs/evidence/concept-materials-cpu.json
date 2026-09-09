@@ -1,8 +1,8 @@
 {
   "errors": [],
   "method": "Chrome with --disable-gpu and Babylon NullEngine; actual embedded PNG decoding and glTF materials, no GPU render",
-  "meshes": 120,
-  "triangles": 213347,
+  "meshes": 87,
+  "triangles": 61879,
   "wheels": 4,
   "doors": 2,
   "windows": 6,
@@ -387,17 +387,17 @@
   "repeatedCreateRemove": {
     "cycles": 8,
     "before": [
-      242,
+      176,
       46,
       3,
-      140,
+      105,
       16
     ],
     "after": [
-      242,
+      176,
       46,
       3,
-      140,
+      105,
       16
     ]
   }

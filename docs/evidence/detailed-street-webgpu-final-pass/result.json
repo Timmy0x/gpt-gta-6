@@ -1,0 +1,1535 @@
+{
+  "origin": "http://127.0.0.1:4190",
+  "backend": "webgpu",
+  "method": "Normal fresh launch, keyboard entry/switch/driving/braking/exit, Sandbox spawn limit and save/load. Game hooks read diagnostics only. The final six-owned-save stage deliberately adds two valid vehicle records to browser storage, then uses the normal Load button to verify the shared budget.",
+  "requests": [
+    "http://127.0.0.1:4190/vehicles/concept/car-lod1-batched.glb"
+  ],
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-DmvLSStP.js",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "normal-start",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 1.733333333333332,
+      "meshes": 2435,
+      "activeMeshes": 528,
+      "physicsBodies": 243,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 208,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 208,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 30.321406913283628,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            2.999974250793457,
+            0.6124984622001648,
+            -23.000062942504883
+          ],
+          "health": 100,
+          "speed": 0.000029080187150667328,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-7",
+          "position": [
+            -356.7001037597656,
+            0.6695669889450073,
+            -127.21858215332031
+          ],
+          "health": 100,
+          "speed": 8.554547310493192,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            55.21858215332031,
+            0.6695669293403625,
+            75.2999038696289
+          ],
+          "health": 100,
+          "speed": 8.554547310581125,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        }
+      ],
+      "toast": "Walk to the car ahead. Press E to get in."
+    },
+    {
+      "label": "starter-seated",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        2.9999582767486572,
+        0.6124942898750305,
+        -23.0001163482666
+      ],
+      "character": "Jason",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "concept",
+        "health": 100,
+        "speed": 0.00002911758486937132,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 3.566666666666659,
+      "meshes": 2448,
+      "activeMeshes": 523,
+      "physicsBodies": 256,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 221,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 221,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 29.999999999999993,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            2.9999582767486572,
+            0.6124942898750305,
+            -23.0001163482666
+          ],
+          "health": 100,
+          "speed": 0.00002911758486937132,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-7",
+          "position": [
+            -356.7001647949219,
+            0.6186224818229675,
+            -106.17225646972656
+          ],
+          "health": 100,
+          "speed": 12.0228176118339,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            33.09779357910156,
+            0.6192051768302917,
+            75.2998275756836
+          ],
+          "health": 100,
+          "speed": 13.097217559971389,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        }
+      ],
+      "toast": "Aster Concept · W/S throttle · A/D steer · Space handbrake · E exit"
+    },
+    {
+      "label": "lucia-seated",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        2.9999520778656006,
+        0.6124942898750305,
+        -23.000137329101562
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "concept",
+        "health": 100,
+        "speed": 0.000029116260409742412,
+        "grounded": 4
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 4.266666666666657,
+      "meshes": 2452,
+      "activeMeshes": 524,
+      "physicsBodies": 260,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 28,
+        "totalMeshes": 1221,
+        "residentMeshes": 1101,
+        "totalColliders": 249,
+        "residentColliders": 225,
+        "cpuGeometryBytes": 56380016,
+        "meshLoads": 1101,
+        "meshDisposals": 0,
+        "colliderLoads": 225,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 49,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 219,
+        "fetchedBytes": 12624876,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 49,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 30.003000300018822,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            2.9999520778656006,
+            0.6124942898750305,
+            -23.000137329101562
+          ],
+          "health": 100,
+          "speed": 0.000029116260409742412,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-7",
+          "position": [
+            -356.70013427734375,
+            0.5666804313659668,
+            -98.62073516845703
+          ],
+          "health": 100,
+          "speed": 8.299715042199605,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            23.945316314697266,
+            0.6201615333557129,
+            75.29987335205078
+          ],
+          "health": 100,
+          "speed": 13.104756355525192,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        }
+      ],
+      "toast": "Aster Concept · W/S throttle · A/D steer · Space handbrake · E exit"
+    },
+    {
+      "label": "starter-driving",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        2.9979586601257324,
+        0.7515853047370911,
+        19.509140014648438
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": {
+        "id": "vehicle-1",
+        "kind": "concept",
+        "health": 100,
+        "speed": 23.671554570086254,
+        "grounded": 2
+      },
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 7.766666666666644,
+      "meshes": 2461,
+      "activeMeshes": 475,
+      "physicsBodies": 265,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 29,
+        "totalMeshes": 1221,
+        "residentMeshes": 1105,
+        "totalColliders": 249,
+        "residentColliders": 230,
+        "cpuGeometryBytes": 56424832,
+        "meshLoads": 1105,
+        "meshDisposals": 0,
+        "colliderLoads": 230,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 50,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 220,
+        "fetchedBytes": 12633562,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 50,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 30.000000000000004,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            2.9979586601257324,
+            0.7515853047370911,
+            19.509140014648438
+          ],
+          "health": 100,
+          "speed": 23.671554570086254,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-7",
+          "position": [
+            -356.70013427734375,
+            0.6124942898750305,
+            -94.7152099609375
+          ],
+          "health": 100,
+          "speed": 0.000029144169162378035,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            -21.810792922973633,
+            0.6204851269721985,
+            75.29994201660156
+          ],
+          "health": 100,
+          "speed": 13.141816139231135,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        }
+      ],
+      "toast": "Aster Concept · W/S throttle · A/D steer · Space handbrake · E exit"
+    },
+    {
+      "label": "starter-exit",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        1.26611282693886,
+        0.9399999403953552,
+        48.908563219446904
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 10.800000000000116,
+      "meshes": 2484,
+      "activeMeshes": 318,
+      "physicsBodies": 273,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 30,
+        "totalMeshes": 1221,
+        "residentMeshes": 1120,
+        "totalColliders": 249,
+        "residentColliders": 238,
+        "cpuGeometryBytes": 56519352,
+        "meshLoads": 1120,
+        "meshDisposals": 0,
+        "colliderLoads": 238,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 12,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 5,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 30.00300030003279,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            3.0009841918945312,
+            0.6129416823387146,
+            48.890777587890625
+          ],
+          "health": 100,
+          "speed": 0.0047347522907319715,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-7",
+          "position": [
+            -356.7001647949219,
+            0.6412612199783325,
+            -92.67381286621094
+          ],
+          "health": 100,
+          "speed": 4.723494529729562,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            -58.521915435791016,
+            0.5707518458366394,
+            74.2888412475586
+          ],
+          "health": 100,
+          "speed": 8.419235071138777,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        }
+      ],
+      "toast": "Aster Concept · W/S throttle · A/D steer · Space handbrake · E exit"
+    },
+    {
+      "label": "starter-parked",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        1.26611282693886,
+        0.9399999403953552,
+        48.908563219446904
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 13.200000000000236,
+      "meshes": 2490,
+      "activeMeshes": 318,
+      "physicsBodies": 279,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 30,
+        "totalMeshes": 1221,
+        "residentMeshes": 1120,
+        "totalColliders": 249,
+        "residentColliders": 244,
+        "cpuGeometryBytes": 56519352,
+        "meshLoads": 1120,
+        "meshDisposals": 0,
+        "colliderLoads": 244,
+        "colliderDisposals": 0,
+        "pendingMeshes": 0,
+        "activeAnchors": 11,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 4,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 29.99700029996724,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            3.000962257385254,
+            0.6124942898750305,
+            48.890567779541016
+          ],
+          "health": 100,
+          "speed": 0.00001011841952582739,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-7",
+          "position": [
+            -349.7890319824219,
+            0.6514921188354492,
+            -78.27263641357422
+          ],
+          "health": 100,
+          "speed": 5.284792373734642,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            -62.09730911254883,
+            0.612479031085968,
+            72.19728088378906
+          ],
+          "health": 100,
+          "speed": 0.000022375800818914743,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        }
+      ],
+      "toast": "Aster Concept · W/S throttle · A/D steer · Space handbrake · E exit"
+    },
+    {
+      "label": "six-car-budget",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        1.26611282693886,
+        0.9399999403953552,
+        48.908563219446904
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 0,
+          "z": 0
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 15.466666666667015,
+      "meshes": 2748,
+      "activeMeshes": 582,
+      "physicsBodies": 276,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 30,
+        "totalMeshes": 1221,
+        "residentMeshes": 1120,
+        "totalColliders": 249,
+        "residentColliders": 238,
+        "cpuGeometryBytes": 56519352,
+        "meshLoads": 1120,
+        "meshDisposals": 0,
+        "colliderLoads": 245,
+        "colliderDisposals": 7,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 7,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 25.03337783711815,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            3.00093936920166,
+            0.6124942898750305,
+            48.890560150146484
+          ],
+          "health": 100,
+          "speed": 0.00001009435659669601,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-7",
+          "position": [
+            -326.94549560546875,
+            0.6178427338600159,
+            -76.50873565673828
+          ],
+          "health": 100,
+          "speed": 12.12845980919093,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            -62.09724044799805,
+            0.6124943494796753,
+            72.19730377197266
+          ],
+          "health": 100,
+          "speed": 0.000028857617295276535,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        },
+        {
+          "id": "vehicle-16",
+          "position": [
+            1.2700175046920776,
+            0.6124802231788635,
+            54.90850830078125
+          ],
+          "health": 100,
+          "speed": 0.000029094969327050223,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-17",
+          "position": [
+            5.270022392272949,
+            0.6127259135246277,
+            54.905906677246094
+          ],
+          "health": 100,
+          "speed": 0.000027608277803392046,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-18",
+          "position": [
+            -2.7299728393554688,
+            0.6008734107017517,
+            54.91115951538086
+          ],
+          "health": 100,
+          "speed": 0.000028756334927067966,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        }
+      ],
+      "toast": "Six detailed cars are already nearby. Remove one first."
+    },
+    {
+      "label": "saved-cars-restored",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        1.26611282693886,
+        1.9399999403953552,
+        48.908563219446904
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.26611282693886,
+          "z": 48.908563219446904
+        }
+      },
+      "population": {
+        "traffic": 12,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 17.18333333333364,
+      "meshes": 2748,
+      "activeMeshes": 569,
+      "physicsBodies": 276,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 30,
+        "totalMeshes": 1221,
+        "residentMeshes": 1120,
+        "totalColliders": 249,
+        "residentColliders": 238,
+        "cpuGeometryBytes": 56519352,
+        "meshLoads": 1120,
+        "meshDisposals": 0,
+        "colliderLoads": 245,
+        "colliderDisposals": 7,
+        "pendingMeshes": 0,
+        "activeAnchors": 8,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 7,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 17.24931002760169,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-7",
+          "position": [
+            -311.3074035644531,
+            0.580159604549408,
+            -75.85494232177734
+          ],
+          "health": 100,
+          "speed": 2.813236498386726,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#51677D"
+        },
+        {
+          "id": "vehicle-13",
+          "position": [
+            -62.097190856933594,
+            0.6124942898750305,
+            72.19731903076172
+          ],
+          "health": 100,
+          "speed": 0.00002883397081114473,
+          "ambient": true,
+          "owned": false,
+          "meshes": 79,
+          "triangles": 61879,
+          "paint": "#D9D9D2"
+        },
+        {
+          "id": "vehicle-1",
+          "position": [
+            3.0009288787841797,
+            0.6124943494796753,
+            48.89054870605469
+          ],
+          "health": 100,
+          "speed": 0.000029294003664090635,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-16",
+          "position": [
+            1.2700079679489136,
+            0.6124942898750305,
+            54.90847396850586
+          ],
+          "health": 100,
+          "speed": 0.000029090688403597497,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-17",
+          "position": [
+            5.270012378692627,
+            0.6124945878982544,
+            54.9058723449707
+          ],
+          "health": 100,
+          "speed": 0.000029084447279373615,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-18",
+          "position": [
+            -2.729980707168579,
+            0.6124866604804993,
+            54.9111328125
+          ],
+          "health": 100,
+          "speed": 0.000029095895162601157,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        }
+      ],
+      "toast": "Saved sandbox restored."
+    },
+    {
+      "label": "six-owned-save-fixture",
+      "backend": "WebGPU",
+      "cash": 12500,
+      "fallbackReason": "",
+      "position": [
+        1.26611282693886,
+        1.9399999403953552,
+        48.908563219446904
+      ],
+      "character": "Lucia",
+      "health": 100,
+      "vehicle": null,
+      "wanted": {
+        "stars": 0,
+        "phase": "clear",
+        "lastKnown": {
+          "x": 1.26611282693886,
+          "z": 48.908563219446904
+        }
+      },
+      "population": {
+        "traffic": 10,
+        "peds": 30,
+        "police": {
+          "officers": 0,
+          "activeFoot": 0,
+          "swat": 0,
+          "resisting": false,
+          "arrestProgress": 0
+        }
+      },
+      "crashCount": 0,
+      "shots": 0,
+      "props": 18,
+      "destroyed": [],
+      "paused": false,
+      "simTime": 18.35000000000024,
+      "meshes": 2741,
+      "activeMeshes": 729,
+      "physicsBodies": 269,
+      "streaming": {
+        "totalChunks": 56,
+        "residentChunks": 30,
+        "totalMeshes": 1221,
+        "residentMeshes": 1120,
+        "totalColliders": 249,
+        "residentColliders": 231,
+        "cpuGeometryBytes": 56519352,
+        "meshLoads": 1120,
+        "meshDisposals": 0,
+        "colliderLoads": 245,
+        "colliderDisposals": 14,
+        "pendingMeshes": 0,
+        "activeAnchors": 7,
+        "lastMeshOperations": 0,
+        "loadedPackages": 51,
+        "totalPackages": 84,
+        "pendingPackages": 0,
+        "failedPackages": 0,
+        "retries": 0,
+        "requests": 221,
+        "fetchedBytes": 12671593,
+        "residentMaterials": 170,
+        "totalCpuGeometryBytes": 57932888,
+        "lastError": "",
+        "packagesLoaded": 51,
+        "packagesEvicted": 0,
+        "ready": true
+      },
+      "movement": {
+        "climbing": false,
+        "crouched": false,
+        "transitioning": false
+      },
+      "atmosphere": {
+        "wetness": 0,
+        "sheltered": false,
+        "particles": 0
+      },
+      "facility": {
+        "id": "coastal-reserve-annex",
+        "classification": "creative-mode addition",
+        "phase": "quiet",
+        "inside": false,
+        "accessSeconds": 0,
+        "warningSeconds": 0,
+        "guards": 4,
+        "activeGuards": 0,
+        "gateOpen": false,
+        "arrestProgress": 0
+      },
+      "audio": {
+        "voices": 8,
+        "effects": 0,
+        "state": "running"
+      },
+      "fps": 12.390550140427676,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "quality": "high",
+      "streamingBusy": false,
+      "errors": [],
+      "cars": [
+        {
+          "id": "vehicle-1",
+          "position": [
+            3.0009286403656006,
+            0.6124943494796753,
+            48.89054489135742
+          ],
+          "health": 100,
+          "speed": 0.0000293014919374634,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-16",
+          "position": [
+            1.270007848739624,
+            0.6124942898750305,
+            54.90847396850586
+          ],
+          "health": 100,
+          "speed": 0.00002909083367446688,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-17",
+          "position": [
+            5.270012378692627,
+            0.612494707107544,
+            54.9058723449707
+          ],
+          "health": 100,
+          "speed": 0.00002908499090708163,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-18",
+          "position": [
+            -2.729980945587158,
+            0.6124846935272217,
+            54.9111328125
+          ],
+          "health": 100,
+          "speed": 0.000029099304152630376,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-900000",
+          "position": [
+            17.00092887878418,
+            0.6124943494796753,
+            68.89054870605469
+          ],
+          "health": 100,
+          "speed": 0.000029272977813275506,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        },
+        {
+          "id": "vehicle-900001",
+          "position": [
+            22.00092887878418,
+            0.6124943494796753,
+            68.89054870605469
+          ],
+          "health": 100,
+          "speed": 0.000029272977813275506,
+          "ambient": false,
+          "owned": true,
+          "meshes": 79,
+          "triangles": 61879
+        }
+      ],
+      "toast": "Saved sandbox restored."
+    }
+  ],
+  "errors": []
+}

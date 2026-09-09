@@ -1,6 +1,6 @@
 # Leonida — Free Roam
 
-A local Babylon.js / TypeScript single-player open-world recreation project. The current playable area connects an authored Vice City beachfront district with a western market, bungalow neighborhood and southern workshops. This is a development build with original procedural assets, **not a finished GTA VI recreation or an exact reconstruction of Rockstar geography**.
+A local Babylon.js / TypeScript single-player open-world recreation project. The current playable area connects an authored Vice City beachfront district with a western market, bungalow neighborhood and southern workshops. This is a development build with original procedural world assets and licensed detailed player/car models, **not a finished GTA VI recreation or an exact reconstruction of Rockstar geography**.
 
 ## Run locally
 
@@ -63,7 +63,7 @@ The tests in `tests/vehicles.test.ts` instantiate actual Havok physics, includin
 - [Independent gameplay audit](docs/verification-audit.md)
 - [Continuation checkpoint](docs/continuation.md)
 
-The five other Leonida regions remain planned. Major remaining work includes realistic licensed assets, complete character/passenger animations, advanced police tactics and military units, more activities, full regional persistence and full geography and the 30-minute performance/stability gate. World packages now load over HTTP near the player; CPU geometry, GPU meshes, shared materials and Havok colliders unload when no longer needed. Vehicles have animated detachable doors, working headlights and garage paint/repair services. Aster Concept adds a detailed licensed drivable car with a cabin, individual wheel/brake parts, hinged detachable panels and localized saved deformation. Spawn it from Sandbox; it loads on demand. OSM reference data remains a geography foundation. The completed 30-minute baseline failed the performance targets (59.52 median / 19.45 slowest-1% FPS); save/load stalls and memory retention require further work. Short successful tests do not satisfy the full objective.
+The five other Leonida regions remain planned. Major remaining work includes realistic licensed assets, complete character/passenger animations, advanced police tactics and military units, more activities, full regional persistence and full geography and the 30-minute performance/stability gate. World packages now load over HTTP near the player; CPU geometry, GPU meshes, shared materials and Havok colliders unload when no longer needed. Vehicles have animated detachable doors, working headlights and garage paint/repair services. Aster Concept adds a detailed licensed drivable car with a cabin, individual wheel/brake parts, hinged detachable panels and localized saved deformation. It is now the starter car and appears in two traffic slots; Sandbox can spawn more within the six-car budget. OSM reference data remains a geography foundation. The completed 30-minute baseline failed the performance targets (59.52 median / 19.45 slowest-1% FPS); save/load stalls and memory retention require further work. Short successful tests do not satisfy the full objective.
 
 Rockstar material is used as reference. No extracted Rockstar game assets are included. Geographic dimensions and physics tuning are explicit project decisions where sources do not disclose them.
 

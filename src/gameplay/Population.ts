@@ -1,6 +1,7 @@
 import { Vector3, type Scene, type ShadowGenerator } from "@babylonjs/core";
 import type { RoadNode, WorldContract } from "../core/contracts";
 import { angleDelta, clamp, distance, lineBlocked, random } from "../core/math";
+import { DETAILED_CAR_LIMIT } from "../vehicles/ConceptCar";
 import type { Vehicle, VehicleSystem } from "../vehicles/VehicleSystem";
 import { Character } from "./Character";
 import type { Player } from "./Player";
@@ -114,13 +115,16 @@ export class Population {
   private spawnDriver(node: RoadNode, police: boolean, i: number) {
     const next = this.world.roads.find((n) => n.id === node.next[0]) || node;
     const heading = Math.atan2(next.x - node.x, next.z - node.z);
+    const detailed = !police && i % 6 === 3 && this.vehicles.concept.ready
+      && this.vehicles.list.filter(v => v.kind === "concept").length < DETAILED_CAR_LIMIT;
     const v = this.vehicles.spawn(
       police
         ? "police"
-        : (["sedan", "suv", "truck", "coupe"][i % 4] as "sedan"),
+        : detailed ? "concept" : (["sedan", "suv", "truck", "coupe"][i % 4] as "sedan"),
       new Vector3(node.x, 1.0, node.z),
       heading,
     );
+    if (detailed) this.vehicles.setPaint(v, i < 6 ? "#51677D" : "#D9D9D2");
     const d = { v, target: next.id, previous: node.id, police, stuck: 0 };
     this.drivers.push(d);
     return d;
