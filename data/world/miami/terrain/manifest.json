@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "id": "usgs-3dep-brickell-r1",
+  "retrieved": "2026-09-12T13:47:04.125Z",
+  "source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+  "bboxRequested": [
+    -80.199,
+    25.7596,
+    -80.187,
+    25.7704
+  ],
+  "extent": {
+    "xmin": -80.199,
+    "ymin": 25.759600000000002,
+    "xmax": -80.187,
+    "ymax": 25.770400000000002,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    }
+  },
+  "width": 1200,
+  "height": 1080,
+  "pixelType": "Float32",
+  "units": "meters",
+  "verticalDatum": "NAVD88 (EPSG:5703), explicit selected source catalog metadata",
+  "attribution": "USGS National Map 3D Elevation Program (3DEP)",
+  "license": "USGS public domain data",
+  "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+  "method": "Bare-earth elevation raster, no hillshade or visual imagery; bilinear resampling in WGS84 grid; locked to two Miami-Dade D23 one-meter source rasters; separate older coastal NAVD88 raster only for no-data gaps with explicit pixel mask",
+  "selectedRasters": [
+    {
+      "OBJECTID": 29040,
+      "Name": "FL_MiamiDade_D23",
+      "Source": "USGS",
+      "VerticalDatum": "North American Vertical Datum of 1988 (NAVD 88)",
+      "AcquisitionDate": 1716940800000,
+      "URL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/FL_MiamiDade_D23/TIFF/USGS_1M_17_x58y286_FL_MiamiDade_D23.tif",
+      "Metadata": "D:\\USGS_3DEP\\data\\1m\\FL_MiamiDade_D23\\USGS_1M_17_x58y286_FL_MiamiDade_D23.xml",
+      "Resolution_X": null,
+      "Resolution_Y": null,
+      "ProductName": "USGS_3DEP",
+      "Best": 9938
+    },
+    {
+      "OBJECTID": 48574,
+      "Name": "FL_MiamiDade_D23",
+      "Source": "USGS",
+      "VerticalDatum": "North American Vertical Datum of 1988 (NAVD 88)",
+      "AcquisitionDate": 1716940800000,
+      "URL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/FL_MiamiDade_D23/TIFF/USGS_1M_17_x58y285_FL_MiamiDade_D23.tif",
+      "Metadata": "D:\\USGS_3DEP\\data\\1m\\FL_MiamiDade_D23\\USGS_1M_17_x58y285_FL_MiamiDade_D23.xml",
+      "Resolution_X": null,
+      "Resolution_Y": null,
+      "ProductName": "USGS_3DEP",
+      "Best": 9938
+    }
+  ],
+  "fallbackRasters": [
+    {
+      "OBJECTID": 116504,
+      "Name": "FL_Peninsular_FDEM_2018_D19_DRRA",
+      "Source": "USGS",
+      "VerticalDatum": "North American Vertical Datum of 1988 (NAVD 88)",
+      "AcquisitionDate": 1579910400000,
+      "URL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/FL_Peninsular_FDEM_2018_D19_DRRA/TIFF/USGS_1M_17_x58y285_FL_Peninsular_FDEM_2018_D19_DRRA.tif",
+      "Metadata": "D:\\USGS_3DEP\\data\\1m\\FL_Peninsular_FDEM_2018_D19_DRRA\\USGS_1M_17_x58y285_FL_Peninsular_FDEM_2018_D19_DRRA.xml",
+      "Resolution_X": null,
+      "Resolution_Y": null,
+      "ProductName": "USGS_3DEP",
+      "Best": 50342
+    },
+    {
+      "OBJECTID": 85804,
+      "Name": "FL_TopobathyFLKeysNOAA_2019_D20",
+      "Source": "USGS",
+      "VerticalDatum": "North American Vertical Datum of 1988 (NAVD 88)",
+      "AcquisitionDate": 1553299200000,
+      "URL": "20220406",
+      "Metadata": "D:\\USGS_3DEP\\data\\1m\\FL_TopobathyFLKeysNOAA_2019_D20\\USGS_1M_17_x58y286_FL_TopobathyFLKeysNOAA_2019_D20.xml",
+      "Resolution_X": null,
+      "Resolution_Y": null,
+      "ProductName": "USGS_3DEP",
+      "Best": 60144
+    },
+    {
+      "OBJECTID": 105193,
+      "Name": "FL_TopobathyFLKeysNOAA_2019_D20",
+      "Source": "USGS",
+      "VerticalDatum": "North American Vertical Datum of 1988 (NAVD 88)",
+      "AcquisitionDate": 1553299200000,
+      "URL": "20220406",
+      "Metadata": "D:\\USGS_3DEP\\data\\1m\\FL_TopobathyFLKeysNOAA_2019_D20\\USGS_1M_17_x58y285_FL_TopobathyFLKeysNOAA_2019_D20.xml",
+      "Resolution_X": null,
+      "Resolution_Y": null,
+      "ProductName": "USGS_3DEP",
+      "Best": 60144
+    }
+  ],
+  "mosaicRule": {
+    "mosaicMethod": "esriMosaicLockRaster",
+    "lockRasterIds": [
+      29040,
+      48574
+    ],
+    "mosaicOperation": "MT_FIRST"
+  },
+  "fallbackRule": {
+    "mosaicMethod": "esriMosaicLockRaster",
+    "lockRasterIds": [
+      116504,
+      85804,
+      105193
+    ],
+    "mosaicOperation": "MT_FIRST"
+  },
+  "catalogCount": 9,
+  "requests": [
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer?f=pjson",
+      "path": "service.json",
+      "bytes": 12981,
+      "sha256": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb"
+    },
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/query?f=json&where=Category+%3D+1&geometry=%7B%22xmin%22%3A-80.199%2C%22ymin%22%3A25.7596%2C%22xmax%22%3A-80.187%2C%22ymax%22%3A25.7704%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&outSR=4326&outFields=OBJECTID%2CName%2CSource%2CVerticalDatum%2CAcquisitionDate%2CURL%2CMetadata%2CResolution_X%2CResolution_Y%2CProductName%2CBest&returnGeometry=true",
+      "path": "catalog.json",
+      "bytes": 38683,
+      "sha256": "e579d3fe3c4f1d38d5300a5f34f3f46289ad28f9e3fda15c6c9ba1a1755e8b5f"
+    },
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-80.199%2C25.7596%2C-80.187%2C25.7704&bboxSR=4326&imageSR=4326&size=1200%2C1080&format=tiff&pixelType=F32&noData=-999999&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B29040%2C48574%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&compression=LZ77",
+      "path": "export.json",
+      "bytes": 362,
+      "sha256": "b602627cc9b9ff4555b6787ea99c4902d310c4c52a8bcc399c529f1162ff351a"
+    },
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/directories/elevation_output/3DEPElevation_ImageServer/_ags_d50ce152_8edb_4a49_9ec3_d3d7126aa0fb.tif",
+      "path": "brickell-dem.tif",
+      "bytes": 4552030,
+      "sha256": "89415e0c1a1fb0a35a720bf31381044ade3629deace4374435a1af48edf609b4"
+    },
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=json&bbox=-80.199%2C25.7596%2C-80.187%2C25.7704&bboxSR=4326&imageSR=4326&size=1200%2C1080&format=tiff&pixelType=F32&noData=-999999&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&mosaicRule=%7B%22mosaicMethod%22%3A%22esriMosaicLockRaster%22%2C%22lockRasterIds%22%3A%5B116504%2C85804%2C105193%5D%2C%22mosaicOperation%22%3A%22MT_FIRST%22%7D&compression=LZ77",
+      "path": "fallback-export.json",
+      "bytes": 362,
+      "sha256": "3aaa97234213ab45101f61de5efdc63e3e04d753241ec6e598d32cd1d3f9f484"
+    },
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/directories/elevation_output/3DEPElevation_ImageServer/_ags_78fd6073_92d1_4d8c_a45d_ac60a59f174a.tif",
+      "path": "brickell-fallback-dem.tif",
+      "bytes": 4113140,
+      "sha256": "209e0bb2fbba73879500c9ff77595a11984a83913aef88c81d1d406b3e6c1287"
+    }
+  ]
+}

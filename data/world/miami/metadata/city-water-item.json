@@ -1,0 +1,72 @@
+{
+  "id": "8af681a358bc48a7aeade4ad7669258f",
+  "owner": "CityMiamiFL",
+  "ownerId": "6d63314e90d1473cabc8517934e099c0",
+  "created": 1752765326000,
+  "modified": 1756398259000,
+  "guid": null,
+  "name": null,
+  "title": "Water Bodies (Polygons / Port of Miami)",
+  "type": "Feature Service",
+  "typeKeywords": [
+    "ArcGIS Server",
+    "Data",
+    "Feature Access",
+    "Feature Service",
+    "Service",
+    "Singlelayer",
+    "Hosted Service"
+  ],
+  "description": "<p>This polygon feature class represents the areas covered by water bodies within the City of Miami. The original (unclipped) source dataset covers the Urban Development Boundary (UBD) as well as areas outside the UBD, which cover approximately 938 square miles. This dataset was obtained from the Miami-Dade County Open Data Hub and clipped to contain only those features within the City of Miami. For a countywide layer, please refer to Miami-Dade County Open Data Hub at&nbsp;<a target='_blank' href='https://gis-mdc.opendata.arcgis.com/' rel='nofollow ugc noopener noreferrer'>https://gis-mdc.opendata.arcgis.com/.<\/a> For a complete metadata citation detailing the production of this layer, please visit the dataset's description page at <a target='_blank' href='https://gis-mdc.opendata.arcgis.com/datasets/MDC::water-p/about' rel='nofollow ugc noopener noreferrer'>https://gis-mdc.opendata.arcgis.com/datasets/MDC::water-p/about<\/a>.&nbsp;<\/p><p>The Coast and Marina dataset supports informed decision-making for shoreline cleanups and environmental planning by providing detailed geographic and environmental information. It includes data on coastal boundaries, shoreline types, beaches, cliffs, and critical port and harbor infrastructure such as docks, piers, marinas, and navigation channels. This dataset also highlights coastal attractions and recreational areas, offering valuable insights for community engagement, tourism, and maritime activities. By visualizing these features, it enhances public access to coastal resources and supports sustainable coastal development and conservation efforts.<\/p><p>Data Refresh Frequency: This dataset is refreshed on a weekly basis, regardless of whether any updates have occurred in the source data. Users should note that the data is reprocessed and reloaded each week to ensure availability and consistency, even in the absence of changes.<\/p>",
+  "tags": [
+    "Miami",
+    "MDC",
+    "Water",
+    "Management",
+    "Emergency",
+    "Preparedness"
+  ],
+  "snippet": "A polygon feature class representing the water bodies within City of Miami.",
+  "thumbnail": "thumbnail/ago_downloaded.png",
+  "documentation": null,
+  "extent": [
+    [
+      -80.32011585999693,
+      25.708804453437082
+    ],
+    [
+      -80.13503305614756,
+      25.856634201331495
+    ]
+  ],
+  "categories": [],
+  "spatialReference": "102100",
+  "accessInformation": "© 2025 City of Miami, Department of Innovation and Technology, GIS Team; Miami-Dade County, Information Technology Department",
+  "classification": null,
+  "licenseInfo": "<p><span style='font-family:&quot;Courier New&quot;;'>&lt;a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\"&gt;&lt;img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\"&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.<\/span><\/p>",
+  "culture": "en-us",
+  "properties": null,
+  "advancedSettings": null,
+  "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Water_Bodies_(Polygons)/FeatureServer",
+  "proxyFilter": null,
+  "access": "public",
+  "size": 598016,
+  "subInfo": 0,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "commentsEnabled": true,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0,
+  "numViews": 1018,
+  "scoreCompleteness": 100,
+  "groupDesignations": null,
+  "apiToken1ExpirationDate": -1,
+  "apiToken2ExpirationDate": -1,
+  "lastViewed": 1789207200000
+}

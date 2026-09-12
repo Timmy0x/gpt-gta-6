@@ -1,0 +1,17 @@
+{
+  "id": "osm-brickell-supplement",
+  "bboxWgs84": [
+    -80.199,
+    25.7596,
+    -80.187,
+    25.7704
+  ],
+  "retrieved": "2026-09-12T13:30:38.367537+00:00",
+  "timestamp": "2026-09-12T13:29:06Z",
+  "endpoint": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A45%5D%3B%28way%5B%22highway%22%5D%2825.7596%2C-80.199%2C25.7704%2C-80.187%29%3Bway%5B%22building%22%5D%2825.7596%2C-80.199%2C25.7704%2C-80.187%29%3Bway%5B%22building%3Apart%22%5D%2825.7596%2C-80.199%2C25.7704%2C-80.187%29%3Brelation%5B%22building%22%5D%5B%22type%22%3D%22multipolygon%22%5D%2825.7596%2C-80.199%2C25.7704%2C-80.187%29%3Brelation%5B%22building%3Apart%22%5D%5B%22type%22%3D%22multipolygon%22%5D%2825.7596%2C-80.199%2C25.7704%2C-80.187%29%3B%29%3Bout+body%3B%3E%3Bout+skel+qt%3B%0A",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "elementCount": 10428,
+  "sha256": "199e520efddc721e4467b3ad87161915a2395c4d3a1fa30bb8f6c201dd667b2b"
+}

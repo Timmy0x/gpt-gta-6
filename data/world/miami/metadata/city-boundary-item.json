@@ -1,0 +1,72 @@
+{
+  "id": "b583ea2da62445b195ddeb0c3f479e7d",
+  "owner": "CityMiamiFL",
+  "ownerId": "6d63314e90d1473cabc8517934e099c0",
+  "created": 1550466726000,
+  "modified": 1612799499000,
+  "guid": null,
+  "name": null,
+  "title": "City Boundary",
+  "type": "Feature Service",
+  "typeKeywords": [
+    "ArcGIS Server",
+    "Data",
+    "Feature Access",
+    "Feature Service",
+    "Metadata",
+    "Service",
+    "Singlelayer",
+    "Hosted Service"
+  ],
+  "description": "<span style='font-family: &quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size: 17px;'>The City Boundary layer, originally created by the Office of City Clerk, bounds the City of Miami to its current limits. The layer is edited and maintained by GIS Team of the City. <\/span><div><span style='font-family: &quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size: 17px;'>This layer is a representation of the official City of Miami Boundary Legal Description based on the legal survey of the city, but it is not to be construed as an official survey of the city boundary. It may be used for general reference purposes but not in place of an official survey or other legal instrument. <\/span><\/div>",
+  "tags": [
+    "Miami",
+    "Official",
+    "Boundary",
+    "City",
+    "Planning"
+  ],
+  "snippet": "This digital spatial dataset is a representation of the City of Miami Boundary based on the legal description of the City of Miami Boundary. ",
+  "thumbnail": "thumbnail/ago_downloaded.gif",
+  "documentation": null,
+  "extent": [
+    [
+      -80.32011870743807,
+      25.70830337904861
+    ],
+    [
+      -80.13503305614753,
+      25.856634201331495
+    ]
+  ],
+  "categories": [],
+  "spatialReference": null,
+  "accessInformation": "© 2019, City of Miami, Department of Innovation and Technology, GIS Team",
+  "classification": null,
+  "licenseInfo": "&lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.",
+  "culture": "en-us",
+  "properties": null,
+  "advancedSettings": null,
+  "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/City_Boundary/FeatureServer",
+  "proxyFilter": null,
+  "access": "public",
+  "size": 90112,
+  "subInfo": 0,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "commentsEnabled": true,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0,
+  "numViews": 52249,
+  "scoreCompleteness": 100,
+  "groupDesignations": null,
+  "apiToken1ExpirationDate": -1,
+  "apiToken2ExpirationDate": -1,
+  "lastViewed": 1789218000000
+}

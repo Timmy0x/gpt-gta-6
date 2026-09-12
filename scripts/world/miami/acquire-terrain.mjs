@@ -1,0 +1,23 @@
+import { mkdir,writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+const root=new URL('../../../data/world/miami/terrain/',import.meta.url),base='https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer';
+await mkdir(root,{recursive:true});
+const bbox=[-80.199,25.7596,-80.187,25.7704];
+const requests=[];
+async function get(url,path,json=true){const r=await fetch(url,{signal:AbortSignal.timeout(60000)});if(!r.ok)throw new Error(`${r.status} ${url}`);const b=Buffer.from(await r.arrayBuffer());await writeFile(new URL(path,root),b);requests.push({url,path,bytes:b.length,sha256:createHash('sha256').update(b).digest('hex')});const d=json?JSON.parse(b.toString()):b;if(d.error)throw new Error(JSON.stringify(d.error));return d;}
+await get(`${base}?f=pjson`,'service.json');
+const geometry=JSON.stringify({xmin:bbox[0],ymin:bbox[1],xmax:bbox[2],ymax:bbox[3],spatialReference:{wkid:4326}});
+const catalog=await get(`${base}/query?${new URLSearchParams({f:'json',where:'Category = 1',geometry,geometryType:'esriGeometryEnvelope',spatialRel:'esriSpatialRelIntersects',outSR:'4326',outFields:'OBJECTID,Name,Source,VerticalDatum,AcquisitionDate,URL,Metadata,Resolution_X,Resolution_Y,ProductName,Best',returnGeometry:'true'})}`,'catalog.json');
+if(catalog.exceededTransferLimit||catalog.features.length>100)throw new Error('Terrain catalog query was not bounded to Brickell');
+const selected=catalog.features.filter(f=>f.attributes.Name==='FL_MiamiDade_D23');
+if(selected.length!==2||selected.some(f=>!f.attributes.VerticalDatum.includes('NAVD 88')))throw new Error('Expected two Miami-Dade D23 NAVD88 1m sources');
+const mosaicRule={mosaicMethod:'esriMosaicLockRaster',lockRasterIds:selected.map(f=>f.attributes.OBJECTID),mosaicOperation:'MT_FIRST'};
+const image=await get(`${base}/exportImage?${new URLSearchParams({f:'json',bbox:bbox.join(','),bboxSR:'4326',imageSR:'4326',size:'1200,1080',format:'tiff',pixelType:'F32',noData:'-999999',interpolation:'RSP_BilinearInterpolation',renderingRule:JSON.stringify({rasterFunction:'None'}),mosaicRule:JSON.stringify(mosaicRule),compression:'LZ77'})}`,'export.json');
+await get(image.href,'brickell-dem.tif',false);
+const fallback=catalog.features.filter(f=>['FL_TopobathyFLKeysNOAA_2019_D20','FL_Peninsular_FDEM_2018_D19_DRRA'].includes(f.attributes.Name)).sort((a,b)=>a.attributes.Best-b.attributes.Best);
+if(fallback.length!==3||fallback.some(f=>!f.attributes.VerticalDatum.includes('NAVD 88')))throw new Error('Unexpected coastal fallback sources');
+const fallbackRule={mosaicMethod:'esriMosaicLockRaster',lockRasterIds:fallback.map(f=>f.attributes.OBJECTID),mosaicOperation:'MT_FIRST'};
+const fallbackImage=await get(`${base}/exportImage?${new URLSearchParams({f:'json',bbox:bbox.join(','),bboxSR:'4326',imageSR:'4326',size:'1200,1080',format:'tiff',pixelType:'F32',noData:'-999999',interpolation:'RSP_BilinearInterpolation',renderingRule:JSON.stringify({rasterFunction:'None'}),mosaicRule:JSON.stringify(fallbackRule),compression:'LZ77'})}`,'fallback-export.json');
+await get(fallbackImage.href,'brickell-fallback-dem.tif',false);
+await writeFile(new URL('manifest.json',root),JSON.stringify({version:1,id:'usgs-3dep-brickell-r1',retrieved:new Date().toISOString(),source:base,bboxRequested:bbox,extent:image.extent,width:image.width,height:image.height,pixelType:'Float32',units:'meters',verticalDatum:'NAVD88 (EPSG:5703), explicit selected source catalog metadata',attribution:'USGS National Map 3D Elevation Program (3DEP)',license:'USGS public domain data',licenseUrl:'https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits',method:'Bare-earth elevation raster, no hillshade or visual imagery; bilinear resampling in WGS84 grid; locked to two Miami-Dade D23 one-meter source rasters; separate older coastal NAVD88 raster only for no-data gaps with explicit pixel mask',selectedRasters:selected.map(f=>f.attributes),fallbackRasters:fallback.map(f=>f.attributes),mosaicRule,fallbackRule,catalogCount:catalog.features.length,requests},null,2)+'\n');
+console.log(JSON.stringify({extent:image.extent,width:image.width,height:image.height,catalog:catalog.features.map(f=>({name:f.attributes.Name,datum:f.attributes.VerticalDatum,resolution:f.attributes.Resolution_X})),bytes:requests.at(-1).bytes}));

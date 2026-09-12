@@ -1,0 +1,8 @@
+{
+  "features": 1675,
+  "roads": 1335,
+  "buildings": 340,
+  "explicitHeight": 195,
+  "rejected": [],
+  "warning": "OSM community heights remain mapped confidence, not surveyed; construction, roof parts and contradictory floor counts require review."
+}

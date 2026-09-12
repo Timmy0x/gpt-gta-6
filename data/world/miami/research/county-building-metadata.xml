@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><metadata xml:lang="en">
+    <Esri>
+        <CreaDate>20240813</CreaDate>
+        <CreaTime>09440900</CreaTime>
+        <ArcGISFormat>1.0</ArcGISFormat>
+        <SyncOnce>FALSE</SyncOnce>
+        <DataProperties>
+            <itemProps>
+                <itemName Sync="TRUE">psde2.MDC.BuildingFootprint2D</itemName>
+                <imsContentType Sync="TRUE" export="False">002</imsContentType>
+                <nativeExtBox>
+                    <westBL Sync="TRUE">695199.563556</westBL>
+                    <eastBL Sync="TRUE">945863.536142</eastBL>
+                    <southBL Sync="TRUE">327123.237554</southBL>
+                    <northBL Sync="TRUE">598887.614895</northBL>
+                    <exTypeCode Sync="TRUE">1</exTypeCode>
+                </nativeExtBox>
+            </itemProps>
+            <coordRef>
+                <type Sync="TRUE">Projected</type>
+                <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+                <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+                <projcsn Sync="TRUE">NAD_1983_StatePlane_Florida_East_FIPS_0901_Feet</projcsn>
+                <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.8'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_StatePlane_Florida_East_FIPS_0901_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,656166.6666666665],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-81.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9999411764705882],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,24.33333333333333],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;EPSG&amp;quot;,2236]]&lt;/WKT&gt;&lt;XOrigin&gt;-17791299.9990048&lt;/XOrigin&gt;&lt;YOrigin&gt;-41645399.999999702&lt;/YOrigin&gt;&lt;XYScale&gt;3906.2499963620203&lt;/XYScale&gt;&lt;ZOrigin&gt;0&lt;/ZOrigin&gt;&lt;ZScale&gt;1&lt;/ZScale&gt;&lt;MOrigin&gt;0&lt;/MOrigin&gt;&lt;MScale&gt;1&lt;/MScale&gt;&lt;XYTolerance&gt;0.0020480000019073501&lt;/XYTolerance&gt;&lt;ZTolerance&gt;2&lt;/ZTolerance&gt;&lt;MTolerance&gt;2&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102658&lt;/WKID&gt;&lt;LatestWKID&gt;2236&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+            </coordRef>
+        </DataProperties>
+        <SyncDate>20240809</SyncDate>
+        <SyncTime>15560800</SyncTime>
+        <ModDate>20240809</ModDate>
+        <ModTime>15560800</ModTime>
+        <scaleRange>
+            <minScale>500000</minScale>
+            <maxScale>5000</maxScale>
+        </scaleRange>
+        <ArcGISProfile>FGDC</ArcGISProfile>
+    </Esri>
+    <dataIdInfo>
+        <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.8.1.14362</envirDesc>
+        <dataLang>
+            <languageCode Sync="TRUE" value="eng"/>
+            <countryCode Sync="TRUE" value="USA"/>
+        </dataLang>
+        <idCitation>
+            <resTitle Sync="FALSE">BuildingsFootprint2D</resTitle>
+            <presForm>
+                <PresFormCd Sync="TRUE" value="005"/>
+            </presForm>
+            <date>
+                <pubDate>2017-11-30T00:00:00</pubDate>
+            </date>
+            <citRespParty>
+                <rpIndName>Jose Rodrigez</rpIndName>
+                <rpOrgName>Miami-Dade County, ITD</rpOrgName>
+                <role>
+                    <RoleCd value="006"/>
+                </role>
+            </citRespParty>
+        </idCitation>
+        <spatRpType>
+            <SpatRepTypCd Sync="TRUE" value="001"/>
+        </spatRpType>
+        <dataExt>
+            <geoEle>
+                <GeoBndBox esriExtentType="search">
+                    <exTypeCode Sync="TRUE">1</exTypeCode>
+                    <westBL Sync="TRUE">-80.881916</westBL>
+                    <eastBL Sync="TRUE">-80.118170</eastBL>
+                    <northBL Sync="TRUE">25.981234</northBL>
+                    <southBL Sync="TRUE">25.230920</southBL>
+                </GeoBndBox>
+            </geoEle>
+        </dataExt>
+        <idPurp>Environmental Sciences and Resources Institute (ESRI) operating under the authority of Miami-Dade County, as per contract number BW8207-2/12, has been contracted to provide planimetric updates to the Miami-Dade County Information Technology Department (ITD). This feature class has been updated to illustrate the buildings planimetric in 2021 within the Urban Development Boundary (UDB) and outside the UDB, approximately 969 square miles.</idPurp>
+        <idAbs>&lt;p style='margin-top:0px; margin-bottom:6px; padding-bottom:1em; font-family:&amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;'&gt;&lt;font size='3'&gt;A collection of polygon features for all buildings within the Urban Development Boundary (UDB) and outside the UDB, approximately 938 square miles. The planimetric layer for Miami-Dade County was previously updated in 2015 byEarth Sciences and Resources Institute (ESRI). This feature class contains features extracted from LiDAR captured by GPI in 2018 and updated with Woolpert 2021 data.&lt;/font&gt;&lt;/p&gt;&lt;p style='margin-top:0px; margin-bottom:6px; padding-bottom:1em; font-family:&amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;'&gt;&lt;font size='3'&gt;Please contact the GIS Technical Support Team at &lt;a href='mailto:gis.miamidade.gov' style='color:rgb(90, 147, 89); text-decoration-line:none;' rel='nofollow ugc'&gt;gis@miamidade.gov &lt;/a&gt;for additional information.&lt;/font&gt;&lt;/p&gt;&lt;p style='margin-top:0px; margin-bottom:6px; padding-bottom:1em; font-family:&amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;'&gt;&lt;font size='3'&gt;Definition of particular fields in the Buildings Footprint 2D feature class: &lt;/font&gt;&lt;/p&gt;&lt;p style='margin-top:0px; margin-bottom:6px; padding-bottom:1em; font-family:&amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;'&gt;&lt;font size='3'&gt;Source = {&amp;quot;L&amp;quot;, &amp;quot;P&amp;quot;} where L = LiDAR, P = MDC Planimetric&lt;/font&gt;&lt;/p&gt;&lt;p style='margin-top:0px; margin-bottom:6px; padding-bottom:1em; font-family:&amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;'&gt;&lt;font size='3'&gt;Bld_type = {&amp;quot;S&amp;quot;, &amp;quot;L&amp;quot;} where S = Small Buildings, L = Large Buildings&lt;/font&gt;&lt;/p&gt;&lt;font size='3'&gt;Updated: Unknown&lt;br /&gt; &lt;br /&gt;The data was created using: &lt;br /&gt;Projected Coordinate System: WGS_1984_Web_Mercator_Auxiliary_Sphere&lt;br /&gt;Projection: Mercator_Auxiliary_Sphere&lt;/font&gt;</idAbs>
+        <idCredit>Miami-Dade County ITD - Geospatial Infrastructure Support Group</idCredit>
+        <searchKeys>
+            
+            
+            
+            
+            
+            
+            
+        <keyword>Florida</keyword><keyword>Miami-Dade County</keyword><keyword>MDC</keyword><keyword>County Government</keyword><keyword>Local Government</keyword><keyword>WGS84</keyword><keyword>Buildings</keyword><keyword>Building Footprint 2D</keyword><keyword>Planimetrics</keyword><keyword>Building Model</keyword><keyword>3D</keyword><keyword>2D</keyword><keyword/><keyword>ITD</keyword><keyword>Communications Information Technology Department</keyword><keyword>Resiliency</keyword></searchKeys>
+        <resConst>
+            <Consts>
+                <useLimit>Miami-Dade County provides this data for use "as is". The areas depicted by this map/data are approximate, and are not accurate to surveying or engineering standards. The maps/data shown here are for illustration purposes only and are not suitable for site-specific decision making. Information found here should not be used for making financial or any other commitments. Miami-Dade County provides this information with the understanding that it is not guaranteed to be accurate, correct or complete and conclusions drawn from such information are the sole responsibility of the user. While every effort has been made to ensure the accuracy, correctness and timeliness of materials presented, Miami-Dade County assumes no responsibility for errors or omissions, even if Miami-Dade County is advised of the possibility of such damage.</useLimit>
+            </Consts>
+        </resConst>
+        <dataChar>
+            <CharSetCd value="004"/>
+        </dataChar>
+        <suppInfo>Revision:
+Date: August, 2024 
+By: Jose R Rodriguez
+Reason: Update BuildingsFootprint2D planimetric layer content with 2021 data.
+
+Date: August, 2018 
+By: Jose R Rodriguez
+Reason: Update BuildingsFootprint2D planimetric layer content.
+
+Date: Nov 2017            By: J. Rodriguez
+Reason: Add FC to GIS Production environment.</suppInfo>
+        <idStatus>
+            <ProgCd value="001"/>
+        </idStatus>
+        <resMaint>
+            <maintFreq>
+                <MaintFreqCd value="009"/>
+            </maintFreq>
+        </resMaint>
+        <tpCat>
+            <TopicCatCd value="003"/>
+        </tpCat>
+    </dataIdInfo>
+    <mdLang>
+        <languageCode Sync="TRUE" value="eng"/>
+        <countryCode Sync="TRUE" value="USA"/>
+    </mdLang>
+    <distInfo>
+        <distFormat>
+            <formatName Sync="FALSE">Feature Class</formatName>
+        </distFormat>
+    </distInfo>
+    <mdHrLv>
+        <ScopeCd Sync="TRUE" value="005"/>
+    </mdHrLv>
+    <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+    <refSysInfo>
+        <RefSystem>
+            <refSysID>
+                <identCode Sync="TRUE" code="2236"/>
+                <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+                <idVersion Sync="TRUE">5.3(9.0.0)</idVersion>
+            </refSysID>
+        </RefSystem>
+    </refSysInfo>
+    <spatRepInfo>
+        <VectSpatRep>
+            <geometObjs Name="psde2.MDC.BuildingFootprint2D">
+                <geoObjTyp>
+                    <GeoObjTypCd Sync="TRUE" value="002"/>
+                </geoObjTyp>
+                <geoObjCnt Sync="TRUE">863196</geoObjCnt>
+            </geometObjs>
+            <topLvl>
+                <TopoLevCd Sync="TRUE" value="001"/>
+            </topLvl>
+        </VectSpatRep>
+    </spatRepInfo>
+    <spdoinfo>
+        <ptvctinf>
+            <esriterm Name="psde2.MDC.BuildingFootprint2D">
+                <efeatyp Sync="TRUE">Simple</efeatyp>
+                <efeageom Sync="TRUE" code="4"/>
+                <esritopo Sync="TRUE">FALSE</esritopo>
+                <efeacnt Sync="TRUE">863196</efeacnt>
+                <spindex Sync="TRUE">TRUE</spindex>
+                <linrefer Sync="TRUE">FALSE</linrefer>
+            </esriterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed Name="psde2.MDC.BuildingFootprint2D">
+            <enttyp>
+                <enttypl Sync="TRUE">psde2.MDC.BuildingFootprint2D</enttypl>
+                <enttypt Sync="TRUE">Feature Class</enttypt>
+                <enttypc Sync="TRUE">863196</enttypc>
+            </enttyp>
+            <attr>
+                <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+                <attalias Sync="TRUE">OBJECTID</attalias>
+                <attrtype Sync="TRUE">OID</attrtype>
+                <attwidth Sync="TRUE">4</attwidth>
+                <atprecis Sync="TRUE">10</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+                <attrdef Sync="TRUE">Internal feature number.</attrdef>
+                <attrdefs Sync="TRUE">Esri</attrdefs>
+                <attrdomv>
+                    <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">Shape</attrlabl>
+                <attalias Sync="TRUE">Shape</attalias>
+                <attrtype Sync="TRUE">Geometry</attrtype>
+                <attwidth Sync="TRUE">4</attwidth>
+                <atprecis Sync="TRUE">0</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+                <attrdef Sync="TRUE">Feature geometry.</attrdef>
+                <attrdefs Sync="TRUE">Esri</attrdefs>
+                <attrdomv>
+                    <udom Sync="TRUE">Coordinates defining the features.</udom>
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">SOURCE</attrlabl>
+                <attalias Sync="TRUE">SOURCE</attalias>
+                <attrtype Sync="TRUE">String</attrtype>
+                <attwidth Sync="TRUE">1</attwidth>
+                <atprecis Sync="TRUE">0</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">YEARUPDATE</attrlabl>
+                <attalias Sync="TRUE">YEAR_UPDATE</attalias>
+                <attrtype Sync="TRUE">SmallInteger</attrtype>
+                <attwidth Sync="TRUE">2</attwidth>
+                <atprecis Sync="TRUE">5</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">TYPE</attrlabl>
+                <attalias Sync="TRUE">TYPE</attalias>
+                <attrtype Sync="TRUE">String</attrtype>
+                <attwidth Sync="TRUE">1</attwidth>
+                <atprecis Sync="TRUE">0</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">HEIGHT</attrlabl>
+                <attalias Sync="TRUE">HEIGHT</attalias>
+                <attrtype Sync="TRUE">Double</attrtype>
+                <attwidth Sync="TRUE">8</attwidth>
+                <atprecis Sync="TRUE">38</atprecis>
+                <attscale Sync="TRUE">8</attscale>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">UniqueID</attrlabl>
+                <attalias Sync="TRUE">UNIQUE_ID</attalias>
+                <attrtype Sync="TRUE">String</attrtype>
+                <attwidth Sync="TRUE">50</attwidth>
+                <atprecis Sync="TRUE">0</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">GlobalID</attrlabl>
+                <attalias Sync="TRUE">GlobalID</attalias>
+                <attrtype Sync="TRUE">GlobalID</attrtype>
+                <attwidth Sync="TRUE">38</attwidth>
+                <atprecis Sync="TRUE">0</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">Shape.STArea()</attrlabl>
+                <attalias Sync="TRUE">Shape.STArea()</attalias>
+                <attrtype Sync="TRUE">Double</attrtype>
+                <attwidth Sync="TRUE">0</attwidth>
+                <atprecis Sync="TRUE">0</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+            </attr>
+            <attr>
+                <attrlabl Sync="TRUE">Shape.STLength()</attrlabl>
+                <attalias Sync="TRUE">Shape.STLength()</attalias>
+                <attrtype Sync="TRUE">Double</attrtype>
+                <attwidth Sync="TRUE">0</attwidth>
+                <atprecis Sync="TRUE">0</atprecis>
+                <attscale Sync="TRUE">0</attscale>
+            </attr>
+        </detailed>
+    </eainfo>
+    <mdDateSt Sync="TRUE">20240809</mdDateSt>
+    <Binary>
+        <Thumbnail>
+            <Data EsriPropertyType="PictureX">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</Data>
+        </Thumbnail>
+    </Binary>
+    <mdContact>
+        <rpIndName>Jose Rodrigez</rpIndName>
+        <rpOrgName>Miami-Dade County, ITD</rpOrgName>
+        <role>
+            <RoleCd value="006"/>
+        </role>
+        <displayName>Jose Rodrigez</displayName>
+    </mdContact>
+    <mdMaint>
+        <maintFreq>
+            <MaintFreqCd value="009"/>
+        </maintFreq>
+    </mdMaint>
+</metadata>

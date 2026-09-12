@@ -1,0 +1,79 @@
+{
+  "id": "ce420278a45a4bf4a349c37c197263b3",
+  "owner": "MDPublisher",
+  "ownerId": "eb86472ad5a7cd0c2249340dea4378f2",
+  "orgId": "8Pc9XBTAsYuxx9Ny",
+  "created": 1509107049000,
+  "modified": 1708008884000,
+  "guid": null,
+  "name": null,
+  "title": "Buildings Models 3D - Scene Layer",
+  "type": "Scene Service",
+  "typeKeywords": [
+    "3DObject",
+    "ArcGIS Server",
+    "Data",
+    "Scene Service",
+    "Service",
+    "Hosted Service"
+  ],
+  "description": "A collection of multipatches features for all buildings within the Urban Development Boundary (UDB) and outside the UDB, approximately 938 square miles. <div>Please contact the GIS Technical Support Team at <a href='mailto:gis@miamidade.gov' target='_blank'>gis@miamidade.gov<\/a> for additional information.<br /><\/div><div><br /><\/div><div>The source feature class can be downloaded from this <a href='https://mdc.maps.arcgis.com/home/item.html?id=ab4d3a61e60c441bbfc1098d701fc991' target='_blank'>link<\/a>.<\/div><div><br /><\/div><div><div style='font-family: &quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 17px; background-color: rgb(255, 255, 255);'>Projected Coordinate System: WGS_1984_Web_Mercator_Auxiliary_Sphere<\/div><div style='font-family: &quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 17px; background-color: rgb(255, 255, 255);'>Projection: Mercator_Auxiliary_Sphere<\/div><\/div>",
+  "tags": [
+    "Florida",
+    "Miami-Dade County",
+    "MDC",
+    "County Government",
+    "Local Government",
+    "Buildings Models",
+    "3D",
+    "WGS84"
+  ],
+  "snippet": "Miami-Dade County 3D buildings models scene layer.",
+  "thumbnail": "thumbnail/thumbnail.jpeg",
+  "documentation": null,
+  "extent": [
+    [
+      -80.88191621621664,
+      25.230921201515
+    ],
+    [
+      -80.11843322355669,
+      25.98067230780102
+    ]
+  ],
+  "categories": [
+    "/Categories/Source Department/Communications, Information and Technology",
+    "/Categories/Production Content",
+    "/Categories/GIS Groups/Geospatial Infrastructure Support"
+  ],
+  "spatialReference": null,
+  "accessInformation": "Miami-Dade County GIS Technical Support Group",
+  "classification": null,
+  "licenseInfo": "Miami-Dade County provides this data for use &quot;as is&quot;. The areas depicted by this map/data are approximate, and are not accurate to surveying or engineering standards. The maps/data shown here are for illustration purposes only and are not suitable for site-specific decision making. Information found here should not be used for making financial or any other commitments. Miami-Dade County provides this information with the understanding that it is not guaranteed to be accurate, correct or complete and conclusions drawn from such information are the sole responsibility of the user. While every effort has been made to ensure the accuracy, correctness and timeliness of materials presented, Miami-Dade County assumes no responsibility for errors or omissions, even if Miami-Dade County is advised of the possibility of such damage",
+  "culture": "en-us",
+  "properties": null,
+  "advancedSettings": null,
+  "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer",
+  "proxyFilter": null,
+  "access": "public",
+  "size": 952177231,
+  "subInfo": 0,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "commentsEnabled": false,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0,
+  "numViews": 24359,
+  "contentStatus": "public_authoritative",
+  "scoreCompleteness": 93,
+  "groupDesignations": null,
+  "apiToken1ExpirationDate": -1,
+  "apiToken2ExpirationDate": -1,
+  "lastViewed": 1789182000000
+}

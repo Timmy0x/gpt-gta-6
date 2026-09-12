@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "scope": "Offline source acquisition, byte integrity, all retained source features, triangulated geometry, datum/mask and identity ledger only; not runtime or photorealistic acceptance",
+  "sources": [
+    {
+      "id": "city-streets",
+      "features": 135,
+      "polygons": 0,
+      "vertices": 528,
+      "sha256": "f0a58bfcfe11a38f7be93dc52cb5cf513cd7e92de9bdc686eeb7bf64f39777d7"
+    },
+    {
+      "id": "city-shoreline",
+      "features": 16,
+      "polygons": 0,
+      "vertices": 833,
+      "sha256": "b694fbea276271d0df97ba0e56656dcd3fb222e2f4a28688d1e1a66a05755d0c"
+    },
+    {
+      "id": "city-water",
+      "features": 12,
+      "polygons": 25,
+      "vertices": 6407,
+      "sha256": "2c7755eb36496cd2102b232649e286eee614f51072afd2db39c068f87430e11c"
+    },
+    {
+      "id": "city-boundary",
+      "features": 1,
+      "polygons": 1,
+      "vertices": 840,
+      "sha256": "05959d49feb816a0736dbd554422f8dae947263100ea26ddbc37fbb49fb0cc0d"
+    },
+    {
+      "id": "county-buildings",
+      "features": 590,
+      "polygons": 613,
+      "vertices": 8231,
+      "sha256": "0a51f05ab979c534250ab954903084de96aebd34f8c4d7de1ff390b11bac26e0"
+    },
+    {
+      "id": "county-ubid",
+      "features": 265,
+      "polygons": 265,
+      "vertices": 15808,
+      "sha256": "cecef41e8fa8466eaea82c1fef0cda3a0bbd3874375c5126c1ed25438d79190e"
+    },
+    {
+      "id": "osm-brickell-supplement",
+      "features": 1675,
+      "sourceSha256": "199e520efddc721e4467b3ad87161915a2395c4d3a1fa30bb8f6c201dd667b2b"
+    }
+  ],
+  "geometry": {
+    "buildings": 262,
+    "vertices": 409968,
+    "triangles": 368152,
+    "degenerateTriangles": 0,
+    "maxNormalError": 4.0273513635114e-8,
+    "binarySha256": "fbe0c7e6b42e96b187513d1bd698a7e2231d32f5f2157c829602cd99dc2ffba5",
+    "verifiedArchivedSourcePayloads": 470,
+    "archiveSha256": "c579f8eb6ec5061418812a354de63c4d5504c4613a7aeb14c872a0163b9be73d"
+  },
+  "terrain": {
+    "pixels": 1296000,
+    "fallbackPixels": 33408,
+    "minM": -8.31060791015625,
+    "maxM": 11.676612854003906,
+    "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b"
+  },
+  "reconciliation": {
+    "footprintFeatures": 590,
+    "polygonParts": 613,
+    "exactI3sMatches": 200,
+    "unresolvedNewerFootprints": 390,
+    "i3sMeshes": 262,
+    "i3sWithoutExactCurrentFootprint": 62
+  }
+}

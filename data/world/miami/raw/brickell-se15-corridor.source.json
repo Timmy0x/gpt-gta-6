@@ -1,0 +1,6 @@
+{
+  "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Streets/FeatureServer/0/query?f=geojson&where=1%3D1&geometry=-80.195%2C25.756%2C-80.19%2C25.760&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&outFields=*&returnGeometry=true",
+  "sha256": "aa33c1c1dd11d02d31e912df822ce97a328cb9a531a6ffb9863aefb2f46d4aa2",
+  "source": "city-streets",
+  "purpose": "Bound2015approvedroadcorridor; outside initialAOI"
+}

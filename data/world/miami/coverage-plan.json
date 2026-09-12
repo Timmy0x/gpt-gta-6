@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "initial": {
+    "id": "brickell-core-r1",
+    "bboxWgs84": [
+      -80.199,
+      25.7596,
+      -80.187,
+      25.7704
+    ],
+    "streetIntersection": {
+      "name": "SE8thStreet / BrickellAvenue",
+      "source": "city-streets",
+      "segmentIds": [
+        11901,
+        10802,
+        14789,
+        10801
+      ],
+      "wgs84": [
+        -80.1907224560056,
+        25.7661748271726
+      ],
+      "position": [
+        228.4720116103804,
+        0,
+        130.15451246350295
+      ]
+    }
+  },
+  "masterBoundary": {
+    "path": "raw/city-boundary.geojson",
+    "type": "Official administrative City of Miami boundary; includes water, not a land mask"
+  },
+  "next": [
+    {
+      "id": "brickell-south",
+      "purpose": "Continue actual Brickell Avenue to SE15thRoad, thenRickenbacker approach; join existing south edge."
+    },
+    {
+      "id": "downtown-north",
+      "purpose": "MiamiRiver crossings and Downtown; bridge deck and opening-state authoring required."
+    },
+    {
+      "id": "brickell-key-east",
+      "purpose": "Entire BrickellKey and actual connecting causeway; preserve shoreline and separate deck elevations."
+    },
+    {
+      "id": "brickell-west",
+      "purpose": "WestBrickell throughMetrorail/SW2ndAve; retain grade-separated transit and I95 geometry."
+    }
+  ],
+  "expansionPolicy": "Use shared fixed ENU origin and contiguous1200m tiles; fetch all intersecting source IDs with halo, retain full source features and deduplicate byGlobalID/sourceObjectId. Never scale distances to fit. Reconcile overlap/replacement before rendering mixed-age buildings.",
+  "remaining": [
+    "2015mesh vs2023footprint coverage",
+    "Primary facade/art and current building identity review",
+    "Bridge decks and vertical road geometry",
+    "Curbs, lane and sidewalk widths per approved/as-built source",
+    "Street furniture, signs, vegetation and surface condition inventories",
+    "City-wide coverage outside firstAOI"
+  ]
+}
