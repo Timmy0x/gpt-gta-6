@@ -9,6 +9,9 @@ import {
   type Scene,
   type TransformNode,
 } from "@babylonjs/core";
+import type { Character } from '../Character';
+import type { BodyRegion } from '../Injuries';
+import { hitCharacterBody } from './BodyHitRegions';
 
 export interface CombatHit {
   point: Vector3;
@@ -16,6 +19,7 @@ export interface CombatHit {
   distance: number;
   mesh: AbstractMesh | null;
   body: PhysicsBody | null;
+  region?: BodyRegion;
 }
 
 const collectorCapacity = new WeakMap<HavokPlugin, number>();
@@ -44,6 +48,13 @@ export interface QueryExclusions {
   bodies?: ReadonlySet<PhysicsBody>;
   bodyFilter?: (body: PhysicsBody) => boolean;
   softTargets?: boolean;
+  /** Actors use their current posed anatomy instead of bind-pose mesh triangles. */
+  characters?: readonly Character[];
+}
+function anatomicalTarget(node: TransformNode, options: QueryExclusions): boolean {
+  const meta = node.metadata;
+  const model = meta?.ped?.model ?? meta?.officer?.model ?? meta?.characterOwner?.model ?? meta?.ragdollModel;
+  return !!model && !!options.characters?.includes(model);
 }
 function excluded(node: TransformNode, options: QueryExclusions): boolean {
   if (options.roots?.some((root) => node === root || node.isDescendantOf(root)))
@@ -51,10 +62,12 @@ function excluded(node: TransformNode, options: QueryExclusions): boolean {
   return (
     !!node.metadata?.combatEffect ||
     !!node.metadata?.weaponVisual ||
+    anatomicalTarget(node, options) ||
     (options.softTargets === false &&
       !!(
         node.metadata?.ped ||
         node.metadata?.officer ||
+        node.metadata?.characterOwner ||
         node.metadata?.ragdoll
       ))
   );
@@ -116,6 +129,11 @@ export function castSegment(
         body,
       };
     }
+  }
+  if (options.softTargets !== false) for (const character of options.characters ?? []) {
+    if (options.roots?.some(root => character.root === root || character.root.isDescendantOf(root))) continue;
+    const hit = hitCharacterBody(character, from, to);
+    if (hit && (!nearest || hit.distance < nearest.distance)) nearest = {...hit, mesh: character.torso, body: null};
   }
   return nearest;
 }

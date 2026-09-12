@@ -21,7 +21,7 @@ export class MovementQueries {
   private overlapInput = new ProximityCastResult();
   private overlapHit = new ProximityCastResult();
   private ray = new PhysicsRaycastResult();
-  constructor(private scene: Scene, private ownShape?: () => PhysicsShape | undefined) {
+  constructor(private scene: Scene, private ownShape?: () => PhysicsShape | readonly PhysicsShape[] | undefined) {
     this.plugin = scene.getPhysicsEngine()!.getPhysicsPlugin() as HavokPlugin;
     this.capsule = new PhysicsShapeCapsule(
       new Vector3(0, -0.58, 0),
@@ -81,11 +81,14 @@ export class MovementQueries {
   }
   /** Queries may ignore an attached vehicle too; excluding our own capsule is independent. */
   private withoutSelf<T>(query: () => T): T {
-    const shape = this.ownShape?.();
-    if (!shape) return query();
-    const membership = shape.filterMembershipMask;
-    shape.filterMembershipMask = 0;
-    try { return query(); } finally { shape.filterMembershipMask = membership; }
+    const own = this.ownShape?.();
+    if (!own) return query();
+    // Havok compound children keep their own filters. Excluding only a
+    // crawling container would make standing queries collide with its child.
+    const shapes = Array.isArray(own) ? own : [own as PhysicsShape];
+    const memberships = shapes.map(shape => shape.filterMembershipMask);
+    shapes.forEach(shape => shape.filterMembershipMask = 0);
+    try { return query(); } finally { shapes.forEach((shape, i) => shape.filterMembershipMask = memberships[i]); }
   }
   /** Two-stage up/across clearance plus a walkable landing; no blind ledge teleport. */
   mantle(position: Vector3, heading: number) {

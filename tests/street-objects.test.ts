@@ -183,6 +183,6 @@ test("fallen bodies unload before the static cleanup queue can drop their stream
   // Authoring order must not decide which fallen objects lose their support.
   f.street.objects.delete(lamp.definition.id); f.street.objects.set(lamp.definition.id, lamp);
   f.floor.dispose(); f.street.updateResidency(new Vector3(2000, 0, 2000));
-  assert.equal(lamp.body, undefined, "dynamic fallen object has priority over the24 static-body eviction budget");
+  assert.ok(!lamp.body, "dynamic fallen object has priority over the24 static-body eviction budget");
   f.step(12); assert.ok(lamp.position.equalsWithEpsilon(pose, .001), "remote snapshot cannot fall while awaiting static cleanup");
 });

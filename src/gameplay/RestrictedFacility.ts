@@ -1,4 +1,7 @@
 import type { CharacterDamageKind, CharacterImpact } from "./combat/injuries";
+import { damageCharacter, type DamageContact } from './CharacterDamage';
+import { bodyInjuryEffects } from './Injuries';
+import { castSegment } from './combat/queries';
 import { Color3, MeshBuilder, PBRMaterial, PhysicsAggregate, PhysicsMotionType, PhysicsShapeType, Quaternion, Ray, Vector3, type Scene, type ShadowGenerator } from "@babylonjs/core";
 import type { Obstacle, RoadNode, WorldContract } from "../core/contracts";
 import { clamp, distance, lineBlocked, type Point2 } from "../core/math";
@@ -87,12 +90,12 @@ export class RestrictedFacility {
     }
     this.alarmRemaining=FACILITY_RULES.alarmSearchSeconds;
   }
-  hurtGuard(guard:Officer,amount:number,kind:CharacterDamageKind="impact"){
+  hurtGuard(guard:Officer,amount:number,kind:CharacterDamageKind="impact",contact:DamageContact={}){
     if(!this.guards.includes(guard)||guard.health<=0||!Number.isFinite(amount)||amount<=0)return;
-    guard.health=Math.max(0,guard.health-amount);this.resistance=12;this.alarm("A guard has been attacked.");
+    const result=damageCharacter(guard.model,guard.health,amount,kind,contact);
+    guard.health=result.health;this.resistance=12;this.alarm("A guard has been attacked.");
     if(guard.health<=0)guard.model.dead=true;
-    const impulse=guard.position.subtract(this.player.position).normalize().scale(Math.min(12,amount*.16));impulse.y=1.5;
-    this.onCharacterHit?.(guard.model,impulse,guard.health<=0,{kind,damage:amount,health:guard.health});
+    this.onCharacterHit?.(guard.model,result.impulse,guard.health<=0,result.impact);
     if(guard.health<=0){guard.state="injured";guard.controller?.dispose();guard.controller=null;if(!this.onCharacterHit){guard.model.root.rotation.z=Math.PI/2;guard.model.root.position.y=.35;}}
   }
   update(dt:number,enabled=true){
@@ -158,10 +161,13 @@ export class RestrictedFacility {
     if(this.arrestProgress>=1){this.arrestProgress=0;this.onArrest();}
   }
   private fire(guard:Officer){
-    const origin=guard.position.add(new Vector3(0,.5,0)),target=this.player.position.add(new Vector3(0,.35,0)),delta=target.subtract(origin),length=delta.length();
+    if(!bodyInjuryEffects(guard.model.bodyInjuries).canAim)return;
+    const origin=guard.position.add(new Vector3(0,.5,0)),target=this.player.model?.jointPosition('chest')??this.player.position.add(new Vector3(0,.35,0)),delta=target.subtract(origin),length=delta.length();
     const hit=this.scene.pickWithRay(new Ray(origin,delta.normalize(),length),m=>m.isEnabled()&&m.metadata?.officer!==guard&&!!(m.metadata?.cameraBlocker||m.metadata?.prop||m.metadata?.officer||m.metadata?.vehicleId||m.parent?.metadata?.vehicleId));
     if(hit?.hit&&hit.pickedMesh&&hit.distance<length-.8){const id=hit.pickedMesh.metadata?.vehicleId??hit.pickedMesh.parent?.metadata?.vehicleId;const v=this.vehicles.list.find(v=>v.id===id);if(v)this.vehicles.damage(v,3,hit.pickedPoint??target);return;}
-    this.player.hurt(7);
+    if(!this.player.model){this.player.hurt(7,false,{kind:'projectile'});return;}
+    const anatomical=castSegment(this.scene,origin,target.add(delta.normalizeToNew().scale(1)),{roots:[guard.model.root],characters:[this.player.model]});
+    if(anatomical?.mesh?.metadata?.characterOwner===this.player)this.player.hurt(7,false,{kind:'projectile',region:anatomical.region,point:anatomical.point,direction:delta});
   }
   reset(revive=true){if(revive){this.guards.forEach(g=>g.dispose());this.createGuards();this.active=false;this.patrolIndices=[0,0,0,0];}this.phase="quiet";this.warningRemaining=0;this.accessRemaining=0;this.alarmRemaining=0;this.arrestProgress=0;this.resistance=0;this.lastPlayer.copyFrom(this.player.position);}
   restoreCasualties(entries:Casualty[]){for(const entry of entries){const guard=this.guards.find(g=>g.id===entry.id);if(!guard)continue;guard.health=entry.health??0;guard.state="injured";guard.controller?.dispose();guard.controller=null;restoreCorpse(guard.model,entry);guard.weapon.setEnabled(false);}}

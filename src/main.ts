@@ -1,4 +1,6 @@
 import "./ui/style.css";
+import { cloneBodyInjuries } from './gameplay/Injuries';
+import { hasCasualtyState, restoreCorpse, snapshotCasualty } from './gameplay/police/casualties';
 import {
   Color3,
   Color4,
@@ -38,7 +40,9 @@ import { WantedSystem } from "./gameplay/Wanted";
 import { Population } from "./gameplay/Population";
 import { DamageSystem } from "./gameplay/Damage";
 import { Combat } from "./gameplay/Combat";
+import { prepareWeaponAssets } from "./gameplay/combat/WeaponAssets";
 import { UI } from "./ui/UI";
+import { WeaponWheel } from "./ui/WeaponWheel";
 import { Navigation } from "./gameplay/Navigation";
 import { PhysicsInterpolation } from "./core/PhysicsInterpolation";
 import { Atmosphere } from "./core/Atmosphere";
@@ -92,6 +96,8 @@ async function boot() {
   await world.ready;
   const navigation = new Navigation(world.roads);
   ui.world = world;
+  ui.loading("Loading weapon detail…");
+  await prepareWeaponAssets(scene);
   ui.loading("Loading character detail…");
   try { await prepareCharacterAssets(scene); }
   catch (error) { console.warn("Using the procedural character fallback", error); }
@@ -201,8 +207,9 @@ async function boot() {
     new Vector3(0, 2, -72),
   ];
   function resetPlayer(reason: string) {
-    combat.reactions.reset({ preserveFatal: true });
+    combat.reactions.resetCharacter(player.model);
     player.exit(true);
+    player.restoreBodyState(null);
     player.health = 100;
     player.armor = 50;
     player.deadTimer = 0;
@@ -223,6 +230,11 @@ async function boot() {
   damage.onBreak = (p) => {
     audio.effect("impact", p);
   };
+  const weaponWheel = new WeaponWheel();
+  weaponWheel.onSelect = index => combat.select(index);
+  weaponWheel.onToggle = () => combat.toggleHolster();
+  let wheelWasActive = false;
+  scene.onDisposeObservable.addOnce(() => weaponWheel.dispose());
   combat.onSound = (kind, p) => audio.effect(kind, p);
   combat.onMessage = (s) => ui.toast(s);
   vehicles.onCrash = (v, severity, p) => {
@@ -259,6 +271,8 @@ async function boot() {
   }
   function save() {
     try {
+      const casualties = population.serializeCasualties();
+      const occupiedCasualtyCars = new Set([...casualties.civilians, ...casualties.police].map(c => c.vehicleId).filter(Boolean));
       Persistence.save({
         player: {
           x: player.position.x,
@@ -267,6 +281,10 @@ async function boot() {
           character: player.name,
           health: player.health,
           armor: player.armor,
+          ...(player.vehicle && player.vehiclePhase === 'seated' ? {vehicleId: player.vehicle.id} : {}),
+          ...(player.model.bodyInjuries ? {bodyInjuries: cloneBodyInjuries(player.model.bodyInjuries)} : {}),
+          postureHeight: player.controller.footOffset * 2,
+          ...(hasCasualtyState(player.model, player.health) ? {casualty: snapshotCasualty(`player-${player.name}`, player.model, player.health)} : {}),
         },
         time,
         weather,
@@ -277,11 +295,11 @@ async function boot() {
           reserves: [...combat.inventory.reserves],
         },
         vehicles: vehicles.list
-          .filter((v) => !population.drivers.some((d) => d.v === v))
+          .filter((v) => v === player.vehicle || occupiedCasualtyCars.has(v.id) || !population.drivers.some((d) => d.v === v))
           .map((v) => vehicles.serialize(v)),
         destroyed: [...damage.destroyed],
         props: damage.serialize(),
-        casualties: population.serializeCasualties(),
+        casualties,
         streetObjects: world.streetObjects.serialize(),
         civilians: population.pedestrians
           .filter((p) => p.creative)
@@ -320,8 +338,8 @@ async function boot() {
     if (s.vehicles.filter(v => v.kind === "concept").length > DETAILED_CAR_LIMIT) { ui.toast("Saved sandbox exceeds the six detailed-car limit."); return false; }
     if (!await prepareVehicleModels(s.vehicles.map(v => v.kind as VehicleKind))) return false;
     if (!await prepareTravel(new Vector3(s.player.x, s.player.y, s.player.z))) return false;
-    world.streetObjects.restore(s.streetObjects ?? []);
     combat.reactions.reset();
+    world.streetObjects.restore(s.streetObjects ?? []);
     player.exit(true);
     for (const v of [...vehicles.list])
       if (!population.drivers.some((d) => d.v === v)) vehicles.remove(v);
@@ -338,16 +356,23 @@ async function boot() {
       return false;
     });
     for (const v of s.vehicles) vehicles.restore(v);
-    player.teleport(new Vector3(s.player.x, s.player.y + 1, s.player.z));
-    if (s.player.character !== player.name) player.switchCharacter();
+    if (s.player.character !== player.name) player.switchCharacter(true);
+    player.restoreBodyState(s.player.bodyInjuries ?? null, s.player.postureHeight ?? 1.8);
+    player.teleport(new Vector3(s.player.x, s.player.y + (s.player.postureHeight ? 0 : 1), s.player.z));
     player.health = s.player.health;
-    player.deadTimer = 0;
+    if (s.player.casualty) {
+      restoreCorpse(player.model, s.player.casualty);
+      player.heading = s.player.casualty.yaw;
+      if (!s.player.vehicleId) combat.reactions.restore(player.model);
+    }
+    if (s.player.vehicleId) player.restoreSeat(vehicles.list.find(v => v.id === s.player.vehicleId)!);
+    player.model.dead = player.health <= 0;
+    player.deadTimer = player.health <= 0 ? 4 : 0;
     recoveryTimer = 0;
     ui.outcome("");
     player.armor = s.player.armor ?? 50;
     if (s.combat) {
-      combat.inventory.magazines = [...s.combat.magazines];
-      combat.inventory.reserves = [...s.combat.reserves];
+      combat.inventory.restore(s.combat);
       combat.weapon = s.combat.selected;
       combat.reloadTime = 0;
     }
@@ -462,7 +487,7 @@ async function boot() {
           return;
         }
         player.health = 100;
-        combat.inventory.reserves = [180, 180, 6];
+        combat.inventory.reserves = combat.weapons.map(w => w.reserve);
         cash = Math.max(0, cash - 50);
         ui.toast(`${loc.name} · Supplies purchased for $50.`);
       }
@@ -650,7 +675,20 @@ async function boot() {
         ui.toast("Civilian budget reached. Remove one first.");
         return;
       }
-      population.spawnPed(player.position.add(new Vector3(3, -0.9, 2)));
+      const standing = player.position.add(new Vector3(0, .9 - player.controller.footOffset, 0));
+      let landing: Vector3 | null = null;
+      for (const radius of [3.6, 2.3]) {
+        for (const offset of [0, Math.PI / 4, -Math.PI / 4, Math.PI / 2, -Math.PI / 2, Math.PI]) {
+          const heading = player.yaw + offset;
+          const ground = player.queries.ground(standing.add(new Vector3(Math.sin(heading) * radius, 0, Math.cos(heading) * radius)));
+          if (!ground) continue;
+          const center = ground.add(new Vector3(0, .94, 0));
+          if (player.queries.clear(center) && player.queries.path(standing, center)) { landing = ground; break; }
+        }
+        if (landing) break;
+      }
+      if (!landing) { ui.toast("Move to an open space to place a civilian."); return; }
+      population.spawnPed(landing.add(new Vector3(0, .04, 0)));
       ui.toast("Civilian spawned.");
     }
     if (action === "remove-prop") {
@@ -687,7 +725,7 @@ async function boot() {
       ui.toast("Weapons cleared.");
     }
     if (action === "weapons") {
-      combat.inventory.reserves = [999, 999, 30];
+      combat.inventory.reserves = combat.weapons.map(w => w.capacity ? w.family === "throwable" ? 30 : 999 : 0);
       combat.inventory.magazines = combat.weapons.map((w) => w.capacity);
       ui.toast("Weapons refilled.");
     }
@@ -712,8 +750,10 @@ async function boot() {
     if (action === "reset") {
       combat.reactions.reset();
       population.reset();
+      player.restoreBodyState(null);
       player.health = 100;
       player.armor = 50;
+      player.deadTimer = 0;
       ui.toast("Encounter reset.");
     }
     if (action === "teleport" || action === 'teleport-point') {
@@ -724,6 +764,12 @@ async function boot() {
         const destination = resolveTravelDestination(l, player.queries, world.ocean, action === 'teleport');
         if (!destination) { world.ensureCollision(origin); ui.toast('No clear landing here. Pick a nearby point.'); return; }
         player.exit(true);
+        // Travel relocates the injured actor; it cannot leave its physical
+        // bodies at the old map point or erase the regional state.
+        combat.reactions.resetCharacter(player.model);
+        const bodyState = player.model.bodyInjuries;
+        player.restoreBodyState(bodyState, bodyState?.critical ? .64 : 1.8);
+        destination.y += player.controller.footOffset - .9;
         player.teleport(destination);
         ui.showPanel("");
         setPause(false);
@@ -751,7 +797,7 @@ async function boot() {
       ui.toast(
         input.rebind(selected, value)
           ? "Control binding saved."
-          : "Use a valid key code. Escape, 1–3 and T are reserved.",
+          : "Use a valid key code. Escape, 0–9 and T are reserved.",
       );
     }
   };
@@ -776,18 +822,18 @@ async function boot() {
     }
     if (!ui.panel && recoveryTimer <= 0) {
       player.update(dt);
-      if (player.vehicle && player.deadTimer <= 0)
+      if (player.vehicle && player.canDrive)
         vehicles.control(player.vehicle, aircraftInput(input, player.vehicle.kind, player.vehicle.forwardSpeed));
       else if (player.vehicle)
         vehicles.control(player.vehicle, {
           throttle: 0,
           steer: 0,
-          brake: 0.6,
-          handbrake: false,
+          brake: 1,
+          handbrake: true,
           lift: 0,
         });
     }
-    combat.update(dt, !ui.panel && recoveryTimer <= 0);
+    combat.update(dt, !ui.panel && !weaponWheel.active && recoveryTimer <= 0);
     input.take("jump");
     population.update(dt);
     navigation.update(dt, player.position);
@@ -830,8 +876,9 @@ async function boot() {
     player.render(
       renderDt,
       alpha,
-      !ui.panel && !paused && player.deadTimer <= 0,
+      !ui.panel && !paused && !weaponWheel.active && player.deadTimer <= 0,
     );
+    combat.render(0);
     const cameraWater = world.ocean.surfaceHeight(player.camera.position.x, player.camera.position.z);
     underwater = cameraWater != null && player.camera.position.y < cameraWater - .03 && world.ocean.depthAt(player.camera.position.x, player.camera.position.z) > 0;
     if (underwater) { scene.fogDensity = .095; scene.fogColor.set(.025 + renderDaylight * .03, .11 + renderDaylight * .10, .14 + renderDaylight * .10); }
@@ -858,7 +905,13 @@ async function boot() {
       }
       if (input.take("creative")) ui.onAction("creative");
       if (input.take("map")) ui.onAction("map");
-      if (!ui.panel && player.deadTimer <= 0 && recoveryTimer <= 0) {
+      weaponWheel.update(input, dt, combat.handling.target, combat.inventory.magazines, combat.inventory.reserves, !!player.vehicle, !ui.panel && !paused && !player.transitioning && player.deadTimer <= 0 && recoveryTimer <= 0);
+      player.weaponInputBlocked = weaponWheel.active;
+      if (weaponWheel.active !== wheelWasActive) {
+        wheelWasActive = weaponWheel.active;
+        physics.setSubTimeStep(1000 / 60 / (simSpeed * (weaponWheel.active ? .12 : 1)));
+      }
+      if (!ui.panel && !weaponWheel.active && player.deadTimer <= 0 && recoveryTimer <= 0) {
         if (input.take("interact")) interact();
         if (input.take("switch")) player.switchCharacter();
         if (input.take("repair")) ui.onAction("repair");
@@ -876,12 +929,16 @@ async function boot() {
           ui.toast(`Siren ${player.vehicle.siren ? "on" : "off"}.`);
         }
         if (input.take("melee")) combat.melee();
-        if (input.pressed.has("Digit1")) combat.select(0);
-        if (input.pressed.has("Digit2")) combat.select(1);
-        if (input.pressed.has("Digit3")) combat.select(2);
+        for (let index = 0; index < combat.weapons.length; index++) if (input.pressed.has(`Digit${index + 1}`)) combat.select(index);
+        if (input.wheel) combat.scroll(input.wheel);
         if (input.pressed.has("KeyT")) beginRace();
       }
     }
+    const scope = document.querySelector<HTMLElement>("#scope")!;
+    const scoped = started && !ui.panel && !weaponWheel.active && combat.scoped;
+    scope.classList.toggle("hidden", !scoped);
+    scope.querySelector("span")!.textContent = `${combat.magnification}×`;
+    document.querySelector<HTMLElement>("#crosshair")!.style.visibility = scoped || weaponWheel.active ? "hidden" : "";
     const solarState = sky.update(time, weather), solar = solarState.daylight;
     renderDaylight = solar;
     ambient.intensity = 0.04 + solar * 0.25;

@@ -1,5 +1,9 @@
-import { isDown } from "./casualties";
+import { hasCasualtyState, isDown } from "./casualties";
 import type { CharacterDamageKind, CharacterImpact } from "../combat/injuries";
+import { damageCharacter, type DamageContact } from '../CharacterDamage';
+import { bodyInjuryEffects } from '../Injuries';
+import { vehicleSeatOffset, vehicleSeatPose } from '../VehicleOccupancy';
+import { castSegment } from '../combat/queries';
 import {
   Ray,
   Frustum,
@@ -78,7 +82,7 @@ export class PoliceDirector {
     this.resistance = Math.max(this.resistance, seconds);
     this.arrestProgress = 0;
   }
-  hurtOfficer(officer: Officer, amount: number, kind: CharacterDamageKind = "impact") {
+  hurtOfficer(officer: Officer, amount: number, kind: CharacterDamageKind = "impact", contact: DamageContact = {}) {
     if (
       !this.officers.includes(officer) ||
       officer.health <= 0 ||
@@ -86,7 +90,8 @@ export class PoliceDirector {
       amount <= 0
     )
       return;
-    officer.health = Math.max(0, officer.health - amount);
+    const result = damageCharacter(officer.model, officer.health, amount, kind, contact);
+    officer.health = result.health;
     if(officer.health<=0)officer.model.dead=true;
     this.resist();
     this.wanted.crime(
@@ -94,14 +99,15 @@ export class PoliceDirector {
       this.player.position,
       true,
     );
-    const impulse = officer.position
-      .subtract(this.player.position)
-      .normalize()
-      .scale(Math.min(12, amount * 0.16));
-    impulse.y = 1.5;
+    if (officer.state === 'riding') {
+      // Keep the injured crew supported by the cabin. A free ragdoll inside
+      // the closed vehicle intersects its chassis and violently ejects it.
+      officer.model.applySeatedInjuryPose(bodyInjuryEffects(officer.model.bodyInjuries));
+      return;
+    }
     if (this.onCharacterHit) {
       officer.state = "pursuit";
-      this.onCharacterHit(officer.model, impulse, officer.health <= 0, { kind, damage: amount, health: officer.health });
+      this.onCharacterHit(officer.model, result.impulse, officer.health <= 0, result.impact);
     } else if (officer.health <= 0) {
       officer.model.root.rotation.z = Math.PI / 2;
       officer.model.root.position.y = 0.35;
@@ -344,7 +350,7 @@ export class PoliceDirector {
       o.fireTimer -= dt;
       o.flashTime = Math.max(0, o.flashTime - dt);
       o.flash.setEnabled(o.flashTime > 0);
-      if (o.health <= 0) {
+      if (o.health <= 0 && o.state !== 'riding') {
         continue;
       }
       if (o.model.root.metadata?.ragdollActive) {
@@ -352,20 +358,16 @@ export class PoliceDirector {
         o.controller = null;
         continue;
       }
+      if (hasCasualtyState(o.model, o.health) && distance(o.model.root.position, position) > 150) {
+        o.controller?.dispose(); o.controller = null; o.weapon.setEnabled(false);
+        continue;
+      }
       const driver = drivers.find((d) => d.v.id === o.vehicleId);
       if (o.state === "riding" && driver) {
         const v = driver.v;
-        const side = o.seat ? 0.45 : -0.45;
-        o.model.root.position.copyFrom(
-          v.root.position
-            .add(v.root.right.scale(side))
-            .add(v.root.forward.scale(v.kind === "helicopter" ? 0.8 : 0.1)),
-        ).y -= 0.9;
-        o.model.root.rotation.y = v.heading;
-        o.model.animate(dt, 0, false, false);
-        o.model.pose("seated");
-        o.weapon.setEnabled(false);
+        this.seatOfficer(o, v, dt);
         if (
+          o.health > 0 && bodyInjuryEffects(o.model.bodyInjuries).canStand &&
           driver.assignment !== "air" &&
           Math.abs(v.speed) < 2.1 &&
           (driver.assignment === "roadblock" ||
@@ -386,10 +388,12 @@ export class PoliceDirector {
         this.wanted.stars > 0 &&
         this.sees(p.add(new Vector3(0, 0.6, 0)), profile.sight);
       const gap = distance(p, position);
+      const capabilities = bodyInjuryEffects(o.model.bodyInjuries);
       const inArrestRange = gap < (this.player.vehicle ? 4.3 : 2.65);
-      if (contact && canArrest && inArrestRange) arresting = true;
-      const aim = contact && (threat || gap < 13);
+      if (capabilities.canStand && contact && canArrest && inArrestRange) arresting = true;
+      const aim = capabilities.canAim && contact && (threat || gap < 13);
       const firing =
+        capabilities.canAim &&
         contact &&
         threat &&
         gap < (o.role === "swat" ? 48 : 32) &&
@@ -403,18 +407,19 @@ export class PoliceDirector {
       }
       o.state = firing
         ? "firing"
-        : contact && gap < 13
+        : capabilities.canStand && contact && gap < 13
           ? "challenge"
           : this.wanted.phase === "search" || this.wanted.phase === "cooldown"
             ? "search"
             : "pursuit";
-      if (contact && gap < 16 && this.challengeTimer <= 0) {
+      if (capabilities.canStand && contact && gap < 16 && this.challengeTimer <= 0) {
         this.onMessage("POLICE: Stop, lower your weapon and remain still.");
         this.challengeTimer = 8;
       }
       let goal: Point2 = this.wanted.lastKnown;
       if (contact) goal = { x: position.x, z: position.z };
       const returningToCar =
+        capabilities.canStand &&
         !!this.player.vehicle &&
         Math.abs(this.player.vehicle.speed) > 3 &&
         !!driver &&
@@ -500,8 +505,9 @@ export class PoliceDirector {
       }
   }
   private fire(o: Officer) {
+    if (!bodyInjuryEffects(o.model.bodyInjuries).canAim) return;
     const origin = o.position.add(new Vector3(0, 0.5, 0));
-    const target = this.player.position.add(new Vector3(0, 0.35, 0));
+    const target = this.player.model?.jointPosition('chest') ?? this.player.position.add(new Vector3(0, 0.35, 0));
     const delta = target.subtract(origin),
       length = delta.length();
     const hit = this.scene.pickWithRay(
@@ -528,12 +534,15 @@ export class PoliceDirector {
         this.vehicles.damage(vehicle, amount * 0.4, hit.pickedPoint ?? target);
       if (hit.distance < length - 0.8) return;
     }
-    this.player.hurt(amount);
+    if (!this.player.model) { this.player.hurt(amount, false, {kind: 'projectile'}); return; }
+    const anatomical = castSegment(this.scene, origin, target.add(delta.normalizeToNew().scale(1)), {roots: [o.model.root], characters: [this.player.model]});
+    if (anatomical?.mesh?.metadata?.characterOwner === this.player)
+      this.player.hurt(amount, false, {kind: 'projectile', region: anatomical.region, point: anatomical.point, direction: delta});
   }
   private updateCasualties(dt:number,position:Vector3){
     for(const officer of [...this.officers])if(isDown(officer.model,officer.health)){
       officer.deadTime+=dt;
-      if(officer.deadTime>25&&distance(officer.position,position)>50&&this.outsideView(officer.position)){
+      if(officer.health<=0&&officer.deadTime>25&&distance(officer.position,position)>50&&this.outsideView(officer.position)){
         officer.dispose();this.officers.splice(this.officers.indexOf(officer),1);
       }
     }
@@ -557,7 +566,7 @@ export class PoliceDirector {
     const crew = this.officers.filter(
       (o) => o.vehicleId === v.id && o.health > 0 && o.state === "riding",
     );
-    if (!crew.length || !v.health) {
+    if (!crew.some(o => o.seat === 0 && bodyInjuryEffects(o.model.bodyInjuries).canStand) || !v.health) {
       if (d.assignment === "air") v.occupied = false;
       this.vehicles.control(v, STOP);
       return;
@@ -667,10 +676,16 @@ export class PoliceDirector {
     void drivers;
   }
   removeResponse(drivers: Driver[], removeCasualties = true) {
-    for (const o of this.officers)if(removeCasualties||!isDown(o.model,o.health))o.dispose();
-    this.officers = removeCasualties?[]:this.officers.filter(o=>isDown(o.model,o.health));
+    for (const o of this.officers)if(removeCasualties||!hasCasualtyState(o.model,o.health))o.dispose();
+    this.officers = removeCasualties?[]:this.officers.filter(o=>hasCasualtyState(o.model,o.health));
     for (let i = drivers.length - 1; i >= 0; i--)
       if (drivers[i].police) {
+        if (!removeCasualties && this.officers.some(o => o.vehicleId === drivers[i].v.id && o.state === 'riding')) {
+          this.vehicles.control(drivers[i].v, STOP);
+          drivers[i].v.siren = false;
+          for (const officer of this.officers) if (officer.vehicleId === drivers[i].v.id && officer.state === 'riding') this.seatOfficer(officer, drivers[i].v);
+          continue;
+        }
         if (drivers[i].v !== this.player.vehicle)
           this.vehicles.remove(drivers[i].v);
         else {
@@ -690,14 +705,34 @@ export class PoliceDirector {
     this.lastPlayer.copyFrom(this.player.position);
   }
   serializeCasualties(){
-    return {police:this.officers.filter(o=>isDown(o.model,o.health)&&o.role!=="military").slice(-CASUALTY_LIMITS.police).map(o=>({...snapshotCasualty(o.id,o.model,o.health),role:o.role as "patrol"|"swat"})),nextOfficerId:Math.max(this.nextOfficerId,...this.officers.map(o=>Number(o.id.slice(8))+1).filter(Number.isFinite))};
+    return {police:this.officers.filter(o=>hasCasualtyState(o.model,o.health)&&o.role!=="military").slice(-CASUALTY_LIMITS.police).map(o=>({...snapshotCasualty(o.id,o.model,o.health),role:o.role as "patrol"|"swat",...(o.state==='riding'?{vehicleId:o.vehicleId,seat:o.seat as 0|1}:{})})),nextOfficerId:Math.max(this.nextOfficerId,...this.officers.map(o=>Number(o.id.slice(8))+1).filter(Number.isFinite))};
   }
-  restoreCasualties(entries:PoliceCasualty[],nextOfficerId:number){
-    for(const officer of [...this.officers])if(isDown(officer.model,officer.health)){officer.dispose();this.officers.splice(this.officers.indexOf(officer),1);}
+  private seatOfficer(officer: Officer, vehicle: Vehicle, dt = 0) {
+    const offset = vehicleSeatOffset(vehicle);
+    if (officer.seat) offset.x = Math.abs(offset.x);
+    vehicle.root.computeWorldMatrix(true);
+    officer.model.root.position.copyFrom(Vector3.TransformCoordinates(offset, vehicle.root.getWorldMatrix()));
+    officer.model.root.rotation.y = vehicle.heading;
+    officer.model.root.rotationQuaternion = vehicle.root.rotationQuaternion?.clone() ?? null;
+    officer.model.root.metadata = {...officer.model.root.metadata, ragdollActive:false, ragdollRecovering:false, ragdollHandoffActive:false};
+    officer.model.animate(dt, 0, false, false);
+    officer.model.pose('seated', 1, vehicleSeatPose(vehicle));
+    officer.model.applySeatedInjuryPose(bodyInjuryEffects(officer.model.bodyInjuries));
+    officer.weapon.setEnabled(false);
+  }
+  restoreCasualties(entries:PoliceCasualty[],nextOfficerId:number,drivers:Driver[]=[]){
+    const savedIds = new Set(entries.map(entry => entry.id));
+    for(const officer of [...this.officers])if(hasCasualtyState(officer.model,officer.health)||savedIds.has(officer.id)){officer.dispose();this.officers.splice(this.officers.indexOf(officer),1);}
     this.nextOfficerId=Math.max(this.nextOfficerId,nextOfficerId,...entries.map(e=>Number(e.id.slice(8))+1));
     for(const entry of entries.slice(-CASUALTY_LIMITS.police)){
-      const officer=new Officer(entry.id,entry.role,"retired-response",this.scene,this.shadows);officer.health=entry.health??0;officer.state="injured";
-      restoreCorpse(officer.model,entry);officer.weapon.setEnabled(false);this.officers.push(officer);
+      const vehicle=entry.vehicleId&&this.vehicles.list.find(v=>v.id===entry.vehicleId);
+      const officer=new Officer(entry.id,entry.role,vehicle?vehicle.id:"retired-response",this.scene,this.shadows,entry.seat??0);officer.health=entry.health??0;officer.state="injured";
+      restoreCorpse(officer.model,entry);
+      if(vehicle){
+        officer.state='riding';this.seatOfficer(officer,vehicle);this.vehicles.control(vehicle,STOP);
+        if(!drivers.some(d=>d.v===vehicle))drivers.push({v:vehicle,target:-1,previous:-1,police:true,stuck:0,assignment:entry.role});
+      }
+      officer.weapon.setEnabled(false);this.officers.push(officer);
     }
   }
   get stats() {

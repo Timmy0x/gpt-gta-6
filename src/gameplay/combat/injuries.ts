@@ -1,5 +1,7 @@
+import type { Vector3 } from '@babylonjs/core';
+import type { BodyRegion } from '../Injuries';
 export type CharacterDamageKind = "impact" | "melee" | "projectile" | "explosion" | "fire";
-export interface CharacterImpact { kind: CharacterDamageKind; damage: number; health: number; }
+export interface CharacterImpact { kind: CharacterDamageKind; damage: number; health: number; region?: BodyRegion; point?: Vector3; direction?: Vector3; }
 export interface CharacterInjury {
   kind: CharacterDamageKind;
   /** Null means incapacitated until an explicit encounter reset, not dead. */

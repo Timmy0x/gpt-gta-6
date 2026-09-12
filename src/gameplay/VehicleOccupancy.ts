@@ -1,10 +1,11 @@
 import { Vector3 } from '@babylonjs/core';
 import type { Character } from './Character';
 import type { Vehicle } from '../vehicles/VehicleSystem';
-import { poseVehicleWithdrawal } from './VehicleInteractionPose';
+import { poseVehicleWithdrawal, VEHICLE_INTERACTION_TIMING } from './VehicleInteractionPose';
+import { bodyInjuryEffects } from './Injuries';
 
 export type SeatPose = 'low' | 'upright' | 'rider' | 'reclined';
-export const EJECTION_SECONDS = .78;
+export const EJECTION_SECONDS = VEHICLE_INTERACTION_TIMING.ejection;
 
 /** Shared by the player and civilian crew, including each authored model's seat. */
 export function vehicleSeatOffset(v: Vehicle): Vector3 {
@@ -18,6 +19,7 @@ export function vehicleSeatOffset(v: Vehicle): Vector3 {
 }
 
 export function vehicleSeatPose(v: Vehicle): SeatPose {
+  if (v.model.seatPose) return v.model.seatPose;
   return v.kind === 'motorcycle' ? 'rider' : v.kind === 'concept' ? 'reclined'
     : ['coupe', 'sedan', 'police', 'boat'].includes(v.kind) ? 'low' : 'upright';
 }
@@ -53,9 +55,18 @@ export class VehicleOccupancy {
   }
 
   get(vehicle: Vehicle) { return this.occupants.get(vehicle); }
+  restoreSeat(vehicle: Vehicle): boolean {
+    const occupant = this.get(vehicle);
+    if (!occupant) return false;
+    occupant.state = 'driving'; occupant.elapsed = 0;
+    occupant.model.root.metadata = {...occupant.model.root.metadata, ragdollActive: false, ragdollHandoffActive: false};
+    this.seat(occupant, 0);
+    if (!this.canDrive(vehicle)) vehicle.input = parkedVehicleInput(vehicle);
+    return true;
+  }
   canDrive(vehicle: Vehicle) {
     const occupant = this.get(vehicle);
-    return !!occupant && occupant.state === 'driving' && occupant.alive() && !occupant.model.root.metadata?.ragdollActive;
+    return !!occupant && occupant.state === 'driving' && occupant.alive() && bodyInjuryEffects(occupant.model.bodyInjuries).canStand && !occupant.model.root.metadata?.ragdollActive;
   }
   forget(vehicle: Vehicle) { this.occupants.delete(vehicle); }
 
@@ -82,7 +93,7 @@ export class VehicleOccupancy {
       const { vehicle, model } = occupant;
       occupant.panic = Math.max(0, occupant.panic - dt);
       if (vehicle.root.isDisposed()) { this.occupants.delete(vehicle); continue; }
-      if (!occupant.alive() || model.root.metadata?.ragdollActive) {
+      if (model.root.metadata?.ragdollActive) {
         vehicle.input = parkedVehicleInput(vehicle);
         // The injury system owns the actor's pose; never re-seat an incapacitated body.
         if (occupant.state === 'ejecting') {
@@ -91,6 +102,7 @@ export class VehicleOccupancy {
         }
         continue;
       }
+      if (!occupant.alive() || !bodyInjuryEffects(model.bodyInjuries).canStand) vehicle.input = parkedVehicleInput(vehicle);
       if (occupant.state === 'driving') { this.seat(occupant, dt); continue; }
       occupant.elapsed = Math.min(EJECTION_SECONDS, occupant.elapsed + dt);
       const progress = occupant.elapsed / EJECTION_SECONDS;
@@ -114,5 +126,6 @@ export class VehicleOccupancy {
     } else model.root.rotationQuaternion = null;
     model.animate(dt, 0);
     model.pose('seated', 1, vehicleSeatPose(vehicle));
+    model.applySeatedInjuryPose(bodyInjuryEffects(model.bodyInjuries));
   }
 }

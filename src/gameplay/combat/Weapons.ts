@@ -8,42 +8,16 @@ import {
   type Scene,
 } from "@babylonjs/core";
 import type { Character } from "../Character";
+import { instantiateWeaponAsset } from './WeaponAssets';
 
-export const WEAPON_SPECS = [
-  {
-    name: "Pistol",
-    capacity: 12,
-    delay: 0.27,
-    damage: 32,
-    reload: 1.25,
-    range: 150,
-    recoil: 0.013,
-  },
-  {
-    name: "SMG",
-    capacity: 30,
-    delay: 0.085,
-    damage: 19,
-    reload: 1.65,
-    range: 110,
-    recoil: 0.008,
-  },
-  {
-    name: "Grenade",
-    capacity: 3,
-    delay: 1.3,
-    damage: 140,
-    reload: 1.0,
-    range: 35,
-    recoil: 0,
-  },
-];
+import { WEAPON_SPECS, validWeaponSave } from './WeaponCatalog';
+export { WEAPON_SPECS } from './WeaponCatalog';
 
 /** Persistent per-weapon magazines prevent free refills or discarded rounds when switching. */
 export class WeaponInventory {
   selected = 0;
-  magazines = [12, 30, 3];
-  reserves = [180, 180, 6];
+  magazines = WEAPON_SPECS.map(w => w.capacity);
+  reserves = WEAPON_SPECS.map(w => w.reserve);
   reloadRemaining = 0;
   unlimited = false;
   get ammo() {
@@ -78,6 +52,13 @@ export class WeaponInventory {
     this.reloadRemaining = 0;
     return true;
   }
+  restore(value: unknown): boolean {
+    if (!validWeaponSave(value)) return false;
+    this.magazines = WEAPON_SPECS.map((w, i) => value.magazines[i] ?? w.capacity);
+    this.reserves = WEAPON_SPECS.map((w, i) => value.reserves[i] ?? w.reserve);
+    this.selected = value.selected; this.reloadRemaining = 0;
+    return true;
+  }
   reload(): boolean {
     if (
       this.reloadRemaining > 0 ||
@@ -99,7 +80,7 @@ export class WeaponInventory {
     }
   }
   consume(): boolean {
-    if (this.reloadRemaining > 0) return false;
+    if (this.reloadRemaining > 0 || WEAPON_SPECS[this.selected].capacity === 0) return false;
     if (this.unlimited) return true;
     if (this.ammo <= 0) {
       this.reload();
@@ -117,6 +98,8 @@ export class HeldWeapon {
   private selected = -1;
   private materials: PBRMaterial[] = [];
   private kick = 0;
+  private side: -1 | 1 = 1;
+  private moving: {mesh: Mesh; rest: Vector3; kind: string}[] = [];
   private mergedMaterial: Material | null = null;
   constructor(private scene: Scene) {}
   update(
@@ -125,14 +108,16 @@ export class HeldWeapon {
     visible: boolean,
     dt: number,
     reloading = false,
+    side: -1 | 1 = 1,
+    reloadProgress = 0,
   ): void {
     if (
-      this.owner !== character ||
+      this.owner !== character || this.side !== side ||
       this.selected !== index ||
       !this.root ||
       this.root.isDisposed()
     )
-      this.build(character, index);
+      this.build(character, index, side);
     character.root.computeWorldMatrix(true);
     character.torso.computeWorldMatrix(true);
     character.skeleton.computeAbsoluteMatrices(true);
@@ -146,6 +131,12 @@ export class HeldWeapon {
       reloading ? -0.25 : 0,
     );
     this.root!.computeWorldMatrix(true);
+    for (const part of this.moving) {
+      part.mesh.position.copyFrom(part.rest);
+      if (/slide|bolt|charginghandle/i.test(part.kind)) part.mesh.position.z -= this.kick * .028;
+      if (/pump/i.test(part.kind)) part.mesh.position.z -= Math.sin(this.kick * Math.PI) * .085;
+      if (/magazine/i.test(part.kind) && reloading) part.mesh.position.y -= Math.sin(Math.PI * reloadProgress) * .115;
+    }
   }
   recoil(): void {
     this.kick = 1;
@@ -156,17 +147,24 @@ export class HeldWeapon {
       new Vector3(
         0,
         this.selected === 2 ? 0 : 0.065,
-        this.selected === 1 ? 0.43 : this.selected === 0 ? 0.19 : 0,
+        WEAPON_SPECS[this.selected].muzzle,
       ),
       this.root.computeWorldMatrix(true),
     );
   }
-  private build(character: Character, index: number): void {
+  private build(character: Character, index: number, side: -1 | 1): void {
     this.disposeModel();
     this.owner = character;
     this.selected = index;
+    this.side = side;
     const root = new Mesh("held-" + WEAPON_SPECS[index].name, this.scene);
     this.root = root;
+    const imported = instantiateWeaponAsset(this.scene, index, root);
+    if (imported) {
+      this.moving = imported.filter(mesh => /slide|bolt|charginghandle|magazine/i.test(mesh.metadata?.part ?? '')).map(mesh => ({mesh, rest: mesh.position.clone(), kind: mesh.metadata.part}));
+      root.metadata = {weaponVisual: true}; root.isPickable = false;
+      this.attach(character, side); return;
+    }
     const material = (name: string, color: string, metallic: number) => {
       const m = new PBRMaterial("weapon/" + name, this.scene);
       m.albedoColor = Color3.FromHexString(color);
@@ -256,7 +254,41 @@ export class HeldWeapon {
       box("front-sight", 0.02, 0.034, 0.016, 0, 0.105, 0.289, detail);
       for (let i = 0; i < 5; i++)
         box("heat-vent", 0.073, 0.012, 0.017, 0, 0.064, 0.13 + i * 0.02, grip);
-    } else {
+    } else if ([3, 4, 5].includes(index)) {
+      const length = WEAPON_SPECS[index].muzzle;
+      box("receiver", .065, .085, .26, 0, .058, .1);
+      cylinder("barrel", index === 4 ? .037 : .027, length - .22, 0, .065, .22 + (length - .22) / 2);
+      box("stock-neck", .048, .045, .18, 0, .04, -.13, grip);
+      box("shoulder-stock", .064, .14, .16, 0, -.003, -.27, grip);
+      box("rubber-butt", .075, .15, .018, 0, -.003, -.358, grip);
+      box("pistol-grip", .05, .12, .067, 0, -.04, .005, grip).rotation.x = -.27;
+      box("trigger-guard", .013, .055, .09, 0, -.012, .06);
+      if (index === 4) {
+        cylinder("magazine-tube", .029, .46, 0, .024, .38);
+        cylinder("pump-foreend", .068, .16, 0, .032, .37, grip);
+        for (let i = 0; i < 9; i++) cylinder("pump-groove", .071, .004, 0, .032, .304 + i * .017);
+      } else {
+        box("box-magazine", .044, index === 3 ? .17 : .066, .076, 0, -.055, .16, grip);
+        box("handguard", .07, .067, index === 3 ? .28 : .38, 0, .05, index === 3 ? .34 : .4, grip);
+        for (let i = 0; i < 9; i++) box("rail", .045, .015, .009, 0, .103, .18 + i * .023);
+      }
+      if (index === 5) {
+        cylinder("scope-tube", .044, .32, 0, .16, .13);
+        cylinder("objective", .07, .09, 0, .16, .31);
+        cylinder("ocular", .055, .045, 0, .16, -.051);
+        cylinder("scope-lens", .06, .006, 0, .16, .36, detail);
+        box("scope-mount-front", .055, .045, .02, 0, .114, .21);
+        box("scope-mount-rear", .055, .045, .02, 0, .114, .02);
+      } else { box("rear-sight", .035, .023, .018, 0, .117, -.02); box("front-sight", .01, .028, .016, 0, .102, length - .045); }
+    } else if (index === 6) {
+      box("revolver-frame", .048, .068, .13, 0, .054, .004);
+      cylinder("six-round-cylinder", .062, .062, 0, .058, .025);
+      cylinder("heavy-barrel", .034, .21, 0, .065, .179);
+      box("barrel-rib", .032, .015, .22, 0, .082, .18);
+      box("wood-grip", .05, .115, .077, 0, -.026, -.037, grip).rotation.x = -.27;
+      box("hammer", .018, .026, .027, 0, .082, -.069);
+      box("front-sight", .008, .018, .02, 0, .102, .27, detail);
+    } else if (index === 2) {
       const shell = MeshBuilder.CreateSphere(
         "grenade-shell",
         { diameter: 0.075, segments: 8 },
@@ -278,8 +310,13 @@ export class HeldWeapon {
           grip,
         ).rotation.x = 0;
     }
+    if (index === 1) for (const piece of pieces) { piece.position.z *= .67; piece.scaling.z *= .67; }
     // Each weapon uses one merged mesh with submeshes for the small shared material set.
-    const merged = Mesh.MergeMeshes(pieces, true, true, undefined, false, true);
+    const moving = pieces.filter(mesh => /^(?:magazine|pump-foreend|pump-groove)$/.test(mesh.name));
+    for (const mesh of moving) {mesh.parent = root; mesh.isPickable = false; mesh.metadata = {weaponVisual: true};}
+    this.moving = moving.map(mesh => ({mesh, rest: mesh.position.clone(), kind: mesh.name}));
+    const fixed = pieces.filter(mesh => !moving.includes(mesh));
+    const merged = fixed.length ? Mesh.MergeMeshes(fixed, true, true, undefined, false, true) : null;
     if (merged) {
       this.mergedMaterial = merged.material;
       merged.parent = root;
@@ -288,13 +325,18 @@ export class HeldWeapon {
     }
     root.metadata = { weaponVisual: true };
     root.isPickable = false;
+    this.attach(character, side);
+  }
+  private attach(character: Character, side: -1 | 1) {
+    const root = this.root!;
     const hand = character.skeleton.bones.find((bone) =>
-      bone.name.endsWith("/rightHand"),
+      bone.name.endsWith(side < 0 ? "/leftHand" : "/rightHand"),
     );
     if (hand) root.attachToBone(hand, character.torso);
     else root.parent = character.root;
   }
   private disposeModel() {
+    this.moving = [];
     if (this.root && !this.root.isDisposed()) this.root.dispose();
     if (
       this.mergedMaterial &&

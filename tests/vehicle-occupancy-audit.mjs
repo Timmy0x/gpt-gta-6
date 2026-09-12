@@ -8,6 +8,7 @@ import { vehicleFootRoute } from '../src/gameplay/police/vehicleFootRoute.ts';
 const origin = process.env.AUDIT_URL || 'http://127.0.0.1:4201';
 const backend = process.env.AUDIT_BACKEND || 'webgpu';
 const auditExterior = process.env.AUDIT_EXTERIOR === '1';
+const auditContact = process.env.AUDIT_CONTACT === '1';
 const output = process.env.AUDIT_OUTPUT || `docs/evidence/vehicle-occupancy-v10-${backend}`;
 await mkdir(output, { recursive: true });
 const index = await (await fetch(origin)).text(), entry = index.match(/<script[^>]*src="([^"]+)"/)[1];
@@ -109,7 +110,13 @@ try {
     const s = await state();
     if (!s.vehicle) throw new Error(`Carjacking rejected: ${s.message}`);
     assert.equal(s.vehicle.id, vehicleId, 'normal E chooses the approached traffic vehicle');
-    if (!phases.has(s.phase)) { phases.add(s.phase); await capture(s.phase); }
+    if (!phases.has(s.phase)) {
+      phases.add(s.phase); await capture(s.phase);
+      if (auditContact && s.phase === 'ejecting-driver') {
+        await page.waitForTimeout(120);
+        if ((await state()).phase === 'ejecting-driver') await capture('driver-contact');
+      }
+    }
     if (s.phase === 'seated') break;
     assert.equal(s.vehicle.input.throttle, 0); assert.equal(s.vehicle.locked, true); await page.waitForTimeout(90);
   }

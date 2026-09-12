@@ -99,8 +99,9 @@ export function bodyInjuryEffects(state: BodyInjuryState | null | undefined): Bo
   const mode: InjuryMode = (state?.fallRemaining ?? 0) > 0 ? 'down' : state?.critical ? 'crawling'
     : (state?.riseRemaining ?? 0) > 0 ? 'recovering' : leg >= .1 ? 'limping' : torso >= .1 || head >= .1 || arm >= .1 || systemic >= .1 ? 'hunched' : 'healthy';
   const down = mode === 'down' || mode === 'crawling' || mode === 'recovering';
-  const speedScale = down ? mode === 'crawling' ? .12 * (1 - arm * .35) : 0 : clamp(1 - leg * .68 - torso * .32 - head * .22 - systemic * .35, .15, 1);
-  return { ...values, systemic, mode, speedScale, maxSpeed: down ? mode === 'crawling' ? .65 * (1 - arm * .45) : 0 : 7.1 * speedScale,
+  const speedScale = down ? mode === 'crawling' ? .12 * (1 - arm * .35) : 0 : clamp(1 - leg * .68 - torso * .85 - head * .22 - systemic * .35, .15, 1);
+  const walkingCap = torso >= .25 ? 1.8 * (1 - torso * .7) : Infinity;
+  return { ...values, systemic, mode, speedScale, maxSpeed: down ? mode === 'crawling' ? .65 * (1 - arm * .45) : 0 : Math.min(7.1 * speedScale, walkingCap),
     canSprint: !down && burden < .16, canJump: !down && leg < .12 && torso < .28 && systemic < .2, canStand: !down,
     canAim: !down && arm < .85 && head < .5 && systemic < .65, handlingScale: clamp(1 - arm * .55 - head * .3 - torso * .15 - systemic * .15, .15, 1),
     limpSide: leg < .1 || Math.abs(leftLeg - rightLeg) < .03 ? 0 : leftLeg > rightLeg ? -1 : 1,

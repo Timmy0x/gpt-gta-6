@@ -1,0 +1,10 @@
+import { build } from 'vite';
+import { mkdir,readFile,writeFile,symlink } from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {createHash} from 'node:crypto';
+import {existsSync} from 'node:fs';
+const source=resolve(process.env.INJURY_SOURCE||'.local-builds/body-injuries-r1-source'),outDir=resolve(process.env.INJURY_BUILD||'.local-builds/body-injuries-r1');
+await build({configFile:false,publicDir:false,resolve:{alias:{'@injury-source':resolve(source,'src')}},build:{outDir,emptyOutDir:false,rollupOptions:{input:resolve('scripts/characters/injuries/preview.html')}}});
+await mkdir(outDir,{recursive:true});await symlink(resolve(source,'public/characters'),resolve(outDir,'characters')).catch(e=>{if(e.code!=='EEXIST')throw e});
+const files=await Promise.all(['Character.ts','CharacterContactIK.ts','CharacterSkinSupport.ts','Injuries.ts','InjuryPose.ts'].filter(file=>existsSync(resolve(source,'src/gameplay',file))).map(async file=>({file,sha256:createHash('sha256').update(await readFile(resolve(source,'src/gameplay',file))).digest('hex')})));
+await writeFile(resolve(outDir,'source-fingerprint.json'),JSON.stringify({source,files,scope:'Offline authored pose review only; actual physical fall, damage routing and controls require integrated normal-control review.'},null,2));

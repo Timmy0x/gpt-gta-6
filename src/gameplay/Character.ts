@@ -1,3 +1,4 @@
+import { skinSupportMinimum } from './CharacterSkinSupport';
 import {
   Bone,
   BoundingInfo,
@@ -15,6 +16,8 @@ import {
 } from "@babylonjs/core";
 import { RocketboxSkin, type CivilianSkin } from './characters/RocketboxSkin';
 import type { CharacterInjury } from './combat/injuries';
+import type { BodyInjuryEffects, BodyInjuryState } from './Injuries';
+import { poseBodyInjury, poseSeatedBodyInjury } from './InjuryPose';
 import { CharacterContactIK } from './CharacterContactIK';
 
 type Joint =
@@ -52,6 +55,7 @@ export class Character {
   phase = 0;
   dead = false;
   injury: CharacterInjury | null = null;
+  bodyInjuries: BodyInjuryState | null = null;
   private readonly bones = new Map<Joint, Bone>();
   private readonly boneIndex = new Map<Joint, number>();
   private readonly material: SharedMaterial;
@@ -75,6 +79,7 @@ export class Character {
   private disposed = false;
   private readonly visualSkin?: RocketboxSkin;
   private contactIK?: CharacterContactIK;
+  private supportedPoseDepth = 0;
 
   constructor(
     scene: Scene,
@@ -749,13 +754,24 @@ export class Character {
     else shadows.addShadowCaster(this.torso, false);
   }
 
+  private get poseLocked(): boolean {
+    return (this.dead && this.supportedPoseDepth === 0) || !!this.root.metadata?.ragdollActive;
+  }
+
+  /** Explicit external support can move a body without changing its life state. */
+  withSupportedPose(apply: () => void): void {
+    if (this.root.metadata?.ragdollActive) return;
+    this.supportedPoseDepth++;
+    try { apply(); } finally { this.supportedPoseDepth--; }
+  }
+
   private rotate(joint: Joint, x: number, y = 0, z = 0): void {
     Quaternion.RotationYawPitchRollToRef(y, x, z, this.rotation);
     this.bones.get(joint)!.setRotationQuaternion(this.rotation);
   }
 
   animate(dt: number, speed: number, aim = false, crouch = false): void {
-    if (this.dead || this.root.metadata?.ragdollActive) return;
+    if (this.poseLocked) return;
     this.elapsed += dt;
     const smooth = 1 - Math.exp(-dt * 11);
     this.movement +=
@@ -827,9 +843,33 @@ export class Character {
     this.root.scaling.y = 1 - c * 0.19;
   }
 
+  /** Synchronize the visible rig before native collision fitting or a restored-pose query. */
+  syncVisualPose(): void { this.visualSkin?.sync(); }
+  keepSkinAboveFloor(groundY: number): void {
+    this.syncVisualPose();
+    const lift = groundY - skinSupportMinimum(this);
+    if (lift > 0) {
+      const pelvis = this.bones.get('pelvis')!, position = pelvis.getPosition().clone();
+      position.y += lift; pelvis.setPosition(position); this.syncVisualPose();
+    }
+  }
+
+  /** Apply after locomotion; active physical falls and dead bodies retain pose ownership. */
+  applyInjuryPose(effects: BodyInjuryEffects, _dt: number, speed: number): void {
+    if (this.poseLocked) return;
+    if (!this.bodyInjuries && effects.mode === 'healthy') return;
+    poseBodyInjury(this, effects, speed, this.baseHeight);
+  }
+
+  /** Call after the seated base pose; critical occupants remain supported by the seat. */
+  applySeatedInjuryPose(effects: BodyInjuryEffects): void {
+    if (this.root.metadata?.ragdollActive || effects.mode === 'healthy') return;
+    poseSeatedBodyInjury(this, effects);
+  }
+
   /** Rotate the posed arms together so the held barrel follows the camera's firing direction. */
   aimToward(worldDirection: Vector3): void {
-    if (this.dead || this.root.metadata?.ragdollActive || worldDirection.lengthSquared() < 1e-8) return;
+    if (this.poseLocked || worldDirection.lengthSquared() < 1e-8) return;
     this.skeleton.computeAbsoluteMatrices(true);
     this.root.computeWorldMatrix(true).invertToRef(this.aimInverse);
     Vector3.TransformNormalToRef(worldDirection, this.aimInverse, this.aimTarget);
@@ -854,11 +894,11 @@ export class Character {
 
   /** Authored overlays on the same skin rig; call after locomotion animation. */
   pose(kind: "seated" | "mount" | "climb" | "swim" | "hit", phase = 1, seating: "low" | "upright" | "rider" | "reclined" = "upright"): void {
-    if (this.dead || this.root.metadata?.ragdollActive) return;
+    if (this.poseLocked) return;
     const seated = kind === "seated" || kind === "mount";
     const amount = kind === "mount" ? Math.max(0, Math.min(1, phase)) : 1;
     if (seated) {
-      const rider = seating === "rider", reclined = seating === "reclined", thigh = rider ? -0.85 : reclined ? -1.75 : -1.6, calf = rider ? 1.95 : seating === "low" || reclined ? 0.25 : 1.15;
+      const rider = seating === "rider", reclined = seating === "reclined", thigh = rider ? -0.85 : reclined ? -1.75 : -1.6, calf = rider ? 1.95 : seating === "low" || reclined ? .25 : 1.15;
       this.rotate("leftThigh", thigh * amount, 0, rider ? -0.32 * amount : 0);
       this.rotate("rightThigh", thigh * amount, 0, rider ? 0.32 * amount : 0);
       this.rotate("leftCalf", calf * amount);
@@ -870,6 +910,15 @@ export class Character {
       this.rotate("leftForearm", (rider ? -0.3 : -0.1) * amount);
       this.rotate("rightForearm", (rider ? -0.3 : -0.1) * amount);
       this.rotate("spine", (reclined ? -0.38 : 0.1) * amount);
+      if (seating === 'low' || reclined) {
+        // The pedal contact is expressed in the actor's seat frame, preserving
+        // upper/lower leg lengths instead of pushing the shoes through the floor.
+        const frame = this.root.computeWorldMatrix(true);
+        for (const side of [-1, 1] as const) {
+          const ankle = Vector3.TransformCoordinates(new Vector3(side * .13, reclined ? .945 : .805, .76), frame);
+          this.plantFoot(side, ankle, amount);
+        }
+      }
     } else if (kind === "climb") {
       this.rotate("leftArm", -2.65);
       this.rotate("rightArm", -2.65);
@@ -887,7 +936,7 @@ export class Character {
 
   /** Treading sculls blend into alternating crawl strokes and a flutter kick. */
   swimPose(phase: number, stroke: number, submerged: boolean): void {
-    if (this.dead || this.root.metadata?.ragdollActive) return;
+    if (this.poseLocked) return;
     const travel = Math.max(0, Math.min(1, stroke));
     this.root.scaling.y = 1;
     this.pelvisPosition.set(0, this.baseHeight, 0);
@@ -922,7 +971,7 @@ export class Character {
 
   /** Deterministic torso overlay for a planted reach, pull or door-frame brace. */
   interactionPosture(lower: number, lean: number, twist = 0, forward = 0): void {
-    if (this.dead || this.root.metadata?.ragdollActive) return;
+    if (this.poseLocked) return;
     this.root.scaling.y = 1;
     this.pelvisPosition.set(0, this.baseHeight - Math.max(0, Math.min(.32, lower)), forward);
     this.bones.get('pelvis')!.setPosition(this.pelvisPosition);
@@ -933,18 +982,34 @@ export class Character {
     this.rotate('head', -lean * .2);
   }
 
-  reachHand(side: -1 | 1, worldWrist: Vector3, weight = 1): void {
-    if (this.dead || this.root.metadata?.ragdollActive || weight <= 0) return;
+  reachHand(side: -1 | 1, worldWrist: Vector3, weight = 1, worldElbow?: Vector3): void {
+    if (this.poseLocked || weight <= 0) return;
     this.contactIK ??= new CharacterContactIK(this.scene, this.root, this.skeleton);
-    this.contactIK.solve(side < 0 ? 'leftHand' : 'rightHand', worldWrist, weight);
+    this.contactIK.solve(side < 0 ? 'leftHand' : 'rightHand', worldWrist, weight, worldElbow);
   }
 
-  plantFoot(side: -1 | 1, worldAnkle: Vector3, weight = 1): void {
-    if (this.dead || this.root.metadata?.ragdollActive || weight <= 0) return;
+  plantFoot(side: -1 | 1, worldAnkle: Vector3, weight = 1, worldKnee?: Vector3, contact: 'sole' | 'toe' = 'sole'): void {
+    if (this.poseLocked || weight <= 0) return;
     this.contactIK ??= new CharacterContactIK(this.scene, this.root, this.skeleton);
     const limb = side < 0 ? 'leftFoot' : 'rightFoot';
-    this.contactIK.solve(limb, worldAnkle, weight);
-    this.contactIK.levelEnd(limb, weight);
+    this.contactIK.solve(limb, worldAnkle, weight, worldKnee);
+    if (contact === 'toe') this.contactIK.flexFoot(limb, .25, weight);
+    else this.contactIK.levelEnd(limb, weight);
+  }
+
+  /** Floor contact for crawling; orientation follows the ground plane rather than a dangling wrist. */
+  plantHand(side: -1 | 1, worldWrist: Vector3, weight = 1, worldElbow?: Vector3): void {
+    if (this.poseLocked || weight <= 0) return;
+    this.reachHand(side, worldWrist, weight, worldElbow);
+    this.contactIK?.levelPalm(side < 0 ? 'leftHand' : 'rightHand', weight);
+  }
+
+  /** Keep the palm outside a door skin and point the fingers along the panel. */
+  touchSurface(side: -1 | 1, point: Vector3, outward: Vector3, weight = 1): void {
+    if (this.poseLocked || weight <= 0) return;
+    const wrist = point.add(outward.normalizeToNew().scale(.10)).addInPlaceFromFloats(0, .06, 0);
+    this.reachHand(side, wrist, weight);
+    this.contactIK?.pointEnd(side < 0 ? 'leftHand' : 'rightHand', Vector3.DownReadOnly, weight);
   }
 
   position(p: Vector3): void {

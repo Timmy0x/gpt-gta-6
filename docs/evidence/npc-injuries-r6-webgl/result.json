@@ -1,0 +1,6222 @@
+{
+  "origin": "http://127.0.0.1:4273",
+  "backend": "webgl",
+  "method": "Normal sandbox spawn/settings, mouse aiming and pistol fire at six regions, delayed survival and normal save/load. Game diagnostics are read only; no direct game-state mutations.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-BJRmjpwj.js",
+      "sha256": "201705ae30ee44b6c7bbbd1d86b0cced48901d1e0d9425f8b41a0741dd1355e1",
+      "world": "authored-860409-v8-street-objects",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "leftLeg-before",
+      "backend": "WebGL2",
+      "simTime": 2.916666666666661,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816,
+          0.9399999403953552,
+          563
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.9994905119732,
+            1.6387942805886269,
+            562.9981957509074
+          ],
+          "chest": [
+            -816,
+            1.4288177266716957,
+            563
+          ],
+          "leftHand": [
+            -816.3867890864362,
+            1.2212103381752968,
+            563.3417826984007
+          ],
+          "rightHand": [
+            -815.8698313929768,
+            1.2446903958916664,
+            563.52014775408
+          ],
+          "leftFoot": [
+            -816.1047728475563,
+            0.16881770640611649,
+            562.9733232440874
+          ],
+          "rightFoot": [
+            -815.8981401088013,
+            0.16881770640611649,
+            563.0362430883904
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.295580879994362,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -815.352402650163,
+        2.1986774445801567,
+        560.896031184814
+      ],
+      "forward": [
+        -0.2832062439938998,
+        -0.27055906270228947,
+        0.9201043511213967
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "weapon": 0,
+      "shots": 0,
+      "victim": {
+        "id": "ped-112",
+        "activity": "walking",
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816,
+          0.08000017848908902,
+          567.6624755859394
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-112/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-112/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-112/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.9999991924412,
+            1.6784811168909073,
+            567.6606007813243
+          ],
+          "chest": [
+            -816,
+            1.4685045629739761,
+            567.6624755859375
+          ],
+          "leftHand": [
+            -816.2719431221485,
+            1.0041447430849075,
+            567.7757996767759
+          ],
+          "rightHand": [
+            -815.7290795147419,
+            0.9912099391222,
+            567.6801403407007
+          ],
+          "leftFoot": [
+            -816.1064051389694,
+            0.23272861540317535,
+            567.4896125197411
+          ],
+          "rightFoot": [
+            -815.893044359982,
+            0.21632178127765656,
+            567.7758435383439
+          ]
+        }
+      },
+      "creative": [
+        "ped-112"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 224,
+      "props": []
+    },
+    {
+      "label": "leftLeg-hit",
+      "backend": "WebGL2",
+      "simTime": 3.4166666666666594,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816,
+          0.9399999403953552,
+          563
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.999991828998,
+            1.6370460763573647,
+            562.9981252130042
+          ],
+          "chest": [
+            -816,
+            1.4270695224404335,
+            563
+          ],
+          "leftHand": [
+            -816.2818078392177,
+            1.21713075786829,
+            563.4222923050615
+          ],
+          "rightHand": [
+            -815.7199556677034,
+            1.2489671483635902,
+            563.4661204557586
+          ],
+          "leftFoot": [
+            -816.1080970935564,
+            0.16706950217485428,
+            563.0020044704993
+          ],
+          "rightFoot": [
+            -815.8921800925438,
+            0.16706950217485428,
+            563.0079916890238
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.027722155786077157,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -815.9390763622772,
+        2.0698975553991112,
+        560.8029118156572
+      ],
+      "forward": [
+        -0.027054715103616865,
+        -0.21755167207897805,
+        0.9756737735361666
+      ],
+      "yaw": 0.27249999999999996,
+      "pitch": 0.019000000000000003,
+      "weapon": 0,
+      "shots": 1,
+      "victim": {
+        "id": "ped-112",
+        "activity": "injured",
+        "health": 79.2,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0.5333333333333333,
+              "healDelay": 89.70000000000002
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": false
+        },
+        "position": [
+          -816,
+          0.08000017848908902,
+          568.1514755859408
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-112/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-112/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-112/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.8729486912489,
+            1.6624362617731094,
+            568.1496148101287
+          ],
+          "chest": [
+            -815.9026013091207,
+            1.4545639902353287,
+            568.1514892578125
+          ],
+          "leftHand": [
+            -816.2380792200565,
+            1.0211439281702042,
+            568.1858016550541
+          ],
+          "rightHand": [
+            -815.6997807323933,
+            0.9529411345720291,
+            568.2485230267048
+          ],
+          "leftFoot": [
+            -816.1149999797344,
+            0.23110565543174744,
+            568.2548171654344
+          ],
+          "rightFoot": [
+            -815.8849999979138,
+            0.21300016343593597,
+            567.9567364007235
+          ]
+        }
+      },
+      "creative": [
+        "ped-112"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -816,
+            "y": 0.08000017702579498,
+            "z": 568.1514892578125,
+            "yaw": 0,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 89.70000000000002
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 224,
+      "props": []
+    },
+    {
+      "label": "rightLeg-before",
+      "backend": "WebGL2",
+      "simTime": 4.316666666666657,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816,
+          0.9399999403953552,
+          563
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -816.0000049870131,
+            1.6396525874733925,
+            562.9981252018007
+          ],
+          "chest": [
+            -816,
+            1.4296760335564613,
+            563
+          ],
+          "leftHand": [
+            -816.2822053474056,
+            1.235529400408268,
+            563.4373006796083
+          ],
+          "rightHand": [
+            -815.7288493529488,
+            1.2630274072289467,
+            563.4723297233654
+          ],
+          "leftFoot": [
+            -816.1080844952993,
+            0.1696760132908821,
+            563.0025963865954
+          ],
+          "rightFoot": [
+            -815.8921379470735,
+            0.1696760132908821,
+            563.0074011408544
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.02224606839350673,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -815.9443061672058,
+        2.0701024239654138,
+        560.793178123469
+      ],
+      "forward": [
+        -0.024629389770437635,
+        -0.21673722480035612,
+        0.9759192428399882
+      ],
+      "yaw": 0.27249999999999996,
+      "pitch": 0.019000000000000003,
+      "weapon": 0,
+      "shots": 1,
+      "victim": {
+        "id": "ped-113",
+        "activity": "walking",
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -815.0310668945312,
+          0.07999994007050992,
+          567.5088297526061
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-113/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-113/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-113/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.0310655563368,
+            1.6781193166971207,
+            567.5069752932759
+          ],
+          "chest": [
+            -815.0310668945312,
+            1.4681427627801895,
+            567.5088500976562
+          ],
+          "leftHand": [
+            -815.3030340969563,
+            1.0039981752634048,
+            567.6230616793036
+          ],
+          "rightHand": [
+            -814.7601414322853,
+            0.990820124745369,
+            567.5256029646844
+          ],
+          "leftFoot": [
+            -815.1374112293124,
+            0.2332575023174286,
+            567.3327214419842
+          ],
+          "rightFoot": [
+            -814.9241500422359,
+            0.2162446826696396,
+            567.6242503598332
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -816,
+            "y": 0.08000017702579498,
+            "z": 568.8684692382812,
+            "yaw": 0,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 88.80000000000007
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 225,
+      "props": []
+    },
+    {
+      "label": "rightLeg-hit",
+      "backend": "WebGL2",
+      "simTime": 4.816666666666655,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816,
+          0.9399999403953552,
+          563
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -816.0004471887961,
+            1.6422140374779701,
+            562.9981793091356
+          ],
+          "chest": [
+            -816,
+            1.432237483561039,
+            563
+          ],
+          "leftHand": [
+            -816.1708112221912,
+            1.2234402671456337,
+            563.4786554684531
+          ],
+          "rightHand": [
+            -815.6151056267272,
+            1.2553618922829628,
+            563.3848106487583
+          ],
+          "leftFoot": [
+            -816.1043824109954,
+            0.17223746329545975,
+            563.0281657893426
+          ],
+          "rightFoot": [
+            -815.8934617214323,
+            0.17223746329545975,
+            562.9815990594174
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 0.21729264786721186,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -816.4738678785632,
+        2.063598526126951,
+        560.8536495235514
+      ],
+      "forward": [
+        0.21055097914903873,
+        -0.21487456597817714,
+        0.9536756293809081
+      ],
+      "yaw": 0.5175,
+      "pitch": 0.016,
+      "weapon": 0,
+      "shots": 2,
+      "victim": {
+        "id": "ped-113",
+        "activity": "injured",
+        "health": 79.2,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0.5333333333333333,
+              "healDelay": 89.70000000000002
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": false
+        },
+        "position": [
+          -815.0310668945312,
+          0.07999994007050992,
+          567.5198297526056
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-113/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-113/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-113/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.0788780804606,
+            1.6601076275110245,
+            567.6376410960594
+          ],
+          "chest": [
+            -815.0663600665147,
+            1.452245607972145,
+            567.6106158122213
+          ],
+          "leftHand": [
+            -815.1065938629347,
+            0.9422785192728043,
+            567.8103485564468
+          ],
+          "rightHand": [
+            -814.8549964805063,
+            1.0273413807153702,
+            567.3332154390384
+          ],
+          "leftFoot": [
+            -814.8944486581845,
+            0.24139149487018585,
+            567.6963244100433
+          ],
+          "rightFoot": [
+            -815.0837355566374,
+            0.21299995481967926,
+            567.3761527459282
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -816.14501953125,
+            "y": 0.08000017702579498,
+            "z": 569.2177734375,
+            "yaw": -0.652118874605507,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 88.3000000000001
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -815.0310668945312,
+            "y": 0.07999993860721588,
+            "z": 567.5198364257812,
+            "yaw": 1.1999999885853003,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 89.70000000000002
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 225,
+      "props": []
+    },
+    {
+      "label": "torso-before",
+      "backend": "WebGL2",
+      "simTime": 5.733333333333318,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816,
+          0.9399999403953552,
+          563
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -816.0004462743136,
+            1.6417231336236,
+            562.9981790848109
+          ],
+          "chest": [
+            -816,
+            1.4317465797066689,
+            563
+          ],
+          "leftHand": [
+            -816.167013422517,
+            1.240662194788456,
+            563.4947321929259
+          ],
+          "rightHand": [
+            -815.6230335760933,
+            1.267732359468937,
+            563.3940155781197
+          ],
+          "leftFoot": [
+            -816.1042260520989,
+            0.17174655944108963,
+            563.028738988112
+          ],
+          "rightFoot": [
+            -815.8935644510409,
+            0.17174655944108963,
+            562.9810138658073
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 0.2227880763801808,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -816.4812849344866,
+        2.063770630284282,
+        560.845494132262
+      ],
+      "forward": [
+        0.21295867185976822,
+        -0.2140585563349803,
+        0.9533244665587407
+      ],
+      "yaw": 0.5175,
+      "pitch": 0.016,
+      "weapon": 0,
+      "shots": 2,
+      "victim": {
+        "id": "ped-114",
+        "activity": "walking",
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -814.2190551757812,
+          0.07999994007050992,
+          567.211934407554
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-114/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-114/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-114/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -814.21905503577,
+            1.6790083795785904,
+            567.210039257654
+          ],
+          "chest": [
+            -814.2190551757812,
+            1.4690318256616592,
+            567.2119140625
+          ],
+          "leftHand": [
+            -814.4909627139568,
+            1.0043522864580154,
+            567.3239069804549
+          ],
+          "rightHand": [
+            -813.9481416046619,
+            0.9917825609445572,
+            567.2309457324445
+          ],
+          "leftFoot": [
+            -814.3255494236946,
+            0.23195010423660278,
+            567.0439555794001
+          ],
+          "rightFoot": [
+            -814.1120427027345,
+            0.21643170714378357,
+            567.3222340270877
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -816.5882568359375,
+            "y": 0.08000017702579498,
+            "z": 569.7982177734375,
+            "yaw": -0.652118874605507,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 87.38333333333348
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -815.0310668945312,
+            "y": 0.07999993860721588,
+            "z": 567.134765625,
+            "yaw": 2.274925985273079,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 88.7833333333334
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 226,
+      "props": []
+    },
+    {
+      "label": "torso-hit",
+      "backend": "WebGL2",
+      "simTime": 6.249999999999983,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816,
+          0.9399999403953552,
+          563
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -816.0007127099436,
+            1.6389190927147865,
+            562.9982659476482
+          ],
+          "chest": [
+            -816,
+            1.4289425387978554,
+            563
+          ],
+          "leftHand": [
+            -816.0787459437558,
+            1.3028410449624062,
+            563.5345070607941
+          ],
+          "rightHand": [
+            -815.5474026617976,
+            1.339088298380375,
+            563.3472542234377
+          ],
+          "leftFoot": [
+            -816.0985461884991,
+            0.16894251853227615,
+            563.0444707565915
+          ],
+          "rightFoot": [
+            -815.8977664887568,
+            0.16894251853227615,
+            562.9648246018018
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 0.37764474415827415,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -816.7985070666107,
+        1.6519719683808642,
+        560.9870466184848
+      ],
+      "forward": [
+        0.3685287236515354,
+        -0.03321668877609997,
+        0.9290227292324565
+      ],
+      "yaw": 0.6825000000000002,
+      "pitch": -0.181,
+      "weapon": 0,
+      "shots": 3,
+      "victim": {
+        "id": "ped-114",
+        "activity": "injured",
+        "health": 68,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0.4533333333333333,
+              "healDelay": 89.70000000000002
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": false
+        },
+        "position": [
+          -814.2190551757812,
+          0.07999994007050992,
+          567.2522677408873
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-114/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-114/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-114/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -814.1432971204068,
+            1.6840008646249771,
+            567.2812306115854
+          ],
+          "chest": [
+            -814.1769369364347,
+            1.4771289974451065,
+            567.2683436672193
+          ],
+          "leftHand": [
+            -813.9850050067515,
+            1.1692743450403214,
+            567.5612174337582
+          ],
+          "rightHand": [
+            -813.832312154915,
+            1.1763250976800919,
+            567.1761414638196
+          ],
+          "leftFoot": [
+            -814.1879487056183,
+            0.22464990615844727,
+            567.3797463792663
+          ],
+          "rightFoot": [
+            -814.2835184029856,
+            0.23169761896133423,
+            567.1120309479151
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -816.8627319335938,
+            "y": 0.08000017702579498,
+            "z": 570.1036376953125,
+            "yaw": -0.7897238691834761,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 86.86666666666684
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -815.2647094726562,
+            "y": 0.07999993860721588,
+            "z": 567.2569580078125,
+            "yaw": 2.608259295799708,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 88.26666666666677
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -814.2190551757812,
+            "y": 0.07999993860721588,
+            "z": 567.2522583007812,
+            "yaw": 1.1999999885853003,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 89.70000000000002
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 226,
+      "props": []
+    },
+    {
+      "label": "leftArm-before",
+      "backend": "WebGL2",
+      "simTime": 7.483333333333312,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816.7953857659727,
+          0.9399999403953552,
+          564.185632926027
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -816.796111821182,
+            1.6409480348229408,
+            564.1838693591757
+          ],
+          "chest": [
+            -816.79541015625,
+            1.4309714809060097,
+            564.1856079101562
+          ],
+          "leftHand": [
+            -816.8704514288172,
+            1.306696631014347,
+            564.7215488196119
+          ],
+          "rightHand": [
+            -816.3407093183056,
+            1.3426573053002357,
+            564.5301894355873
+          ],
+          "leftFoot": [
+            -816.9296946872962,
+            0.17834944278001785,
+            564.1416749361773
+          ],
+          "rightFoot": [
+            -816.6716999525296,
+            0.1734023466706276,
+            564.2034088973122
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 0.3894874563497924,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -817.6168775856007,
+        1.6467162629982648,
+        562.1536140418465
+      ],
+      "forward": [
+        0.37463034212645646,
+        -0.030425079989855337,
+        0.9266749275046915
+      ],
+      "yaw": 0.6825000000000002,
+      "pitch": -0.181,
+      "weapon": 0,
+      "shots": 3,
+      "victim": {
+        "id": "ped-115",
+        "activity": "walking",
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -813.6285978589045,
+          0.07999994007050992,
+          567.1930839691555
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-115/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-115/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-115/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -813.6286181042715,
+            1.6852851063013077,
+            567.1911794718902
+          ],
+          "chest": [
+            -813.6286010742188,
+            1.4753085523843765,
+            567.1930541992188
+          ],
+          "leftHand": [
+            -813.8996830504332,
+            0.999505952000618,
+            567.2348984961872
+          ],
+          "rightHand": [
+            -813.3576190588614,
+            1.0056416541337967,
+            567.2826966635977
+          ],
+          "leftFoot": [
+            -813.7366052785433,
+            0.21723106503486633,
+            567.2490437691971
+          ],
+          "rightFoot": [
+            -813.5205950854502,
+            0.22110584378242493,
+            567.1133692869712
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -817.5604858398438,
+            "y": 0.08000017702579498,
+            "z": 570.79541015625,
+            "yaw": -0.7897238691834761,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 85.63333333333358
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -816.22509765625,
+            "y": 0.07999993860721588,
+            "z": 567.0494995117188,
+            "yaw": -1.783513868202582,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 87.0333333333335
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -814.2813720703125,
+            "y": 0.07999993860721588,
+            "z": 566.3407592773438,
+            "yaw": 3.1382265489644063,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 88.46666666666675
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 226,
+      "props": []
+    },
+    {
+      "label": "leftArm-hit",
+      "backend": "WebGL2",
+      "simTime": 8.016666666666644,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -816.7953857659727,
+          0.9399999403953552,
+          564.185632926027
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -816.7966413983896,
+            1.6414358392357826,
+            564.1841940730789
+          ],
+          "chest": [
+            -816.79541015625,
+            1.4314592853188515,
+            564.1856079101562
+          ],
+          "leftHand": [
+            -816.6879580985857,
+            1.3021950498223305,
+            564.7140864595492
+          ],
+          "rightHand": [
+            -816.2520786325912,
+            1.3383252397179604,
+            564.3571073800409
+          ],
+          "leftFoot": [
+            -816.8732222604989,
+            0.1714630350470543,
+            564.2606385950885
+          ],
+          "rightFoot": [
+            -816.7110933611991,
+            0.17146118730306625,
+            564.1179121683045
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 0.7255041189096367,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -818.2338967266458,
+        1.6664409719271513,
+        562.5635937490528
+      ],
+      "forward": [
+        0.662985929866653,
+        -0.03983924219212807,
+        0.7475710612245545
+      ],
+      "yaw": 1.0300000000000002,
+      "pitch": -0.174,
+      "weapon": 0,
+      "shots": 4,
+      "victim": {
+        "id": "ped-115",
+        "activity": "injured",
+        "health": 79.2,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0.5333333333333333,
+              "healDelay": 89.68333333333335
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": false
+        },
+        "position": [
+          -813.6386382712177,
+          0.07999994007050992,
+          568.7938852796057
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-115/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-115/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-115/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -813.6385722924839,
+            1.6637025028467178,
+            568.795539860806
+          ],
+          "chest": [
+            -813.638609170558,
+            1.4537176042795181,
+            568.7953842673884
+          ],
+          "leftHand": [
+            -813.8571960501968,
+            1.2217416912317276,
+            569.1398704049703
+          ],
+          "rightHand": [
+            -813.3644658772001,
+            0.987434521317482,
+            568.7007033417963
+          ],
+          "leftFoot": [
+            -813.7265377807632,
+            0.4597215801477432,
+            568.2590642695352
+          ],
+          "rightFoot": [
+            -813.5444846450798,
+            0.28134816884994507,
+            569.1641614223976
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -817.8751220703125,
+            "y": 0.08000017702579498,
+            "z": 571.0805053710938,
+            "yaw": -0.8651930098036998,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 85.10000000000028
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -816.642822265625,
+            "y": 0.07999993860721588,
+            "z": 566.972412109375,
+            "yaw": -1.732491185661508,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 86.5000000000002
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -814.3904418945312,
+            "y": 0.07999993860721588,
+            "z": 565.9570922851562,
+            "yaw": -2.674102948313893,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 87.93333333333345
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -813.6386108398438,
+            "y": 0.07999993860721588,
+            "z": 568.7938842773438,
+            "yaw": -0.00664126586402548,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 89.68333333333335
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 226,
+      "props": []
+    },
+    {
+      "label": "rightArm-before",
+      "backend": "WebGL2",
+      "simTime": 9.966666666666741,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -810.3046144378754,
+          0.9399999403953552,
+          562.9105041261198
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -810.3058533017332,
+            1.633266307413578,
+            562.9091048001807
+          ],
+          "chest": [
+            -810.3046264648438,
+            1.4232897534966469,
+            562.9105224609375
+          ],
+          "leftHand": [
+            -810.1730925626009,
+            1.3647790923714638,
+            563.4567787027802
+          ],
+          "rightHand": [
+            -809.7651591007692,
+            1.357212521135807,
+            563.0977689264431
+          ],
+          "leftFoot": [
+            -810.5079067506957,
+            0.19102586060762405,
+            562.8447906108023
+          ],
+          "rightFoot": [
+            -810.1440797421637,
+            0.17222978919744492,
+            562.9283174067062
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 0.7379983506591461,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -811.7782178015408,
+        1.6602942622198096,
+        561.2767136618061
+      ],
+      "forward": [
+        0.6693202791873385,
+        -0.0364702042575767,
+        0.7420783570957947
+      ],
+      "yaw": 1.0300000000000002,
+      "pitch": -0.174,
+      "weapon": 0,
+      "shots": 4,
+      "victim": {
+        "id": "ped-116",
+        "activity": "walking",
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -813.3025512695312,
+          0.07999994007050992,
+          565.6888427734418
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-116/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-116/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-116/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -813.3025633801772,
+            1.6736148744821548,
+            565.6869680075906
+          ],
+          "chest": [
+            -813.3025512695312,
+            1.4636383205652237,
+            565.6888427734375
+          ],
+          "leftHand": [
+            -813.5745284557343,
+            0.9995829612016678,
+            565.8034196645021
+          ],
+          "rightHand": [
+            -813.0316236913204,
+            0.9863047748804092,
+            565.7052201405168
+          ],
+          "leftFoot": [
+            -813.4088702648878,
+            0.22912439703941345,
+            565.5113708823919
+          ],
+          "rightFoot": [
+            -813.1956505775452,
+            0.21185889840126038,
+            565.8050796762109
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115",
+        "ped-116"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -819.0576782226562,
+            "y": 0.08000017702579498,
+            "z": 572.0879516601562,
+            "yaw": -0.8651930098036998,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 83.15000000000039
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -818.176025390625,
+            "y": 0.07999993860721588,
+            "z": 566.7223510742188,
+            "yaw": -1.732491185661508,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 84.55000000000031
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -815.0656127929688,
+            "y": 0.07999993860721588,
+            "z": 564.61962890625,
+            "yaw": -2.674102948313893,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 85.98333333333356
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -813.6930541992188,
+            "y": 0.07999993860721588,
+            "z": 576.9837036132812,
+            "yaw": -0.00664126586402548,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 87.73333333333346
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 231,
+      "props": []
+    },
+    {
+      "label": "rightArm-hit",
+      "backend": "WebGL2",
+      "simTime": 10.483333333333434,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -810.3046144378754,
+          0.9399999403953552,
+          562.9105041261198
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -810.3033564614271,
+            1.6372238174080849,
+            562.9091433374398
+          ],
+          "chest": [
+            -810.3046264648438,
+            1.4272472634911537,
+            562.9105224609375
+          ],
+          "leftHand": [
+            -810.8149500709659,
+            1.2958845868706703,
+            563.0830068523403
+          ],
+          "rightHand": [
+            -810.4061357092127,
+            1.3318830505013466,
+            563.4706307362185
+          ],
+          "leftFoot": [
+            -810.388717871177,
+            0.1672525778412819,
+            562.8426160599898
+          ],
+          "rightFoot": [
+            -810.226944159751,
+            0.167249895632267,
+            562.9857468499897
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.7192482418942042,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -808.8751524995107,
+        1.676786924237158,
+        561.2782115274701
+      ],
+      "forward": [
+        -0.6581648088851594,
+        -0.04456347292582703,
+        0.7515538445287541
+      ],
+      "yaw": -0.4149999999999998,
+      "pitch": -0.169,
+      "weapon": 0,
+      "shots": 5,
+      "victim": {
+        "id": "ped-116",
+        "activity": "injured",
+        "health": 79.2,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0.5333333333333333,
+              "healDelay": 89.68333333333335
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": false
+        },
+        "position": [
+          -813.3025512695312,
+          0.07999994007050992,
+          567.2688427734432
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-116/rocketbox/m004_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-116/rocketbox/m004_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-116/rocketbox/m004_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -813.3025825815748,
+            1.6817500740289688,
+            567.270515001961
+          ],
+          "chest": [
+            -813.302558287503,
+            1.471765175461769,
+            567.2703598381486
+          ],
+          "leftHand": [
+            -813.5739989578724,
+            0.9960377365350723,
+            567.2399245835841
+          ],
+          "rightHand": [
+            -813.0894498825073,
+            1.2303208261728287,
+            567.6111287474632
+          ],
+          "leftFoot": [
+            -813.4062599465251,
+            0.24459421634674072,
+            567.4991460591555
+          ],
+          "rightFoot": [
+            -813.2011880204082,
+            0.31563085317611694,
+            566.9132631421089
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115",
+        "ped-116"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -819.3517456054688,
+            "y": 0.08000017702579498,
+            "z": 572.3751220703125,
+            "yaw": -0.7544027064225044,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 82.63333333333375
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -818.582763671875,
+            "y": 0.07999993860721588,
+            "z": 566.7342529296875,
+            "yaw": -1.4212777118703546,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 84.03333333333367
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -815.3253784179688,
+            "y": 0.07999993860721588,
+            "z": 564.3310546875,
+            "yaw": -2.242378214967986,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 85.46666666666692
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -813.742919921875,
+            "y": 0.07999993860721588,
+            "z": 579.1529541015625,
+            "yaw": -0.03331223416188551,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 87.21666666666682
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-116",
+            "x": -813.3025512695312,
+            "y": 0.07999993860721588,
+            "z": 567.2688598632812,
+            "yaw": 0,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 89.68333333333335
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 231,
+      "props": []
+    },
+    {
+      "label": "head-before",
+      "backend": "WebGL2",
+      "simTime": 11.383333333333479,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -810.3046144378754,
+          0.9399999403953552,
+          562.9105041261198
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -810.3033638106615,
+            1.6414115205407143,
+            562.9091366057964
+          ],
+          "chest": [
+            -810.3046264648438,
+            1.4314349666237831,
+            562.9105224609375
+          ],
+          "leftHand": [
+            -810.8206895935705,
+            1.3128324523568153,
+            563.0892069059631
+          ],
+          "rightHand": [
+            -810.413070639863,
+            1.3452046886086464,
+            563.4692049006062
+          ],
+          "leftFoot": [
+            -810.3893369756724,
+            0.1714349463582039,
+            562.8433427004707
+          ],
+          "rightFoot": [
+            -810.2264853464231,
+            0.17143500596284866,
+            562.9852416464752
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.7167525411018834,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -808.8734692315993,
+        1.6753148792101782,
+        561.2695257466152
+      ],
+      "forward": [
+        -0.6566495000679179,
+        -0.043733166404283035,
+        0.7529268518367566
+      ],
+      "yaw": -0.4149999999999998,
+      "pitch": -0.169,
+      "weapon": 0,
+      "shots": 5,
+      "victim": {
+        "id": "ped-117",
+        "activity": "walking",
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -811.756103515625,
+          0.07999994007050992,
+          567.2673950195332
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -811.7561027080662,
+            1.6784808784723282,
+            567.2655202149181
+          ],
+          "chest": [
+            -811.756103515625,
+            1.468504324555397,
+            567.2673950195312
+          ],
+          "leftHand": [
+            -812.0280466377735,
+            1.0041445046663284,
+            567.3807191103697
+          ],
+          "rightHand": [
+            -811.4851830303669,
+            0.9912097007036209,
+            567.2850597742945
+          ],
+          "leftFoot": [
+            -811.8625086545944,
+            0.23272831737995148,
+            567.0945319533348
+          ],
+          "rightFoot": [
+            -811.649147875607,
+            0.21632148325443268,
+            567.3807629719377
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115",
+        "ped-116",
+        "ped-117"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -819.8427734375,
+            "y": 0.08000017702579498,
+            "z": 572.8975830078125,
+            "yaw": -0.7544027064225044,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 81.7333333333338
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -819.291748046875,
+            "y": 0.07999993860721588,
+            "z": 566.841064453125,
+            "yaw": -1.4212777118703546,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 83.13333333333372
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -815.86669921875,
+            "y": 0.07999993860721588,
+            "z": 563.9007568359375,
+            "yaw": -2.242378214967986,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 84.56666666666698
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -813.8687744140625,
+            "y": 0.07999993860721588,
+            "z": 582.9308471679688,
+            "yaw": -0.03331223416188551,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 86.31666666666688
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-116",
+            "x": -813.3025512695312,
+            "y": 0.07999993860721588,
+            "z": 571.048828125,
+            "yaw": 0,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 88.7833333333334
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 232,
+      "props": []
+    },
+    {
+      "label": "head-hit",
+      "backend": "WebGL2",
+      "simTime": 11.90000000000017,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -810.3046144378754,
+          0.9399999403953552,
+          562.9105041261198
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -810.3040166101791,
+            1.6429642215371132,
+            562.9087496192569
+          ],
+          "chest": [
+            -810.3046264648438,
+            1.432987667620182,
+            562.9105224609375
+          ],
+          "leftHand": [
+            -810.7094632154086,
+            1.345358468592167,
+            563.2833079713367
+          ],
+          "rightHand": [
+            -810.1796230419544,
+            1.3831456676125526,
+            563.4745762200636
+          ],
+          "leftFoot": [
+            -810.4089205898496,
+            0.1729877069592476,
+            562.8820316445094
+          ],
+          "rightFoot": [
+            -810.2034108577055,
+            0.1729876473546028,
+            562.9485276185233
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.31293440491410807,
+        "canFire": true,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -809.649551119745,
+        1.477964069679762,
+        560.885992223011
+      ],
+      "forward": [
+        -0.3074985166036232,
+        0.04789747700688366,
+        0.9503423035848433
+      ],
+      "yaw": -0.002499999999999787,
+      "pitch": -0.266,
+      "weapon": 0,
+      "shots": 6,
+      "victim": {
+        "id": "ped-117",
+        "activity": "fleeing",
+        "health": 36,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0.6666666666666666,
+              "healDelay": 89.68333333333335
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0.8833333333333336,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -811.7625620321205,
+          0.07999994007050992,
+          567.535471597441
+        ],
+        "physical": true,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -811.7586358613335,
+            1.5689138323068619,
+            567.5016607530415
+          ],
+          "chest": [
+            -811.7681485917419,
+            1.3600182682275772,
+            567.5207866206765
+          ],
+          "leftHand": [
+            -812.2577906847,
+            0.9882675558328629,
+            567.5462265927345
+          ],
+          "rightHand": [
+            -811.3501384556293,
+            0.9204663187265396,
+            567.55679067038
+          ],
+          "leftFoot": [
+            -811.9107470810413,
+            0.210158109664917,
+            567.5175393149257
+          ],
+          "rightFoot": [
+            -811.6116649955511,
+            0.20306499302387238,
+            567.5614411216229
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115",
+        "ped-116",
+        "ped-117"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -820.161376953125,
+            "y": 0.08000017702579498,
+            "z": 573.1541748046875,
+            "yaw": -0.9800578124356284,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 81.21666666666717
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -819.70068359375,
+            "y": 0.07999993860721588,
+            "z": 566.843505859375,
+            "yaw": -1.6554201823099082,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 82.61666666666709
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -816.1698608398438,
+            "y": 0.07999993860721588,
+            "z": 563.6447143554688,
+            "yaw": -2.2909908344164878,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 84.05000000000034
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -814.0704345703125,
+            "y": 0.07999993860721588,
+            "z": 585.0889892578125,
+            "yaw": -0.13095589999618265,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 85.80000000000024
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-116",
+            "x": -813.74609375,
+            "y": 0.07999993860721588,
+            "z": 573.1427001953125,
+            "yaw": -0.3400214316136425,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 88.26666666666677
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-117",
+            "x": -811.7625732421875,
+            "y": 0.07999993860721588,
+            "z": 567.5354614257812,
+            "yaw": 0,
+            "health": 36,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": true,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0.6666666666666666,
+                  "healDelay": 89.68333333333335
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0.8833333333333336,
+              "riseRemaining": 0,
+              "critical": true
+            },
+            "rootRotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "pose": [
+              {
+                "name": "pelvis",
+                "position": [
+                  0.000011210066986677703,
+                  0.8703194260597229,
+                  0.000010171659596380778
+                ],
+                "rotation": [
+                  -0.018089203150222513,
+                  0.02698781022833905,
+                  0.00632815690895229,
+                  0.9994520459347825
+                ]
+              },
+              {
+                "name": "spine",
+                "position": [
+                  0,
+                  0.1599999964237213,
+                  0
+                ],
+                "rotation": [
+                  0,
+                  0.0009890441458371623,
+                  0,
+                  0.9999995108957191
+                ]
+              },
+              {
+                "name": "chest",
+                "position": [
+                  0,
+                  0.25,
+                  0
+                ],
+                "rotation": [
+                  -0.02347285578998666,
+                  -0.06291231663978143,
+                  -0.029028884682022447,
+                  0.9973206014455335
+                ]
+              },
+              {
+                "name": "neck",
+                "position": [
+                  0,
+                  0.13500000536441803,
+                  0
+                ],
+                "rotation": [
+                  -0.012499549040866196,
+                  0.0044797121580670285,
+                  0.000055999318637398913,
+                  0.9999118412724356
+                ]
+              },
+              {
+                "name": "head",
+                "position": [
+                  0,
+                  0.07500000298023224,
+                  0
+                ],
+                "rotation": [
+                  0.09439705592890565,
+                  0.03491087699751722,
+                  0.015175488757206024,
+                  0.9948065799906788
+                ]
+              },
+              {
+                "name": "leftArm",
+                "position": [
+                  -0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  0.06142112697668395,
+                  -0.08685417528092963,
+                  -0.2698336251002342,
+                  0.9570128536402537
+                ]
+              },
+              {
+                "name": "leftForearm",
+                "position": [
+                  -0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  -0.21227456769404365,
+                  0.011937449352226149,
+                  0.10110718136997243,
+                  0.9718921448277789
+                ]
+              },
+              {
+                "name": "leftHand",
+                "position": [
+                  -0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.09814725867989245,
+                  0.011533532399252436,
+                  0.22371166557301284,
+                  0.9696325081719841
+                ]
+              },
+              {
+                "name": "rightArm",
+                "position": [
+                  0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  0.09188261522351464,
+                  0.09735199150282477,
+                  0.21447914064059106,
+                  0.9675116853846166
+                ]
+              },
+              {
+                "name": "rightForearm",
+                "position": [
+                  0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  -0.15350567988363326,
+                  -0.00772370698395461,
+                  -0.06237933339675863,
+                  0.9861466269111979
+                ]
+              },
+              {
+                "name": "rightHand",
+                "position": [
+                  0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.014952634702934418,
+                  -0.05223617400711097,
+                  -0.0516332664358027,
+                  0.9971869509751335
+                ]
+              },
+              {
+                "name": "leftThigh",
+                "position": [
+                  -0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  -0.20063699303795526,
+                  -0.035758438260806144,
+                  -0.06390467710291964,
+                  0.9769249357955883
+                ]
+              },
+              {
+                "name": "leftCalf",
+                "position": [
+                  -0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  0.4719046274891309,
+                  -0.0013771919593836895,
+                  0.035056361592896074,
+                  0.8809512951039038
+                ]
+              },
+              {
+                "name": "leftFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  -0.20936554213364428,
+                  0.03134923635156075,
+                  -0.0012946697249291836,
+                  0.9773339314505003
+                ]
+              },
+              {
+                "name": "rightThigh",
+                "position": [
+                  0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  -0.22896085853061363,
+                  0.010771437872599425,
+                  0.05162625010041883,
+                  0.9720059791079831
+                ]
+              },
+              {
+                "name": "rightCalf",
+                "position": [
+                  0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  0.4485500660111976,
+                  0.001335406984390652,
+                  -0.04997455239448953,
+                  0.8923584398500973
+                ]
+              },
+              {
+                "name": "rightFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  -0.17163051004900418,
+                  -0.05481196513163236,
+                  -0.0009586397277107143,
+                  0.9836349430199769
+                ]
+              }
+            ]
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 246,
+      "props": []
+    },
+    {
+      "label": "critical-head-crawling",
+      "backend": "WebGL2",
+      "simTime": 18.483333333333565,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -810.3046144378754,
+          0.9399999403953552,
+          562.9105041261198
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -810.3046497740133,
+            1.6428637281060219,
+            562.9086478017638
+          ],
+          "chest": [
+            -810.3046264648438,
+            1.4328871741890907,
+            562.9105224609375
+          ],
+          "leftHand": [
+            -810.5758455534344,
+            0.9595999494194984,
+            562.9756372216464
+          ],
+          "rightHand": [
+            -810.0337472909816,
+            0.9595999494194984,
+            562.9770371153073
+          ],
+          "leftFoot": [
+            -810.4126389742145,
+            0.1728871539235115,
+            562.9152435492065
+          ],
+          "rightFoot": [
+            -810.1966397789961,
+            0.1728871539235115,
+            562.9158013372038
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.0025823557539073044,
+        "canFire": false,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -810.2925540740742,
+        0.7156287927206861,
+        558.0863686560295
+      ],
+      "forward": [
+        -0.0024608084001758283,
+        0.1763671420901181,
+        0.9843213782159674
+      ],
+      "yaw": -0.002499999999999787,
+      "pitch": -0.266,
+      "weapon": 0,
+      "shots": 6,
+      "victim": {
+        "id": "ped-117",
+        "activity": "crawling",
+        "health": 36,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0.6666666666666666,
+              "healDelay": 83.10000000000039
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -811.6587596409964,
+          0.05499994039535516,
+          566.2273676513678
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -811.6729863828444,
+            0.30416014045476913,
+            565.676467754178
+          ],
+          "chest": [
+            -811.6682048710252,
+            0.2673530802130699,
+            565.8775499392733
+          ],
+          "leftHand": [
+            -811.3718732137717,
+            0.14724048972129822,
+            565.5910164541058
+          ],
+          "rightHand": [
+            -811.9516185870859,
+            0.13703392446041107,
+            565.6437463552085
+          ],
+          "leftFoot": [
+            -811.4946203795744,
+            0.29921267181634903,
+            567.1327224272256
+          ],
+          "rightFoot": [
+            -811.8440271305952,
+            0.29932595044374466,
+            567.0974543529466
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115",
+        "ped-116",
+        "ped-117"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -824.5172729492188,
+            "y": 0.08000017702579498,
+            "z": 576.0753784179688,
+            "yaw": -0.9800578124356284,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 74.6333333333342
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -824.9266357421875,
+            "y": 0.07999993860721588,
+            "z": 566.4002075195312,
+            "yaw": -1.6554201823099082,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 76.03333333333413
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -819.9719848632812,
+            "y": 0.07999993860721588,
+            "z": 560.3086547851562,
+            "yaw": -2.2909908344164878,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 77.46666666666738
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -817.6810302734375,
+            "y": 0.03912493959069252,
+            "z": 612.5022583007812,
+            "yaw": -0.13095589999618265,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 79.21666666666728
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-116",
+            "x": -822.9675903320312,
+            "y": 0.07999993860721588,
+            "z": 599.2096557617188,
+            "yaw": -0.3400214316136425,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 81.6833333333338
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-117",
+            "x": -811.6587524414062,
+            "y": 0.054999940097332,
+            "z": 566.2273559570312,
+            "yaw": -3.1367211620818733,
+            "health": 36,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": true,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0.6666666666666666,
+                  "healDelay": 83.10000000000039
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": true
+            },
+            "rootRotation": [
+              0,
+              0.9999970346645258,
+              0,
+              -0.0024357433481312536
+            ],
+            "pose": [
+              {
+                "name": "pelvis",
+                "position": [
+                  0,
+                  0.2193259447813034,
+                  -0.05999999865889549
+                ],
+                "rotation": [
+                  0.7173240371243963,
+                  0.006584799129981822,
+                  -0.006779963065530758,
+                  0.696675594909749
+                ]
+              },
+              {
+                "name": "spine",
+                "position": [
+                  0,
+                  0.1599999964237213,
+                  0
+                ],
+                "rotation": [
+                  -0.009999833334166664,
+                  0,
+                  0,
+                  0.9999500004166653
+                ]
+              },
+              {
+                "name": "chest",
+                "position": [
+                  0,
+                  0.25,
+                  0
+                ],
+                "rotation": [
+                  -0.009999833334166664,
+                  0,
+                  0,
+                  0.9999500004166653
+                ]
+              },
+              {
+                "name": "neck",
+                "position": [
+                  0,
+                  0.13500000536441803,
+                  0
+                ],
+                "rotation": [
+                  -0.23770262642713458,
+                  0,
+                  0,
+                  0.9713379748520297
+                ]
+              },
+              {
+                "name": "head",
+                "position": [
+                  0,
+                  0.07500000298023224,
+                  0
+                ],
+                "rotation": [
+                  -0.07492970727274234,
+                  0,
+                  0,
+                  0.9971888181122075
+                ]
+              },
+              {
+                "name": "leftArm",
+                "position": [
+                  -0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  -0.44305262752853725,
+                  -0.127959567558484,
+                  -0.6338885438794924,
+                  0.6208991669599263
+                ]
+              },
+              {
+                "name": "leftForearm",
+                "position": [
+                  -0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  -0.8243627267830879,
+                  -0.02958075928102548,
+                  -0.18576011536203205,
+                  0.5338954552911979
+                ]
+              },
+              {
+                "name": "leftHand",
+                "position": [
+                  -0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.3691647084729321,
+                  0.13622862859289872,
+                  -0.13658268007326443,
+                  0.9091227561753054
+                ]
+              },
+              {
+                "name": "rightArm",
+                "position": [
+                  0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  -0.44602470847322173,
+                  0.1278182648612141,
+                  0.6213198311376932,
+                  0.6314157241274757
+                ]
+              },
+              {
+                "name": "rightForearm",
+                "position": [
+                  0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  0.8740313140684718,
+                  0.011427604794809998,
+                  -0.12108628675228268,
+                  -0.4704006830490302
+                ]
+              },
+              {
+                "name": "rightHand",
+                "position": [
+                  0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.41894179094083867,
+                  -0.1787474253267613,
+                  0.18423563695403308,
+                  0.8709729542819817
+                ]
+              },
+              {
+                "name": "leftThigh",
+                "position": [
+                  -0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  0.012624733356094535,
+                  0.0035972509359694376,
+                  -0.02723322442844417,
+                  0.9995429067213744
+                ]
+              },
+              {
+                "name": "leftCalf",
+                "position": [
+                  -0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  -0.019046327911038056,
+                  -0.0009148873390216138,
+                  0.010429988560257645,
+                  0.9997637812448468
+                ]
+              },
+              {
+                "name": "leftFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  0.12467473338522769,
+                  0,
+                  0,
+                  0.992197667229329
+                ]
+              },
+              {
+                "name": "rightThigh",
+                "position": [
+                  0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  -0.02876255980830479,
+                  -0.00704841707195164,
+                  0.20345137261735852,
+                  0.978637101481437
+                ]
+              },
+              {
+                "name": "rightCalf",
+                "position": [
+                  0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  0.07417914305083369,
+                  0.029772982961142936,
+                  -0.28078591198223185,
+                  0.9564362447416693
+                ]
+              },
+              {
+                "name": "rightFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  0.12467473338522769,
+                  0,
+                  0,
+                  0.992197667229329
+                ]
+              }
+            ]
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 248,
+      "props": []
+    },
+    {
+      "label": "regional-save-restored",
+      "backend": "WebGL2",
+      "simTime": 19.683333333333497,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -810.3046144378754,
+          0.9399999403953552,
+          562.9105041261198
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -810.3046310396975,
+            1.6405701413750648,
+            562.908647661782
+          ],
+          "chest": [
+            -810.3046264648438,
+            1.4305935874581337,
+            562.9105224609375
+          ],
+          "leftHand": [
+            -810.5758456428989,
+            0.9573063626885414,
+            562.9756372437671
+          ],
+          "rightHand": [
+            -810.0337472016327,
+            0.9573063626885414,
+            562.9770371378899
+          ],
+          "leftFoot": [
+            -810.412639011472,
+            0.17059356719255447,
+            562.915243550973
+          ],
+          "rightFoot": [
+            -810.1966397417481,
+            0.17059356719255447,
+            562.9158013391626
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.0025823557539073044,
+        "canFire": false,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -810.2925540740744,
+        0.715628792720686,
+        558.0863686560294
+      ],
+      "forward": [
+        -0.0024608084001758283,
+        0.1763671420901181,
+        0.9843213782159674
+      ],
+      "yaw": -0.002499999999999787,
+      "pitch": -0.266,
+      "weapon": 0,
+      "shots": 6,
+      "victim": {
+        "id": "ped-117",
+        "activity": "crawling",
+        "health": 36,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0.6666666666666666,
+              "healDelay": 82.00000000000045
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -811.658935546875,
+          0.09499994009733193,
+          566.1923828125
+        ],
+        "physical": false,
+        "handoff": true,
+        "skin": [
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -811.6710558007254,
+            0.2715643346309662,
+            565.6414483111214
+          ],
+          "chest": [
+            -811.6669700394023,
+            0.2347572147846222,
+            565.8425456874459
+          ],
+          "leftHand": [
+            -811.3719648962932,
+            0.2669488340616226,
+            565.5809828761066
+          ],
+          "rightHand": [
+            -811.9519622999401,
+            0.26694856584072113,
+            565.5838066223226
+          ],
+          "leftFoot": [
+            -811.4967545689038,
+            0.4521079957485199,
+            567.0710501059377
+          ],
+          "rightFoot": [
+            -811.8128023571054,
+            0.4520663917064667,
+            567.0757415540486
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115",
+        "ped-116",
+        "ped-117"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -824.6716918945312,
+            "y": 0.12000017613172531,
+            "z": 576.8693237304688,
+            "yaw": 3.543544266904027e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 73.53333333333427
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -825.1118774414062,
+            "y": 0.11999993771314621,
+            "z": 567.0748901367188,
+            "yaw": 7.26023358765783e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 74.93333333333419
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -820.1067504882812,
+            "y": 0.11999993771314621,
+            "z": 560.8563232421875,
+            "yaw": -5.207683102525944e-7,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 76.36666666666744
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -817.8090209960938,
+            "y": 0.03824993968009949,
+            "z": 614.5571899414062,
+            "yaw": 2.993452028476873e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 78.11666666666734
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-116",
+            "x": -823.29443359375,
+            "y": 0.0409749373793602,
+            "z": 601.2168579101562,
+            "yaw": 1.3983907365400204e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 80.58333333333387
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-117",
+            "x": -811.658935546875,
+            "y": 0.09499993920326233,
+            "z": 566.1923828125,
+            "yaw": -3.1367211620818733,
+            "health": 36,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": true,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0.6666666666666666,
+                  "healDelay": 82.00000000000045
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": true
+            },
+            "rootRotation": [
+              0,
+              0.9999970346645258,
+              0,
+              -0.0024357433481312536
+            ],
+            "pose": [
+              {
+                "name": "pelvis",
+                "position": [
+                  0,
+                  0.14673006534576416,
+                  -0.05999999865889549
+                ],
+                "rotation": [
+                  0.7173347120429097,
+                  0.0053795820245523054,
+                  -0.005539025208995173,
+                  0.6966859380625057
+                ]
+              },
+              {
+                "name": "spine",
+                "position": [
+                  0,
+                  0.1599999964237213,
+                  0
+                ],
+                "rotation": [
+                  -0.009999833334166664,
+                  0,
+                  0,
+                  0.9999500004166653
+                ]
+              },
+              {
+                "name": "chest",
+                "position": [
+                  0,
+                  0.25,
+                  0
+                ],
+                "rotation": [
+                  -0.009999833334166663,
+                  0,
+                  0,
+                  0.9999500004166653
+                ]
+              },
+              {
+                "name": "neck",
+                "position": [
+                  0,
+                  0.13500000536441803,
+                  0
+                ],
+                "rotation": [
+                  -0.23770262642713458,
+                  0,
+                  0,
+                  0.9713379748520296
+                ]
+              },
+              {
+                "name": "head",
+                "position": [
+                  0,
+                  0.07500000298023224,
+                  0
+                ],
+                "rotation": [
+                  -0.07492970727274233,
+                  0,
+                  0,
+                  0.9971888181122074
+                ]
+              },
+              {
+                "name": "leftArm",
+                "position": [
+                  -0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  -0.3437778763999518,
+                  -0.27045704829968265,
+                  -0.6930366107414605,
+                  0.5730358317740646
+                ]
+              },
+              {
+                "name": "leftForearm",
+                "position": [
+                  -0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  0.8694020167553784,
+                  0.1753338819350953,
+                  0.25665943713560535,
+                  -0.3840885707910543
+                ]
+              },
+              {
+                "name": "leftHand",
+                "position": [
+                  -0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.4414553495663298,
+                  0.06427884463455442,
+                  0.0002080553224569156,
+                  0.8949778745356535
+                ]
+              },
+              {
+                "name": "rightArm",
+                "position": [
+                  0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  -0.3848977267272313,
+                  0.2721548385940242,
+                  0.7064498116557769,
+                  0.5279339913303228
+                ]
+              },
+              {
+                "name": "rightForearm",
+                "position": [
+                  0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  0.8756178905163042,
+                  -0.1592980633047346,
+                  -0.22348095951823652,
+                  -0.3974589278982242
+                ]
+              },
+              {
+                "name": "rightHand",
+                "position": [
+                  0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.4663959153544123,
+                  -0.06196563731390182,
+                  0.0031715301191351203,
+                  0.8823973683960193
+                ]
+              },
+              {
+                "name": "leftThigh",
+                "position": [
+                  -0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  0.1264719998145664,
+                  -0.001916510900493064,
+                  -0.026245397225891278,
+                  0.9916210735415938
+                ]
+              },
+              {
+                "name": "leftCalf",
+                "position": [
+                  -0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  -0.01566879544072814,
+                  -0.003155066810912268,
+                  0.005879631820715825,
+                  0.9998549713826116
+                ]
+              },
+              {
+                "name": "leftFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  0.12467473338522769,
+                  0,
+                  0,
+                  0.992197667229329
+                ]
+              },
+              {
+                "name": "rightThigh",
+                "position": [
+                  0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  0.12654846707156034,
+                  0.0025862072488370097,
+                  0.042358083449192986,
+                  0.9910522634599797
+                ]
+              },
+              {
+                "name": "rightCalf",
+                "position": [
+                  0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  -0.015806914958020477,
+                  0.0014211894643474162,
+                  -0.006131743305301428,
+                  0.9998552545457008
+                ]
+              },
+              {
+                "name": "rightFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  0.12467473338522769,
+                  0,
+                  0,
+                  0.992197667229329
+                ]
+              }
+            ]
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 252,
+      "props": []
+    },
+    {
+      "label": "critical-survivor-after-twenty-seconds",
+      "backend": "WebGL2",
+      "simTime": 33.81666666666603,
+      "player": {
+        "health": 100,
+        "dead": false,
+        "body": null,
+        "position": [
+          -810.3046144378754,
+          0.9399999403953552,
+          562.9105041261198
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -810.3045906308846,
+            1.636980153620243,
+            562.9086479986142
+          ],
+          "chest": [
+            -810.3046264648438,
+            1.427003599703312,
+            562.9105224609375
+          ],
+          "leftHand": [
+            -810.5758456428989,
+            0.9537163749337196,
+            562.9756372437671
+          ],
+          "rightHand": [
+            -810.0337472016327,
+            0.9537163749337196,
+            562.9770371378899
+          ],
+          "leftFoot": [
+            -810.412639011472,
+            0.1670035794377327,
+            562.915243550973
+          ],
+          "rightFoot": [
+            -810.1966397417481,
+            0.1670035794377327,
+            562.9158013391626
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": -0.0025823557539073044,
+        "canFire": false,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -810.2925540740745,
+        0.7156287927206859,
+        558.0863686560293
+      ],
+      "forward": [
+        -0.0024608084001758283,
+        0.1763671420901181,
+        0.9843213782159674
+      ],
+      "yaw": -0.002499999999999787,
+      "pitch": -0.266,
+      "weapon": 0,
+      "shots": 6,
+      "victim": {
+        "id": "ped-117",
+        "activity": "crawling",
+        "health": 36,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0.6666666666666666,
+              "healDelay": 67.86666666666792
+            },
+            "torso": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -811.6761541261639,
+          0.09499994009733193,
+          568.1704507455046
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "ped-117/rocketbox/f202_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -811.6629217091349,
+            0.3441106081008911,
+            568.721386811251
+          ],
+          "chest": [
+            -811.6672905972796,
+            0.3073034882545471,
+            568.520295418612
+          ],
+          "leftHand": [
+            -811.9656448743511,
+            0.18832167237997055,
+            568.8083253578084
+          ],
+          "rightHand": [
+            -811.3856836816692,
+            0.1770128458738327,
+            568.7525903948521
+          ],
+          "leftFoot": [
+            -811.8365788729659,
+            0.33915671706199646,
+            567.2646520975118
+          ],
+          "rightFoot": [
+            -811.4841515337597,
+            0.3392762094736099,
+            567.3055369906299
+          ]
+        }
+      },
+      "creative": [
+        "ped-112",
+        "ped-113",
+        "ped-114",
+        "ped-115",
+        "ped-116",
+        "ped-117"
+      ],
+      "casualties": {
+        "version": 3,
+        "civilians": [
+          {
+            "id": "ped-112",
+            "x": -824.6716918945312,
+            "y": 0.12000017613172531,
+            "z": 588.12890625,
+            "yaw": 3.5435411405159896e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 59.40000000000174
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-113",
+            "x": -825.1118774414062,
+            "y": 0.11999993771314621,
+            "z": 578.33447265625,
+            "yaw": 7.260244387907414e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 60.80000000000166
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-114",
+            "x": -820.1067504882812,
+            "y": 0.11999993771314621,
+            "z": 571.7154541015625,
+            "yaw": -5.20766434419772e-7,
+            "health": 68,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0.4533333333333333,
+                  "healDelay": 62.23333333333491
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-115",
+            "x": -817.8090209960938,
+            "y": 0.03824993968009949,
+            "z": 632.223876953125,
+            "yaw": 2.9934471967862697e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 63.98333333333481
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-116",
+            "x": -823.29443359375,
+            "y": 0.0409749373793602,
+            "z": 618.883544921875,
+            "yaw": 1.398375388816928e-7,
+            "health": 79.2,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": false,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0.5333333333333333,
+                  "healDelay": 66.45000000000134
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": false
+            }
+          },
+          {
+            "id": "ped-117",
+            "x": -811.6761474609375,
+            "y": 0.09499993920326233,
+            "z": 568.1704711914062,
+            "yaw": 0.0007821289657892659,
+            "health": 36,
+            "recoverySeconds": null,
+            "kind": "impact",
+            "fallen": true,
+            "bodyInjuries": {
+              "version": 1,
+              "regions": {
+                "head": {
+                  "severity": 0.6666666666666666,
+                  "healDelay": 67.86666666666792
+                },
+                "torso": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightArm": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "leftLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                },
+                "rightLeg": {
+                  "severity": 0,
+                  "healDelay": 0
+                }
+              },
+              "systemic": {
+                "severity": 0,
+                "healDelay": 0
+              },
+              "fallRemaining": 0,
+              "riseRemaining": 0,
+              "critical": true
+            },
+            "rootRotation": [
+              0,
+              0.00039106447369340725,
+              0,
+              0.9999999254941911
+            ],
+            "pose": [
+              {
+                "name": "pelvis",
+                "position": [
+                  0,
+                  0.2192763388156891,
+                  -0.05999999865889549
+                ],
+                "rotation": [
+                  0.7173167725413817,
+                  0.007294503209696182,
+                  -0.007510701280181544,
+                  0.6966685244882664
+                ]
+              },
+              {
+                "name": "spine",
+                "position": [
+                  0,
+                  0.1599999964237213,
+                  0
+                ],
+                "rotation": [
+                  -0.009999833334166664,
+                  0,
+                  0,
+                  0.9999500004166653
+                ]
+              },
+              {
+                "name": "chest",
+                "position": [
+                  0,
+                  0.25,
+                  0
+                ],
+                "rotation": [
+                  -0.009999833334166664,
+                  0,
+                  0,
+                  0.9999500004166653
+                ]
+              },
+              {
+                "name": "neck",
+                "position": [
+                  0,
+                  0.13500000536441803,
+                  0
+                ],
+                "rotation": [
+                  -0.23770262642713458,
+                  0,
+                  0,
+                  0.9713379748520297
+                ]
+              },
+              {
+                "name": "head",
+                "position": [
+                  0,
+                  0.07500000298023224,
+                  0
+                ],
+                "rotation": [
+                  -0.07492970727274233,
+                  0,
+                  0,
+                  0.9971888181122074
+                ]
+              },
+              {
+                "name": "leftArm",
+                "position": [
+                  -0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  -0.4426104932017448,
+                  -0.12817426657229203,
+                  -0.6349587296659525,
+                  0.620076585176336
+                ]
+              },
+              {
+                "name": "leftForearm",
+                "position": [
+                  -0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  -0.8212918005585389,
+                  -0.03196107184268409,
+                  -0.19004372484097284,
+                  0.536974428737494
+                ]
+              },
+              {
+                "name": "leftHand",
+                "position": [
+                  -0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.3667007825066368,
+                  0.13312226299028776,
+                  -0.1332281080206932,
+                  0.9110759786888593
+                ]
+              },
+              {
+                "name": "rightArm",
+                "position": [
+                  0.2150000035762787,
+                  0.03500000014901161,
+                  0
+                ],
+                "rotation": [
+                  -0.4460024553747771,
+                  0.12795678090943535,
+                  0.6210259777229004,
+                  0.6316927787467352
+                ]
+              },
+              {
+                "name": "rightForearm",
+                "position": [
+                  0.026000000536441803,
+                  -0.2800000011920929,
+                  0.00800000037997961
+                ],
+                "rotation": [
+                  0.8764436001979183,
+                  0.013431358199790806,
+                  -0.11846483724019466,
+                  -0.4665107420516801
+                ]
+              },
+              {
+                "name": "rightHand",
+                "position": [
+                  0.007000000216066837,
+                  -0.23499999940395355,
+                  0.004000000189989805
+                ],
+                "rotation": [
+                  0.4220335727884086,
+                  -0.18031402210958317,
+                  0.18593018167742736,
+                  0.8687951333514045
+                ]
+              },
+              {
+                "name": "leftThigh",
+                "position": [
+                  -0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  0.012611130770158789,
+                  0.0036094111426045825,
+                  -0.02616526458942126,
+                  0.9995715594396648
+                ]
+              },
+              {
+                "name": "leftCalf",
+                "position": [
+                  -0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  -0.019037430438421713,
+                  -0.0009140984332665132,
+                  0.01042098155050236,
+                  0.9997640420767471
+                ]
+              },
+              {
+                "name": "leftFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  0.12467473338522769,
+                  0,
+                  0,
+                  0.992197667229329
+                ]
+              },
+              {
+                "name": "rightThigh",
+                "position": [
+                  0.10499999672174454,
+                  -0.03999999910593033,
+                  0
+                ],
+                "rotation": [
+                  -0.028141004588900682,
+                  -0.0070313710400274725,
+                  0.21548389391744796,
+                  0.9760765010774617
+                ]
+              },
+              {
+                "name": "rightCalf",
+                "position": [
+                  0.003000000026077032,
+                  -0.4099999964237213,
+                  0.01600000075995922
+                ],
+                "rotation": [
+                  0.07439451867271417,
+                  0.03215541060521012,
+                  -0.2976994190902515,
+                  0.9512132012947856
+                ]
+              },
+              {
+                "name": "rightFoot",
+                "position": [
+                  0,
+                  -0.4000000059604645,
+                  -0.010999999940395355
+                ],
+                "rotation": [
+                  0.12467473338522769,
+                  0,
+                  0,
+                  0.992197667229329
+                ]
+              }
+            ]
+          }
+        ],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 255,
+      "props": []
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

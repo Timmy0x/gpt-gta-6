@@ -1,0 +1,537 @@
+
+> leonida-free-roam@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ Space / gamepad A is collective or elevator in aircraft, without applying the wheel handbrake (0.597834ms)
+✔ aircraft instructions expose required lift, change after runway acceleration, and follow remapped keys or gamepad (0.355084ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ both full player skins and procedural fallbacks fit inside the actual aircraft cockpit surfaces (859.947208ms)
+ℹ plane Jason licensed: 14064 vertices, roof clearance 0.1224m, floor clearance 0.1033m; {"min":[-0.27936236028625233,-0.35945337987219594,-0.2352115676408362],"max":[0.27941963618989485,0.972627011216535,0.6839451872431811]}
+ℹ plane Jason fallback: 4692 vertices, roof clearance 0.1027m, floor clearance 0.0790m; {"min":[-0.318,-0.37790343499183654,-0.23600000149011613],"max":[0.318,0.9923706939648838,0.6704392437338829]}
+ℹ plane Lucia licensed: 16308 vertices, roof clearance 0.1420m, floor clearance 0.1013m; {"min":[-0.28872808609510076,-0.36117410861370175,-0.26059453574967195],"max":[0.2887278852675862,0.9528592406570904,0.6619557854125501]}
+ℹ plane Lucia fallback: 4662 vertices, roof clearance 0.1027m, floor clearance 0.0790m; {"min":[-0.302,-0.3779034945964813,-0.23600000149011613],"max":[0.302,0.9923706939648838,0.6704392437338829]}
+ℹ helicopter Jason licensed: 14064 vertices, roof clearance 0.0699m, floor clearance 0.0877m; {"min":[-0.5793623722071812,-0.3794534380239758,0.21478841938065918],"max":[-0.0205802994370905,0.9526269530647552,1.1339451827728197]}
+ℹ helicopter Jason fallback: 4692 vertices, roof clearance 0.0508m, floor clearance 0.0637m; {"min":[-0.618000011920929,-0.3979034159183502,0.2139999940395355],"max":[0.01799998807907105,0.9723707130383701,1.1204392392635345]}
+ℹ helicopter Lucia licensed: 16308 vertices, roof clearance 0.0888m, floor clearance 0.0903m; {"min":[-0.5887280217220966,-0.3811741276871872,0.189405446666972],"max":[-0.011272050359306673,0.9328592597305767,1.1119558572361845]}
+ℹ helicopter Lucia fallback: 4662 vertices, roof clearance 0.0508m, floor clearance 0.0637m; {"min":[-0.602000011920929,-0.397903475522995,0.2139999940395355],"max":[0.0019999880790710356,0.9723707130383701,1.1204392392635345]}
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ posed anatomical ray volumes distinguish all six regions and leave empty space unhittable (36.235125ms)
+✔ capsule rays handle parallel segments, end caps, interior starts and finite length (0.174209ms)
+✔ left and right damage remain independent and affect gait, mobility, aiming and handling (0.524208ms)
+✔ critical injury falls, stays crawling beyond a few seconds, and rises only after gradual healing (5.54675ms)
+✔ healing uses elapsed simulation time, survives serialization, and cannot mutate a previous saved snapshot (8.670916ms)
+✔ repeated hits extend the affected injury without reviving or instantly recovering a critical survivor (0.306875ms)
+✔ distributed critical health records systemic impairment without inventing a torso wound (0.155667ms)
+✔ blocked standing remains a controllable crawl and preserves actual regional state (0.09075ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ licensed player skins load once, retarget direct bone changes, preserve NPC uniforms and release clones (690.081041ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ both licensed skins clear existing low and detailed concept car cabin floor and roof bounds (107.956084ms)
+ℹ Jason low: cabin-space floor=-0.2176m, roof=0.9126m; all 14064 visible vertices evaluated.
+ℹ Jason reclined: cabin-space floor=-0.4575m, roof=0.5010m; all 14064 visible vertices evaluated.
+ℹ Lucia low: cabin-space floor=-0.2193m, roof=0.8929m; all 16308 visible vertices evaluated.
+ℹ Lucia reclined: cabin-space floor=-0.4593m, roof=0.4790m; all 16308 visible vertices evaluated.
+✔ a failed licensed character load retains fallback and can retry cleanly (65.428125ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ Rocketbox GLB packages retain licensed provenance and valid three-material skin data (9.456792ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ visible player pelvis follows Havok ragdoll synchronization in the same render frame (421.062458ms)
+✔ critical licensed occupants slump and guard while preserving seated pelvis, legs and cabin clearance (81.209625ms)
+ℹ Jason low: critical slump floor -0.2176 m / roof 0.7233 m.
+ℹ Jason reclined: critical slump floor -0.4575 m / roof 0.3433 m.
+ℹ Lucia low: critical slump floor -0.2193 m / roof 0.7764 m.
+ℹ Lucia reclined: critical slump floor -0.4593 m / roof 0.3964 m.
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ player and NPC share partial region damage, torso armor and region-dependent critical reactions (728.249ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ the entire crawling body collides with walls and can leave a low ceiling before standing (516.472125ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ nearby civilian controllers stop at cover and release all native bodies across activity cycles (89.928834ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ anatomical combat queries leave the calf gap empty and respect actual cover in front of a moving limb (22.304375ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ player physical fall hands back movement once and explicit recovery preserves other casualties (135.578791ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ simulation-time health recovery waits for wounds, agrees across time partitions and never revives a fatal actor (12.367958ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ fire reaches a character through its own capsule while a solid wall still shields it (115.878708ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ low driving pose keeps both character variants' skinned feet above the cabin floor and head below the roof (38.180916ms)
+✔ reclined driving pose clears the detailed concept car's floor and roof (10.176666ms)
+✔ both character variants have valid skinned geometry and one render submesh (16.924167ms)
+ℹ Jason: 4692 vertices, 9160 triangles, 17 bones.
+ℹ Lucia: 4662 vertices, 9100 triangles, 17 bones.
+✔ walk and run skin the feet while aiming raises the hand and crouching recovers (14.537042ms)
+✔ characters share their material safely across repeated character switching (132.262542ms)
+✔ equal fixed-step inputs produce equal joint poses without moving the controller root (20.713125ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ civilian and player libraries load independently once and keep shared geometry with private rigs (733.9705ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ partial civilian loading failure retains working players and retries without accumulating assets (92.784959ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ population civilian appearance is stable by ID and does not change police or player selection (47.57275ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ nearby detailed civilian budget prioritizes settled casualties and changes only visibility (558.151333ms)
+BJS - [15:04:15]: Babylon.js v9.25.0 - Null engine
+✔ civilian distance hysteresis avoids repeated visible mesh replacement at the detail threshold (21.140333ms)
+✔ both civilian rigs follow the same-frame Havok pelvis and retain fatal poses after distant culling (495.683125ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ authored slope collision matches water-depth queries across bank and offshore seabed (61.300333ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ actual character walks down the bank, swims, dives without crossing the seabed, surfaces and walks ashore (208.742792ms)
+✔ immersion ignores dry shallows, bridges and positions outside the ocean and tracks breath only below water (0.187333ms)
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ fast travel restores destination colliders evicted while its visual packages are loading (30.553791ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ normal reticle ray ignores its real character capsule before native collection and still stops at a thin pole or close cover (40.443125ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ many excluded bodies cannot saturate the collector or hide an allowed body sharing their shape (13.703583ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ weapon switching conserves rounds and reloading transfers only available reserve (0.569334ms)
+✔ reticle sees target but muzzle ray stops at close cover, including invisible Havok proxies (25.583583ms)
+✔ physical grenade follows gravity, bounces off a thin wall and detonates at its actual body position (21.0205ms)
+✔ destructible fences collide and obstruct navigation until broken; material damage differs (122.744083ms)
+✔ explosion cover is resolved in three dimensions before destruction changes the scene (53.876917ms)
+✔ fire has visible flames, causes material damage, extinguishes in rain and preserves deformed geometry on save (16.078166ms)
+✔ Babylon V2 ragdoll uses constrained bodies, physically falls, then safely returns the live rig to animation (139.257333ms)
+✔ held models follow the skinned hand, hide for traversal and release pooled submaterials when switching (119.8915ms)
+✔ aimed weapon follows the firing direction at different pitches and yaws while its grip stays at the hand (9.207416ms)
+✔ fatal hit during recovery reactivates physics and frozen ragdolls retain exactly one cleanup observer until reset (143.135167ms)
+✔ vehicle-like impacts queue prop destruction outside the physics callback and disposal restores resource counts (5.355125ms)
+✔ Combat fire and melee use the normal public interfaces, dispatch officer impacts and spend ammunition (112.233458ms)
+✔ reset clears active, fatal and already-settled ragdolls before population respawn (88.60025ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ licensed concept car has neutral wheel axles and real suspension, acceleration, steering and attached doors (697.517667ms)
+ℹ Havok driving: 25.90 m/s, heading 0.499, body height 0.628 m.
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ dense body dents are isolated, compact, restorable and repairable, and removed doors have independent collision (549.33475ms)
+ℹ 405-coordinate lattice; damaged vehicle save 5918 bytes; five replacements have stable scene/physics resources.
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ seated handgun fire clears a lowered driver window, respects aim arcs and leaves steering available (704.904625ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ annex gate physically blocks entry until normal visitor access opens its animated Havok body (518.521459ms)
+ℹ {"closed":[-455.4500000000008,1.05,144],"authorized":[-467.4500000000035,1.05,144],"guards":4}
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ leaving within the annex warning avoids a crime; ignoring it leads to calm detention rather than automatic shooting (523.71675ms)
+ℹ {"arrested":true,"stats":{"id":"coastal-reserve-annex","classification":"creative-mode addition","phase":"alarm","inside":true,"accessSeconds":0,"warningSeconds":0,"guards":4,"activeGuards":4,"gateOpen":true,"arrestProgress":0.21111111111111117},"health":100}
+BJS - [15:04:14]: Babylon.js v9.25.0 - Null engine
+✔ visitor authorization is revoked by armed behavior, guard shots damage a resisting suspect, patrols and resets retain bounded stable actors (484.36925ms)
+ℹ {"healthAfterThreat":0,"guardIds":["reserve-guard-1","reserve-guard-2","reserve-guard-3","reserve-guard-4"],"phase":"quiet"}
+✔ long-session frame history retains raw stalls in chronological order across repeated wraps (4.460542ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:31]: Babylon.js v9.25.0 - Null engine
+✔ licensed player and civilian skins keep limb lengths and clear the floor throughout limp, fall, crawl and rise (17194.45925ms)
+ℹ 18771616 actual indexed skin vertices checked; minimum 0.00600 m, maximum 1.84789 m; max palm/sole surface gap 0.05355 / 0.08780 m; max planted palm gap 0.01306 m; max trunk/leg support gap 0.02380 m; max consecutive crawl joint movement 0.06435 m.
+✔ opposite leg wounds mirror the actual gait and shorten only the injured stride; torso wounds visibly hunch and guard (14.639875ms)
+✔ VC-INNER adds a connected metric street network with three two-way joins and no dead ends (7.97725ms)
+✔ every new lane remains on paved geometry over physical ground, away from the annex and buildings (13.785417ms)
+✔ new district has explicit coverage, substantial architecture and traversable public destinations (9.114916ms)
+✔ authoring sink receives complete stable recipes and collision records without Babylon runtime dependency (18.519834ms)
+✔ saved key bindings reject reserved/corrupt fields and keep every action reachable (1.450583ms)
+✔ radial stick deadzone removes drift, preserves direction and gives analog travel (0.184042ms)
+✔ standard gamepad buttons supply held actions and exactly one press edge (1.53025ms)
+✔ holding Start while opening an overlay does not immediately toggle it closed (0.384959ms)
+✔ analog axes support movement/braking and camera filtering without digitalizing the stick (0.457708ms)
+✔ triggers and weapon buttons work, and unplugging clears only controller input (0.587458ms)
+✔ rebindings survive reload, swap duplicates and preserve keyboard/mouse release behavior (0.7775ms)
+✔ focus loss cancels firing/movement and held controller buttons must release before resuming (0.221042ms)
+✔ jump survives render frames without physics while render actions retain one-frame edges (0.641292ms)
+✔ jump buffering follows remapping and clear discards unconsumed jump edges (0.304792ms)
+✔ pointer buttons aim and fire before mouse compatibility events and release outside canvas (0.240708ms)
+✔ pointer-only aim/fire chords and cancellation clear flags without clearing controller triggers (0.2225ms)
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:13]: Babylon.js v9.25.0 - Null engine
+✔ render interpolation restores authoritative position/rotation and resets teleports (23.411833ms)
+✔ recovery between physics steps survives immediate render and authoritative restore (1.345708ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ late glTF light overrides respect device capacity and explicit water budgets before rendering (16.902125ms)
+✔ map projections round-trip at different zooms, preserve zoom focus and expose the complete bounded world (0.5765ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ teleport selection uses actual Havok support and head clearance on street, roof, shore and water (34.171875ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ Havok standing capsule rejects overlap, low ceilings, and swept wall crossings (44.313667ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ Havok ledge query accepts a reachable low ledge and rejects an obstructed landing (13.841208ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ character controller actually climbs the queried ledge and settles on top (50.364041ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ vehicle exit finds the opposite door and refuses when every exit is blocked (239.748ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ WASTED rejects vehicle entry and jumping; paused controller look stays fixed (22.664709ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ hip firing raises the weapon and turns the actual player before its firing cone opens (16.147959ms)
+✔ routing follows directed connections and reports disconnected destinations (0.995ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ water dielectric transmits near-normal rays and reflects beyond the critical water-to-air angle (0.455959ms)
+✔ scoped optical extension modifies the exact pinned expression without changing global native shaders (0.340917ms)
+✔ ocean surface/depth use explicit bounded physical coordinates and original periodic normal data (76.912542ms)
+BJS - [15:04:16]: Babylon.js v9.25.0 - Null engine
+✔ native ocean bounds RTT work, excludes water/self and disposed sources, and disposes repeated instances (150.137625ms)
+✔ submerged native water reverses RTT media and restores atmosphere, clipping and visibility after each pass (28.893041ms)
+✔ save validation accepts extended and original version-one snapshots (1.085166ms)
+✔ malformed prop rotation and duplicate IDs are rejected before world restoration (0.260542ms)
+✔ invalid ammunition cannot create impossible magazines or unusable weapon selection (0.091791ms)
+✔ casualty saves round trip and invalid records are rejected before restoring the world (0.485667ms)
+✔ player regional injuries and physical pose survive save validation without accepting mismatched or malformed actors (0.52ms)
+✔ streamed photographic materials resolve to intact local maps with the source color/data channels (46.065208ms)
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+✔ Havok trainer left turn banks lift into the commanded turn after physical takeoff (118.199333ms)
+ℹ {"direction":-1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66034698486328,"minAltitude":61.51572799682617,"headingChange":-0.4666378986939496,"meanSignedBank":0.15542083350493088,"meanSignedLateralAcceleration":1.5114566177258126,"startRight":[0.9999999994939266,-1.0389027410866852e-8,-0.00003181425561915374],"endVelocity":[-5.791051387786865,0.2294800728559494,28.53548812866211],"health":100}
+✔ Havok trainer right turn banks lift into the commanded turn after physical takeoff (68.15575ms)
+ℹ {"direction":1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66032409667969,"minAltitude":61.51572799682617,"headingChange":0.4666380059653102,"meanSignedBank":0.15542098894274947,"meanSignedLateralAcceleration":1.511454584063789,"startRight":[0.9999999994939266,-1.0389027410866852e-8,-0.00003181425561915374],"endVelocity":[5.792882442474365,0.22948454320430756,28.535144805908203],"health":100}
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+✔ ordinary player recovery preserves lethal civilian, guard and officer casualties while nonfatal victims recover (1434.6155ms)
+ℹ Fatal health/dead gates survive ordinary recovery; explicit encounter reset revives; nonfatal recovery retains75health.
+BJS - [15:04:18]: Babylon.js v9.25.0 - Null engine
+✔ casualty save round trip retains ambient/custom civilian IDs, fixed guards and retired officers without resurrection or extra physics (898.064167ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ dead response crews do not count as living dispatch and disabled-response cleanup remains bounded without resurrecting IDs (607.431542ms)
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ uniform trousers use the role palette and the firearm follows a live rigged hand through aiming (129.899292ms)
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ legacy saved health-zero creative civilians acquire a persistent corpse pose without a casualty field (596.771917ms)
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ a wounded police driver remains supported in the cabin and an able passenger does not operate the car (305.808209ms)
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ injured police seats survive vehicle replacement, response reset and casualty load (683.648833ms)
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ partial and critical regional wounds survive version-three saves without duplicating officers (3066.4015ms)
+BJS - [15:04:24]: Babylon.js v9.25.0 - Null engine
+✔ legacy version-one fatalities and version-two timed or incapacitating injuries retain their saved meanings (437.395542ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ concurrent critical survivors obey the physical-body budget and remain injured across ordinary recovery (4727.743917ms)
+BJS - [15:04:30]: Babylon.js v9.25.0 - Null engine
+✔ production Combat shots damage a settled surviving target and can make the injury fatal (636.730625ms)
+BJS - [15:04:30]: Babylon.js v9.25.0 - Null engine
+✔ an incapacitated response crew does not permanently reserve an offscreen patrol assignment (246.39525ms)
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+✔ roadblock officer reaches the central suspect using production urban Havok collision (435.988042ms)
+ℹ {"obstacles":265,"samples":[{"seconds":0,"p":[68.7,1.1472749999999998,193.88666666666668],"path":[{"x":68.7,"z":82},{"x":3.3,"z":-28}]},{"seconds":10,"p":[68.7,1.027375,149.8866666666726],"path":[{"x":68.7,"z":82},{"x":3.3,"z":-28}]},{"seconds":20,"p":[67.84227321966273,1.027375,105.97214111392732],"path":[{"x":3.3,"z":-28}]},{"seconds":30,"p":[48.756603274967915,1.0445917354639365,66.33384644949166],"path":[{"x":3.3,"z":-28}]},{"seconds":40,"p":[29.66072947375592,1.1255677491935077,26.72146768144865],"path":[{"x":3.3,"z":-28}]},{"seconds":50,"p":[10.568387956697025,1.1470332785401436,-12.89034306095371],"path":[{"x":3.3,"z":-28}]},{"seconds":60,"p":[4.146889606286793,1.0489332785401435,-26.23947049985863],"path":[{"x":3.3,"z":-28}]}],"end":[4.146889606286793,1.0489332785401435,-26.23947049985863]}
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+✔ urban cruiser follows lane corners instead of cutting into the garage approach (2392.011375ms)
+ℹ {"samples":[{"seconds":0,"p":[-3.299999952316284,0.998333752155304,-134],"target":171,"heading":3.141592653589793,"speed":0,"state":"riding"},{"seconds":10,"p":[-18.455896377563477,0.69959557056427,-215.0247802734375],"target":92,"heading":-1.5342400752433956,"speed":9.713667246567468,"state":"riding"},{"seconds":20,"p":[-68.505615234375,0.736243486404419,-143.77093505859375],"target":159,"heading":-0.010975466428798025,"speed":21.177730375882422,"state":"riding"},{"seconds":30,"p":[-15.795806884765625,0.615624725818634,-74.99200439453125],"target":232,"heading":1.6238870373054541,"speed":8.474245797260243,"state":"riding"}],"end":[3.0011415481567383,0.6356724500656128,-38.18458557128906],"officer":[0.5015385892645865,1.15,-38.13343670818092],"arrived":true}
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ a cruiser deflected to the observed garage blockage recovers or safely continues pursuit on foot (4785.639292ms)
+ℹ {"arrived":true,"sawReverse":true,"samples":[{"seconds":0,"car":[-44.400001525878906,0.998333752155304,-52],"officer":[-44.4180315292757,0.98,-51.589798629902305],"state":"riding","recovery":{"anchor":{"x":-44.4,"z":-52},"timer":0.016666666666666666,"reverse":0,"attempts":0,"stranded":false}},{"seconds":10,"car":[-45.10734558105469,0.7614960670471191,-52.75641632080078],"officer":[-45.044984031070086,0.7414958227052544,-52.350582986605566],"state":"riding","recovery":{"anchor":{"x":-45.57128143310547,"z":-52.68795394897461},"timer":2.4333333333333296,"reverse":-0.016666666666663676,"attempts":1,"stranded":false}},{"seconds":20,"car":[-75.51299285888672,0.7004694938659668,-92.77143859863281],"officer":[-75.09619105743245,0.6840556701677851,-92.57711463324493],"state":"riding","recovery":{"anchor":{"x":-75.52400207519531,"z":-91.51904296875},"timer":0.09999999999999999,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}},{"seconds":30,"car":[-15.555283546447754,0.6161321997642517,-147.3154754638672],"officer":[-15.745634845766006,0.5967913224424959,-146.90649713996677],"state":"riding","recovery":{"anchor":{"x":-17.60900115966797,"z":-147.3211669921875},"timer":0.21666666666666665,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}},{"seconds":40,"car":[3.6439101696014404,0.5887702703475952,-21.955135345458984],"officer":[3.2463041164577007,0.5486800677385182,-22.139149969801306],"state":"riding","recovery":{"anchor":{"x":3.5263729095458984,"z":-22.749692916870117},"timer":0.05,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}}],"end":[7.039470195770264,0.706078052520752,-10.911375999450684]}
+✔ fallback escalation changes response roles within bounded five-level configuration (0.546958ms)
+✔ compliance requires stopped movement, lowered weapon, no resistance and a living suspect (0.069541ms)
+✔ foot navigation routes around an opaque wall and never invents an unreachable shortcut (0.483916ms)
+✔ search remembers observed identities but a different car masks a face at range (0.162542ms)
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+✔ real Havok officer walks, collides with a wall, and disposes its controller and skin (112.622875ms)
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+✔ physical dispatch arrives, visible officer dismounts and compliant suspect is arrested; response resets cleanly (1087.458916ms)
+ℹ {"arrested":true,"sawFoot":true,"wanted":"pursuit","vehicles":[[-0.002795263659209013,0.6514961123466492,-7.032641887664795]],"officers":[{"state":"challenge","p":[-1.0260067137864675,1.027375,-1.889549959251482]}]}
+BJS - [15:04:18]: Babylon.js v9.25.0 - Null engine
+✔ high escalation creates bounded tactical crew, collidable roadblocks and a helicopter that gains altitude through forces (8409.450542ms)
+ℹ {"helicopterMax":59.02931594848633,"maxOfficers":10,"maxVehicles":8,"tacticalOfficers":4}
+✔ directed pursuit routing avoids a closer dead end (0.487167ms)
+BJS - [15:04:27]: Babylon.js v9.25.0 - Null engine
+✔ dispatch uses a lane behind the actual camera instead of popping into its visible approach (41.232333ms)
+BJS - [15:04:27]: Babylon.js v9.25.0 - Null engine
+✔ civilian deletion/restoration retains unique stable IDs and disabled actors do not witness crimes (87.951083ms)
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ native anatomical fall keeps knees one-way at every yaw and supports the extremities (2899.126166ms)
+ℹ {"yaw":0,"minimum":0.019812660441588237,"minimumBone":"rightFoot","minKnee":-0.008957166878113215,"maxKnee":2.398959382385746,"minElbow":-1.2638237779394736,"maxElbow":0.002637416478729875,"maxSpeed":3.304061006197767,"maxFootError":0.03399645138402412,"maxPivotError":0.028555114363255894,"pelvis":[-0.10614345222711563,0.19317173957824707,-0.2644062936306]}
+ℹ {"yaw":1.5707963267948966,"minimum":0.003935582949081667,"minimumBone":"leftFoot","minKnee":-0.005828534129911314,"maxKnee":2.413364677727873,"minElbow":-1.758665716514751,"maxElbow":0.001330752217036783,"maxSpeed":3.1992515617820882,"maxFootError":0.05310551365782547,"maxPivotError":0.04832165341976214,"pelvis":[-0.2296983152627945,0.1933142989873886,0.03547203168272972]}
+ℹ {"yaw":3.141592653589793,"minimum":0.007385687222558772,"minimumBone":"rightFoot","minKnee":-0.008433703763549938,"maxKnee":2.4212430497486244,"minElbow":-1.119022947448507,"maxElbow":0.00003021790300209439,"maxSpeed":3.0746503577920494,"maxFootError":0.050486335271098116,"maxPivotError":0.044047139361762654,"pelvis":[0.017641978338360786,0.19321751594543457,0.2945123016834259]}
+ℹ {"yaw":-1.5707963267948966,"minimum":0.0013972461397643195,"minimumBone":"leftFoot","minKnee":-0.003064687804451099,"maxKnee":2.4012461683869892,"minElbow":-1.5292988799638443,"maxElbow":0.0010014777014097673,"maxSpeed":3.23284504297476,"maxFootError":0.05617384740337713,"maxPivotError":0.05276775556403464,"pelvis":[0.24104276299476624,0.19327323138713837,-0.020537884905934334]}
+✔ regional partial injuries stay standing; a critical physical fall hands off once without healing trauma (720.531416ms)
+ℹ {"handoffMinimum":-0.015316588019978188,"largestJointStep":0.05970660314936364}
+BJS - [15:04:32]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:32]: Babylon.js v9.25.0 - Null engine
+✔ critical zero-impulse injuries lose balance and complete a supported fall from standing and a walking pose (11066.307458ms)
+ℹ {"variant":"Jason","sourcePose":"standing","zeroImpulseMinimum":0.017999897871396553,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19519106950610876,"chestY":0.1892402609810233}
+ℹ {"variant":"Jason","sourcePose":"walking","zeroImpulseMinimum":0.017999897871392112,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19519162084907293,"chestY":0.1892407974228263}
+ℹ {"variant":"Lucia","sourcePose":"standing","zeroImpulseMinimum":0.015135876532164527,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.15737061109393835,"chestY":0.15039782132953405}
+ℹ {"variant":"Lucia","sourcePose":"walking","zeroImpulseMinimum":0.01025573442973482,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.1573767652735114,"chestY":0.15040394570678473}
+ℹ {"variant":"male-adult-03","sourcePose":"standing","zeroImpulseMinimum":0.01799974528413295,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19868168141692877,"chestY":0.19273087289184332}
+ℹ {"variant":"male-adult-03","sourcePose":"walking","zeroImpulseMinimum":0.017999897871045056,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19868200924247503,"chestY":0.1927311858162284}
+ℹ {"variant":"female-adult-06","sourcePose":"standing","zeroImpulseMinimum":0.004356381534102449,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.2148445686325431,"chestY":0.2078717788681388}
+ℹ {"variant":"female-adult-06","sourcePose":"walking","zeroImpulseMinimum":0.010227047906830156,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.2148428102955222,"chestY":0.20786999072879553}
+✔ officer belt, torso equipment, patches and helmet follow their bones through a physical fall (23.880834ms)
+BJS - [15:04:57]: Babylon.js v9.25.0 - Null engine
+✔ licensed skins remain grounded through standing and walking falls and crawl handoff at all four headings (24975.633334ms)
+ℹ {"variant":"Jason","yaw":0,"sourcePose":"standing","minimum":0.017999821577701636,"minPhysical":0.03086129269000859,"minHandoff":0.017999821577701636,"maxJointStep":0.06490758069397107,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.24448019172996283,"maxHandoffClearance":0.05142442715371498,"maxStepBone":"Jason/leftCalf","maxStepFrame":75,"maxRollTrunkGap":0.03780054429748652,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":104,"maxRollSupportGap":0.00600008090998673,"maxUnsupportedFrames":0,"finalPelvis":[-0.0013068137974390215,0.19519115891307592,-0.2630747724515796],"finalChest":[0.10023345125570438,0.18924033548682928,-0.6239990916920506]}
+ℹ {"variant":"Jason","yaw":0,"sourcePose":"walking","minimum":0.017540064960395618,"minPhysical":0.017540064960395618,"minHandoff":0.01799989787139089,"maxJointStep":0.06648163611964288,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Thigh","maxHandoffPelvis":0.22405496146529913,"maxHandoffClearance":0.053402652817619245,"maxStepBone":"Jason/rightHand","maxStepFrame":129,"maxRollTrunkGap":0.014856828011260897,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":151,"maxRollSupportGap":0.006948262041438627,"maxUnsupportedFrames":0,"finalPelvis":[0.20629179815356924,0.195191471837461,-0.3255639291700463],"finalChest":[0.3190848921012575,0.18924064841121435,-0.6831318673115903]}
+ℹ {"variant":"Jason","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.01799982157735014,"minPhysical":0.033757105613770766,"minHandoff":0.01799982157735014,"maxJointStep":0.07901836579594708,"vertexChecks":1406400,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_R_Toe0","maxHandoffPelvis":0.24866880383342505,"maxHandoffClearance":0.049838428654323086,"maxStepBone":"Jason/leftCalf","maxStepFrame":77,"maxRollTrunkGap":0.04317220299796398,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":104,"maxRollSupportGap":0.00600008090998673,"maxUnsupportedFrames":0,"finalPelvis":[-0.27068864359465783,0.19519115891307592,-0.04322027759094518],"finalChest":[-0.6434709694774884,0.18924035038799047,-0.08334183680448404]}
+ℹ {"variant":"Jason","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.016021662894760702,"minPhysical":0.016021662894760702,"minHandoff":0.017999897871572634,"maxJointStep":0.0685150311173509,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_Pelvis","maxHandoffPelvis":0.24233463313430548,"maxHandoffClearance":0.05461969380603249,"maxStepBone":"Jason/leftHand","maxStepFrame":129,"maxRollTrunkGap":0.022392983687484068,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":133,"maxRollSupportGap":0.006000080909984731,"maxUnsupportedFrames":0,"finalPelvis":[-0.3881798053532335,0.1951914867386222,-0.12075699492678216],"finalChest":[-0.7415902024711394,0.18924064841121435,-0.24597034592871356]}
+ℹ {"variant":"Jason","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.015092784131362502,"minPhysical":0.015092784131362502,"minHandoff":0.017999897871464388,"maxJointStep":0.07322100029941896,"vertexChecks":1406400,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.29568309988826513,"maxHandoffClearance":0.04036981619478264,"maxStepBone":"Jason/leftCalf","maxStepFrame":76,"maxRollTrunkGap":0.0885028298817158,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":97,"maxRollSupportGap":0.0060000046160431225,"maxUnsupportedFrames":0,"finalPelvis":[0.056195824720704446,0.19519100990146399,0.2988096727044345],"finalChest":[-0.028016585561277785,0.18924020137637854,0.6641651082915089]}
+ℹ {"variant":"Jason","yaw":3.141592653589793,"sourcePose":"walking","minimum":0.013133860835269684,"minPhysical":0.013133860835269684,"minHandoff":0.017999897871530002,"maxJointStep":0.06468685817602016,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_Pelvis","maxHandoffPelvis":0.22157789673656225,"maxHandoffClearance":0.05592927934806191,"maxStepBone":"Jason/leftCalf","maxStepFrame":100,"maxRollTrunkGap":0.006000087548479749,"maxRollTrunkBone":"Bip01_Spine","maxRollTrunkFrame":170,"maxRollSupportGap":0.006000080909984731,"maxUnsupportedFrames":0,"finalPelvis":[-0.13084726686886816,0.19519154634326696,0.4025631201566606],"finalChest":[-0.28717172580276884,0.18924072291702032,0.7433560518552564]}
+ℹ {"variant":"Jason","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.01799989787139622,"minPhysical":0.030275202615042796,"minHandoff":0.01799989787139622,"maxJointStep":0.06092835180134439,"vertexChecks":1406400,"physicalBone":"Bip01_Head","handoffBone":"Bip01_L_Thigh","maxHandoffPelvis":0.2883195420727134,"maxHandoffClearance":0.03027528822218606,"maxStepBone":"Jason/head","maxStepFrame":66,"maxRollTrunkGap":0.06549479863187149,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":102,"maxRollSupportGap":0.01065752099148877,"maxUnsupportedFrames":0,"finalPelvis":[0.23093658819794527,0.1951909950003028,0.01214250310140468],"finalChest":[0.605826578175117,0.18924018647521734,0.006336655928592755]}
+ℹ {"variant":"Jason","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.011000376996213812,"minPhysical":0.011000376996213812,"minHandoff":0.01799989787151124,"maxJointStep":0.06604327825842153,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.23372900392860174,"maxHandoffClearance":0.05237024317239225,"maxStepBone":"Jason/leftCalf","maxStepFrame":93,"maxRollTrunkGap":0.017826746337463242,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":134,"maxRollSupportGap":0.006072407568453633,"maxUnsupportedFrames":0,"finalPelvis":[0.3870125211089144,0.19519153144210577,0.09634928507237384],"finalChest":[0.7421102480679919,0.18924070801585913,0.2166936482909159]}
+ℹ {"variant":"Lucia","yaw":0,"sourcePose":"standing","minimum":0.01799980790060307,"minPhysical":0.0191221587921786,"minHandoff":0.01799980790060307,"maxJointStep":0.06420041936203302,"vertexChecks":1630800,"physicalBone":"Bip01_R_Toe0","handoffBone":"Bip01_L_UpperArm","maxHandoffPelvis":0.26239417400211096,"maxHandoffClearance":0.04060059169720598,"maxStepBone":"Lucia/rightCalf","maxStepFrame":80,"maxRollTrunkGap":0.036684536260850026,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":118,"maxRollSupportGap":0.02367043121799485,"maxUnsupportedFrames":0,"finalPelvis":[0.0012964454927575086,0.15737180318683386,-0.2874124516498595],"finalChest":[-0.03916357983130758,0.15039902832359076,-0.6953305246112735]}
+ℹ {"variant":"Lucia","yaw":0,"sourcePose":"walking","minimum":0.011246334993530005,"minPhysical":0.011246334993530005,"minHandoff":0.01799988419455756,"maxJointStep":0.061558571489055434,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_UpperArm","maxHandoffPelvis":0.33091507758945227,"maxHandoffClearance":0.028718649213662184,"maxStepBone":"Lucia/rightHand","maxStepFrame":117,"maxRollTrunkGap":0.030776952614626277,"maxRollTrunkBone":"Bip01_R_Finger02","maxRollTrunkFrame":144,"maxRollSupportGap":0.030776983183167142,"maxUnsupportedFrames":4,"finalPelvis":[0.033393699676778354,0.15737546887248755,-0.2106930209358726],"finalChest":[0.1269793641066852,0.15040264930576086,-0.6097887237467687]}
+ℹ {"variant":"Lucia","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.017999884194572657,"minPhysical":0.02306716602819059,"minHandoff":0.017999884194572657,"maxJointStep":0.0632972987360398,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Finger12","maxHandoffPelvis":0.20061494316905737,"maxHandoffClearance":0.04922981818895045,"maxStepBone":"Lucia/leftCalf","maxStepFrame":76,"maxRollTrunkGap":0.027593554671782247,"maxRollTrunkBone":"Bip01_R_Finger02","maxRollTrunkFrame":141,"maxRollSupportGap":0.02759361838615905,"maxUnsupportedFrames":3,"finalPelvis":[-0.25551205759792306,0.15737445559352636,0.08735706637676921],"finalChest":[-0.6388230196676166,0.15040166582912207,-0.05792620199610607]}
+ℹ {"variant":"Lucia","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.017999688691516913,"minPhysical":0.02192741080458427,"minHandoff":0.017999688691516913,"maxJointStep":0.06109012723399348,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_UpperArm","maxHandoffPelvis":0.3310704967007041,"maxHandoffClearance":0.03524776569855803,"maxStepBone":"Lucia/leftCalf","maxStepFrame":86,"maxRollTrunkGap":0.03193900898242135,"maxRollTrunkBone":"Bip01_R_Finger02","maxRollTrunkFrame":152,"maxRollSupportGap":0.03193901623824848,"maxUnsupportedFrames":5,"finalPelvis":[-0.34952913651435935,0.15737710800021887,0.11453711889281992],"finalChest":[-0.7423226815857964,0.15040428843349218,-0.0027174977357482533]}
+ℹ {"variant":"Lucia","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.008462445285050135,"minPhysical":0.008462445285050135,"minHandoff":0.017999884194515925,"maxJointStep":0.07157275247115487,"vertexChecks":1630800,"physicalBone":"Bip01_Head","handoffBone":"Bip01_R_UpperArm","maxHandoffPelvis":0.26242791023105383,"maxHandoffClearance":0.0434540614821437,"maxStepBone":"Lucia/leftHand","maxStepFrame":85,"maxRollTrunkGap":0.03131053780476324,"maxRollTrunkBone":"Bip01_L_Finger02","maxRollTrunkFrame":155,"maxRollSupportGap":0.031310506730890544,"maxUnsupportedFrames":8,"finalPelvis":[0.05990091971484605,0.15736775007098913,0.43796294942461045],"finalChest":[0.07533379899274556,0.15039494540542364,0.8475927882711201]}
+ℹ {"variant":"Lucia","yaw":3.141592653589793,"sourcePose":"walking","minimum":0.017999731607010405,"minPhysical":0.0188542907561029,"minHandoff":0.017999731607010405,"maxJointStep":0.06185268619829531,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Finger02","maxHandoffPelvis":0.2954452773556113,"maxHandoffClearance":0.023007208301556226,"maxStepBone":"Lucia/head","maxStepFrame":79,"maxRollTrunkGap":0.030451604099474984,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":116,"maxRollSupportGap":0.030077901777971552,"maxUnsupportedFrames":4,"finalPelvis":[0.054817046330825625,0.15737372543662786,0.3369877971267268],"finalChest":[-0.05167347890010271,0.15040090586990118,0.7328360357428523]}
+ℹ {"variant":"Lucia","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.013804699804126352,"minPhysical":0.013804699804126352,"minHandoff":0.017999884194514593,"maxJointStep":0.05959450627575435,"vertexChecks":1630800,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_L_UpperArm","maxHandoffPelvis":0.32975356187671423,"maxHandoffClearance":0.03647743810289228,"maxStepBone":"Lucia/rightCalf","maxStepFrame":80,"maxRollTrunkGap":0.03646027511602239,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":116,"maxRollSupportGap":0.023673635563626352,"maxUnsupportedFrames":0,"finalPelvis":[0.24134192243125896,0.15737529005855322,-0.09563368534062144],"finalChest":[0.6507235012773852,0.15040250029414892,-0.1166386837370858]}
+ℹ {"variant":"Lucia","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.008631970427946722,"minPhysical":0.008631970427946722,"minHandoff":0.017999807900645592,"maxJointStep":0.10326536355182134,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Finger02","maxHandoffPelvis":0.3487580558285117,"maxHandoffClearance":0.02330872196672573,"maxStepBone":"Lucia/rightHand","maxStepFrame":79,"maxRollTrunkGap":0.040792953357166074,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":115,"maxRollSupportGap":0.024873205239031818,"maxUnsupportedFrames":0,"finalPelvis":[0.39273896346791926,0.1573760947212577,0.016672253065263987],"finalChest":[0.7878081327880468,0.150403275154531,0.12601634279997792]}
+ℹ {"variant":"male-adult-03","yaw":0,"sourcePose":"standing","minimum":0.011906596458496455,"minPhysical":0.011906596458496455,"minHandoff":0.017999897871624482,"maxJointStep":0.06567779615775322,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.22805561032146215,"maxHandoffClearance":0.056080036181275106,"maxStepBone":"male-adult-03/leftCalf","maxStepFrame":120,"maxRollTrunkGap":0.028308195263554797,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":168,"maxRollSupportGap":0.006000080909991615,"maxUnsupportedFrames":0,"finalPelvis":[-0.08206540716847033,0.198681621812284,-0.5015806247230075],"finalChest":[-0.12387890517506595,0.19273081328719854,-0.874176782855014]}
+ℹ {"variant":"male-adult-03","yaw":0,"sourcePose":"walking","minimum":0.011420146273620313,"minPhysical":0.011420146273620313,"minHandoff":0.017999897871619375,"maxJointStep":0.0641841178631858,"vertexChecks":1328100,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_Pelvis","maxHandoffPelvis":0.22696107532829046,"maxHandoffClearance":0.058346424069365854,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":123,"maxRollTrunkGap":0.02781142658405296,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":170,"maxRollSupportGap":0.00600000461604612,"maxUnsupportedFrames":0,"finalPelvis":[0.10955610963084035,0.19868214335292578,-0.5201547099640249],"finalChest":[0.09738715010064963,0.19273130502551794,-0.894893655425206]}
+ℹ {"variant":"male-adult-03","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.00799759996380478,"minPhysical":0.00799759996380478,"minHandoff":0.01799982157829283,"maxJointStep":0.06421170727409097,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Finger22","maxHandoffPelvis":0.22739253845065832,"maxHandoffClearance":0.05231699000048595,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":108,"maxRollTrunkGap":0.028275440029974667,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":154,"maxRollSupportGap":0.01439439834927038,"maxUnsupportedFrames":0,"finalPelvis":[-0.4780104543265009,0.19868165161460638,0.04094337012031461],"finalChest":[-0.8526815520935374,0.19273084308952093,0.05500635704894341]}
+ℹ {"variant":"male-adult-03","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.0009293475579082999,"minPhysical":0.0009293475579082999,"minHandoff":0.017999897871243675,"maxJointStep":0.07920903861534209,"vertexChecks":1328100,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_R_Toe0","maxHandoffPelvis":0.2525737574324012,"maxHandoffClearance":0.055690021540859114,"maxStepBone":"male-adult-03/leftCalf","maxStepFrame":128,"maxRollTrunkGap":0.04750270663670779,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":166,"maxRollSupportGap":0.006821614094775122,"maxUnsupportedFrames":0,"finalPelvis":[-0.6262194718300731,0.1986823072656989,-0.14376816111805324],"finalChest":[-0.9975273724789757,0.19273146893829107,-0.19580532764932873]}
+ℹ {"variant":"male-adult-03","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.013716441388362921,"minPhysical":0.013716441388362921,"minHandoff":0.017999821577855735,"maxJointStep":0.07154270042812477,"vertexChecks":1328100,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_R_Finger02","maxHandoffPelvis":0.22349853720515966,"maxHandoffClearance":0.05680849075413663,"maxStepBone":"male-adult-03/leftCalf","maxStepFrame":122,"maxRollTrunkGap":0.02630796790306164,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":170,"maxRollSupportGap":0.008736286903510262,"maxUnsupportedFrames":0,"finalPelvis":[0.08887820794868329,0.1986813833937049,0.5571986819724104],"finalChest":[0.13492767085569807,0.19273057486861944,0.9292948792553947]}
+ℹ {"variant":"male-adult-03","yaw":3.141592653589793,"sourcePose":"walking","minimum":-0.004568088842286544,"minPhysical":-0.004568088842286544,"minHandoff":0.017999897871552206,"maxJointStep":0.0643511239409024,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.23158983793109655,"maxHandoffClearance":0.04134798084588165,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":121,"maxRollTrunkGap":0.029757762442432625,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":165,"maxRollSupportGap":0.007107945265102403,"maxUnsupportedFrames":0,"finalPelvis":[-0.07634784494078731,0.198682083748281,0.4488253952520116],"finalChest":[-0.04850683787135826,0.19273126032203436,0.8227265640302546]}
+ℹ {"variant":"male-adult-03","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.012054683003041355,"minPhysical":0.012054683003041355,"minHandoff":0.017999897871618376,"maxJointStep":0.0785052369286134,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.23035292234271765,"maxHandoffClearance":0.05599878313062556,"maxStepBone":"male-adult-03/leftHand","maxStepFrame":154,"maxRollTrunkGap":0.029380756519429424,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":156,"maxRollSupportGap":0.006000080909991615,"maxUnsupportedFrames":0,"finalPelvis":[0.5424017383074393,0.198681621812284,-0.11608738571474356],"finalChest":[0.9143656915341277,0.19273081328719854,-0.16319477043260933]}
+ℹ {"variant":"male-adult-03","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.0053425707262301225,"minPhysical":0.0053425707262301225,"minHandoff":0.01799989787152223,"maxJointStep":0.06406516874498089,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.249161078594625,"maxHandoffClearance":0.04279764206833747,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":119,"maxRollTrunkGap":0.039285719345761166,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":146,"maxRollSupportGap":0.006469517545067652,"maxUnsupportedFrames":0,"finalPelvis":[0.44322252049900546,0.19868220295757055,0.06601043680109311],"finalChest":[0.8178520566549616,0.19273136463016272,0.05084132802240006]}
+ℹ {"variant":"female-adult-06","yaw":0,"sourcePose":"standing","minimum":0.01799980790067135,"minPhysical":0.024143978748047745,"minHandoff":0.01799980790067135,"maxJointStep":0.06653098089576073,"vertexChecks":1311600,"physicalBone":"Bip01_Spine1","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.30349244084209204,"maxHandoffClearance":0.05616005485052955,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":79,"maxRollTrunkGap":0.04570849998423043,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":110,"maxRollSupportGap":0.00725952765415995,"maxUnsupportedFrames":0,"finalPelvis":[-0.06336954904156011,0.214844792149961,-0.22161291252616766],"finalChest":[0.029515017816907796,0.2078720172867179,-0.6208706070610868]}
+ℹ {"variant":"female-adult-06","yaw":0,"sourcePose":"walking","minimum":0.017999884194557114,"minPhysical":0.024319836287565844,"minHandoff":0.017999884194557114,"maxJointStep":0.05896124744111752,"vertexChecks":1311600,"physicalBone":"Bip01_L_UpperArm","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.24437372293323278,"maxHandoffClearance":0.04838005624503339,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":74,"maxRollTrunkGap":0.03703934139220802,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":100,"maxRollSupportGap":0.007437902894332563,"maxUnsupportedFrames":0,"finalPelvis":[0.015162349145018794,0.21484529878944159,-0.22722447170333404],"finalChest":[-0.04321747223094838,0.2078724792227149,-0.6329673183844249]}
+ℹ {"variant":"female-adult-06","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.01799980790073752,"minPhysical":0.024808880466632544,"minHandoff":0.01799980790073752,"maxJointStep":0.06263187432252379,"vertexChecks":1311600,"physicalBone":"Bip01_Spine1","handoffBone":"Bip01_R_Thigh","maxHandoffPelvis":0.2379078110679984,"maxHandoffClearance":0.03271919844079607,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":79,"maxRollTrunkGap":0.022567817812017846,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":125,"maxRollSupportGap":0.00803566594245865,"maxUnsupportedFrames":0,"finalPelvis":[-0.14868351771002675,0.2148474594578147,0.003458112488172016],"finalChest":[-0.5550488988640596,0.2078746845945716,-0.05040696287429841]}
+ℹ {"variant":"female-adult-06","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.017999884194658144,"minPhysical":0.03425147669121864,"minHandoff":0.017999884194658144,"maxJointStep":0.061066034078677334,"vertexChecks":1311600,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_UpperArm","maxHandoffPelvis":0.28988011088222265,"maxHandoffClearance":0.04422585101587362,"maxStepBone":"female-adult-06/rightFoot","maxStepFrame":76,"maxRollTrunkGap":0.07213494626087825,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":105,"maxRollSupportGap":0.008032309008940267,"maxUnsupportedFrames":0,"finalPelvis":[-0.1789472694294414,0.21484418120235205,-0.07307860490929263],"finalChest":[-0.5771646234575504,0.20787136163562536,0.024176996721684607]}
+ℹ {"variant":"female-adult-06","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.012128903333334606,"minPhysical":0.012128903333334606,"minHandoff":0.01799976498533984,"maxJointStep":0.0605194733409725,"vertexChecks":1311600,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_Head","maxHandoffPelvis":0.3472004970535636,"maxHandoffClearance":0.05029277878989247,"maxStepBone":"female-adult-06/leftCalf","maxStepFrame":79,"maxRollTrunkGap":0.05437045310600676,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":111,"maxRollSupportGap":0.02116852392520431,"maxUnsupportedFrames":0,"finalPelvis":[-0.006606597032874306,0.21484570112079382,0.19418816819071893],"finalChest":[-0.04312320071613196,0.20787292625755072,0.6024780668877854]}
+ℹ {"variant":"female-adult-06","yaw":3.141592653589793,"sourcePose":"walking","minimum":0.017999807900492493,"minPhysical":0.03225753447501711,"minHandoff":0.017999807900492493,"maxJointStep":0.0603148777328626,"vertexChecks":1311600,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Finger02","maxHandoffPelvis":0.278199746273458,"maxHandoffClearance":0.05137032107103434,"maxStepBone":"female-adult-06/rightFoot","maxStepFrame":76,"maxRollTrunkGap":0.06491413322805008,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":103,"maxRollSupportGap":0.006215063566160653,"maxUnsupportedFrames":0,"finalPelvis":[-0.028569408000130303,0.21484397258609533,0.23560141811895963],"finalChest":[0.07838420532298872,0.20787115301936865,0.6313244346876018]}
+ℹ {"variant":"female-adult-06","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.010925595254732912,"minPhysical":0.010925595254732912,"minHandoff":0.017999884194263793,"maxJointStep":0.0736352328378562,"vertexChecks":1311600,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_R_Foot","maxHandoffPelvis":0.3120056828483939,"maxHandoffClearance":0.04403641315375273,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":78,"maxRollTrunkGap":0.03456927121006311,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":109,"maxRollSupportGap":0.01389084464435121,"maxUnsupportedFrames":0,"finalPelvis":[0.19042181741723785,0.21484780218452215,-0.04107363357728511],"finalChest":[0.5910674279439889,0.20787501242011786,0.04563075767627239]}
+ℹ {"variant":"female-adult-06","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.017999807900983877,"minPhysical":0.021524197311986404,"minHandoff":0.017999807900983877,"maxJointStep":0.05814810936701631,"vertexChecks":1311600,"physicalBone":"Bip01_L_UpperArm","handoffBone":"Bip01_R_Forearm","maxHandoffPelvis":0.2764922818168998,"maxHandoffClearance":0.04021584133964906,"maxStepBone":"female-adult-06/leftHand","maxStepFrame":62,"maxRollTrunkGap":0.020985007657656596,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":120,"maxRollSupportGap":0.010950476057846839,"maxUnsupportedFrames":0,"finalPelvis":[0.23500847950134762,0.21484400238841772,-0.013614709411695292],"finalChest":[0.6437524479999497,0.20787118282169104,-0.044661229774240696]}
+BJS - [15:04:57]: Babylon.js v9.25.0 - Null engine
+✔ mid-fall restoration, repeated fatal hits, and explicit player reset preserve other casualties and release owned bodies (256.925042ms)
+BJS - [15:05:01]: Babylon.js v9.25.0 - Null engine
+✔ fatal hits during crawl and physical-to-crawl handoff preserve low posture and anatomical limb lengths (3427.093666ms)
+ℹ {"variant":"Jason","startingPose":"crawl","fatalCrawlMinimum":0.026930247245688488,"fatalCrawlMaximum":0.48658420578243133,"initialSurfaceMaximum":0.4178665178042277,"minimumBone":"Bip01_R_Thigh","maxComRise":0.006107105842360322,"maxPelvisRise":0.0015678107738494873}
+ℹ {"variant":"Jason","startingPose":"handoff","fatalCrawlMinimum":0.02506670069206285,"fatalCrawlMaximum":0.6054254409243307,"initialSurfaceMaximum":0.5584943087027822,"minimumBone":"Bip01_R_Thigh","maxComRise":0.05149742654664141,"maxPelvisRise":0.036135509610176086}
+ℹ {"variant":"Lucia","startingPose":"crawl","fatalCrawlMinimum":-0.0030342890774828213,"fatalCrawlMaximum":0.5361842199885014,"initialSurfaceMaximum":0.41150095708943335,"minimumBone":"Bip01_L_Forearm","maxComRise":0.02127642862746934,"maxPelvisRise":0.027193576097488403}
+ℹ {"variant":"Lucia","startingPose":"handoff","fatalCrawlMinimum":0.025483633417125118,"fatalCrawlMaximum":0.5621271074450638,"initialSurfaceMaximum":0.568538201967286,"minimumBone":"Bip01_L_UpperArm","maxComRise":0.003498825569699715,"maxPelvisRise":0}
+ℹ {"variant":"male-adult-03","startingPose":"crawl","fatalCrawlMinimum":0.007563029660776155,"fatalCrawlMaximum":0.5189604181325198,"initialSurfaceMaximum":0.380109942110067,"minimumBone":"Bip01_Spine","maxComRise":0.07721775162773975,"maxPelvisRise":0.03836677968502045}
+ℹ {"variant":"male-adult-03","startingPose":"handoff","fatalCrawlMinimum":0.0011278737122707438,"fatalCrawlMaximum":0.5934775995471002,"initialSurfaceMaximum":0.6220003001730232,"minimumBone":"Bip01_R_Finger22","maxComRise":0.030398773367176224,"maxPelvisRise":0.07314923405647278}
+ℹ {"variant":"female-adult-06","startingPose":"crawl","fatalCrawlMinimum":-0.012594988326313228,"fatalCrawlMaximum":0.4647102607096683,"initialSurfaceMaximum":0.3766282161697152,"minimumBone":"Bip01_R_Thigh","maxComRise":0.02345668838446549,"maxPelvisRise":0.003604322671890259}
+ℹ {"variant":"female-adult-06","startingPose":"handoff","fatalCrawlMinimum":0.02426064150109075,"fatalCrawlMaximum":0.6092165686732685,"initialSurfaceMaximum":0.6164910436080411,"minimumBone":"Bip01_Spine1","maxComRise":0.002344394359733326,"maxPelvisRise":0.034968435764312744}
+✔ same-tick handoff callbacks and restored survivors expose the last visible pose to a new hit (22.690209ms)
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:18]: Babylon.js v9.25.0 - Null engine
+✔ ten licensed bodies load with actual cabin geometry, four neutral wheel pivots and independently opening doors (788.417625ms)
+ℹ coupe: 110934 triangles, 2 working doors, 11 glazing components.
+ℹ sedan: 95324 triangles, 4 working doors, 16 glazing components.
+ℹ suv: 101607 triangles, 4 working doors, 9 glazing components.
+ℹ truck: 30092 triangles, 4 working doors, 7 glazing components.
+ℹ police: 109505 triangles, 4 working doors, 17 glazing components.
+ℹ hatchback: 102647 triangles, 2 working doors, 4 glazing components.
+ℹ executive: 75661 triangles, 4 working doors, 14 glazing components.
+ℹ van: 121890 triangles, 2 working doors, 5 glazing components.
+ℹ offroad: 19453 triangles, 2 working doors, 5 glazing components.
+ℹ mpv: 27059 triangles, 2 working doors, 8 glazing components.
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ ten source cars support their weight, drive on native suspension and retain damage through save/load (2307.181ms)
+ℹ coupe: settle 0.680m, moved 31.47m, native shape children 12.
+ℹ sedan: settle 0.653m, moved 21.35m, native shape children 18.
+ℹ suv: settle 0.970m, moved 14.87m, native shape children 20.
+ℹ truck: settle 0.993m, moved 19.20m, native shape children 18.
+ℹ police: settle 0.661m, moved 32.16m, native shape children 18.
+ℹ hatchback: settle 0.700m, moved 35.25m, native shape children 12.
+ℹ executive: settle 0.692m, moved 24.64m, native shape children 18.
+ℹ van: settle 0.891m, moved 17.13m, native shape children 14.
+ℹ offroad: settle 0.949m, moved 19.90m, native shape children 22.
+ℹ mpv: settle 0.682m, moved 29.87m, native shape children 22.
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ a long van uses measured deformation bounds and independent source window panes (717.873458ms)
+✔ imported body dents are independent of another car and reset to original authored geometry (160.259542ms)
+BJS - [15:04:17]: Babylon.js v9.25.0 - Null engine
+✔ authored sun crosses the horizon at 06:00/18:00 and light direction stays finite through wraparound (1.072541ms)
+✔ native sky updates sun/weather without growing resources and releases its background nodes (31.801875ms)
+BJS - [15:04:18]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:18]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:18]: Babylon.js v9.25.0 - Null engine
+✔ oriented footprint checks include diagonal bumpers and avoid rejecting separated parallel cars (0.456042ms)
+✔ real Havok spawn search avoids starter car, a rotated truck, and collidable props without moving existing entities (64.291ms)
+✔ unsupported edges and fully blocked world footprints reject spawn without adding bodies or vehicles (5.150416ms)
+✔ production export gives every lamp and palm disjoint exact geometry ranges inside shared native chunk batches (1199.70025ms)
+ℹ {"objects":555,"batches":350,"children":4839,"manifestBytes":3153513,"manifestGzipBytes":380972,"meshes":1920,"cpuGeometryBytes":75149512,"compressedBytes":17456841,"textureBytes":5387386}
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ production native packages extract the actual lamp, preserve damage across travel, and release all physics/render resources (5244.5775ms)
+ℹ {"initial":{"objects":555,"residentBodies":167,"fallen":0,"colliderLoads":167,"colliderDisposals":0,"batches":42,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":1169568,"meshes":653,"geometries":486,"bodies":271},"afterReload":{"objects":555,"residentBodies":238,"fallen":1,"colliderLoads":643,"colliderDisposals":405,"batches":91,"extractedMeshes":2,"extractedGeometryBytes":6096,"indexBackupBytes":1810752},"simulatedSteps":360,"nullEnginePhysicsAndDamageMs":152.27895799999988,"savedBytes":359,"lamp":"street-object/lamppost/-9.000/-18.000"}
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ intact street objects keep shared batches while native collision stops a body at the actual lamp (92.216625ms)
+ℹ {"objects":3,"residentBodies":3,"fallen":0,"colliderLoads":3,"colliderDisposals":0,"batches":3,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":4176}
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ projectile destruction extracts the same visible object, clears only its intact spans, and preserves fall/light/nav state through reload (101.297709ms)
+ℹ Physical fallen quaternion 0.3643687665462494,0.60764080286026,-0.6024781465530396,0.36746177077293396; compact saved delta 349 bytes.
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ actual vehicle impact breaks an authored lamppost and blast/fire affect a palm through the shared damage path (129.684875ms)
+✔ street-object save validation rejects malformed or duplicated authored deltas (0.190583ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ solid cover blocks blast and fire exposure; a burning fallen palm keeps pose and heat across save/load, then rain extinguishes it (58.897333ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ eight real geometry eviction/reload cycles retain damage without duplicate meshes or leaking native shapes (40.400125ms)
+ℹ {"cycles":8,"meshes":9,"geometry":6,"bodies":4,"shapes":6,"objects":3,"residentBodies":3,"fallen":1,"colliderLoads":27,"colliderDisposals":24,"batches":3,"extractedMeshes":2,"extractedGeometryBytes":6240,"indexBackupBytes":4176}
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ fallen bodies unload before the static cleanup queue can drop their streamed support (34.802292ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ swim presentation transitions smoothly between vertical treading, prone travel and land (1.066666ms)
+✔ actual character joints form a head-first crawl with alternating hands and trailing fluttering feet (89.450875ms)
+✔ unwitnessed crime does not dispatch police (0.532709ms)
+✔ report, pursuit, last known, search, reacquisition and escape (0.454667ms)
+✔ walls block witnesses; parallel and open lines remain clear (0.118042ms)
+✔ seeded world randomness is reproducible (0.095416ms)
+✔ police profile supports configured levels without claiming reference parity (0.081042ms)
+✔ last-known coordinates copy public getters used by Babylon vectors (0.084625ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ entry doors swing around their hinge, close, detach with real Havok motion and restore without leaks (286.957542ms)
+ℹ 32 kg door fragment physically separated; 10 replacements retained damage with stable scene/body/light resources.
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ headlight budget stays fixed, broken lenses extinguish beams and brake/siren controls change lamps (191.745416ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ garage charges only valid stopped-car services and paint persists through damage, repair and restore (42.176875ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ an authored scissor hinge raises the physical door and stops against an overhead obstruction (185.985042ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ different front and rear tire radii drive suspension placement and native wheel contact (32.14925ms)
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ procedural sedan exterior follows real wheels, door geometry, mirrors and disabled parts on the same Havok body (49.686875ms)
+ℹ 34 component instances share one chassis; outer wheel x=-1.060m, open door x=-1.250m.
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ imported concept exterior follows real wheels, door geometry, mirrors and disabled parts on the same Havok body (378.876125ms)
+ℹ 41 component instances share one chassis; outer wheel x=-1.118m, open door x=-1.811m.
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ actual player-size Havok capsule is stopped by an open door beyond the chassis, then can walk through the released space (104.388917ms)
+ℹ Actual 1.8m/.32m controller traveled 0.700m into the attached door vs 1.722m after removal.
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ a dynamic prop contacts the open exterior and detached assemblies retain independent compound collision (61.372417ms)
+ℹ 2 Havok contact events; sphere stayed 0.181m outside the opened door plane.
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ procedural sedan door stops against a real wall without shoving its chassis and resumes when cleared (218.270875ms)
+ℹ Door stopped at 37.0 degrees; chassis displaced 0.0000m.
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ imported concept door stops against a real wall without shoving its chassis and resumes when cleared (454.101458ms)
+ℹ Door stopped at 9.1 degrees; chassis displaced 0.0000m.
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ another moving vehicle makes real contact with the outboard open door (108.757125ms)
+ℹ 40 native car contacts, minimum contact x=-1.306m.
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ broken door glazing leaves a physical opening and repeated restored exteriors release Havok shapes (449.905083ms)
+ℹ 12 save replacements retained 10 registered Havok shapes; vehicle removal left only the ground shape.
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:19]: Babylon.js v9.25.0 - Null engine
+✔ native IK reaches all four actual gameplay limbs under translated and rotated character roots, then disposes its resources (66.615833ms)
+✔ contact overlays preserve bone lengths, clamp unreachable targets and do not overwrite dead or ragdoll poses (4.357708ms)
+✔ entry path stays continuous between the validated doorway and seat while delaying hip lowering (0.229125ms)
+✔ both licensed protagonists contact both licensed civilian drivers with grounded feet during sedan and concept-car withdrawal (1691.00075ms)
+ℹ 8 detailed actor/driver/vehicle combinations; max contact wrist gap 0.00000 m; max support ankle drift 0.0000000 m; minimum sampled visual height 0.02646 m; 69456 sampled skinned vertices checked.
+BJS - [15:04:20]: Babylon.js v9.25.0 - Null engine
+✔ carjacking preserves the visible driver actor and locks held throttle until the player is seated (679.330625ms)
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ blocked driver door rejects carjacking without deleting crew or stealing controls (94.816833ms)
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ a right-hand pilot seat requires the right door and releases the occupant on that side (170.458375ms)
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ nearby entrant capsule does not block the former driver exit query (109.613542ms)
+BJS - [15:04:22]: Babylon.js v9.25.0 - Null engine
+✔ critical seated drivers release the throttle and stay supported in the moving cabin (109.728292ms)
+BJS - [15:04:22]: Babylon.js v9.25.0 - Null engine
+✔ the seated player loses driving capability after a critical injury without jumping out of the cabin (101.884542ms)
+BJS - [15:04:22]: Babylon.js v9.25.0 - Null engine
+✔ population traffic has visible drivers, drives away under physics and retains a fleeing victim after theft (4325.578667ms)
+BJS - [15:04:26]: Babylon.js v9.25.0 - Null engine
+✔ seated traffic wounds reload in the existing cabin without physical on-foot recovery (201.115583ms)
+✔ tire demand respects friction circle and loses braking when sliding hard (0.728333ms)
+✔ suspension equilibrium supports the actual car weight (0.084292ms)
+✔ engine respects top speed, reverse cap, and mechanical damage (0.069875ms)
+✔ parking contact is harmless, high-speed impact is damaging (0.045875ms)
+✔ wing stalls at high angle of attack (0.197792ms)
+BJS - [15:04:21]: Babylon.js v9.25.0 - Null engine
+✔ Havok car settles, accelerates, steers and stops against a solid wall (482.099041ms)
+ℹ Coupe reached 20.80 m/s after 3 seconds of throttle.
+ℹ Impact Δv=14.95
+ℹ Sedan hit wall: health 47.2, 1 collision callbacks, position z=25.09.
+BJS - [15:04:22]: Babylon.js v9.25.0 - Null engine
+✔ Havok boat floats, helicopter takes off and lands, trainer rotates from runway (115.96175ms)
+ℹ Boat floating height -0.05 m; propulsion reached 17.98 m/s.
+ℹ Helicopter collective reached 23.91 m; rotor tilt produced 5.23 m/s horizontal speed.
+ℹ Trainer runway roll: 36.51 m/s; y=0.67.
+ℹ Trainer rotation: 25.37 m/s; y=62.08; forward={X: 0.00038983026752248406 Y: 0.4436272382736206 Z: 0.8962113261222839}.
+BJS - [15:04:22]: Babylon.js v9.25.0 - Null engine
+✔ 62 m/s impact cannot tunnel through an 8 cm wall; creative recovery restores upright motion (250.4405ms)
+ℹ 223 km/h crash: max center z=9.676 at wall z12, health=25.0.
+BJS - [15:04:23]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:23]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:23]: Babylon.js v9.25.0 - Null engine
+✔ fixed physics substeps preserve driving across 30, 60 and 144 Hz render cadence (1007.768084ms)
+ℹ 30 Hz: 299 steps, 17.623 m/s, z=36.987; 60 Hz: 299 steps, 17.623 m/s, z=36.987; 144 Hz: 299 steps, 17.623 m/s, z=36.987
+BJS - [15:04:23]: Babylon.js v9.25.0 - Null engine
+✔ vehicle save round-trip retains deformed vertices, broken components, punctures and overturned pose (88.969125ms)
+ℹ Saved 3105 bytes with dents, puncture, glass/light/bumper damage; 8 replacements preserved state with stable mesh/body/material counts.
+BJS - [15:04:23]: Babylon.js v9.25.0 - Null engine
+✔ stable IDs reject collisions; invalid restoration leaves existing body intact; legacy saves load (1345.716875ms)
+BJS - [15:04:22]: Babylon.js v9.25.0 - Null engine
+✔ licensed firearm packages retain mechanical parts, metre scale, normals and source hashes (57.4915ms)
+✔ native Babylon asset loading, hand attachment and repeated switching retain bounded resources (440.705625ms)
+✔ drawing acquires the grip before revealing a gun, and stowing completes before switching (0.499875ms)
+✔ rapid wheel choices resolve to the latest weapon without refilling magazines or firing during transitions (0.148833ms)
+✔ original three-weapon saves migrate without changing their ammunition, and all added weapons persist (0.785792ms)
+✔ wheel selection follows eight directions and the centre retains the highlighted weapon (0.095917ms)
+BJS - [15:04:23]: Babylon.js v9.25.0 - Null engine
+✔ long guns remain above the ground throughout drawing, relaxed carry, movement and stowing (215.341958ms)
+✔ boundary limits only outward motion and accounts for footprint, altitude and long steps (2.013958ms)
+✔ recovery recognizes actual seabed, safe high-altitude flight and old or corrupt saves (0.313958ms)
+BJS - [15:04:24]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ actual Havok bodies remain inside under sustained thrust, 200 m/s motion, corners and varied requested steps (140.25525ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ post-step impulse recovery is consumed by Havok before restoring exact prestep mode (23.11975ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ old save outside or below terrain is recovered before Havok without repairing or rotating it (6.996084ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ actual Havok walking capsule cannot be driven beyond an edge and can walk back (47.987084ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ integrated Player update keeps walking and noclip inside default coast bounds and permits returning (77.225ms)
+✔ WGS84 tangent-plane projection preserves origin, east/north orientation and local metre scale (0.837375ms)
+✔ multipolygon chains join shared node IDs in either direction and reject open rings (0.288167ms)
+✔ acquired GIS extract retains provenance, closed footprints and explicit disconnected source topology (19.621875ms)
+BJS - [15:04:24]: Babylon.js v9.25.0 - Null engine
+✔ long roads and beach surfaces retain equal physical texture scale in both directions without changing shared boxes (12.917125ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ material and chunk requests preserve the receiver required by native Window.fetch (50.172584ms)
+✔ merging a box and gable cannot corrupt shared boxes in later district batches (7.702625ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ native Babylon packages fetch only required cells and evict CPU geometry, GPU meshes, and unused materials (54.270333ms)
+✔ transient package failures retry and preserve the current neighborhood until destination preparation succeeds (406.938875ms)
+BJS - [15:04:26]: Babylon.js v9.25.0 - Null engine
+✔ production manifest preserves authored collision metadata and asset references (662.197041ms)
+BJS - [15:04:27]: Babylon.js v9.25.0 - Null engine
+✔ an unavailable destination rejects preparation without evicting the playable origin (1215.635875ms)
+✔ disposing residency does not remove unrelated gameplay geometry or materials (3.460167ms)
+BJS - [15:04:27]: Babylon.js v9.25.0 - Null engine
+✔ production World awaits native packages, preserves runtime ocean identity and releases loaded CPU geometry (852.6625ms)
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+BJS - [15:04:25]: Babylon.js v9.25.0 - Null engine
+✔ streamed mesh disposal releases scene geometry and reconstruction preserves transformed vertices/material (16.963334ms)
+ℹ 20 round trips: 43 actual mesh disposals; stable 1680 CPU geometry bytes.
+✔ visual work is budgeted and hysteresis avoids residency thrashing (5.999333ms)
+✔ active vehicle anchors retain Havok walls, global ground remains, and collider reloads do not leak bodies (30.611083ms)
+ℹ 20 Havok unload/reload cycles: 3 bodies including restored wall, unchanged navigation box.
+✔ west and south expansion preserves a strongly connected paved lane network (16.947417ms)
+ℹ tests 230
+ℹ suites 0
+ℹ pass 230
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 50890.918917

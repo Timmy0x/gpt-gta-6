@@ -187,7 +187,7 @@ test("vehicle exit finds the opposite door and refuses when every exit is blocke
     null,
     "switching during mount must keep world-space interpolation unparented",
   );
-  for (let n = 0; n < 65; n++) player.update(1 / 60);
+  for (let n = 0; n < 240 && String(player.vehiclePhase) !== "seated"; n++) player.update(1 / 60);
   assert.equal(player.model.root.isEnabled(), true);
   assert.equal(player.model.root.parent, car.root);
   const leftWall = f.box("left wall", new Vector3(-1.5, 1, 0), 0.3, 2, 8);
@@ -195,7 +195,7 @@ test("vehicle exit finds the opposite door and refuses when every exit is blocke
   vehicles.control(car, { throttle: -1, steer: .5, brake: 0, handbrake: false, lift: 1 });
   assert.equal(player.exit(), true);
   assert.equal(player.vehiclePhase, "exiting", "dismount is visible before control returns");
-  for (let n = 0; n < 45; n++) player.update(1 / 60);
+  for (let n = 0; n < 120 && String(player.vehiclePhase) !== "on-foot"; n++) player.update(1 / 60);
   assert.ok(player.position.x > 1, "other door chosen");
   assert.deepEqual(car.input, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
   // The clearance fixture places a wall through the animated open door. Remove
@@ -207,7 +207,7 @@ test("vehicle exit finds the opposite door and refuses when every exit is blocke
   assert.ok(Vector3.Distance(car.root.position, parked) < .1, `an exited vehicle cannot retain powered reverse/throttle: ${JSON.stringify({ start: parked.asArray(), end: car.root.position.asArray(), input: car.input, velocity: car.body.getLinearVelocity().asArray(), doors: car.model.doors.map(door => door.angle) })}`);
   assert.deepEqual(car.input, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
   assert.equal(player.enter(car), true);
-  for (let n = 0; n < 65; n++) player.update(1 / 60);
+  for (let n = 0; n < 240 && String(player.vehiclePhase) !== "seated"; n++) player.update(1 / 60);
   f.box("left wall", new Vector3(-1.5, 1, 0), 0.3, 2, 8);
   f.box("right wall", new Vector3(1.5, 1, 0), 0.3, 2, 8);
   f.box("back wall", new Vector3(0, 1, -2.85), 5, 2, 0.3);

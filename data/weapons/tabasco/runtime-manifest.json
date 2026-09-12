@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pistol",
+    "file": "public/weapons/pistol/model.babylon.gz",
+    "source": "m1911",
+    "lengthMetres": 0.219,
+    "triangles": 4596,
+    "parts": 8,
+    "bytes": 82737,
+    "uncompressedBytes": 572025,
+    "sha256": "898ce7058f80a8a3c69517149b1d74f47f62d3af631da6a4fd37d650fa73bdce",
+    "muzzleForwardMetres": 0.1737213
+  },
+  {
+    "id": "carbine",
+    "file": "public/weapons/carbine/model.babylon.gz",
+    "source": "m4",
+    "lengthMetres": 0.82,
+    "triangles": 7994,
+    "parts": 15,
+    "bytes": 152036,
+    "uncompressedBytes": 1011660,
+    "sha256": "a84b7e8bdaecb9047583b58eae6036b9983f94573a0841721948b2ec017dd9a6",
+    "muzzleForwardMetres": 0.5427598
+  },
+  {
+    "id": "sniper",
+    "file": "public/weapons/sniper/model.babylon.gz",
+    "source": "dragunov",
+    "lengthMetres": 1.15,
+    "triangles": 10821,
+    "parts": 9,
+    "bytes": 214714,
+    "uncompressedBytes": 1375200,
+    "sha256": "a9e15ce89de31756296e4a143257f7517893e10fcecb70739d63030d09fd8e59",
+    "muzzleForwardMetres": 0.839932
+  }
+]

@@ -23,9 +23,20 @@ import {
 import { HeldWeapon, WeaponInventory, WEAPON_SPECS } from "./combat/Weapons";
 import { ProjectileSystem } from "./combat/Projectiles";
 import { RagdollReactions } from "./combat/RagdollReactions";
+import { WeaponHandling } from './combat/WeaponHandling';
+import { applyWeaponHandlingPose } from './combat/WeaponPose';
+import { DriveBy } from './combat/DriveBy';
+import { UNARMED } from './combat/WeaponCatalog';
+import { bodyRegionAtPoint } from './combat/BodyHitRegions';
+import { bodyInjuryEffects } from './Injuries';
 
 export class Combat {
   readonly inventory = new WeaponInventory();
+  readonly handling = new WeaponHandling();
+  readonly driveBy = new DriveBy();
+  scopeStep = 0;
+  private triggerHeld = false;
+  private pendingFire = 0;
   readonly held: HeldWeapon;
   readonly projectiles: ProjectileSystem;
   readonly reactions: RagdollReactions;
@@ -34,6 +45,7 @@ export class Combat {
   }
   set weapon(value: number) {
     this.inventory.select(value);
+    this.handling.reset(this.inventory.selected);
   }
   get ammo() {
     return this.inventory.ammo;
@@ -92,26 +104,40 @@ export class Combat {
     this.projectiles.onDetonate = (position) => this.explode(position);
     this.projectiles.onBounce = (position) => this.onSound("impact", position);
     this.population.onCharacterHit = (model, impulse, fatal, impact) =>
-      this.reactions.hit(model, impulse.scale(5), fatal, impact);
+      this.reactions.hit(model, impulse, fatal, impact);
     this.population.onCharacterRestored = model => this.reactions.restore(model);
+    this.player.onCharacterHit = (model, impulse, fatal, impact) => this.reactions.hit(model, impulse, fatal, impact);
+    this.reactions.onHandoff = (model, groundAnchor) => {
+      if (model === this.player.model) this.player.resumeFromFall(groundAnchor);
+    };
     scene.onDisposeObservable.addOnce(() => this.dispose());
   }
   select(index: number): void {
-    if (this.inventory.select(index)) {
-      this.cooldown = Math.max(this.cooldown, 0.15);
+    if (this.weapons[index]) {
+      this.handling.request(index);
+      this.scopeStep = 0;
+      this.pendingFire = 0;
       this.onSound("equip", this.player.position);
     }
   }
   reload(): void {
-    if (this.inventory.reload()) this.onSound("reload", this.player.position);
+    if (this.handling.ready && this.available() && this.inventory.reload()) this.onSound("reload", this.player.position);
+  }
+  toggleHolster(): void { if (this.handling.phase === 'holstered') this.handling.draw(); else this.handling.holster(); this.pendingFire = 0; }
+  get scoped() { return !this.player.vehicle && this.player.aim && this.handling.ready && this.reloadTime === 0 && !!this.weapons[this.weapon].scope; }
+  get magnification() { return this.scoped ? this.weapons[this.weapon].scope![this.scopeStep] : 1; }
+  scroll(direction: number): void {
+    if (this.scoped) this.scopeStep = Math.max(0, Math.min(this.weapons[this.weapon].scope!.length - 1, this.scopeStep + Math.sign(direction)));
+    else this.select((this.handling.target + Math.sign(direction) + this.weapons.length) % this.weapons.length);
   }
   private available(): boolean {
     return (
       this.player.deadTimer <= 0 &&
-      !this.player.vehicle &&
+      (!this.player.vehicle || this.weapons[this.weapon].driveBy && this.driveBy.supports(this.player.vehicle)) &&
       !this.player.transitioning &&
       !this.player.swimming &&
       !this.player.climbing
+      && bodyInjuryEffects(this.player.model.bodyInjuries).canAim
     );
   }
   private ownBody = (body: PhysicsBody): boolean =>
@@ -120,19 +146,33 @@ export class Combat {
     Vector3.DistanceSquared(body.transformNode.position, this.player.position) >
       0.64;
   private exclusions(): QueryExclusions {
-    return { roots: [this.player.model.root], bodyFilter: this.ownBody };
+    return { roots: [this.player.model.root], bodyFilter: this.ownBody, characters: [...(this.population.pedestrians ?? []).map(p => p.model), ...(this.population.officers ?? []).map(o => o.model)] };
   }
   update(dt: number, allowInput = true): void {
     this.cooldown = Math.max(0, this.cooldown - dt);
-    this.inventory.update(dt);
-    this.held.update(
-      this.player.model,
-      this.weapon,
-      this.available(),
-      dt,
-      this.reloadTime > 0,
-    );
-    if (allowInput && this.player.input.mouseDown && this.available()) this.fire();
+    const handlingScale = bodyInjuryEffects(this.player.model.bodyInjuries).handlingScale;
+    this.inventory.update(dt * handlingScale);
+    const trigger = this.player.input.mouseDown;
+    const pressed = this.player.input.takeFire?.() ?? (trigger && !this.triggerHeld);
+    this.triggerHeld = trigger;
+    this.pendingFire = Math.max(0, this.pendingFire - dt);
+    if (allowInput && this.weapon === UNARMED && pressed && !this.player.vehicle) this.melee();
+    if (allowInput && this.weapon !== UNARMED && !this.player.transitioning && (trigger || this.player.input.aim)) {
+      if (this.player.vehicle && !this.weapons[this.handling.target].driveBy) this.select(0);
+      this.handling.draw();
+      if (pressed) this.pendingFire = 1.25;
+    }
+    if (!allowInput || this.player.transitioning || this.player.swimming || this.player.deadTimer > 0) this.pendingFire = 0;
+    this.handling.update(dt * bodyInjuryEffects(this.player.model.bodyInjuries).handlingScale);
+    this.inventory.select(this.handling.current);
+    this.player.weaponAvailable = this.handling.ready;
+    this.player.scopeMagnification = this.magnification;
+    this.driveBy.update(this.player, allowInput && this.player.input.aim && this.handling.ready && this.weapons[this.weapon].driveBy, dt);
+    this.player.driveByActive = this.driveBy.active;
+    this.render(dt);
+    if (allowInput && this.available() && (this.pendingFire > 0 || trigger && this.weapons[this.weapon].automatic)) {
+      const before = this.shots; this.fire(); if (this.shots > before) this.pendingFire = 0;
+    }
     this.projectiles.update(dt);
     this.reactions.update(dt);
     for (let i = this.effects.length - 1; i >= 0; i--) {
@@ -153,7 +193,7 @@ export class Combat {
       }
     }
     const heat = this.damage.heatAt(this.player.position);
-    if (heat > 0) this.player.hurt(heat * dt);
+    if (heat > 0) this.player.hurt(heat * dt, true, {kind: 'fire'});
     this.heatTimer -= dt;
     if (this.heatTimer <= 0) {
       this.heatTimer = 1;
@@ -173,15 +213,23 @@ export class Combat {
       }
     }
   }
+  /** Runs after the player's final interpolated pose as well as before physical firing. */
+  render(dt: number): void {
+    if (!this.player.vehicle && !this.player.transitioning && !this.player.swimming && !this.player.climbing && !this.player.model.root.metadata?.ragdollActive && bodyInjuryEffects(this.player.model.bodyInjuries).canAim) applyWeaponHandlingPose(this.player.model, this.handling, this.reloadTime, this.player.weaponRaised);
+    this.driveBy.pose(this.player);
+    for (const mesh of this.player.model.parts) mesh.visibility = this.scoped ? 0 : 1;
+    this.held.update(this.player.model, this.weapon, this.available() && this.handling.visible && !this.scoped && (!this.player.vehicle || this.driveBy.active), dt, this.reloadTime > 0, this.driveBy.active ? -1 : 1, this.reloadTime > 0 ? 1 - this.reloadTime / this.weapons[this.weapon].reload : 0);
+  }
   fire(): void {
     if (!this.available() || this.cooldown > 0 || this.reloadTime > 0) return;
-    if (this.player.weaponFacingReady === false) return;
+    if (!this.handling.ready) return;
+    if (this.player.vehicle ? !this.driveBy.ready : this.player.weaponFacingReady === false) return;
     if (!this.inventory.consume()) return;
     const spec = this.weapons[this.weapon],
       p = this.player.position;
     this.cooldown = spec.delay;
     this.shots++;
-    this.held.update(this.player.model, this.weapon, true, 0, false);
+    this.render(0);
     const ray = this.player.camera.getForwardRay(spec.range),
       muzzle = this.held.muzzle(),
       options = this.exclusions();
@@ -215,13 +263,19 @@ export class Combat {
       );
       return;
     }
+    const cameraOptions = this.player.vehicle ? { ...options, roots: [...(options.roots ?? []), this.player.vehicle.root], bodies: new Set([this.player.vehicle.body]) } : options;
+    const right = Vector3.Cross(Vector3.Up(), ray.direction).normalize(), up = Vector3.Cross(ray.direction, right).normalize();
+    for (let pellet = 0; pellet < spec.pellets; pellet++) {
+    const phase = (this.shots * 2.3999632297 + pellet * 2.3999632297), radius = spec.spread * Math.sqrt((pellet + .5) / spec.pellets) * (this.player.aim ? 1 : 2.6) * (1 + (1 - bodyInjuryEffects(this.player.model.bodyInjuries).handlingScale) * 2);
+    const direction = ray.direction.add(right.scale(Math.cos(phase) * radius)).add(up.scale(Math.sin(phase) * radius)).normalize();
     const shot = muzzleShot(
       this.scene,
       ray.origin,
-      ray.direction,
+      direction,
       muzzle,
       spec.range,
       options,
+      cameraOptions,
     );
     const tracer = MeshBuilder.CreateLines(
       "bullet-tracer",
@@ -230,16 +284,19 @@ export class Combat {
     );
     tracer.color = new Color3(1, 0.82, 0.4);
     this.addEffect(tracer, 0.065);
+    if (shot.hit) {
+      this.impact(shot.hit, direction);
+      const distance = Vector3.Distance(muzzle, shot.hit.point);
+      const falloff = spec.family === 'shotgun' ? Math.max(.12, 1 - distance / spec.range) : 1;
+      this.applyHit(shot.hit, spec.damage * falloff, direction, "projectile");
+    }
+    }
     this.flash(muzzle, 0.11, 0.06);
     this.held.recoil();
     this.player.pitch = Math.max(-1.1, this.player.pitch - spec.recoil);
-    if (shot.hit) {
-      this.impact(shot.hit, ray.direction);
-      this.applyHit(shot.hit, spec.damage, ray.direction, "projectile");
-    }
   }
   melee(): boolean {
-    if (!this.available() || this.cooldown > 0 || this.reloadTime > 0)
+    if (!this.available() || this.player.vehicle || this.cooldown > 0 || this.reloadTime > 0)
       return false;
     this.cooldown = 0.62;
     this.population.resist(12);
@@ -283,13 +340,13 @@ export class Combat {
   ): void {
     const meta = hit.mesh?.metadata ?? hit.body?.transformNode.metadata;
     if (meta?.ped) {
-      this.population.hurtPed(meta.ped, amount, kind);
+      this.population.hurtPed(meta.ped, amount, kind, {region: hit.region ?? bodyRegionAtPoint(meta.ped.model, hit.point), point: hit.point, direction});
       this.wanted.crime(
         80,
         this.player.position,
         this.population.witness(this.player.position),
       );
-    } else if (meta?.officer) this.population.hurtOfficer(meta.officer, amount, kind);
+    } else if (meta?.officer) this.population.hurtOfficer(meta.officer, amount, kind, {region: hit.region ?? bodyRegionAtPoint(meta.officer.model, hit.point), point: hit.point, direction});
     else if (meta?.prop)
       this.damage.hit(meta.prop, amount, hit.point, kind, direction);
     else if (meta?.streetObject)
@@ -357,6 +414,7 @@ export class Combat {
         150 *
           blastFalloff(Vector3.Distance(ped.model.root.position, position), 12),
         "explosion",
+        {point: ped.model.jointPosition('chest'), direction: ped.model.root.position.subtract(position)},
       );
     for (const officer of officers)
       this.population.hurtOfficer(
@@ -367,10 +425,12 @@ export class Combat {
             12,
           ),
         "explosion",
+        {point: officer.model.jointPosition('chest'), direction: officer.model.root.position.subtract(position)},
       );
     if (playerExposed)
       this.player.hurt(
         95 * blastFalloff(Vector3.Distance(position, this.player.position), 10),
+        false, {kind: 'explosion', point: this.player.model.jointPosition('chest'), direction: this.player.position.subtract(position)},
       );
     this.flash(position, 1.5, 0.38, 4);
   }
@@ -409,8 +469,10 @@ export class Combat {
     if (this.disposed) return;
     this.disposed = true;
     this.population.onCharacterHit = null;
+    this.player.onCharacterHit = null;
     this.population.onCharacterRestored = null;
     this.held.dispose();
+    this.driveBy.dispose();
     this.projectiles.dispose();
     this.reactions.dispose();
     for (const effect of this.effects) effect.mesh.dispose();

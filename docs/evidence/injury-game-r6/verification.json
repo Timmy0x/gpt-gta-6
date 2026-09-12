@@ -1,0 +1,57 @@
+{
+  "source": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/injury-game-r6-source",
+  "entry": "index-BJRmjpwj.js",
+  "sha256": "201705ae30ee44b6c7bbbd1d86b0cced48901d1e0d9425f8b41a0741dd1355e1",
+  "native": {
+    "pass": 230,
+    "fail": 0
+  },
+  "typecheck": "pass",
+  "productionBuild": "pass (existing large-chunk advisory)",
+  "normalControls": [
+    {
+      "evidence": "regional-injuries-r6-webgpu/result.json",
+      "checks": 22,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "evidence": "player-injuries-r6-webgl/result.json",
+      "checks": 7,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "evidence": "npc-injuries-r6-webgl/result.json",
+      "checks": 16,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "evidence": "weapons-injury-r6-webgpu/result.json",
+      "checks": 22,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "evidence": "weapons-injury-r6-webgl/result.json",
+      "checks": 22,
+      "errors": [],
+      "warnings": [
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+        "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected."
+      ]
+    }
+  ],
+  "status": "bounded injury checkpoint; full fidelity/performance and intermittent WebGL program warning remain open"
+}

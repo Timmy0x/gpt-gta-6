@@ -5,6 +5,7 @@ import HavokPhysics from "@babylonjs/havok";
 import { Color3, DirectionalLight, HavokPlugin, MeshBuilder, NullEngine, PhysicsAggregate, PhysicsShapeType, Scene, ShadowGenerator, UniversalCamera, Vector3, type PhysicsEngineV2 } from "@babylonjs/core";
 import { Population } from "../src/gameplay/Population";
 import { Officer } from "../src/gameplay/police/Officer";
+import { bodyInjuryEffects } from "../src/gameplay/Injuries";
 import { validateCasualties } from "../src/gameplay/police/casualties";
 import { RagdollReactions } from "../src/gameplay/combat/RagdollReactions";
 import { WantedSystem } from "../src/gameplay/Wanted";
@@ -35,8 +36,8 @@ test("ordinary player recovery preserves lethal civilian, guard and officer casu
   const dead=f.population.pedestrians[0],living=f.population.pedestrians[1];dead.model.position(new Vector3(0,0,0));living.model.position(new Vector3(5,0,0));
   const officer=new Officer("officer-700","patrol","retired",f.scene,f.shadows);officer.dismount(new Vector3(9,1,0));f.population.police.officers.push(officer);
   f.population.hurtPed(dead,200);f.population.hurtPed(living,25);f.population.hurtOfficer(officer,200);f.population.hurtOfficer(f.population.facility.guards[0],200);
-  f.step(4);assert.equal(living.health,75);assert.equal(living.model.root.metadata?.ragdollActive,true,"minor injury no longer recovers in a few seconds");
-  f.step(9);assert.equal(living.model.root.metadata?.ragdollActive,false,"minor blunt injury eventually recovers without healing");
+  f.step(4);assert.equal(living.health,75);assert.equal(bodyInjuryEffects(living.model.bodyInjuries).mode,"hunched");assert.equal(!!living.model.root.metadata?.ragdollActive,false,"minor damage keeps the survivor standing");
+  f.step(9);assert.equal(bodyInjuryEffects(living.model.bodyInjuries).mode,"hunched","partial impairment remains after thirteen seconds");
   const deadPosition=dead.model.root.position.clone(),officerId=officer.id;
   f.reactions.reset({preserveFatal:true});f.population.reset(false);f.step(12);
   assert.equal(dead.health,0);assert.equal(dead.activity,"dead");assert.equal(dead.model.dead,true);assert.equal(dead.model.root.metadata.ragdollActive,true);
@@ -59,7 +60,7 @@ test("casualty save round trip retains ambient/custom civilian IDs, fixed guards
   assert.equal(custom.health,0);assert.equal(ambient.health,0);assert.equal(f.population.facility.guards[2].health,0);assert.equal(f.population.police.officers[0].id,"officer-950");assert.equal(f.population.police.officers[0].health,0);
   f.population.policeEnabled=false;f.step(35);f.player.position.set(-465,1,144);f.step(1);f.player.position.set(3,1,-28);f.step(1);
   assert.equal(f.population.facility.guards[2].health,0,"streaming activation cannot revive the guard");assert.equal(custom.model.dead,true);assert.ok(f.population.police.officers.every(o=>o.health===0));
-  assert.ok(f.physics.getBodies().length<=baseline+3,"dead actors do not allocate replacement controllers");
+  assert.equal(custom.movement?.controller,null);assert.equal(ambient.movement?.controller,null);assert.equal(f.physics.getBodies().length,baseline+f.population.pedestrians.filter(p=>p.movement?.controller).length,"only living nearby civilian controllers are added");
   const repeated=f.population.serializeCasualties();assert.ok(repeated.nextOfficerId>950);assert.equal(repeated.civilians.length,2);assert.equal(repeated.guards.length,1);assert.ok(repeated.police.length<=1);
   assert.equal(f.population.restoreCasualties({...saved,guards:Array(5).fill(saved.guards[0])}),false);
   assert.equal(f.population.restoreCasualties({...saved,civilians:[{...saved.civilians[0],x:Infinity}]}),false);
@@ -108,67 +109,121 @@ test("legacy saved health-zero creative civilians acquire a persistent corpse po
  }finally{f.dispose();}
 });
 
-
-test("a surviving gunshot remains incapacitating through ordinary recovery and version-two save/load",async()=>{
- const f=await setup();try{
-  const ped=f.population.pedestrians[0];ped.model.position(new Vector3(3,0,-23));
-  const baseline=f.physics.getBodies().length;
-  f.population.hurtPed(ped,32,"projectile");f.step(9);
-  assert.equal(ped.health,68);assert.equal(ped.model.dead,false);assert.equal(ped.model.injury?.remaining,null);
-  assert.equal(ped.model.root.metadata.ragdollActive,true);assert.equal(f.reactions.active.length,0);
-  assert.equal(f.physics.getBodies().length,baseline,"settled survivor does not retain Havok bodies");
-  const pose=ped.model.skeleton.bones.map(b=>[...b.getPosition().asArray(),...b.getRotationQuaternion().asArray()]);
-  f.reactions.reset({preserveFatal:true});f.population.reset(false);f.step(35);
-  assert.equal(ped.health,68);assert.equal(ped.model.root.metadata.ragdollActive,true);
-  assert.deepEqual(ped.model.skeleton.bones.map(b=>[...b.getPosition().asArray(),...b.getRotationQuaternion().asArray()]),pose,"ordinary recovery retains the actual settled pose");
-  const saved=JSON.parse(JSON.stringify(f.population.serializeCasualties()));assert.equal(saved.version,2);assert.ok(validateCasualties(saved));
-  assert.equal(saved.civilians[0].health,68);assert.equal(saved.civilians[0].recoverySeconds,null);
-  f.reactions.reset();f.population.reset();assert.equal(ped.model.injury,null);
-  assert.equal(f.population.restoreCasualties(saved),true);f.step(45);
-  assert.equal(ped.health,68);assert.equal(ped.model.dead,false);assert.equal(ped.model.root.metadata.injuryStatus,"incapacitated");
-  assert.equal(f.physics.getBodies().length,baseline);
-  f.population.hurtPed(ped,100,"projectile");f.step(15);
-  assert.equal(ped.health,0);assert.equal(ped.model.dead,true);assert.equal(ped.model.root.metadata.injuryStatus,"dead");
-  f.reactions.reset({preserveFatal:true});f.population.reset(false);f.step(20);assert.equal(ped.model.dead,true);
+test('a wounded police driver remains supported in the cabin and an able passenger does not operate the car', async () => {
+ const f=await setup();try {
+  const vehicle=f.vehicles.spawn('police',new Vector3(5,1,-22));
+  const driver={v:vehicle,target:0,previous:0,police:true,stuck:0,assignment:'patrol' as const};f.population.drivers.push(driver);
+  for(const seat of [0,1])f.population.police.officers.push(new Officer(`officer-${920+seat}`,'patrol',vehicle.id,f.scene,f.shadows,seat));
+  f.wanted.setLevel(1,f.player.position);f.step(.02);
+  const operator=f.population.police.officers.find(o=>o.id==='officer-920')!;
+  // This fixture deliberately stays seated so the damage path cannot create
+  // free rigid bodies overlapping the closed police-car chassis.
+  operator.controller?.dispose();operator.controller=null;operator.state='riding';
+  f.population.hurtOfficer(operator,55,'projectile',{region:'leftLeg'});
+  assert.equal(operator.state,'riding');assert.equal(!!operator.model.root.metadata?.ragdollActive,false);
+  assert.equal(bodyInjuryEffects(operator.model.bodyInjuries).canStand,false);
+  vehicle.input.throttle=1;f.step(.2);
+  assert.equal(vehicle.input.throttle,0);assert.equal(vehicle.input.brake,1);assert.equal(operator.state,'riding');
+  const old=operator.model.root.position.clone();vehicle.body.setLinearVelocity(new Vector3(0,0,4));f.step(.2);
+  assert.ok(Vector3.Distance(old,operator.model.root.position)>.05,'seated injured crew follows vehicle motion');
+  f.population.hurtOfficer(operator,200,'projectile',{region:'torso'});f.step(.2);
+  assert.equal(operator.health,0);assert.equal(operator.state,'riding');assert.equal(operator.controller,null);
+  assert.equal(!!operator.model.root.metadata?.ragdollActive,false);assert.equal(vehicle.input.throttle,0);
  }finally{f.dispose();}
 });
 
-test("minor blunt recovery waits its remaining time after save/load while repeated injuries can incapacitate",async()=>{
- const f=await setup();try{
-  const ped=f.population.pedestrians[0];ped.model.position(new Vector3(3,0,-23));
-  f.population.hurtPed(ped,20,"melee");f.step(4);
-  assert.equal(ped.model.root.metadata.ragdollActive,true);
-  const saved=f.population.serializeCasualties(),entry=saved.civilians.find(p=>p.id===ped.id)!;
-  assert.ok(entry.recoverySeconds!>5&&entry.recoverySeconds!<7);
-  f.reactions.reset();f.population.reset();f.population.restoreCasualties(saved);f.step(4);
-  assert.equal(ped.model.root.metadata.ragdollActive,true,"loading cannot erase the recovery timer");
-  f.step(5);assert.equal(ped.model.root.metadata.ragdollActive,false);assert.equal(ped.health,80);
-  f.population.hurtPed(ped,30,"melee");f.step(4);f.population.hurtPed(ped,20,"melee");f.step(40);
-  assert.equal(ped.health,30);assert.equal(ped.model.injury?.remaining,null);assert.equal(ped.model.root.metadata.ragdollActive,true);
- }finally{f.dispose();}
-});
 
-test("settling more than eight casualties never forces a survivor upright, and all actor roles preserve serious injuries",async()=>{
- const f=await setup();try{
-  const baseline=f.physics.getBodies().length;
-  const victims=f.population.pedestrians.slice(0,12);
-  for(const [i,ped]of victims.entries()){
-   ped.model.position(new Vector3(3+i*3,0,-23));f.population.hurtPed(ped,19,"projectile");f.step(.35);
-   assert.ok(f.reactions.active.length<=8);assert.ok(f.physics.getBodies().length<=baseline+88);
+test('injured police seats survive vehicle replacement, response reset and casualty load', async () => {
+ const f=await setup();try {
+  let car=f.vehicles.spawn('police',new Vector3(5,1,-22));
+  f.population.drivers.push({v:car,target:-1,previous:-1,police:true,stuck:0,assignment:'patrol'});
+  for(const seat of [0,1]){
+   const officer=new Officer(`officer-${970+seat}`,'patrol',car.id,f.scene,f.shadows,seat);
+   f.population.police.officers.push(officer);
+   f.population.hurtOfficer(officer,seat?200:55,'projectile',{region:seat?'torso':'leftLeg'});
   }
-  assert.ok(victims.every(p=>p.health===81&&p.model.root.metadata.ragdollActive));f.step(25);
-  assert.ok(victims.every(p=>p.model.root.metadata.injuryStatus==="incapacitated"));assert.equal(f.physics.getBodies().length,baseline);
-  const officer=new Officer("officer-850","patrol","retired",f.scene,f.shadows);officer.dismount(new Vector3(9,1,-25));f.population.police.officers.push(officer);
-  const guard=f.population.facility.guards[0];f.population.hurtOfficer(officer,19,"projectile");f.population.hurtOfficer(guard,19,"projectile");f.step(9);
-  f.reactions.reset({preserveFatal:true});f.population.reset(false);f.step(10);
-  assert.ok(f.population.police.officers.includes(officer),"ordinary recovery retains a surviving incapacitated officer");assert.equal(officer.health,81);assert.equal(guard.health,121);
-  const saved=f.population.serializeCasualties();assert.ok(saved.police.some(p=>p.id===officer.id&&p.health===81));assert.ok(saved.guards.some(g=>g.id===guard.id&&g.health===121));
-  assert.equal(validateCasualties({...saved,civilians:[{...saved.civilians[0],health:Infinity}]}),false);
-  assert.equal(validateCasualties({...saved,civilians:[{...saved.civilians[0],recoverySeconds:-1}]}),false);
-  assert.equal(validateCasualties({...saved,civilians:[{...saved.civilians[0],kind:"unknown"}]}),false);
+  f.step(.1);
+  const saved=f.population.serializeCasualties();
+  assert.ok(validateCasualties(saved));
+  assert.deepEqual(saved.police.map(o=>[o.vehicleId,o.seat]),[[car.id,0],[car.id,1]]);
+  assert.equal(validateCasualties({...saved,police:[{...saved.police[0],seat:2}]}),false);
+  const carSave=f.vehicles.serialize(car);
+  f.reactions.reset();f.population.reset();
+  car=f.vehicles.restore(carSave);
+  for(let cycle=0;cycle<3;cycle++){
+   assert.ok(f.population.restoreCasualties(saved));f.step(.2);
+   assert.equal(f.population.police.officers.length,2);
+   assert.equal(f.population.drivers.filter(d=>d.v===car).length,1);
+   assert.equal(car.input.throttle,0);
+   for(const officer of f.population.police.officers){
+    assert.equal(officer.state,'riding');assert.equal(officer.vehicleId,car.id);
+    assert.equal(officer.controller,null);assert.equal(!!officer.model.root.metadata?.ragdollActive,false);
+    assert.equal(officer.health,officer.seat?0:64.25);
+   }
+   f.population.reset(false);f.step(.2);
+   assert.ok(f.vehicles.list.includes(car),'ordinary player recovery retains the injured crew cabin');
+  }
+  f.population.policeEnabled=false;
+  car.body.setLinearVelocity(new Vector3(0,0,3));
+  const previous=f.population.police.officers[0].model.root.position.clone();f.step(.2);
+  assert.ok(Vector3.Distance(previous,f.population.police.officers[0].model.root.position)>.02,'retained casualties follow a pushed car even with police disabled');
  }finally{f.dispose();}
 });
 
+
+test("partial and critical regional wounds survive version-three saves without duplicating officers",async()=>{
+ const f=await setup();try{
+  const partial=f.population.pedestrians[0],critical=f.population.pedestrians[1];
+  partial.model.position(new Vector3(3,0,-23));critical.model.position(new Vector3(7,0,-23));
+  f.population.hurtPed(partial,20,"projectile",{region:"leftLeg"});
+  f.population.hurtPed(critical,55,"projectile",{region:"rightLeg"});f.step(12);
+  assert.equal(partial.health,87);assert.equal(bodyInjuryEffects(partial.model.bodyInjuries).mode,"limping");
+  assert.equal(critical.health,64.25);assert.equal(bodyInjuryEffects(critical.model.bodyInjuries).mode,"crawling");
+  const officer=new Officer("officer-851","patrol","retired",f.scene,f.shadows);officer.dismount(new Vector3(10,1,-23));f.population.police.officers.push(officer);
+  f.population.hurtOfficer(officer,20,"projectile",{region:"rightArm"});
+  const saved=JSON.parse(JSON.stringify(f.population.serializeCasualties()));assert.equal(saved.version,3);assert.ok(validateCasualties(saved));
+  const entry=saved.civilians.find((p:{id:string})=>p.id===critical.id)!;assert.equal(entry.fallen,true);assert.ok(entry.pose!.length>=17);
+  f.reactions.reset({preserveFatal:true});f.population.reset(false);f.step(20);
+  assert.equal(bodyInjuryEffects(critical.model.bodyInjuries).mode,"crawling");assert.equal(critical.health,64.25);
+  f.reactions.reset();f.population.reset();
+  for(let cycle=0;cycle<4;cycle++){
+   assert.equal(f.population.restoreCasualties(saved),true);f.step(.6);
+   assert.equal(f.population.police.officers.filter(o=>o.id===officer.id).length,1);
+   assert.equal(bodyInjuryEffects(partial.model.bodyInjuries).limpSide,-1);assert.equal(partial.model.bodyInjuries!.regions.rightLeg.severity,0);
+   assert.equal(bodyInjuryEffects(critical.model.bodyInjuries).mode,"crawling");
+  }
+  for(const invalid of [{...entry,bodyInjuries:{...entry.bodyInjuries,fallRemaining:Infinity}},{...entry,pose:[{name:"head",position:[0,0,0],rotation:[0,0,0,5]}]}])assert.equal(validateCasualties({...saved,civilians:[invalid]}),false);
+ }finally{f.dispose();}
+});
+
+test("legacy version-one fatalities and version-two timed or incapacitating injuries retain their saved meanings",async()=>{
+ const f=await setup();try{
+  const [dead,timed,serious]=f.population.pedestrians;
+  const base={guards:[],police:[],nextOfficerId:1};
+  const oldFatal={version:1,...base,civilians:[{id:dead.id,x:3,y:.25,z:-23,yaw:0}]};
+  assert.ok(validateCasualties(oldFatal));assert.ok(f.population.restoreCasualties(oldFatal));f.step(10);assert.equal(dead.health,0);assert.equal(dead.model.dead,true);
+  const oldInjuries={version:2,...base,civilians:[{id:timed.id,x:6,y:.25,z:-23,yaw:0,health:80,recoverySeconds:6,kind:"melee"},{id:serious.id,x:9,y:.25,z:-23,yaw:0,health:68,recoverySeconds:null,kind:"projectile"}]};
+  assert.ok(validateCasualties(oldInjuries));assert.ok(f.population.restoreCasualties(oldInjuries));f.step(4);
+  assert.equal(timed.model.root.metadata.ragdollActive,true);assert.equal(serious.model.root.metadata.ragdollActive,true);
+  f.step(7);assert.equal(timed.model.root.metadata.ragdollActive,false);assert.equal(timed.health,80);
+  assert.equal(serious.model.injury?.remaining,null);assert.equal(serious.health,68);assert.equal(serious.model.root.metadata.ragdollActive,true);
+ }finally{f.dispose();}
+});
+
+test("concurrent critical survivors obey the physical-body budget and remain injured across ordinary recovery",async()=>{
+ const f=await setup();try{
+  const baseline=f.physics.getBodies().length,victims=f.population.pedestrians.slice(0,12);
+  for(const [i,ped]of victims.entries()){
+   ped.model.position(new Vector3(3+i*3,0,-23));f.population.hurtPed(ped,55,"projectile",{region:i%2?"rightLeg":"leftLeg"});
+  }
+  assert.ok(f.reactions.active.length<=8);assert.ok(f.physics.getBodies().length<=baseline+8*15);
+  f.step(20);assert.ok(victims.every(p=>p.health===64.25&&bodyInjuryEffects(p.model.bodyInjuries).mode==="crawling"));
+  assert.equal(f.reactions.active.length,0);
+  f.reactions.reset({preserveFatal:true});f.population.reset(false);f.step(12);
+  assert.ok(victims.every(p=>!p.model.dead&&bodyInjuryEffects(p.model.bodyInjuries).mode==="crawling"));
+  assert.equal(f.physics.getBodies().filter(body=>body.transformNode.metadata?.ragdoll).length,0);
+ }finally{f.dispose();}
+});
 
 test("production Combat shots damage a settled surviving target and can make the injury fatal",async()=>{
  const [{Combat},{DamageSystem},{Character}]=await Promise.all([import("../src/gameplay/Combat"),import("../src/gameplay/Damage"),import("../src/gameplay/Character")]);
@@ -179,8 +234,9 @@ test("production Combat shots damage a settled surviving target and can make the
  try{
   const ped=f.population.pedestrians[0];ped.model.position(new Vector3(3,0,-22));
   const aim=()=>{ped.model.skeleton.computeAbsoluteMatrices(true);ped.model.torso.computeWorldMatrix(true);const target=ped.model.skeleton.bones.find(b=>b.name.endsWith("/chest"))!.getAbsolutePosition(ped.model.torso);f.player.camera.setTarget(target);f.player.camera.getViewMatrix(true);};
+  combat.select(0);combat.handling.update(1);
   aim();combat.fire();assert.equal(ped.health,68,"normal weapon damage reaches the production civilian hit handler");advance(9);
-  assert.equal(combat.reactions.active.length,0);assert.equal(ped.model.root.metadata.injuryStatus,"incapacitated");
+  assert.equal(combat.reactions.active.length,0);assert.equal(bodyInjuryEffects(ped.model.bodyInjuries).mode,"hunched");
   for(let shot=0;shot<3;shot++){aim();combat.fire();advance(1);}
   assert.equal(ped.health,0,"visible skinned mesh remains hittable after physical ragdoll disposal");advance(10);
   assert.equal(ped.model.dead,true);assert.equal(ped.model.root.metadata.injuryStatus,"dead");
@@ -193,8 +249,8 @@ test("an incapacitated response crew does not permanently reserve an offscreen p
   const car=f.vehicles.spawn("police",new Vector3(-200,1,0));
   f.population.drivers.push({v:car,target:0,previous:0,police:true,stuck:0,assignment:"patrol"});
   const officer=new Officer("officer-860","patrol",car.id,f.scene,f.shadows);officer.dismount(new Vector3(-197,1,0));f.population.police.officers.push(officer);
-  f.population.hurtOfficer(officer,19,"projectile");f.step(13);
-  assert.equal(officer.health,81);assert.equal(officer.model.root.metadata.injuryStatus,"incapacitated");
+  f.population.hurtOfficer(officer,55,"projectile",{region:"leftLeg"});f.step(13);
+  assert.equal(officer.health,64.25);assert.equal(bodyInjuryEffects(officer.model.bodyInjuries).mode,"crawling");
   assert.ok(f.population.police.officers.includes(officer),"injured person remains while the orphaned response vehicle retires");
   assert.ok(!f.population.drivers.some(d=>d.v.id===car.id));assert.ok(!f.vehicles.list.includes(car));
  }finally{f.dispose();}

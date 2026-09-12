@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { Persistence } from "../src/core/Persistence";
+import { applyBodyImpact } from '../src/gameplay/Injuries';
 function fixture() {
   return {
     version: 1,
@@ -87,4 +88,15 @@ test("casualty saves round trip and invalid records are rejected before restorin
     { ...casualties, police: [{ ...casualties.police[0], role: "civilian" }] },
     { ...casualties, civilians: [{ ...casualties.civilians[0], x: Infinity }] },
   ]) assert.equal(load({ ...data, casualties: corrupt }), null);
+});
+
+test('player regional injuries and physical pose survive save validation without accepting mismatched or malformed actors',()=>{
+  const bodyInjuries=applyBodyImpact(null,{region:'leftLeg',kind:'projectile',damage:55,health:64.25});
+  const casualty={id:'player-Jason',x:0,y:.03,z:0,yaw:.2,health:64.25,recoverySeconds:null,kind:'projectile',fallen:true,bodyInjuries,rootRotation:[0,0,0,1],pose:[{name:'pelvis',position:[0,.38,0],rotation:[.7,0,0,Math.sqrt(.51)]}]};
+  const data={...fixture(),player:{...fixture().player,health:64.25,bodyInjuries,postureHeight:.64,casualty}};
+  assert.deepEqual(load(data),data);
+  for(const corrupt of [{...casualty,id:'player-Lucia'},{...casualty,health:0},{...casualty,pose:[null]},{...casualty,pose:[{...casualty.pose[0],position:[0,Infinity,0]}]},{...casualty,rootRotation:[0,0,0,0]}])
+    assert.equal(load({...data,player:{...data.player,casualty:corrupt}}),null);
+  assert.equal(load({...data,player:{...data.player,postureHeight:0}}),null);
+  assert.equal(load({...data,player:{...data.player,vehicleId:'missing-car'}}),null);
 });

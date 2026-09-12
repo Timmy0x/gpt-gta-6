@@ -179,6 +179,7 @@ test("standard gamepad buttons supply held actions and exactly one press edge", 
     [1, "crouch"],
     [2, "reload"],
     [3, "interact"],
+    [4, "weaponWheel"],
     [5, "horn"],
     [8, "creative"],
     [9, "map"],
@@ -283,7 +284,6 @@ test("triggers and weapon buttons work, and unplugging clears only controller in
   assert.ok(input.aim, "analog LT aims even when pressed is false");
   assert.ok(input.mouseDown, "analog RT feeds the normal combat firing state");
   for (const [index, key] of [
-    [4, "Digit3"],
     [14, "Digit1"],
     [15, "Digit2"],
   ] as const) {

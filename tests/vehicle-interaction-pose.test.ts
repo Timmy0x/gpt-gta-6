@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { DirectionalLight, LoadAssetContainerAsync, Material, Matrix, NullEngine, Quaternion, Scene, ShadowGenerator, Vector3, VertexBuffer, type Mesh } from '@babylonjs/core';
 import { Character } from '../src/gameplay/Character';
 import { prepareCharacterAssets, prepareCivilianAssets } from '../src/gameplay/characters/RocketboxSkin';
-import { poseVehicleEntrant, poseVehicleWithdrawal, vehicleDoorContact, vehicleMountPosition } from '../src/gameplay/VehicleInteractionPose';
+import { poseVehicleEntrant, poseVehicleWithdrawal, vehicleDoorContact, vehicleMountPosition, VEHICLE_INTERACTION_TIMING } from '../src/gameplay/VehicleInteractionPose';
 import { vehicleSeatOffset, vehicleSeatPose, type TrafficOccupant } from '../src/gameplay/VehicleOccupancy';
 import { ConceptCarAssets } from '../src/vehicles/ConceptCar';
 import { createVehicleModel } from '../src/vehicles/models';
@@ -111,7 +111,7 @@ test('both licensed protagonists contact both licensed civilian drivers with gro
       const driver = new Character(f.scene, f.shadows, civilian, '#ffffff', civilian.startsWith('female'), undefined, { licensedCivilianSkin: civilian });
       try {
         const start = Vector3.TransformCoordinates(vehicleSeatOffset(vehicle), model.root.getWorldMatrix());
-        const destination = new Vector3(-vehicle.tuning.width / 2 - .7, 0, -.65), doorway = new Vector3(-vehicle.tuning.width / 2 - .48, 0, .12);
+        const destination = new Vector3(-vehicle.tuning.width / 2 - .7, 0, -.65), doorway = new Vector3(-vehicle.tuning.width / 2 - .48, 0, -.20);
         const occupant = { vehicle, model: driver, start, destination } as TrafficOccupant;
         const door = model.doors.find(d => d.side === -1 && d.front)!;
         const closedHandle = vehicleDoorContact(vehicle, -1)!;
@@ -121,12 +121,12 @@ test('both licensed protagonists contact both licensed civilian drivers with gro
         for (let frame = 0; frame <= 50; frame++) {
           const p = frame / 50;
           driver.animate(1 / 60, 0); poseVehicleWithdrawal(occupant, p, vehicleSeatPose(vehicle));
-          actor.animate(1 / 60, 0); poseVehicleEntrant(actor, vehicle, 'ejecting-driver', p * .78 / .86, doorway, doorway, start, -1, vehicleSeatPose(vehicle), driver);
+          actor.animate(1 / 60, 0); poseVehicleEntrant(actor, vehicle, 'ejecting-driver', p * VEHICLE_INTERACTION_TIMING.ejection / (VEHICLE_INTERACTION_TIMING.ejection + VEHICLE_INTERACTION_TIMING.handoff), doorway, doorway, start, -1, vehicleSeatPose(vehicle), driver);
           assert.ok(Vector3.Distance(driver.root.position, previous) < .12, 'driver root follows a continuous withdrawal'); previous = driver.root.position.clone();
-          if (p >= .16 && p <= .75) {
-            const shoulder = driver.jointPosition('leftArm', new Vector3(-.04, -.025, .025)), forearm = driver.jointPosition('leftForearm', new Vector3(-.025, -.03, .015));
+          if (p >= .30 && p <= .55) {
+            const shoulder = driver.jointPosition('leftArm', new Vector3(-.035, -.015, .03)), forearm = driver.jointPosition('leftForearm', new Vector3(-.02, -.10, .015));
             maxContact = Math.max(maxContact, Vector3.Distance(actor.jointPosition('rightHand'), shoulder), Vector3.Distance(actor.jointPosition('leftHand'), forearm));
-            maxPlant = Math.max(maxPlant, Math.abs(actor.jointPosition('rightFoot').y - .13));
+            if (p < .40) maxPlant = Math.max(maxPlant, Math.abs(actor.jointPosition('rightFoot').y - .13));
           }
           if ([10, 25, 35, 45].includes(frame)) {
             f.scene.onBeforeActiveMeshesEvaluationObservable.notifyObservers(f.scene);

@@ -1,6 +1,8 @@
 import { Bone, BoneIKController, Matrix, Quaternion, Skeleton, TransformNode, Vector3, type Scene } from '@babylonjs/core';
 
 export type ContactLimb = 'leftHand' | 'rightHand' | 'leftFoot' | 'rightFoot';
+const leftPalmRotation = Quaternion.RotationQuaternionFromAxis(Vector3.Down(), Vector3.Backward(), Vector3.Right());
+const rightPalmRotation = Quaternion.RotationQuaternionFromAxis(Vector3.Up(), Vector3.Backward(), Vector3.Left());
 type Chain = { upper: Bone; lower: Bone; end: Bone; a: Bone; b: Bone; tip: Bone; solver: BoneIKController; minReach: number };
 
 /** Babylon's two-bone solver uses +Y segments; the gameplay rig uses downward rest axes. */
@@ -23,7 +25,7 @@ export class CharacterContactIK {
     this.mesh = new TransformNode(root.name + '/contact-ik-frame', scene);
     this.base = new Bone('contact-root', this.skeleton, null, Matrix.Identity());
   }
-  solve(limb: ContactLimb, worldTarget: Vector3, weight = 1): void {
+  solve(limb: ContactLimb, worldTarget: Vector3, weight = 1, worldPole?: Vector3): void {
     if (!Number.isFinite(weight) || weight <= 0 || ![worldTarget.x,worldTarget.y,worldTarget.z].every(Number.isFinite)) return;
     const chain = this.chains.get(limb) ?? this.create(limb);
     this.driver.computeAbsoluteMatrices(true);
@@ -40,7 +42,8 @@ export class CharacterContactIK {
     }
     chain.solver.targetPosition.copyFrom(this.target);
     const side=limb.startsWith('left')?-1:1;
-    chain.solver.poleTargetPosition.copyFrom(origin).addInPlace(limb.endsWith('Hand')?new Vector3(side*.65,-.45,-.12):new Vector3(side*.08,-.25,1));
+    if (worldPole) Vector3.TransformCoordinatesToRef(worldPole, this.inverse, chain.solver.poleTargetPosition);
+    else chain.solver.poleTargetPosition.copyFrom(origin).addInPlace(limb.endsWith('Hand')?new Vector3(side*.65,-.45,-.12):new Vector3(side*.08,.6,1));
     chain.solver.update();this.skeleton.computeAbsoluteMatrices(true);
     chain.b.getAbsoluteMatrix().getTranslation().subtractToRef(chain.a.getAbsoluteMatrix().getTranslation(),this.direction);
     this.align(chain.upper,chain.lower,this.direction);
@@ -71,6 +74,42 @@ export class CharacterContactIK {
     this.desired.multiplyToRef(this.inverse, this.local);
     this.local.decompose(undefined, this.rotation);
     chain.end.setRotationQuaternion(this.rotation);
+    this.driver.computeAbsoluteMatrices(true);
+  }
+  /** Prone toes trail behind the shins with anatomical plantarflexion. */
+  flexFoot(limb: ContactLimb, pitch: number, weight = 1): void {
+    const chain = this.chains.get(limb); if (!chain) return;
+    const target = Quaternion.RotationAxis(Vector3.RightReadOnly, Math.max(-.65, Math.min(1.10, pitch)));
+    chain.end.setRotationQuaternion(Quaternion.Slerp(chain.end.getRotationQuaternion(), target, Math.max(0, Math.min(1, weight))));
+    this.driver.computeAbsoluteMatrices(true);
+  }
+
+  /** A palm is level with the floor, with fingers pointing along the actor's forward axis. */
+  levelPalm(limb: ContactLimb, weight = 1): void {
+    const chain = this.chains.get(limb); if (!chain) return;
+    this.driver.computeAbsoluteMatrices(true);
+    const absolute = chain.end.getAbsoluteMatrix(); absolute.decompose(undefined, this.rotation);
+    Quaternion.SlerpToRef(this.rotation, limb.startsWith('left') ? leftPalmRotation : rightPalmRotation, Math.max(0, Math.min(1, weight)), this.rotation);
+    this.rotation.toRotationMatrix(this.desired); this.desired.setTranslation(absolute.getTranslation());
+    chain.lower.getAbsoluteMatrix().invertToRef(this.inverse); this.desired.multiplyToRef(this.inverse, this.local);
+    this.local.decompose(undefined, this.rotation); chain.end.setRotationQuaternion(this.rotation);
+    this.driver.computeAbsoluteMatrices(true);
+  }
+
+  /** Align the fingers independently of the elbow so a palm can rest along a surface. */
+  pointEnd(limb: ContactLimb, worldDirection: Vector3, weight = 1): void {
+    const chain = this.chains.get(limb); if (!chain || weight <= 0 || worldDirection.lengthSquared() < 1e-8) return;
+    this.driver.computeAbsoluteMatrices(true);
+    this.root.computeWorldMatrix(true).invertToRef(this.inverse);
+    Vector3.TransformNormalToRef(worldDirection, this.inverse, this.target); this.target.normalize();
+    const absolute = chain.end.getAbsoluteMatrix();
+    Vector3.TransformNormalToRef(Vector3.DownReadOnly, absolute, this.from); this.from.normalize();
+    Quaternion.FromUnitVectorsToRef(this.from, this.target, this.rotation);
+    Quaternion.SlerpToRef(Quaternion.Identity(), this.rotation, Math.min(1, weight), this.rotation);
+    this.rotation.toRotationMatrix(this.correction);
+    absolute.multiplyToRef(this.correction, this.desired); this.desired.setTranslation(absolute.getTranslation());
+    chain.lower.getAbsoluteMatrix().invertToRef(this.inverse); this.desired.multiplyToRef(this.inverse, this.local);
+    this.local.decompose(undefined, this.rotation); chain.end.setRotationQuaternion(this.rotation);
     this.driver.computeAbsoluteMatrices(true);
   }
   private align(upper: Bone, child: Bone, direction: Vector3):void {

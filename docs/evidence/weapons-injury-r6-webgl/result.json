@@ -1,0 +1,1653 @@
+{
+  "origin": "http://127.0.0.1:4273",
+  "backend": "webgl",
+  "method": "Normal keyboard/mouse draw, holster, weapon wheel, weapon firing/reload/zoom, character switch and sandbox save/load. Game diagnostics are read only.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-BJRmjpwj.js",
+      "sha256": "201705ae30ee44b6c7bbbd1d86b0cced48901d1e0d9425f8b41a0741dd1355e1",
+      "world": "authored-860409-v8-street-objects",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "initial-pistol",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "heading": 0,
+      "weapon": 0,
+      "target": 0,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 0,
+      "magazines": [
+        12,
+        30,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "bodyError": 0,
+      "barrelAngle": 70.88608851311906,
+      "muzzle": [
+        3.5824694320634007,
+        0.7915939581990242,
+        -27.804853764027357
+      ],
+      "meshes": [
+        {
+          "name": "held/pistol/Slide/0",
+          "vertices": 2584
+        },
+        {
+          "name": "held/pistol/Slide/2",
+          "vertices": 449
+        },
+        {
+          "name": "held/pistol/Barrel/0",
+          "vertices": 446
+        },
+        {
+          "name": "held/pistol/Frame/0",
+          "vertices": 3740
+        },
+        {
+          "name": "held/pistol/Trigger/2",
+          "vertices": 372
+        },
+        {
+          "name": "held/pistol/Hammer/2",
+          "vertices": 628
+        },
+        {
+          "name": "held/pistol/Grips/1",
+          "vertices": 172
+        },
+        {
+          "name": "held/pistol/Magazine/0",
+          "vertices": 532
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "holstered",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "heading": 0,
+      "weapon": 0,
+      "target": 0,
+      "phase": "holstered",
+      "progress": 0,
+      "visible": false,
+      "shots": 0,
+      "magazines": [
+        12,
+        30,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.5824694320634007,
+        0.7919060481190682,
+        -27.804853764027357
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "wheel-open",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "heading": 0,
+      "weapon": 0,
+      "target": 0,
+      "phase": "holstered",
+      "progress": 0,
+      "visible": false,
+      "shots": 0,
+      "magazines": [
+        12,
+        30,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": true,
+      "selected": "0",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.5824694320634007,
+        0.7901627314686775,
+        -27.804853764027357
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "wheel-smg",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "heading": 0,
+      "weapon": 0,
+      "target": 0,
+      "phase": "holstered",
+      "progress": 0,
+      "visible": false,
+      "shots": 0,
+      "magazines": [
+        12,
+        30,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": true,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.5824694320634007,
+        0.7898778212666512,
+        -27.804853764027357
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "wheel-release-smg",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "heading": 0,
+      "weapon": 1,
+      "target": 1,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 0,
+      "magazines": [
+        12,
+        30,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 70.88608851311906,
+      "muzzle": [
+        3.5872984286025167,
+        0.6816710916161537,
+        -27.78712048664689
+      ],
+      "meshes": [
+        {
+          "name": "magazine",
+          "vertices": 24
+        },
+        {
+          "name": "smg-receiver_merged",
+          "vertices": 358
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "smg-automatic",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "heading": 0,
+      "weapon": 1,
+      "target": 1,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 10,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": true,
+      "ready": true,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 1.4323929542899545,
+      "muzzle": [
+        3.592685904778282,
+        1.454803149625659,
+        -27.148921120874583
+      ],
+      "meshes": [
+        {
+          "name": "magazine",
+          "vertices": 24
+        },
+        {
+          "name": "smg-receiver_merged",
+          "vertices": 358
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "pistol-held-trigger",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 0,
+      "target": 0,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 11,
+      "magazines": [
+        11,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": true,
+      "ready": true,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 0,
+      "muzzle": [
+        3.5926873223690197,
+        1.46552040463686,
+        -27.24536267335713
+      ],
+      "meshes": [
+        {
+          "name": "held/pistol/Slide/0",
+          "vertices": 2584
+        },
+        {
+          "name": "held/pistol/Slide/2",
+          "vertices": 449
+        },
+        {
+          "name": "held/pistol/Barrel/0",
+          "vertices": 446
+        },
+        {
+          "name": "held/pistol/Frame/0",
+          "vertices": 3740
+        },
+        {
+          "name": "held/pistol/Trigger/2",
+          "vertices": 372
+        },
+        {
+          "name": "held/pistol/Hammer/2",
+          "vertices": 628
+        },
+        {
+          "name": "held/pistol/Grips/1",
+          "vertices": 172
+        },
+        {
+          "name": "held/pistol/Magazine/0",
+          "vertices": 532
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "pistol-reload",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 0,
+      "target": 0,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 11,
+      "magazines": [
+        11,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        180,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 1.066666666666668,
+      "raised": true,
+      "ready": true,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 40.98372228443624,
+      "muzzle": [
+        3.4134926959276197,
+        1.423158045232296,
+        -27.49229456038028
+      ],
+      "meshes": [
+        {
+          "name": "held/pistol/Slide/0",
+          "vertices": 2584
+        },
+        {
+          "name": "held/pistol/Slide/2",
+          "vertices": 449
+        },
+        {
+          "name": "held/pistol/Barrel/0",
+          "vertices": 446
+        },
+        {
+          "name": "held/pistol/Frame/0",
+          "vertices": 3740
+        },
+        {
+          "name": "held/pistol/Trigger/2",
+          "vertices": 372
+        },
+        {
+          "name": "held/pistol/Hammer/2",
+          "vertices": 628
+        },
+        {
+          "name": "held/pistol/Grips/1",
+          "vertices": 172
+        },
+        {
+          "name": "held/pistol/Magazine/0",
+          "vertices": 532
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "weapon-3",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 3,
+      "target": 3,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 8.299252877095666,
+      "muzzle": [
+        3.4312536842968298,
+        1.2830370829999447,
+        -27.122967479795218
+      ],
+      "meshes": [
+        {
+          "name": "held/carbine/Stock/1",
+          "vertices": 182
+        },
+        {
+          "name": "held/carbine/Stock/2",
+          "vertices": 1606
+        },
+        {
+          "name": "held/carbine/Receiver/1",
+          "vertices": 1130
+        },
+        {
+          "name": "held/carbine/Magazine/0",
+          "vertices": 304
+        },
+        {
+          "name": "held/carbine/Grip/2",
+          "vertices": 1316
+        },
+        {
+          "name": "held/carbine/Trigger/1",
+          "vertices": 584
+        },
+        {
+          "name": "held/carbine/Rail/1",
+          "vertices": 328
+        },
+        {
+          "name": "held/carbine/ChargingHandle/1",
+          "vertices": 604
+        },
+        {
+          "name": "held/carbine/Barrel/1",
+          "vertices": 1693
+        },
+        {
+          "name": "held/carbine/Barrel/2",
+          "vertices": 928
+        },
+        {
+          "name": "held/carbine/SightPost/1",
+          "vertices": 1320
+        },
+        {
+          "name": "held/carbine/CarryingHandle/1",
+          "vertices": 3792
+        },
+        {
+          "name": "held/carbine/ForwardAssist/1",
+          "vertices": 1000
+        },
+        {
+          "name": "held/carbine/Frame/1",
+          "vertices": 590
+        },
+        {
+          "name": "held/carbine/EjectorCover/1",
+          "vertices": 402
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "weapon-4",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 4,
+      "target": 4,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 8.299253628050405,
+      "muzzle": [
+        3.430911880364034,
+        1.243759578168392,
+        -26.948328970074655
+      ],
+      "meshes": [
+        {
+          "name": "pump-foreend",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "pump-groove",
+          "vertices": 46
+        },
+        {
+          "name": "receiver_merged",
+          "vertices": 284
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "weapon-5",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 8.29925362805014,
+      "muzzle": [
+        3.431263381669309,
+        1.217726558148861,
+        -26.83323728607595
+      ],
+      "meshes": [
+        {
+          "name": "held/sniper/Stock/0",
+          "vertices": 3679
+        },
+        {
+          "name": "held/sniper/Frame/1",
+          "vertices": 9235
+        },
+        {
+          "name": "held/sniper/Receiver/1",
+          "vertices": 1705
+        },
+        {
+          "name": "held/sniper/Receiver/0",
+          "vertices": 548
+        },
+        {
+          "name": "held/sniper/Frame/2",
+          "vertices": 2308
+        },
+        {
+          "name": "held/sniper/Frame/3",
+          "vertices": 2679
+        },
+        {
+          "name": "held/sniper/Frame/0",
+          "vertices": 239
+        },
+        {
+          "name": "held/sniper/Frame/4",
+          "vertices": 290
+        },
+        {
+          "name": "held/sniper/Bolt/2",
+          "vertices": 572
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "weapon-6",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 6,
+      "target": 6,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 76.15052436811965,
+      "muzzle": [
+        3.5872984286025167,
+        0.6807940688729286,
+        -27.78712048664689
+      ],
+      "meshes": [
+        {
+          "name": "revolver-frame_merged",
+          "vertices": 212
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "weapon-2",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 2,
+      "target": 2,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 76.15052436811965,
+      "muzzle": [
+        3.574652671813965,
+        0.9602633714675903,
+        -27.898855209350586
+      ],
+      "meshes": [
+        {
+          "name": "grenade-shell_merged",
+          "vertices": 417
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "weapon-7",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 7,
+      "target": 7,
+      "phase": "holstered",
+      "progress": 0,
+      "visible": false,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.574331678636372,
+        0.9721768662333489,
+        -27.8347376203537
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "sniper-2x",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "ready",
+      "progress": 0,
+      "visible": false,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": true,
+      "ready": true,
+      "aim": true,
+      "scoped": true,
+      "magnification": 2,
+      "fov": 0.4623635350208579,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.5926566455222777,
+        1.5401620786190033,
+        -26.575302817555144
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "sniper-4x",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "ready",
+      "progress": 0,
+      "visible": false,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": true,
+      "ready": true,
+      "aim": true,
+      "scoped": true,
+      "magnification": 4,
+      "fov": 0.23444737112046862,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.592666838262022,
+        1.5436102040857076,
+        -26.575310396768153
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "sniper-8x",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.013,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "ready",
+      "progress": 0,
+      "visible": false,
+      "shots": 11,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        5,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": true,
+      "ready": true,
+      "aim": true,
+      "scoped": true,
+      "magnification": 8,
+      "fov": 0.11762800058214769,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.59266683346954,
+        1.5450349896401168,
+        -26.5753104474945
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "sniper-unscoped",
+      "backend": "WebGL2",
+      "name": "Jason",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.042,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 12,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        4,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": true,
+      "ready": true,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.8798163833525665,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 0.0000017075472925031877,
+      "muzzle": [
+        3.592681555576803,
+        1.4545150525569916,
+        -26.578147055659443
+      ],
+      "meshes": [
+        {
+          "name": "held/sniper/Stock/0",
+          "vertices": 3679
+        },
+        {
+          "name": "held/sniper/Frame/1",
+          "vertices": 9235
+        },
+        {
+          "name": "held/sniper/Receiver/1",
+          "vertices": 1705
+        },
+        {
+          "name": "held/sniper/Receiver/0",
+          "vertices": 548
+        },
+        {
+          "name": "held/sniper/Frame/2",
+          "vertices": 2308
+        },
+        {
+          "name": "held/sniper/Frame/3",
+          "vertices": 2679
+        },
+        {
+          "name": "held/sniper/Frame/0",
+          "vertices": 239
+        },
+        {
+          "name": "held/sniper/Frame/4",
+          "vertices": 290
+        },
+        {
+          "name": "held/sniper/Bolt/2",
+          "vertices": 572
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "lucia-weapon",
+      "backend": "WebGL2",
+      "name": "Lucia",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.042,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "ready",
+      "progress": 0,
+      "visible": true,
+      "shots": 12,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        4,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.8799999997983584,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": 9.95151583557967,
+      "muzzle": [
+        3.4312412900101403,
+        1.217731936454773,
+        -26.833236313447355
+      ],
+      "meshes": [
+        {
+          "name": "held/sniper/Stock/0",
+          "vertices": 3679
+        },
+        {
+          "name": "held/sniper/Frame/1",
+          "vertices": 9235
+        },
+        {
+          "name": "held/sniper/Receiver/1",
+          "vertices": 1705
+        },
+        {
+          "name": "held/sniper/Receiver/0",
+          "vertices": 548
+        },
+        {
+          "name": "held/sniper/Frame/2",
+          "vertices": 2308
+        },
+        {
+          "name": "held/sniper/Frame/3",
+          "vertices": 2679
+        },
+        {
+          "name": "held/sniper/Frame/0",
+          "vertices": 239
+        },
+        {
+          "name": "held/sniper/Frame/4",
+          "vertices": 290
+        },
+        {
+          "name": "held/sniper/Bolt/2",
+          "vertices": 572
+        }
+      ],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "inventory-restored",
+      "backend": "WebGL2",
+      "name": "Lucia",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.042,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "holstered",
+      "progress": 0,
+      "visible": false,
+      "shots": 12,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        4,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.431258793579012,
+        1.2177276042699814,
+        -26.833236994177103
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    },
+    {
+      "label": "minimal-pause",
+      "backend": "WebGL2",
+      "name": "Lucia",
+      "position": [
+        3.3,
+        1.02015,
+        -28
+      ],
+      "yaw": 0,
+      "pitch": -0.042,
+      "heading": 0,
+      "weapon": 5,
+      "target": 5,
+      "phase": "holstered",
+      "progress": 0,
+      "visible": false,
+      "shots": 12,
+      "magazines": [
+        12,
+        20,
+        3,
+        30,
+        8,
+        4,
+        6,
+        0
+      ],
+      "reserves": [
+        179,
+        180,
+        6,
+        180,
+        48,
+        40,
+        60,
+        0
+      ],
+      "reload": 0,
+      "raised": false,
+      "ready": false,
+      "aim": false,
+      "scoped": false,
+      "magnification": 1,
+      "fov": 0.88,
+      "wheel": false,
+      "selected": "1",
+      "bodyError": 0,
+      "barrelAngle": null,
+      "muzzle": [
+        3.43125423276977,
+        1.2177288415431977,
+        -26.83323696371913
+      ],
+      "meshes": [],
+      "vehicle": null,
+      "driveBy": {
+        "active": false,
+        "ready": false
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected.",
+    "[.WebGL-0x114000dc600] GL_INVALID_VALUE: glGetProgramiv: Program object expected."
+  ],
+  "programAudit": []
+}

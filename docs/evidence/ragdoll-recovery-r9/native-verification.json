@@ -1,0 +1,61 @@
+{
+  "source": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/ragdoll-r9-final-source",
+  "capturedRuntime": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/ragdoll-r9-source",
+  "runtimeByteIdentical": true,
+  "tests": {
+    "pass": 8,
+    "fail": 0
+  },
+  "cohort": {
+    "cases": 32,
+    "frames": 9600,
+    "indexedVertices": 45415200,
+    "minimumNative": -0.004568088842286544,
+    "minimumHandoff": 0.017999688691516913,
+    "maximumJointStep": 0.10326536355182134,
+    "maximumBodyClearanceAboveRoad": 0.04693901623824848,
+    "maximumFramesAboveFourCentimeters": 8,
+    "maximumTrunkOnlyGap": 0.0885028298817158
+  },
+  "zeroImpulse": {
+    "cases": 8,
+    "minimum": 0.004356381534102449,
+    "allComplete": true
+  },
+  "repeatedHit": {
+    "cases": 8,
+    "minimum": -0.012594988326313228,
+    "maximumComRise": 0.07721775162773975,
+    "maximumPelvisRise": 0.07314923405647278
+  },
+  "files": [
+    {
+      "file": "src/gameplay/combat/RagdollReactions.ts",
+      "sha256": "19346bd66ebee57892540805bf8396cc59e05185ab7ffe0dc1b8d9249741cef4"
+    },
+    {
+      "file": "src/gameplay/combat/RagdollAnatomy.ts",
+      "sha256": "2948d49992113b2fd3698f01f79e3a8edda09c138a078d45225a653d30eb1af6"
+    },
+    {
+      "file": "src/gameplay/CharacterSkinSupport.ts",
+      "sha256": "43017382dd26dfe14242bbaa3cf6a67d8a581d13366a353c898244221fbbc188"
+    },
+    {
+      "file": "src/gameplay/Character.ts",
+      "sha256": "034d6f724efea2032783b61ecacc01cced1cfb924b5da19a80c02f5bb0f63bac"
+    },
+    {
+      "file": "src/gameplay/CharacterContactIK.ts",
+      "sha256": "2e65bf1177f949c37c4760fe72e55b33763b67dbc7e7e9f18cb32268f3bb8c69"
+    },
+    {
+      "file": "src/gameplay/InjuryPose.ts",
+      "sha256": "212a6691a9e4393db9de8add73cf6d17ab0f402e257aa56c349acd7631a04d4c"
+    },
+    {
+      "file": "tests/ragdoll-anatomy.test.ts",
+      "sha256": "e5be1fa08202f027421bf247195caec442ecbc3938f9706df8c7e949d7708c23"
+    }
+  ]
+}

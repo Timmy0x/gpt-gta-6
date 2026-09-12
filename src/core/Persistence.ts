@@ -1,9 +1,11 @@
+import { validWeaponSave } from '../gameplay/combat/WeaponCatalog';
+import { validateBodyInjuries, type BodyInjuryState } from '../gameplay/Injuries';
 import {
   validateVehicleSnapshot,
   type LegacyVehicleSnapshot,
   type SerializableVehicle,
 } from "../vehicles/serialization";
-import { validateCasualties, type PopulationCasualties } from "../gameplay/police/casualties";
+import { validateCasualties, type Casualty, type PopulationCasualties } from "../gameplay/police/casualties";
 import { validateStreetObjects, type SavedStreetObject } from "../world/StreetObjectRecords";
 export interface SavedProp {
   id: string;
@@ -27,6 +29,10 @@ export interface SaveData {
     character: string;
     health: number;
     armor?: number;
+    bodyInjuries?: BodyInjuryState;
+    postureHeight?: number;
+    casualty?: Casualty;
+    vehicleId?: string;
   };
   time: number;
   weather: string;
@@ -81,6 +87,10 @@ export class Persistence {
         s.cash,
       ])
         if (!Number.isFinite(n)) return null;
+      if (s.player.bodyInjuries !== undefined && !validateBodyInjuries(s.player.bodyInjuries)) return null;
+      if (s.player.vehicleId !== undefined && (typeof s.player.vehicleId !== 'string' || !s.vehicles.some((v: {id?: string}) => v.id === s.player.vehicleId))) return null;
+      if (s.player.casualty !== undefined && (s.player.casualty.id !== `player-${s.player.character}` || s.player.casualty.health !== s.player.health || !validateCasualties({version: 3, civilians: [s.player.casualty], guards: [], police: [], nextOfficerId: 1}))) return null;
+      if (s.player.postureHeight !== undefined && (!Number.isFinite(s.player.postureHeight) || s.player.postureHeight < .6 || s.player.postureHeight > 1.8)) return null;
       if (
         !["Jason", "Lucia"].includes(s.player.character) ||
         !["Clear", "Rain", "Haze"].includes(s.weather)
@@ -113,24 +123,7 @@ export class Persistence {
           s.player.armor > 100)
       )
         return null;
-      if (
-        s.combat &&
-        (!Number.isInteger(s.combat.selected) ||
-          s.combat.selected < 0 ||
-          s.combat.selected > 2 ||
-          !Array.isArray(s.combat.magazines) ||
-          !Array.isArray(s.combat.reserves) ||
-          s.combat.magazines.length !== 3 ||
-          s.combat.reserves.length !== 3 ||
-          [...s.combat.magazines, ...s.combat.reserves].some(
-            (n) => !Number.isInteger(n) || n < 0 || n > 1000000,
-          ))
-      )
-        return null;
-      if (
-        s.combat?.magazines.some((n: number, i: number) => n > [12, 30, 3][i])
-      )
-        return null;
+      if (s.combat && !validWeaponSave(s.combat)) return null;
       if (
         s.props &&
         (!Array.isArray(s.props) ||

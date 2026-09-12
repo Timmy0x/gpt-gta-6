@@ -705,3 +705,23 @@ select:focus-visible {
 
 .bar.breath { width: 44px; }
 .bar.breath i { background: #bceef3; }
+
+/* Held selection overlay: the scene remains visible, with only name and ammunition. */
+#weapon-wheel { position: fixed; inset: 0; display: grid; place-items: center; pointer-events: none; background: #08101855; backdrop-filter: saturate(.55) blur(2px); z-index: 35; }
+#weapon-wheel.hidden { display: none; }
+.weapon-ring { position: relative; width: min(510px, 74vh, 80vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #111923eb 0 27%, #171e27dd 27.3% 69%, #bac4cc88 69.3% 70%, transparent 70.3%); filter: drop-shadow(0 12px 25px #0007); }
+.weapon-ring::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from var(--selected-angle, 22.5deg), #bed3e2dc 0deg 45deg, transparent 45deg 360deg); mask: radial-gradient(circle, transparent 0 27%, #000 27.3% 69%, transparent 69.3%); }
+.weapon-ring::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: repeating-conic-gradient(from 22.5deg, #c2d0dc55 0deg .4deg, transparent .4deg 45deg); mask: radial-gradient(circle, transparent 0 27%, #000 27.3% 69%, transparent 69.3%); pointer-events: none; }
+.weapon-slot { position: absolute; left: calc(50% + var(--wx)); top: calc(50% + var(--wy)); transform: translate(-50%, -50%); width: 24%; height: 24%; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #e7ebee; }
+.weapon-slot svg { width: 68%; height: 57%; fill: currentColor; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
+.weapon-slot small { font: 12px ui-monospace, monospace; opacity: .7; }
+.weapon-slot.selected { color: #10202d; }
+.weapon-slot.unavailable { opacity: .22; }
+.wheel-center { position: absolute; inset: 38% 25%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; text-align: center; }
+.wheel-center strong { font-size: 17px; font-weight: 500; }
+.wheel-center span { font: 13px ui-monospace, monospace; color: #bdc9ce; }
+#scope { position: fixed; inset: 0; pointer-events: none; z-index: 20; background: radial-gradient(circle at center, transparent 0 35vh, #06090c 35.3vh); }
+#scope:before, #scope:after { content: ''; position: absolute; left: 50%; top: 50%; background: #090c10; transform: translate(-50%, -50%); }
+#scope:before { width: 70vh; height: 1px; }
+#scope:after { width: 1px; height: 70vh; }
+#scope span { position: absolute; top: calc(50% + 21vh); left: calc(50% + 15vh); font: 12px ui-monospace, monospace; color: #dae1db; }

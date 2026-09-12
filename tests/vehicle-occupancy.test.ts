@@ -6,6 +6,8 @@ import { DirectionalLight, HavokPlugin, MeshBuilder, NullEngine, PhysicsAggregat
 import type { Input } from '../src/core/Input';
 import type { WorldContract } from '../src/core/contracts';
 import { Character } from '../src/gameplay/Character';
+import { damageCharacter } from '../src/gameplay/CharacterDamage';
+import { bodyInjuryEffects, cloneBodyInjuries } from '../src/gameplay/Injuries';
 import { Player } from '../src/gameplay/Player';
 import { Population } from '../src/gameplay/Population';
 import { WantedSystem } from '../src/gameplay/Wanted';
@@ -46,13 +48,13 @@ test('carjacking preserves the visible driver actor and locks held throttle unti
   assert.equal(f.player.vehiclePhase, 'approaching');
   f.vehicles.control(f.car, { throttle: 1, steer: 1, lift: 1, brake: 0, handbrake: false });
   assert.deepEqual(f.car.input, parkedVehicleInput(f.car));
-  f.step(22);
+  for (let frame = 0; frame < 60 && f.player.vehiclePhase === 'approaching'; frame++) f.step(1);
   assert.equal(f.player.vehiclePhase, 'ejecting-driver');
-  f.step(20);
+  f.step(28);
   assert.ok(Vector3.Distance(driver.root.position, start) > .1, 'former driver moves out visibly before the callback');
   assert.equal(ejected, 0);
   assert.equal(f.player.exit(), false, 'repeated interact cannot interrupt the handoff');
-  f.step(80);
+  for (let frame = 0; frame < 240 && f.player.vehiclePhase !== 'seated'; frame++) f.step(1);
   assert.equal(ejected, 1); assert.ok(destination);
   assert.equal(driver.root.isDisposed(), false, 'the same hittable actor survives theft');
   assert.equal(f.player.occupancy.get(f.car), undefined);
@@ -65,7 +67,7 @@ test('carjacking preserves the visible driver actor and locks held throttle unti
   assert.equal(f.player.exit(), true); assert.equal(f.player.vehiclePhase, 'exiting');
   f.vehicles.control(f.car, { throttle: 1, steer: 1, lift: 1, brake: 0, handbrake: false });
   assert.deepEqual(f.car.input, parkedVehicleInput(f.car));
-  f.step(45); assert.ok(f.player.vehicle === null, `dismount must complete: ${f.player.vehiclePhase}; ${f.player.interactionMessage}`); assert.equal(f.player.vehiclePhase, 'on-foot');
+  for (let frame = 0; frame < 120 && f.player.vehiclePhase !== 'on-foot'; frame++) f.step(1); assert.ok(f.player.vehicle === null, `dismount must complete: ${f.player.vehiclePhase}; ${f.player.interactionMessage}`); assert.equal(f.player.vehiclePhase, 'on-foot');
   assert.equal(f.player.model.root.parent, null); assert.deepEqual(f.car.input, parkedVehicleInput(f.car));
 });
 
@@ -82,6 +84,23 @@ test('blocked driver door rejects carjacking without deleting crew or stealing c
   assert.equal(f.player.occupancy.canDrive(f.car), true);
 });
 
+test('a right-hand pilot seat requires the right door and releases the occupant on that side', async t => {
+  const f = await fixture(); t.after(() => f.dispose());
+  f.car.model.seat = new Vector3(.42, -.92, -.03);
+  const driver = new Character(f.scene, f.shadows, 'right-seat-pilot');
+  let destination: Vector3 | undefined;
+  f.player.occupancy.register(f.car, driver, () => true, point => { destination = point.clone(); });
+  assert.equal(f.player.enter(f.car), false);
+  assert.match(f.player.interactionMessage, /right/);
+  assert.equal(f.car.occupied, false);
+  f.player.teleport(new Vector3(2.5, .94, 0));
+  assert.equal(f.player.enter(f.car), true);
+  for (let frame = 0; frame < 240 && f.player.vehiclePhase !== 'seated'; frame++) f.step(1);
+  assert.equal(f.player.vehiclePhase, 'seated');
+  assert.ok(destination && Vector3.Dot(destination.subtract(f.car.root.position), f.car.root.right) > f.car.tuning.width / 2);
+  assert.ok(f.player.model.root.position.equalsWithEpsilon(f.car.model.seat, .001));
+});
+
 test('nearby entrant capsule does not block the former driver exit query', async t => {
   const f = await fixture(); t.after(() => f.dispose());
   const driver = new Character(f.scene, f.shadows, 'nearby-driver');
@@ -94,6 +113,58 @@ test('nearby entrant capsule does not block the former driver exit query', async
   const mask = f.player.controller.shape.filterMembershipMask;
   assert.equal(f.player.enter(f.car), true, f.player.interactionMessage);
   assert.equal(f.player.controller.shape.filterMembershipMask, mask, 'self-query exclusion restores physical collisions immediately');
+});
+
+test('critical seated drivers release the throttle and stay supported in the moving cabin', async t => {
+  const f = await fixture(); t.after(() => f.dispose());
+  const driver = new Character(f.scene, f.shadows, 'injured-driver');
+  let health = 100;
+  f.player.occupancy.register(f.car, driver, () => health > 0 && !driver.dead, () => {});
+  const impact = damageCharacter(driver, health, 55, 'projectile', {region: 'leftLeg'}); health = impact.health;
+  assert.equal(bodyInjuryEffects(driver.bodyInjuries).canStand, false);
+  assert.equal(f.player.occupancy.canDrive(f.car), false);
+  f.car.input = {throttle: 1, steer: 0, brake: 0, handbrake: false, lift: 0};
+  f.player.occupancy.update(1 / 60);
+  assert.deepEqual(f.car.input, parkedVehicleInput(f.car));
+  f.car.body.setLinearVelocity(new Vector3(0, 0, 3));
+  for (let frame = 0; frame < 60; frame++) {
+    f.physics._step(1 / 60); f.player.occupancy.update(1 / 60);
+    const seat = Vector3.TransformCoordinates(vehicleSeatOffset(f.car), f.car.root.computeWorldMatrix(true));
+    assert.ok(driver.root.position.equalsWithEpsilon(seat, .001), 'wounded driver follows the actual moving seat');
+    assert.equal(!!driver.root.metadata?.ragdollActive, false, 'no overlapping free ragdoll inside the chassis');
+    assert.ok(driver.jointPosition('head').y > driver.jointPosition('pelvis').y + .22, 'supported slump stays in the cabin');
+  }
+  health = damageCharacter(driver, health, 200, 'projectile', {region: 'torso'}).health;
+  f.player.occupancy.update(1 / 60);
+  assert.equal(health, 0); assert.equal(f.player.occupancy.canDrive(f.car), false);
+  assert.ok(driver.root.position.equalsWithEpsilon(Vector3.TransformCoordinates(vehicleSeatOffset(f.car), f.car.root.computeWorldMatrix(true)), .001));
+});
+
+test('the seated player loses driving capability after a critical injury without jumping out of the cabin', async t => {
+  const f = await fixture(); t.after(() => f.dispose());
+  assert.equal(f.player.enter(f.car), true);
+  for (let frame = 0; frame < 200 && f.player.vehiclePhase !== 'seated'; frame++) f.step(1);
+  assert.equal(f.player.vehiclePhase, 'seated');
+  let physicalHits = 0; f.player.onCharacterHit = () => {physicalHits++;};
+  f.player.hurt(55, false, {kind: 'projectile', region: 'rightLeg'});
+  f.step(120);
+  assert.equal(f.player.canDrive, false); assert.equal(physicalHits, 0);
+  assert.equal(f.player.model.root.parent, f.car.root);
+  assert.deepEqual(f.car.input, parkedVehicleInput(f.car));
+  assert.equal(f.player.health, 64.25);
+  assert.equal(f.player.exit(), false, 'incapacitated players cannot play a standing exit animation');
+  const saved = cloneBodyInjuries(f.player.model.bodyInjuries!);
+  const bodies = f.physics.getBodies().length;
+  for (let cycle = 0; cycle < 4; cycle++) {
+    f.player.exit(true);
+    f.player.restoreBodyState(saved);
+    f.player.restoreSeat(f.car);
+    f.step(2);
+    assert.equal(f.player.canDrive, false); assert.equal(f.player.model.root.parent, f.car.root);
+    assert.equal(f.player.vehiclePhase, 'seated');
+    assert.equal(f.physics.getBodies().length, bodies, 'restoring a seated injury allocates no ragdoll or extra controller');
+    assert.equal(f.player.model.bodyInjuries!.regions.rightLeg.severity, saved.regions.rightLeg.severity);
+  }
 });
 
 test('population traffic has visible drivers, drives away under physics and retains a fleeing victim after theft', async t => {
@@ -123,4 +194,30 @@ test('population traffic has visible drivers, drives away under physics and reta
   const fled = ped.model.root.position.clone();
   for (let frame = 0; frame < 120; frame++) population.update(1 / 60);
   assert.ok(Vector3.Distance(ped.model.root.position, fled) > 5, 'victim runs away instead of vanishing or returning to the seat');
+});
+
+test('seated traffic wounds reload in the existing cabin without physical on-foot recovery', async t => {
+  const f = await fixture(); t.after(() => f.dispose());
+  f.vehicles.remove(f.car);
+  const roads = Array.from({ length: 12 }, (_, id) => ({ id, x: 80 * Math.sin(id * Math.PI / 6), z: 80 * Math.cos(id * Math.PI / 6), next: [(id + 1) % 12] }));
+  const world: WorldContract = { spawn: Vector3.Zero(), roads, locations: [], obstacles: [], waterLevel: -.35, update() {}, dispose() {} };
+  const population = new Population(f.scene, f.shadows, world, f.vehicles, f.player, new WantedSystem());
+  population.policeEnabled = false;
+  const wounded = population.pedestrians.find(ped => ped.vehicleId === population.drivers[1].v.id)!;
+  let woundCar = population.drivers[1].v;
+  population.hurtPed(wounded, 55, 'projectile', {region: 'leftLeg'});
+  const savedWound = population.serializeCasualties();
+  assert.equal(savedWound.civilians.find(ped => ped.id === wounded.id)!.vehicleId, woundCar.id);
+  let physicalRestores = 0; population.onCharacterRestored = () => {physicalRestores++;};
+  for (let cycle = 0; cycle < 3; cycle++) {
+    const carSave=f.vehicles.serialize(woundCar);
+    population.drivers=population.drivers.filter(d=>d.v!==woundCar);
+    woundCar=f.vehicles.restore(carSave);
+    assert.equal(population.restoreCasualties(savedWound), true);
+    assert.equal(physicalRestores, 0, 'a saved seated wound never enters the on-foot ragdoll handoff');
+    assert.equal(wounded.vehicleId, woundCar.id); assert.equal(population.occupancy.canDrive(woundCar), false);
+    assert.equal(population.drivers.filter(d=>d.v===woundCar).length,1,'replaced saved car gets one driver association');
+    assert.equal(!!wounded.model.root.metadata?.ragdollActive, false);
+    assert.ok(wounded.model.root.position.equalsWithEpsilon(Vector3.TransformCoordinates(vehicleSeatOffset(woundCar), woundCar.root.computeWorldMatrix(true)), .001));
+  }
 });

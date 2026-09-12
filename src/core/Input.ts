@@ -9,6 +9,7 @@ export type Action =
   | "crouch"
   | "reload"
   | "switch"
+  | "weaponWheel"
   | "map"
   | "creative"
   | "repair"
@@ -26,7 +27,8 @@ export const DEFAULT_BINDINGS: Readonly<Record<Action, string>> = {
   interact: "KeyE",
   crouch: "KeyC",
   reload: "KeyR",
-  switch: "Tab",
+  switch: "AltLeft",
+  weaponWheel: "Tab",
   map: "KeyM",
   creative: "F2",
   repair: "KeyG",
@@ -37,7 +39,7 @@ export const DEFAULT_BINDINGS: Readonly<Record<Action, string>> = {
 };
 const ACTIONS = Object.keys(DEFAULT_BINDINGS) as Action[];
 const STORAGE_KEY = "leonida.controls";
-const RESERVED = new Set(["Escape", "Digit1", "Digit2", "Digit3", "KeyT"]);
+const RESERVED = new Set(["Escape", ...Array.from({length: 10}, (_, i) => `Digit${i}`), "KeyT"]);
 
 /** Standard Gamepad mapping (Xbox names; equivalent PlayStation positions work). */
 export const GAMEPAD_BINDINGS: Readonly<Partial<Record<number, Action>>> =
@@ -46,6 +48,7 @@ export const GAMEPAD_BINDINGS: Readonly<Partial<Record<number, Action>>> =
     1: "crouch",
     2: "reload",
     3: "interact",
+    4: "weaponWheel",
     5: "horn",
     8: "creative",
     9: "map",
@@ -55,7 +58,6 @@ export const GAMEPAD_BINDINGS: Readonly<Partial<Record<number, Action>>> =
     13: "repair",
   });
 const GAMEPAD_RAW: Readonly<Record<number, string>> = {
-  4: "Digit3",
   14: "Digit1",
   15: "Digit2",
 };
@@ -75,8 +77,10 @@ export function validateBindings(value: unknown): Record<Action, string> {
   const result = { ...DEFAULT_BINDINGS };
   if (!value || typeof value !== "object" || Array.isArray(value))
     return result;
+  const saved = { ...(value as Record<string, unknown>) };
+  if (!("weaponWheel" in saved) && saved.switch === "Tab") saved.switch = "AltLeft";
   for (const action of ACTIONS) {
-    const code = (value as Record<string, unknown>)[action];
+    const code = saved[action];
     if (!validBindingCode(code)) continue;
     const duplicate = ACTIONS.find(
       (other) => other !== action && result[other] === code,
@@ -105,8 +109,10 @@ export class Input {
   pressed = new Set<string>();
   dx = 0;
   dy = 0;
+  wheel = 0;
   bindings: Record<Action, string> = { ...DEFAULT_BINDINGS };
   gamepad: Gamepad | null = null;
+  private fireEdge = false;
   private mouseFire = false;
   private mouseAim = false;
   private padFire = false;
@@ -133,6 +139,7 @@ export class Input {
       );
     } catch {}
     const options = { signal: this.events.signal };
+    canvas.addEventListener("wheel", (e) => { this.wheel += Math.sign(e.deltaY); e.preventDefault(); }, { ...options, passive: false });
     window.addEventListener(
       "keydown",
       (e) => {
@@ -177,7 +184,7 @@ export class Input {
       options,
     );
     const pressMouseButton = (e: MouseEvent) => {
-      if (e.button === 0) this.mouseFire = true;
+      if (e.button === 0) { if (!this.mouseFire) this.fireEdge = true; this.mouseFire = true; }
       if (e.button === 2) this.mouseAim = true;
     };
     const releaseMouseButton = (e: MouseEvent) => {
@@ -198,6 +205,7 @@ export class Input {
       // Additional mouse-button chords use pointermove, rather than another
       // pointerdown. This preserves RMB aim + LMB fire without mouse fallback.
       if (this.mouseFire || this.mouseAim) {
+        if ((e.buttons & 1) !== 0 && !this.mouseFire) this.fireEdge = true;
         this.mouseFire = (e.buttons & 1) !== 0;
         this.mouseAim = (e.buttons & 2) !== 0;
       }
@@ -272,7 +280,7 @@ export class Input {
           if (!this.previousButtons[i]) this.padPressed.add(action);
         }
         if (i === 6) this.padAim = true;
-        if (i === 7) this.padFire = true;
+        if (i === 7) { this.padFire = true; if (!this.previousButtons[i]) this.fireEdge = true; }
         const raw = GAMEPAD_RAW[i];
         if (raw && !this.previousButtons[i]) {
           this.pressed.add(raw);
@@ -288,6 +296,7 @@ export class Input {
     if (left[1] > 0.08) this.padHeld.add("back");
   }
 
+  takeFire(): boolean { const edge = this.fireEdge; this.fireEdge = false; return edge; }
   down(action: Action) {
     return this.keys.has(this.bindings[action]) || this.padHeld.has(action);
   }
@@ -323,6 +332,7 @@ export class Input {
     return true;
   }
   clear() {
+    this.fireEdge = false;
     this.keys.clear();
     this.pressed.clear();
     this.padPressed.clear();
@@ -334,6 +344,7 @@ export class Input {
     this.padAim = false;
     this.dx = 0;
     this.dy = 0;
+    this.wheel = 0;
     // Opening an overlay must not re-trigger its still-held button on the following frame.
     this.previousButtons.forEach((held, index) => {
       if (held) this.blockedButtons.add(index);
@@ -364,6 +375,7 @@ export class Input {
     this.padRawPressed.clear();
     this.dx = 0;
     this.dy = 0;
+    this.wheel = 0;
   }
   dispose() {
     this.events.abort();

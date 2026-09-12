@@ -295,8 +295,8 @@ test("Babylon V2 ragdoll uses constrained bodies, physically falls, then safely 
     model.animate(1 / 60, 0);
     const bodyCount = f.physics.getBodies().length;
     reactions.hit(model, new Vector3(45, 12, 20));
-    assert.equal(f.physics.getBodies().length, bodyCount + 11);
-    assert.equal(reactions.active[0].ragdoll.getConstraints().length, 10);
+    assert.equal(f.physics.getBodies().length, bodyCount + 15);
+    assert.equal(reactions.active[0].ragdoll.getConstraints().length, 14);
     const pelvis = reactions.active[0].ragdoll.getAggregate(0).transformNode,
       start = pelvis.position.clone();
     f.step(100, (dt) => reactions.update(dt));
@@ -368,7 +368,7 @@ test("aimed weapon follows the firing direction at different pitches and yaws wh
   } finally { held.dispose(); model.dispose(); f.dispose(); }
 });
 
-test("fatal hit during recovery reactivates physics and bounded ragdolls release disposal observers", () => {
+test("fatal hit during recovery reactivates physics and frozen ragdolls retain exactly one cleanup observer until reset", () => {
   const f = fixture(),
     model = new Character(f.scene, f.shadows, "repeat-reaction"),
     reactions = new RagdollReactions(f.scene);
@@ -381,7 +381,7 @@ test("fatal hit during recovery reactivates physics and bounded ragdolls release
     reactions.hit(model, new Vector3(30, 5, 0), true);
     assert.equal(reactions.active[0].recovering, false);
     assert.equal(reactions.active[0].fatal, true);
-    assert.equal(f.physics.getBodies().length, baseline + 11);
+    assert.equal(f.physics.getBodies().length, baseline + 15);
     f.step(510, (dt) => reactions.update(dt));
     assert.equal(f.physics.getBodies().length, baseline);
     assert.equal(model.root.metadata.ragdollActive, true);
@@ -389,8 +389,12 @@ test("fatal hit during recovery reactivates physics and bounded ragdolls release
       model.root.onDisposeObservable.observers.filter(
         (observer) => !observer._willBeUnregistered,
       ).length,
-      observers,
+      observers + 1,
+      "a frozen casualty retains one lifecycle cleanup observer so disposing its actor releases the saved reaction",
     );
+    reactions.resetCharacter(model);
+    assert.equal(model.root.onDisposeObservable.observers.filter(observer => !observer._willBeUnregistered).length, observers,
+      "resetting that actor releases its retained cleanup observer");
   } finally {
     reactions.dispose();
     model.dispose();
@@ -439,14 +443,12 @@ test("Combat fire and melee use the normal public interfaces, dispatch officer i
   camera.getViewMatrix(true);
   let received = 0,
     resistance = 0;
-  const officer = { health: 100 };
-  const target = MeshBuilder.CreateBox(
-    "officer-target",
-    { width: 0.6, height: 1.8, depth: 0.4 },
-    f.scene,
-  );
-  target.position.set(0, 0.9, 5);
-  target.metadata = { officer };
+  const targetModel = new Character(f.scene, f.shadows, 'officer-target');
+  const officer = { health: 100, model: targetModel };
+  const target = targetModel.root;
+  target.position.set(0, 0, 5);
+  targetModel.animate(1 / 60, 0);
+  targetModel.parts.forEach(mesh => mesh.metadata = {...mesh.metadata, officer});
   target.computeWorldMatrix(true);
   const player = {
     model,
@@ -462,7 +464,7 @@ test("Combat fire and melee use the normal public interfaces, dispatch officer i
   };
   const population = {
     pedestrians: [],
-    officers: [],
+    officers: [officer],
     onCharacterHit: null,
     resist() {
       resistance++;
@@ -488,6 +490,7 @@ test("Combat fire and melee use the normal public interfaces, dispatch officer i
   );
   try {
     model.animate(0.2, 0, true);
+    combat.select(0); combat.handling.update(1);
     combat.fire();
     assert.equal(combat.ammo, 11);
     assert.equal(received, 32);
@@ -523,6 +526,7 @@ test("Combat fire and melee use the normal public interfaces, dispatch officer i
     combat.dispose();
     damage.dispose();
     model.dispose();
+    targetModel.dispose();
     f.dispose();
   }
 });

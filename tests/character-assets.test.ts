@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {DirectionalLight, LoadAssetContainerAsync, Material, Matrix, NullEngine, Scene, ShadowGenerator, Vector3, VertexBuffer, type Mesh} from '@babylonjs/core';
 import {Character} from '../src/gameplay/Character';
+import {applyBodyImpact, bodyInjuryEffects} from '../src/gameplay/Injuries';
 import {prepareCharacterAssets} from '../src/gameplay/characters/RocketboxSkin';
 async function fixture(){
  const engine=new NullEngine(),scene=new Scene(engine);scene.defaultMaterial=new Material('test/no-shader',scene);
@@ -108,10 +109,12 @@ test('visible player pelvis follows Havok ragdoll synchronization in the same re
    reactions.update(1/60);(f.scene.getPhysicsEngine() as import('@babylonjs/core').PhysicsEngineV2)._step(1/60);
    f.scene.onBeforeRenderObservable.notifyObservers(f.scene);
    f.scene.onBeforeActiveMeshesEvaluationObservable.notifyObservers(f.scene);
-   // The invisible procedural torso need not have evaluated its world matrix yet.
-   // Havok anchors the driver to Character.root, and the physical pelvis is the
-   // authoritative same-frame location we need the visible mesh to follow.
-   const expected=reactions.active[0].ragdoll.getAggregate(0).transformNode.position,actual=importedPelvis.computeWorldMatrix(true).getTranslation();
+   // The fitted outfit collider has a center offset from the anatomical pelvis.
+   // Reconstruct the joint attachment from this native body's current transform,
+   // independently of the driver and imported skeleton synchronization.
+   const reaction=reactions.active[0],body=reaction.ragdoll.getAggregate(0).transformNode,binding=reaction.bones[0];
+   const nativeFrame=Matrix.Compose(Vector3.One(),body.rotationQuaternion!.multiply(binding.initialWorldRotation),body.position);
+   const expected=Vector3.TransformCoordinates(binding.offset.negate(),nativeFrame),actual=importedPelvis.computeWorldMatrix(true).getTranslation();
    assert.ok(Vector3.Distance(character.skeleton.bones[0].getAbsolutePosition(character.root),expected)<.001,'driver skeleton follows this physics step');
    assert.ok(Vector3.Distance(expected,actual)<.001,`visible pelvis lagged physics at frame ${n}: expected ${expected.asArray()}, actual ${actual.asArray()}`);movement=Math.max(movement,Math.abs(actual.x));
   }
@@ -129,4 +132,31 @@ test('visible player pelvis follows Havok ragdoll synchronization in the same re
   for(let n=0;n<60;n++){reactions.update(1/60);f.scene.onBeforeRenderObservable.notifyObservers(f.scene);f.scene.onBeforeActiveMeshesEvaluationObservable.notifyObservers(f.scene);}
   assert.ok(Vector3.Distance(frozen,importedPelvis.computeWorldMatrix(true).getTranslation())<.001,'frozen corpse keeps its visible pose after physical bodies are released');
  }finally{reactions.dispose();character?.dispose();floor.dispose();f.dispose();}
+});
+
+
+test('critical licensed occupants slump and guard while preserving seated pelvis, legs and cabin clearance', async context => {
+ const f=await fixture();try {
+  await prepareCharacterAssets(f.scene,'http://characters.test/',f.loader);
+  for (const female of [false,true]) for (const profile of ['low','reclined'] as const) {
+   const character=new Character(f.scene,f.shadows,female?'Lucia':'Jason','#fff',female,undefined,{licensedPlayerSkin:true});
+   try {
+    character.animate(1/60,0); character.pose('seated',1,profile);
+    const legs=character.skeleton.bones.filter(b=>/pelvis|Thigh|Calf|Foot/.test(b.name));
+    const before=legs.map(b=>[...b.getLocalMatrix().m]);
+    const head=character.jointPosition('head').clone();
+    character.bodyInjuries=applyBodyImpact(null,{region:'torso',kind:'projectile',damage:55,health:18});
+    character.applySeatedInjuryPose(bodyInjuryEffects(character.bodyInjuries));
+    assert.deepEqual(legs.map(b=>[...b.getLocalMatrix().m]),before,'critical injury must not crawl inside a vehicle');
+    assert.ok(character.jointPosition('head').y<head.y-.025,'critical occupant visibly slumps');
+    f.scene.onBeforeActiveMeshesEvaluationObservable.notifyObservers(f.scene);
+    const vertices=character.parts.slice(1).flatMap(skinnedVertices), seatY=profile==='low'?-.92:-1.30;
+    const floor=Math.min(...vertices.map(v=>v.y))+seatY,roof=Math.max(...vertices.map(v=>v.y))+seatY;
+    assert.ok(floor>=(profile==='low'?-.25:-.49),'slump keeps all shoes and body above cabin floor');
+    assert.ok(roof<=(profile==='low'?.94:.51),'slump keeps head beneath cabin roof');
+    assert.ok(Math.max(...vertices.map(v=>v.z))<1.10,'guarding arms stay inside cabin length');
+    context.diagnostic(`${character.root.name} ${profile}: critical slump floor ${floor.toFixed(4)} m / roof ${roof.toFixed(4)} m.`);
+   } finally { character.dispose(); }
+  }
+ } finally { f.dispose(); }
 });

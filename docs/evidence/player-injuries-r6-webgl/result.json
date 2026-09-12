@@ -1,0 +1,850 @@
+{
+  "origin": "http://127.0.0.1:4273",
+  "backend": "webgl",
+  "method": "Normal sandbox spawn/settings, mouse aiming and pistol fire at six regions, delayed survival and normal save/load. Game diagnostics are read only; no direct game-state mutations.",
+  "checks": [
+    {
+      "label": "build",
+      "module": "/assets/index-BJRmjpwj.js",
+      "sha256": "201705ae30ee44b6c7bbbd1d86b0cced48901d1e0d9425f8b41a0741dd1355e1",
+      "world": "authored-860409-v8-street-objects",
+      "browser": "152.0.7977.83"
+    },
+    {
+      "label": "player-fire-exposure",
+      "backend": "WebGL2",
+      "simTime": 4.333333333333323,
+      "player": {
+        "health": 99.78149237913857,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0.0030955246288704935,
+              "healDelay": 35
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": false
+        },
+        "position": [
+          -816,
+          0.9399999403953552,
+          565.7133333333309
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -816.0000257268621,
+            1.6474321857094765,
+            565.6971610162873
+          ],
+          "chest": [
+            -816,
+            1.4374556317925453,
+            565.6990356445312
+          ],
+          "leftHand": [
+            -816.2710710167885,
+            0.9599364176392555,
+            565.6985450019711
+          ],
+          "rightHand": [
+            -815.7275282144547,
+            0.9777053371071815,
+            565.829943805933
+          ],
+          "leftFoot": [
+            -816.1060526221991,
+            0.19188765436410904,
+            565.8527022153139
+          ],
+          "rightFoot": [
+            -815.8950060456991,
+            0.22231817990541458,
+            565.462204515934
+          ]
+        },
+        "name": "Jason",
+        "speed": 3.699999999996635,
+        "heading": 0,
+        "canFire": false,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -815.9999999999999,
+        2.429573410241219,
+        560.6928998141253
+      ],
+      "forward": [
+        -2.232739216833088e-14,
+        -0.16685098477003843,
+        0.9859821240170982
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "weapon": 0,
+      "shots": 0,
+      "victim": null,
+      "creative": [],
+      "casualties": {
+        "version": 3,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 224,
+      "props": [
+        {
+          "id": "creative-prop-1789217877888-1",
+          "position": [
+            -816,
+            0.5499901175498962,
+            567
+          ],
+          "burning": 19.933333333333337,
+          "health": 57.19999999999999
+        }
+      ]
+    },
+    {
+      "label": "player-partial-torso",
+      "backend": "WebGL2",
+      "simTime": 7.449999999999979,
+      "player": {
+        "health": 89.5662611038667,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0.14781130102856596,
+              "healDelay": 35
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": false
+        },
+        "position": [
+          -816,
+          0.9399999403953552,
+          565.7133333333309
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.9999998402976,
+            1.6428702846169472,
+            565.7233759919181
+          ],
+          "chest": [
+            -816,
+            1.432915784418583,
+            565.719803144224
+          ],
+          "leftHand": [
+            -816.2566110193729,
+            0.9951687231659889,
+            565.8923313170671
+          ],
+          "rightHand": [
+            -815.7433889806271,
+            0.9951687231659889,
+            565.8923313170671
+          ],
+          "leftFoot": [
+            -816.1079999953508,
+            0.17299992591142654,
+            565.7183178719133
+          ],
+          "rightFoot": [
+            -815.8920000046492,
+            0.17299992591142654,
+            565.7183178719133
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 0,
+        "canFire": false,
+        "stanceHeight": 1.8
+      },
+      "camera": [
+        -815.9999999999999,
+        2.429573410241219,
+        560.7293248018176
+      ],
+      "forward": [
+        -2.2485978928144792e-14,
+        -0.16803607538443802,
+        0.9857808465218806
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "weapon": 0,
+      "shots": 0,
+      "victim": null,
+      "creative": [],
+      "casualties": {
+        "version": 3,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 224,
+      "props": [
+        {
+          "id": "creative-prop-1789217877888-1",
+          "position": [
+            -816,
+            0.5499901175498962,
+            567
+          ],
+          "burning": 16.816666666666848,
+          "health": 19.799999999999677
+        }
+      ]
+    },
+    {
+      "label": "player-critical-crawl",
+      "backend": "WebGL2",
+      "simTime": 23.516666666666612,
+      "player": {
+        "health": 48.48682838191574,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0.7297699312562244,
+              "healDelay": 86.5000000000002
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -815.9563683775331,
+          0.37499994039535517,
+          565.2000276338636
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.9141303046591,
+            0.26604748517274857,
+            564.6856563686631
+          ],
+          "chest": [
+            -815.9301542199119,
+            0.22924042493104935,
+            564.8861559351327
+          ],
+          "leftHand": [
+            -815.6296905746955,
+            0.13500025123357773,
+            564.6088858459692
+          ],
+          "rightHand": [
+            -816.2086054098444,
+            0.13500072807073593,
+            564.573469021334
+          ],
+          "leftFoot": [
+            -815.8522679972075,
+            0.2601912096142769,
+            566.1181099066988
+          ],
+          "rightFoot": [
+            -816.1716706465917,
+            0.26019126921892166,
+            566.0985684438557
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 3.0804882826109177,
+        "canFire": false,
+        "stanceHeight": 0.64
+      },
+      "camera": [
+        -815.9563683778086,
+        1.8645734074330786,
+        560.2160191057043
+      ],
+      "forward": [
+        5.4506011444597494e-11,
+        -0.16803607538443802,
+        0.9857808465218806
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "weapon": 0,
+      "shots": 0,
+      "victim": null,
+      "creative": [],
+      "casualties": {
+        "version": 3,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 239,
+      "props": [
+        {
+          "id": "creative-prop-1789217877888-1",
+          "position": [
+            -816,
+            0.5499901175498962,
+            567
+          ],
+          "burning": 0,
+          "health": 0
+        }
+      ]
+    },
+    {
+      "label": "player-crawled-away",
+      "backend": "WebGL2",
+      "simTime": 26.933333333333085,
+      "player": {
+        "health": 48.48682838191574,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0.7297699312562244,
+              "healDelay": 83.08333333333373
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -815.9562615533674,
+          0.37499994039535517,
+          563.8606291762734
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.9644713345915,
+            0.2660474553704262,
+            563.3476924300194
+          ],
+          "chest": [
+            -815.9615965597332,
+            0.22924039512872696,
+            563.5488108098507
+          ],
+          "leftHand": [
+            -815.6662623882294,
+            0.15784606337547302,
+            563.1978624463081
+          ],
+          "rightHand": [
+            -816.246259778738,
+            0.13500068336725235,
+            563.3095546960831
+          ],
+          "leftFoot": [
+            -815.7962615936995,
+            0.2601912245154381,
+            564.7737072706223
+          ],
+          "rightFoot": [
+            -816.1822605729103,
+            0.26019125431776047,
+            564.6823235750198
+          ]
+        },
+        "name": "Jason",
+        "speed": 0.44399999999768625,
+        "heading": 3.141592653589793,
+        "canFire": false,
+        "stanceHeight": 0.64
+      },
+      "camera": [
+        -815.9562615533677,
+        1.8645734102412181,
+        558.9100377196588
+      ],
+      "forward": [
+        4.5266867708733225e-14,
+        -0.1691380016721478,
+        0.9855923784153126
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "weapon": 0,
+      "shots": 0,
+      "victim": null,
+      "creative": [],
+      "casualties": {
+        "version": 3,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 241,
+      "props": [
+        {
+          "id": "creative-prop-1789217877888-1",
+          "position": [
+            -816,
+            0.5499901175498962,
+            567
+          ],
+          "burning": 0,
+          "health": 0
+        }
+      ]
+    },
+    {
+      "label": "player-injury-save-restored",
+      "backend": "WebGL2",
+      "simTime": 28.266666666666342,
+      "player": {
+        "health": 48.48682838191574,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0.7297699312562244,
+              "healDelay": 82.08333333333378
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -815.9562615533674,
+          0.37499994039535517,
+          563.8606291762734
+        ],
+        "physical": false,
+        "handoff": true,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.9697905192152,
+            0.2630475386977196,
+            563.3447417020798
+          ],
+          "chest": [
+            -815.9650585297495,
+            0.22624046355485916,
+            563.5458247661591
+          ],
+          "leftHand": [
+            -815.6662617623806,
+            0.22593038529157639,
+            563.2506228685379
+          ],
+          "rightHand": [
+            -816.2462650239468,
+            0.22593087702989578,
+            563.2506257295609
+          ],
+          "leftFoot": [
+            -815.796264782548,
+            0.400087408721447,
+            564.7706240415573
+          ],
+          "rightFoot": [
+            -816.1162645816803,
+            0.4000873789191246,
+            564.7706241607666
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 3.141592653589793,
+        "canFire": false,
+        "stanceHeight": 0.64
+      },
+      "camera": [
+        -815.9562615533675,
+        1.8645734102412184,
+        558.8766206479828
+      ],
+      "forward": [
+        2.2485978928144792e-14,
+        -0.16803607538443802,
+        0.9857808465218806
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "weapon": 0,
+      "shots": 0,
+      "victim": null,
+      "creative": [],
+      "casualties": {
+        "version": 3,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 249,
+      "props": [
+        {
+          "id": "creative-prop-1789217877888-1",
+          "position": [
+            -816,
+            0.5499901175498962,
+            567
+          ],
+          "burning": 0,
+          "health": 0
+        }
+      ]
+    },
+    {
+      "label": "player-injury-retained",
+      "backend": "WebGL2",
+      "simTime": 36.46666666666588,
+      "player": {
+        "health": 48.48682838191574,
+        "dead": false,
+        "body": {
+          "version": 1,
+          "regions": {
+            "head": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "torso": {
+              "severity": 0.7297699312562244,
+              "healDelay": 73.88333333333425
+            },
+            "leftArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightArm": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "leftLeg": {
+              "severity": 0,
+              "healDelay": 0
+            },
+            "rightLeg": {
+              "severity": 0,
+              "healDelay": 0
+            }
+          },
+          "systemic": {
+            "severity": 0,
+            "healDelay": 0
+          },
+          "fallRemaining": 0,
+          "riseRemaining": 0,
+          "critical": true
+        },
+        "position": [
+          -815.9562615533674,
+          0.37499994039535517,
+          563.8606291762734
+        ],
+        "physical": false,
+        "handoff": false,
+        "skin": [
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive0",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive1",
+            "bones": 80
+          },
+          {
+            "name": "Jason/rocketbox/m002_hipoly_81_bones_opacity_primitive2",
+            "bones": 80
+          }
+        ],
+        "joints": {
+          "head": [
+            -815.9447998730466,
+            0.26604752987623215,
+            563.3446958065033
+          ],
+          "chest": [
+            -815.9487934699282,
+            0.22924043983221054,
+            563.545794904232
+          ],
+          "leftHand": [
+            -815.6662589609623,
+            0.13499897718429565,
+            563.2506269812584
+          ],
+          "rightHand": [
+            -816.2462617754936,
+            0.13500004261732101,
+            563.2506292462349
+          ],
+          "leftFoot": [
+            -815.7962616533041,
+            0.2601912245154381,
+            564.770628452301
+          ],
+          "rightFoot": [
+            -816.1162614524364,
+            0.2601911947131157,
+            564.7706285715103
+          ]
+        },
+        "name": "Jason",
+        "speed": 0,
+        "heading": 3.141592653589793,
+        "canFire": false,
+        "stanceHeight": 0.64
+      },
+      "camera": [
+        -815.9562615533675,
+        1.8645734102412184,
+        558.8766206447606
+      ],
+      "forward": [
+        2.2485978928144792e-14,
+        -0.16803607538443802,
+        0.9857808465218806
+      ],
+      "yaw": 0,
+      "pitch": 0.08,
+      "weapon": 0,
+      "shots": 0,
+      "victim": null,
+      "creative": [],
+      "casualties": {
+        "version": 3,
+        "civilians": [],
+        "guards": [],
+        "police": [],
+        "nextOfficerId": 1
+      },
+      "physicalBodies": 237,
+      "props": [
+        {
+          "id": "creative-prop-1789217877888-1",
+          "position": [
+            -816,
+            0.5499901175498962,
+            567
+          ],
+          "burning": 0,
+          "health": 0
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

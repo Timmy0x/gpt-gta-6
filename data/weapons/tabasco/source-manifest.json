@@ -1,0 +1,39 @@
+{
+  "author": "Tabasco",
+  "source": "https://opengameart.org/content/various-small-arms-assault-rifles-sniper-pistol",
+  "download": "https://opengameart.org/sites/default/files/smallarms.zip",
+  "license": "CC0-1.0; author public domain update 2023-12-15",
+  "retrieved": "2026-09-09",
+  "archiveSha256": "fac981bb2df3dac9574e3567ef40df0fa5b77f0d6be0a36b83bdd95fcc86a492",
+  "status": "Inspection only; not yet runtime assets",
+  "files": [
+    {
+      "name": "ak47.blend",
+      "sha256": "06800fadab59b5539df5b0d3393e104933a5ce13ce5ba21af9d6e689f1f90225"
+    },
+    {
+      "name": "dragunov.blend",
+      "sha256": "ccdc960c722b58752cf33cd04f391b7fb9ea9a2352d4299c3605c409d5868eda"
+    },
+    {
+      "name": "g3a3.blend",
+      "sha256": "64ec872fc0620cc10b3ed5b197f91ff31a050a87d13faca112eaa05d3902fda5"
+    },
+    {
+      "name": "l85.blend",
+      "sha256": "9afacce625fb40804e13911fca1371106b50163146646036e1aacf15125a2250"
+    },
+    {
+      "name": "m1911.blend",
+      "sha256": "062b7ed5b6fa76c2222b4477d6c02ccac79f1639385c9c981bf742d96b97bb16"
+    },
+    {
+      "name": "m4.blend",
+      "sha256": "2f421dbe336413b4a8d34b89ca7068f1fd7d81c892aef17789d57f0ae807c3a7"
+    },
+    {
+      "name": "mosin9130.blend",
+      "sha256": "15b9a2b95811898b3bb82291fb6fc076d0a5442123f8852a1e79ccc8401ffbcf"
+    }
+  ]
+}

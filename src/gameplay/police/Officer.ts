@@ -3,6 +3,8 @@ import {
   Color3,
   DynamicTexture,
   MeshBuilder,
+  Matrix,
+  Quaternion,
   PBRMaterial,
   PhysicsCharacterController,
   Vector3,
@@ -12,6 +14,9 @@ import {
   type ShadowGenerator,
 } from "@babylonjs/core";
 import { Character } from "../Character";
+import { blockedCrawlEffects, bodyInjuryEffects } from '../Injuries';
+import { CrawlingCollider } from '../CrawlingCollider';
+import { MovementQueries } from '../MovementQueries';
 export type OfficerRole = "patrol" | "swat" | "military";
 export type OfficerState =
   | "riding"
@@ -33,6 +38,8 @@ export class Officer {
   deadTime = 0;
   private materials: PBRMaterial[] = [];
   private textures: DynamicTexture[] = [];
+  private crawl: CrawlingCollider;
+  private queries: MovementQueries;
   weapon: Mesh;
   flash: Mesh;
   constructor(
@@ -43,6 +50,8 @@ export class Officer {
     shadows: ShadowGenerator,
     public seat = 0,
   ) {
+    this.crawl = new CrawlingCollider(scene);
+    this.queries = new MovementQueries(scene, () => this.crawl.queryExclusions(this.controller));
     this.health = role === "military" ? 140 : role === "swat" ? 150 : 100;
     this.model = new Character(
       scene,
@@ -87,6 +96,17 @@ export class Officer {
       shadows.addShadowCaster(mesh);
       return mesh;
     };
+    const attachEquipment = (mesh: Mesh, joint: string) => {
+      const bone = this.model.skeleton.bones.find(b => b.name.endsWith('/' + joint))!;
+      this.model.skeleton.computeAbsoluteMatrices(true);
+      this.model.skeleton.prepare(true);
+      const world = mesh.computeWorldMatrix(true).clone();
+      const parentWorld = bone.getFinalMatrix().multiply(this.model.torso.computeWorldMatrix(true));
+      const local = world.multiply(Matrix.Invert(parentWorld));
+      mesh.attachToBone(bone, this.model.torso);
+      mesh.rotationQuaternion = Quaternion.Identity();
+      local.decompose(mesh.scaling, mesh.rotationQuaternion, mesh.position);
+    };
     box("duty-belt", 0.35, 0.07, 0.27, 0, 1.02, 0);
     box("radio", 0.07, 0.12, 0.06, -0.17, 1.32, 0.14);
     box("badge", 0.055, 0.072, 0.013, 0.092, 1.4, 0.146, badge);
@@ -128,6 +148,14 @@ export class Officer {
       box("marked-back", 0.31, 0.08, 0.008, 0, 1.41, -0.156, label);
       box("marked-front", 0.23, 0.063, 0.008, 0, 1.28, 0.157, label);
     }
+    for (const mesh of this.model.parts) {
+      const name = mesh.name.slice(id.length + 1);
+      const joint = name === 'duty-belt' ? 'pelvis' : name === 'headwear' ? 'head'
+        : name === 'shoulder-patch' ? 'rightArm' : name === 'reserve-armband' ? 'leftArm'
+        : ['radio', 'badge', 'ballistic-vest', 'field-pack', 'marked-back', 'marked-front'].includes(name) ? 'chest' : null;
+      if (joint) attachEquipment(mesh, joint);
+    }
+    shadows.addShadowCaster(helmet);
     this.weapon = box(
       role !== "patrol" ? "carbine" : "sidearm",
       0.055,
@@ -189,22 +217,40 @@ export class Officer {
   }
   move(dt: number, direction: Vector3, speed: number, aim: boolean) {
     if (!this.controller) return;
+    if (this.model.root.metadata?.ragdollHandoffActive) speed = 0;
+    else if (direction.lengthSquared() > .001) {
+      const yaw = this.model.root.rotation.y, desired = Math.atan2(direction.x, direction.z);
+      const delta = Math.atan2(Math.sin(desired - yaw), Math.cos(desired - yaw));
+      this.model.root.rotation.y += Math.max(-dt * 4, Math.min(dt * 4, delta));
+    }
+    let injuries = bodyInjuryEffects(this.model.bodyInjuries);
+    if (injuries.mode === 'crawling' || injuries.mode === 'down') this.crawl.apply(this.controller, this.model.root.rotation.y);
+    else if (this.controller.shape === this.crawl.shape) {
+      const standing = this.controller.getPosition().add(new Vector3(0, .9 - this.controller.footOffset, 0));
+      if (this.queries.clear(standing)) { this.controller.setShapeOptions({capsuleHeight: 1.8, capsuleRadius: .34}); this.controller.maxStepHeight = .38; }
+      else { if (this.model.bodyInjuries) this.model.bodyInjuries.riseRemaining = 3; injuries = blockedCrawlEffects(injuries); }
+    }
+    speed = Math.min((injuries.canSprint ? speed : Math.min(speed, 1.35)) * injuries.speedScale, injuries.maxSpeed);
+    aim &&= injuries.canAim;
     const support = this.controller.checkSupport(dt, new Vector3(0, -1, 0));
     const previous = this.controller.getVelocity();
     const grounded =
       support.supportedState === CharacterSupportedState.SUPPORTED;
+    const crawling = injuries.mode === 'crawling' || injuries.mode === 'down';
+    const travel = crawling ? this.model.root.forward.scale(speed * Math.max(0, Vector3.Dot(direction, this.model.root.forward))) : direction.scale(speed);
+    const start = this.controller.getPosition().clone();
     this.controller.setVelocity(
       new Vector3(
-        direction.x * speed,
+        travel.x,
         grounded ? Math.max(0, previous.y) : previous.y - 9.81 * dt,
-        direction.z * speed,
+        travel.z,
       ),
     );
     this.controller.integrate(dt, support, new Vector3(0, -9.81, 0));
-    this.model.root.position.copyFrom(this.controller.getPosition()).y -= 0.9;
-    if (direction.lengthSquared() > 0.001)
-      this.model.root.rotation.y = Math.atan2(direction.x, direction.z);
-    this.model.animate(dt, speed, aim, false);
+    this.model.root.position.copyFrom(this.controller.getPosition()).y -= this.controller.footOffset;
+    const actualSpeed = Math.hypot(this.controller.getPosition().x - start.x, this.controller.getPosition().z - start.z) / Math.max(.001, dt);
+    this.model.animate(dt, actualSpeed, aim, false);
+    this.model.applyInjuryPose(injuries, dt, actualSpeed);
     this.model.skeleton.computeAbsoluteMatrices(true);
     this.model.skeleton.prepare(true);
     this.weapon.setEnabled(aim);
@@ -212,6 +258,7 @@ export class Officer {
   dispose() {
     this.controller?.dispose();
     this.controller = null;
+    this.queries.dispose(); this.crawl.dispose();
     this.weapon.dispose();
     this.model.dispose();
     this.textures.forEach((t) => t.dispose());
