@@ -1,0 +1,464 @@
+{
+  "parts": [
+    {
+      "name": "Door_Front_Left--Black",
+      "group": "Door_Front_Left",
+      "vertices": 364,
+      "triangles": 492,
+      "material": "Black",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--Black",
+      "group": "Door_Front_Right",
+      "vertices": 364,
+      "triangles": 492,
+      "material": "Black",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--PolishedAluminiumWhite_Inst",
+      "group": "Door_Front_Left",
+      "vertices": 120,
+      "triangles": 172,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--PolishedAluminiumWhite_Inst",
+      "group": "Door_Front_Right",
+      "vertices": 120,
+      "triangles": 172,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--plastiCbLACK",
+      "group": "Vehicle_Base",
+      "vertices": 358,
+      "triangles": 294,
+      "material": "plastiCbLACK",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--plastiCbLACK",
+      "group": "Door_Front_Right",
+      "vertices": 14,
+      "triangles": 6,
+      "material": "plastiCbLACK",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--Vh_Car_BmwGranTourer_GrillMat",
+      "group": "Vehicle_Base",
+      "vertices": 840,
+      "triangles": 1064,
+      "material": "Vh_Car_BmwGranTourer_GrillMat",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 51,
+      "triangles": 66,
+      "material": "GlassInstance",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 51,
+      "triangles": 66,
+      "material": "GlassInstance",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "Vehicle_Base--Vh_Car_BmwGrandTourier_Mat--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 16,
+      "triangles": 18,
+      "material": "Vh_Car_BmwGrandTourier_Mat",
+      "role": "lamp"
+    },
+    {
+      "name": "Vehicle_Base--Vh_Car_BmwGrandTourier_Mat--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 16,
+      "triangles": 18,
+      "material": "Vh_Car_BmwGrandTourier_Mat",
+      "role": "lamp"
+    },
+    {
+      "name": "Door_Front_Right--MI_BodyWStaticMesh3",
+      "group": "Door_Front_Right",
+      "vertices": 400,
+      "triangles": 332,
+      "material": "MI_BodyWStaticMesh3",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--MI_BodyWStaticMesh3",
+      "group": "Vehicle_Base",
+      "vertices": 2973,
+      "triangles": 4099,
+      "material": "MI_BodyWStaticMesh3",
+      "role": "paint"
+    },
+    {
+      "name": "Door_Front_Left--MI_BodyWStaticMesh3",
+      "group": "Door_Front_Left",
+      "vertices": 225,
+      "triangles": 247,
+      "material": "MI_BodyWStaticMesh3",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--plasticgrey_Inst",
+      "group": "Vehicle_Base",
+      "vertices": 302,
+      "triangles": 264,
+      "material": "plasticgrey_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--plasticgrey_Inst",
+      "group": "Door_Front_Right",
+      "vertices": 64,
+      "triangles": 54,
+      "material": "plasticgrey_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--plasticgrey_Inst",
+      "group": "Door_Front_Left",
+      "vertices": 64,
+      "triangles": 54,
+      "material": "plasticgrey_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--PolishedAluminiumWhite_Inst",
+      "group": "Vehicle_Base",
+      "vertices": 178,
+      "triangles": 154,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--PolishedAluminiumWhite_Inst",
+      "group": "Door_Front_Right",
+      "vertices": 41,
+      "triangles": 31,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--PolishedAluminiumWhite_Inst",
+      "group": "Door_Front_Left",
+      "vertices": 41,
+      "triangles": 31,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 66,
+      "triangles": 100,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 15,
+      "triangles": 16,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 15,
+      "triangles": 16,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 24,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 24,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 78,
+      "triangles": 100,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Door_Front_Right--GlassInstance",
+      "group": "Door_Front_Right",
+      "vertices": 40,
+      "triangles": 40,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Door_Front_Left--GlassInstance",
+      "group": "Door_Front_Left",
+      "vertices": 40,
+      "triangles": 40,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--Vh_Car_BmwGrandTourier_Mat",
+      "group": "Vehicle_Base",
+      "vertices": 196,
+      "triangles": 96,
+      "material": "Vh_Car_BmwGrandTourier_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--Vh_Car_BmwGrandTourier_Mat",
+      "group": "Door_Front_Left",
+      "vertices": 172,
+      "triangles": 84,
+      "material": "Vh_Car_BmwGrandTourier_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--Vh_Car_BmwGrandTourier_Mat--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 63,
+      "triangles": 88,
+      "material": "Vh_Car_BmwGrandTourier_Mat",
+      "role": "lamp"
+    },
+    {
+      "name": "Vehicle_Base--Vh_Car_BmwGrandTourier_Mat--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 63,
+      "triangles": 88,
+      "material": "Vh_Car_BmwGrandTourier_Mat",
+      "role": "lamp"
+    },
+    {
+      "name": "Door_Front_Left--Rubber_Inst",
+      "group": "Door_Front_Left",
+      "vertices": 63,
+      "triangles": 46,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--Rubber_Inst",
+      "group": "Vehicle_Base",
+      "vertices": 2222,
+      "triangles": 3175,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--Rubber_Inst",
+      "group": "Door_Front_Right",
+      "vertices": 65,
+      "triangles": 48,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--BMWLogo",
+      "group": "Vehicle_Base",
+      "vertices": 184,
+      "triangles": 216,
+      "material": "BMWLogo",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--M_LicensePlate",
+      "group": "Vehicle_Base",
+      "vertices": 24,
+      "triangles": 12,
+      "material": "M_LicensePlate",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--Vh_Car_BmwGranTourer_TyreMat",
+      "group": "Wheel_Rear_Left",
+      "vertices": 82,
+      "triangles": 80,
+      "material": "Vh_Car_BmwGranTourer_TyreMat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--Vh_Car_BmwGranTourer_TyreMat",
+      "group": "Wheel_Front_Left",
+      "vertices": 82,
+      "triangles": 80,
+      "material": "Vh_Car_BmwGranTourer_TyreMat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--Vh_Car_BmwGranTourer_TyreMat",
+      "group": "Wheel_Rear_Right",
+      "vertices": 82,
+      "triangles": 80,
+      "material": "Vh_Car_BmwGranTourer_TyreMat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--Vh_Car_BmwGranTourer_TyreMat",
+      "group": "Wheel_Front_Right",
+      "vertices": 82,
+      "triangles": 80,
+      "material": "Vh_Car_BmwGranTourer_TyreMat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--Rubber_Inst",
+      "group": "Wheel_Rear_Left",
+      "vertices": 1880,
+      "triangles": 3600,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--Rubber_Inst",
+      "group": "Wheel_Front_Left",
+      "vertices": 1880,
+      "triangles": 3600,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--Rubber_Inst",
+      "group": "Wheel_Rear_Right",
+      "vertices": 1880,
+      "triangles": 3600,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--Rubber_Inst",
+      "group": "Wheel_Front_Right",
+      "vertices": 1880,
+      "triangles": 3600,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.921437873840332,
+      0.2943926978111267,
+      1.4697946548461915
+    ],
+    "Wheel_Front_Right": [
+      -0.921437873840332,
+      0.2943926978111267,
+      1.4697946548461915
+    ],
+    "Wheel_Rear_Right": [
+      -0.921437873840332,
+      0.2943926978111267,
+      -1.4683028411865235
+    ],
+    "Wheel_Rear_Left": [
+      0.921437873840332,
+      0.2943926978111267,
+      -1.4683028411865235
+    ],
+    "Door_Front_Left": [
+      0.9400000000000001,
+      0.9500000000000001,
+      0.96
+    ],
+    "Door_Front_Right": [
+      -0.9400000000000001,
+      0.9500000000000001,
+      0.96
+    ]
+  },
+  "materials": {
+    "Black": {
+      "textures": {},
+      "role": "interior"
+    },
+    "PolishedAluminiumWhite_Inst": {
+      "textures": {},
+      "role": "interior"
+    },
+    "plastiCbLACK": {
+      "textures": {},
+      "role": "interior"
+    },
+    "Vh_Car_BmwGranTourer_GrillMat": {
+      "textures": {
+        "ORM": "Vh_Car_BmwGranTourer_GrillMat_ORM",
+        "Normal": "Vh_Car_BmwGranTourer_GrillMat_Normal"
+      },
+      "role": "interior"
+    },
+    "GlassInstance": {
+      "textures": {},
+      "role": "glass"
+    },
+    "Vh_Car_BmwGrandTourier_Mat": {
+      "textures": {
+        "Diffuse": "Vh_Car_BmwGranTourer_LightMat_Normal"
+      },
+      "role": "interior"
+    },
+    "MI_BodyWStaticMesh3": {
+      "textures": {},
+      "role": "paint"
+    },
+    "plasticgrey_Inst": {
+      "textures": {},
+      "role": "interior"
+    },
+    "Rubber_Inst": {
+      "textures": {},
+      "role": "interior"
+    },
+    "BMWLogo": {
+      "textures": {
+        "Diffuse": "BMW_logo",
+        "Normal": "Vh_Car_BmwGranTourer_BmwMat_Normal"
+      },
+      "role": "interior"
+    },
+    "M_LicensePlate": {
+      "textures": {},
+      "role": "interior"
+    },
+    "Vh_Car_BmwGranTourer_TyreMat": {
+      "textures": {
+        "Diffuse": "Vh_Car_BmwGranTourer_TyreMat_BaseColor",
+        "Normal": "Vh_Car_BmwGranTourer_TyreMat_Normal"
+      },
+      "role": "interior"
+    }
+  },
+  "triangles": 27059,
+  "bytes": 2644696
+}

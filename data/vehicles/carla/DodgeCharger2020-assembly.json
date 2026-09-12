@@ -1,0 +1,64 @@
+{
+  "skeletal": "SK_ChargerCop-geometry.json",
+  "static": [
+    {
+      "path": "Charger2020_door/SM_DoorRR.uasset",
+      "group": "Door_RR",
+      "local": true
+    },
+    {
+      "path": "Charger2020_door/SM_DoorFR.uasset",
+      "group": "Door_FR",
+      "local": true
+    },
+    {
+      "path": "Charger2020_door/SM_DoorRL.uasset",
+      "group": "Door_RL",
+      "local": true
+    },
+    {
+      "path": "Charger2020_door/SM_DoorFL.uasset",
+      "group": "Door_FL",
+      "local": true
+    },
+    {
+      "path": "Charger2020_Glass/SM_DoorGlass_Ext1_RR.uasset",
+      "group": "Door_RR",
+      "local": false
+    },
+    {
+      "path": "Charger2020_Glass/SM_DoorGlass_Ext1_RF.uasset",
+      "group": "Door_FR",
+      "local": false
+    },
+    {
+      "path": "Charger2020_Glass/SM_DoorGlass_Ext1_LR.uasset",
+      "group": "Door_RL",
+      "local": false
+    },
+    {
+      "path": "Charger2020_Glass/SM_DoorGlass_Ext1_LF.uasset",
+      "group": "Door_FL",
+      "local": false
+    },
+    {
+      "path": "ChargerCop/SM_Lights_ChargerCop.uasset"
+    },
+    {
+      "path": "ChargerCop/Glass/SM_ChargerCop_Glass1.uasset"
+    },
+    {
+      "path": "ChargerCop/Glass/SM_ChargerCop_Glass2.uasset"
+    },
+    {
+      "path": "ChargerCop/Glass/SM_ChargerCop_Glass3.uasset",
+      "materials": [
+        "M_blueGlass_Chargercop",
+        "M_RedGlass_ChargerCop"
+      ]
+    }
+  ],
+  "materialOverrides": {
+    "MI_Charger2020_Bodywork": "MI_ChargerCop_Bodywork"
+  }
+}

@@ -35,6 +35,7 @@ export interface VehicleModel {
   materials: PBRMaterial[];
   deformation?: LatticeDeformation;
   seat?: Vector3;
+  seatPose?: "low" | "upright" | "reclined" | "rider";
 }
 export interface DoorVisual {
   /** Geometry is offset behind this front hinge; detached copies retain their actual shape. */

@@ -1,0 +1,55 @@
+{
+  "skeletal": "SM_Cybertruck_v2-geometry.json",
+  "static": [
+    {
+      "path": "SM_CyberTruck_DoorFL_SM_CyberTruckDoor_Front_L.uasset",
+      "group": "Door_FL",
+      "local": true
+    },
+    {
+      "path": "SM_Cybertruck_v2_lights.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "SM_CyberTruck_DoorFR_SM_CyberTruckDoor_Front_R.uasset",
+      "group": "Door_FR",
+      "local": true
+    },
+    {
+      "path": "SM_CyberTruck_DoorRL_SM_CyberTruckDoor_Rear_L.uasset",
+      "group": "Door_RL",
+      "local": true
+    },
+    {
+      "path": "SM_CyberTruck_DoorRR_SM_CyberTruckDoor_Rear_R.uasset",
+      "group": "Door_RR",
+      "local": true
+    },
+    {
+      "path": "Cybertruck_glass/SM_Cyber_Glass_ext_1.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_FL.uasset",
+      "group": "Door_FL",
+      "local": false
+    },
+    {
+      "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_RL.uasset",
+      "group": "Door_RL",
+      "local": false
+    },
+    {
+      "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_FR.uasset",
+      "group": "Door_FR",
+      "local": false
+    },
+    {
+      "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_RR.uasset",
+      "group": "Door_RR",
+      "local": false
+    }
+  ]
+}

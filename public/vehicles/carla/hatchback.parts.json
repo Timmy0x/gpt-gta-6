@@ -1,0 +1,379 @@
+{
+  "parts": [
+    {
+      "name": "Vehicle_Base--MI_LicensePlate_Mini2021",
+      "group": "Vehicle_Base",
+      "vertices": 32,
+      "triangles": 24,
+      "material": "MI_LicensePlate_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_BodyWork_Mini2021",
+      "group": "Vehicle_Base",
+      "vertices": 6646,
+      "triangles": 11876,
+      "material": "MI_BodyWork_Mini2021",
+      "role": "paint"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_wheels_mini2021",
+      "group": "Wheel_Front_Right",
+      "vertices": 4484,
+      "triangles": 7170,
+      "material": "MI_wheels_mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_wheels_mini2021",
+      "group": "Wheel_Rear_Right",
+      "vertices": 4484,
+      "triangles": 7170,
+      "material": "MI_wheels_mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_wheels_mini2021",
+      "group": "Wheel_Rear_Left",
+      "vertices": 4490,
+      "triangles": 7170,
+      "material": "MI_wheels_mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_wheels_mini2021",
+      "group": "Wheel_Front_Left",
+      "vertices": 4490,
+      "triangles": 7170,
+      "material": "MI_wheels_mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_Details_Mini2021",
+      "group": "Vehicle_Base",
+      "vertices": 42523,
+      "triangles": 49367,
+      "material": "MI_Details_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_Details_Mini2021",
+      "group": "Wheel_Front_Right",
+      "vertices": 17,
+      "triangles": 16,
+      "material": "MI_Details_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_Details_Mini2021",
+      "group": "Wheel_Rear_Right",
+      "vertices": 17,
+      "triangles": 16,
+      "material": "MI_Details_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_Details_Mini2021",
+      "group": "Wheel_Rear_Left",
+      "vertices": 17,
+      "triangles": 16,
+      "material": "MI_Details_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_Details_Mini2021",
+      "group": "Wheel_Front_Left",
+      "vertices": 17,
+      "triangles": 16,
+      "material": "MI_Details_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorL_Mini2021--0",
+      "group": "Door_L",
+      "vertices": 409,
+      "triangles": 756,
+      "material": "MI_BodyWork_Mini2021",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorL_Mini2021--1",
+      "group": "Door_L",
+      "vertices": 1975,
+      "triangles": 2698,
+      "material": "MI_Details_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorR_Mini2021--0",
+      "group": "Door_R",
+      "vertices": 1975,
+      "triangles": 2698,
+      "material": "MI_Details_Mini2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorR_Mini2021--1",
+      "group": "Door_R",
+      "vertices": 409,
+      "triangles": 756,
+      "material": "MI_BodyWork_Mini2021",
+      "role": "paint"
+    },
+    {
+      "name": "SM_GlassExt_1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 382,
+      "triangles": 660,
+      "material": "MI_GlassExt_Mini2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_GlassExt_1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 214,
+      "triangles": 376,
+      "material": "MI_GlassExt_Mini2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 57,
+      "triangles": 93,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 57,
+      "triangles": 93,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 122,
+      "triangles": 217,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 122,
+      "triangles": 217,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 132,
+      "triangles": 218,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 132,
+      "triangles": 218,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 250,
+      "triangles": 452,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_GlassExt_1--1--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 250,
+      "triangles": 452,
+      "material": "MI_GlassExt_Lights_Mini2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_DoorGlass_Ext1_FL--0",
+      "group": "Door_L",
+      "vertices": 74,
+      "triangles": 124,
+      "material": "MI_GlassExt_Mini2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_DoorGlass_Ext1_FR--0",
+      "group": "Door_R",
+      "vertices": 74,
+      "triangles": 124,
+      "material": "MI_GlassExt_Mini2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 57,
+      "triangles": 93,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 57,
+      "triangles": 93,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 243,
+      "triangles": 415,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 243,
+      "triangles": 415,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 116,
+      "triangles": 190,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 116,
+      "triangles": 190,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 322,
+      "triangles": 284,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 322,
+      "triangles": 284,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 230,
+      "triangles": 260,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Mini2021--0--component-9",
+      "group": "Vehicle_Base",
+      "vertices": 230,
+      "triangles": 260,
+      "material": "MI_Lights_Mini2021",
+      "role": "lamp"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.8978587,
+      0.37156574,
+      1.36971
+    ],
+    "Wheel_Front_Right": [
+      -0.8978587,
+      0.37156574,
+      1.3697128
+    ],
+    "Wheel_Rear_Right": [
+      -0.8978587,
+      0.37156574,
+      -1.6402322
+    ],
+    "Wheel_Rear_Left": [
+      0.8978587,
+      0.37156574,
+      -1.64023
+    ],
+    "Door_R": [
+      -1.0196538,
+      0.8748822,
+      0.75476425
+    ],
+    "Door_L": [
+      1.0196538,
+      0.8748822,
+      0.75476425
+    ]
+  },
+  "materials": {
+    "MI_LicensePlate_Mini2021": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_BodyWork_Mini2021": {
+      "textures": {
+        "Diffuse": "M_Bodywork_Mini2021_d"
+      },
+      "role": "paint"
+    },
+    "MI_wheels_mini2021": {
+      "textures": {
+        "Diffuse": "M_WheelsFixed_d",
+        "ORM": "M_WheelsFixed_ormh",
+        "Normal": "M_WheelsFixed_n"
+      },
+      "role": "interior"
+    },
+    "MI_Details_Mini2021": {
+      "textures": {
+        "Diffuse": "M_Interior_Mini2021_d",
+        "ORM": "M_Interior_Mini2021_ormh",
+        "Normal": "M_Interior_Mini2021_n"
+      },
+      "role": "interior"
+    },
+    "MI_GlassExt_Mini2021": {
+      "textures": {},
+      "role": "glass"
+    },
+    "MI_GlassExt_Lights_Mini2021": {
+      "textures": {},
+      "role": "lamp-glass"
+    },
+    "MI_Lights_Mini2021": {
+      "textures": {},
+      "role": "lamp"
+    }
+  },
+  "triangles": 102647,
+  "bytes": 9279720
+}

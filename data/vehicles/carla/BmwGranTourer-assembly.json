@@ -1,0 +1,42 @@
+{
+  "skeletal": "SM_BMWGrandTourer-repaired-geometry.json",
+  "static": [],
+  "authoredDoors": [
+    {
+      "name": "Door_Front_Left",
+      "hinge": [
+        96,
+        -94,
+        95
+      ],
+      "min": [
+        -24,
+        -113,
+        24
+      ],
+      "max": [
+        97,
+        -64,
+        151
+      ]
+    },
+    {
+      "name": "Door_Front_Right",
+      "hinge": [
+        96,
+        94,
+        95
+      ],
+      "min": [
+        -24,
+        64,
+        24
+      ],
+      "max": [
+        97,
+        113,
+        151
+      ]
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "parts": [
+    {
+      "name": "Vehicle_Base--MI_BodyWork_Sprinter",
+      "group": "Vehicle_Base",
+      "vertices": 14300,
+      "triangles": 20196,
+      "material": "MI_BodyWork_Sprinter",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--MI_Details2_Sprinter",
+      "group": "Vehicle_Base",
+      "vertices": 11312,
+      "triangles": 17276,
+      "material": "MI_Details2_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_Details2_Sprinter",
+      "group": "Wheel_Front_Right",
+      "vertices": 3303,
+      "triangles": 6084,
+      "material": "MI_Details2_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_Details2_Sprinter",
+      "group": "Wheel_Rear_Right",
+      "vertices": 3305,
+      "triangles": 6088,
+      "material": "MI_Details2_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_Details2_Sprinter",
+      "group": "Wheel_Rear_Left",
+      "vertices": 3305,
+      "triangles": 6088,
+      "material": "MI_Details2_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_Details2_Sprinter",
+      "group": "Wheel_Front_Left",
+      "vertices": 3305,
+      "triangles": 6088,
+      "material": "MI_Details2_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_Details1_Sprinter",
+      "group": "Vehicle_Base",
+      "vertices": 23465,
+      "triangles": 38407,
+      "material": "MI_Details1_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_LicensePlate_Sprinter",
+      "group": "Vehicle_Base",
+      "vertices": 48,
+      "triangles": 24,
+      "material": "MI_LicensePlate_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorL_Sprinter_Ext1_DoorL--0",
+      "group": "Door_L",
+      "vertices": 194,
+      "triangles": 330,
+      "material": "MI_GlassExt_Sprinter",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Sprinter_DoorL--0",
+      "group": "Door_L",
+      "vertices": 863,
+      "triangles": 1349,
+      "material": "MI_BodyWork_Sprinter",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Sprinter_DoorL--1",
+      "group": "Door_L",
+      "vertices": 2514,
+      "triangles": 4396,
+      "material": "MI_Details1_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Sprinter_DoorL--2",
+      "group": "Door_L",
+      "vertices": 414,
+      "triangles": 716,
+      "material": "MI_Details2_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Sprinter_DoorR--0",
+      "group": "Door_R",
+      "vertices": 862,
+      "triangles": 1349,
+      "material": "MI_BodyWork_Sprinter",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Sprinter_DoorR--1",
+      "group": "Door_R",
+      "vertices": 2514,
+      "triangles": 4396,
+      "material": "MI_Details1_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Sprinter_DoorR--2",
+      "group": "Door_R",
+      "vertices": 414,
+      "triangles": 716,
+      "material": "MI_Details2_Sprinter",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorR_Sprinter_Ext1_DoorR--0",
+      "group": "Door_R",
+      "vertices": 194,
+      "triangles": 330,
+      "material": "MI_GlassExt_Sprinter",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 275,
+      "triangles": 125,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 275,
+      "triangles": 125,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 940,
+      "triangles": 998,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 940,
+      "triangles": 998,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 380,
+      "triangles": 180,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 380,
+      "triangles": 180,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 640,
+      "triangles": 628,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Sprinter_Lights--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 640,
+      "triangles": 628,
+      "material": "MI_Lights_Sprinter",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 50,
+      "triangles": 86,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 50,
+      "triangles": 86,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 450,
+      "triangles": 813,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 450,
+      "triangles": 813,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 127,
+      "triangles": 238,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 127,
+      "triangles": 238,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 293,
+      "triangles": 541,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 293,
+      "triangles": 541,
+      "material": "MI_GlassExt_Sprinter_Lights",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--1--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 248,
+      "triangles": 432,
+      "material": "MI_GlassExt_Sprinter",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--1--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 117,
+      "triangles": 203,
+      "material": "MI_GlassExt_Sprinter",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Sprinter_Ext1--1--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 119,
+      "triangles": 204,
+      "material": "MI_GlassExt_Sprinter",
+      "role": "glass"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.8376173400000001,
+      0.37156574,
+      1.9323321999999998
+    ],
+    "Wheel_Front_Right": [
+      -0.8383927,
+      0.37156574,
+      1.9323321999999998
+    ],
+    "Wheel_Rear_Right": [
+      -0.8383927,
+      0.37156574,
+      -1.7291858
+    ],
+    "Wheel_Rear_Left": [
+      0.8376173400000001,
+      0.37156574,
+      -1.7291858
+    ],
+    "Door_L": [
+      0.9563806,
+      1.07713356,
+      1.6826495000000001
+    ],
+    "Door_R": [
+      -0.95721794,
+      1.07713356,
+      1.6826495000000001
+    ]
+  },
+  "materials": {
+    "MI_BodyWork_Sprinter": {
+      "textures": {
+        "Diffuse": "M_Bodywork_Van_d"
+      },
+      "role": "paint"
+    },
+    "MI_Details2_Sprinter": {
+      "textures": {
+        "Diffuse": "T_Details2_Sprinter_d",
+        "ORM": "T_Details2_Sprinter_orm",
+        "Normal": "T_Details2_Sprinter_n"
+      },
+      "role": "interior"
+    },
+    "MI_Details1_Sprinter": {
+      "textures": {
+        "Diffuse": "T_Details_Sprinter_d",
+        "ORM": "T_Details_Sprinter_orm",
+        "Normal": "T_Details_Sprinter_n"
+      },
+      "role": "interior"
+    },
+    "MI_LicensePlate_Sprinter": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_GlassExt_Sprinter": {
+      "textures": {},
+      "role": "glass"
+    },
+    "MI_Lights_Sprinter": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "MI_GlassExt_Sprinter_Lights": {
+      "textures": {},
+      "role": "lamp-glass"
+    }
+  },
+  "triangles": 121890,
+  "bytes": 11891848
+}

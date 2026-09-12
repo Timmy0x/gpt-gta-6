@@ -1,4 +1,5 @@
 import type { VehicleKind } from "../core/contracts";
+import { ROAD_CARS } from "./RoadCarCatalog";
 
 /** Project-authored tuning. SI units; these are not claimed Rockstar specifications. */
 export interface VehicleTuning {
@@ -17,6 +18,11 @@ export interface VehicleTuning {
   suspensionCompression: number;
 }
 export const VEHICLE_TUNING: Record<VehicleKind, VehicleTuning> = {
+  hatchback: ROAD_CARS.hatchback.tuning,
+  executive: ROAD_CARS.executive.tuning,
+  van: ROAD_CARS.van.tuning,
+  offroad: ROAD_CARS.offroad.tuning,
+  mpv: ROAD_CARS.mpv.tuning,
   coupe: {
     label: "Cobalt GT",
     mass: 1420,

@@ -8,6 +8,8 @@ export type QuaternionTuple = [number, number, number, number];
 /** Component slots refer to the deterministic model layout for this damage schema version. */
 export interface VehicleDamageState {
   schemaVersion: 1;
+  /** Source topology identity. Missing only in the original procedural saves. */
+  model?: string;
   panels: { slot: number; vertices: number[]; enabled: boolean }[];
   tiresDamaged: boolean[];
   windowsEnabled: boolean[];
@@ -200,6 +202,10 @@ export function validateVehicleSnapshot(
       lightsEnabled: flags(damage.lightsEnabled, "lights"),
       bumpersEnabled: flags(damage.bumpersEnabled, "bumpers"),
     };
+    if(damage.model!==undefined){
+      if(typeof damage.model!=="string"||!/^[A-Za-z0-9][A-Za-z0-9:_-]{0,95}$/.test(damage.model))throw new TypeError("Invalid vehicle damage model");
+      out.damage.model=damage.model;
+    }
     if (damage.doors !== undefined) {
       if (!Array.isArray(damage.doors) || damage.doors.length > 8) throw new TypeError("Invalid vehicle doors");
       out.damage.doors = damage.doors.map(entry => {

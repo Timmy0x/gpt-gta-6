@@ -1,0 +1,293 @@
+{
+  "parts": [
+    {
+      "name": "Vehicle_Base--MI_MercedesCCC_bodywork",
+      "group": "Vehicle_Base",
+      "vertices": 19426,
+      "triangles": 33796,
+      "material": "MI_MercedesCCC_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_Interior_MercedesCCC",
+      "group": "Wheel_Front_Left",
+      "vertices": 5987,
+      "triangles": 6859,
+      "material": "MI_Interior_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_Interior_MercedesCCC",
+      "group": "Wheel_Rear_Left",
+      "vertices": 5987,
+      "triangles": 6859,
+      "material": "MI_Interior_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_Interior_MercedesCCC",
+      "group": "Wheel_Rear_Right",
+      "vertices": 5986,
+      "triangles": 6859,
+      "material": "MI_Interior_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_Interior_MercedesCCC",
+      "group": "Wheel_Front_Right",
+      "vertices": 5986,
+      "triangles": 6859,
+      "material": "MI_Interior_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_Interior_MercedesCCC",
+      "group": "Vehicle_Base",
+      "vertices": 19893,
+      "triangles": 31860,
+      "material": "MI_Interior_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_LicensePlate_MercedesCCC",
+      "group": "Vehicle_Base",
+      "vertices": 48,
+      "triangles": 24,
+      "material": "MI_LicensePlate_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "SM_MercedesCCC_Door_Front_L--0",
+      "group": "Door_L",
+      "vertices": 2522,
+      "triangles": 3608,
+      "material": "MI_Interior_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "SM_MercedesCCC_Door_Front_L--1",
+      "group": "Door_L",
+      "vertices": 1305,
+      "triangles": 2097,
+      "material": "MI_MercedesCCC_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_MercedesCCC_Door_Front_R--0",
+      "group": "Door_R",
+      "vertices": 1305,
+      "triangles": 2097,
+      "material": "MI_MercedesCCC_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_MercedesCCC_Door_Front_R--1",
+      "group": "Door_R",
+      "vertices": 2522,
+      "triangles": 3608,
+      "material": "MI_Interior_MercedesCCC",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Light_MercedesCCC--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 423,
+      "triangles": 486,
+      "material": "MI_VehicleLights_MercedesCCC",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Light_MercedesCCC--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 588,
+      "triangles": 486,
+      "material": "MI_VehicleLights_MercedesCCC",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Light_MercedesCCC--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 36,
+      "triangles": 52,
+      "material": "MI_VehicleLights_MercedesCCC",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Light_MercedesCCC--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 36,
+      "triangles": 52,
+      "material": "MI_VehicleLights_MercedesCCC",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Light_MercedesCCC--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 187,
+      "triangles": 149,
+      "material": "MI_VehicleLights_MercedesCCC",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Light_MercedesCCC--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 188,
+      "triangles": 149,
+      "material": "MI_VehicleLights_MercedesCCC",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Glass_DoorR_MercedesCCC_Ext1--0",
+      "group": "Door_R",
+      "vertices": 138,
+      "triangles": 235,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_DoorL_MercedesCCC_Ext1--0",
+      "group": "Door_L",
+      "vertices": 138,
+      "triangles": 235,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 553,
+      "triangles": 970,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 553,
+      "triangles": 970,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 199,
+      "triangles": 354,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 112,
+      "triangles": 189,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 112,
+      "triangles": 189,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 236,
+      "triangles": 420,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 164,
+      "triangles": 288,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 319,
+      "triangles": 592,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_MercedesCCC_Ext1--0--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 319,
+      "triangles": 592,
+      "material": "MI_GlassExt_MercedesCCC",
+      "role": "glass"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.8019141000000001,
+      0.34372646,
+      1.5460063
+    ],
+    "Wheel_Front_Right": [
+      -0.7965567,
+      0.34372646,
+      1.5460063
+    ],
+    "Wheel_Rear_Right": [
+      -0.7965567,
+      0.34372646,
+      -1.2865343999999999
+    ],
+    "Wheel_Rear_Left": [
+      0.8019141000000001,
+      0.34372646,
+      -1.2865343999999999
+    ],
+    "Door_L": [
+      0.8376000000000001,
+      0.8823141,
+      0.87905
+    ],
+    "Door_R": [
+      -0.83759575,
+      0.8823141,
+      0.8790462
+    ]
+  },
+  "materials": {
+    "MI_MercedesCCC_bodywork": {
+      "textures": {},
+      "role": "paint"
+    },
+    "MI_Interior_MercedesCCC": {
+      "textures": {
+        "Diffuse": "M_Interior_d",
+        "ORM": "M_Interior_ormh",
+        "Normal": "M_Interior_n"
+      },
+      "role": "interior"
+    },
+    "MI_LicensePlate_MercedesCCC": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_VehicleLights_MercedesCCC": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "MI_GlassExt_MercedesCCC": {
+      "textures": {},
+      "role": "glass"
+    }
+  },
+  "triangles": 110934,
+  "bytes": 7123472
+}

@@ -1,0 +1,347 @@
+{
+  "parts": [
+    {
+      "name": "Wheel_Front_Left--MI_Interior_Cybertruck",
+      "group": "Wheel_Front_Left",
+      "vertices": 5783,
+      "triangles": 4713,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_Interior_Cybertruck",
+      "group": "Wheel_Rear_Left",
+      "vertices": 5783,
+      "triangles": 4713,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_Interior_Cybertruck",
+      "group": "Wheel_Front_Right",
+      "vertices": 5787,
+      "triangles": 4713,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_Interior_Cybertruck",
+      "group": "Wheel_Rear_Right",
+      "vertices": 5787,
+      "triangles": 4713,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_Interior_Cybertruck",
+      "group": "Vehicle_Base",
+      "vertices": 3942,
+      "triangles": 3746,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--M_Bodywork_Cybertruck",
+      "group": "Vehicle_Base",
+      "vertices": 4088,
+      "triangles": 5542,
+      "material": "M_Bodywork_Cybertruck",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--M_LicensePlate_Master",
+      "group": "Vehicle_Base",
+      "vertices": 48,
+      "triangles": 24,
+      "material": "M_LicensePlate_Master",
+      "role": "interior"
+    },
+    {
+      "name": "SM_CyberTruck_DoorFL_SM_CyberTruckDoor_Front_L--0",
+      "group": "Door_FL",
+      "vertices": 132,
+      "triangles": 72,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "SM_CyberTruck_DoorFL_SM_CyberTruckDoor_Front_L--1",
+      "group": "Door_FL",
+      "vertices": 207,
+      "triangles": 272,
+      "material": "M_Bodywork_Cybertruck",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 98,
+      "triangles": 58,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 30,
+      "triangles": 16,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 19,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 19,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-9",
+      "group": "Vehicle_Base",
+      "vertices": 20,
+      "triangles": 10,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Cybertruck_v2_lights--0--component-10",
+      "group": "Vehicle_Base",
+      "vertices": 142,
+      "triangles": 100,
+      "material": "MI_VehicleLights_Cybertruck",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_CyberTruck_DoorFR_SM_CyberTruckDoor_Front_R--0",
+      "group": "Door_FR",
+      "vertices": 207,
+      "triangles": 272,
+      "material": "M_Bodywork_Cybertruck",
+      "role": "paint"
+    },
+    {
+      "name": "SM_CyberTruck_DoorFR_SM_CyberTruckDoor_Front_R--1",
+      "group": "Door_FR",
+      "vertices": 135,
+      "triangles": 72,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "SM_CyberTruck_DoorRL_SM_CyberTruckDoor_Rear_L--0",
+      "group": "Door_RL",
+      "vertices": 180,
+      "triangles": 238,
+      "material": "M_Bodywork_Cybertruck",
+      "role": "paint"
+    },
+    {
+      "name": "SM_CyberTruck_DoorRL_SM_CyberTruckDoor_Rear_L--1",
+      "group": "Door_RL",
+      "vertices": 96,
+      "triangles": 54,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "SM_CyberTruck_DoorRR_SM_CyberTruckDoor_Rear_R--0",
+      "group": "Door_RR",
+      "vertices": 180,
+      "triangles": 238,
+      "material": "M_Bodywork_Cybertruck",
+      "role": "paint"
+    },
+    {
+      "name": "SM_CyberTruck_DoorRR_SM_CyberTruckDoor_Rear_R--1",
+      "group": "Door_RR",
+      "vertices": 96,
+      "triangles": 54,
+      "material": "MI_Interior_Cybertruck",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Cyber_Glass_ext_1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 26,
+      "triangles": 40,
+      "material": "MI_GlassExt_Cybertruck",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Cyber_Glass_ext_1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 74,
+      "triangles": 40,
+      "material": "MI_GlassExt_Cybertruck",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Cyber_Glass_ext_1--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 264,
+      "triangles": 170,
+      "material": "MI_GlassExt_Cybertruck",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Cybertruck_DoorGlass_Ext1_FL--0",
+      "group": "Door_FL",
+      "vertices": 30,
+      "triangles": 46,
+      "material": "MI_GlassExt_Cybertruck",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Cybertruck_DoorGlass_Ext1_RL--0",
+      "group": "Door_RL",
+      "vertices": 60,
+      "triangles": 30,
+      "material": "MI_GlassExt_Cybertruck",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Cybertruck_DoorGlass_Ext1_FR--0",
+      "group": "Door_FR",
+      "vertices": 30,
+      "triangles": 46,
+      "material": "MI_GlassExt_Cybertruck",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Cybertruck_DoorGlass_Ext1_RR--0",
+      "group": "Door_RR",
+      "vertices": 60,
+      "triangles": 30,
+      "material": "MI_GlassExt_Cybertruck",
+      "role": "glass"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.9727315000000001,
+      0.537481,
+      2.1684018000000003
+    ],
+    "Wheel_Front_Right": [
+      -0.9727315000000001,
+      0.537481,
+      2.1684018000000003
+    ],
+    "Wheel_Rear_Right": [
+      -0.9727315000000001,
+      0.537481,
+      -1.9068475
+    ],
+    "Wheel_Rear_Left": [
+      0.9727315000000001,
+      0.537481,
+      -1.9068475
+    ],
+    "Door_FL": [
+      1.0343,
+      1.2051587000000001,
+      1.5221065999999999
+    ],
+    "Door_FR": [
+      -1.0342953,
+      1.2051587000000001,
+      1.5221065999999999
+    ],
+    "Door_RL": [
+      1.0343,
+      1.2051587000000001,
+      0.30305899000000003
+    ],
+    "Door_RR": [
+      -1.03429924,
+      1.2051587000000001,
+      0.30305899000000003
+    ]
+  },
+  "materials": {
+    "MI_Interior_Cybertruck": {
+      "textures": {
+        "Diffuse": "M_Cybertruck_interior_d",
+        "ORM": "M_Cybertruck_interior_ormh",
+        "Normal": "M_Cybertruck_interior_n"
+      },
+      "role": "interior"
+    },
+    "M_Bodywork_Cybertruck": {
+      "textures": {
+        "Diffuse": "M_CyberTruck_bodywork_d",
+        "ORM": "M_Cybertruck_bodywork_ormh",
+        "Normal": "M_Cybertruck_bodywork_n"
+      },
+      "role": "paint"
+    },
+    "M_LicensePlate_Master": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_VehicleLights_Cybertruck": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "MI_GlassExt_Cybertruck": {
+      "textures": {},
+      "role": "glass"
+    }
+  },
+  "triangles": 30092,
+  "bytes": 6398484
+}

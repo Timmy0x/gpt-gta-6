@@ -1,0 +1,351 @@
+{
+  "parts": [
+    {
+      "name": "Vehicle_Base--MI_LicensePlate_Lincoln2020",
+      "group": "Vehicle_Base",
+      "vertices": 48,
+      "triangles": 24,
+      "material": "MI_LicensePlate_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_Lincoln2020_bodywork",
+      "group": "Vehicle_Base",
+      "vertices": 8374,
+      "triangles": 12900,
+      "material": "MI_Lincoln2020_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--MI_Interior_Lincoln2020",
+      "group": "Vehicle_Base",
+      "vertices": 15443,
+      "triangles": 22267,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_Interior_Lincoln2020",
+      "group": "Wheel_Rear_Left",
+      "vertices": 4105,
+      "triangles": 6834,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_Interior_Lincoln2020",
+      "group": "Wheel_Front_Left",
+      "vertices": 4105,
+      "triangles": 6834,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_Interior_Lincoln2020",
+      "group": "Wheel_Rear_Right",
+      "vertices": 4105,
+      "triangles": 6834,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_Interior_Lincoln2020",
+      "group": "Wheel_Front_Right",
+      "vertices": 4105,
+      "triangles": 6834,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "SM_LincolnDoor_Front_R--0",
+      "group": "Door_Front_Right",
+      "vertices": 1169,
+      "triangles": 1407,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "SM_LincolnDoor_Front_R--1",
+      "group": "Door_Front_Right",
+      "vertices": 915,
+      "triangles": 1566,
+      "material": "MI_Lincoln2020_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_LincolnDoor_Front_L--0",
+      "group": "Door_Front_Left",
+      "vertices": 1231,
+      "triangles": 1407,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "SM_LincolnDoor_Front_L--1",
+      "group": "Door_Front_Left",
+      "vertices": 915,
+      "triangles": 1566,
+      "material": "MI_Lincoln2020_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Lincolnv1_lights--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 35,
+      "triangles": 44,
+      "material": "MI_VehicleLights_Lincoln2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lincolnv1_lights--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 35,
+      "triangles": 44,
+      "material": "MI_VehicleLights_Lincoln2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lincolnv1_lights--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 178,
+      "triangles": 150,
+      "material": "MI_VehicleLights_Lincoln2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lincolnv1_lights--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 322,
+      "triangles": 182,
+      "material": "MI_VehicleLights_Lincoln2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lincolnv1_lights--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 320,
+      "triangles": 182,
+      "material": "MI_VehicleLights_Lincoln2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_LincolnDoor_Back_L--0",
+      "group": "Door_Rear_Left",
+      "vertices": 871,
+      "triangles": 848,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "SM_LincolnDoor_Back_L--1",
+      "group": "Door_Rear_Left",
+      "vertices": 685,
+      "triangles": 1093,
+      "material": "MI_Lincoln2020_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_LincolnDoor_Back_R--0",
+      "group": "Door_Rear_Right",
+      "vertices": 784,
+      "triangles": 848,
+      "material": "MI_Interior_Lincoln2020",
+      "role": "interior"
+    },
+    {
+      "name": "SM_LincolnDoor_Back_R--1",
+      "group": "Door_Rear_Right",
+      "vertices": 685,
+      "triangles": 1093,
+      "material": "MI_Lincoln2020_bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Glass_DoorR_Lincoln_Rear_Ext1--0",
+      "group": "Door_Rear_Right",
+      "vertices": 76,
+      "triangles": 127,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_DoorL_Lincoln_Rear_Ext1--0",
+      "group": "Door_Rear_Left",
+      "vertices": 76,
+      "triangles": 127,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_DoorR_Lincoln_Ext1--0",
+      "group": "Door_Front_Right",
+      "vertices": 144,
+      "triangles": 242,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 44,
+      "triangles": 72,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 44,
+      "triangles": 72,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 256,
+      "triangles": 428,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 140,
+      "triangles": 244,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 49,
+      "triangles": 79,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 49,
+      "triangles": 79,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 166,
+      "triangles": 292,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 140,
+      "triangles": 244,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 130,
+      "triangles": 228,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_Lincoln_Ext1--0--component-9",
+      "group": "Vehicle_Base",
+      "vertices": 130,
+      "triangles": 228,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_DoorL_Lincoln_Ext1--0",
+      "group": "Door_Front_Left",
+      "vertices": 144,
+      "triangles": 242,
+      "material": "MI_GlassExt_Lincoln2020",
+      "role": "glass"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      5.746590000000001e-08,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.7964597000000001,
+      0.35954094,
+      1.4718387000000002
+    ],
+    "Wheel_Front_Right": [
+      -0.7964599,
+      0.35954094,
+      1.4718387000000002
+    ],
+    "Wheel_Rear_Right": [
+      -0.7964599,
+      0.35954094,
+      -1.3886322000000002
+    ],
+    "Wheel_Rear_Left": [
+      0.7964597000000001,
+      0.35954094,
+      -1.3886322000000002
+    ],
+    "Door_Front_Right": [
+      -0.8802097000000001,
+      0.873989,
+      0.95953064
+    ],
+    "Door_Front_Left": [
+      0.874102,
+      0.87399,
+      0.95953064
+    ],
+    "Door_Rear_Right": [
+      -0.8950442,
+      0.8814220400000001,
+      -0.15953276000000002
+    ],
+    "Door_Rear_Left": [
+      0.8969478,
+      0.9042851000000001,
+      -0.15953773000000002
+    ]
+  },
+  "materials": {
+    "MI_LicensePlate_Lincoln2020": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_Lincoln2020_bodywork": {
+      "textures": {},
+      "role": "paint"
+    },
+    "MI_Interior_Lincoln2020": {
+      "textures": {
+        "Diffuse": "M_Interior_Lincoln_d",
+        "ORM": "M_Interior_Lincoln_ormh",
+        "Normal": "M_Interior_Lincoln_n"
+      },
+      "role": "interior"
+    },
+    "MI_VehicleLights_Lincoln2020": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "MI_GlassExt_Lincoln2020": {
+      "textures": {},
+      "role": "glass"
+    }
+  },
+  "triangles": 75661,
+  "bytes": 5708600
+}

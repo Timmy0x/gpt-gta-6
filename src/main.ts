@@ -26,6 +26,7 @@ import { GameAudio } from "./core/Audio";
 import { distance } from "./core/math";
 import { World } from "./world/World";
 import { VehicleSystem, type Vehicle, VEHICLE_TUNING } from "./vehicles";
+import { isRoadCar } from './vehicles/RoadCarCatalog';
 import type { VehicleKind } from "./core/contracts";
 import { AIRCRAFT_SPAWNS, aircraftInput, aircraftPrompt, isAircraft } from "./vehicles/aircraft";
 import { findGroundVehicleSpawn } from "./vehicles/spawnPlacement";
@@ -107,6 +108,11 @@ async function boot() {
   try { await vehicles.prepareModel("concept"); }
   catch (error) { console.warn("Using the starter coupe fallback", error); }
   const startCar = vehicles.spawn(vehicles.concept.ready ? "concept" : "coupe", new Vector3(3, 1, -23), 0);
+  ui.loading("Loading street vehicles…");
+  await Promise.all((['coupe', 'sedan', 'suv', 'truck', 'police'] as VehicleKind[]).map(async kind => {
+    try { await vehicles.prepareModel(kind); }
+    catch (error) { console.warn(`Using the ${kind} fallback`, error); }
+  }));
   vehicles.spawn("motorcycle", new Vector3(11, 1, -42), Math.PI);
   vehicles.spawn("boat", new Vector3(239, 0.4, -230), 0);
   const wanted = new WantedSystem();
@@ -159,13 +165,14 @@ async function boot() {
     crashCount = 0;
   let loadingWorld = false;
   async function prepareVehicleModels(kinds: VehicleKind[]): Promise<boolean> {
-    if (!kinds.includes("concept") || vehicles.concept.ready) return true;
+    const pending = [...new Set(kinds)].filter(kind => kind === 'concept' ? !vehicles.concept.ready : isRoadCar(kind) && !vehicles.roadCars.ready(kind));
+    if (!pending.length) return true;
     if (loadingWorld) return false;
     loadingWorld = true;
     const previousPause = paused;
     setPause(true);
-    ui.toast("Loading Aster Concept…", true);
-    try { await vehicles.prepareModel("concept"); ui.toast(""); return true; }
+    ui.toast("Loading vehicles…", true);
+    try { await Promise.all(pending.map(kind => vehicles.prepareModel(kind))); ui.toast(""); return true; }
     catch (error) { console.error("Vehicle loading failed", error); ui.toast("This vehicle could not load. Check your connection and try again."); return false; }
     finally { loadingWorld = false; setPause(previousPause); }
   }

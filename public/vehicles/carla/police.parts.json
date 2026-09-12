@@ -1,0 +1,457 @@
+{
+  "parts": [
+    {
+      "name": "Vehicle_Base--MI_ChargerCop_Interior",
+      "group": "Vehicle_Base",
+      "vertices": 15058,
+      "triangles": 23363,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_ChargerCop_Interior",
+      "group": "Wheel_Rear_Left",
+      "vertices": 4392,
+      "triangles": 6560,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_ChargerCop_Interior",
+      "group": "Wheel_Front_Left",
+      "vertices": 4392,
+      "triangles": 6560,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_ChargerCop_Interior",
+      "group": "Wheel_Front_Right",
+      "vertices": 4392,
+      "triangles": 6560,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_ChargerCop_Interior",
+      "group": "Wheel_Rear_Right",
+      "vertices": 4392,
+      "triangles": 6560,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_ChargerCop_Props",
+      "group": "Vehicle_Base",
+      "vertices": 3074,
+      "triangles": 5268,
+      "material": "MI_ChargerCop_Props",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_ChargerCop_Bodywork",
+      "group": "Vehicle_Base",
+      "vertices": 15335,
+      "triangles": 28250,
+      "material": "MI_ChargerCop_Bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--MI_LicensePlate_Charger2020",
+      "group": "Vehicle_Base",
+      "vertices": 24,
+      "triangles": 12,
+      "material": "MI_LicensePlate_Charger2020",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorRR--0",
+      "group": "Door_RR",
+      "vertices": 782,
+      "triangles": 951,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorRR--1",
+      "group": "Door_RR",
+      "vertices": 1188,
+      "triangles": 2025,
+      "material": "MI_ChargerCop_Bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorFR--0",
+      "group": "Door_FR",
+      "vertices": 1740,
+      "triangles": 3068,
+      "material": "MI_ChargerCop_Bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorFR--1",
+      "group": "Door_FR",
+      "vertices": 4081,
+      "triangles": 1372,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorRL--0",
+      "group": "Door_RL",
+      "vertices": 782,
+      "triangles": 951,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorRL--1",
+      "group": "Door_RL",
+      "vertices": 1188,
+      "triangles": 2025,
+      "material": "MI_ChargerCop_Bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorFL--0",
+      "group": "Door_FL",
+      "vertices": 1740,
+      "triangles": 3068,
+      "material": "MI_ChargerCop_Bodywork",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorFL--1",
+      "group": "Door_FL",
+      "vertices": 4079,
+      "triangles": 1372,
+      "material": "MI_ChargerCop_Interior",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorGlass_Ext1_RR--0",
+      "group": "Door_RR",
+      "vertices": 114,
+      "triangles": 196,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_DoorGlass_Ext1_RF--0",
+      "group": "Door_FR",
+      "vertices": 127,
+      "triangles": 220,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_DoorGlass_Ext1_LR--0",
+      "group": "Door_RL",
+      "vertices": 114,
+      "triangles": 196,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_DoorGlass_Ext1_LF--0",
+      "group": "Door_FL",
+      "vertices": 127,
+      "triangles": 220,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 1550,
+      "triangles": 2680,
+      "material": "MI_VehicleLights_Charger2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 54,
+      "triangles": 80,
+      "material": "MI_VehicleLights_Charger2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 54,
+      "triangles": 80,
+      "material": "MI_VehicleLights_Charger2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 81,
+      "triangles": 100,
+      "material": "MI_VehicleLights_Charger2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 81,
+      "triangles": 100,
+      "material": "MI_VehicleLights_Charger2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 229,
+      "triangles": 314,
+      "material": "MI_VehicleLights_Charger2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 229,
+      "triangles": 314,
+      "material": "MI_VehicleLights_Charger2020",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_ChargerCop--1",
+      "group": "Vehicle_Base",
+      "vertices": 56,
+      "triangles": 28,
+      "material": "MI_VehicleLights_Sirens",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 489,
+      "triangles": 860,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 257,
+      "triangles": 460,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 114,
+      "triangles": 196,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 114,
+      "triangles": 196,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 713,
+      "triangles": 1260,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 174,
+      "triangles": 313,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 174,
+      "triangles": 313,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 78,
+      "triangles": 131,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--0--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 78,
+      "triangles": 131,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass1--1",
+      "group": "Vehicle_Base",
+      "vertices": 560,
+      "triangles": 1092,
+      "material": "M_GlassExt_SIrens",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass2--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 257,
+      "triangles": 460,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass2--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 114,
+      "triangles": 196,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass2--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 114,
+      "triangles": 196,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass2--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 511,
+      "triangles": 900,
+      "material": "M_GlassExt_Charger",
+      "role": "glass"
+    },
+    {
+      "name": "SM_ChargerCop_Glass3--1",
+      "group": "Vehicle_Base",
+      "vertices": 352,
+      "triangles": 176,
+      "material": "MI_GlassInt_blue",
+      "role": "police-blue"
+    },
+    {
+      "name": "SM_ChargerCop_Glass3--2",
+      "group": "Vehicle_Base",
+      "vertices": 264,
+      "triangles": 132,
+      "material": "MI_GlassInt_red",
+      "role": "police-red"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.8119735,
+      0.34953983,
+      1.6108860999999999
+    ],
+    "Wheel_Front_Right": [
+      -0.8119735,
+      0.34953983,
+      1.6108860999999999
+    ],
+    "Wheel_Rear_Right": [
+      -0.826914,
+      0.3495398,
+      -1.4329568000000001
+    ],
+    "Wheel_Rear_Left": [
+      0.826914,
+      0.3495398,
+      -1.4329568000000001
+    ],
+    "Door_FL": [
+      0.9334677000000001,
+      0.7411266999999999,
+      0.9707094
+    ],
+    "Door_FR": [
+      -0.9334677000000001,
+      0.7411266999999999,
+      0.9707094
+    ],
+    "Door_RR": [
+      -0.9022986000000001,
+      0.78321594,
+      -0.20209183
+    ],
+    "Door_RL": [
+      0.9022986000000001,
+      0.78321594,
+      -0.20209183
+    ]
+  },
+  "materials": {
+    "MI_ChargerCop_Interior": {
+      "textures": {
+        "Diffuse": "T_Interior__DodgeCharger_d",
+        "ORM": "T_Interior__DodgeCharger_ormh",
+        "Normal": "T_Interior__DodgeCharger_n"
+      },
+      "role": "interior"
+    },
+    "MI_ChargerCop_Props": {
+      "textures": {
+        "Diffuse": "M_Props_ChargerCop_d",
+        "ORM": "M_Props_ChargerCop_ormh",
+        "Normal": "M_Props_ChargerCop_n"
+      },
+      "role": "interior"
+    },
+    "MI_ChargerCop_Bodywork": {
+      "textures": {
+        "Diffuse": "M_Bodywork_ChargerCop_d"
+      },
+      "role": "paint"
+    },
+    "MI_LicensePlate_Charger2020": {
+      "textures": {},
+      "role": "interior"
+    },
+    "M_GlassExt_Charger": {
+      "textures": {},
+      "role": "glass"
+    },
+    "MI_VehicleLights_Charger2020": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "MI_VehicleLights_Sirens": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "M_GlassExt_SIrens": {
+      "textures": {},
+      "role": "lamp-glass"
+    },
+    "MI_GlassInt_blue": {
+      "textures": {},
+      "role": "police-blue"
+    },
+    "MI_GlassInt_red": {
+      "textures": {},
+      "role": "police-red"
+    }
+  },
+  "triangles": 109505,
+  "bytes": 8832860
+}

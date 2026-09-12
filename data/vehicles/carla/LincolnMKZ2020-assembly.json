@@ -1,0 +1,55 @@
+{
+  "skeletal": "SK_Lincoln_MKZ2020-geometry.json",
+  "static": [
+    {
+      "path": "SM_LincolnDoor_Front_R.uasset",
+      "group": "Door_Front_Right",
+      "local": true
+    },
+    {
+      "path": "SM_LincolnDoor_Front_L.uasset",
+      "group": "Door_Front_Left",
+      "local": true
+    },
+    {
+      "path": "SM_Lincolnv1_lights.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "SM_LincolnDoor_Back_L.uasset",
+      "group": "Door_Rear_Left",
+      "local": true
+    },
+    {
+      "path": "SM_LincolnDoor_Back_R.uasset",
+      "group": "Door_Rear_Right",
+      "local": true
+    },
+    {
+      "path": "Glass/SM_Glass_DoorR_Lincoln_Rear_Ext1.uasset",
+      "group": "Door_Rear_Right",
+      "local": false
+    },
+    {
+      "path": "Glass/SM_Glass_DoorL_Lincoln_Rear_Ext1.uasset",
+      "group": "Door_Rear_Left",
+      "local": false
+    },
+    {
+      "path": "Glass/SM_Glass_DoorR_Lincoln_Ext1.uasset",
+      "group": "Door_Front_Right",
+      "local": false
+    },
+    {
+      "path": "Glass/SM_Glass_Lincoln_Ext1.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "Glass/SM_Glass_DoorL_Lincoln_Ext1.uasset",
+      "group": "Door_Front_Left",
+      "local": false
+    }
+  ]
+}

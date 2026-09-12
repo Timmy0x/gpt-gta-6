@@ -1,0 +1,35 @@
+{
+  "skeletal": "SK_Sprinter-geometry.json",
+  "static": [
+    {
+      "path": "SM_DoorL_Sprinter_Ext1_DoorL.uasset",
+      "group": "Door_L",
+      "local": false
+    },
+    {
+      "path": "SM_Sprinter_DoorL.uasset",
+      "group": "Door_L",
+      "local": true
+    },
+    {
+      "path": "SM_Sprinter_DoorR.uasset",
+      "group": "Door_R",
+      "local": true
+    },
+    {
+      "path": "SM_DoorR_Sprinter_Ext1_DoorR.uasset",
+      "group": "Door_R",
+      "local": false
+    },
+    {
+      "path": "SM_Sprinter_Lights.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "SM_Glass_Sprinter_Ext1.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    }
+  ]
+}

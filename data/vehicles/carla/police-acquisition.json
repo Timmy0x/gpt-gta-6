@@ -1,0 +1,77 @@
+[
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/SK_ChargerCop.uasset",
+    "bytes": 17080226,
+    "sha256": "22ce9890ce3aeb68616e832dfe814dfe8c706d7994f28613b51e3fcc91d89920"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/SM_Lights_ChargerCop.uasset",
+    "bytes": 243633,
+    "sha256": "806481951c4f48487e7758ecf1b3d33db21d277627a93582a2d88ec49405f615"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/Glass/SM_ChargerCop_Glass1.uasset",
+    "bytes": 275823,
+    "sha256": "846a60b0499190c171eb8d1d4f053470386b918a210ccaf3ce78cd3641bea708"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/Glass/SM_ChargerCop_Glass2.uasset",
+    "bytes": 163894,
+    "sha256": "d1b2d334b21bc24c92aa33f78337b9b73b2547df1112d362c38604388cc3e1e2"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/Glass/SM_ChargerCop_Glass3.uasset",
+    "bytes": 203778,
+    "sha256": "ca9c423f90ef350a151730b923405588641eb8e06602c5d234a55971dc3b4f9f"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/Glass/SM_ChargerCop_Glass4.uasset",
+    "bytes": 129890,
+    "sha256": "93166e08e37e20622843434845069fe9a7371dfd1db1a30e965995d976838c0e"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/MI_ChargerCop_Props.uasset",
+    "bytes": 54240,
+    "sha256": "ae659ab22509c24d18e7f6f72f897d472d7f47fc76a8de3a783732ec7a023bbe"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/MI_GlassInt_blue.uasset",
+    "bytes": 80285,
+    "sha256": "9e85b689cc034a93bcc1da8456ec008aca735bf30e4f13fe9b721db349bb94ce"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/MI_GlassInt_red.uasset",
+    "bytes": 77833,
+    "sha256": "bb9f46a4a8fd838fc380d61142c761efd98a651c2ca68bc5ff5e44cc76aded1d"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/MI_VehicleLights_Sirens.uasset",
+    "bytes": 74846,
+    "sha256": "fd1be1ad922d5371cd87ea186ce74965ef822ed15794ce90470a3c2cc8f3ca61"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/M_Bodywork_ChargerCop_d.uasset",
+    "bytes": 253969,
+    "sha256": "81f8040ef2a89abd23c1d1f9d2cf0e343cb44f1a4b9b520615a7805f0f8f162b"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/M_GlassExt_SIrens.uasset",
+    "bytes": 95244,
+    "sha256": "914e04e14c6075b1f6dc5a4d7fe99fff9896d63f2036039d92ab600b3c0d82a6"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/M_Props_ChargerCop_d.uasset",
+    "bytes": 777696,
+    "sha256": "c7f37f07d6a45933802a89d40d660ad4ddcf8d0e1ca77a88e92674150d51f6b6"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/M_Props_ChargerCop_n.uasset",
+    "bytes": 1334852,
+    "sha256": "3018f19e19e0865d8e6f426419c13422972d2bbba8aff8b73319da0eddbe230a"
+  },
+  {
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/ChargerCop/MaterialsCop/M_Props_ChargerCop_ormh.uasset",
+    "bytes": 2366976,
+    "sha256": "6d8a0c5d681ea1119ebfea0f0a5f13bfa51c49a65043ddd1283243912756dd66"
+  }
+]

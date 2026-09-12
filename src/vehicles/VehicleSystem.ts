@@ -35,6 +35,8 @@ import { createVehicleModel, type VehicleModel } from "./models";
 import { VehicleEquipment } from "./VehicleEquipment";
 import { VehicleExterior, detachedComponentShape } from "./VehicleExterior";
 import { ConceptCarAssets } from "./ConceptCar";
+import { RoadCarAssets } from "./RoadCarAssets";
+import { ROAD_CARS, isRoadCar, type RoadCarKind } from "./RoadCarCatalog";
 import {
   validVehicleId,
   validateVehicleSnapshot,
@@ -112,6 +114,7 @@ export class VehicleSystem {
   readonly list: Vehicle[] = [];
   readonly equipment: VehicleEquipment;
   readonly concept: ConceptCarAssets;
+  readonly roadCars: RoadCarAssets;
   waterLevel = -0.35;
   wetness = 0;
   onCrash?: (vehicle: Vehicle, severity: number, point: Vector3) => void;
@@ -122,16 +125,18 @@ export class VehicleSystem {
   private ray = new PhysicsRaycastResult();
   private physics: PhysicsEngineV2;
 
-  constructor(private ctx: BuildContext, conceptSource?: Uint8Array, skipAssetMaterials = false) {
+  constructor(private ctx: BuildContext, conceptSource?: Uint8Array, skipAssetMaterials = false, roadSources?: Partial<Record<RoadCarKind,Uint8Array>>) {
     this.physics = ctx.scene.getPhysicsEngine() as PhysicsEngineV2;
     this.equipment = new VehicleEquipment(ctx.scene, (vehicle, door, angle) =>
       this.runtime.get(vehicle.id)?.exterior.limitDoorAngle(door, angle) ?? angle);
     this.concept = new ConceptCarAssets(ctx, conceptSource, skipAssetMaterials);
+    this.roadCars = new RoadCarAssets(ctx, roadSources, skipAssetMaterials);
   }
 
   async prepareModel(kind: VehicleKind): Promise<void> {
     if (!Object.hasOwn(VEHICLE_TUNING, kind)) throw new TypeError("Unknown vehicle kind");
     if (kind === "concept") await this.concept.prepare();
+    if (isRoadCar(kind)) await this.roadCars.prepare(kind);
   }
 
   spawn(
@@ -171,9 +176,12 @@ export class VehicleSystem {
       id = stableId ?? `vehicle-${this.sequence + 1}`;
       this.sequence++;
     } while (this.runtime.has(id));
+    const detailedRoad = isRoadCar(kind) && this.roadCars.ready(kind);
+    if (!detailedRoad && ["hatchback", "executive", "van", "offroad", "mpv"].includes(kind))
+      throw new Error(`Prepare road car assets before spawning: ${kind}`);
     const seed = appearanceSeed ?? this.sequence,
-      t = VEHICLE_TUNING[kind],
-      model = kind === "concept" ? this.concept.create(this.sequence) : createVehicleModel(this.ctx, kind, this.sequence, seed),
+      t = detailedRoad ? ROAD_CARS[kind as RoadCarKind].tuning : VEHICLE_TUNING[kind],
+      model = kind === "concept" ? this.concept.create(this.sequence) : detailedRoad ? this.roadCars.create(kind as RoadCarKind, this.sequence) : createVehicleModel(this.ctx, kind, this.sequence, seed),
       root = model.root;
     root.name = id;
     root.metadata.vehicleId = id;
@@ -210,7 +218,9 @@ export class VehicleSystem {
       shape.addChild(part);
       shapes.push(part);
     };
-    addShape(
+    if (detailedRoad) for (const part of ROAD_CARS[kind as RoadCarKind].collision)
+      addShape(Vector3.FromArray(part.center), Vector3.FromArray(part.size));
+    else addShape(
       new Vector3(
         0,
         kind === "helicopter" ? 0.14 : 0,
@@ -218,7 +228,7 @@ export class VehicleSystem {
       ),
       new Vector3(t.width, height, length),
     );
-    if (["coupe", "sedan", "police", "suv", "truck"].includes(kind)) {
+    if (!detailedRoad && ["coupe", "sedan", "police", "suv", "truck"].includes(kind)) {
       const tall = kind === "suv" || kind === "truck";
       addShape(
         new Vector3(0, tall ? 0.85 : 0.62, kind === "truck" ? 0.63 : 0),
@@ -344,6 +354,7 @@ export class VehicleSystem {
         Quaternion.FromEulerVector(v.root.rotation);
     const damage: VehicleDamageState = {
       schemaVersion: 1,
+      ...(v.root.metadata.damageModel ? {model:v.root.metadata.damageModel} : {}),
       panels: (v.model.deformation ? [] : v.model.panels).map((panel, slot) => ({
         slot,
         vertices: Array.from(
@@ -431,6 +442,10 @@ export class VehicleSystem {
 
   private restoreDamage(v: Vehicle, state: VehicleDamageState): void {
     const m = v.model;
+    if(v.root.metadata.damageModel&&state.model===undefined&&state.panels.length>0){
+      this.restoreProceduralDamage(v,state);return;
+    }
+    if(state.model!==v.root.metadata.damageModel)throw new TypeError("Vehicle damage source model does not match");
     if (
       state.panels.length !== (m.deformation ? 0 : m.panels.length) ||
       (state.deformation !== undefined && !m.deformation) ||
@@ -484,6 +499,52 @@ export class VehicleSystem {
       door.mesh.rotation.y = -door.side * door.angle;
     });
     this.runtime.get(v.id)!.exterior.update();
+  }
+
+  /** Translate the original five procedural layouts into the new source components.
+   * Dents are reconstructed locally because their vertex topology is different;
+   * tire side/axle, doors, glazing and lamp failures retain their physical location.
+   */
+  private restoreProceduralDamage(v:Vehicle,state:VehicleDamageState):void {
+    if(!["coupe","sedan","suv","truck","police"].includes(v.kind))throw new TypeError("No legacy layout for this road car");
+    const legacy=createVehicleModel(this.ctx,v.kind,-1,0);
+    const originals=legacy.panels.map(mesh=>Array.from(mesh.getVerticesData(VertexBuffer.PositionKind)!));
+    try{
+      this.restoreDamage({...v,root:legacy.root,model:legacy},state);
+      const inverse=Matrix.Invert(v.root.computeWorldMatrix(true));
+      const center=(mesh:Mesh,worldToLocal=Matrix.Identity())=>Vector3.TransformCoordinates(mesh.getBoundingInfo().boundingBox.center,mesh.computeWorldMatrix(true).multiply(worldToLocal));
+      const transferDisabled=(old:Mesh[],current:Mesh[])=>{
+        const available=new Set(current);
+        for(const mesh of old){
+          const point=center(mesh);
+          const match=[...available].sort((a,b)=>Vector3.DistanceSquared(center(a,inverse),point)-Vector3.DistanceSquared(center(b,inverse),point))[0];
+          if(match){available.delete(match);if(!mesh.isEnabled())match.setEnabled(false);}
+        }
+      };
+      transferDisabled(legacy.windows,v.model.windows);
+      transferDisabled(legacy.lights,v.model.lights);
+      transferDisabled(legacy.bumpers,v.model.bumpers);
+      for(const old of legacy.wheels){
+        const wheel=v.model.wheels.find(w=>w.front===old.front&&Math.sign(w.local.x)===Math.sign(old.local.x));
+        if(wheel){wheel.damaged=old.damaged;wheel.tire.scaling.set(1,old.damaged?.68:1,old.damaged?.75:1);}
+      }
+      for(const old of legacy.doors){
+        const door=v.model.doors.find(d=>d.front===old.front&&d.side===old.side);
+        if(door){door.mesh.setEnabled(old.mesh.isEnabled());door.angle=old.angle;door.mesh.rotation.y=-door.side*old.angle;}
+      }
+      for(const [slot,mesh]of legacy.panels.entries()){
+        const data=mesh.getVerticesData(VertexBuffer.PositionKind)!,original=originals[slot];
+        const point=Vector3.Zero();let weight=0,maximum=0;
+        for(let i=0;i<data.length;i+=3){
+          const displacement=Math.hypot(data[i]-original[i],data[i+1]-original[i+1],data[i+2]-original[i+2]);
+          if(displacement<.002)continue;
+          point.addInPlace(new Vector3(original[i],original[i+1],original[i+2]).scale(displacement));weight+=displacement;maximum=Math.max(maximum,displacement);
+        }
+        if(weight>0)v.model.deformation!.damage(Math.min(35,maximum/.012),Vector3.TransformCoordinates(point.scale(1/weight),mesh.computeWorldMatrix(true)));
+      }
+      for(const bumper of legacy.bumpers)if(!bumper.isEnabled())v.model.deformation!.damage(22,center(bumper));
+      this.runtime.get(v.id)!.exterior.update();
+    }finally{this.ctx.shadows.removeShadowCaster(legacy.root,true);legacy.root.dispose();for(const material of legacy.materials)material.dispose();}
   }
 
   control(v: Vehicle, input: VehicleInput): void {
@@ -1085,6 +1146,7 @@ export class VehicleSystem {
     this.equipment.dispose();
     for (const v of [...this.list]) this.remove(v);
     this.concept.dispose();
+    this.roadCars.dispose();
     for (const d of this.debris) {
       d.aggregate.dispose();
       for (const shape of d.shapes) shape.dispose();

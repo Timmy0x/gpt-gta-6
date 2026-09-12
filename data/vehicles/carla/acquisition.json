@@ -1,0 +1,2200 @@
+[
+  {
+    "model": "Jeep",
+    "path": "SK_Jeep_Wrangler_Rubicon.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/SK_Jeep_Wrangler_Rubicon.uasset",
+    "bytes": 3523011,
+    "sha256": "de1047e2c90d0a68f365fae5bb2fef263f60bbbfc1f20562b6c0ff516233b3be"
+  },
+  {
+    "model": "Jeep",
+    "path": "SM_JeepWranglerRubicon.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/SM_JeepWranglerRubicon.uasset",
+    "bytes": 799158,
+    "sha256": "9d3cf906836901a0b908fc28d101ce10c7037cdf63a8c325acc79da96f4419ca"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_Body_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_Body_mat.uasset",
+    "bytes": 84417,
+    "sha256": "e47ffdec61d915e82ed1fb9cadea6871c7fad1b27cc85642024d368cf758584b"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_Bumper_Mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_Bumper_Mat.uasset",
+    "bytes": 66183,
+    "sha256": "bf0369a16861074d53d44a56ad0df670648c503e7900a374515bcae6489a4435"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_FrontLights_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_FrontLights_mat.uasset",
+    "bytes": 82616,
+    "sha256": "a53b7709b2f69781727b61d6022d1e13e5e3e49bd9fb8f69337e7bb7f52f79b9"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_HubCap_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_HubCap_mat.uasset",
+    "bytes": 97739,
+    "sha256": "474d66a94360e33508c03bdf7580bdcde7fd80c2d5d8e500caca339b83eb9b99"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_Red_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_Red_mat.uasset",
+    "bytes": 79280,
+    "sha256": "5626c521ea44efe57541e39c8d8b21604185bf20c97a17ea17ab8ba96f030396"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_Wheels_Mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_Wheels_Mat.uasset",
+    "bytes": 65069,
+    "sha256": "9026d950e6244039e8ef14b3e206fa9f0a435c88acb4fe1e95527f3296e94c31"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_White_Mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_White_Mat.uasset",
+    "bytes": 83960,
+    "sha256": "b9447811bc15138e932839bbf26ba140498d073c45bf3662163fd4d6d5c3755d"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_WindShield_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_WindShield_mat.uasset",
+    "bytes": 83140,
+    "sha256": "e89617171a79e55693cf9073ca0f0f9e9904603ba6bef6e4cbdac30e68e5cf25"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_WingMirrors_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_WingMirrors_mat.uasset",
+    "bytes": 83582,
+    "sha256": "77d6b20b3aa783ff05b402ace2e83e5aa34b02d6605a956b2f8adb31bdff81e2"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_bodyside_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_bodyside_mat.uasset",
+    "bytes": 71176,
+    "sha256": "0b7d5ef1ecee7067b441befe3c9b6875cd8117191343e389349e3e2c49eab44c"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_inside_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_inside_mat.uasset",
+    "bytes": 85141,
+    "sha256": "f3e94d942309640414188934f11ebf48cacfa840ebe814b366ee8d7d397d8142"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_steeringWheelHold_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_steeringWheelHold_mat.uasset",
+    "bytes": 78290,
+    "sha256": "d88788a8dd6d63160ed6c39b8d12c28387c244fcda59c83a6fe81e530e25b506"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/JeepWranglerRubicon_steeringWheel_mat.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/JeepWranglerRubicon_steeringWheel_mat.uasset",
+    "bytes": 84432,
+    "sha256": "2320b3148f5f482ac4f305abe55abb7268e78999115ea3a3f8d53fe27864822e"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Metal_BaseColor.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Metal_BaseColor.uasset",
+    "bytes": 2655522,
+    "sha256": "8ec16fd6fc01364d5890d5a53ca926888f5ee19d8d403a4b84f0bf0bbe710108"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Metal_Normal.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Metal_Normal.uasset",
+    "bytes": 1218192,
+    "sha256": "edbadbe4664b55eafb8f8eddd4bf193e4866437b9685071a3871598d481a9a6c"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Metal_ORM.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Metal_ORM.uasset",
+    "bytes": 2660983,
+    "sha256": "5c6228839192fdccf7c44ad2545a11b1fe14a6f18239977ec7bb902a37d76880"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Plastic_Matte_Black_BaseColor.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Plastic_Matte_Black_BaseColor.uasset",
+    "bytes": 589250,
+    "sha256": "0744b9a1c40ce97da84fbab33607f6134b87a6bb11794d10bdcb9be93e99545c"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Plastic_Matte_Black_Normal.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Plastic_Matte_Black_Normal.uasset",
+    "bytes": 231363,
+    "sha256": "e14855e8a010df0b07b5babfd852a4d83c17a685183273cf748c557c6fc7a74f"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Plastic_Matte_Black_ORM.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Plastic_Matte_Black_ORM.uasset",
+    "bytes": 378229,
+    "sha256": "a99bfb80fdc903306601b0997dbfcb5f4faa51d7b40dbd8a5c6b72ce737597e2"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Plastic_Matte_Grey_BaseColor.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Plastic_Matte_Grey_BaseColor.uasset",
+    "bytes": 1237125,
+    "sha256": "166e8ab074b7dd950c21c00f8e3cf7adb55e690e99e9d59cb074c8922131a665"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Plastic_Matte_Grey_Normal.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Plastic_Matte_Grey_Normal.uasset",
+    "bytes": 910925,
+    "sha256": "edd081824a11ddfab86758ba22849ddc8e4deaee0c04f28d8784fcf815c84f6e"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Plastic_Matte_Grey_ORM.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Plastic_Matte_Grey_ORM.uasset",
+    "bytes": 584146,
+    "sha256": "14fb795bf8aa0183ac3644978e785ef8c927efd64ee6e7f07eee320c4e66c2d9"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Reflector_BaseColor.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Reflector_BaseColor.uasset",
+    "bytes": 5794,
+    "sha256": "306982e622a436ca3321e723b6ec491730ecbed9d260372b89a84ec119a23e82"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Reflector_Normal.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Reflector_Normal.uasset",
+    "bytes": 6061,
+    "sha256": "46cc345172488be134d6ba92314392b51bbeee0b8d80a82778cdc83af6275c54"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Reflector_ORM.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Reflector_ORM.uasset",
+    "bytes": 5798,
+    "sha256": "477874fe02be83d8fe9d4ec8d0f027ae91eda3203ed808bad5753b33faeaa4de"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Tire_BaseColor.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Tire_BaseColor.uasset",
+    "bytes": 2187312,
+    "sha256": "a54b2e43984b000172a44f5ddd093dc6440a4438c029ef760fcba67e0019e0ca"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Tire_Normal.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Tire_Normal.uasset",
+    "bytes": 3856928,
+    "sha256": "8dffda21ae5b34c07241d418080d25450320e9c6604bc4c2380ea6f03121a69b"
+  },
+  {
+    "model": "Jeep",
+    "path": "Textures_Shadders/MI_Tire_ORM.uasset",
+    "source": "Static/Car/4Wheeled/Jeep/Textures_Shadders/MI_Tire_ORM.uasset",
+    "bytes": 3398142,
+    "sha256": "6a8d57f639d594f9d50b8af6ff5e65fdd006b7e784f8bb296c3bfd6a9579a9d7"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "SM_DoorFL_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/SM_DoorFL_Patrol2021.uasset",
+    "bytes": 291794,
+    "sha256": "a54c20e1072c39077da6513dafe277e1015dca1a1d727388dbbf9fe91fceecb9"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "SM_DoorFR_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/SM_DoorFR_Patrol2021.uasset",
+    "bytes": 313488,
+    "sha256": "a3da065a8712fadac5249b6ba09bbfbd3650cf37d17ad9f693531e61c11dee74"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "SM_DoorRL_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/SM_DoorRL_Patrol2021.uasset",
+    "bytes": 237555,
+    "sha256": "28f827e687dd0825cf25953f932dd4bf9e45073fff617d4028e850239561cf7d"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "SM_DoorRR_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/SM_DoorRR_Patrol2021.uasset",
+    "bytes": 245941,
+    "sha256": "a850227a971ed05a826e14d5b001ce4af6ca89ecd973bee97f7015b4b2d1718c"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "SM_NissanPatrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/SM_NissanPatrol2021.uasset",
+    "bytes": 16725744,
+    "sha256": "9e709e115d84538fcda479d8bbe86d6833d52eb4903080a29e7ffcb23ea3a920"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt1_FL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt1_FL.uasset",
+    "bytes": 97158,
+    "sha256": "1d9df6bb72edfe96e6ca8fd5e23cf7fe61fb5a2c53fcf94eb8f43aa64c4246c6"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt1_FR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt1_FR.uasset",
+    "bytes": 97188,
+    "sha256": "0b465bf4f9462e8caaf1cb7cf19c907f85173c84080c30dd437d767ce6ad2f46"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt1_RL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt1_RL.uasset",
+    "bytes": 92477,
+    "sha256": "c7fe83dce562b23a6cd03e13570e1af314f3513fdf0a583a3d13b138c363015c"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt1_RR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt1_RR.uasset",
+    "bytes": 92767,
+    "sha256": "1e2861a415282f9b8d0d08358ee83ae3c11f0deba48d1c1d72497fcfa2fb389b"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt2_FL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt2_FL.uasset",
+    "bytes": 93712,
+    "sha256": "276f0c704516110d7644b8feb639281ab5607607765e8f52e933f62351be2f95"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt2_FR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt2_FR.uasset",
+    "bytes": 93281,
+    "sha256": "8a9959fb84d69b01c73993910e36e5de9a1b22eaec9cc6e948513996539c39a0"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt2_RL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt2_RL.uasset",
+    "bytes": 92495,
+    "sha256": "f5ad59000fe93886271b7712a20f42966a976d153b114671741f8ef34fec9689"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassExt2_RR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassExt2_RR.uasset",
+    "bytes": 92775,
+    "sha256": "d40c05de609ff2c2ddf07e958e920412076a29bbe1fb68e4ee594a8eabf5e5aa"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt1_FL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt1_FL.uasset",
+    "bytes": 93523,
+    "sha256": "836dc484d0224dcd120fdc678132cb78a5207eb87db141536d4936213ef206de"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt1_FR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt1_FR.uasset",
+    "bytes": 94466,
+    "sha256": "54547eff3070ff819234b9873147dc6c16cdefbf7153ee921be726083038e73f"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt1_RL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt1_RL.uasset",
+    "bytes": 90393,
+    "sha256": "509b4a89162a64f5adc36530c08b994c2c6bb502b1eaee179ff24cea0615d511"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt1_RR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt1_RR.uasset",
+    "bytes": 90565,
+    "sha256": "9ee30185b8819f349c71e6c4062ddfdbb2d3453c28892d3c38d1f45a63f5eeb6"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt2_FL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt2_FL.uasset",
+    "bytes": 92094,
+    "sha256": "823d24fab11015721950d31974d9be07dea722e6a84e546683de580e6af251b7"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt2_FR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt2_FR.uasset",
+    "bytes": 91104,
+    "sha256": "300742e678dd8aea501071fddb3dc3bcf63dd4fad7c14fb9e8678df968b4d3a0"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt2_RL.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt2_RL.uasset",
+    "bytes": 90785,
+    "sha256": "60c32ba30fc3cad3fb43116a0a874dfc64d7d62b561bb5a75f81eddbcdbcda45"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_DoorGlassInt2_RR.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_DoorGlassInt2_RR.uasset",
+    "bytes": 90414,
+    "sha256": "00e1f73d2e76e3a2c41e226a8e83e228c6113d1f281751250be9e0a824c1b897"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_glassExt1.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_glassExt1.uasset",
+    "bytes": 222756,
+    "sha256": "8e6272d8312f94ff3709121f456d0ed3ed26ad68fe86a675442668546f9c5acb"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_glassExt2.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_glassExt2.uasset",
+    "bytes": 130992,
+    "sha256": "c09ba08bf22e29b34d7c1450e402d84b3aefa0c770b8bf9be4916e28db4d68d9"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_glassInt1.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_glassInt1.uasset",
+    "bytes": 176630,
+    "sha256": "18eb64835791e8297fc3fe25b0c48d0a84123cdb7594101f92fb58ad90176320"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Glasses/SM_glassInt2.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Glasses/SM_glassInt2.uasset",
+    "bytes": 120746,
+    "sha256": "c51822e08ec9b6a1df46c7ea44aba2bf30a34a1309371d728aeecf88afdcca97"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Lights/SM_DoorL_Lights.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Lights/SM_DoorL_Lights.uasset",
+    "bytes": 82449,
+    "sha256": "aff250d9c2183f3926b8312bbb8aa15f7fd3a8baca67f320ac24928c8a0fc840"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Lights/SM_DoorR_Lights.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Lights/SM_DoorR_Lights.uasset",
+    "bytes": 82925,
+    "sha256": "4bf4f37a44e2d6355af401e822ee193e5c0f842256cf1e605efef08320a3f0e5"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Lights/SM_lights_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Lights/SM_lights_Patrol2021.uasset",
+    "bytes": 257601,
+    "sha256": "87df132ce2c58108bf1e233d0c8225d93542e3959e1b6224c88ead91baa53458"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_BodyWork_Patrol2022.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_BodyWork_Patrol2022.uasset",
+    "bytes": 95421,
+    "sha256": "9a261a376ce660b350992660e874f15969764748221fe66b97b31667024ec946"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_BodyWork_Patrol2022_Inst1.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_BodyWork_Patrol2022_Inst1.uasset",
+    "bytes": 86855,
+    "sha256": "d327c4f2ae0479c641540744180184cd30b0996a1addc1b9b214244f6f2049b4"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_Details1_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_Details1_Patrol2021.uasset",
+    "bytes": 76546,
+    "sha256": "019ef12924476d2eadaa7ac30db01c027cb6b0893e1e6bdb6b16a53560cc66b8"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_GlassExt_Lights_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_GlassExt_Lights_Patrol2021.uasset",
+    "bytes": 95839,
+    "sha256": "43596cb210acb64e227f02fa9e69a6608e98beca240237eeaa5f62b959853ff6"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_GlassExt_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_GlassExt_Patrol2021.uasset",
+    "bytes": 97508,
+    "sha256": "3b45cd44ed6438acd9470b04c1d6b0ce35622f1dd67cb23d6b689f6de36414af"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_GlassInt_Lights_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_GlassInt_Lights_Patrol2021.uasset",
+    "bytes": 80532,
+    "sha256": "27d4e60eee97b12119d45167dd189bc66151845420525316166632045bb9f572"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_GlassInt_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_GlassInt_Patrol2021.uasset",
+    "bytes": 81670,
+    "sha256": "9151454106cfce28a25a7a808d6b6a67ca9c2a4d125d098528830b838b8b8e53"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_LicensePlate_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_LicensePlate_Patrol2021.uasset",
+    "bytes": 114264,
+    "sha256": "ffb6e445117df0d08b4cbd6a65fbc1ca6e3864ff4ae7e98ce4fac3827ca6f1ce"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/MI_Lights_Patrol2021.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/MI_Lights_Patrol2021.uasset",
+    "bytes": 100698,
+    "sha256": "3d05cbae011acaf2c2d137e3b3782d01f06309c80cf12e7b875f7c57437c3743"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/M_BodyWork_Patrol_d.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/M_BodyWork_Patrol_d.uasset",
+    "bytes": 5014196,
+    "sha256": "a9fea3b2a140e656a1c5b3a347a54d19cf4932e1e53e7ac5df514e834a5d3bcd"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/M_BodyWork_Patrol_n.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/M_BodyWork_Patrol_n.uasset",
+    "bytes": 8310,
+    "sha256": "5ef85414fba9f2d5870bb141a52e02d31d97aff36255b507d790da9f350e839b"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/M_BodyWork_Patrol_ormh.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/M_BodyWork_Patrol_ormh.uasset",
+    "bytes": 2692641,
+    "sha256": "adee5d7965ae54ba28085890e68f8f4af1f45ffcba3a5051bfdc9bce7175bb0e"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/SM_nissanPatrol_89_inside_Normal.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/SM_nissanPatrol_89_inside_Normal.uasset",
+    "bytes": 10077935,
+    "sha256": "7da61b1660db005010617280af76df9dee439cd5c777344fe46a394f402f9491"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/T_Interior_NissanPatrol2021_d.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/T_Interior_NissanPatrol2021_d.uasset",
+    "bytes": 3701687,
+    "sha256": "cd18f0acbb33c3eb2356d252adf12ddf6f4b77659b7055835135fc71ccad8a17"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/T_Interior_NissanPatrol2021_n.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/T_Interior_NissanPatrol2021_n.uasset",
+    "bytes": 2988380,
+    "sha256": "e2ed3c574d6d16c544a66441abd4f656a7c0ee5246c8bde71fab376f0dbcd8b5"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/T_Interior_NissanPatrol2021_ormh.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/T_Interior_NissanPatrol2021_ormh.uasset",
+    "bytes": 5276407,
+    "sha256": "90167450658aebd364dd2100b8b60019a857f94221f6c190ab50c23862c99f90"
+  },
+  {
+    "model": "NissanPatrol2021",
+    "path": "Materials/rdirt.uasset",
+    "source": "Static/Car/4Wheeled/NissanPatrol2021/Materials/rdirt.uasset",
+    "bytes": 12116927,
+    "sha256": "0ba545bdf17ac32df0c7bea1466371825ac7b097d03cc0c9e0ee946207467759"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "SK_MercedesCCC.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/SK_MercedesCCC.uasset",
+    "bytes": 22141573,
+    "sha256": "911893e8c3299be639277bf9ddd8daebd354ccc8ad807e2b9ca50c7a8cb9c605"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "SM_Light_MercedesCCC.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/SM_Light_MercedesCCC.uasset",
+    "bytes": 154224,
+    "sha256": "ee0674c43448354cb099d739138e706cce741ec315f9d10c4b03c876fbdbc860"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "SM_MercedesCCC_Door_Front_L.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/SM_MercedesCCC_Door_Front_L.uasset",
+    "bytes": 393318,
+    "sha256": "85f4bd5fdff05abffa886c8f79493f6f77f0ddf548136e95f28d24f551d7ebe0"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "SM_MercedesCCC_Door_Front_R.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/SM_MercedesCCC_Door_Front_R.uasset",
+    "bytes": 390742,
+    "sha256": "ed74b12307b810bbae60dfe4c613e1d09ae63fc9b67b1ac6e768896a42c8c0c3"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorL_MercedesCCC_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorL_MercedesCCC_Ext1.uasset",
+    "bytes": 97046,
+    "sha256": "4dfb56bcd824f4b2291fa58ee85d5ca3954cb34b34c98032c34a705a4a2a725c"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorL_MercedesCCC_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorL_MercedesCCC_Ext2.uasset",
+    "bytes": 90789,
+    "sha256": "23ec82ae1fe565a14cdfe73ba4ce5d545fcc1d893bf78d319f047e720712b36f"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorL_MercedesCCC_Int1.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorL_MercedesCCC_Int1.uasset",
+    "bytes": 98239,
+    "sha256": "83a5563ab2eca9462f15b1e32681b548a29f8ffac50d10945e707975228903a3"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorL_MercedesCCC_Int2.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorL_MercedesCCC_Int2.uasset",
+    "bytes": 89916,
+    "sha256": "411ae18bb8c1a9be4e0e3942dc3e6e30353dcfe7742d07c7def3d2d15f06fe02"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorR_MercedesCCC_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorR_MercedesCCC_Ext1.uasset",
+    "bytes": 98044,
+    "sha256": "d798a5d22d10226463dade88780f0ade576af108586fec563f60d3c5eb7cc46f"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorR_MercedesCCC_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorR_MercedesCCC_Ext2.uasset",
+    "bytes": 89758,
+    "sha256": "9fd18c629362451a4d279efaabea62eb5ecf7ca5c93cb98687efa4fc33ae948a"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorR_MercedesCCC_Int1.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorR_MercedesCCC_Int1.uasset",
+    "bytes": 96713,
+    "sha256": "3580977f861c816640ba7bfc1efb939a1cf450377fcb50bf0a01741c9b1d4f15"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_DoorR_MercedesCCC_Int2.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_DoorR_MercedesCCC_Int2.uasset",
+    "bytes": 90950,
+    "sha256": "1a6ad164d432fbc5ffab0637e8558649cad47d9272a630a9f980a4df2a2e9856"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_MercedesCCC_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_MercedesCCC_Ext1.uasset",
+    "bytes": 268388,
+    "sha256": "3335bce02d87776ba28f84ff8e705ac5664ed0ba92fda5a86aff7d394e2f1423"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_MercedesCCC_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_MercedesCCC_Ext2.uasset",
+    "bytes": 238293,
+    "sha256": "53cb846f9fca999983c642f551b428a8a7aa76803ea2151057d9cc951682e202"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_MercedesCCC_Int1.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_MercedesCCC_Int1.uasset",
+    "bytes": 149521,
+    "sha256": "c81cdc5b8865f26402bc27b8669c7af57f215767a5b000a62171e03d06b76afa"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Glass/SM_Glass_MercedesCCC_Int2.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Glass/SM_Glass_MercedesCCC_Int2.uasset",
+    "bytes": 119594,
+    "sha256": "2755899cc5b3be670ae008d66c6c0986ff61015dd50b92ff61d570e421109860"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/MI_GlassExt_MercedesCCC.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/MI_GlassExt_MercedesCCC.uasset",
+    "bytes": 95249,
+    "sha256": "bc90553e872297882a216ade3bf143b8a75f710f15efa22907b4c44874b24cb4"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/MI_GlassInt_MercedesCCC.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/MI_GlassInt_MercedesCCC.uasset",
+    "bytes": 76071,
+    "sha256": "58b663e9c36fa5130dd8df071aa46d75e15ea782e4f1be2a84350b2c4d97e269"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/MI_Interior_MercedesCCC.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/MI_Interior_MercedesCCC.uasset",
+    "bytes": 97286,
+    "sha256": "0bd0b2c7dad7acfb4b7fc22c1c0295e53043b270a8353d1463166fc681a9a663"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/MI_LicensePlate_MercedesCCC.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/MI_LicensePlate_MercedesCCC.uasset",
+    "bytes": 114263,
+    "sha256": "a18b34b33fb2bb527a7269c27a72a73137aa499dab431133eba54530a1edfe02"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/MI_MercedesCCC_bodywork.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/MI_MercedesCCC_bodywork.uasset",
+    "bytes": 77400,
+    "sha256": "b03c61472beb09186d800ea688d5f5f3fa6a33c6a4c04f5ac85b0a0c1776c7fc"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/MI_VehicleLights_MercedesCCC.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/MI_VehicleLights_MercedesCCC.uasset",
+    "bytes": 90578,
+    "sha256": "34714dc28299b8594f1845bc2eb6d1587d634d49de76ba995d3ac86dc166b71f"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/M_Interior_d.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/M_Interior_d.uasset",
+    "bytes": 2007986,
+    "sha256": "a9ad893dacee89125207767b3123644a2f01100d9d628d2840ecf9173519c4ad"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/M_Interior_n.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/M_Interior_n.uasset",
+    "bytes": 3297251,
+    "sha256": "f2b5c91be5b45d2aacb5a96dee04a7f6374468e774d7c09baf260f5f49be7c7a"
+  },
+  {
+    "model": "MercedesCCC",
+    "path": "Materials/M_Interior_ormh.uasset",
+    "source": "Static/Car/4Wheeled/MercedesCCC/Materials/M_Interior_ormh.uasset",
+    "bytes": 5406693,
+    "sha256": "dddd8010efd1e26980f111679daaa709091c6d3efdefa8a85b64b3367e9c050a"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "SK_Lincoln_MKZ2020.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/SK_Lincoln_MKZ2020.uasset",
+    "bytes": 13400294,
+    "sha256": "87944f838c2cf2b6c87ae7ac00276182606a0317c2e23989b90de85648169981"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "SM_LincolnDoor_Back_L.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/SM_LincolnDoor_Back_L.uasset",
+    "bytes": 180690,
+    "sha256": "5af9cf4c3494ca91bb4f84abe1e6d4962c20cab0f347e62294cb3f559cebff46"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "SM_LincolnDoor_Back_R.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/SM_LincolnDoor_Back_R.uasset",
+    "bytes": 168002,
+    "sha256": "e558517c2f8827ec1dbaed1cbb5025ee39470f4abbdb1e4a665bbea5cfb19965"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "SM_LincolnDoor_Front_L.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/SM_LincolnDoor_Front_L.uasset",
+    "bytes": 222471,
+    "sha256": "5959a02db3e4095cc09241538356d906a85bd57345a55a3f0046cf43befa538a"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "SM_LincolnDoor_Front_R.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/SM_LincolnDoor_Front_R.uasset",
+    "bytes": 209229,
+    "sha256": "626380e820be26ec704e8498b2bfe2f4a9a23246d3f8187d31324846f6f5f4a8"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "SM_Lincolnv1_lights.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/SM_Lincolnv1_lights.uasset",
+    "bytes": 123571,
+    "sha256": "29383ef33cee7db72221c843555449aa7a2d42a86ac9ccfb2b3bd65cc2b0a04f"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Ext1.uasset",
+    "bytes": 98309,
+    "sha256": "d4a69d4ea850939ab0f8c33edfa3b2c462dc55b6c96b9510245b61333b7c5f31"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Ext2.uasset",
+    "bytes": 92147,
+    "sha256": "95bcfa1cc709b1ded68a9177327ce1424a79ea5b2c222259b8fc1deedc3ec06e"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Int1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Int1.uasset",
+    "bytes": 91113,
+    "sha256": "0dd8759b4533750e1986bebbe668ce19a725aa47038f97833d630f3e4cc46613"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Int2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Int2.uasset",
+    "bytes": 90938,
+    "sha256": "42f0d8e9bcb8ec437f5c6f2e643da64ddc6aedfe7a483bde09db0d40f46e3d6d"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Rear_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Rear_Ext1.uasset",
+    "bytes": 92285,
+    "sha256": "7630bae1b1e180c2dd823e8ff24387856550a4da15ba59d3b7da4c8e340dc046"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Rear_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Rear_Ext2.uasset",
+    "bytes": 80513,
+    "sha256": "7d78de0423880082abfce69ba82e770352d716ecd9ec646d94949f385191b652"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Rear_Int1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Rear_Int1.uasset",
+    "bytes": 88399,
+    "sha256": "87f87dc44fd8468526cde89ff1e4dc399495e631b7283840579ca7c1589544b9"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorL_Lincoln_Rear_Int2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorL_Lincoln_Rear_Int2.uasset",
+    "bytes": 88397,
+    "sha256": "3d174b44cf874886292ff2ffd4a10ea98ac04ac46cd0013a66cb4ae505e2ea24"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Ext1.uasset",
+    "bytes": 100815,
+    "sha256": "961a7a04c33bd195c3c393b675484c47051416312485442d6243f281b1989772"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Ext2.uasset",
+    "bytes": 99587,
+    "sha256": "b17ff5e9de739f5e355a97f73a68438bc06da5c83f372c0abd18f78c11136ec9"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Int1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Int1.uasset",
+    "bytes": 92566,
+    "sha256": "7dcb03bbe05590be22c914773137e940866fc224a1ae5d50e74b2d7ee82c7304"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Int2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Int2.uasset",
+    "bytes": 86526,
+    "sha256": "880798634188c6b4e6db8f3b8beb1e041549b798bb1354edb21f54a80a51ae71"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Rear_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Rear_Ext1.uasset",
+    "bytes": 93255,
+    "sha256": "ea9b6f95da65064c90f6e567ad03aada325fceabf0d328e539ad32ba2c5de123"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Rear_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Rear_Ext2.uasset",
+    "bytes": 92220,
+    "sha256": "73ff7de52a41e5daacbc50d89bf03d896d8db07190845077bdebe4dc3289290a"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Rear_Int1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Rear_Int1.uasset",
+    "bytes": 88335,
+    "sha256": "82534b8886b3b230599c4d298fe09dc455b08ba3ad48d187e84decda9aa09ebd"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_DoorR_Lincoln_Rear_Int2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_DoorR_Lincoln_Rear_Int2.uasset",
+    "bytes": 74204,
+    "sha256": "37d82286d1e1b825442cd891be1375c8f6e461ee023d8e6e652f55735a7be563"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_Lincoln_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_Lincoln_Ext1.uasset",
+    "bytes": 172399,
+    "sha256": "7eeae283e0fae469c4bc94b2ac8a47c1f1083a2a4cace35559a224347ba0f189"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_Lincoln_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_Lincoln_Ext2.uasset",
+    "bytes": 131698,
+    "sha256": "6f78ecea198c7ff52b534d952a41f603ad4b35c7edc726298366bd2ec4254913"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_Lincoln_Int1.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_Lincoln_Int1.uasset",
+    "bytes": 112041,
+    "sha256": "b95ed2561f38cdb6c7421fd5b41391614bcb67c0f82e2b3b9f26148eac50169a"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Glass/SM_Glass_Lincoln_Int2.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Glass/SM_Glass_Lincoln_Int2.uasset",
+    "bytes": 136510,
+    "sha256": "9eda2efe7a85a9050d7e808e890a758b81f966ce8398208267af6fbfb7bfb369"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/MI_GlassExt_Lincoln2020.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/MI_GlassExt_Lincoln2020.uasset",
+    "bytes": 92463,
+    "sha256": "b23f93393b6928a2281d05f0855fb8db5b07acee81e679cd42dc1d0d2260febf"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/MI_GlassInt_Lincoln2020.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/MI_GlassInt_Lincoln2020.uasset",
+    "bytes": 45224,
+    "sha256": "14a21570b03531e4f43f38004e3f80c48a0a28a927bb2e2af5ed885a90394947"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/MI_Interior_Lincoln2020.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/MI_Interior_Lincoln2020.uasset",
+    "bytes": 133497,
+    "sha256": "0acfb85e87962828e71c01ab0fdc615724f321958b0c2f85fd2519ced26fb6ef"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/MI_LicensePlate_Lincoln2020.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/MI_LicensePlate_Lincoln2020.uasset",
+    "bytes": 114266,
+    "sha256": "867c9b935bf1f11620f36246fd24742e8433ebd06320b6e046b0c8ae049b7b32"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/MI_Lincoln2020_bodywork.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/MI_Lincoln2020_bodywork.uasset",
+    "bytes": 75897,
+    "sha256": "52bc9785408b0a633a6884f3a2575952d7671ac6f83688e6d19884a95f9c309a"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/MI_VehicleLights_Lincoln2020.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/MI_VehicleLights_Lincoln2020.uasset",
+    "bytes": 90581,
+    "sha256": "337c935e8987e108056b4a618c1bd4539c73cb287e4e8b749279488139bcee39"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/M_Interior_Lincoln_d.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/M_Interior_Lincoln_d.uasset",
+    "bytes": 9535654,
+    "sha256": "61726b42239945dfaf8b53a690fbdb89c0c252dfec3d0f2ed77f2e23dfdeb01c"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/M_Interior_Lincoln_n.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/M_Interior_Lincoln_n.uasset",
+    "bytes": 23672233,
+    "sha256": "4658a8940809b8faed1c0700ba0b4ad6c6dd43f5877f1e3d7ad6b7ab3f5072f9"
+  },
+  {
+    "model": "LincolnMKZ2020",
+    "path": "Materials/M_Interior_Lincoln_ormh.uasset",
+    "source": "Static/Car/4Wheeled/LincolnMKZ2020/Materials/M_Interior_Lincoln_ormh.uasset",
+    "bytes": 16741277,
+    "sha256": "569a3ad102da66aca80a4b901c1f323d50bf84b3e6840e7e029f7241b9db534f"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "SK_Ford_Crown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/SK_Ford_Crown.uasset",
+    "bytes": 13391139,
+    "sha256": "88850daebf2fc26a6b6d7543d6841d24aaaffa0c271f204f1c04518e54ea8c11"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "SM_Ford_CrownDoor_Front_L.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/SM_Ford_CrownDoor_Front_L.uasset",
+    "bytes": 323718,
+    "sha256": "2b5f65972e30a18088dfd851651c5b6839512b42122390ff2b6b9e16a5800ccd"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "SM_Ford_CrownDoor_Front_R.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/SM_Ford_CrownDoor_Front_R.uasset",
+    "bytes": 327668,
+    "sha256": "cda7603007a36f5a7bdbc86c3f6f9a4e2000f9fe9c99e6567777d7c51381732c"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "SM_Ford_CrownDoor_Rear_L.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/SM_Ford_CrownDoor_Rear_L.uasset",
+    "bytes": 307895,
+    "sha256": "3cf9c863a256adb3257082014c73909f0cfa425145e016816ad7caa173318a82"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "SM_Ford_CrownDoor_Rear_R.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/SM_Ford_CrownDoor_Rear_R.uasset",
+    "bytes": 315260,
+    "sha256": "8742022dbf3b2f514d74656fb81534013820a8b2280af9638cb720460a92c9cb"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "SM_Lights_Ford_Crown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/SM_Lights_Ford_Crown.uasset",
+    "bytes": 130698,
+    "sha256": "b30fbe8b1ee692ac31988daedf194e239cb6a2e21ae9517da15113b53198ffab"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_FordCrown_Ext1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_FordCrown_Ext1.uasset",
+    "bytes": 221248,
+    "sha256": "b9efe235f55cf4739fe79a119be53e3f6ca068499250905f4ec1c3abd52ad076"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_FordCrown_Ext2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_FordCrown_Ext2.uasset",
+    "bytes": 107527,
+    "sha256": "02a174bebbb3abdc2151dc898d1a12b20053c893a69d0e02d2bf838a04c010a6"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_FordCrown_Int1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_FordCrown_Int1.uasset",
+    "bytes": 109565,
+    "sha256": "07679a49bf53d7d35a0481b37a69a7f1d9b7f7a426e4b8f8be64f7b4c4a321b7"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_FordCrown_Int2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_FordCrown_Int2.uasset",
+    "bytes": 226904,
+    "sha256": "ececb43ef969c8b7befcc633af151cad1e95301b5c534035e690cee4b965f3af"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_Rear_ext1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_Rear_ext1.uasset",
+    "bytes": 96553,
+    "sha256": "a3153b88bbb9efab32850e74431d1a522f06622c58242990c986f253006bfcb9"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_Rear_ext2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_Rear_ext2.uasset",
+    "bytes": 97596,
+    "sha256": "e03241a949ce0888b999f57c434cfd3f483de192d794d1d3ba45972e6b3a00a5"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_Rear_int1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_Rear_int1.uasset",
+    "bytes": 98069,
+    "sha256": "881a7a36fe5f236fb4918dee8bd01bbbb9e8054e7f75c041716b01652b657c2f"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_Rear_int2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_Rear_int2.uasset",
+    "bytes": 96534,
+    "sha256": "b67069317836941e8f4da8f162c52f85fbaa117f7f3bb5b2470590ee91e833a4"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_ext1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_ext1.uasset",
+    "bytes": 92931,
+    "sha256": "2404fb7b20699dea221a5fea90be3e06feabb993d00e4b2f0f3e4a70dcc5293a"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_ext2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_ext2.uasset",
+    "bytes": 92846,
+    "sha256": "8e94643d61f65c1f9b88e762d45fc54fde5cfb5c14f39795ae0eefa6aab66c6f"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_int1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_int1.uasset",
+    "bytes": 93719,
+    "sha256": "0b47f9e23355290f57dd316a16c06553ee31bf82cde08235dcf55ffe8daeccab"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorL_FordCrown_int2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorL_FordCrown_int2.uasset",
+    "bytes": 93355,
+    "sha256": "e65ec122ff3b313b5c66022cbbbffb00f3deba0d87655e01da3995ae864d61ac"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_Rear_ext1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_Rear_ext1.uasset",
+    "bytes": 97621,
+    "sha256": "122956939e910b28fbf6f1e8bc8693cc8fe3b595e2b972e2071d862324748bf7"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_Rear_ext2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_Rear_ext2.uasset",
+    "bytes": 96527,
+    "sha256": "26f89359486116671370ceefb63b9bb56c6e47ba6476d844c89989fa95fbad22"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_Rear_int1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_Rear_int1.uasset",
+    "bytes": 96546,
+    "sha256": "c1809d0e86d5dd4040dff4365b05aa16afbd4928bd7c558c65e86e18ab76acb9"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_Rear_int2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_Rear_int2.uasset",
+    "bytes": 97817,
+    "sha256": "e782f2028d81fdf6a7ef3c2cf682c1117e82c63619514061315a7c65604806e2"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_ext1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_ext1.uasset",
+    "bytes": 94075,
+    "sha256": "4a10d149b2ec406d2f83523c739f10e31cd5d3a487180da533896e8da2d01c78"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_ext2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_ext2.uasset",
+    "bytes": 94087,
+    "sha256": "38b824896fb91df7460b1569eae104c5799d15a200aa306e4bc270e261b69caa"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_int1.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_int1.uasset",
+    "bytes": 92877,
+    "sha256": "366d0dae39316759b673f293d7d3a9f44943d5e3d3638164943bb342258ce414"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Glasses/SM_Glass_doorR_FordCrown_int2.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Glasses/SM_Glass_doorR_FordCrown_int2.uasset",
+    "bytes": 92825,
+    "sha256": "5c107d5d7fc450b6c6f244528f395a41bbbfc82d9bec6dd70c825d9a8a80c1dc"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_BodyWork_FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_BodyWork_FordCrown.uasset",
+    "bytes": 109185,
+    "sha256": "d58ceb0079be09d55f0ec90cef493333195da9881e1ac166bb55b5ede01f524b"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_Details1_FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_Details1_FordCrown.uasset",
+    "bytes": 107165,
+    "sha256": "9d907fe9759da722c6173a64da197d8ab67b32bf3459373b248e62939188c6c8"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_GlassExt_Lights_FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_GlassExt_Lights_FordCrown.uasset",
+    "bytes": 99755,
+    "sha256": "f46c72bb09b821b3182c4ffca0e05b67294476a340562c0e274200267d473fa6"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_GlassExt__FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_GlassExt__FordCrown.uasset",
+    "bytes": 97291,
+    "sha256": "cd01380acde3e5c4f72459f37a5e0d22be834ca17eda21e79af93abcdc4d023c"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_GlassInt_Lights_FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_GlassInt_Lights_FordCrown.uasset",
+    "bytes": 59427,
+    "sha256": "3cd474f1ff3b2122d43e46194de2d33880b142c69331c9c5930034f6243c495e"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_GlassInt__FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_GlassInt__FordCrown.uasset",
+    "bytes": 82702,
+    "sha256": "4591d889cb2d3a87bf9e8fd2b504f7243bcb1112a49770cfbc2289f03383f5e9"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_LicensePlate_FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_LicensePlate_FordCrown.uasset",
+    "bytes": 114254,
+    "sha256": "8cdd9003314969154d9e494877e478e34792c4117ef57cc323bc982f1e2c8679"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/MI_Lights_FordCrown.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/MI_Lights_FordCrown.uasset",
+    "bytes": 110430,
+    "sha256": "3d100df4156f1df04793e6930270afaf47a7c039acccb81107428f042b945a63"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/M_Bodywork_FordCrown_d.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/M_Bodywork_FordCrown_d.uasset",
+    "bytes": 7584841,
+    "sha256": "5b2a91dc2d3408141f612fe3b916cd5779d026f74ce4478008d255843b632373"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/M_Bodywork_FordCrown_orm.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/M_Bodywork_FordCrown_orm.uasset",
+    "bytes": 1044001,
+    "sha256": "eb88971845a923dfee31f9d79235997f3e7b8ad97557f727ab87b0c9929b0037"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/T_Details_FordCrown_d.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/T_Details_FordCrown_d.uasset",
+    "bytes": 7167557,
+    "sha256": "fc3bff61468d396a79a0a522c6c7e2a2d82aae4edbd06b60e9e4a221886359df"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/T_Details_FordCrown_n.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/T_Details_FordCrown_n.uasset",
+    "bytes": 20585806,
+    "sha256": "600373ca712004721594ffe3f9dd61a50cd21c352e539acb4a8e8fdebf9b9ccd"
+  },
+  {
+    "model": "Ford_Crown",
+    "path": "Materials/T_Details_FordCrown_orm.uasset",
+    "source": "Static/Car/4Wheeled/Ford_Crown/Materials/T_Details_FordCrown_orm.uasset",
+    "bytes": 14481994,
+    "sha256": "c100e2d9a63e8a40cfecdddc79197ae1bde2e4ade470d58d494c04958b2244f9"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "SM_CyberTruck_DoorFL_SM_CyberTruckDoor_Front_L.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/SM_CyberTruck_DoorFL_SM_CyberTruckDoor_Front_L.uasset",
+    "bytes": 97442,
+    "sha256": "9d63b71d9e44aa2c575b037f624ae94c8fcce7940a162538883fbf5339de6fac"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "SM_CyberTruck_DoorFR_SM_CyberTruckDoor_Front_R.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/SM_CyberTruck_DoorFR_SM_CyberTruckDoor_Front_R.uasset",
+    "bytes": 98470,
+    "sha256": "ef203f8c4dc412c5f716395d2ac8e0881e66ad0ebeddc9da6e2dcf1534f90034"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "SM_CyberTruck_DoorRL_SM_CyberTruckDoor_Rear_L.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/SM_CyberTruck_DoorRL_SM_CyberTruckDoor_Rear_L.uasset",
+    "bytes": 93150,
+    "sha256": "7ef84de701e15d430cc469daa0c608f9d3fb9effb98f86bcfeb193157243faac"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "SM_CyberTruck_DoorRR_SM_CyberTruckDoor_Rear_R.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/SM_CyberTruck_DoorRR_SM_CyberTruckDoor_Rear_R.uasset",
+    "bytes": 93326,
+    "sha256": "8bd1f4f8d52d78ab05707c9d649e37c5ba5e347f0c38d7336cc131b2bf2bef09"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "SM_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/SM_Cybertruck.uasset",
+    "bytes": 1236526,
+    "sha256": "f857baf472e171d2fbba9d98a43e4421ff408bb936a06bb134f65de644b6b5ef"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "SM_Cybertruck_v2.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/SM_Cybertruck_v2.uasset",
+    "bytes": 8928582,
+    "sha256": "999d7f6ae605878fa39ccfa9d5739c910e600f6bc620622fd24ddc56eb381c0a"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "SM_Cybertruck_v2_lights.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/SM_Cybertruck_v2_lights.uasset",
+    "bytes": 111209,
+    "sha256": "3748cd1af9beb806102d42b5a690aed521c4c7a7d8f9e6a8dfd8ce92abdde07f"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cyber_Glass_ext_1.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cyber_Glass_ext_1.uasset",
+    "bytes": 111082,
+    "sha256": "90eaffeacd484cc4a538ba6e8e851eefedb083329ca59d767f2cc6ef3a8b9746"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cyber_Glass_ext_2.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cyber_Glass_ext_2.uasset",
+    "bytes": 110240,
+    "sha256": "a855ac55ce23a0a9d314205ae064f3ffc184b861dc1ec5e980381f4e1dbfa6cf"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cyber_Glass_int_1.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cyber_Glass_int_1.uasset",
+    "bytes": 101102,
+    "sha256": "5611e32f751dba0287448aef2b2d99409345c1bd8477acb94fbf964ba3ada376"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cyber_Glass_int_2.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cyber_Glass_int_2.uasset",
+    "bytes": 101265,
+    "sha256": "bc124678756603dccb957dab7d2351c3c2690b81210ed3991cc08e4a4697d48f"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass1.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass1.uasset",
+    "bytes": 90713,
+    "sha256": "142ccd793878c24c40e81c50d65459f9939be6d2aea51719be3f0a20256d996c"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass10.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass10.uasset",
+    "bytes": 96693,
+    "sha256": "48c7b25bdd8754c5ec93b0cca24d769e0d50622b73e9871bc9e81c278eb6143a"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass2.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass2.uasset",
+    "bytes": 89204,
+    "sha256": "dd29ea93e02a47b6d0b1e89d23c23296f9c9a2151b9d1ebb0d04f7b1ff11baae"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass3.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass3.uasset",
+    "bytes": 95281,
+    "sha256": "09f9ba06fa170d91f7b98bdb31f851f2d0f3d4261afcaa308f41b050d8db3c87"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass4.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass4.uasset",
+    "bytes": 93773,
+    "sha256": "618ba8b41cb957c037cfd207b8d5ea73571f4582efe1e6649c052189a5319817"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass5.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass5.uasset",
+    "bytes": 101393,
+    "sha256": "7bcd887bcb8e20374c2c589c52d6a6139be074421b97acef943331fb78a4ebca"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass6.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass6.uasset",
+    "bytes": 92565,
+    "sha256": "8d00def25f6632a6f731f2e77612bcdbccc2f6dcf7dce20a18eb48723cd94dfa"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass7.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass7.uasset",
+    "bytes": 88339,
+    "sha256": "d8954ebf401442edd8068c8c2d470a7a8b3c5d4b2a68be8a975c6aabcc77576c"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass8.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass8.uasset",
+    "bytes": 96866,
+    "sha256": "dd985b6e5f7d051d1900bc3c2b0a5cdb36d10e06ae87550fa9ddacda53ad6cd4"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/SM_Cybertruck_Glass9.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/SM_Cybertruck_Glass9.uasset",
+    "bytes": 95707,
+    "sha256": "83575ab4fc5edc0353b33893ca8efd8766cb41ee30fa8532b079fef49814ed44"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/MI_CarExterior_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/MI_CarExterior_Cybertruck.uasset",
+    "bytes": 102740,
+    "sha256": "919d94d97b07b7b2dc9fced60ff277b6efa53ddcb6cc9846b5bf0d03ecfc1777"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/MI_CarGlass_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/MI_CarGlass_Cybertruck.uasset",
+    "bytes": 80084,
+    "sha256": "6729b2690198b70a6c705851432be0223f8b86c52a2be5ef23bd265bef024a53"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/MI_CarLightGlass_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/MI_CarLightGlass_Cybertruck.uasset",
+    "bytes": 84314,
+    "sha256": "e03940e01948ffc132206cdec8c571ed524edeeac93edad40fe838a553831d6b"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/MI_GlassExt_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/MI_GlassExt_Cybertruck.uasset",
+    "bytes": 97131,
+    "sha256": "1ac93a81952264078bb1f1064a3639168a8341639e91b67d82991fb9a73daf81"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/MI_GlassInt_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/MI_GlassInt_Cybertruck.uasset",
+    "bytes": 82511,
+    "sha256": "2af16e905fb361a0618f6d842d64bdb20d20486ad088fcef107a99e1f06d2b46"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/MI_Interior_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/MI_Interior_Cybertruck.uasset",
+    "bytes": 73520,
+    "sha256": "76eb8134bd03718a55402637a857039184ec2e2cf9164200915f3a6da33a3a34"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/MI_VehicleLights_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/MI_VehicleLights_Cybertruck.uasset",
+    "bytes": 88941,
+    "sha256": "79ea11d29d6bfca3e1f0a1eece762eb9d1fd6075629f9dade3c4e1f8579fcc72"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/M_Bodywork_Cybertruck.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/M_Bodywork_Cybertruck.uasset",
+    "bytes": 76909,
+    "sha256": "125ca87f71c56c5e3fc1726c29a4bc056cf5bb02c5c1fc62f5ced1acf00f656b"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/M_CyberTruck_bodywork_d.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/M_CyberTruck_bodywork_d.uasset",
+    "bytes": 1958320,
+    "sha256": "fe42f6ed195ab4072dfb8d3753b6fab32927f4f94ab54c8141bd5832d8b588cb"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/M_Cybertruck_bodywork_n.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/M_Cybertruck_bodywork_n.uasset",
+    "bytes": 4482043,
+    "sha256": "d1916e20d990d1383e9e1a6ce641015a30e6299f23eafcd39d5685f9fce7f948"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/M_Cybertruck_bodywork_ormh.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/M_Cybertruck_bodywork_ormh.uasset",
+    "bytes": 5334303,
+    "sha256": "2ee16727823159c6f38c5063252d2867102fde1b27ccd997684f9b0a5b5532f2"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/M_Cybertruck_interior_d.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/M_Cybertruck_interior_d.uasset",
+    "bytes": 1346042,
+    "sha256": "3fd582977e6d066a0288d0f289527a370ece62afa3902e835e677ac930915689"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/M_Cybertruck_interior_n.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/M_Cybertruck_interior_n.uasset",
+    "bytes": 5397887,
+    "sha256": "2b690cb1fdd61c0dc0c1266ae50f81e405f06def2cef702aef154566e502a9ca"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Materials/M_Cybertruck_interior_ormh.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Materials/M_Cybertruck_interior_ormh.uasset",
+    "bytes": 5471417,
+    "sha256": "f3a29570b3077d84d1e4408edf46dce0d267d220053e41d1ce292f157fbd2ef0"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_FL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_FL.uasset",
+    "bytes": 91944,
+    "sha256": "fcf223d0ac1801aeb9d98d1debcb66c5746000dfca4c0e244ad33996c8c3cc97"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_FR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_FR.uasset",
+    "bytes": 92557,
+    "sha256": "61b73cbfef548165f150674d2a610946394f5343af1f1b211c2d44351b6b832a"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_RL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_RL.uasset",
+    "bytes": 90410,
+    "sha256": "d235a6246c5780331bcc8a84aac10954a4d9ab59e9bde30509463a19411c6067"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_RR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext1_RR.uasset",
+    "bytes": 90513,
+    "sha256": "1402f4261bfd42b4789d6b35bc648f85127875a47bc173bc8ba0d7d52525388f"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_FL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_FL.uasset",
+    "bytes": 92601,
+    "sha256": "069c2718f2dbb692f49e470f43f1737a91b55a09be7c31b8a0f0c10d5bff7bc4"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_FR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_FR.uasset",
+    "bytes": 91607,
+    "sha256": "7ebb239431059e294f565c5388bdeef0a67125f1773476e52809f295d10cfa23"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_RL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_RL.uasset",
+    "bytes": 91124,
+    "sha256": "cecaf2b2e6c0fa1c8b5ba5ee577abf01a67ab277ca9e02a5e2135d46758e5ab9"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_RR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Ext2_RR.uasset",
+    "bytes": 90448,
+    "sha256": "c9486900e429be32d96819b72c8a8478280e576ab5443cc163ab99be4cb3ec56"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_FL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_FL.uasset",
+    "bytes": 89301,
+    "sha256": "1550bef723b39e5e0f2063132cd07741c3fb2950a6c6c5da0e168972f7698f33"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_FR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_FR.uasset",
+    "bytes": 89599,
+    "sha256": "42fc02d57ee4f17a5f2f5f773c04e4bb422e2572ae23f0478149708dcabad9e7"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_RL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_RL.uasset",
+    "bytes": 88744,
+    "sha256": "d068df2b47e49f733e0c81df1c5cd5bbdf26e21b61be4542d77796aba4727f7b"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_RR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_RR.uasset",
+    "bytes": 88993,
+    "sha256": "1cbed1780f96f105becbe0cd2570a753bd1d4f008d17eff601930f9460db31f4"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_FL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_FL.uasset",
+    "bytes": 89662,
+    "sha256": "087da6b3c623e63e0e9f0042bf0244e934a4268b0e41ccf589d72ca99bd4c646"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_FR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_FR.uasset",
+    "bytes": 89389,
+    "sha256": "29fc3f8b5dcc69fbc51fd284bd4bc469a3ca9febf05c99a1a694601bb188c8cb"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_RL.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_RL.uasset",
+    "bytes": 89089,
+    "sha256": "bd2f5c339db1f1ae046a84e554ce17068832ba3d86a34b48bdb152522cc20b30"
+  },
+  {
+    "model": "Cybertruck",
+    "path": "Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_RR.uasset",
+    "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int2_RR.uasset",
+    "bytes": 88878,
+    "sha256": "0a2bb32a5d7b1367edfdfef97d27a0764968bbeb61fae525bec19ddec6f35f9a"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "SK_Charger2020.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/SK_Charger2020.uasset",
+    "bytes": 14840796,
+    "sha256": "bfd23ba09182f0d0f744eb0b661bad50ae7cbfc0140e782a6a0d03b1943db717"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "SM_Lights_Charger2020.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/SM_Lights_Charger2020.uasset",
+    "bytes": 238636,
+    "sha256": "c687ac6323e2a635e4084bf9f6bce3027ba5e778fb2ebc4342576a244a74bd19"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_Charger2020_Glass1.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_Charger2020_Glass1.uasset",
+    "bytes": 200450,
+    "sha256": "7b8b3bdb6648c74f3d9b5b9d380568a6cb74e17dded55eba0ae796f79041e7a0"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_Charger2020_Glass2.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_Charger2020_Glass2.uasset",
+    "bytes": 130872,
+    "sha256": "c93b8edd9b172a4e83c235b944030bbb1d0400dc6524027da9507512f550945b"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_Charger2020_Glass3.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_Charger2020_Glass3.uasset",
+    "bytes": 170992,
+    "sha256": "19544bfbb50779867d00331dd5ada32d0fd5410a533bec68c077c83f87cb29b3"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_Charger2020_Glass4.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_Charger2020_Glass4.uasset",
+    "bytes": 116621,
+    "sha256": "c468f9831bdb4d8d9be425f9b0e646b4cb73981b7f48bba73f2c4ae0da9fd011"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext1_LF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext1_LF.uasset",
+    "bytes": 97232,
+    "sha256": "2618e6b54440c19ab26452081b611e7cc325fadb1d79cc1191a22031626a7b6f"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext1_LR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext1_LR.uasset",
+    "bytes": 95813,
+    "sha256": "3bc1412b44e71c60e2d707df3338f194cd0e855dbdbcecf9c1ce85c2af239689"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext1_RF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext1_RF.uasset",
+    "bytes": 98417,
+    "sha256": "b95e2f37b21bbfebfb8e4150722b9b0af7a58eacfaf442aaed0857a365a7d5ae"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext1_RR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext1_RR.uasset",
+    "bytes": 97120,
+    "sha256": "cde273a70159d387310e395ead5335fd9dd5ce495c24d2c2297e440c60ba6561"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext2_LF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext2_LF.uasset",
+    "bytes": 97782,
+    "sha256": "0cb354f6d76a17a3e4a440c3e712f1a7fda1c3fab240d7765771da1f183a9c23"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext2_LR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext2_LR.uasset",
+    "bytes": 96540,
+    "sha256": "35125f0002dfdd2aedbb72baa6d973694b18292f7000f98b1e28f6b125c632b8"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext2_RF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext2_RF.uasset",
+    "bytes": 96877,
+    "sha256": "82fcd7d805a0d67d87793279fffd3833c8a002cfb78c5c56e402088bf519f23d"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Ext2_RR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Ext2_RR.uasset",
+    "bytes": 95701,
+    "sha256": "84d57e411bd2baf19fbedb58cebcecbfb6b79787ede0cee625a66406c31989b8"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int1_LF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int1_LF.uasset",
+    "bytes": 91774,
+    "sha256": "6536b2c2a5ea3207093dbec415038dc1c9788ef894b18f06864d192f98171f00"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int1_LR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int1_LR.uasset",
+    "bytes": 90387,
+    "sha256": "d2a4a2840818405fb87332a034bfd5b4bc6672cf14b1063288ef5bfc16b1074e"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int1_RF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int1_RF.uasset",
+    "bytes": 92083,
+    "sha256": "a34ef1380bc4dc68a0a30bf4f073962b81af824d1c24e6a3ad48c1c3ea59fae6"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int1_RR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int1_RR.uasset",
+    "bytes": 90237,
+    "sha256": "61ddfb81adef153e64d21508302829f27fd27598e92e2aac4b960b400787a304"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int2_LF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int2_LF.uasset",
+    "bytes": 91380,
+    "sha256": "abebb8310c7969cb61d385a2146afa8990c510b4df16590e8e4524fb0ba0ce10"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int2_LR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int2_LR.uasset",
+    "bytes": 90832,
+    "sha256": "a534356cf3b31ed8b53699d9df5340351e6b05501cc714ca87a5abac936cc3ee"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int2_RF.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int2_RF.uasset",
+    "bytes": 91554,
+    "sha256": "1c356b8c3130074bbd203784d1e86f9046e6919ca7b50f3a286ab056cbffcd7e"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_Glass/SM_DoorGlass_Int2_RR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_Glass/SM_DoorGlass_Int2_RR.uasset",
+    "bytes": 90289,
+    "sha256": "ef8bbf8975fba5141d840bf6a8010127314499b4500097781c7000a6fcd6af13"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_door/SM_DoorFL.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_door/SM_DoorFL.uasset",
+    "bytes": 264742,
+    "sha256": "2aeaae85a11b729af2e0324b86164da362f03b104239a5d4003acae3a4f85dea"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_door/SM_DoorFR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_door/SM_DoorFR.uasset",
+    "bytes": 271256,
+    "sha256": "1666372a83cb16d773ac6bbc51705251d7c3bc49a89d90b7f55573c146248697"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_door/SM_DoorRL.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_door/SM_DoorRL.uasset",
+    "bytes": 205925,
+    "sha256": "3949d5cb07003e40b2fb76897a5834e4e88ef7cf73e798e116ca577bdc252bb3"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Charger2020_door/SM_DoorRR.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Charger2020_door/SM_DoorRR.uasset",
+    "bytes": 207553,
+    "sha256": "aa09101dd7b804158badb5ce6054b400787ac20ecc07a916c58f49b0194e1c03"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/MI_Charger2020_Bodywork.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/MI_Charger2020_Bodywork.uasset",
+    "bytes": 83750,
+    "sha256": "096bdc29e473a0a8877c54720425002c370fc90170f0e02c23cd62c74055b7c8"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/MI_Charger2020_Bodywork1.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/MI_Charger2020_Bodywork1.uasset",
+    "bytes": 90475,
+    "sha256": "67d7311a542ce6d23ac6b73b1e00ee33de24391fb839ed5d96213e8905f13556"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/MI_ChargerCop_Bodywork.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/MI_ChargerCop_Bodywork.uasset",
+    "bytes": 81147,
+    "sha256": "485f1b3c88e9081a883caa00254f76dbec74779eb4127bf5f06c3a35f0eb25ae"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/MI_ChargerCop_Interior.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/MI_ChargerCop_Interior.uasset",
+    "bytes": 109262,
+    "sha256": "8e24d435d3cea5ec106bb9ea6073e877089feeaceae5bb5b180b89e0affb76d6"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/MI_GlassInt_Charger.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/MI_GlassInt_Charger.uasset",
+    "bytes": 79773,
+    "sha256": "c7d42c80c86112540104c69c583151f75a38cb022bc47e968926347c4749e2e4"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/MI_LicensePlate_Charger2020.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/MI_LicensePlate_Charger2020.uasset",
+    "bytes": 114268,
+    "sha256": "258179bce0483eb9bc94ecb712bbe393f7a4c70ac81c374122cabd2d1867d702"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/MI_VehicleLights_Charger2020.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/MI_VehicleLights_Charger2020.uasset",
+    "bytes": 87176,
+    "sha256": "973942fc20998996fd30cb550aafd69e7e831631e764fda0859a2d05841b200f"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/M_GlassExt_Charger.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/M_GlassExt_Charger.uasset",
+    "bytes": 94573,
+    "sha256": "7e7c0f4b22697ec9b7102fa61fe639ef41fe1ff8c77d9e505dd609292eb56671"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/T_Interior__DodgeCharger_d.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/T_Interior__DodgeCharger_d.uasset",
+    "bytes": 3248280,
+    "sha256": "87440a79cb231605ddbc10cf84e82261fb632eee7f61274884115e6d5d800eee"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/T_Interior__DodgeCharger_n.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/T_Interior__DodgeCharger_n.uasset",
+    "bytes": 5790310,
+    "sha256": "720406178673089c6bad3c8cd32a009c52856ee2d8513976d2f1a7297ad6f085"
+  },
+  {
+    "model": "DodgeCharger2020",
+    "path": "Materials/T_Interior__DodgeCharger_ormh.uasset",
+    "source": "Static/Car/4Wheeled/DodgeCharger2020/Materials/T_Interior__DodgeCharger_ormh.uasset",
+    "bytes": 4408831,
+    "sha256": "f8005e1432d4b31106832d9c0090a972ec30d906ce504d38977460db399211cd"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_BodyWork_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_BodyWork_Sprinter.uasset",
+    "bytes": 101587,
+    "sha256": "8a84af8363f826afe4bee64cbcc0bc49f286f9f56d70b56af14884e27fa690f7"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_Details1_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_Details1_Sprinter.uasset",
+    "bytes": 86507,
+    "sha256": "aefd6ae7772cd17295e0c53cd8c012feefaf5004f903a55eba994f2d49649bb7"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_Details2_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_Details2_Sprinter.uasset",
+    "bytes": 90768,
+    "sha256": "38af4d0f696448d0e0fa94d5d307d22faa4d0f31761a4bf2ac18c8b5653517e9"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_FakeGlassExt_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_FakeGlassExt_Sprinter.uasset",
+    "bytes": 98360,
+    "sha256": "7e35a1ba524892a276c2c0949037a2108c5917986cf895af82c0816213a7411b"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_FakeGlassInt_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_FakeGlassInt_Sprinter.uasset",
+    "bytes": 39754,
+    "sha256": "96b431bceab8b0ace043e36e9efb79dc7517cc253825384d120e9ee0c7c234fd"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_GlassExt_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_GlassExt_Sprinter.uasset",
+    "bytes": 97513,
+    "sha256": "9ac34d4c487eb00cad7921afc0a60265a7785becad2aba134c8301b7d8f0fccf"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_GlassExt_Sprinter_Lights.uasset",
+    "source": "Static/Truck/Sprinter/MI_GlassExt_Sprinter_Lights.uasset",
+    "bytes": 99550,
+    "sha256": "0ea8b761e44ee178f5ae7f8f3992ebbe59362ee55441edcbd428ca93e2867a43"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_GlassInt_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_GlassInt_Sprinter.uasset",
+    "bytes": 81420,
+    "sha256": "e357489f9b83343ee63eb8b02c0258f7f6fc6ab03f3b28038064751fe5edf62b"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_GlassInt_Sprinter_Lights.uasset",
+    "source": "Static/Truck/Sprinter/MI_GlassInt_Sprinter_Lights.uasset",
+    "bytes": 59270,
+    "sha256": "19d6aa561e5cb89afa53c964560027ed3a9d1c05f25d9c1376245f59275801ba"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_LicensePlate_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_LicensePlate_Sprinter.uasset",
+    "bytes": 114419,
+    "sha256": "35de840cfa943cd604398b3b4c6a1a0560a94a38b4e1126a1a8519e47d3a0146"
+  },
+  {
+    "model": "Sprinter",
+    "path": "MI_Lights_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/MI_Lights_Sprinter.uasset",
+    "bytes": 93218,
+    "sha256": "39b12c28cd4d1f218ebe882880f1801ab87957dc1e3eac91362dce45d1c68629"
+  },
+  {
+    "model": "Sprinter",
+    "path": "M_Bodywork_Van_d.uasset",
+    "source": "Static/Truck/Sprinter/M_Bodywork_Van_d.uasset",
+    "bytes": 6525888,
+    "sha256": "3a0c429ad3e378313d6582d9a3d5557496bae06020694d2db8a769879d6f83b9"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SK_Sprinter.uasset",
+    "source": "Static/Truck/Sprinter/SK_Sprinter.uasset",
+    "bytes": 13847981,
+    "sha256": "69700770078f1a37e4b22acf47e52a71ab0db36b4d7066bd49415f7bb60ac7f7"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorL_Sprinter_Ext1_DoorL.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorL_Sprinter_Ext1_DoorL.uasset",
+    "bytes": 105248,
+    "sha256": "bd96b58a9b31ce0d1f5548ec78be73ce319d24f26f4f45a2b32b64a826e05c24"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorL_Sprinter_Ext2_DoorL.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorL_Sprinter_Ext2_DoorL.uasset",
+    "bytes": 105292,
+    "sha256": "7795636178d8ea01786afbd4c89ca51616d27d3f5572a4cdce39bb2830bcef08"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorL_Sprinter_Int1_DoorL.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorL_Sprinter_Int1_DoorL.uasset",
+    "bytes": 95558,
+    "sha256": "4a72f24be0ef13a880f60102741164846f3f695eb4659bbc3702d117ae1caaa5"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorL_Sprinter_Int2_DoorL.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorL_Sprinter_Int2_DoorL.uasset",
+    "bytes": 97347,
+    "sha256": "844491c60f3c8bc9eb7eb5ad1d16397f5b82373758e252ec6f4799bfeea61d8b"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorR_Sprinter_Ext1_DoorR.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorR_Sprinter_Ext1_DoorR.uasset",
+    "bytes": 105812,
+    "sha256": "cccf323aa0b3bc117c43a1abc30a90bb5cf98fa29046cfeaf4aad5df20bf2c02"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorR_Sprinter_Ext2_DoorR.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorR_Sprinter_Ext2_DoorR.uasset",
+    "bytes": 104550,
+    "sha256": "bc8dccc5064a1e5c101c9ee8105d52af9d9c76fe6b2ab3767f9c848b53994446"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorR_Sprinter_Int1_DoorR.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorR_Sprinter_Int1_DoorR.uasset",
+    "bytes": 97231,
+    "sha256": "bce2437bf5579f0eeab5030f78aabb15ce9bf6c9c072abf86cba38db64b22b4a"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_DoorR_Sprinter_Int2_DoorR.uasset",
+    "source": "Static/Truck/Sprinter/SM_DoorR_Sprinter_Int2_DoorR.uasset",
+    "bytes": 95509,
+    "sha256": "d33cf55bd17586957ede091e5ae9c815a386283fbf8baac0ef357bd7f1295974"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_Glass_Sprinter_Ext1.uasset",
+    "source": "Static/Truck/Sprinter/SM_Glass_Sprinter_Ext1.uasset",
+    "bytes": 258613,
+    "sha256": "1ea5fc57d70fc0da27b99509adcecd96610f0010e3ed721dcc28f5abb80c3413"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_Glass_Sprinter_Ext2.uasset",
+    "source": "Static/Truck/Sprinter/SM_Glass_Sprinter_Ext2.uasset",
+    "bytes": 111518,
+    "sha256": "185d982b1c2d0e311cc2cec578effb7f136256a1d8746e6087bd979b72118247"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_Glass_Sprinter_Int1.uasset",
+    "source": "Static/Truck/Sprinter/SM_Glass_Sprinter_Int1.uasset",
+    "bytes": 200071,
+    "sha256": "927ecbd29713c436bc3599d0d691a7cdb0b37d7bcb45d678f3be7ad1d4a92f8d"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_Glass_Sprinter_Int2.uasset",
+    "source": "Static/Truck/Sprinter/SM_Glass_Sprinter_Int2.uasset",
+    "bytes": 103759,
+    "sha256": "72c8fbab5ecc87886ccd4e5731adb669aa27f0b895ebdc1532e3abbe8fd5afe3"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_Sprinter_DoorL.uasset",
+    "source": "Static/Truck/Sprinter/SM_Sprinter_DoorL.uasset",
+    "bytes": 348797,
+    "sha256": "25db5ac6a0f89c495f180c9534d043007bc848c91b9d93b163b4db1445a04c91"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_Sprinter_DoorR.uasset",
+    "source": "Static/Truck/Sprinter/SM_Sprinter_DoorR.uasset",
+    "bytes": 354739,
+    "sha256": "93f1851a76fb63f35124f6b9054e175839e7dd53afd2e85f2e070b28d3911f26"
+  },
+  {
+    "model": "Sprinter",
+    "path": "SM_Sprinter_Lights.uasset",
+    "source": "Static/Truck/Sprinter/SM_Sprinter_Lights.uasset",
+    "bytes": 239028,
+    "sha256": "77e2225ed97e56c88c394b966979633b4ce7d2bc6d1fb0d683fec45af083afbc"
+  },
+  {
+    "model": "Sprinter",
+    "path": "T_Details2_Sprinter_d.uasset",
+    "source": "Static/Truck/Sprinter/T_Details2_Sprinter_d.uasset",
+    "bytes": 10346216,
+    "sha256": "f664cb01afcf16927ff4c10c7094129c739f41ed99d2bfedc4aa332d68f06e93"
+  },
+  {
+    "model": "Sprinter",
+    "path": "T_Details2_Sprinter_n.uasset",
+    "source": "Static/Truck/Sprinter/T_Details2_Sprinter_n.uasset",
+    "bytes": 33247742,
+    "sha256": "bae8902eb15978b8109b4b24a80fb28b2a694e8822d6117bebd01878b22afe49"
+  },
+  {
+    "model": "Sprinter",
+    "path": "T_Details2_Sprinter_orm.uasset",
+    "source": "Static/Truck/Sprinter/T_Details2_Sprinter_orm.uasset",
+    "bytes": 16614052,
+    "sha256": "d85d52675f9cbb04f07d9bc6f80be67b164437e34d5f69f75a4871c8c69a6d40"
+  },
+  {
+    "model": "Sprinter",
+    "path": "T_Details_Sprinter_d.uasset",
+    "source": "Static/Truck/Sprinter/T_Details_Sprinter_d.uasset",
+    "bytes": 6921596,
+    "sha256": "cbec465fb5245b87d5336517cef9f150f51057ad2e2755974c250c4b9f17da1b"
+  },
+  {
+    "model": "Sprinter",
+    "path": "T_Details_Sprinter_n.uasset",
+    "source": "Static/Truck/Sprinter/T_Details_Sprinter_n.uasset",
+    "bytes": 27798631,
+    "sha256": "2982b41fd41b8cf2ce027ec696be01e5699e71381d2c80d86c410dad50ab0a85"
+  },
+  {
+    "model": "Sprinter",
+    "path": "T_Details_Sprinter_orm.uasset",
+    "source": "Static/Truck/Sprinter/T_Details_Sprinter_orm.uasset",
+    "bytes": 14283063,
+    "sha256": "28530aafe90cd174ff112dd91d1b22818fc657671f12f08e6e2ac27d3417f359"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "SK_BMW_Gran_Tourer.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/SK_BMW_Gran_Tourer.uasset",
+    "bytes": 4062779,
+    "sha256": "d47daf65a7e484552cfa0535a7d2e444193bfd459c225b34ca288741306a1d5a"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "SM_BMWGrandTourer.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/SM_BMWGrandTourer.uasset",
+    "bytes": 1219713,
+    "sha256": "b96fa02be9dee248b6b1e39349247f3c6b0369b7aadcbe59bc960ac1c37d4cdf"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/BMWLogo.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/BMWLogo.uasset",
+    "bytes": 99835,
+    "sha256": "4895b81f315e1f1005671a8bf27d2278a3b02bb43823ac4601b762fb48b2b3df"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/BMW_logo.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/BMW_logo.uasset",
+    "bytes": 420467,
+    "sha256": "8ead1391913d8e9287563fd26a7205fbd1d11a26e42bc6ddd3168346c2f8cc74"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/BmwGranTourer_BodyworkMat_D.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/BmwGranTourer_BodyworkMat_D.uasset",
+    "bytes": 40817,
+    "sha256": "525c8c73422e4b62e573746e7fed96210405789fd2b14b0619cdcbdd368a9847"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_BmwMat_Normal.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_BmwMat_Normal.uasset",
+    "bytes": 367295,
+    "sha256": "c39821a13fc4ba2615c28a1bed95fb31b52e8d98c6de29ae9fbff7879db432b9"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_BodyworkMat_Normal.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_BodyworkMat_Normal.uasset",
+    "bytes": 67337,
+    "sha256": "bebeb9601428c80a5c55f481745bc0a858358a4d762e4f936102d5ab49a403f9"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_BodyworkMat_ORM.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_BodyworkMat_ORM.uasset",
+    "bytes": 32960,
+    "sha256": "8866bce5929ab4ade3317776e0f6b58443cf8b4ab0e5c25ce47312e158168da5"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_GrillMat.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_GrillMat.uasset",
+    "bytes": 49017,
+    "sha256": "2011ae437dca93c5121726800f136deb97cb161befd23529f5168e98f5957116"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_GrillMat_BaseColor.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_GrillMat_BaseColor.uasset",
+    "bytes": 91299,
+    "sha256": "379374f841d026250dcf0cf4b2aeafc0406c97bbc011e79ca0377ebd7eb421e1"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_GrillMat_Normal.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_GrillMat_Normal.uasset",
+    "bytes": 290055,
+    "sha256": "67d570c95bb6a5ed1591bbe2bdc9ff14bb696b4c6927715fc1d905d40e7327fa"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_GrillMat_ORM.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_GrillMat_ORM.uasset",
+    "bytes": 197578,
+    "sha256": "8f9354f5a7796018819daf53ce6828c2ceaf69d61736d7170d217ea05a49c87c"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_LightMat_BaseColor__1_.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_LightMat_BaseColor__1_.uasset",
+    "bytes": 2041512,
+    "sha256": "559f61829a1253270ec27233494ffc36dd2029ce0bf1a786f888b81c3075c989"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_LightMat_Normal.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_LightMat_Normal.uasset",
+    "bytes": 1122875,
+    "sha256": "1b38bf05fdd19b80f59f6b080ab22aae3b28e6920f2f7fca3b73902a68657fd3"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_TyreMat.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_TyreMat.uasset",
+    "bytes": 98848,
+    "sha256": "f5b435405d997fdc2e32c07a6a4dd4faf3c3371a80b1e3e6c62ea1a34a2b9f92"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_TyreMat_BaseColor.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_TyreMat_BaseColor.uasset",
+    "bytes": 361900,
+    "sha256": "3b2eb4c36866e3faa2b65bf41917ea5889c618698bbda3c223495097902659c1"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGranTourer_TyreMat_Normal.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGranTourer_TyreMat_Normal.uasset",
+    "bytes": 731633,
+    "sha256": "9880603e3aa6487591743c5e4ff5cb58153b95a2b529f193e21fe7531c279040"
+  },
+  {
+    "model": "BmwGranTourer",
+    "path": "Textures/Vh_Car_BmwGrandTourier_Mat.uasset",
+    "source": "Static/Car/4Wheeled/BmwGranTourer/Textures/Vh_Car_BmwGrandTourier_Mat.uasset",
+    "bytes": 95613,
+    "sha256": "a37637f6106af2d2816515912c449cd0df120bf05dd5c987cf90bbbf95c01d64"
+  }
+]

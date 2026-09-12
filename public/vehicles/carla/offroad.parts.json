@@ -1,0 +1,452 @@
+{
+  "parts": [
+    {
+      "name": "Vehicle_Base--JeepWranglerRubicon_bodyside_mat",
+      "group": "Vehicle_Base",
+      "vertices": 1580,
+      "triangles": 1724,
+      "material": "JeepWranglerRubicon_bodyside_mat",
+      "role": "paint"
+    },
+    {
+      "name": "Door_Front_Left--JeepWranglerRubicon_bodyside_mat",
+      "group": "Door_Front_Left",
+      "vertices": 54,
+      "triangles": 69,
+      "material": "JeepWranglerRubicon_bodyside_mat",
+      "role": "paint"
+    },
+    {
+      "name": "Door_Front_Right--JeepWranglerRubicon_bodyside_mat",
+      "group": "Door_Front_Right",
+      "vertices": 47,
+      "triangles": 66,
+      "material": "JeepWranglerRubicon_bodyside_mat",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--plastiCbLACK",
+      "group": "Vehicle_Base",
+      "vertices": 639,
+      "triangles": 500,
+      "material": "plastiCbLACK",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--plastiCbLACK",
+      "group": "Door_Front_Right",
+      "vertices": 294,
+      "triangles": 350,
+      "material": "plastiCbLACK",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--plastiCbLACK",
+      "group": "Door_Front_Left",
+      "vertices": 294,
+      "triangles": 350,
+      "material": "plastiCbLACK",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--PolishedAluminiumWhite_Inst",
+      "group": "Door_Front_Left",
+      "vertices": 4,
+      "triangles": 2,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--PolishedAluminiumWhite_Inst",
+      "group": "Door_Front_Right",
+      "vertices": 4,
+      "triangles": 2,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--PolishedAluminiumWhite_Inst",
+      "group": "Vehicle_Base",
+      "vertices": 6,
+      "triangles": 4,
+      "material": "PolishedAluminiumWhite_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 6,
+      "triangles": 4,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 6,
+      "triangles": 4,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 6,
+      "triangles": 4,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Door_Front_Left--GlassInstance",
+      "group": "Door_Front_Left",
+      "vertices": 12,
+      "triangles": 8,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Door_Front_Right--GlassInstance",
+      "group": "Door_Front_Right",
+      "vertices": 12,
+      "triangles": 8,
+      "material": "GlassInstance",
+      "role": "glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 32,
+      "triangles": 22,
+      "material": "GlassInstance",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "Vehicle_Base--GlassInstance--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 32,
+      "triangles": 22,
+      "material": "GlassInstance",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "Wheel_Rear_Right--JeepWranglerRubicon_Wheels_Mat",
+      "group": "Wheel_Rear_Right",
+      "vertices": 977,
+      "triangles": 1788,
+      "material": "JeepWranglerRubicon_Wheels_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--JeepWranglerRubicon_Wheels_Mat",
+      "group": "Wheel_Front_Right",
+      "vertices": 982,
+      "triangles": 1788,
+      "material": "JeepWranglerRubicon_Wheels_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--JeepWranglerRubicon_Wheels_Mat",
+      "group": "Wheel_Front_Left",
+      "vertices": 982,
+      "triangles": 1788,
+      "material": "JeepWranglerRubicon_Wheels_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--JeepWranglerRubicon_Wheels_Mat",
+      "group": "Wheel_Rear_Left",
+      "vertices": 977,
+      "triangles": 1788,
+      "material": "JeepWranglerRubicon_Wheels_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--JeepWranglerRubicon_Wheels_Mat",
+      "group": "Vehicle_Base",
+      "vertices": 971,
+      "triangles": 1820,
+      "material": "JeepWranglerRubicon_Wheels_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--Rubber_Inst",
+      "group": "Vehicle_Base",
+      "vertices": 408,
+      "triangles": 368,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--Rubber_Inst",
+      "group": "Door_Front_Left",
+      "vertices": 73,
+      "triangles": 47,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--Rubber_Inst",
+      "group": "Door_Front_Right",
+      "vertices": 78,
+      "triangles": 49,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--OrangeMetal--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 61,
+      "triangles": 100,
+      "material": "JeepWranglerRubicon_FrontLights_mat",
+      "role": "lamp"
+    },
+    {
+      "name": "Vehicle_Base--OrangeMetal--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 61,
+      "triangles": 100,
+      "material": "JeepWranglerRubicon_FrontLights_mat",
+      "role": "lamp"
+    },
+    {
+      "name": "Vehicle_Base--JeepWranglerRubicon_HubCap_mat",
+      "group": "Vehicle_Base",
+      "vertices": 320,
+      "triangles": 560,
+      "material": "JeepWranglerRubicon_HubCap_mat",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--Rubber_Inst",
+      "group": "Vehicle_Base",
+      "vertices": 456,
+      "triangles": 458,
+      "material": "Rubber_Inst",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--Rubber",
+      "group": "Vehicle_Base",
+      "vertices": 1437,
+      "triangles": 1138,
+      "material": "Rubber",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--Rubber",
+      "group": "Door_Front_Left",
+      "vertices": 88,
+      "triangles": 73,
+      "material": "Rubber",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--Rubber",
+      "group": "Door_Front_Right",
+      "vertices": 87,
+      "triangles": 73,
+      "material": "Rubber",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--JeepWranglerRubicon_HubCap_mat",
+      "group": "Wheel_Front_Right",
+      "vertices": 90,
+      "triangles": 130,
+      "material": "JeepWranglerRubicon_HubCap_mat",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--JeepWranglerRubicon_HubCap_mat",
+      "group": "Vehicle_Base",
+      "vertices": 90,
+      "triangles": 130,
+      "material": "JeepWranglerRubicon_HubCap_mat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--JeepWranglerRubicon_HubCap_mat",
+      "group": "Wheel_Rear_Right",
+      "vertices": 90,
+      "triangles": 130,
+      "material": "JeepWranglerRubicon_HubCap_mat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--JeepWranglerRubicon_HubCap_mat",
+      "group": "Wheel_Front_Left",
+      "vertices": 90,
+      "triangles": 130,
+      "material": "JeepWranglerRubicon_HubCap_mat",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--JeepWranglerRubicon_HubCap_mat",
+      "group": "Wheel_Rear_Left",
+      "vertices": 90,
+      "triangles": 130,
+      "material": "JeepWranglerRubicon_HubCap_mat",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--MI_BodyWStaticMesh7",
+      "group": "Door_Front_Left",
+      "vertices": 230,
+      "triangles": 222,
+      "material": "MI_BodyWStaticMesh7",
+      "role": "paint"
+    },
+    {
+      "name": "Door_Front_Right--MI_BodyWStaticMesh7",
+      "group": "Door_Front_Right",
+      "vertices": 228,
+      "triangles": 222,
+      "material": "MI_BodyWStaticMesh7",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--MI_BodyWStaticMesh7",
+      "group": "Vehicle_Base",
+      "vertices": 1841,
+      "triangles": 1904,
+      "material": "MI_BodyWStaticMesh7",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--JeepWranglerRubicon_Bumper_Mat",
+      "group": "Vehicle_Base",
+      "vertices": 1316,
+      "triangles": 1320,
+      "material": "JeepWranglerRubicon_Bumper_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Left--JeepWranglerRubicon_Bumper_Mat",
+      "group": "Door_Front_Left",
+      "vertices": 21,
+      "triangles": 17,
+      "material": "JeepWranglerRubicon_Bumper_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Door_Front_Right--JeepWranglerRubicon_Bumper_Mat",
+      "group": "Door_Front_Right",
+      "vertices": 21,
+      "triangles": 17,
+      "material": "JeepWranglerRubicon_Bumper_Mat",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--M_LicensePlate",
+      "group": "Vehicle_Base",
+      "vertices": 48,
+      "triangles": 24,
+      "material": "M_LicensePlate",
+      "role": "interior"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.7944743,
+      0.40938716999999997,
+      1.2912016
+    ],
+    "Wheel_Front_Right": [
+      -0.790586,
+      0.40938716999999997,
+      1.2912016
+    ],
+    "Wheel_Rear_Right": [
+      -0.790586,
+      0.40938716999999997,
+      -1.0166567
+    ],
+    "Wheel_Rear_Left": [
+      0.7944743,
+      0.40938716999999997,
+      -1.0166567
+    ],
+    "Door_Front_Left": [
+      0.73,
+      0.96,
+      0.45
+    ],
+    "Door_Front_Right": [
+      -0.73,
+      0.96,
+      0.45
+    ]
+  },
+  "materials": {
+    "JeepWranglerRubicon_bodyside_mat": {
+      "textures": {
+        "Diffuse": "MI_Plastic_Matte_Grey_BaseColor",
+        "ORM": "MI_Plastic_Matte_Grey_ORM",
+        "Normal": "MI_Plastic_Matte_Grey_Normal"
+      },
+      "role": "paint"
+    },
+    "plastiCbLACK": {
+      "textures": {},
+      "role": "interior"
+    },
+    "PolishedAluminiumWhite_Inst": {
+      "textures": {},
+      "role": "interior"
+    },
+    "GlassInstance": {
+      "textures": {},
+      "role": "glass"
+    },
+    "JeepWranglerRubicon_Wheels_Mat": {
+      "textures": {
+        "Diffuse": "MI_Tire_BaseColor",
+        "ORM": "MI_Tire_ORM"
+      },
+      "role": "interior"
+    },
+    "Rubber_Inst": {
+      "textures": {},
+      "role": "interior"
+    },
+    "JeepWranglerRubicon_FrontLights_mat": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "JeepWranglerRubicon_HubCap_mat": {
+      "textures": {
+        "Diffuse": "MI_Metal_BaseColor",
+        "ORM": "MI_Metal_ORM",
+        "Normal": "MI_Metal_Normal"
+      },
+      "role": "interior"
+    },
+    "Rubber": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_BodyWStaticMesh7": {
+      "textures": {},
+      "role": "paint"
+    },
+    "JeepWranglerRubicon_Bumper_Mat": {
+      "textures": {
+        "Diffuse": "MI_Plastic_Matte_Black_BaseColor",
+        "ORM": "MI_Plastic_Matte_Black_ORM",
+        "Normal": "MI_Plastic_Matte_Black_Normal"
+      },
+      "role": "interior"
+    },
+    "M_LicensePlate": {
+      "textures": {},
+      "role": "interior"
+    }
+  },
+  "triangles": 19453,
+  "bytes": 6054200
+}

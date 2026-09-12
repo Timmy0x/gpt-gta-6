@@ -23,6 +23,7 @@ import {
   type PhysicsEngineV2,
 } from "@babylonjs/core";
 import { VehicleSystem } from "../src/vehicles/VehicleSystem";
+import { ROAD_CARS, ROAD_CAR_KINDS } from "../src/vehicles/RoadCarCatalog";
 import type { SerializableVehicle } from "../src/vehicles/serialization";
 
 test("tire demand respects friction circle and loses braking when sliding hard", () => {
@@ -694,7 +695,8 @@ test("stable IDs reject collisions; invalid restoration leaves existing body int
       128,
       new DirectionalLight("sun", new Vector3(0, -1, 0), scene),
     ),
-    system = new VehicleSystem({ scene, shadows }, new Uint8Array(await readFile(new URL("../public/vehicles/concept/car-lod1-batched.glb", import.meta.url))), true);
+    system = new VehicleSystem({ scene, shadows }, new Uint8Array(await readFile(new URL("../public/vehicles/concept/car-lod1-batched.glb", import.meta.url))), true,
+      Object.fromEntries(await Promise.all(ROAD_CAR_KINDS.map(async kind=>[kind,new Uint8Array(await readFile(new URL(`../public/vehicles/carla/${ROAD_CARS[kind].file}`,import.meta.url)))]))));
   const original = system.spawn("sedan", new Vector3(0, 2, 0), 0, "vehicle-2"),
     other = system.spawn("suv", new Vector3(5, 2, 0));
   assert.notEqual(original.id, other.id, "generated IDs skip explicit IDs");

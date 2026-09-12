@@ -1,0 +1,437 @@
+{
+  "parts": [
+    {
+      "name": "Wheel_Rear_Right--MI_Details1_Patrol2021",
+      "group": "Wheel_Rear_Right",
+      "vertices": 4381,
+      "triangles": 7044,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_Details1_Patrol2021",
+      "group": "Wheel_Rear_Left",
+      "vertices": 4381,
+      "triangles": 7044,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_Details1_Patrol2021",
+      "group": "Vehicle_Base",
+      "vertices": 25993,
+      "triangles": 32729,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_Details1_Patrol2021",
+      "group": "Wheel_Front_Right",
+      "vertices": 4381,
+      "triangles": 7044,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_Details1_Patrol2021",
+      "group": "Wheel_Front_Left",
+      "vertices": 4381,
+      "triangles": 7044,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_BodyWork_Patrol2022",
+      "group": "Vehicle_Base",
+      "vertices": 9224,
+      "triangles": 14798,
+      "material": "MI_BodyWork_Patrol2022",
+      "role": "paint"
+    },
+    {
+      "name": "Vehicle_Base--MI_LicensePlate_Patrol2021",
+      "group": "Vehicle_Base",
+      "vertices": 32,
+      "triangles": 24,
+      "material": "MI_LicensePlate_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorRL_Patrol2021--0",
+      "group": "Door_RL",
+      "vertices": 1569,
+      "triangles": 2014,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorRL_Patrol2021--1",
+      "group": "Door_RL",
+      "vertices": 802,
+      "triangles": 1410,
+      "material": "MI_BodyWork_Patrol2022",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorRR_Patrol2021--0",
+      "group": "Door_RR",
+      "vertices": 1636,
+      "triangles": 2112,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorRR_Patrol2021--1",
+      "group": "Door_RR",
+      "vertices": 802,
+      "triangles": 1410,
+      "material": "MI_BodyWork_Patrol2022",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorFR_Patrol2021--0",
+      "group": "Door_FR",
+      "vertices": 2848,
+      "triangles": 3936,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorFR_Patrol2021--1",
+      "group": "Door_FR",
+      "vertices": 952,
+      "triangles": 1724,
+      "material": "MI_BodyWork_Patrol2022",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorFL_Patrol2021--0",
+      "group": "Door_FL",
+      "vertices": 958,
+      "triangles": 1731,
+      "material": "MI_BodyWork_Patrol2022",
+      "role": "paint"
+    },
+    {
+      "name": "SM_DoorFL_Patrol2021--1",
+      "group": "Door_FL",
+      "vertices": 2510,
+      "triangles": 3322,
+      "material": "MI_Details1_Patrol2021",
+      "role": "interior"
+    },
+    {
+      "name": "SM_DoorGlassExt1_RR--0",
+      "group": "Door_RR",
+      "vertices": 65,
+      "triangles": 64,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_DoorGlassExt1_FR--0",
+      "group": "Door_FR",
+      "vertices": 151,
+      "triangles": 150,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_glassExt1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 324,
+      "triangles": 584,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_glassExt1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 88,
+      "triangles": 62,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_glassExt1--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 88,
+      "triangles": 62,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_glassExt1--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 83,
+      "triangles": 88,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_glassExt1--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 177,
+      "triangles": 160,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 111,
+      "triangles": 139,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 111,
+      "triangles": 139,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 46,
+      "triangles": 75,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 385,
+      "triangles": 512,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 385,
+      "triangles": 512,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 120,
+      "triangles": 208,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 120,
+      "triangles": 208,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 145,
+      "triangles": 218,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_glassExt1--1--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 145,
+      "triangles": 218,
+      "material": "MI_GlassExt_Lights_Patrol2021",
+      "role": "lamp-glass"
+    },
+    {
+      "name": "SM_DoorGlassExt1_RL--0",
+      "group": "Door_RL",
+      "vertices": 65,
+      "triangles": 64,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_DoorGlassExt1_FL--0",
+      "group": "Door_FL",
+      "vertices": 151,
+      "triangles": 150,
+      "material": "MI_GlassExt_Patrol2021",
+      "role": "glass"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 50,
+      "triangles": 84,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 50,
+      "triangles": 84,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 228,
+      "triangles": 360,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 708,
+      "triangles": 1022,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 708,
+      "triangles": 1022,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 537,
+      "triangles": 828,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 537,
+      "triangles": 828,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 87,
+      "triangles": 100,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_lights_Patrol2021--0--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 87,
+      "triangles": 100,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_DoorL_Lights--0",
+      "group": "Door_FL",
+      "vertices": 81,
+      "triangles": 90,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_DoorR_Lights--0",
+      "group": "Door_FR",
+      "vertices": 81,
+      "triangles": 90,
+      "material": "MI_Lights_Patrol2021",
+      "role": "lamp"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.9180234,
+      0.44603687000000003,
+      1.7788838000000002
+    ],
+    "Wheel_Front_Right": [
+      -0.9180234,
+      0.44603687000000003,
+      1.7788838000000002
+    ],
+    "Wheel_Rear_Right": [
+      -0.9180234,
+      0.44603867,
+      -1.5001073
+    ],
+    "Wheel_Rear_Left": [
+      0.9180234,
+      0.44603687000000003,
+      -1.5001024
+    ],
+    "Door_FL": [
+      1.05170746,
+      1.13206635,
+      1.1422794
+    ],
+    "Door_FR": [
+      -1.05170746,
+      1.13206635,
+      1.1422794
+    ],
+    "Door_RL": [
+      1.054562,
+      1.131296,
+      -0.06611106
+    ],
+    "Door_RR": [
+      -1.054562,
+      1.131296,
+      -0.066110983
+    ]
+  },
+  "materials": {
+    "MI_Details1_Patrol2021": {
+      "textures": {
+        "Diffuse": "T_Interior_NissanPatrol2021_d",
+        "ORM": "T_Interior_NissanPatrol2021_ormh",
+        "Normal": "T_Interior_NissanPatrol2021_n"
+      },
+      "role": "interior"
+    },
+    "MI_BodyWork_Patrol2022": {
+      "textures": {
+        "Diffuse": "M_BodyWork_Patrol_d"
+      },
+      "role": "paint"
+    },
+    "MI_LicensePlate_Patrol2021": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_GlassExt_Patrol2021": {
+      "textures": {},
+      "role": "glass"
+    },
+    "MI_GlassExt_Lights_Patrol2021": {
+      "textures": {},
+      "role": "lamp-glass"
+    },
+    "MI_Lights_Patrol2021": {
+      "textures": {},
+      "role": "lamp"
+    }
+  },
+  "triangles": 101607,
+  "bytes": 8186748
+}

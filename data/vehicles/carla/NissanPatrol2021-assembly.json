@@ -1,0 +1,65 @@
+{
+  "skeletal": "SM_NissanPatrol2021-repaired-geometry.json",
+  "static": [
+    {
+      "path": "SM_DoorRL_Patrol2021.uasset",
+      "group": "Door_RL",
+      "local": true
+    },
+    {
+      "path": "SM_DoorRR_Patrol2021.uasset",
+      "group": "Door_RR",
+      "local": true
+    },
+    {
+      "path": "SM_DoorFR_Patrol2021.uasset",
+      "group": "Door_FR",
+      "local": true
+    },
+    {
+      "path": "SM_DoorFL_Patrol2021.uasset",
+      "group": "Door_FL",
+      "local": true
+    },
+    {
+      "path": "Glasses/SM_DoorGlassExt1_RR.uasset",
+      "group": "Door_RR",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_DoorGlassExt1_FR.uasset",
+      "group": "Door_FR",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_glassExt1.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_DoorGlassExt1_RL.uasset",
+      "group": "Door_RL",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_DoorGlassExt1_FL.uasset",
+      "group": "Door_FL",
+      "local": false
+    },
+    {
+      "path": "Lights/SM_lights_Patrol2021.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "Lights/SM_DoorL_Lights.uasset",
+      "group": "Door_FL",
+      "local": false
+    },
+    {
+      "path": "Lights/SM_DoorR_Lights.uasset",
+      "group": "Door_FR",
+      "local": false
+    }
+  ]
+}

@@ -9,23 +9,26 @@ const bounded = (n: number, min: number, max: number) => Math.max(min, Math.min(
 /** Authored body deformation driven by a small chassis-space lattice, not soft-body physics. */
 export class LatticeDeformation {
   private offsets = new Float32Array(DEFORMATION_COORDINATES);
-  private panels: { mesh: Mesh; original: Float32Array; toChassis: Matrix; fromChassis: Matrix }[];
+  private panels: { mesh: Mesh; original: Float32Array; normals: Float32Array; toChassis: Matrix; fromChassis: Matrix }[];
+  private readonly min: Vector3;
+  private readonly max: Vector3;
 
-  constructor(meshes: readonly Mesh[], root: Mesh) {
+  constructor(meshes: readonly Mesh[], root: Mesh, bounds?: {min:Vector3;max:Vector3}) {
+    this.min=(bounds?.min??MIN).clone();this.max=(bounds?.max??MAX).clone();
     const inverse = Matrix.Invert(root.computeWorldMatrix(true));
     this.panels = meshes.map(mesh => {
       mesh.makeGeometryUnique();
       const original = Float32Array.from(mesh.getVerticesData(VertexBuffer.PositionKind)!);
       mesh.setVerticesData(VertexBuffer.PositionKind, original, true);
       const toChassis = mesh.computeWorldMatrix(true).multiply(inverse);
-      return { mesh, original, toChassis, fromChassis: Matrix.Invert(toChassis) };
+      return { mesh, original, normals:Float32Array.from(mesh.getVerticesData(VertexBuffer.NormalKind)!), toChassis, fromChassis: Matrix.Invert(toChassis) };
     });
   }
 
   damage(amount: number, point: Vector3): void {
     const vertex = new Vector3();
     for (let z = 0; z < NZ; z++) for (let y = 0; y < NY; y++) for (let x = 0; x < NX; x++) {
-      vertex.set(MIN.x + x / (NX - 1) * (MAX.x - MIN.x), MIN.y + y / (NY - 1) * (MAX.y - MIN.y), MIN.z + z / (NZ - 1) * (MAX.z - MIN.z));
+      vertex.set(this.min.x + x / (NX - 1) * (this.max.x - this.min.x), this.min.y + y / (NY - 1) * (this.max.y - this.min.y), this.min.z + z / (NZ - 1) * (this.max.z - this.min.z));
       const distance = Vector3.Distance(vertex, point);
       if (distance >= 1.7) continue;
       const direction = vertex.subtract(point).add(new Vector3(-point.x * 0.7, -0.18, -point.z * 0.25)).normalize();
@@ -48,14 +51,16 @@ export class LatticeDeformation {
 
   private apply(): void {
     const vertex = new Vector3(), local = new Vector3();
-    for (const { mesh, original, toChassis, fromChassis } of this.panels) {
+    const pristine=this.offsets.every(n=>n===0);
+    for (const { mesh, original, normals:originalNormals, toChassis, fromChassis } of this.panels) {
+      if(pristine){mesh.updateVerticesData(VertexBuffer.PositionKind,original);mesh.setVerticesData(VertexBuffer.NormalKind,originalNormals,true);mesh.refreshBoundingInfo();continue;}
       const positions = new Float32Array(original.length);
       for (let i = 0; i < original.length; i += 3) {
         vertex.set(original[i], original[i + 1], original[i + 2]);
         Vector3.TransformCoordinatesToRef(vertex, toChassis, vertex);
-        const gx = bounded((vertex.x - MIN.x) / (MAX.x - MIN.x) * (NX - 1), 0, NX - 1.00001);
-        const gy = bounded((vertex.y - MIN.y) / (MAX.y - MIN.y) * (NY - 1), 0, NY - 1.00001);
-        const gz = bounded((vertex.z - MIN.z) / (MAX.z - MIN.z) * (NZ - 1), 0, NZ - 1.00001);
+        const gx = bounded((vertex.x - this.min.x) / (this.max.x - this.min.x) * (NX - 1), 0, NX - 1.00001);
+        const gy = bounded((vertex.y - this.min.y) / (this.max.y - this.min.y) * (NY - 1), 0, NY - 1.00001);
+        const gz = bounded((vertex.z - this.min.z) / (this.max.z - this.min.z) * (NZ - 1), 0, NZ - 1.00001);
         const ix = Math.floor(gx), iy = Math.floor(gy), iz = Math.floor(gz);
         let dx = 0, dy = 0, dz = 0;
         for (let z = 0; z < 2; z++) for (let y = 0; y < 2; y++) for (let x = 0; x < 2; x++) {

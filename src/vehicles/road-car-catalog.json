@@ -1,0 +1,702 @@
+{
+  "hatchback": {
+    "source": "Mini2021",
+    "file": "hatchback.glb",
+    "hash": "4cf3e2e030e5cb6e209dbf63f4d180bf7c210483baf0bf7e6340ac802e34309c",
+    "triangles": 102647,
+    "offset": [
+      0,
+      -0.667451488,
+      0
+    ],
+    "seat": [
+      -0.45738019876776853,
+      -0.99,
+      0.08
+    ],
+    "seatPose": "low",
+    "bounds": {
+      "min": [
+        -1.0926420049560546,
+        -0.6599999999999999,
+        -2.3076027
+      ],
+      "max": [
+        1.0926432256591796,
+        1.1071664120000002,
+        2.2450962999999997
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          -0.03125320000000009
+        ],
+        "size": [
+          1.988609559859863,
+          0.55,
+          4.46164502
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.6785832060000001,
+          -0.03125320000000009
+        ],
+        "size": [
+          1.6903181258808835,
+          0.8571664120000002,
+          2.1397685299999996
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Mini Cooper hatchback",
+      "mass": 1450,
+      "width": 1.989,
+      "length": 4.553,
+      "height": 0.55,
+      "wheelbase": 3.01,
+      "wheelRadius": 0.364,
+      "engineForce": 10800,
+      "topSpeed": 52,
+      "grip": 1.18,
+      "steering": 0.48,
+      "suspensionTravel": 0.56,
+      "suspensionCompression": 0.18
+    }
+  },
+  "coupe": {
+    "source": "MercedesCCC",
+    "file": "coupe.glb",
+    "hash": "e01ddd22440989fd7c260382e9c47c66749b75759bdcea70021eb50822b1613a",
+    "triangles": 110934,
+    "offset": [
+      0,
+      -0.6393883276000001,
+      0
+    ],
+    "seat": [
+      -0.41907987579421396,
+      -1.08,
+      0.09
+    ],
+    "seatPose": "low",
+    "bounds": {
+      "min": [
+        -1.0011263824462893,
+        -0.6400000000000001,
+        -2.339413
+      ],
+      "max": [
+        1.0011663829345703,
+        0.8119526147828124,
+        2.334226
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          -0.0025934999999999153
+        ],
+        "size": [
+          1.8220864164965824,
+          0.55,
+          4.58016622
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.5309763073914062,
+          -0.0025934999999999153
+        ],
+        "size": [
+          1.548773454022095,
+          0.5619526147828124,
+          2.1966103299999995
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Mercedes coupe",
+      "mass": 1750,
+      "width": 1.822,
+      "length": 4.674,
+      "height": 0.55,
+      "wheelbase": 2.833,
+      "wheelRadius": 0.344,
+      "engineForce": 13500,
+      "topSpeed": 62,
+      "grip": 1.18,
+      "steering": 0.48,
+      "suspensionTravel": 0.56,
+      "suspensionCompression": 0.18
+    }
+  },
+  "sedan": {
+    "source": "Ford_Crown",
+    "file": "sedan.glb",
+    "hash": "ed79ea0d16d81dd18ab9885e5fae171db137d24cb82f270aedd408f04bb939ac",
+    "triangles": 95324,
+    "offset": [
+      0,
+      -0.600964,
+      0
+    ],
+    "seat": [
+      -0.4073944774891114,
+      -1.0,
+      0.1
+    ],
+    "seatPose": "low",
+    "bounds": {
+      "min": [
+        -0.9732309543457032,
+        -0.6200000000000001,
+        -2.497431
+      ],
+      "max": [
+        0.9732309543457032,
+        0.954966,
+        2.8682474000000004
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          0.18540820000000013
+        ],
+        "size": [
+          1.7712803369091799,
+          0.55,
+          5.258364832
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.602483,
+          0.18540820000000013
+        ],
+        "size": [
+          1.5055882863728027,
+          0.704966,
+          2.521868848
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Crown sedan",
+      "mass": 1900,
+      "width": 1.771,
+      "length": 5.366,
+      "height": 0.55,
+      "wheelbase": 2.916,
+      "wheelRadius": 0.349,
+      "engineForce": 10800,
+      "topSpeed": 52,
+      "grip": 1.18,
+      "steering": 0.48,
+      "suspensionTravel": 0.56,
+      "suspensionCompression": 0.18
+    }
+  },
+  "suv": {
+    "source": "NissanPatrol2021",
+    "file": "suv.glb",
+    "hash": "8979c8958a55f3061244228d0936faf0741c2409c3d83f07f63f57af0b4e9816",
+    "triangles": 101607,
+    "offset": [
+      0,
+      -0.8241427165269851,
+      0
+    ],
+    "seat": [
+      -0.5096754246368408,
+      -0.87,
+      0.25
+    ],
+    "seatPose": "upright",
+    "bounds": {
+      "min": [
+        -1.2175714874267578,
+        -0.83,
+        -2.7545306396484377
+      ],
+      "max": [
+        1.2175714874267578,
+        1.215147292017937,
+        2.8112982177734374
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          0.02838378906249983
+        ],
+        "size": [
+          2.215980107116699,
+          0.55,
+          5.454512280273438
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.7325736460089685,
+          0.02838378906249983
+        ],
+        "size": [
+          1.8835830910491942,
+          0.9651472920179369,
+          4.063055065917969
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Patrol SUV",
+      "mass": 2700,
+      "width": 2.216,
+      "length": 5.566,
+      "height": 0.55,
+      "wheelbase": 3.279,
+      "wheelRadius": 0.452,
+      "engineForce": 10800,
+      "topSpeed": 52,
+      "grip": 1.08,
+      "steering": 0.48,
+      "suspensionTravel": 0.66,
+      "suspensionCompression": 0.18
+    }
+  },
+  "truck": {
+    "source": "Cybertruck",
+    "file": "truck.glb",
+    "hash": "0a979687937d5e5f96ef765a29af6496992c6516339b8136bd83105cb8480c49",
+    "triangles": 30092,
+    "offset": [
+      0,
+      -0.8899999999999999,
+      0
+    ],
+    "seat": [
+      -0.50013788006,
+      -0.84,
+      0.36
+    ],
+    "seatPose": "upright",
+    "bounds": {
+      "min": [
+        -1.1947871,
+        -0.89,
+        -3.1367755
+      ],
+      "max": [
+        1.1947871,
+        1.2081912000000001,
+        3.1367776
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          1.0499999998359044e-06
+        ],
+        "size": [
+          2.174512522,
+          0.55,
+          6.148082038
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.7290956000000001,
+          0.35
+        ],
+        "size": [
+          1.8483356437,
+          0.9581912000000001,
+          2.9485699569999997
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Cybertruck pickup",
+      "mass": 2800,
+      "width": 2.175,
+      "length": 6.274,
+      "height": 0.55,
+      "wheelbase": 4.075,
+      "wheelRadius": 0.5,
+      "engineForce": 13500,
+      "topSpeed": 52,
+      "grip": 1.18,
+      "steering": 0.48,
+      "suspensionTravel": 0.66,
+      "suspensionCompression": 0.18
+    }
+  },
+  "police": {
+    "source": "DodgeCharger2020",
+    "file": "police.glb",
+    "hash": "f396cc81c56f42b5105a0c1de4e67b7aeab224c61ee5b7cbdcd63eb07dfe9684",
+    "triangles": 109505,
+    "offset": [
+      0,
+      -0.6182155609,
+      0
+    ],
+    "seat": [
+      -0.4389196216394336,
+      -0.98,
+      0.06
+    ],
+    "seatPose": "low",
+    "bounds": {
+      "min": [
+        -1.0485418577148438,
+        -0.6199999999999999,
+        -2.50926
+      ],
+      "max": [
+        1.0485418577148438,
+        1.0571669769417968,
+        2.7282544000000004
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          0.1094972000000003
+        ],
+        "size": [
+          1.9083461810410156,
+          0.55,
+          5.132764112
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.6535834884708984,
+          0.1094972000000003
+        ],
+        "size": [
+          1.6220942538848633,
+          0.8071669769417968,
+          2.461631768
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Police Charger",
+      "mass": 1860,
+      "width": 1.908,
+      "length": 5.238,
+      "height": 0.55,
+      "wheelbase": 3.044,
+      "wheelRadius": 0.351,
+      "engineForce": 13500,
+      "topSpeed": 62,
+      "grip": 1.18,
+      "steering": 0.48,
+      "suspensionTravel": 0.56,
+      "suspensionCompression": 0.18
+    }
+  },
+  "executive": {
+    "source": "LincolnMKZ2020",
+    "file": "executive.glb",
+    "hash": "790b5ee0f991b387f96bf61d36ee0371ebb1b7b28871e05942df8c4b1fd1992b",
+    "triangles": 75661,
+    "offset": [
+      0,
+      -0.6537065125,
+      0
+    ],
+    "seat": [
+      -0.46686517073596434,
+      -1.06,
+      0.1
+    ],
+    "seatPose": "low",
+    "bounds": {
+      "min": [
+        -1.115301417114258,
+        -0.65,
+        -2.4524835
+      ],
+      "max": [
+        1.1153014053222656,
+        0.8712467956054687,
+        2.439898
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          -0.006292750000000069
+        ],
+        "size": [
+          2.0298485684172363,
+          0.55,
+          4.7945338699999995
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.5606233978027344,
+          -0.006292750000000069
+        ],
+        "size": [
+          1.7253712831546508,
+          0.6212467956054687,
+          2.299419305
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Lincoln executive sedan",
+      "mass": 1850,
+      "width": 2.03,
+      "length": 4.892,
+      "height": 0.55,
+      "wheelbase": 2.86,
+      "wheelRadius": 0.356,
+      "engineForce": 10800,
+      "topSpeed": 62,
+      "grip": 1.18,
+      "steering": 0.48,
+      "suspensionTravel": 0.56,
+      "suspensionCompression": 0.18
+    }
+  },
+  "van": {
+    "source": "Sprinter",
+    "file": "van.glb",
+    "hash": "fce60f4116b04219e6da6780f8e10357e38cfa89e488d0ec826c14cd3ecb6cd1",
+    "triangles": 121890,
+    "offset": [
+      0,
+      -0.8579139069999999,
+      0
+    ],
+    "seat": [
+      -0.48588166217682177,
+      -0.82,
+      1.22
+    ],
+    "seatPose": "upright",
+    "bounds": {
+      "min": [
+        -1.1581707611328125,
+        -0.8499999999999999,
+        -2.968137
+      ],
+      "max": [
+        1.1632896410498048,
+        1.7106553929999997,
+        2.9470531999999996
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          -0.010541900000000215
+        ],
+        "size": [
+          2.1125289659861815,
+          0.55,
+          5.796886396
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.9803276964999998,
+          -0.010541900000000215
+        ],
+        "size": [
+          1.7956496210882542,
+          1.4606553929999997,
+          4.318088845999999
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Sprinter van",
+      "mass": 2450,
+      "width": 2.113,
+      "length": 5.915,
+      "height": 0.55,
+      "wheelbase": 3.662,
+      "wheelRadius": 0.364,
+      "engineForce": 10800,
+      "topSpeed": 42,
+      "grip": 1.08,
+      "steering": 0.48,
+      "suspensionTravel": 0.56,
+      "suspensionCompression": 0.18
+    }
+  },
+  "offroad": {
+    "source": "Jeep",
+    "file": "offroad.glb",
+    "hash": "69287cd100bd5464e78ea37a2801013f596f2a3e2aee0375dc2655604fa4bdb1",
+    "triangles": 19453,
+    "offset": [
+      0,
+      -0.8033082413673401,
+      0
+    ],
+    "seat": [
+      -0.39875761843109137,
+      -0.72,
+      0.04
+    ],
+    "seatPose": "upright",
+    "bounds": {
+      "min": [
+        -0.9515682220458984,
+        -0.81,
+        -1.9328935241699219
+      ],
+      "max": [
+        0.9536282348632813,
+        1.0679359602928162,
+        1.9333270263671876
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          0.00021675109863283915
+        ],
+        "size": [
+          1.7337287757873536,
+          0.55,
+          3.788896139526367
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.6589679801464081,
+          0.00021675109863283915
+        ],
+        "size": [
+          1.4736694594192505,
+          0.8179359602928162,
+          2.82234100189209
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Wrangler offroad",
+      "mass": 1820,
+      "width": 1.734,
+      "length": 3.866,
+      "height": 0.55,
+      "wheelbase": 2.308,
+      "wheelRadius": 0.416,
+      "engineForce": 10800,
+      "topSpeed": 42,
+      "grip": 1.08,
+      "steering": 0.48,
+      "suspensionTravel": 0.66,
+      "suspensionCompression": 0.18
+    }
+  },
+  "mpv": {
+    "source": "BmwGranTourer",
+    "file": "mpv.glb",
+    "hash": "e14dd02cc6e5a533ead5b3c2d01b026b264f815cfbe4a685a464bbed84b24f7f",
+    "triangles": 27059,
+    "offset": [
+      0,
+      -0.5714659833908081,
+      0
+    ],
+    "seat": [
+      -0.4691905846557618,
+      -0.91,
+      0.12
+    ],
+    "seatPose": "upright",
+    "bounds": {
+      "min": [
+        -1.1208566284179688,
+        -0.64,
+        -2.3301296997070313
+      ],
+      "max": [
+        1.1208566284179688,
+        1.027275929450989,
+        2.2808763122558595
+      ]
+    },
+    "collision": [
+      {
+        "center": [
+          0,
+          0,
+          -0.024626693725585902
+        ],
+        "size": [
+          2.0399590637207035,
+          0.55,
+          4.518785891723633
+        ]
+      },
+      {
+        "center": [
+          0,
+          0.6386379647254945,
+          -0.024626693725585902
+        ],
+        "size": [
+          1.733965204162598,
+          0.777275929450989,
+          3.3660343887329103
+        ]
+      }
+    ],
+    "tuning": {
+      "label": "Gran Tourer MPV",
+      "mass": 1600,
+      "width": 2.04,
+      "length": 4.611,
+      "height": 0.55,
+      "wheelbase": 2.938,
+      "wheelRadius": 0.363,
+      "engineForce": 10800,
+      "topSpeed": 52,
+      "grip": 1.18,
+      "steering": 0.48,
+      "suspensionTravel": 0.56,
+      "suspensionCompression": 0.18
+    }
+  }
+}

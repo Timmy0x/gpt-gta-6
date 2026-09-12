@@ -1,0 +1,393 @@
+{
+  "parts": [
+    {
+      "name": "Vehicle_Base--MI_Details1_FordCrown",
+      "group": "Vehicle_Base",
+      "vertices": 38174,
+      "triangles": 36555,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Right--MI_Details1_FordCrown",
+      "group": "Wheel_Rear_Right",
+      "vertices": 3437,
+      "triangles": 3868,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Right--MI_Details1_FordCrown",
+      "group": "Wheel_Front_Right",
+      "vertices": 3437,
+      "triangles": 3868,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Rear_Left--MI_Details1_FordCrown",
+      "group": "Wheel_Rear_Left",
+      "vertices": 3437,
+      "triangles": 3868,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "Wheel_Front_Left--MI_Details1_FordCrown",
+      "group": "Wheel_Front_Left",
+      "vertices": 3437,
+      "triangles": 3868,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_LicensePlate_FordCrown",
+      "group": "Vehicle_Base",
+      "vertices": 48,
+      "triangles": 24,
+      "material": "MI_LicensePlate_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "Vehicle_Base--MI_BodyWork_FordCrown",
+      "group": "Vehicle_Base",
+      "vertices": 11641,
+      "triangles": 15497,
+      "material": "MI_BodyWork_FordCrown",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Front_R--0",
+      "group": "Door_Front_Right",
+      "vertices": 1368,
+      "triangles": 1954,
+      "material": "MI_BodyWork_FordCrown",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Front_R--1",
+      "group": "Door_Front_Right",
+      "vertices": 3895,
+      "triangles": 4056,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 294,
+      "triangles": 192,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 294,
+      "triangles": 192,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 49,
+      "triangles": 44,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 49,
+      "triangles": 44,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 94,
+      "triangles": 95,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 94,
+      "triangles": 95,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 60,
+      "triangles": 42,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Lights_Ford_Crown--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 60,
+      "triangles": 42,
+      "material": "MI_Lights_FordCrown",
+      "role": "lamp"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Rear_R--0",
+      "group": "Door_Rear_Right",
+      "vertices": 3637,
+      "triangles": 3635,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Rear_R--1",
+      "group": "Door_Rear_Right",
+      "vertices": 1420,
+      "triangles": 2064,
+      "material": "MI_BodyWork_FordCrown",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Rear_L--0",
+      "group": "Door_Rear_Left",
+      "vertices": 1418,
+      "triangles": 2064,
+      "material": "MI_BodyWork_FordCrown",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Rear_L--1",
+      "group": "Door_Rear_Left",
+      "vertices": 3513,
+      "triangles": 3635,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Front_L--0",
+      "group": "Door_Front_Left",
+      "vertices": 1368,
+      "triangles": 1954,
+      "material": "MI_BodyWork_FordCrown",
+      "role": "paint"
+    },
+    {
+      "name": "SM_Ford_CrownDoor_Front_L--1",
+      "group": "Door_Front_Left",
+      "vertices": 3877,
+      "triangles": 4056,
+      "material": "MI_Details1_FordCrown",
+      "role": "interior"
+    },
+    {
+      "name": "SM_Glass_doorL_FordCrown_ext1--0",
+      "group": "Door_Front_Left",
+      "vertices": 80,
+      "triangles": 126,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_doorL_FordCrown_Rear_ext1--0",
+      "group": "Door_Rear_Left",
+      "vertices": 138,
+      "triangles": 212,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-0",
+      "group": "Vehicle_Base",
+      "vertices": 94,
+      "triangles": 108,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-1",
+      "group": "Vehicle_Base",
+      "vertices": 94,
+      "triangles": 108,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-2",
+      "group": "Vehicle_Base",
+      "vertices": 204,
+      "triangles": 189,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-3",
+      "group": "Vehicle_Base",
+      "vertices": 204,
+      "triangles": 189,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-4",
+      "group": "Vehicle_Base",
+      "vertices": 45,
+      "triangles": 64,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-5",
+      "group": "Vehicle_Base",
+      "vertices": 154,
+      "triangles": 112,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-6",
+      "group": "Vehicle_Base",
+      "vertices": 156,
+      "triangles": 112,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-7",
+      "group": "Vehicle_Base",
+      "vertices": 324,
+      "triangles": 456,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-8",
+      "group": "Vehicle_Base",
+      "vertices": 657,
+      "triangles": 781,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-9",
+      "group": "Vehicle_Base",
+      "vertices": 671,
+      "triangles": 781,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-10",
+      "group": "Vehicle_Base",
+      "vertices": 16,
+      "triangles": 18,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_FordCrown_Ext1--0--component-11",
+      "group": "Vehicle_Base",
+      "vertices": 16,
+      "triangles": 18,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_doorR_FordCrown_Rear_ext1--0",
+      "group": "Door_Rear_Right",
+      "vertices": 138,
+      "triangles": 212,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    },
+    {
+      "name": "SM_Glass_doorR_FordCrown_ext1--0",
+      "group": "Door_Front_Right",
+      "vertices": 80,
+      "triangles": 126,
+      "material": "MI_GlassExt__FordCrown",
+      "role": "glass"
+    }
+  ],
+  "bones": {
+    "Vehicle_Base": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "Wheel_Front_Left": [
+      0.7800241,
+      0.3299743,
+      1.7734758
+    ],
+    "Wheel_Front_Right": [
+      -0.78002304,
+      0.3299743,
+      1.7734758
+    ],
+    "Wheel_Rear_Right": [
+      -0.7800229000000001,
+      0.3299743,
+      -1.1429402
+    ],
+    "Wheel_Rear_Left": [
+      0.7800239999999999,
+      0.3299743,
+      -1.1429402
+    ],
+    "Door_Front_Right": [
+      -0.834634,
+      0.8717610000000001,
+      1.137243
+    ],
+    "Door_Front_Left": [
+      0.834634,
+      0.8717610000000001,
+      1.137243
+    ],
+    "Door_Rear_Right": [
+      -0.829789,
+      0.873989,
+      0.022904968
+    ],
+    "Door_Rear_Left": [
+      0.82979,
+      0.87399,
+      0.0229
+    ]
+  },
+  "materials": {
+    "MI_Details1_FordCrown": {
+      "textures": {
+        "Diffuse": "T_Details_FordCrown_d",
+        "ORM": "T_Details_FordCrown_orm",
+        "Normal": "T_Details_FordCrown_n"
+      },
+      "role": "interior"
+    },
+    "MI_LicensePlate_FordCrown": {
+      "textures": {},
+      "role": "interior"
+    },
+    "MI_BodyWork_FordCrown": {
+      "textures": {
+        "Diffuse": "M_Bodywork_FordCrown_d"
+      },
+      "role": "paint"
+    },
+    "MI_Lights_FordCrown": {
+      "textures": {},
+      "role": "lamp"
+    },
+    "MI_GlassExt__FordCrown": {
+      "textures": {},
+      "role": "glass"
+    }
+  },
+  "triangles": 95324,
+  "bytes": 8177400
+}

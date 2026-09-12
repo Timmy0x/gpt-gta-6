@@ -4,10 +4,11 @@ import {
 } from "@babylonjs/core";
 import type { Vehicle } from "./VehicleSystem";
 import type { DoorVisual, WheelVisual } from "./models";
+import { ROAD_CAR_KINDS } from "./RoadCarCatalog";
 
 /** A deliberate clearance below a ray-supported wheel, not a replacement suspension. */
 export const WHEEL_COLLISION_INSET = 0.025;
-const ROAD_KINDS = new Set(["coupe", "sedan", "suv", "police", "truck", "concept", "motorcycle"]);
+const ROAD_KINDS = new Set<string>([...ROAD_CAR_KINDS, "concept", "motorcycle"]);
 
 interface Component {
   node: TransformNode;

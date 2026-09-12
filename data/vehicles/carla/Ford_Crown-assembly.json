@@ -1,0 +1,55 @@
+{
+  "skeletal": "SK_Ford_Crown-geometry.json",
+  "static": [
+    {
+      "path": "SM_Ford_CrownDoor_Front_R.uasset",
+      "group": "Door_Front_Right",
+      "local": true
+    },
+    {
+      "path": "SM_Lights_Ford_Crown.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "SM_Ford_CrownDoor_Rear_R.uasset",
+      "group": "Door_Rear_Right",
+      "local": true
+    },
+    {
+      "path": "SM_Ford_CrownDoor_Rear_L.uasset",
+      "group": "Door_Rear_Left",
+      "local": true
+    },
+    {
+      "path": "SM_Ford_CrownDoor_Front_L.uasset",
+      "group": "Door_Front_Left",
+      "local": true
+    },
+    {
+      "path": "Glasses/SM_Glass_doorL_FordCrown_ext1.uasset",
+      "group": "Door_Front_Left",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_Glass_doorL_FordCrown_Rear_ext1.uasset",
+      "group": "Door_Rear_Left",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_Glass_FordCrown_Ext1.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_Glass_doorR_FordCrown_Rear_ext1.uasset",
+      "group": "Door_Rear_Right",
+      "local": false
+    },
+    {
+      "path": "Glasses/SM_Glass_doorR_FordCrown_ext1.uasset",
+      "group": "Door_Front_Right",
+      "local": false
+    }
+  ]
+}

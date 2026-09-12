@@ -1,0 +1,35 @@
+{
+  "skeletal": "SK_MercedesCCC-geometry.json",
+  "static": [
+    {
+      "path": "SM_MercedesCCC_Door_Front_L.uasset",
+      "group": "Door_L",
+      "local": true
+    },
+    {
+      "path": "SM_MercedesCCC_Door_Front_R.uasset",
+      "group": "Door_R",
+      "local": true
+    },
+    {
+      "path": "SM_Light_MercedesCCC.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    },
+    {
+      "path": "Glass/SM_Glass_DoorR_MercedesCCC_Ext1.uasset",
+      "group": "Door_R",
+      "local": false
+    },
+    {
+      "path": "Glass/SM_Glass_DoorL_MercedesCCC_Ext1.uasset",
+      "group": "Door_L",
+      "local": false
+    },
+    {
+      "path": "Glass/SM_Glass_MercedesCCC_Ext1.uasset",
+      "group": "Vehicle_Base",
+      "local": false
+    }
+  ]
+}

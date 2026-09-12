@@ -1,0 +1,48 @@
+{
+  "skeletal": "SM_JeepWranglerRubicon-repaired-geometry.json",
+  "static": [],
+  "authoredDoors": [
+    {
+      "name": "Door_Front_Left",
+      "hinge": [
+        45,
+        -73,
+        96
+      ],
+      "min": [
+        -54,
+        -86,
+        57
+      ],
+      "max": [
+        46,
+        -54,
+        174
+      ]
+    },
+    {
+      "name": "Door_Front_Right",
+      "hinge": [
+        45,
+        73,
+        96
+      ],
+      "min": [
+        -54,
+        54,
+        57
+      ],
+      "max": [
+        46,
+        86,
+        174
+      ]
+    }
+  ],
+  "materialOverrides": {
+    "OrangeMetal": "JeepWranglerRubicon_FrontLights_mat"
+  },
+  "slotRoles": {
+    "GlassInstance_1": "lamp-glass"
+  }
+}
