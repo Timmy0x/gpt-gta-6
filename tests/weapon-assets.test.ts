@@ -29,11 +29,11 @@ test('licensed firearm packages retain mechanical parts, metre scale, normals an
   assert.ok(bytes < 460_000, 'three source assets have a bounded compressed download');
 });
 
-test('native Babylon asset loading, hand attachment and repeated switching retain bounded resources', async () => {
+for (const decoded of [false, true]) test(`native Babylon asset loading, attachment and switching with ${decoded ? 'HTTP-decoded' : 'raw gzip'} data retain bounded resources`, async () => {
   const engine = new NullEngine(), scene = new Scene(engine), shadows = new ShadowGenerator(128, new DirectionalLight('sun', Vector3.Down(), scene));
   const character = new Character(scene, shadows, 'asset-review'), held = new HeldWeapon(scene);
   try {
-    await prepareWeaponAssets(scene, async url => new Uint8Array(await readFile('public' + url)));
+    await prepareWeaponAssets(scene, async url => {const bytes = await readFile('public' + url); return new Uint8Array(decoded ? gunzipSync(bytes) : bytes);});
     character.animate(.2, 0, true);
     const counts: number[] = [];
     for (let loop = 0; loop < 4; loop++) {

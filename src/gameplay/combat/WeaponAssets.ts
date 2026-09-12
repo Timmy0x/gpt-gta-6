@@ -1,3 +1,4 @@
+import '@babylonjs/core/Loading/Plugins/babylonFileLoader';
 import { AssetContainer, LoadAssetContainerAsync, Mesh, PBRMaterial, type Scene, type TransformNode } from '@babylonjs/core';
 type Library = { assets: Map<number, AssetContainer>; pending?: Promise<void> };
 const libraries = new WeakMap<Scene, Library>();
@@ -14,7 +15,9 @@ export async function prepareWeaponAssets(scene: Scene, read: (url: string) => P
   return owned.pending ??= Promise.all(ASSETS.map(async ([index, name]) => {
     if (owned.assets.has(index)) return;
     const bytes = await read(`/weapons/${name}/model.babylon.gz`);
-    const text = await new Response(new Blob([new Uint8Array(bytes).buffer]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+    // Fetch already decodes Content-Encoding:gzip; file readers can return the raw archive.
+    const compressed = bytes[0] === 0x1f && bytes[1] === 0x8b;
+    const text = compressed ? await new Response(new Blob([new Uint8Array(bytes).buffer]).stream().pipeThrough(new DecompressionStream('gzip'))).text() : new TextDecoder().decode(bytes);
     const container = await LoadAssetContainerAsync('data:' + text, scene, { pluginExtension: '.babylon' });
     if (scene.isDisposed) { container.dispose(); return; }
     for (const material of container.materials) if (material instanceof PBRMaterial) material.imageProcessingConfiguration = scene.imageProcessingConfiguration;
