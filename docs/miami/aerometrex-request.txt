@@ -1,0 +1,14 @@
+To: info@aerometrex.com
+Subject: Miami / Brickell evaluation extract for a personal local game
+
+Hello Aerometrex team,
+
+I am building a personal, single-player game that runs locally, with no sale or distribution of your data. I would like to evaluate your Miami reality mesh, starting around Brickell Avenue and SE 8th Street, including 701, 800 and 801 Brickell.
+
+Could you provide an evaluation extract or an authorized download, and quote the smallest suitable Brickell package? The initial requested AOI is WGS84 longitude/latitude: west -80.199, south 25.7596, east -80.187, north 25.7704. A GeoJSON polygon is available if useful.
+
+Please confirm terms for personal local game rendering, format conversion, simplification/LOD generation, derived collision surfaces and local backups. The source and derived assets will stay out of the public code repository and public deployment. OBJ with MTL/textures, FBX or local 3D Tiles would be suitable. Please include the actual CRS realization, units, model origin/axes, vertical datum, transform metadata and available control/accuracy documentation.
+
+The eventual geographic scope is the City of Miami. Please provide your coverage polygon and capture dates, identify newer captures and any missing areas beyond the initial Brickell extract, and describe how additional coverage could be obtained. We understand the advertised 2021 product does not cover every part of present-day Miami.
+
+This is a request for evaluation access and pricing, not an order or authorization to charge. Please let me know the available options.

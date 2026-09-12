@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "scope": "Private OBJ delivery inspection, supplied-coordinate adapter and documented Miami source access; no provider model acquired or integrated",
+  "baseCommit": "505915aadac7f57850f224012be188f9a8d1c773",
+  "checks": {
+    "cleanInstall": "npm ci passed",
+    "productionBuild": "npm run build passed; existing large-chunk warning",
+    "nativeTests": {
+      "command": "node --import tsx --test tests/aerometrex-delivery.test.ts tests/aerometrex-transform.test.ts tests/weapon-assets.test.ts",
+      "passed": 20,
+      "failed": 0
+    },
+    "providerDataLoaded": false
+  },
+  "sourceFiles": [
+    {
+      "path": ".gitignore",
+      "bytes": 99,
+      "sha256": "27e9ce582d602d2379bbd9ed57ac812d17300b7ffaf9f3ccfd1ce98bba412de3"
+    },
+    {
+      "path": "data/world/miami/aerometrex/access.json",
+      "bytes": 2404,
+      "sha256": "44cc5aa9a35dcfa1ab9925818a8013b13a0a1f59fe69fa55cbe666403e7c1a02"
+    },
+    {
+      "path": "data/world/miami/aerometrex/request-aoi.geojson",
+      "bytes": 938,
+      "sha256": "b92b61bdf081544334c11defb769775b7559ee12359909e51606fb15ca2e5e9e"
+    },
+    {
+      "path": "docs/miami/aerometrex-access.md",
+      "bytes": 4364,
+      "sha256": "df119bd84923801fe9b61925961b8eb4b2b8f69ea7e44640d7b6a0639a8bf0a1"
+    },
+    {
+      "path": "docs/miami/aerometrex-delivery.md",
+      "bytes": 2494,
+      "sha256": "c1399e9085f49ebef3b6dc4d580c6d7f21b834b08c243b3702bfb96c61ef21b9"
+    },
+    {
+      "path": "docs/miami/aerometrex-partner-access.md",
+      "bytes": 4076,
+      "sha256": "3c65a541ed331319155ebe5c97508500fcf2759eb70f1e6cac64356ad471db4b"
+    },
+    {
+      "path": "docs/miami/aerometrex-request.txt",
+      "bytes": 1577,
+      "sha256": "5286e7d266d3637cc277253f8cef6a61ab9f3d117f5c298c080718c58183af30"
+    },
+    {
+      "path": "docs/miami/aerometrex-transform.md",
+      "bytes": 6378,
+      "sha256": "4af3af1575952162053da0afb8c06eab9b721c3526d0ffa7225130a88148add0"
+    },
+    {
+      "path": "docs/miami/rebuild-plan.md",
+      "bytes": 10692,
+      "sha256": "85ee925937463ff9e6de8a316c494615ea545d8d85a678e0225eca90d281e717"
+    },
+    {
+      "path": "docs/miami/streamed-photogrammetry.md",
+      "bytes": 4517,
+      "sha256": "47c0582cf9d77f1161d26b06a373329c35cc292e489c40374fb287c86af358f7"
+    },
+    {
+      "path": "docs/continuation.md",
+      "bytes": 41367,
+      "sha256": "f471f976233344ed11e51ef9112854ac532b2a9dfec7c45af586b2f4dc0c3ef8"
+    },
+    {
+      "path": "src/world/miami/AerometrexTransform.ts",
+      "bytes": 15077,
+      "sha256": "e7c3d3eed7b4ffe1aeccf0337ca4173c900691ad07b31edc13e32ec8b7b9da0b"
+    },
+    {
+      "path": "scripts/world/miami/aerometrex/inspect-delivery.ts",
+      "bytes": 15778,
+      "sha256": "42d3bcbdf8ae917181ed8a707df185db4583102b99ad5f04c7a7da3b7784ecde"
+    },
+    {
+      "path": "tests/aerometrex-transform.test.ts",
+      "bytes": 8948,
+      "sha256": "2a027104c82ae2a7afa69ba060d0b207433d04bbc97b8cf40755f9d36b2daa7a"
+    },
+    {
+      "path": "tests/aerometrex-delivery.test.ts",
+      "bytes": 12662,
+      "sha256": "a9bf2e6eb07152d69186f63c794579e1bde77f74fc461cc184fe96f7ad1ae30c"
+    }
+  ]
+}

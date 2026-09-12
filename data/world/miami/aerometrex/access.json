@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "reviewed": "2026-09-12",
+  "provider": "Aerometrex",
+  "productUrl": "https://aerometrex.com/models/miami-3d-model-2cm/",
+  "samplePage": "https://aerometrex.com/models/sample-data/",
+  "sampleForm": "https://go.aerometrex.com/l/1060902/2024-05-16/pnvz3m",
+  "sampleLocation": "Denver",
+  "miamiContactForm": "https://go.aerometrex.com/l/1060902/2024-05-13/plzdlb",
+  "sampleDownloaded": false,
+  "contactSubmitted": false,
+  "orderPlaced": false,
+  "viewerAssetsExtracted": false,
+  "coverage": {
+    "url": "https://aerometrex.com/images/Miami_2cm_AOI.width-730_obnh0N9.jpg",
+    "inspection": "Observed official image in browser. Mainland Downtown/Brickell and MiamiBeach polygons visible.",
+    "brickellStatus": "appears-included; vendor vector coverage/delivered bounds required",
+    "boundaryTraced": false
+  },
+  "requestedAoi": "request-aoi.geojson",
+  "accessRequirement": "Provider-issued Miami package or authorized delivery URL, with applicable terms covering personal local use, conversion, LOD and collision generation.",
+  "evidence": [
+    {
+      "url": "https://aerometrex.com/models/miami-3d-model-2cm/",
+      "localSnapshotSha256": "aa01c6f5221707b0312da9908ff9000aaaeb220ae9f634567097247f18503e78"
+    },
+    {
+      "url": "https://aerometrex.com/models/sample-data/",
+      "localSnapshotSha256": "205019c4501ca4e3dbbdf03a48ad5ea501898c6b663f635cde5d4768141cb14b"
+    },
+    {
+      "url": "https://go.aerometrex.com/l/1060902/2024-05-16/pnvz3m",
+      "localSnapshotSha256": "00aa7c74a5669ad0d101c31ec75f7797fc72ee05077394db8d48cceee4cb43f5"
+    },
+    {
+      "url": "https://metromap.com.au/plans/3d-shelf-models/",
+      "localSnapshotSha256": "73f780ce62078ebe3136f4da0862558093eaddb57735058510697fc41357933a"
+    },
+    {
+      "url": "https://metromap.com.au/documents/Aerometrex_Data_Licence_Agreement.pdf",
+      "localSnapshotSha256": "c8e414aa68a255c8af1cae27fef4d5a4e6097535c82314136d54292d141bd4cd"
+    }
+  ],
+  "usContactEmail": "info@aerometrex.com",
+  "usContactEmailSource": "https://aerometrex.com/documents/20230710_-_Aerometrex_Product_Guide.pdf",
+  "oldStore": {
+    "requestedUrl": "https://aerometrex.com/store/models",
+    "observedFinalUrl": "https://aerometrex.com/models/",
+    "observedMiamiAction": "Request Quote / Contact Us"
+  },
+  "requestDraft": "../../../../docs/miami/aerometrex-request.txt",
+  "sourceAcquired": false
+}

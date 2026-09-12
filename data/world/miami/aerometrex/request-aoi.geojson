@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "name": "Brickell initial requested extract",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "brickell-initial-aoi",
+        "purpose": "Unsent Aerometrex sample/access request",
+        "coordinateReferenceSystem": "WGS84 longitude/latitude degrees",
+        "origin": "Existing project AOI; not traced from vendor or Google imagery",
+        "submitted": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.199,
+              25.7596
+            ],
+            [
+              -80.187,
+              25.7596
+            ],
+            [
+              -80.187,
+              25.7704
+            ],
+            [
+              -80.199,
+              25.7704
+            ],
+            [
+              -80.199,
+              25.7596
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

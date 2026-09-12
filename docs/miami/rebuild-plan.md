@@ -2,6 +2,12 @@
 
 The user replaced the previous fictional map objective on 2026-09-12: rebuild the City of Miami at real scale, beginning in Brickell and expanding through adjoining areas. The old street grid, invented districts, landmarks, coastline and location list are retired from the replacement map. Character, vehicle, combat, physics, persistence and rendering systems remain reusable. Earlier geographic work is retained in Git history, not reused as Miami scenery.
 
+## Selected reality-mesh source
+
+The user selected Aerometrex for personal use on 2026-09-12. Acquire a provider-issued Miami extract beginning with the established Brickell AOI, then expand through the available municipal coverage. The advertised 2021 capture is a source epoch, not a claim of parity to present-day Miami; the published 9.1 km² product is not the entire City of Miami. Request the actual coverage polygon, newer captures and missing-area options before marking any area covered. The prepared access request is in `docs/miami/aerometrex-access.md`.
+
+Keep source deliveries, access records and derived licensed packages in the ignored `.private-data/` directory or another local private directory. They must not enter this public Git repository or its public Vercel build. The current delivery inspector and coordinate adapter prepare ingestion; no Aerometrex model has been acquired or integrated. Source-textured surfaces still need street-level comparison, collision/clearance verification and separate moving objects after ingestion. Retain the public survey foundation for geographic checks and development while access is resolved.
+
 ## Geographic contract
 
 The scope is the City of Miami municipal boundary, including its roads, buildings, parks and waterfront. Miami Beach and other municipalities are separate geography, not silently counted as completed Miami. External bridge/road connections receive explicit boundary records. The complete municipal polygon defines the master coverage atlas; the initially playable area is a smaller contiguous construction stage.

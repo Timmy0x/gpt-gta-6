@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .local-builds/
+.private-data/
 .DS_Store
 test-results/
 playwright-report/
