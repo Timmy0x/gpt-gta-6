@@ -1,0 +1,23 @@
+
+> miami-tile-resource-budget-regression@0.0.1 test
+> node --import tsx --test tests/*.test.ts
+
+BJS - [18:22:42]: Babylon.js v9.25.0 - Null engine
+BJS - [18:22:42]: Babylon.js v9.25.0 - Null engine
+✔ real engine-created DataBuffers shared by interleaved attributes, geometry clones and distinct geometries count once (9.170708ms)
+BJS - [18:22:42]: Babylon.js v9.25.0 - Null engine
+✔ native GLB importer exposes zero-capacity NullEngine buffers as unknown and never substitutes encoded or CPU sizes (9.429916ms)
+BJS - [18:22:42]: Babylon.js v9.25.0 - Null engine
+✔ native RawTexture clones and multiple material slots share one internal allocation, including all reserved mip levels (1.5475ms)
+BJS - [18:22:42]: Babylon.js v9.25.0 - Null engine
+✔ decoded size, type, non-power-of-two dimensions and alignment drive the estimate rather than upload bytes (0.780208ms)
+✔ native pending textures, render targets and ordinary headless mesh buffers block a complete charge (2.248333ms)
+✔ invalid accounting IDs, unsafe encoded sizes and invalid alignment policies fail explicitly (0.211ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1514.573417

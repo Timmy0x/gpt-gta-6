@@ -1,0 +1,14 @@
+
+> miami-lh-integration-preview@0.0.1 test
+> node --import tsx --test tests/*.test.ts
+
+BJS - [18:17:16]: Babylon.js v9.25.0 - Null engine
+✔ original Havok floor supports capsule and ball, obstacle stops walking, reset is physical (58.580334ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3336.319667

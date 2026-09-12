@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "observedDateUTC": "2026-09-12",
+  "method": "Read-only visible structural summary in the authorized live local source preview; successful loaded content only. No tile URLs, positions, payloads or credentials retained.",
+  "origin": "http://127.0.0.1:4393/",
+  "entrySha256": "e77a0f2a26e82cd5a7ab682181e9e56061703f80e2bd9567bfe65d666f93503f",
+  "cameraRadiusM": 1500,
+  "visible": 30,
+  "loadedGlb2": 170,
+  "tilesets": 71,
+  "defaultYUpTilesets": 71,
+  "tileBounds": {
+    "box": 4098,
+    "sphere": 0,
+    "region": 0
+  },
+  "tileTransformsPresent": 0,
+  "maxBoxCenterMagnitudeM": 6374339.255211407,
+  "maxNodeTranslationMagnitudeM": 7171425.595763873,
+  "nodesObserved": 170,
+  "nonUnitNodeScale": 0,
+  "extensionsUsedAndRequired": {
+    "KHR_materials_unlit": 170
+  },
+  "unknownExtensionCounts": 0,
+  "observedRtcDracoMeshopt": 0,
+  "embeddedBuffers": 170,
+  "externalBuffers": 0,
+  "embeddedImages": 194,
+  "externalImages": 0,
+  "trianglesWithFloatPositionAccessors": 194,
+  "missingMetadata": 0,
+  "invalidNumbers": 0,
+  "inspectionLimitReached": false,
+  "attribution": "Google; Vexcel Imaging US, Inc.; Cesium ion",
+  "limits": [
+    "Successful sample does not establish absence in failed or unloaded content.",
+    "Not a coordinate reference system or height-datum verification.",
+    "Not a gameplay, collision, visual-fidelity or full-Miami coverage acceptance."
+  ]
+}

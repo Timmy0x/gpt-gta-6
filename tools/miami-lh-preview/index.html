@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>LH Tiles · Synthetic integration proof</title></head><body>
+<canvas id="canvas" tabindex="0" aria-label="Left-handed tile integration scene"></canvas>
+<aside><p class="eyebrow">SYNTHETIC INTEGRATION PROOF</p><h1>One scene. Shared depth.</h1><p>No Miami data or providers. Original test tiles and independent physics objects.</p>
+<label for="backend">Renderer</label><select id="backend"><option value="webgl2">WebGL2</option><option value="webgpu">WebGPU</option></select>
+<p id="state" role="status">Starting…</p><p id="error" role="alert" hidden></p>
+<div class="buttons"><button id="front">Front</button><button id="rear">Rear</button><button id="overview">Overview</button><button id="walk" aria-pressed="false">Walk</button></div>
+<label for="fov">Field of view <output id="fov-label">65°</output></label><input id="fov" type="range" min="18" max="85" step="1" value="65"><div class="buttons"><button id="scope">Scope 18°</button><button id="wide">Wide 65°</button></div>
+<button id="occluders" aria-pressed="true">Depth panels: shown</button><div class="buttons"><button id="drop">Drop ball</button><button id="reset-walker">Reset walker</button></div>
+<p class="hint">Drag to orbit · Wheel to zoom · Walk: WASD/arrow keys<br>Gold block stops the capsule. Tile meshes have no physics.</p>
+<dl><dt>Scene</dt><dd id="scene-status">LH · one camera</dd><dt>Tiles</dt><dd id="tile-status">0 loaded · 0 selected</dd><dt>Frames</dt><dd id="frame-status">0</dd><dt>Walker</dt><dd id="walker-status">—</dd><dt>Ball</dt><dd id="ball-status">—</dd></dl>
+</aside><div id="aim" aria-hidden="true">+</div><footer>Original asymmetric fixture · synthetic metre coordinates · Babylon/NASA-AMMOS · Havok for authored objects only</footer>
+<script type="module" src="/src/main.ts"></script></body></html>

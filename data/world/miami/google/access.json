@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "provider": "Google Photorealistic 3D Tiles via Cesium ion",
+  "assetId": 2275207,
+  "verifiedDate": "2026-09-12",
+  "viewerOrigin": "http://127.0.0.1:4393/",
+  "accessState": "live authenticated visual access verified",
+  "method": "User-authorized asset-only read token entered through normal preview form. No credential retained in this record.",
+  "view": {
+    "latitude": 25.7662,
+    "longitude": -80.1907,
+    "radiusM": 1500,
+    "visibleTilesObserved": 55,
+    "modelsLoadedObserved": 205
+  },
+  "attributionObserved": [
+    "Google",
+    "Vexcel Imaging US, Inc.",
+    "Cesium ion"
+  ],
+  "limitations": [
+    "Actual game integration pending",
+    "No perfect/current street-level parity demonstrated",
+    "No provider mesh or texture files exported",
+    "Token access is limited to the local viewer origin"
+  ]
+}

@@ -1,0 +1,29 @@
+
+> miami-streamed-api-preview@0.0.1 test
+> node --import tsx --test tests/*.test.ts
+
+✔ remote sessions require locally entered credentials and valid ion assets (0.669333ms)
+✔ diagnostics remove credentials and session query parameters (0.238ms)
+✔ WGS84 ECEF helper retains real metre scale (0.413708ms)
+✔ synthetic test tiles carry separate source credits and valid buffers (4.303334ms)
+✔ preview source does not persist or preconfigure provider credentials (1.12025ms)
+✔ browser-restricted API keys retain only the page origin cross-origin (0.72675ms)
+✔ default waits for user ion access without auto-connecting fixtures or APIs (0.7815ms)
+BJS - [18:17:13]: Babylon.js v9.25.0 - Null engine
+✔ real renderer frustum can reach both synthetic tiles from each camera preset (9.989417ms)
+✔ Google403 and nested framework errors are redacted without a live API request (12.162875ms)
+✔ ion403 emits a root load-error even when its promise resolves, with redacted metadata (0.353917ms)
+✔ transport evidence survives final403 but clears after successful auth refresh (0.480625ms)
+✔ intentional tile aborts do not become transport failures (0.2375ms)
+✔ external ion endpoint credits are preserved alongside renderer credits (0.463ms)
+✔ structural summary only returns allowlisted counts and scalar magnitudes (1.634167ms)
+✔ format sniffing and metadata inspection retain the existing synthetic source bytes (3.0125ms)
+✔ invalid, unexpected and oversized metadata cannot inject values or run getters (0.885083ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1277.365708

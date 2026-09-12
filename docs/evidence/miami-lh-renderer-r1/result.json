@@ -1,0 +1,159 @@
+{
+  "versions": {
+    "babylon": "9.25.0",
+    "renderer": "0.5.2"
+  },
+  "method": "Actual TilesRenderer traversal, fixture-only transport, actual AUTO GLB importer. No reference placement helper.",
+  "load": {
+    "requests": 2,
+    "meshes": 6,
+    "maximumVertexErrorM": 0.0000020101382408465767,
+    "maximumBoundsErrorM": 0.000001965272169002219,
+    "events": [
+      "load-root-tileset",
+      "load-model",
+      "tile-visibility-change",
+      "tile-visibility-change",
+      "dispose-model"
+    ]
+  },
+  "culling": {
+    "configurations": 108,
+    "visible": 54,
+    "culled": 54,
+    "vertexChecks": 7776,
+    "triangleChecks": 2592,
+    "maximumNdcError": 0.0000065953914278375935,
+    "maximumTileBoundsErrorM": 6.824951788950093e-7
+  },
+  "lifecycle": {
+    "hideRestore": true,
+    "groupTranslationM": [
+      3,
+      2,
+      -4
+    ],
+    "disposalMeshes": 0,
+    "disposalTransforms": 0
+  },
+  "negativeRootOverwriteM": 6.195162681664278,
+  "negativeSwappedTileTransformsM": 3.761273615890042,
+  "capabilities": {
+    "LHScene": true,
+    "rigidMetres": true,
+    "regionRejected": true
+  },
+  "normals": {
+    "checks": 72,
+    "maximumError": 4.8078912337847424e-8,
+    "backFaceCulling": true,
+    "negativeWorldDeterminant": true
+  },
+  "cancelledImport": {
+    "actualImporterResolved": true,
+    "lateMeshes": 0,
+    "lateTransforms": 0,
+    "loadModelAfterDisposal": false
+  },
+  "negativeDoubleCompensationM": 5.099986738674816,
+  "negativeOmittedUpAxisM": 2.7208178260078393,
+  "sse": {
+    "measurements": [
+      {
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "hardwareScaling": 1,
+        "errorPixels": 150.37885095589112
+      },
+      {
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "hardwareScaling": 2,
+        "errorPixels": 150.37885095589112
+      },
+      {
+        "framebuffer": [
+          1600,
+          900
+        ],
+        "hardwareScaling": 0.75,
+        "errorPixels": 150.37885095589112
+      },
+      {
+        "framebuffer": [
+          800,
+          450
+        ],
+        "hardwareScaling": 1,
+        "errorPixels": 75.18942547794556
+      },
+      {
+        "framebuffer": [
+          800,
+          450
+        ],
+        "hardwareScaling": 2,
+        "errorPixels": 75.18942547794556
+      },
+      {
+        "framebuffer": [
+          800,
+          450
+        ],
+        "hardwareScaling": 0.75,
+        "errorPixels": 75.18942547794556
+      },
+      {
+        "framebuffer": [
+          1200,
+          900
+        ],
+        "hardwareScaling": 1,
+        "errorPixels": 150.37885095589112
+      },
+      {
+        "framebuffer": [
+          1200,
+          900
+        ],
+        "hardwareScaling": 2,
+        "errorPixels": 150.37885095589112
+      },
+      {
+        "framebuffer": [
+          1200,
+          900
+        ],
+        "hardwareScaling": 0.75,
+        "errorPixels": 150.37885095589112
+      }
+    ],
+    "viewportAndOrthographic": true
+  },
+  "rootCancellation": {
+    "signalAborted": true,
+    "lateRoot": null,
+    "lateEvents": 0,
+    "immediateDisposalRequests": 0
+  },
+  "rootRetry": {
+    "attempts": 2,
+    "terminalErrors": 1,
+    "successfulRootEvents": 1
+  },
+  "rootPlugin": {
+    "hookCalls": 1,
+    "loadedThroughHook": true
+  },
+  "rootReentrantDisposal": {
+    "eventStops": [
+      "needs-update",
+      "load-tileset"
+    ],
+    "laterEvents": 0
+  }
+}

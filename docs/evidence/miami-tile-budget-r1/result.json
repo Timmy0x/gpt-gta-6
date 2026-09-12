@@ -1,0 +1,79 @@
+{
+  "engine": "Babylon 9.25.0 NullEngine; no physical GPU or measured VRAM",
+  "mockedEngineMethods": false,
+  "sharedNativeBuffers": {
+    "globalUniqueBytes": 120,
+    "independentlyChargedBytes": 216,
+    "encodedGlbBytes": 3600,
+    "sharedInterleavedCapacity": 96
+  },
+  "originalGlb": {
+    "meshes": 6,
+    "encodedBytes": 7788,
+    "unknownBufferCount": 18,
+    "estimatedCharge": null
+  },
+  "sharedMipTexture": {
+    "uniqueInternalTextures": 1,
+    "wrappers": 2,
+    "dimensions": [
+      8,
+      4
+    ],
+    "texelReserveBytes": 172,
+    "alignedEstimateBytes": 16384,
+    "disablingSamplingDoesNotReduceEstimate": true
+  },
+  "texturePolicy": {
+    "npotDimensions": [
+      9,
+      5
+    ],
+    "floatRgbRGBAExpansionBytes": 896,
+    "alignedBytes": 16384,
+    "halfRedRGBAExpansionBytes": 168,
+    "fullChainWithoutGenerationReserved": true
+  },
+  "unknowns": [
+    {
+      "kind": "mesh",
+      "reason": "Source mesh owns instance allocations outside its static geometry."
+    },
+    {
+      "kind": "mesh",
+      "reason": "Wireframe/edge rendering can retain derived buffers outside the static geometry interface."
+    },
+    {
+      "kind": "buffer",
+      "reason": "Babylon DataBuffer capacity is absent or zero; CPU attribute lengths do not prove GPU allocation."
+    },
+    {
+      "kind": "buffer",
+      "reason": "Babylon DataBuffer capacity is absent or zero; CPU attribute lengths do not prove GPU allocation."
+    },
+    {
+      "kind": "buffer",
+      "reason": "Babylon DataBuffer capacity is absent or zero; CPU attribute lengths do not prove GPU allocation."
+    },
+    {
+      "kind": "buffer",
+      "reason": "Babylon DataBuffer capacity is absent or zero; CPU attribute lengths do not prove GPU allocation."
+    },
+    {
+      "kind": "texture",
+      "reason": "Texture has no internal allocation metadata; it may be pending, released or unsupported."
+    },
+    {
+      "kind": "texture",
+      "reason": "Compressed, depth, unknown or extended color format needs a separately validated allocation model."
+    },
+    {
+      "kind": "texture",
+      "reason": "Render-target attachment/depth allocations are not enumerated by a static color texture."
+    },
+    {
+      "kind": "texture",
+      "reason": "Compressed, depth, unknown or extended color format needs a separately validated allocation model."
+    }
+  ]
+}

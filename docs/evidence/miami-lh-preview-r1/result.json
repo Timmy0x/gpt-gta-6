@@ -1,0 +1,315 @@
+{
+  "origin": "http://127.0.0.1:4494",
+  "fingerprint": {
+    "entry": "/assets/index-C1jNRhvG.js",
+    "sha256": "2d76aaa031a6b923c7a139423028fac3a578ad180e63496e75ee99e9f793123c"
+  },
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 1600,
+    "height": 1000
+  },
+  "method": "Normal UI controls and DOM position readouts. Actual GPU raster captures require separate visual review. Original asymmetric tile fixture plus independently authored Havok bodies; no provider data or game controller integration. No performance claim.",
+  "checks": [
+    {
+      "backend": "webgl2",
+      "label": "explicit-backend-loaded",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected"
+    },
+    {
+      "backend": "webgl2",
+      "label": "front-65-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "868fdeab4f1f05158b687b8c2e535eec3846681546856f65f07a3519c1e938bc",
+      "after": "85ca8ced3263e5731554cdb3e3b70f4e4bf8e27c50216dee14b625f5fead8635"
+    },
+    {
+      "backend": "webgl2",
+      "label": "front-18-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "77f47bd2ab1d5c3f67ae917c3f7e5056700c60a2d24530ed9ee2c5b7e3afeceb",
+      "after": "55c6e2143ecd0952b2279701abc863f468572b7c5d17f6bbc51fe2932f234b12"
+    },
+    {
+      "backend": "webgl2",
+      "label": "front-85-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "bb91f4aaf457df188d365641bc336cfa0db9e0bf0d8806e03574ea0ed38e576e",
+      "after": "12842b119a2e74f96c104c881978ff70a16e6394355ab927f743795a9ec7d8b2"
+    },
+    {
+      "backend": "webgl2",
+      "label": "rear-65-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "83357f0cafef0637fb2aa1f1251049bb1851de838f9799f7030275be2a171d19",
+      "after": "ab2616347bc6b6a0d710b22501619f7f7246ce989a8b7e88ac42e8e55c2c3609"
+    },
+    {
+      "backend": "webgl2",
+      "label": "rear-18-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "32a17bf7a3f260d51eeece17d0e67ed2e57eb0e9d225d2bd6c06c7f025e8f53f",
+      "after": "f7fe775e38825cda8215b5f21fc7f3f25c735f21aff4b949cd7bf5bacbb09386"
+    },
+    {
+      "backend": "webgl2",
+      "label": "rear-85-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "8e37fd9511c3f264f8705fb8ddea4ddfc38aeef301ef00002e700df896e680eb",
+      "after": "3891e3fee5967df86414f0230e1349d93c49503f79db42e0c9da78b8824bc42b"
+    },
+    {
+      "backend": "webgl2",
+      "label": "mouse-orbit-and-zoom",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected"
+    },
+    {
+      "backend": "webgl2",
+      "label": "drop-gravity-floor-contact",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "ballRest": [
+        45.5,
+        8.58,
+        4
+      ],
+      "ballAir": [
+        45.5,
+        11.93,
+        4
+      ],
+      "ballLanded": [
+        45.5,
+        8.58,
+        4
+      ]
+    },
+    {
+      "backend": "webgl2",
+      "label": "normal-walking-collides-with-obstacle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "start": [
+        38.5,
+        9.15,
+        2
+      ],
+      "blocked": [
+        38.5,
+        9.15,
+        4.18
+      ],
+      "stillBlocked": [
+        38.5,
+        9.15,
+        4.18
+      ]
+    },
+    {
+      "backend": "webgl2",
+      "label": "sidestep-around-obstacle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "side": [
+        40.39,
+        9.15,
+        4.18
+      ],
+      "passed": [
+        40.39,
+        9.15,
+        6.61
+      ]
+    },
+    {
+      "backend": "webgl2",
+      "label": "normal-reset",
+      "state": "Waiting for tile coverage",
+      "scene": "WebGL2 · LH · 1 camera",
+      "tiles": "1 loaded · 0 selected",
+      "reset": [
+        38.5,
+        9.15,
+        2
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "label": "explicit-backend-loaded",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected"
+    },
+    {
+      "backend": "webgpu",
+      "label": "front-65-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "8ff71abba00516c2ab875154dc30904f43c49c6533e942514d866b2d55ad00d7",
+      "after": "6c68d676e1eca0127fee89942018b49cb1c2fda60b014c8cace750836868bc98"
+    },
+    {
+      "backend": "webgpu",
+      "label": "front-18-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "010338c48d6f549329e8bcbcda6aa85f8103ff35a694d980e1251c7f9f443f3a",
+      "after": "135b78e7d8c40d4ddf507e73d1b532055d7fae3523a3e4e42aecc2439bcd109a"
+    },
+    {
+      "backend": "webgpu",
+      "label": "front-85-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "9c482749a91dadf307931417e9e500a468a37a2ea835c9b46cb5eaa13d9486b4",
+      "after": "c174ac2893f240ef17ef24e9976494703d6e0b5ea7722030f4288d504ab30eed"
+    },
+    {
+      "backend": "webgpu",
+      "label": "rear-65-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "b1836cbd14b1c945e3bb4507d8b0993f99361d618cd232071eae46e415c18a6d",
+      "after": "684dbe3095b5a14fce6d9a56d7019365c5971a1e81d117c37c5820e95601ecbb"
+    },
+    {
+      "backend": "webgpu",
+      "label": "rear-18-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "0a9d8dd0025a24e6b326344630255710d820e06e58388d87e7ca7339683de030",
+      "after": "89f824cf34d888c3377cef9b3a3a24424a42c5c25c8c3be22f05928c9b7dc04a"
+    },
+    {
+      "backend": "webgpu",
+      "label": "rear-85-panel-toggle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "before": "102fb3fcaa28a0aa0f0680215a3dc9eeac8fa455e780dbdf9c70737da981272a",
+      "after": "2bbf830859a78386b5f15a26192cb5a796b97ad48f581194ef7122918ce810d2"
+    },
+    {
+      "backend": "webgpu",
+      "label": "mouse-orbit-and-zoom",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected"
+    },
+    {
+      "backend": "webgpu",
+      "label": "drop-gravity-floor-contact",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "ballRest": [
+        45.5,
+        8.58,
+        4
+      ],
+      "ballAir": [
+        45.5,
+        11.83,
+        4
+      ],
+      "ballLanded": [
+        45.5,
+        8.58,
+        4
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "label": "normal-walking-collides-with-obstacle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "start": [
+        38.5,
+        9.15,
+        2
+      ],
+      "blocked": [
+        38.5,
+        9.15,
+        4.18
+      ],
+      "stillBlocked": [
+        38.5,
+        9.15,
+        4.18
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "label": "sidestep-around-obstacle",
+      "state": "Tile coverage available · inspect raster",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 1 selected",
+      "side": [
+        40.39,
+        9.15,
+        4.18
+      ],
+      "passed": [
+        40.39,
+        9.15,
+        6.61
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "label": "normal-reset",
+      "state": "Waiting for tile coverage",
+      "scene": "WebGPU · LH · 1 camera",
+      "tiles": "1 loaded · 0 selected",
+      "reset": [
+        38.5,
+        9.15,
+        2
+      ]
+    }
+  ],
+  "errors": [],
+  "logs": [
+    {
+      "phase": "webgl2-startup",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "phase": "webgpu-startup",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "phase": "webgpu-startup",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "source": ".local-builds/miami-lh-renderer-r1-source",
+  "nativeValidation": "Adapter owner fresh npm ci/generate,13native tests and typecheck PASS. No GPU claim.",
+  "files": [
+    {
+      "source": "src/LHTilesRenderer.ts",
+      "path": "src/LHTilesRenderer.ts",
+      "sha256": "966396644eed281674b1eb93a66559b525941d7557d40dffed400ecfcd2f3733"
+    },
+    {
+      "source": "fixtures/asymmetric.glb",
+      "path": "public/fixture/asymmetric.glb",
+      "sha256": "76b9127d73fcf37cd8e05531008400397193d4c785ad6dd22d197e2fa6b76b48"
+    },
+    {
+      "source": "fixtures/tileset.json",
+      "path": "public/fixture/tileset.json",
+      "sha256": "c24476379cca390fa60b62c1db8241fb896849593771b1d5a8aa7e86124a0201"
+    },
+    {
+      "source": "fixtures/expected.json",
+      "path": "public/fixture/expected.json",
+      "sha256": "0cdc75ef36bc4888d5585efea5cc469146472ca14d9a12c0deec9992493933dc"
+    }
+  ]
+}

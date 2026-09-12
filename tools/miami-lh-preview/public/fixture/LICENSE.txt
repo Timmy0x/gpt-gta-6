@@ -1,0 +1,1 @@
+Original synthetic geometry and authored transforms for an integration regression test. No geography, provider imagery or proprietary city mesh is included. The fixture is authored within this project; upstream adapter/renderer dependencies have their separate retained licenses.

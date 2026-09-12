@@ -1,0 +1,63 @@
+
+> miami-lh-tiles-renderer-regression@0.0.1 test
+> node --import tsx --test tests/*.test.ts
+
+BJS - [18:17:14]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ real renderer loads original nested GLB into the existing LH scene without overwriting AUTO root or applying reference placement (34.920167ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ actual tile bounds and LH culling match independently transformed corners over camera views, FOVs and aspect ratios (16.304709ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ renderer really hides and restores the same tile, retains metre scale and moves bounds with the local group (8.949125ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ independent oracle rejects overwritten AUTO root and swapped tile transforms from actual renderer loads (14.461833ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ invalid handedness, metre scale and unsupported geographic bounds fail explicitly (1.764875ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ imported normals and material culling retain their handedness over nonuniform GLTF nodes (8.904625ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+✔ disposing during actual GLB import releases late assets instead of installing them (16.674666ms)
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ doubled root compensation and incorrect up-axis fail the untouched fixture oracle (16.984875ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+✔ SSE uses framebuffer pixels across quality scale, resolution, viewport and projection modes (23.526625ms)
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+✔ delayed root completion is cancelled without state, events or requests surviving disposal (16.320333ms)
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ terminal root failure can be reset and successfully load through the same guarded renderer (8.632708ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ guarded root loading preserves the pinned renderer plugin root hook (8.142875ms)
+BJS - [18:17:15]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ a root-event listener can dispose without subsequent root events leaking through (13.609ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2485.785625
