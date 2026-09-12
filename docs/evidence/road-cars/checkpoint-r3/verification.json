@@ -1,0 +1,529 @@
+{
+  "native": {
+    "roadR2": {
+      "tests": 193,
+      "passed": 193,
+      "build": "pass",
+      "source": ".local-builds/road-game-r2-source"
+    },
+    "roadR3": {
+      "delta": [
+        "src/core/Audio.ts: two sample-rate-aware low-pass clamps"
+      ],
+      "typecheck": "pass",
+      "build": "pass",
+      "fullNativeRerun": false
+    }
+  },
+  "runs": [
+    {
+      "source": "normal-r1-webgpu",
+      "backend": "webgpu",
+      "origin": "http://127.0.0.1:4261",
+      "fingerprint": {
+        "entry": "/assets/index-BFIauodF.js",
+        "sha256": "9945e772a9a16503c73b37281a44fa8004bd6bf022a94a4744903eea0c747149",
+        "world": "authored-860409-v8-street-objects"
+      },
+      "method": "Normal UI map travel and vehicle spawn/removal; telemetry-guided WASD door approach, E entry/exit for Jason and Lucia, normal character switch, W propulsion, Space braking, night and L headlight toggle, police siren button. Read-only model and per-render joint/door observations. Weapon drive-by remains a separate combined-build gate.",
+      "kinds": [
+        "coupe",
+        "sedan",
+        "suv",
+        "truck",
+        "police",
+        "hatchback",
+        "executive",
+        "van",
+        "offroad",
+        "mpv"
+      ],
+      "checkpoints": 180,
+      "transitionFrames": 1264,
+      "errors": [],
+      "warnings": [
+        "BJS - [13:30:59]: maxSimultaneousLights is 10 but this engine supports at most 8 simultaneous lights. Each light declares its own uniform buffer in the vertex shader, so the 10 lights affecting this mesh plus the scene, mesh, material and leftover buffers would need 14 uniform buffers, over the device limit of 12 per shader stage. The light count has been clamped to 8, so the extra lights will not contribute to the render. Set maxSimultaneousLights to 8 or less to silence this warning."
+      ],
+      "perCar": [
+        {
+          "kind": "coupe",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3021240234375,
+            0.7814105153083801,
+            -182.0614776611328
+          ],
+          "nightHeadlampComponents": 2,
+          "removed": true
+        },
+        {
+          "kind": "sedan",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3284912109375,
+            0.7405363917350769,
+            -186.86358642578125
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        },
+        {
+          "kind": "suv",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3218994140625,
+            1.0141699314117432,
+            -190.4230194091797
+          ],
+          "nightHeadlampComponents": 8,
+          "removed": true
+        },
+        {
+          "kind": "truck",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3267822265625,
+            1.0343729257583618,
+            -187.76776123046875
+          ],
+          "nightHeadlampComponents": 5,
+          "removed": true
+        },
+        {
+          "kind": "police",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.335205078125,
+            0.7631557583808899,
+            -182.16685485839844
+          ],
+          "nightHeadlampComponents": 2,
+          "removed": true
+        },
+        {
+          "kind": "hatchback",
+          "phases": [
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3402099609375,
+            0.7774875164031982,
+            -178.76272583007812
+          ],
+          "nightHeadlampComponents": 6,
+          "removed": true
+        },
+        {
+          "kind": "executive",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3302001953125,
+            0.7686029672622681,
+            -185.21510314941406
+          ],
+          "nightHeadlampComponents": 2,
+          "removed": true
+        },
+        {
+          "kind": "van",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.325927734375,
+            0.9283491969108582,
+            -189.1669158935547
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        },
+        {
+          "kind": "offroad",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3353271484375,
+            1.036840558052063,
+            -188.18089294433594
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        },
+        {
+          "kind": "mpv",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.303955078125,
+            0.7675291895866394,
+            -183.0628662109375
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        }
+      ],
+      "sourceResultSha256": "b85d098c7ccfc4e544c5f835ea0f8bf0570cdcbb899ea287dc3a2711f2e94ad5"
+    },
+    {
+      "source": "mini-r3-webgpu",
+      "backend": "webgpu",
+      "origin": "http://127.0.0.1:4281",
+      "fingerprint": {
+        "entry": "/assets/index-Q2X-Vqud.js",
+        "sha256": "039822bd48b114cdb8b548a2a6e451b6580c72e9f5519264e574b97572edde67",
+        "world": "authored-860409-v8-street-objects"
+      },
+      "method": "Normal UI map travel and vehicle spawn/removal; telemetry-guided WASD door approach, E entry/exit for Jason and Lucia, normal character switch, W propulsion, Space braking, night and L headlight toggle, police siren button. Read-only model and per-render joint/door observations. Weapon drive-by remains a separate combined-build gate.",
+      "kinds": [
+        "hatchback"
+      ],
+      "checkpoints": 19,
+      "transitionFrames": 150,
+      "errors": [],
+      "warnings": [],
+      "perCar": [
+        {
+          "kind": "hatchback",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.300048828125,
+            0.7753331065177917,
+            -181.24620056152344
+          ],
+          "nightHeadlampComponents": 6,
+          "removed": true
+        }
+      ],
+      "sourceResultSha256": "17a6036f697805badf171c9ded4c6ba8f6bd0b81db60c52e274e18e74c2e454b"
+    },
+    {
+      "source": "normal-r3-webgl",
+      "backend": "webgl",
+      "origin": "http://127.0.0.1:4281",
+      "fingerprint": {
+        "entry": "/assets/index-Q2X-Vqud.js",
+        "sha256": "039822bd48b114cdb8b548a2a6e451b6580c72e9f5519264e574b97572edde67",
+        "world": "authored-860409-v8-street-objects"
+      },
+      "method": "Normal UI map travel and vehicle spawn/removal; telemetry-guided WASD door approach, E entry/exit for Jason and Lucia, normal character switch, W propulsion, Space braking, night and L headlight toggle, police siren button. Read-only model and per-render joint/door observations. Weapon drive-by remains a separate combined-build gate.",
+      "kinds": [
+        "coupe",
+        "sedan",
+        "suv",
+        "truck",
+        "police",
+        "hatchback",
+        "executive",
+        "van",
+        "offroad",
+        "mpv"
+      ],
+      "checkpoints": 181,
+      "transitionFrames": 1824,
+      "errors": [],
+      "warnings": [],
+      "perCar": [
+        {
+          "kind": "coupe",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.302001953125,
+            0.7802277207374573,
+            -182.76272583007812
+          ],
+          "nightHeadlampComponents": 2,
+          "removed": true
+        },
+        {
+          "kind": "sedan",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3267822265625,
+            0.7402624487876892,
+            -186.99664306640625
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        },
+        {
+          "kind": "suv",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3197021484375,
+            1.0135713815689087,
+            -190.67529296875
+          ],
+          "nightHeadlampComponents": 8,
+          "removed": true
+        },
+        {
+          "kind": "truck",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.32421875,
+            1.0337343215942383,
+            -188.24620056152344
+          ],
+          "nightHeadlampComponents": 5,
+          "removed": true
+        },
+        {
+          "kind": "police",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3319091796875,
+            0.7632061839103699,
+            -182.3898162841797
+          ],
+          "nightHeadlampComponents": 2,
+          "removed": true
+        },
+        {
+          "kind": "hatchback",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.332763671875,
+            0.7749996185302734,
+            -181.51121520996094
+          ],
+          "nightHeadlampComponents": 6,
+          "removed": true
+        },
+        {
+          "kind": "executive",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3271484375,
+            0.7672182321548462,
+            -185.7982635498047
+          ],
+          "nightHeadlampComponents": 2,
+          "removed": true
+        },
+        {
+          "kind": "van",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.3223876953125,
+            0.9279397130012512,
+            -189.45399475097656
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        },
+        {
+          "kind": "offroad",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.333251953125,
+            1.0368410348892212,
+            -188.1680450439453
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        },
+        {
+          "kind": "mpv",
+          "phases": [
+            "approaching",
+            "entering",
+            "exiting",
+            "seated"
+          ],
+          "characters": [
+            "Jason",
+            "Lucia"
+          ],
+          "drivePosition": [
+            -1035.301025390625,
+            0.7684422135353088,
+            -182.60435485839844
+          ],
+          "nightHeadlampComponents": 4,
+          "removed": true
+        }
+      ],
+      "sourceResultSha256": "bc0712cd2f9d3ca7a7449699b7c4a04c76b78dd224ef03c37fe31f6ef9a5541c"
+    }
+  ],
+  "status": "Mini/lighting/audio repair checkpoint verified by full WebGL2 roster and Mini WebGPU smoke. Updated full-roster WebGPU stress and final cabin/entry fidelity remain open.",
+  "openFindings": [
+    "Wrangler current occupant head/hands intersect its cabin; measured contact work is isolated from this checkpoint.",
+    "Jeep and MPV trim/cabins remain coarse.",
+    "Drive-by handling and frame-by-frame entry quality need a separate combined-character/weapon build.",
+    "No long-session performance acceptance."
+  ]
+}

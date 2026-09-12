@@ -6,6 +6,8 @@ export type RoadCarKind = typeof ROAD_CAR_KINDS[number];
 export const isRoadCar = (kind: string): kind is RoadCarKind => (ROAD_CAR_KINDS as readonly string[]).includes(kind);
 export interface RoadCarDefinition {
   source: string; file: string; hash: string; triangles: number;
+  /** Retain only when component order and normalized damage lattice stay compatible. */
+  damageLayout?: string;
   offset: [number,number,number]; seat: [number,number,number]; seatPose: 'low'|'upright';
   bounds: { min: number[]; max: number[] };
   collision: { center: [number,number,number]; size: [number,number,number] }[];

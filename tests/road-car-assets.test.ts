@@ -60,6 +60,14 @@ test('ten source cars support their weight, drive on native suspension and retai
     const legacySave=system.serialize(legacy);system.remove(legacy);
     for(const kind of ROAD_CAR_KINDS){
       await system.prepareModel(kind);
+      if(kind==='hatchback'){
+        // Captured from the shipped 4cf3e2e030e5 source before its paint repair.
+        const saved=JSON.parse(await readFile(new URL('./fixtures/mini-before-fender-repair.json',import.meta.url),'utf8'));
+        assert.notEqual(ROAD_CARS.hatchback.hash.slice(0,12),'4cf3e2e030e5','fixture exercises the earlier source body');
+        const migrated=system.restore(saved);
+        assert.deepEqual(system.serialize(migrated).damage,saved.damage,'source paint repair preserves existing dents, punctures, glazing, lamps and missing door');
+        system.remove(migrated);
+      }
       if(kind==='sedan'){
         const migrated=system.restore(legacySave);
         assert.equal(migrated.health,legacySave.health);

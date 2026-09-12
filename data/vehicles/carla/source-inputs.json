@@ -2257,6 +2257,12 @@
       "source": "Static/Car/4Wheeled/Cybertruck/Cybertruck_glass/Cybertruck_door_glass/SM_Cybertruck_DoorGlass_Int1_RL.uasset",
       "bytes": 88744,
       "sha256": "d068df2b47e49f733e0c81df1c5cd5bbdf26e21b61be4542d77796aba4727f7b"
+    },
+    {
+      "target": "mini/SM_Mini2021Parked.uasset",
+      "source": "Static/Car/4Wheeled/Mini2021/SM_Mini2021Parked.uasset",
+      "bytes": 4160406,
+      "sha256": "ef3c00fa47c5d795d10a1b1f548c914cfb05f87e7fe6ea56ca6e23f65588fb65"
     }
   ]
 }

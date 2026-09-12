@@ -70,7 +70,7 @@ export class RoadCarAssets {
   create(kind: RoadCarKind,id:number): VehicleModel {
     const cached = this.cache.get(kind);if (!cached||this.disposed) throw new Error(`Car assets not ready: ${kind}`);
     const {scene}=this.ctx, definition=ROAD_CARS[kind], root=new Mesh(`vehicle-${id}`,scene);
-    root.metadata={vehicleId:`vehicle-${id}`,vehicleKind:kind,sourceModel:definition.source,damageModel:`carla-v1:${kind}:${definition.hash.slice(0,12)}`};
+    root.metadata={vehicleId:`vehicle-${id}`,vehicleKind:kind,sourceModel:definition.source,damageModel:`carla-v1:${kind}:${definition.damageLayout??definition.hash.slice(0,12)}`};
     const model:VehicleModel={root,panels:[],windows:[],bumpers:[],lights:[],wheels:[],doors:[],materials:[],seat:Vector3.FromArray(definition.seat),seatPose:definition.seatPose};
     try {
       const materials=new Map<PBRMaterial,PBRMaterial>();

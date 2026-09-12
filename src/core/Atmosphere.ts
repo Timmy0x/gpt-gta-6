@@ -3,13 +3,13 @@ import {
   Color4,
   DynamicTexture,
   ParticleSystem,
-  PBRMaterial,
   Ray,
   SpotLight,
   Texture,
   Vector3,
   type Scene,
 } from "@babylonjs/core";
+import { LightingBudget } from './LightingBudget';
 
 /** Local weather presentation. Physical wet-road grip is supplied separately to vehicles. */
 export class Atmosphere {
@@ -18,6 +18,7 @@ export class Atmosphere {
   wetness = 0;
   sheltered = false;
   private lamps: SpotLight[] = [];
+  private lighting: LightingBudget;
   constructor(
     private scene: Scene,
     private lampPositions: Vector3[] = [],
@@ -36,11 +37,7 @@ export class Atmosphere {
       lamp.intensity = 0;
       this.lamps.push(lamp);
     }
-    for (const material of scene.materials)
-      if (material instanceof PBRMaterial) material.maxSimultaneousLights = 8;
-    scene.onNewMaterialAddedObservable.add((material) => {
-      if (material instanceof PBRMaterial) material.maxSimultaneousLights = 8;
-    });
+    this.lighting = new LightingBudget(scene);
     this.texture = new DynamicTexture(
       "rain-streak",
       { width: 8, height: 64 },
@@ -135,6 +132,7 @@ export class Atmosphere {
     };
   }
   dispose() {
+    this.lighting.dispose();
     this.rain.dispose();
     this.texture.dispose();
     this.lamps.forEach((l) => l.dispose());

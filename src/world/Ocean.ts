@@ -87,6 +87,7 @@ export class Ocean {
     this.material.bumpHeight = .07; this.material.waterColor.set(.025, .22, .25); this.material.waterColor2.set(.02, .1, .16);
     this.material.colorBlendFactor = .25; this.material.colorBlendFactor2 = .12;
     this.material.specularColor.set(.72, .78, .8); this.material.specularPower = 196; this.material.maxSimultaneousLights = 2;
+    this.material.metadata = {...this.material.metadata, lightBudget: 2};
     this.normal = RawTexture.CreateRGBATexture(oceanNormalPixels(), 256, 256, scene, true, false, Texture.TRILINEAR_SAMPLINGMODE);
     this.normal.name = 'ocean/original-crossed-ripple-normal'; this.normal.gammaSpace = false; this.normal.wrapU = this.normal.wrapV = Texture.WRAP_ADDRESSMODE; this.normal.anisotropicFilteringLevel = 4;
     this.material.bumpTexture = this.normal;

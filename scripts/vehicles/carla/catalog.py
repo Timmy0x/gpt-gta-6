@@ -20,5 +20,7 @@ for kind,source,label,mass,height,pose,seaty,seatz in entries:
  cabinheight=max(.5,hi[1]-.25);cabinlength=length*(.73 if kind in ['van','suv','mpv','offroad'] else .47);cabinz=.35 if kind=='truck' else centerz
  collision=[{'center':[0,0,centerz],'size':[bodywidth,.55,length*.98]},{'center':[0,.25+cabinheight/2,cabinz],'size':[bodywidth*.85,cabinheight,cabinlength]}]
  file=kind+'.glb';shutil.copyfile(p,OUT/file);catalog[kind]={'source':source,'file':file,'hash':hashlib.sha256(raw).hexdigest(),'triangles':stats['triangles'],'offset':offset,'seat':[-bodywidth*.23,seaty,seatz],'seatPose':pose,'bounds':{'min':lo,'max':hi},'collision':collision,'tuning':tuning}
+ # The Mini fender repair preserves every saved component and lattice coordinate.
+ if kind=='hatchback':catalog[kind]['damageLayout']='4cf3e2e030e5'
  (OUT/(kind+'.parts.json')).write_text(json.dumps(stats,indent=2))
 pathlib.Path('src/vehicles/road-car-catalog.json').write_text(json.dumps(catalog,indent=2));print('CATALOG',len(catalog),'cars',sum(x['triangles'] for x in catalog.values()),'source triangles',sum((OUT/x['file']).stat().st_size for x in catalog.values()),'bytes')

@@ -36,7 +36,7 @@ export class GameAudio {
     this.master.gain.value = 0.24;
     this.underwaterFilter = ctx.createBiquadFilter();
     this.underwaterFilter.type = "lowpass";
-    this.underwaterFilter.frequency.value = 20000;
+    this.underwaterFilter.frequency.value = Math.min(20000, ctx.sampleRate / 2);
     this.master.connect(this.underwaterFilter).connect(ctx.destination);
     this.engine = ctx.createOscillator();
     this.engine.type = "sawtooth";
@@ -103,7 +103,7 @@ export class GameAudio {
     l.upY.value = 1;
     l.upZ.value = 0;
     if (!options) return;
-    this.underwaterFilter?.frequency.setTargetAtTime(options.underwater ? 650 : 20000, t, .15);
+    this.underwaterFilter?.frequency.setTargetAtTime(options.underwater ? 650 : Math.min(20000, ctx.sampleRate / 2), t, .15);
     this.swimTimer -= options.dt;
     if (!options.paused && (options.swimSpeed ?? 0) > .2 && this.swimTimer <= 0) {
       this.effect("swim", position);
