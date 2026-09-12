@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "candidate": "miami-tile-budget-r1",
+  "status": "isolated-native-reviewed-no-runtime-integration",
+  "dateUTC": "2026-09-12",
+  "pins": {
+    "@babylonjs/core": "9.25.0",
+    "@babylonjs/loaders": "9.25.0",
+    "3d-tiles-renderer": "0.5.2",
+    "typescript": "5.9.3",
+    "tsx": "4.23.13"
+  },
+  "validation": {
+    "nativeTestsPassed": 6,
+    "nativeTestsFailed": 0,
+    "typecheck": "pass",
+    "engine": "Babylon NullEngine",
+    "gpuUsed": false,
+    "providerPayloadsUsed": false,
+    "mockedEngineMethods": false,
+    "independentReadOnlyReview": "No blocking identity/undercount issue within declared scope; explicit UBO/program/VAO exclusions retained; derived debug buffers now block charge."
+  },
+  "scope": "Unique static mesh DataBuffer capacities plus conservative uncompressed 2D color texture reserves. Never measured VRAM. Unknown resources produce null budget charge. Encoded GLB length separate. Count and LRU budgets remain external; visible/used tiles can exceed soft byte thresholds.",
+  "excluded": [
+    "node_modules (development-only symlink; npm ci uses committed pinlock)",
+    "manifest.json (self-reference excluded)"
+  ],
+  "files": [
+    {
+      "path": "package.json",
+      "bytes": 495,
+      "sha256": "5484d2a18a8169506267ffb9ee9a46ca6e85df9448ea636bf93f12571cf1d675"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 22006,
+      "sha256": "f5445883771bfbbca5a42f330d47131089a2150e68ad4896e973629afe65c6c2"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 367,
+      "sha256": "19d93699ce11d1e0a4fcfbdbc536df1691076fbb59a685c833efdb89c8b989b5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8837,
+      "sha256": "9074859f8c0b6dbdce28d918b020af3254892a57aff5551a7769a1e77026bf35"
+    },
+    {
+      "path": "src/TileResourceBudget.ts",
+      "bytes": 13334,
+      "sha256": "579b42a99f7cb7229dd18de4c57a6cacdb2876dfad13b2477569197a7dd86682"
+    },
+    {
+      "path": "tests/tile-resource-budget.test.ts",
+      "bytes": 11689,
+      "sha256": "50f528a1355cec32fe8c6d468788f291b02c8ec122c0781de9724a1a649c2fef"
+    },
+    {
+      "path": "fixtures/asymmetric.glb",
+      "bytes": 7788,
+      "sha256": "76b9127d73fcf37cd8e05531008400397193d4c785ad6dd22d197e2fa6b76b48"
+    },
+    {
+      "path": "evidence/result.json",
+      "bytes": 2362,
+      "sha256": "680e1c5a132f2f7a9955d70f2703c9642b2b97f5f7d0fc0822bbfc6f5e081664"
+    }
+  ]
+}

@@ -1,0 +1,867 @@
+{
+  "origin": "http://127.0.0.1:4793",
+  "rendererSelection": "lh-webgl2",
+  "fingerprint": {
+    "entry": "/assets/index-CbGv_24C.js",
+    "sha256": "89da71459f918db208ebd4ff468348ec5bc15efa8fa2bc15eecf689ccdd90a1c"
+  },
+  "browser": "152.0.7977.83",
+  "method": "Normal source form, camera buttons, mouse orbit, disconnect, missing fixture root/child and retry; synthetic provider403 fulfilled locally by Playwright, no actual API credentials or Miami tile requests.",
+  "checks": [
+    {
+      "label": "unconnected-default",
+      "state": "Waiting for access token",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "empty-token-rejected-locally",
+      "state": "Connection incomplete",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "both-tiles-and-credits-visible",
+      "state": "Fixture tile coverage available",
+      "metrics": "2 visible · 2 model loads",
+      "credits": "Synthetic fixture A · CC0\nSynthetic fixture B · CC0"
+    },
+    {
+      "label": "overview-changes-camera",
+      "state": "Fixture tile coverage available",
+      "metrics": "2 visible · 2 model loads",
+      "credits": "Synthetic fixture A · CC0\nSynthetic fixture B · CC0"
+    },
+    {
+      "label": "mouse-orbit-changes-view",
+      "state": "Fixture tile coverage available",
+      "metrics": "2 visible · 2 model loads",
+      "credits": "Synthetic fixture A · CC0\nSynthetic fixture B · CC0"
+    },
+    {
+      "label": "disconnect-clears-tiles-and-credits",
+      "state": "Disconnected",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "root-error",
+      "state": "Connection incomplete",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "root-error-retry",
+      "state": "Connection incomplete",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "node-error",
+      "state": "Connection incomplete",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "node-error-retry",
+      "state": "Connection incomplete",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "reconnect-after-missing-tiles",
+      "state": "Fixture tile coverage available",
+      "metrics": "2 visible · 2 model loads",
+      "credits": "Synthetic fixture A · CC0\nSynthetic fixture B · CC0"
+    },
+    {
+      "label": "google-denied-feedback",
+      "state": "Connection incomplete",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "ion-denied-feedback",
+      "state": "Connection incomplete",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    },
+    {
+      "label": "auth-refresh-recovers-and-all-endpoint-tile-credits-display",
+      "state": "API tile coverage available",
+      "metrics": "2 visible · 2 model loads",
+      "credits": "Synthetic fixture A · CC0; Synthetic fixture B · CC0\nSynthetic endpoint credit"
+    },
+    {
+      "label": "no-storage-or-success-path-errors",
+      "state": "Disconnected",
+      "metrics": "0 visible · 0 model loads",
+      "credits": ""
+    }
+  ],
+  "requests": [
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/index-CbGv_24C.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.scalar.functions-D-i-XBaP.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/observable.pure-B5E8yEYx.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/internalTexture-s3_Okj90.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/engineStore-e38OvQA7.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/logger-CuBYPcDK.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/shaderStore-D-XQlhUT.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/domManagement-BqltO0ki.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/tools.functions-BS_JXLQx.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/performanceConfigurator-UtxC_Odd.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/precisionDate-Uyb-ubD0.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/abstractEngine.pure-CxWef7ws.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/thinEngine.pure-DSvSkC34.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/typeStore-Cu_sj2zM.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/guid-BXdVC_j_.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/webRequest-dqz0dHXK.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/halfFloat-Ce77JD5z.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/tools.pure-CaUNxClP.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/buffer.pure-BVQdsdjE.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.vector.pure-DJANy4qG.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.axis-BDXenqPp.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.color.pure-CiO80_zw.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.plane-ho-KZss3.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/drawWrapper-K0fqgAAk.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/effectRenderer.pure-B3axSixZ.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/sphericalPolynomial.pure-C_HWq_-3.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/decorators-g5valUAx.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.size-BHZaDYSv.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/decorators.serialization-BgXz6RRq.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/baseTexture.pure-871HmvrO.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/lightConstants-WsiEG0PB.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/texture.pure-BNjKMH4y.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/smartArray-BRfcgNbX.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/sceneComponent-C5Ht72_Z.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/renderTargetTexture.pure-DRXWkbYo.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/postProcess.pure-BDlY5cXb.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/webAudioBaseSubGraph-DywagyBU.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/spatialWebAudio-DWZeap43.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/pointerEvents-Cf29ZA23.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/keyboardEvents-CGYiptFb.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/node-BO_ZscnI.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/material.pure-CTSijeQM.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/animation.pure-DACuMFhD.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/constants-DNxlZnxc.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphInteger.pure-CZmJgkLp.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/abstractSoundSource-CS-CUKBT.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/abstractSoundInstance-Cm6Z2VcX.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphBlock-89bBIeFG.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphAssetsContext-WtUyuDAI.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphExecutionBlock-CiLN482n.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphExecutionBlockWithOutSignal-CBxYQjvw.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphAsyncExecutionBlock-0Bp0Q6Xs.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/index-t4RbnChn.css"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/attribution/google-maps.png"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/index-CbGv_24C.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.scalar.functions-D-i-XBaP.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/observable.pure-B5E8yEYx.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/internalTexture-s3_Okj90.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/engineStore-e38OvQA7.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/logger-CuBYPcDK.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/shaderStore-D-XQlhUT.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/domManagement-BqltO0ki.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/tools.functions-BS_JXLQx.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/performanceConfigurator-UtxC_Odd.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/precisionDate-Uyb-ubD0.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/abstractEngine.pure-CxWef7ws.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/thinEngine.pure-DSvSkC34.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/typeStore-Cu_sj2zM.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/guid-BXdVC_j_.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/webRequest-dqz0dHXK.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/halfFloat-Ce77JD5z.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/tools.pure-CaUNxClP.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/buffer.pure-BVQdsdjE.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.vector.pure-DJANy4qG.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.axis-BDXenqPp.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.color.pure-CiO80_zw.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.plane-ho-KZss3.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/drawWrapper-K0fqgAAk.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/effectRenderer.pure-B3axSixZ.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/sphericalPolynomial.pure-C_HWq_-3.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/decorators-g5valUAx.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/math.size-BHZaDYSv.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/decorators.serialization-BgXz6RRq.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/baseTexture.pure-871HmvrO.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/lightConstants-WsiEG0PB.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/texture.pure-BNjKMH4y.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/smartArray-BRfcgNbX.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/sceneComponent-C5Ht72_Z.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/renderTargetTexture.pure-DRXWkbYo.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/postProcess.pure-BDlY5cXb.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/webAudioBaseSubGraph-DywagyBU.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/spatialWebAudio-DWZeap43.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/pointerEvents-Cf29ZA23.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/keyboardEvents-CGYiptFb.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/node-BO_ZscnI.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/material.pure-CTSijeQM.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/animation.pure-DACuMFhD.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/constants-DNxlZnxc.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphInteger.pure-CZmJgkLp.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/abstractSoundSource-CS-CUKBT.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/abstractSoundInstance-Cm6Z2VcX.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphBlock-89bBIeFG.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphAssetsContext-WtUyuDAI.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphExecutionBlock-CiLN482n.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphExecutionBlockWithOutSignal-CBxYQjvw.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/flowGraphAsyncExecutionBlock-0Bp0Q6Xs.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/index-t4RbnChn.css"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/attribution/google-maps.png"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/sharpen.fragment-CCLDkKbj.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/postprocess.vertex-DJCmMhI8.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/circleOfConfusion.fragment-CEj6DZ22.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/kernelBlur.fragment-DHQjf6lq.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/packingFunctions-DpGwbupU.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/kernelBlurVaryingDeclaration-DP2Wr9Oc.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/kernelBlur.vertex-C2dESVl-.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/depthOfFieldMerge.fragment-BKOejQJL.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/extractHighlights.fragment-Z6JPs_Tc.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/helperFunctions-gEnZbjN3.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/bloomMerge.fragment-vwVNEATu.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/chromaticAberration.fragment-cDPo3aCd.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/grain.fragment-BCCu9I6u.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/imageProcessing.fragment-Bb9mf-7k.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/imageProcessingFunctions-G8WWRV14.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/fxaa.fragment-BJI4ON-J.js"
+    },
+    {
+      "phase": "startup",
+      "url": "http://127.0.0.1:4793/assets/fxaa.vertex-CEYszSUi.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/fixture/tileset.json"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/fixture/a.glb"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/fixture/b.glb"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/pbrMaterial.pure-SzLTeJb5.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/imageProcessing-D4_DMkwz.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/rgbdDecode.fragment-Cdz2Tveq.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/pbr.vertex-CJtOh4PZ.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/bakedVertexAnimation-BTMuj2Y7.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/clipPlaneVertex-C59BO8JS.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/logDepthDeclaration-3gXGtHbI.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/sceneUboDeclaration-B5VhSG0v.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/meshUboDeclaration-BmNu2KU_.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/logDepthVertex-CksyN44U.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/pbrBRDFFunctions-BCNINF-p.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/harmonicsFunctions-QSz_WdsQ.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/bumpVertex-CWhdIpqj.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/mainUVVaryingDeclaration-BBamQlxR.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/vertexColorMixing-Dr2MLCTE.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/pbrUboDeclaration--xFZEw0i.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/pbr.fragment-C79QkHu0.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/clipPlaneFragment-DVK0wgyZ.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/fogFragment-Bw05Ux0E.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/bumpFragment-BrQB2GBa.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/reflectionFunction-BvoxEfKw.js"
+    },
+    {
+      "phase": "fixture",
+      "url": "http://127.0.0.1:4793/assets/pbrDebug-Czr2LKeZ.js"
+    },
+    {
+      "phase": "root-error",
+      "url": "http://127.0.0.1:4793/fixture/missing-root.json"
+    },
+    {
+      "phase": "root-error",
+      "url": "http://127.0.0.1:4793/fixture/missing-root.json"
+    },
+    {
+      "phase": "node-error",
+      "url": "http://127.0.0.1:4793/fixture/node-error.json"
+    },
+    {
+      "phase": "node-error",
+      "url": "http://127.0.0.1:4793/fixture/a.glb"
+    },
+    {
+      "phase": "node-error",
+      "url": "http://127.0.0.1:4793/fixture/missing-child.glb"
+    },
+    {
+      "phase": "node-error",
+      "url": "http://127.0.0.1:4793/fixture/node-error.json"
+    },
+    {
+      "phase": "node-error",
+      "url": "http://127.0.0.1:4793/fixture/a.glb"
+    },
+    {
+      "phase": "node-error",
+      "url": "http://127.0.0.1:4793/fixture/missing-child.glb"
+    },
+    {
+      "phase": "recover",
+      "url": "http://127.0.0.1:4793/fixture/tileset.json"
+    },
+    {
+      "phase": "recover",
+      "url": "http://127.0.0.1:4793/fixture/a.glb"
+    },
+    {
+      "phase": "recover",
+      "url": "http://127.0.0.1:4793/fixture/b.glb"
+    },
+    {
+      "phase": "google-mocked-403",
+      "url": "https://tile.googleapis.com/v1/3dtiles/root.json"
+    },
+    {
+      "phase": "ion-mocked-403",
+      "url": "https://api.cesium.com/v1/assets/2275207/endpoint"
+    },
+    {
+      "phase": "ion-google-recovered-401",
+      "url": "https://api.cesium.com/v1/assets/2275207/endpoint"
+    },
+    {
+      "phase": "ion-google-recovered-401",
+      "url": "https://tile.googleapis.com/v1/3dtiles/root.json"
+    },
+    {
+      "phase": "ion-google-recovered-401",
+      "url": "https://tile.googleapis.com/v1/3dtiles/root.json"
+    },
+    {
+      "phase": "ion-google-recovered-401",
+      "url": "https://tile.googleapis.com/v1/3dtiles/a.glb"
+    },
+    {
+      "phase": "ion-google-recovered-401",
+      "url": "https://tile.googleapis.com/v1/3dtiles/b.glb"
+    }
+  ],
+  "logs": [
+    {
+      "phase": "fixture",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "phase": "root-error",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "phase": "root-error",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "phase": "node-error",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "phase": "node-error",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "phase": "node-error",
+      "type": "error",
+      "text": "TilesRenderer : Failed to load tile at url \"missing-child.glb\"."
+    },
+    {
+      "phase": "node-error",
+      "type": "error",
+      "text": "{name: Error, message: Failed to load model with error code 404}"
+    },
+    {
+      "phase": "node-error",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "phase": "node-error",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "phase": "node-error",
+      "type": "error",
+      "text": "TilesRenderer : Failed to load tile at url \"missing-child.glb\"."
+    },
+    {
+      "phase": "node-error",
+      "type": "error",
+      "text": "{name: Error, message: Failed to load model with error code 404}"
+    },
+    {
+      "phase": "recover",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "phase": "google-mocked-403",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "phase": "ion-mocked-403",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    },
+    {
+      "phase": "ion-google-recovered-401",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "phase": "ion-google-recovered-401",
+      "type": "warning",
+      "text": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    }
+  ],
+  "errors": []
+}

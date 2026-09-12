@@ -76,7 +76,7 @@ test('independent oracle rejects overwritten AUTO root and swapped tile transfor
 
 test('invalid handedness, metre scale and unsupported geographic bounds fail explicitly',async()=>{
  const engine=new NullEngine(),scene=new Scene(engine);try{assert.throws(()=>new LHTilesRenderer('fixture',scene,{tileToLocal:Matrix.Identity()}),/determinant -1/);assert.throws(()=>new LHTilesRenderer('fixture',scene,{tileToLocal:Matrix.Scaling(2,1,-1)}),/preserve metres/);scene.useRightHandedSystem=true;assert.throws(()=>new LHTilesRenderer('fixture',scene,{tileToLocal:tileFrame()}),/left-handed/);}finally{scene.dispose();engine.dispose();}
- const data=structuredClone(sourceTileset);data.root.boundingVolume={region:[0,0,.1,.1,0,10]};const h=await harness({tileset:data,waitForVisible:false});try{await h.pump(()=>h.errors.length>0);assert.match(h.errors[0]?.message??'',/geographic regions/);assert.equal(h.scene.meshes.length,0);}finally{h.dispose();}result.capabilities={LHScene:true,rigidMetres:true,regionRejected:true};await save();
+ const data=structuredClone(sourceTileset);data.root.boundingVolume={region:[0,0,.1,.1,0,10]};const h=await harness({tileset:data,waitForVisible:false});try{await h.pump(()=>h.errors.length>0);assert.match(h.errors[0]?.message??'',/[Gg]eographic regions/);assert.equal(h.scene.meshes.length,0);}finally{h.dispose();}result.capabilities={LHScene:true,rigidMetres:true,regionRejected:true};await save();
 });
 
 
@@ -165,4 +165,10 @@ test('a root-event listener can dispose without subsequent root events leaking t
   }finally{h.dispose();}
  }
  result.rootReentrantDisposal={eventStops:['needs-update','load-tileset'],laterEvents:0};await save();
+});
+
+
+test('source tile stretch scales framebuffer geometric error as well as visible geometry and bounds',async()=>{
+ const data=structuredClone(sourceTileset),uniform=[2,0,0,0,0,2,0,0,0,0,2,0,0,0,0,1];data.root.transform=matrixProduct(data.root.transform,uniform);
+ const h=await harness({tileset:data});try{const tile=[...h.renderer.visibleTiles][0] as LHTile;tile.geometricError=3;const view:TileView={inView:false,error:0,distanceFromCamera:0};h.renderer.calculateTileViewError(tile,view);assert.ok(Math.abs(tile.engineData.errorScale-2)<1e-10);assert.ok(Math.abs(view.error-6*900*Math.abs(h.camera.getProjectionMatrix().m[5])/(2*view.distanceFromCamera))<1e-8);}finally{h.dispose();}
 });

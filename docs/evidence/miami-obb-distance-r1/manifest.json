@@ -1,0 +1,45 @@
+{
+  "scope": "Independent read-only R2.2 OBB distance review; no provider data/GPU/runtime changes.",
+  "files": [
+    {
+      "path": ".local-builds/miami-obb-distance-review-r1/probe.ts",
+      "sha256": "777495b9d14905e2e22fb0778aa4641330ea10608778096cd3516c2b159c5806",
+      "bytes": 4128
+    },
+    {
+      "path": ".local-builds/miami-obb-distance-review-r1/oracle.py",
+      "sha256": "2fe82a6c3e87a11503e77e180128b5118d267a1b902c527153ba018a8f5b4bf5",
+      "bytes": 1886
+    },
+    {
+      "path": ".local-builds/miami-obb-distance-review-r1/numerical-samples.json",
+      "sha256": "011585f9323c831e4102111a6d8a81303b192c4f8c03a758bdc4079607494ae2",
+      "bytes": 396539
+    },
+    {
+      "path": ".local-builds/miami-obb-distance-review-r1/result.json",
+      "sha256": "77b0503df32417289fb9e87bb85289aef6e2449e27fa1adbc7c3ccf286538d53",
+      "bytes": 384
+    },
+    {
+      "path": ".local-builds/miami-obb-distance-review-r1/README.md",
+      "sha256": "e174dc02d900a81e65ea3ae871f3a563e5b3237122d967cb67561d644a3b8ac2",
+      "bytes": 2629
+    },
+    {
+      "path": ".local-builds/miami-lh-renderer-r2-2-source/src/LocalTileBounds.ts",
+      "sha256": "548a9f6900153974de125808a292a92b467194e6a2a425eff1307464d9aee90b",
+      "bytes": 4499
+    },
+    {
+      "path": ".local-builds/miami-lh-renderer-r2-2-source/src/DoubleFrame.ts",
+      "sha256": "cff12daf203f90c1b47e653d8e97bb5d1bd6b1fc2a9b5306978a3c1fca3b85ec",
+      "bytes": 5023
+    },
+    {
+      "path": ".local-builds/miami-lh-renderer-r2-2-source/tests/refinement.test.ts",
+      "sha256": "645650c139adfbc52dc3db31f3636cabc3ec4a4ad0a92ef1142daa78fdae3169",
+      "bytes": 6834
+    }
+  ]
+}

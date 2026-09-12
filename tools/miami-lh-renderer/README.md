@@ -1,6 +1,6 @@
-# Local left-handed 3D Tiles adapter R1
+# Left-handed streamed 3D Tiles adapter R2.2
 
-This is an isolated, original-geometry regression candidate for Babylon 9.25.0 and NASA-AMMOS `3d-tiles-renderer` 0.5.2. It places a tile hierarchy into an existing left-handed Babylon scene, preserving the real AUTO glTF importer root. It does not load Miami or any provider data, perform geodesy, create collision bodies, or modify the game.
+Isolated source candidate for Babylon **9.25.0** and NASA-AMMOS **3d-tiles-renderer 0.5.2**. It uses an existing left-handed Babylon scene and camera. All retained geometry, geographic fixtures and auth responses are independently authored synthetic test data. No provider tile, credential, response or session is included.
 
 With Node.js 22 or newer:
 
@@ -11,47 +11,64 @@ npm test
 npm run typecheck
 ```
 
-The lockfile pins all dependencies. The accepted native run uses Node 24.18.0/npm 11.16.0. Generation retains the original 7,788-byte GLB with SHA256 `76b9127d73fcf37cd8e05531008400397193d4c785ad6dd22d197e2fa6b76b48`. Tests create their own ignored `evidence/result.json`; no workspace dependency symlink or pre-existing evidence is needed.
+The lockfile pins every dependency. The verified clean installation uses Node 24.18.0/npm 11.16.0 and local, independent node_modules. Generation creates both the original asymmetric fixture and eight geographic cases. Tests create ignored evidence files; no workspace symlink or pre-existing evidence is needed.
 
-## Interface and placement
+## Interface
 
 ```ts
-import { LHTilesRenderer } from './src/LHTilesRenderer';
-const renderer = new LHTilesRenderer(tilesetUrl, existingLHScene, {
-  tileToLocal, // Babylon Matrix: RH tile metres -> LH scene metres
+const renderer = new LHTilesRenderer(tilesetURL, existingLHScene, {
+  origin: {
+    latitudeDegrees: 25.7662,
+    longitudeDegrees: -80.1907,
+    ellipsoidHeightM: 0,
+  },
 });
-// Keep the existing camera. After moving it, once per frame:
+renderer.registerPlugin(new CesiumIonAuthPlugin({
+  apiToken, assetId, autoRefreshToken: true,
+}));
+// The application retains its normal camera and renders this same scene.
 renderer.update();
-// When the renderer is no longer needed:
+// Recreate the renderer when changing provider or geographic origin.
 renderer.dispose();
 ```
 
-`tileToLocal` must be an orthonormal affine matrix with determinant −1. The adapter validates this and requires the scene to remain left-handed. The fixture's explicit map is `Matrix.FromArray(expected.frame).multiply(Matrix.Scaling(1,1,-1))`. This map comes from the known synthetic fixture; the adapter itself imports no fixture/oracle data. Its constructor never derives an Earth origin, altitude datum or a metre scale from a label.
+The geographic origin is an explicit **WGS84 ellipsoidal** test/application input. Scene X points east, Y up, Z north, in metres. Height zero in this example is ellipsoid zero. It does not mean ground level, NAVD88 zero, mean sea level or a reconciled Miami gameplay floor. This adapter performs no geoid, NAVD88, geodetic epoch or local surveyed-height conversion.
 
-Tile transforms and their box/sphere bounds stay in the renderer's right-handed tile basis. A group pre-transform maps that basis into the existing LH scene. Each actual AUTO GLB root remains unchanged beneath a new placement node whose full local matrix is `C.inverse() * upRotation * tileTransform`, in Babylon multiplication order. `C` is measured from the loaded import root. Thus the effective source chain is `sourceNodes * C * C.inverse() * upRotation * tileTransform * tileToLocal`; the reflection happens exactly once in final scene coordinates. Pre-transform matrices avoid decomposing the nested affine hierarchy into lossy TRS values.
+The R1 local-frame constructor remains supported: `{tileToLocal: Matrix}`, where the matrix is a rigid reflection with determinant −1 mapping RH tile metres to the existing LH scene. Supply exactly one frame mode. The geographic group starts as identity; the local mode retains its reflection. Rigid group movement is supported. Do not scale/shear the group or change scene handedness while active.
 
-The adapter inherits traversal, queues, visibility, metadata, attribution plugin collection and tile disposal. It changes three bounded seams: GLB placement, framebuffer-pixel screen-space error, and guarded initial-root request settlement. A generation/AbortController guard prevents root state/events and imported assets from being installed after disposal. The state constants and undeclared backend hooks are explicitly coupled to 0.5.2; upgrading the package requires these tests and a source review. The initial-root gate preserves registered root-loader plugin dispatch, validated with an independent delegating plugin. Live provider authentication and refresh remain outside this cohort.
+## Coordinate and lifecycle behavior
 
-`group`, `visibleTiles`, `addEventListener`, `resetFailedTiles` and ordinary rendering events remain available. A visible tile's `engineData.scene` is the placement wrapper; its `engineData.container` contains the real imported meshes. Moving the group by a rigid transform updates geometry and culling together. Do not scale or shear the group.
+Tile ancestry is composed in JavaScript doubles. External JSON resolves relative to its referring tileset, retains the parent tile transform, and takes its own `asset.gltfUpAxis`, default Y. Geographic box/sphere points are transformed and rebased in doubles before creating Babylon vectors. Region bounds ignore tile transforms and conservatively enclose the curved WGS84 region using interval bounds; the enclosure can over-refine large regions. Error uses actual framebuffer pixels, viewport dimensions and conservative source-transform stretch. R2.2 measures distance to a source-oriented enclosure, avoiding the zero distance reported by a loose world AABB when a thin tilted box is far away. An orthonormal frame follows the original half-edges; each half extent sums the absolute projections of every original half-edge. This preserves true oriented boxes and conservatively encloses rounded or sheared boxes. Tiny/zero axes use a stable orthogonal basis. Source edge directions are transformed directly in doubles, without differencing Earth-scale corners. Frustum corners and source geometry remain unchanged.
 
-## Native evidence
+For content, the source order is glTF node hierarchy → glTF up-axis conversion → RTC offset → tile ancestry → local ECEF frame. CESIUM_RTC and B3DM RTC_CENTER are carried outside the importer in doubles. Their source metadata remains available for attribution. They are not silently left to a loader that does not implement CESIUM_RTC.
 
-The tests use the real renderer update/load/traversal/visibility path and Babylon's real binary GLB importer. Only transport, browser location and animation-frame scheduling are supplied by the Node harness. The original independent double-arithmetic oracle is reused; `placeCanonical` is never called on an adapter result.
+Large static glTF origins are rebased before Babylon creates node matrices. Empty ancestor coordinate systems move toward a rendered descendant using `M'_i = T(-o_parent) * M_i * T(o_i)`. Offsets cancel along each hierarchy path. Mesh nodes keep zero internal offset, so source vertex buffers, linear transforms, children and final geometry are preserved. A common external anchor is restored in doubles. This also handles large parent/child translations that cancel to a small final position. The original JSON remains the tile metadata; only the in-memory importer copy changes. No geometry is flattened, exported or retained by the adapter.
 
-- Thirteen tests pass, plus TypeScript checking.
-- Six meshes / 72 vertices / 24 triangles traverse two noncommuting tile transforms and a nonuniform nested GLTF node hierarchy. Maximum vertex error is 2.011 micrometres and mesh-bound error 1.966 micrometres; tolerance is 20 micrometres.
-- 108 view/FOV/aspect/forward-away configurations verify 7,776 NDC/depth coordinates, 2,592 indexed projected winding comparisons, and 54 visible versus 54 culled tile bounds. Maximum NDC error is 0.000006596; tile-bound corner error is below 0.683 micrometres.
-- Seventy-two inverse-transpose normals match the oracle within 0.000000049, with imported back-face culling retained.
-- Four deliberate failures are rejected by the untouched oracle: overwritten AUTO root, duplicated compensation, swapped tile transforms and omitted up-axis rotation. Errors range from 2.72 to 6.20 metres. The swapped-transform control uses loose enclosing spheres to keep its deliberately wrong geometry visible to the oracle.
-- Real hide/reveal preserves the same container, rigid group movement preserves one-metre markers, and disposal removes all tile meshes/wrappers. Disposal after the actual importer resolves, delayed root completion, synchronous early disposal failed-root retry, root-plugin dispatch and disposal within an earlier root-event listener are covered.
-- Screen-space error uses actual framebuffer dimensions and camera viewport size. Tests cover 1600×900, 800×450 and 1200×900 at quality factors 1, 2 and 0.75, plus half viewport and orthographic projection. NullEngine hardcodes its scaling getter to 1, so this test binds the real AbstractEngine getter to its real setter; no GPU resize is claimed.
+The real AUTO import root stays intact. A wrapper compensates its conversion exactly once and applies the rebased content placement in the same scene. R1 normal and winding regressions remain applicable. Containers are added to the scene before their imported root is parented, avoiding an invalid-container-parent warning.
 
-The retained log includes upstream 0.5.2's general 3D Tiles 1.1 support warning. It is not hidden or treated as proof that all 1.1 extensions work. The earlier AssetContainer-parent warning was fixed by adding the valid imported hierarchy to the scene before parenting it to the external placement node.
+A generation plus abort guard owns root settlement and prevents late root/model installation. Official plugin dispatch remains intact. Scoped wrappers deliver the lifetime signal to the initial ion endpoint, Google session refresh and tile requests; release a failed cached refresh promise; preserve external-endpoint credits only while tiles are visible; and prevent duplicate Google plugins on root retry. The initial Google root uses the official status-checking refresh path, avoiding 0.5.2's initial `fetch` JSON parsing that loses a non-2xx status. R2.1 restores one automatic initial-root retry for the exact pinned 401 error when `autoRefreshToken` is enabled. A persistent 401 stops after two requests, 403 and 503 receive no automatic initial-root retry, and disposal prevents the second request. The exact upstream error text is version-pinned and tested; a future changed error format fails closed until reviewed. These are version-specific compatibility seams, covered by actual official-plugin mocks. The application still owns credential input, sanitized diagnostics, full visible branding, attribution rendering and the provider's live connection lifecycle.
 
-## Explicit limits
+## Reproducible native evidence
 
-R1 accepts embedded GLB2 content, one top-level tileset with nested tile nodes, rigid tile transforms, and local box/sphere bounds. It explicitly rejects geographic `region` bounds, external nested tileset JSON, implicit/multiple content, non-GLB content, external GLB buffers/images, `CESIUM_RTC`, Draco and meshopt compression. Other GLTF features and textures have not been validated by this original untextured fixture. B3DM, live credentials, auth refresh, provider credits, external-resource fetch policy and geographic height reconciliation need separate integration gates.
+Thirty-nine native tests pass, plus TypeScript checking:
 
-There is no ECEF precision guarantee. Default Babylon matrices use float32 storage, so subtracting large Earth coordinates after matrix creation can lose sub-metre detail. A production georeferencer must perform a validated double-precision rebase or deliberately configure/test large-world precision before this local frame. NAVD88 versus ellipsoid heights remain unresolved here.
+- The original six meshes, 72 vertices and 24 triangles exercise two noncommuting tile transforms, nonuniform glTF nodes, real AUTO conversion, bounds, normals, 108 camera/FOV/aspect/direction views, NDC/depth and projected winding. Four bad-transform controls remain rejected.
+- Eight geographic cases exercise external Z/X tilesets, default Y with omitted transforms, large root TRS/matrix positions, large nested positions, cancelling Earth-scale translations, and RTC GLB/B3DM. Every case uses the actual renderer traversal and GLB loader. Across 576 vertices the maximum world error is below **0.00000065 m**; 10,368 NDC comparisons stay below **0.00000065**. The acceptance tolerance is 0.001 m. Required KHR_materials_unlit maps to actual Babylon unlit materials.
+- A deliberate premature Float32 conversion loses a 0.1234 m offset completely; the double-first path retains it to about 0.000000003 m. The initial rejected nested-child implementation had a 0.423 m error; its failing log is retained, and that case now passes.
+- 6,615 fractional WGS84 region points cover Brickell, the antimeridian, both poles and the globe. All remain inside conservative bounds. Missing origin height and malformed longitude ranges fail before iteration.
+- Official ion → Google root → external JSON → GLB mocks verify credential host scope, session propagation, visible endpoint credits, initial ion/Google 503 manual-reset retry, initial Google 401→200, bounded persistent 401, forbidden 403 without retry, disabled refresh, transient nested 401 session refresh, cancellation and zero late installed resources. Every fetch is intercepted; only dummy credentials are used.
+- R2.2 includes a tilted thin-slab counterexample: true camera distance 1234.397 m, old AABB distance zero; the old path produced infinite SSE and filled a 24-entry cache while retaining one coarse ancestor. At the same capacity, the corrected 5.722-pixel error requests only the appropriately coarse model. This original test deliberately uses overlapping conservative child bounds; it establishes a refinement mechanism, not a reconstruction of provider topology.
+- Oriented distances match the pinned upstream OBB over 2,400 probes, including rotations, thin/zero axes and translations, with maximum difference 0.000100 m (the reference uses Float32 matrices). Every one of 192 original sheared/tiny/degenerate source corners remains inside the enclosure within 0.000000000006 m, including a separate 10,000-km near-orthogonal boundary regression.
+- Existing same-container hide/reveal, rigid group movement, cancellation after actual import, delayed/pre-start/reentrant root disposal, plugin dispatch, and framebuffer scaling regressions pass. Uniform tile stretch now scales SSE as well as bounds.
 
-The inherited byte estimator still returns 1. The 128/96 tile count cap is a count bound, **not** measured memory or VRAM. Root is developing separate resource accounting. These CPU tests do not prove common GPU framebuffer depth, raster front faces, postprocess composition, transparent ordering, GPU resources or performance. No Havok bodies, safe travel, streamed collision readiness or gameplay integration is included.
+Tests use NullEngine, not a GPU. Native sub-micrometre oracle errors describe these small synthetic meshes after rebasing, not real-world geographic accuracy. The original 1.1 fixture retains upstream's generic limited-support warning. It is not suppressed or treated as support for every 1.1 feature.
+
+## Deliberate limits and pending integration gates
+
+This candidate accepts embedded GLB2 (including in-memory data URIs), B3DM, nested external tileset JSON, explicit affine tile transforms and box/sphere/region bounds. It has native coverage for ordinary Float32 positions and unlit materials, matching the successful structural sample reported by the separate live source viewer. That sample does not establish a universal provider format guarantee.
+
+Implicit tiling, multiple content, other tile encodings, text glTF, external glTF buffers/images, Draco and meshopt are explicit errors pending separate loader/decoder/auth tests. Large-coordinate skinned/animated glTF and static hierarchies whose rebased node translations still span more than 4096 m are explicit errors. Already-quantized large Float32 vertex positions cannot recover lost precision. Image decoding, texture UV/color fidelity, KTX/Basis or other extensions and source-specific metadata need browser verification; these original native fixtures do not prove their raster behavior.
+
+No provider content has been downloaded to disk. No Havok geometry, collision surface extraction, streamed collision readiness, travel, vehicle or gameplay integration is included. The existing Miami NAVD88 floor is not aligned by this adapter. CPU tests do not prove common GPU depth, raster winding, postprocess output, transparency ordering, image quality, bandwidth or performance. Those require the separate single-scene browser comparison before any live game integration.
+
+The inherited byte estimator still returns 1. The 128/96 tile-count cap is **not** a memory or VRAM measurement. The independent resource-budget helper is not included here. Oriented distance reduces unnecessary refinement but does not solve every protected-working-set cache stall. The application must preserve ancestor coverage and choose/report an adequate finite capacity; this adapter does not silently raise the limit or disable ancestor loading. Pinned private hooks and lifecycle constants require renewed source review and regression tests before upgrading the renderer.

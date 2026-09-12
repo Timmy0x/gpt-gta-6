@@ -1,0 +1,85 @@
+{
+  "scope": "Original synthetic content only; actual pinned renderer traversal and AUTO GLB import; oracle generated independently without runtime matrix helpers.",
+  "nested-z": {
+    "requests": 3,
+    "vertices": 72,
+    "maximumVertexErrorM": 4.931270743417576e-7,
+    "ndcChecks": 1296,
+    "maximumNdcError": 5.261082711992885e-7,
+    "axis": "Z",
+    "disposedMeshes": 0
+  },
+  "nested-x": {
+    "requests": 3,
+    "vertices": 72,
+    "maximumVertexErrorM": 6.473480200412337e-7,
+    "ndcChecks": 1296,
+    "maximumNdcError": 6.431407996955304e-7,
+    "axis": "X",
+    "disposedMeshes": 0
+  },
+  "default-y-large-root": {
+    "requests": 2,
+    "vertices": 72,
+    "maximumVertexErrorM": 1.6159348106968191e-7,
+    "ndcChecks": 1296,
+    "maximumNdcError": 1.3870894810925515e-7,
+    "axis": "Y",
+    "disposedMeshes": 0
+  },
+  "default-y-large-matrix": {
+    "requests": 2,
+    "vertices": 72,
+    "maximumVertexErrorM": 1.6159348106968191e-7,
+    "ndcChecks": 1296,
+    "maximumNdcError": 1.3870894810925515e-7,
+    "axis": "Y",
+    "disposedMeshes": 0
+  },
+  "default-y-large-nested": {
+    "requests": 2,
+    "vertices": 72,
+    "maximumVertexErrorM": 1.707267879765514e-7,
+    "ndcChecks": 1296,
+    "maximumNdcError": 1.2654503430976264e-7,
+    "axis": "Y",
+    "disposedMeshes": 0
+  },
+  "default-y-large-cancellation": {
+    "requests": 2,
+    "vertices": 72,
+    "maximumVertexErrorM": 5.157219388267437e-8,
+    "ndcChecks": 1296,
+    "maximumNdcError": 5.7835792400950373e-8,
+    "axis": "Y",
+    "disposedMeshes": 0
+  },
+  "rtc-glb": {
+    "requests": 2,
+    "vertices": 72,
+    "maximumVertexErrorM": 1.5349661859696657e-7,
+    "ndcChecks": 1296,
+    "maximumNdcError": 1.1204222465149438e-7,
+    "axis": "Y",
+    "disposedMeshes": 0
+  },
+  "rtc-b3dm": {
+    "requests": 2,
+    "vertices": 72,
+    "maximumVertexErrorM": 1.5349661859696657e-7,
+    "ndcChecks": 1296,
+    "maximumNdcError": 1.1204222465149438e-7,
+    "axis": "Y",
+    "disposedMeshes": 0
+  },
+  "negativeFloatBeforeRebase": {
+    "expectedM": 0.1234,
+    "correctM": 0.1234000027179718,
+    "incorrectM": 0
+  },
+  "regions": {
+    "regions": 5,
+    "samples": 6615,
+    "tileTransformIgnored": true
+  }
+}

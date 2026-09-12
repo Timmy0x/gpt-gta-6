@@ -1,6 +1,16 @@
-# Miami source API preview
+## Verified local-frame source rendering
 
-A separate local preview of the official NASA/AMMOS Babylon.js 3D Tiles renderer. It starts disconnected with **Cesium ion** selected. No city geometry or remote API request occurs until you enter your own access token and press **Connect**. Actual Miami provider access has not been verified without a user credential.
+Actual Google/Cesium Brickell now renders in a left-handed local metre scene with the game post-processing pipeline. This preview is an integration tool; it is not yet the playable Miami map. Credentials remain connection-local in browser memory, and source attributions remain visible.
+
+The previous 240-entry cap deadlocked at one coarse ocean tile: all 240 admitted entries were protected and all queues were idle. A normal cache-control change on the same live connection restored textured buildings. At the 1500 m viewpoint, the completed working set is 488 entries / 187 visible tiles; the 700 m viewpoint uses 628 protected entries / 256 visible tiles. Default capacity is now 960 entries, with 240/480 diagnostic comparisons. This is a count safeguard, not measured VRAM or a byte budget. The closer measured resource subtotal was 497.2 MiB with 687 unknown resources, so no performance or complete memory acceptance is claimed.
+
+The R2.2 adapter also replaces its overly loose world-AABB distance with a conservative oriented enclosure. Independent tests prove reduced unnecessary refinement on tilted bounds. That correction alone did not resolve the actual 240-entry live stall; cache capacity is separately necessary. Raw failure and recovery summaries are retained under docs/evidence/miami-streaming-live-r1 in the repository.
+
+Streaming diagnostics report current admitted/protected counts, download/parse queues and sanitized error counters. The sampler runs even when an update throws. Model-load events are explicitly cumulative; resident resource counts are separate. Changing renderer reloads and clears the token; changing cache capacity takes effect in the current page without another authentication request.
+
+## Run the preview
+
+This package starts disconnected with Cesium ion selected. The renderer selector offers the upstream RH Earth-coordinate source comparison, LH WebGL2 and LH WebGPU. The LH modes use one ArcRotateCamera in East/Up/North metres and the game DefaultRenderingPipeline. The origin is WGS84 latitude25.7662°, longitude−80.1907°, ellipsoid height0m; NAVD88 alignment and gameplay collision remain separate work. Adapter source hashes are in adapter-provenance.json.
 
 ```sh
 npm ci --ignore-scripts
@@ -24,11 +34,11 @@ The footer displays every visible-tile attribution returned by the renderer, plu
 
 This is a source-access preview, not a finished game map or importer. It provides no Havok colliders, terrain query, traffic, swimming, damage, editable mesh export, offline city cache or guarantee of surveyed geometry. Photogrammetry may contain dated, fused, missing or distorted surfaces; a successful connection does not establish street-level fidelity.
 
-The pinned Babylon backend is right-handed. `checkCollisions` would only activate Babylon's legacy mesh collision flags, so it is disabled here. Its `calculateBytesUsed()` currently returns `1`; the configured byte thresholds are not a measured GPU-memory budget. The preview instead bounds tile count and fetch/parse concurrency. Large-world rendering remains ECEF; integration with the game's local metre physics is separate work.
+The upstream Babylon backend is right-handed; the tested local adapter supplies the left-handed path. `checkCollisions` would only activate Babylon's legacy mesh collision flags, so it is disabled here. Its `calculateBytesUsed()` currently returns `1`; the configured byte thresholds are not a measured GPU-memory budget. The preview retains its count-only safeguard and fetch/parse concurrency settings. Used or visible tiles may exceed LRU soft limits; no measured VRAM or hard byte ceiling is enforced. The source comparison uses large-world ECEF rendering; the LH paths rebase in double precision before Babylon node transforms. Physics integration remains separate work.
 
 Provider root/auth failures and child failures are displayed separately. A root JSON response alone does not count as rendered data. Tile coverage counters report renderer selection/loading, not completed shader compilation; the first GPU frame can remain blank while materials compile. Raster inspection is required before claiming a visible result. Retry creates fresh auth state; Disconnect disposes the renderer. The synthetic test verifies renderer behavior only. Production build emits the expected large-Babylon-chunk advisory. The valid 3D Tiles 1.1/GLB fixture also triggers the pinned renderer's limited-1.1-support advisory.
 
-Verification: 13 native tests and a production/typecheck build pass. A separate browser audit passed 15 normal-control and intercepted-provider checks, including both credits, missing root/child, retry, disconnect, API403 and a recovered401 with ion endpoint credits plus Google tile credits/logo. No real provider credentials or Miami data were used. The first screenshot was premature; retained follow-up captures after material warm-up show both synthetic boxes at420 m and1500 m.
+The combined preview passes 29 native tests and production/typecheck build. The geographic adapter passes 39 native tests. Normal source/error/refresh controls pass 15 checks on each LH backend; resource and cache controls pass all 3 renderer modes. These automated checks use original synthetic fixtures and intercepted provider responses. Actual Google/Cesium aerial views were separately inspected through the authorized local connection. Neither category establishes complete game or street-level fidelity.
 
 ## Sources and licenses
 
@@ -39,3 +49,19 @@ Renderer and Babylon licenses/notices are retained under `licenses/`. The synthe
 The repository-level normal-controls audit is `tests/miami-source-controls-audit.mjs`; run it from the root with `AUDIT_URL` pointing at this local preview. It intercepts synthetic provider responses and requires the root Playwright development dependency. See `docs/evidence/miami-streamed-preview-r1/README.md` for the clean-checkout evidence and its limits.
 
 `loadedContent` counts successfully loaded unique tile objects. Failed or unsupported parse candidates are absent from that count, so zero does not establish that a format or compression extension is absent from the provider dataset.
+
+## R3 resident resource diagnostics
+
+The visible **Resources · not measured VRAM** panel inspects all successfully loaded resident tile containers once per second, including hidden cached tiles. A passive parse hook records only complete GLB view byte lengths and returns `null`, leaving the official parser unchanged. `load-model` adds a resident entry, duplicate events retain one entry, and `dispose-model` removes it. Disconnect/retry disposes and clears the ledger; late completions cannot reopen it. Numeric IDs are connection-local, increase monotonically and are not reused by reset. Pending buffers, URLs, source metadata and names are never retained in the report.
+
+`src/TileResourceBudget.ts` is the exact frozen resource-helper R1 source. The panel shows reported native DataBuffer capacities, a conservative decoded 2D color-texture allocation estimate, their known subtotal, unknown-resource count, resident/visible/cached counts, and encoded GLB byte lengths separately. Encoded download length does not establish current encoded-buffer retention. Only fixed labels and numeric aggregates leave the ledger; helper attribute names, exceptions and detail strings are not serialized. Unknown or failed inspection remains explicit rather than becoming a zero estimate.
+
+Texture accounting reserves full mip chains, four-channel expansion and configurable row/mip alignment. These are deliberate conservative policy estimates, not measured VRAM or a guaranteed driver-allocation upper bound. Static resource scope excludes uniforms, shader/VAO/driver overhead, CPU decode staging, and frame-global rendering allocations. Unsupported or missing static resources prevent a complete static charge. The detailed helper documentation and original checkpoint manifest are retained under `references/resource-accounting/` as provenance. Its relative file paths describe the separate original R1 package.
+
+The resource ledger itself remains read-only. Cache capacity is controlled separately by the normal UI. Native lifecycle coverage uses the actual pinned renderer and original GLB loader on NullEngine with a test-only FileReader host shim. Real WebGL2 leaves index-buffer capacities unknown in Babylon 9.25.0; WebGPU reports those capacities in the original fixture. These backend differences remain visible instead of being replaced with guessed values.
+
+## R3 active-scene hierarchy aggregates
+
+The structural profile now includes numeric counts of local node translations strictly greater than **4,096 m**, classified as active-scene roots or nested nodes, and maximum observed hierarchy depth (root depth zero). A matrix takes precedence over a node translation. These are local offsets, not accumulated world coordinates or a claim about a provider's coordinate frame.
+
+The active `scene` is traversed; an omitted scene selects scene 0 to match the loader. Multiple scenes are counted explicitly, while inactive scenes are not traversed by these hierarchy fields. The existing global node inventory remains separate. Iterative traversal is bounded to 10,000 node/index/edge observations. Cycles, repeated references, missing/invalid scenes, invalid child references and limit-limited partial results have explicit numeric counters. Invalid or shared hierarchies must not be interpreted as complete valid-tree depth measurements. No names, node IDs, vectors, URLs or original metadata appear in the aggregates.

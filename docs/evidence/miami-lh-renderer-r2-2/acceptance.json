@@ -1,0 +1,40 @@
+{
+  "version": "R2.2",
+  "sourceFiles": 41,
+  "manifestSHA256": "e0b84a851e607e17037c39cac85628a62dc32b6d02b958c13a944039571261ad",
+  "previousManifestSHA256": "9b7a63d454fe83dbacec19c6150042f31991ef726ec045f3eac7df96677d5a3c",
+  "changedFiles": [
+    {
+      "path": "README.md",
+      "bytes": 10961,
+      "sha256": "d0f6131e17b85107c3b6068ddf81baf65c98520e43bb6df8a9ff052905556543"
+    },
+    {
+      "path": "src/LocalTileBounds.ts",
+      "bytes": 4499,
+      "sha256": "548a9f6900153974de125808a292a92b467194e6a2a425eff1307464d9aee90b"
+    },
+    {
+      "path": "tests/refinement.test.ts",
+      "bytes": 6834,
+      "sha256": "645650c139adfbc52dc3db31f3636cabc3ec4a4ad0a92ef1142daa78fdae3169"
+    }
+  ],
+  "nativeTestsPassed": 39,
+  "nativeTestsFailed": 0,
+  "typecheck": true,
+  "generate": true,
+  "freshIndependentLockedNpmCi": true,
+  "providerFetches": 0,
+  "GPU": false,
+  "independentReview": {
+    "reviewer": "road_cars",
+    "accepted": true,
+    "boxes": 102,
+    "points": 1809,
+    "outsideClosestPointOracleChecks": 618,
+    "maximumConservativeDistanceExcessM": 1.57e-10,
+    "maximumInsideResidualM": 1e-08,
+    "scope": "Independent NumPy 27-active-set closest-point oracle; orthogonal/near-orthogonal/sheared/tiny/zero/collinear/Earth-rebased inputs. No provider/GPU data."
+  }
+}

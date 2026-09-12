@@ -1,0 +1,26 @@
+{
+  "version": "R2.1",
+  "previousManifestSHA256": "aae147d05e5fd3d05b522ec0122ab8d0014213c03fcef92b6052a33b4f7caac4",
+  "manifestSHA256": "9b7a63d454fe83dbacec19c6150042f31991ef726ec045f3eac7df96677d5a3c",
+  "changedFiles": [
+    {
+      "path": "README.md",
+      "bytes": 9260,
+      "sha256": "bf368589dd221d8c1461122f29892a22f159b4c1a12a718a6caba2822c8f044b"
+    },
+    {
+      "path": "src/PluginLifetime.ts",
+      "bytes": 3023,
+      "sha256": "7865b57212e58662a951aebfa4b2d36a5fbe599804c75a67f7888f2e5a78bc54"
+    },
+    {
+      "path": "tests/auth.test.ts",
+      "bytes": 11489,
+      "sha256": "b555de0682e8040327828300875fbd8cbeebf17797ee01bc8be3856fe0d96a7d"
+    }
+  ],
+  "testsPassed": 35,
+  "typecheck": true,
+  "providerFetches": 0,
+  "GPU": false
+}

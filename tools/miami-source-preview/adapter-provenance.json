@@ -1,0 +1,10 @@
+{
+  "sourceManifestSha256": "e0b84a851e607e17037c39cac85628a62dc32b6d02b958c13a944039571261ad",
+  "files": {
+    "src/DoubleFrame.ts": "cff12daf203f90c1b47e653d8e97bb5d1bd6b1fc2a9b5306978a3c1fca3b85ec",
+    "src/GlbRebase.ts": "5934e6a84fab70b862118c2909d1f00eaeb26eb01564eaa76029e3f4c331e09a",
+    "src/LHTilesRenderer.ts": "f19e01e39c815a48203b5d1dd826aaff3501400d7ab97a448a508419384fc099",
+    "src/LocalTileBounds.ts": "548a9f6900153974de125808a292a92b467194e6a2a425eff1307464d9aee90b",
+    "src/PluginLifetime.ts": "7865b57212e58662a951aebfa4b2d36a5fbe599804c75a67f7888f2e5a78bc54"
+  }
+}

@@ -17,6 +17,7 @@ const COMPONENTS = ['BYTE', 'UNSIGNED_BYTE', 'SHORT', 'UNSIGNED_SHORT', 'UNSIGNE
 const componentNames: Record<number, typeof COMPONENTS[number]> = { 5120: 'BYTE', 5121: 'UNSIGNED_BYTE', 5122: 'SHORT', 5123: 'UNSIGNED_SHORT', 5125: 'UNSIGNED_INT', 5126: 'FLOAT' };
 const LIMIT = 10_000;
 const MAX_MAGNITUDE = 1e12;
+const LARGE_TRANSLATION_M = 4096;
 const counts = <T extends readonly string[]>(keys: T) => Object.fromEntries(keys.map(key => [key, 0])) as Record<T[number], number>;
 function own(value: unknown, key: string): unknown {
   if (!value || typeof value !== 'object') return undefined;
@@ -25,8 +26,9 @@ function own(value: unknown, key: string): unknown {
 }
 function array(value: unknown): unknown[] { return Array.isArray(value) ? value : []; }
 function vector(value: unknown, size: number): number[] | null {
-  if (!Array.isArray(value) || value.length !== size || !value.every(v => typeof v === 'number' && Number.isFinite(v))) return null;
-  return value as number[];
+  if (!Array.isArray(value) || value.length !== size) return null;
+  const values = Array.from({ length: size }, (_, i) => own(value, String(i)));
+  return values.every(v => typeof v === 'number' && Number.isFinite(v)) ? values as number[] : null;
 }
 function magnitude(values: number[] | null): number | null {
   if (!values) return null;
@@ -60,6 +62,15 @@ export class StructuralProfile {
     tileTransforms: { present: 0, omitted: 0, invalid: 0, nonUnitScale: 0, maxTranslationMagnitudeM: 0 },
     maxBoxCenterMagnitudeM: 0, maxSphereCenterMagnitudeM: 0,
     nodesObserved: 0, maxNodeTranslationMagnitudeM: 0, nonUnitNodeScale: 0,
+    hierarchy: {
+      translationThresholdM: LARGE_TRANSLATION_M,
+      inspectedModels: 0, multiSceneModels: 0, defaultSceneModels: 0,
+      missingSceneModels: 0, invalidSceneModels: 0,
+      activeRoots: 0, activeNodes: 0, nestedNodes: 0,
+      largeTranslationRoots: 0, largeTranslationNested: 0, maxDepth: 0,
+      cycleEdges: 0, repeatedNodeReferences: 0, invalidNodeReferences: 0,
+      invalidChildren: 0, limitReachedModels: 0,
+    },
     cesiumRtc: { present: 0, invalidCenter: 0, maxCenterMagnitudeM: 0 },
     buffers: { embedded: 0, external: 0 }, images: { embedded: 0, external: 0, unspecified: 0 },
     primitiveModes: counts(MODES), positionComponents: counts(COMPONENTS),
@@ -68,12 +79,77 @@ export class StructuralProfile {
   private limited(value: unknown) {
     const values = array(value);
     if (values.length > LIMIT) this.data.inspectionLimitReached = true;
-    return values.slice(0, LIMIT);
+    return Array.from({ length: Math.min(values.length, LIMIT) }, (_, i) => own(values, String(i)));
   }
   private maxMagnitude(value: number[] | null, update: (value: number) => void) {
     const result = magnitude(value);
     if (result === null) this.data.invalidNumericValues++;
     else update(result);
+  }
+  /** Active scene only, matching the loader's scene-0 fallback; root depth is zero.
+   * Counts are partial when malformed references or the shared edge/node budget intervene.
+   * IDs and traversal state are ephemeral and never appear in snapshot(). */
+  private observeHierarchy(metadata: unknown) {
+    const out = this.data.hierarchy;
+    out.inspectedModels++;
+    const scenes = array(own(metadata, 'scenes'));
+    if (!scenes.length) { out.missingSceneModels++; return; }
+    if (scenes.length > 1) out.multiSceneModels++;
+    const selected = own(metadata, 'scene');
+    if (selected === undefined) out.defaultSceneModels++;
+    const sceneIndex = selected === undefined ? 0 : selected;
+    if (typeof sceneIndex !== 'number' || !Number.isSafeInteger(sceneIndex) || sceneIndex < 0 || sceneIndex >= scenes.length) { out.invalidSceneModels++; return; }
+    const scene = own(scenes, String(sceneIndex));
+    if (!scene || typeof scene !== 'object') { out.invalidSceneModels++; return; }
+    const rawRoots = own(scene, 'nodes');
+    if (rawRoots !== undefined && !Array.isArray(rawRoots)) { out.invalidSceneModels++; return; }
+    const roots = array(rawRoots), nodes = array(own(metadata, 'nodes'));
+    let limited = roots.length > LIMIT;
+    const rootIds = new Set<number>();
+    for (let i = 0; i < Math.min(roots.length, LIMIT); i++) {
+      const id = own(roots, String(i));
+      if (typeof id === 'number' && Number.isSafeInteger(id) && id >= 0 && id < Math.min(nodes.length, LIMIT)) rootIds.add(id);
+    }
+    const state = new Map<number, 1 | 2>();
+    const stack: Array<{ id: number; depth: number; children: unknown[]; next: number }> = [];
+    let references = 0;
+    const enter = (reference: unknown, depth: number) => {
+      if (++references > LIMIT) { limited = true; return; }
+      if (typeof reference !== 'number' || !Number.isSafeInteger(reference) || reference < 0 || reference >= nodes.length) { out.invalidNodeReferences++; return; }
+      if (reference >= LIMIT) { limited = true; return; }
+      if (state.has(reference)) {
+        if (state.get(reference) === 1) out.cycleEdges++;
+        else out.repeatedNodeReferences++;
+        return;
+      }
+      const node = own(nodes, String(reference));
+      if (!node || typeof node !== 'object') { out.invalidNodeReferences++; return; }
+      state.set(reference, 1);
+      out.activeNodes++;
+      const isRoot = rootIds.has(reference);
+      if (isRoot) out.activeRoots++;
+      else out.nestedNodes++;
+      out.maxDepth = Math.max(out.maxDepth, depth);
+      const matrix = vector(own(node, 'matrix'), 16);
+      const distance = magnitude(matrix ? matrix.slice(12, 15) : vector(own(node, 'translation'), 3));
+      if (distance !== null && distance > LARGE_TRANSLATION_M) {
+        if (isRoot) out.largeTranslationRoots++;
+        else out.largeTranslationNested++;
+      }
+      const children = own(node, 'children');
+      if (children !== undefined && !Array.isArray(children)) out.invalidChildren++;
+      stack.push({ id: reference, depth, children: array(children), next: 0 });
+    };
+    for (let root = 0; root < Math.min(roots.length, LIMIT); root++) {
+      enter(own(roots, String(root)), 0);
+      while (stack.length && references <= LIMIT) {
+        const current = stack[stack.length - 1];
+        if (current.next >= current.children.length) { state.set(current.id, 2); stack.pop(); continue; }
+        enter(own(current.children, String(current.next++)), current.depth + 1);
+      }
+      if (references > LIMIT) break;
+    }
+    if (limited) { out.limitReachedModels++; this.data.inspectionLimitReached = true; }
   }
   observeTileset(value: unknown) {
     if (!value || typeof value !== 'object' || this.seenTilesets.has(value)) return;
@@ -148,6 +224,7 @@ export class StructuralProfile {
       if (numericScale?.some(value => Math.abs(Math.abs(value) - 1) > 1e-6) || (matrix && nonUnitMatrix(matrix))) this.data.nonUnitNodeScale++;
       else if (scale !== undefined && !numericScale) this.data.invalidNumericValues++;
     }
+    this.observeHierarchy(metadata);
     for (const resource of this.limited(own(metadata, 'buffers'))) {
       const uri = own(resource, 'uri');
       this.data.buffers[uri === undefined || (typeof uri === 'string' && /^data:/i.test(uri)) ? 'embedded' : 'external']++;

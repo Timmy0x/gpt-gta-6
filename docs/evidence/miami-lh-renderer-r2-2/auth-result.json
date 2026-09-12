@@ -1,0 +1,56 @@
+{
+  "scope": "Official pinned CesiumIonAuthPlugin and GoogleCloudAuthPlugin. Every global fetch is mocked with original synthetic bytes and dummy credentials; no provider requests.",
+  "flow": {
+    "requests": 4,
+    "officialPlugins": true,
+    "sameHostCredentials": true,
+    "nestedSession": true,
+    "crossHostCredentials": false,
+    "endpointCreditsVisibleOnly": true
+  },
+  "endpointRetry": {
+    "attempts": 2,
+    "terminalErrors": 1,
+    "loaded": true
+  },
+  "googleRootRetry": {
+    "attempts": 2,
+    "terminalErrors": 1,
+    "loaded": true
+  },
+  "endpointCancellation": {
+    "requestAborted": true,
+    "requests": 1,
+    "lateEvents": 0,
+    "lateMeshes": 0
+  },
+  "sessionRefresh": {
+    "rootRequests": 2,
+    "nestedAttempts": 2,
+    "terminalErrors": 0
+  },
+  "initial401Refresh": {
+    "rootAttempts": 2,
+    "endpointAttempts": 1,
+    "terminalErrors": 0,
+    "loaded": true
+  },
+  "persistentInitial401": {
+    "rootAttempts": 2,
+    "terminalErrors": 1,
+    "childRequests": 0
+  },
+  "initial403": {
+    "rootAttempts": 1,
+    "terminalErrors": 1
+  },
+  "disabledInitial401": {
+    "rootAttempts": 1,
+    "terminalErrors": 1
+  },
+  "initial401Cancellation": {
+    "rootAttempts": 1,
+    "signalAborted": true,
+    "lateErrors": 0
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "origin": "http://127.0.0.1:4893",
+  "fingerprint": {
+    "entry": "/assets/index-CWdCMmNC.js",
+    "sha256": "56cb6e5122343a0e8f92c22f3f69c58a34b5f999c353257ea28b62840ab687a1"
+  },
+  "browser": "152.0.7977.83",
+  "scope": "Normal UI original fixture loading and resource diagnostics in RH WebGL2, LH WebGL2 and LH WebGPU. No provider data or credentials. Resource estimates are not measured VRAM.",
+  "checks": [
+    {
+      "cacheControls": [
+        "480",
+        "960",
+        "240"
+      ],
+      "streamingCleared": true,
+      "mode": "rh-source",
+      "frame": "WebGL2 · RH Earth coordinates · source comparison",
+      "resourcePanel": "2 resident · 2 visible · 0 cached\nCount-only safeguard: 960 tiles\nKnown subtotal: 1.1 KiB\nBuffer capacities: 1.1 KiB\nEstimated textures: 0 B\nUnknown resources: 2\nEncoded GLB: 3.0 KiB · 0 unknown sizes\nComplete static estimate unavailable",
+      "loadedGlb": 2,
+      "disconnectCleared": true
+    },
+    {
+      "cacheControls": [
+        "480",
+        "960",
+        "240"
+      ],
+      "streamingCleared": true,
+      "mode": "lh-webgl2",
+      "frame": "WebGL2 · LH metres · one scene/camera · game postprocess",
+      "resourcePanel": "2 resident · 2 visible · 0 cached\nCount-only safeguard: 960 tiles\nKnown subtotal: 1.1 KiB\nBuffer capacities: 1.1 KiB\nEstimated textures: 0 B\nUnknown resources: 2\nEncoded GLB: 3.0 KiB · 0 unknown sizes\nComplete static estimate unavailable",
+      "loadedGlb": 2,
+      "disconnectCleared": true
+    },
+    {
+      "cacheControls": [
+        "480",
+        "960",
+        "240"
+      ],
+      "streamingCleared": true,
+      "mode": "lh-webgpu",
+      "frame": "WebGPU · LH metres · one scene/camera · game postprocess",
+      "resourcePanel": "2 resident · 2 visible · 0 cached\nCount-only safeguard: 960 tiles\nKnown subtotal: 1.3 KiB\nBuffer capacities: 1.3 KiB\nEstimated textures: 0 B\nUnknown resources: 0\nEncoded GLB: 3.0 KiB · 0 unknown sizes",
+      "loadedGlb": 2,
+      "disconnectCleared": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "mode": "rh-source",
+      "message": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "mode": "lh-webgl2",
+      "message": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "mode": "lh-webgpu",
+      "message": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    }
+  ]
+}

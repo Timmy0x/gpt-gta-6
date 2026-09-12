@@ -1,0 +1,47 @@
+{
+  "origin": "http://127.0.0.1:4693",
+  "fingerprint": {
+    "entry": "/assets/index-GeefLyuq.js",
+    "sha256": "d6d2b91d883990f2fa4ca92ffca52b1a9aa70ba0bb5a523a3259d9464308628c"
+  },
+  "browser": "152.0.7977.83",
+  "scope": "Normal UI original fixture loading and resource diagnostics in RH WebGL2, LH WebGL2 and LH WebGPU. No provider data or credentials. Resource estimates are not measured VRAM.",
+  "checks": [
+    {
+      "mode": "rh-source",
+      "frame": "WebGL2 · RH Earth coordinates · source comparison",
+      "resourcePanel": "2 resident · 2 visible · 0 cached\nCount-only safeguard: 240 tiles\nKnown subtotal: 1.1 KiB\nBuffer capacities: 1.1 KiB\nEstimated textures: 0 B\nUnknown resources: 2\nEncoded GLB: 3.0 KiB · 0 unknown sizes\nComplete static estimate unavailable",
+      "loadedGlb": 2,
+      "disconnectCleared": true
+    },
+    {
+      "mode": "lh-webgl2",
+      "frame": "WebGL2 · LH metres · one scene/camera · game postprocess",
+      "resourcePanel": "2 resident · 2 visible · 0 cached\nCount-only safeguard: 240 tiles\nKnown subtotal: 1.1 KiB\nBuffer capacities: 1.1 KiB\nEstimated textures: 0 B\nUnknown resources: 2\nEncoded GLB: 3.0 KiB · 0 unknown sizes\nComplete static estimate unavailable",
+      "loadedGlb": 2,
+      "disconnectCleared": true
+    },
+    {
+      "mode": "lh-webgpu",
+      "frame": "WebGPU · LH metres · one scene/camera · game postprocess",
+      "resourcePanel": "2 resident · 2 visible · 0 cached\nCount-only safeguard: 240 tiles\nKnown subtotal: 1.3 KiB\nBuffer capacities: 1.3 KiB\nEstimated textures: 0 B\nUnknown resources: 0\nEncoded GLB: 3.0 KiB · 0 unknown sizes",
+      "loadedGlb": 2,
+      "disconnectCleared": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "mode": "rh-source",
+      "message": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "mode": "lh-webgl2",
+      "message": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    },
+    {
+      "mode": "lh-webgpu",
+      "message": "TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported."
+    }
+  ]
+}

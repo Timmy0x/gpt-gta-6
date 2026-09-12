@@ -1,0 +1,51 @@
+
+> miami-streamed-api-preview@0.0.1 test
+> node --import tsx --test tests/*.test.ts
+
+✔ remote sessions require locally entered credentials and valid ion assets (1.216ms)
+✔ diagnostics remove credentials and session query parameters (0.274583ms)
+✔ WGS84 ECEF helper retains real metre scale (1.636666ms)
+✔ synthetic test tiles carry separate source credits and valid buffers (8.185ms)
+✔ preview source does not persist or preconfigure provider credentials (2.345958ms)
+✔ browser-restricted API keys retain only the page origin cross-origin (2.302542ms)
+✔ default waits for user ion access without auto-connecting fixtures or APIs (1.319125ms)
+BJS - [19:15:54]: Babylon.js v9.25.0 - Null engine
+✔ real renderer frustum can reach both synthetic tiles from each camera preset (18.965417ms)
+✔ Google403 and nested framework errors are redacted without a live API request (16.206083ms)
+✔ ion403 emits a root load-error even when its promise resolves, with redacted metadata (0.400916ms)
+✔ transport evidence survives final403 but clears after successful auth refresh (2.02925ms)
+✔ intentional tile aborts do not become transport failures (0.300208ms)
+✔ external ion endpoint credits are preserved alongside renderer credits (0.752ms)
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+✔ passive ledger follows real renderer parse/load/visibility/disposal and includes hidden cached native GLB containers (33.635291ms)
+✔ shared native texture estimates cover all residents even when none are visible (0.873791ms)
+✔ duplicate loads, unload, reset and late disposal completions never duplicate or reuse ledger IDs (0.28925ms)
+✔ passive parse records only complete GLB view byte lengths, retains no pending content in the resident summary and leaves bytes unchanged (0.237375ms)
+✔ inspection is bounded to one sample per second and a reset starts a fresh sampling interval (0.069292ms)
+✔ summary and panel never expose native source names, attribute names, tile URLs, metadata, getters or inspection errors (1.229458ms)
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:57]: Babylon.js v9.25.0 - Null engine
+✔ real pinned LRU admission/settlement/protection counts stay distinct from renderer models and visibility (5.005416ms)
+✔ real per-origin download, parse and node queues report pending and running separately without reading tasks/origin keys (1.381583ms)
+✔ actual renderer events, throttling, reset and plugin disposal retain only counters and reject late completions (0.736917ms)
+✔ bounded inspection and missing/malicious accessors produce explicit unknown values, never exceptions or source text (0.671417ms)
+✔ structural summary only returns allowlisted counts and scalar magnitudes (3.049875ms)
+✔ format sniffing and metadata inspection retain the existing synthetic source bytes (6.986833ms)
+✔ invalid, unexpected and oversized metadata cannot inject values or run getters (2.359541ms)
+✔ hierarchy counts distinguish active-scene roots from nested large local translations without exposing source data (0.419834ms)
+✔ scene fallback, missing scenes and malformed cyclic or shared hierarchies are reported explicitly (0.278458ms)
+✔ hierarchy inspection has a shared finite traversal budget and does not invoke array or property getters (6.348208ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3296.824541

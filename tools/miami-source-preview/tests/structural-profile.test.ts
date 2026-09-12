@@ -61,3 +61,73 @@ test('invalid, unexpected and oversized metadata cannot inject values or run get
   assert.ok(!JSON.stringify(snapshot).includes('SECRET')); assert.ok(!JSON.stringify(snapshot).includes('null'));
   assert.equal(new Set(EXTENSIONS).size, EXTENSIONS.length);
 });
+
+test('hierarchy counts distinguish active-scene roots from nested large local translations without exposing source data', () => {
+  const profile = new StructuralProfile();
+  const metadata = {
+    asset: { version: '2.0' }, scene: 1,
+    scenes: [{ nodes: [3], name: 'DO_NOT_EXPORT_INACTIVE_SCENE' }, { nodes: [0] }],
+    nodes: [
+      { translation: [3000, 4000, 0], children: [1], name: 'DO_NOT_EXPORT_ROOT' },
+      { matrix: matrix(0, 0, 7_000_000), children: [2] },
+      { translation: [4096, 0, 0] },
+      { translation: [9_000_000, 0, 0] },
+    ],
+  };
+  const original = structuredClone(metadata), tile = {};
+  profile.observeLoaded(tile, metadata); profile.observeLoaded(tile, metadata);
+  const snapshot = profile.snapshot(), hierarchy = snapshot.hierarchy;
+  assert.equal(hierarchy.translationThresholdM, 4096);
+  assert.equal(hierarchy.inspectedModels, 1); assert.equal(hierarchy.multiSceneModels, 1);
+  assert.equal(hierarchy.defaultSceneModels, 0); assert.equal(hierarchy.activeRoots, 1);
+  assert.equal(hierarchy.activeNodes, 3); assert.equal(hierarchy.nestedNodes, 2);
+  assert.equal(hierarchy.largeTranslationRoots, 1); assert.equal(hierarchy.largeTranslationNested, 1);
+  assert.equal(hierarchy.maxDepth, 2); assert.equal(hierarchy.limitReachedModels, 0);
+  assert.equal(snapshot.nodesObserved, 4); // General format inventory still includes inactive nodes.
+  assert.equal(snapshot.maxNodeTranslationMagnitudeM, 9_000_000);
+  assert.deepEqual(metadata, original);
+  assert.ok(!JSON.stringify(snapshot).includes('DO_NOT_EXPORT'));
+  assert.ok(Object.values(hierarchy).every(value => typeof value === 'number' && Number.isFinite(value)));
+});
+
+test('scene fallback, missing scenes and malformed cyclic or shared hierarchies are reported explicitly', () => {
+  const profile = new StructuralProfile();
+  profile.observeLoaded({}, { asset: { version: '2.0' }, scenes: [{ nodes: [0] }, { nodes: [1] }], nodes: [{ translation: [5000, 0, 0] }, { translation: [6000, 0, 0] }] });
+  profile.observeLoaded({}, { asset: { version: '2.0' }, nodes: [{ translation: [7000, 0, 0] }] });
+  profile.observeLoaded({}, { asset: { version: '2.0' }, scene: 5, scenes: [{ nodes: [0] }], nodes: [{}] });
+  const sceneSummary = profile.snapshot().hierarchy;
+  assert.equal(sceneSummary.inspectedModels, 3); assert.equal(sceneSummary.multiSceneModels, 1);
+  assert.equal(sceneSummary.defaultSceneModels, 1); assert.equal(sceneSummary.missingSceneModels, 1);
+  assert.equal(sceneSummary.invalidSceneModels, 1); assert.equal(sceneSummary.largeTranslationRoots, 1);
+  const malformed = new StructuralProfile();
+  malformed.observeLoaded({}, {
+    asset: { version: '2.0' }, scenes: [{ nodes: [0] }],
+    nodes: [{ children: [1, 1, 99] }, { children: [0, 2] }, { children: 'INVALID_CHILDREN' }],
+  });
+  const hierarchy = malformed.snapshot().hierarchy;
+  assert.equal(hierarchy.cycleEdges, 1); assert.equal(hierarchy.repeatedNodeReferences, 1);
+  assert.equal(hierarchy.invalidNodeReferences, 1); assert.equal(hierarchy.invalidChildren, 1);
+  assert.equal(hierarchy.activeNodes, 3); assert.equal(hierarchy.maxDepth, 2);
+  assert.ok(!JSON.stringify(malformed.snapshot()).includes('INVALID_CHILDREN'));
+});
+
+test('hierarchy inspection has a shared finite traversal budget and does not invoke array or property getters', () => {
+  const profile = new StructuralProfile();
+  profile.observeLoaded({}, {
+    asset: { version: '2.0' }, scenes: [{ nodes: [0] }],
+    nodes: Array.from({ length: 12_000 }, (_, i) => ({ children: i === 11_999 ? [] : [i + 1] })),
+  });
+  const hierarchy = profile.snapshot().hierarchy;
+  assert.equal(hierarchy.activeNodes, 10_000); assert.equal(hierarchy.maxDepth, 9999);
+  assert.equal(hierarchy.limitReachedModels, 1); assert.equal(profile.snapshot().inspectionLimitReached, true);
+  const trap = () => { throw new Error('Metadata getter executed'); };
+  const rootSlots = new Array(1), childSlots = new Array(1), nodeSlots = new Array(1), translationSlots = new Array(3);
+  for (const value of [rootSlots, childSlots, nodeSlots, translationSlots]) Object.defineProperty(value, '0', { get: trap });
+  const safe = new StructuralProfile();
+  safe.observeLoaded({}, { asset: { version: '2.0' }, scenes: [{ nodes: rootSlots }], nodes: [{}] });
+  safe.observeLoaded({}, { asset: { version: '2.0' }, scenes: [{ nodes: [0] }], nodes: [{ children: childSlots, translation: translationSlots }] });
+  safe.observeLoaded({}, { asset: { version: '2.0' }, scenes: [{ nodes: [0] }], nodes: nodeSlots });
+  safe.observeLoaded({}, { asset: { version: '2.0' }, scenes: [{ nodes: [0] }], nodes: [{ get children() { return trap(); } }] });
+  assert.equal(safe.snapshot().hierarchy.invalidNodeReferences, 3);
+  assert.equal(safe.snapshot().hierarchy.activeNodes, 2);
+});

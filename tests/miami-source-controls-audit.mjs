@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 const origin=process.env.AUDIT_URL||'http://127.0.0.1:4293';
 const output=process.env.AUDIT_OUTPUT||'docs/evidence/miami-streamed-preview-r1';
 await mkdir(output,{recursive:true});
-const browser=await chromium.launch({channel:'chrome',headless:true,args:['--disable-background-timer-throttling','--disable-renderer-backgrounding']});
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-unsafe-webgpu','--disable-background-timer-throttling','--disable-renderer-backgrounding']});
 const page=await browser.newPage({viewport:{width:1600,height:900}}),checks=[],errors=[],requests=[],logs=[];
 let phase='startup';
 const cleanUrl=value=>{const u=new URL(value);return u.origin+u.pathname;};
@@ -19,6 +19,7 @@ let fingerprint;
 try{
  const html=await(await fetch(origin)).text(),entry=html.match(/<script[^>]*src="([^"]+)"/)[1];fingerprint={entry,sha256:createHash('sha256').update(Buffer.from(await(await fetch(new URL(entry,origin))).arrayBuffer())).digest('hex')};
  await page.goto(origin,{waitUntil:'networkidle'});
+ if(process.env.AUDIT_RENDERER){await page.locator('#renderer').selectOption(process.env.AUDIT_RENDERER);await page.waitForLoadState('networkidle');await page.locator('#frame-status').filter({hasText:process.env.AUDIT_RENDERER==='lh-webgpu'?'WebGPU · LH':'WebGL2 · LH'}).waitFor();}
  assert.equal(await page.locator('#source').inputValue(),'ion');
  assert.equal(requests.filter(r=>!r.url.startsWith(origin)).length,0);
  assert.equal(await page.locator('#state').innerText(),'Waiting for access token');
@@ -40,10 +41,10 @@ try{
  await page.route('https://api.cesium.com/**',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({externalType:'GOOGLE_3D_TILES',options:{url:'https://tile.googleapis.com/v1/3dtiles/root.json?key=synthetic-external-key'},attributions:[{html:'<a href="https://example.com/provider">Synthetic endpoint credit</a>',collapsible:false}]})}));
  await page.route('https://tile.googleapis.com/**',async route=>{const pathname=new URL(route.request().url()).pathname;if(pathname.endsWith('root.json')){googleRoots++;await route.fulfill(googleRoots===1?{status:401,body:'Synthetic expired session'}:{status:200,contentType:'application/json',body:JSON.stringify(fixture)});}else{const name=pathname.endsWith('b.glb')?'b':'a';await route.fulfill({status:200,contentType:'model/gltf-binary',body:Buffer.from(await(await fetch(`${origin}/fixture/${name}.glb`)).arrayBuffer())});}});
  await page.locator('#source').selectOption('ion');await page.locator('#credential').fill('synthetic-ion-recovery-token');await connect();await rendered();
- assert.ok(googleRoots>=3,'expired session is refreshed before retry');assert.equal(await page.locator('#error').isVisible(),false);assert.equal(await page.locator('#provider-credit').isVisible(),true);assert.match(await page.locator('#credits').innerText(),/Synthetic endpoint credit/);assert.match(await page.locator('#credits').innerText(),/Synthetic fixture A/);assert.match(await page.locator('#credits').innerText(),/Synthetic fixture B/);await check('auth-refresh-recovers-and-all-endpoint-tile-credits-display');
+ assert.ok(googleRoots>=2&&googleRoots<=3,'initial expiry recovers with a bounded root refresh');assert.equal(await page.locator('#error').isVisible(),false);assert.equal(await page.locator('#provider-credit').isVisible(),true);assert.match(await page.locator('#credits').innerText(),/Synthetic endpoint credit/);assert.match(await page.locator('#credits').innerText(),/Synthetic fixture A/);assert.match(await page.locator('#credits').innerText(),/Synthetic fixture B/);await check('auth-refresh-recovers-and-all-endpoint-tile-credits-display');
  await page.getByRole('button',{name:'Disconnect',exact:true}).click();await page.unrouteAll({behavior:'wait'});
  assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
  assert.ok(!JSON.stringify(logs).includes('not-a-valid-token'),'application diagnostics do not expose synthetic tokens');
  assert.deepEqual(errors,[]);assert.deepEqual(logs.filter(l=>['startup','fixture','recover'].includes(l.phase)&&!(l.type==='warning'&&l.text==='TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.')),[]);await check('no-storage-or-success-path-errors');
 }catch(error){errors.push({phase,error:error.stack||String(error)});await page.screenshot({path:`${output}/failure.png`}).catch(()=>{});}
-finally{await writeFile(`${output}/result.json`,JSON.stringify({origin,fingerprint,browser:browser.version(),method:'Normal source form, camera buttons, mouse orbit, disconnect, missing fixture root/child and retry; synthetic provider403 fulfilled locally by Playwright, no actual API credentials or Miami tile requests.',checks,requests,logs,errors},null,2));await browser.close();console.log(JSON.stringify({checks:checks.length,errors,logs}));if(errors.length)process.exitCode=1;}
+finally{await writeFile(`${output}/result.json`,JSON.stringify({origin,rendererSelection:process.env.AUDIT_RENDERER??'default',fingerprint,browser:browser.version(),method:'Normal source form, camera buttons, mouse orbit, disconnect, missing fixture root/child and retry; synthetic provider403 fulfilled locally by Playwright, no actual API credentials or Miami tile requests.',checks,requests,logs,errors},null,2));await browser.close();console.log(JSON.stringify({checks:checks.length,errors,logs}));if(errors.length)process.exitCode=1;}

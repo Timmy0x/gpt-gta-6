@@ -1,0 +1,40 @@
+{
+  "scope": "Original tilted-box hierarchy, fixture GLB only; no provider data or GPU.",
+  "slab": {
+    "cameraToActualSlabM": 1234.3972745734181,
+    "orientedDistanceM": 1234.3972745734172,
+    "previousAabbDistanceM": 0
+  },
+  "refinement": {
+    "legacyAabb": {
+      "requests": 25,
+      "loaded": 24,
+      "visible": 1,
+      "inView": true,
+      "errorPixels": "Infinity",
+      "distanceM": 0
+    },
+    "oriented": {
+      "requests": 2,
+      "loaded": 1,
+      "visible": 1,
+      "inView": true,
+      "errorPixels": 5.722294797677002,
+      "distanceM": 1234.3972745734172
+    },
+    "cacheMaxCount": 24,
+    "overlappingConservativeChildBounds": true
+  },
+  "upstreamParity": {
+    "checks": 2400,
+    "maximumDistanceDifferenceM": 0.00009946376849256922,
+    "toleranceM": 0.004,
+    "referenceUsesPinnedFloat32Matrix": true
+  },
+  "conservativeEnclosure": {
+    "sourceCornerChecks": 192,
+    "maximumCornerDistanceM": 5.499453890602394e-12,
+    "shearAndDegenerate": true,
+    "largeNearOrthogonalBoundary": true
+  }
+}

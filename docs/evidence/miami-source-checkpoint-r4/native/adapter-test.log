@@ -1,0 +1,110 @@
+
+> miami-lh-tiles-renderer-regression@0.0.1 test
+> node --import tsx --test tests/*.test.ts
+
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ official ion endpoint -> Google root -> external JSON -> GLB carries session and preserves endpoint credits only while visible (46.277625ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ failed official ion endpoint refresh is released and retries without duplicate terminal errors (18.477417ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ failed initial Google root retains its HTTP status and can retry with the official session parser (21.854458ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ dispose while official ion endpoint is pending aborts the request and suppresses late plugin registration and events (11.856417ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ a transient authenticated nested JSON failure refreshes the official Google session and succeeds without a terminal load error (17.568167ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ initial Google root 401 refreshes once and loads through the official parser (13.105791ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ persistent initial Google root 401 makes exactly two attempts and one terminal error (11.377ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ initial Google root 403 is terminal without an automatic retry (7.581917ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ autoRefreshToken false keeps an initial Google root 401 terminal after one attempt (8.144375ms)
+✔ disposal before an initial Google 401 settles prevents the refresh request and late errors (11.812542ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ ECEF nested-z: actual nested traversal preserves all source vertices and metre markers before Float32 placement (50.365167ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ ECEF nested-x: actual nested traversal preserves all source vertices and metre markers before Float32 placement (17.40225ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ ECEF default-y-large-root: actual nested traversal preserves all source vertices and metre markers before Float32 placement (12.395625ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ ECEF default-y-large-matrix: actual nested traversal preserves all source vertices and metre markers before Float32 placement (20.943375ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ ECEF default-y-large-nested: actual nested traversal preserves all source vertices and metre markers before Float32 placement (11.429083ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ ECEF default-y-large-cancellation: actual nested traversal preserves all source vertices and metre markers before Float32 placement (10.858291ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ ECEF rtc-glb: actual nested traversal preserves all source vertices and metre markers before Float32 placement (9.119334ms)
+✔ ECEF rtc-b3dm: actual nested traversal preserves all source vertices and metre markers before Float32 placement (10.2305ms)
+✔ double rebase retains centimetres at Earth magnitude and rejects the premature Float32 negative control (1.0135ms)
+✔ curved geographic region bounds conservatively contain fractional WGS84 samples, dateline and poles; tile transform is ignored (6.367125ms)
+✔ malformed ellipsoid origin and longitude ranges fail before any bounds iteration (0.382208ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ real renderer loads original nested GLB into the existing LH scene without overwriting AUTO root or applying reference placement (40.263333ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ actual tile bounds and LH culling match independently transformed corners over camera views, FOVs and aspect ratios (18.40075ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ renderer really hides and restores the same tile, retains metre scale and moves bounds with the local group (15.7475ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ independent oracle rejects overwritten AUTO root and swapped tile transforms from actual renderer loads (12.972333ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ invalid handedness, metre scale and unsupported geographic bounds fail explicitly (3.138ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ imported normals and material culling retain their handedness over nonuniform GLTF nodes (9.051ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ disposing during actual GLB import releases late assets instead of installing them (16.021125ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ doubled root compensation and incorrect up-axis fail the untouched fixture oracle (16.694125ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ SSE uses framebuffer pixels across quality scale, resolution, viewport and projection modes (23.938792ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ delayed root completion is cancelled without state, events or requests surviving disposal (17.51825ms)
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ terminal root failure can be reset and successfully load through the same guarded renderer (8.735833ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ guarded root loading preserves the pinned renderer plugin root hook (8.020958ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+TilesRenderer: tiles versions at 1.1 or higher have limited support. Some new extensions and features may not be supported.
+✔ a root-event listener can dispose without subsequent root events leaking through (13.963708ms)
+✔ source tile stretch scales framebuffer geometric error as well as visible geometry and bounds (7.793458ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ oriented slab distance stays finite when a kilometre-distant camera lies inside its loose world AABB (3.034417ms)
+BJS - [19:15:56]: Babylon.js v9.25.0 - Null engine
+✔ actual traversal avoids AABB-driven infinite refinement and a full cache retaining only the coarse ancestor (508.593208ms)
+✔ oriented box distances match the pinned upstream OBB across rotated, thin, degenerate and translated frames (6.401541ms)
+✔ sheared and near-degenerate source boxes remain inside the oriented enclosure without false distance at any source corner (0.689917ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3046.798333

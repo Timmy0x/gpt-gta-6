@@ -1,0 +1,61 @@
+{
+  "scope": "Original synthetic hierarchy with pinned 3d-tiles-renderer 0.5.2; no provider data or GPU.",
+  "nodeVersion": "24.18.0",
+  "files": [
+    {
+      "path": ".local-builds/miami-lru-starvation-review-r1/reproduce.mjs",
+      "bytes": 5317,
+      "sha256": "e5c75902713a71ee7fb4f851877a102b8e34e4921cc4046f3b3114be9210d4c1"
+    },
+    {
+      "path": ".local-builds/miami-lru-starvation-review-r1/result.json",
+      "bytes": 2221,
+      "sha256": "cbe25c9339b614b2678fdb8636df8b5fcaf78d74298b54b6da1e3458b571614c"
+    },
+    {
+      "path": ".local-builds/miami-lru-starvation-review-r1/README.md",
+      "bytes": 3465,
+      "sha256": "d478d430476e97d7b817d6133a556f3a339474041b943d94e4cbf1a3102a7f4d"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/package-lock.json",
+      "bytes": 61838,
+      "sha256": "83cdf989e35b44850288d87a722f889890e5731a4364ca9f8ed305c48237b8de"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/node_modules/3d-tiles-renderer/src/core/renderer/tiles/TilesRendererBase.js",
+      "bytes": 47058,
+      "sha256": "d39c221bc61fbd216581b321868bcafcf1b935812e39b0cbcfbb0071bd8b829e"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/node_modules/3d-tiles-renderer/src/core/renderer/tiles/traverseFunctions.js",
+      "bytes": 17581,
+      "sha256": "b18b50d47278825d6bd2543df318c94e36b069dee1dceeb75a0133a973cf78e4"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/node_modules/3d-tiles-renderer/src/core/renderer/utilities/LRUCache.js",
+      "bytes": 11109,
+      "sha256": "c841e399dc5b1d755bc400838e225fdae8bd02f726d343973811bd6d29d195c9"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/node_modules/3d-tiles-renderer/src/core/renderer/utilities/PriorityQueue.js",
+      "bytes": 6003,
+      "sha256": "3a2562d1291fa730833219dd15b46dfe23ddb8901738723b46437316401cb49f"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/node_modules/3d-tiles-renderer/src/core/renderer/utilities/DownloadPriorityQueue.js",
+      "bytes": 3978,
+      "sha256": "cb7fed891768e4f28a7885c87719779c6318f35701d7d56a9a77223a1d6a4290"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/node_modules/3d-tiles-renderer/src/core/renderer/utilities/Scheduler.js",
+      "bytes": 1607,
+      "sha256": "319f54d44b8a9fef7eab700e2b0c3b5a123f9d958af90320afd55c0b63183a42"
+    },
+    {
+      "path": ".local-builds/miami-geographic-checkpoint-r1-clean/tools/miami-source-preview/node_modules/3d-tiles-renderer/src/babylonjs/renderer/tiles/TilesRenderer.js",
+      "bytes": 8936,
+      "sha256": "2ea733f00020464724f58410883a23b60f824a4a44c22baee5fdbcea85309b8f"
+    }
+  ]
+}

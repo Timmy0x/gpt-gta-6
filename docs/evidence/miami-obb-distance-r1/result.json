@@ -1,0 +1,13 @@
+{
+  "scope": "Original independent samples, NumPy active-set closest-point oracle; no graphics/provider data.",
+  "cases": 102,
+  "points": 1809,
+  "outsideOracleChecks": 618,
+  "maxInsideDistanceM": 1.0030651105818346e-08,
+  "maxConservativeDistanceExcessM": 1.5655965412975092e-10,
+  "tolerancesM": {
+    "inside": 1e-07,
+    "outsideNumericalExcess": 1e-06
+  },
+  "passed": true
+}

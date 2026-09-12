@@ -1,0 +1,89 @@
+{
+  "scope": "Synthetic core traversal/cache proof, not a measurement of private provider hierarchy.",
+  "results": [
+    {
+      "cap": 240,
+      "loadAncestors": true,
+      "loadSiblings": false,
+      "residentEntries": 240,
+      "protectedEntries": 240,
+      "residentExternalJson": 90,
+      "residentModels": 150,
+      "successfulContent": 240,
+      "visible": 1,
+      "visibleCoarse": true,
+      "requested": 240,
+      "cumulativeModelEvents": 150,
+      "queue": {
+        "queued": 0,
+        "downloading": 0,
+        "parsing": 0
+      },
+      "usedTraversal": 451,
+      "full": true,
+      "errors": [],
+      "stableAcross200AdditionalFrames": true,
+      "syntheticViewChange": {
+        "minimumVisible": 1,
+        "framesUntilAll90Visible": null,
+        "peakEntries": 240
+      }
+    },
+    {
+      "cap": 512,
+      "loadAncestors": true,
+      "loadSiblings": false,
+      "residentEntries": 361,
+      "protectedEntries": 361,
+      "residentExternalJson": 90,
+      "residentModels": 271,
+      "successfulContent": 361,
+      "visible": 90,
+      "visibleCoarse": false,
+      "requested": 361,
+      "cumulativeModelEvents": 271,
+      "queue": {
+        "queued": 0,
+        "downloading": 0,
+        "parsing": 0
+      },
+      "usedTraversal": 451,
+      "full": false,
+      "errors": [],
+      "stableAcross200AdditionalFrames": true,
+      "syntheticViewChange": {
+        "minimumVisible": 90,
+        "framesUntilAll90Visible": 1,
+        "peakEntries": 361
+      }
+    },
+    {
+      "cap": 240,
+      "loadAncestors": false,
+      "loadSiblings": false,
+      "residentEntries": 180,
+      "protectedEntries": 180,
+      "residentExternalJson": 90,
+      "residentModels": 90,
+      "successfulContent": 180,
+      "visible": 90,
+      "visibleCoarse": false,
+      "requested": 180,
+      "cumulativeModelEvents": 90,
+      "queue": {
+        "queued": 0,
+        "downloading": 0,
+        "parsing": 0
+      },
+      "usedTraversal": 271,
+      "full": false,
+      "errors": [],
+      "stableAcross200AdditionalFrames": true,
+      "syntheticViewChange": {
+        "minimumVisible": 0,
+        "framesUntilAll90Visible": 47,
+        "peakEntries": 232
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+
+> miami-lh-tiles-renderer-regression@0.0.1 typecheck
+> tsc --noEmit
+

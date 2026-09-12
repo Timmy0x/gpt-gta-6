@@ -1,0 +1,202 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 24,
+    "sha256": "2c14318e5e408e20402b1c2205996c36ac99740cbbb566fca89f20f48c201372"
+  },
+  {
+    "path": "README.md",
+    "bytes": 9260,
+    "sha256": "bf368589dd221d8c1461122f29892a22f159b4c1a12a718a6caba2822c8f044b"
+  },
+  {
+    "path": "fixtures/asymmetric.glb",
+    "bytes": 7788,
+    "sha256": "76b9127d73fcf37cd8e05531008400397193d4c785ad6dd22d197e2fa6b76b48"
+  },
+  {
+    "path": "fixtures/expected.json",
+    "bytes": 35022,
+    "sha256": "0cdc75ef36bc4888d5585efea5cc469146472ca14d9a12c0deec9992493933dc"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-cancellation/content.glb",
+    "bytes": 8524,
+    "sha256": "49fbf6083b244e4cf075090b30063b6ad9fe3e547efa4193f4948a25eefd91c4"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-cancellation/tileset.json",
+    "bytes": 805,
+    "sha256": "191536c681298a3594d528bf371d9b648c274fadf1c47d442e617bae3cdef507"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-matrix/content.glb",
+    "bytes": 8496,
+    "sha256": "998ac01d1b4d36f8a29e8ed53850b141a72bfaf764e1bc09789821dd8100e1a7"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-matrix/tileset.json",
+    "bytes": 443,
+    "sha256": "ac98efb42c733ae0dadc63c9ade56fd9ac8c25942e526be5dac2e8a773848eaa"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-nested/content.glb",
+    "bytes": 8516,
+    "sha256": "39e0c66e678296d02ea0ea5ae5df5e7371bca2fad486b90bc305c07dba14c5d2"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-nested/tileset.json",
+    "bytes": 443,
+    "sha256": "f26b3f27801291fd43c37a3cc80d1f9e40fa76ce26a242db31ccb83418bb4449"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-root/content.glb",
+    "bytes": 8400,
+    "sha256": "0d701e10f7c05ca865a1c953978fecb4ccadfe439f6a3bc588b3b86e7dc4b10d"
+  },
+  {
+    "path": "fixtures/geographic/default-y-large-root/tileset.json",
+    "bytes": 443,
+    "sha256": "ac98efb42c733ae0dadc63c9ade56fd9ac8c25942e526be5dac2e8a773848eaa"
+  },
+  {
+    "path": "fixtures/geographic/expected.json",
+    "bytes": 412393,
+    "sha256": "48c68de8d34eaf73aba77b2b09d1ab22926ce1b380fd41a4ac672d522ee89d7c"
+  },
+  {
+    "path": "fixtures/geographic/nested-x/nested/content.glb",
+    "bytes": 8164,
+    "sha256": "2ea5c99df3749cca1ea05e4a275da52c9094a6e3bf0387f835a73c0eb335bc5b"
+  },
+  {
+    "path": "fixtures/geographic/nested-x/nested/tileset.json",
+    "bytes": 652,
+    "sha256": "3c6b332aa5a2252b51c6429e7d235482d3c572df9c40dc111cc5b05adbfe25ab"
+  },
+  {
+    "path": "fixtures/geographic/nested-x/tileset.json",
+    "bytes": 1232,
+    "sha256": "e19116c6450436d4dbe4ea0fc5e60fb2f619dd3d70ac68fb1a81a8b93dfda0df"
+  },
+  {
+    "path": "fixtures/geographic/nested-z/nested/content.glb",
+    "bytes": 8164,
+    "sha256": "2ea5c99df3749cca1ea05e4a275da52c9094a6e3bf0387f835a73c0eb335bc5b"
+  },
+  {
+    "path": "fixtures/geographic/nested-z/nested/tileset.json",
+    "bytes": 653,
+    "sha256": "4f3252c93f40cc022972c3eec205ec8c2558df7d471aff53c3772dc342d24f0d"
+  },
+  {
+    "path": "fixtures/geographic/nested-z/tileset.json",
+    "bytes": 1232,
+    "sha256": "e19116c6450436d4dbe4ea0fc5e60fb2f619dd3d70ac68fb1a81a8b93dfda0df"
+  },
+  {
+    "path": "fixtures/geographic/rtc-b3dm/content.b3dm",
+    "bytes": 8284,
+    "sha256": "91954225f5ac91e739262b72be1a444b78162c9ad4ad796be31abceafe94249b"
+  },
+  {
+    "path": "fixtures/geographic/rtc-b3dm/tileset.json",
+    "bytes": 438,
+    "sha256": "44fd4eb1ba1966764a1f79259ad539e2c62a59c94fa6a1cfe08ef1dd2484ceb2"
+  },
+  {
+    "path": "fixtures/geographic/rtc-glb/content.glb",
+    "bytes": 8284,
+    "sha256": "b4acfaa032ac2e0f106bb85469a37bf44fc212d49e8cd87cee49cc5e3d0aa475"
+  },
+  {
+    "path": "fixtures/geographic/rtc-glb/tileset.json",
+    "bytes": 437,
+    "sha256": "a40c0ca3adf9c9eff6f03e9501a8c3a594ff86b9cab1d1e34735a697af6ed4ac"
+  },
+  {
+    "path": "fixtures/tileset.json",
+    "bytes": 1484,
+    "sha256": "c24476379cca390fa60b62c1db8241fb896849593771b1d5a8aa7e86124a0201"
+  },
+  {
+    "path": "package-lock.json",
+    "bytes": 22000,
+    "sha256": "f38145ab39adb21df62d9bda1c7766359b40c4c3d7f8c88abd44f5b58fb8cc10"
+  },
+  {
+    "path": "package.json",
+    "bytes": 577,
+    "sha256": "b13d6a66e99204eaceba08e22ca1e4f601cbbaeda956601a8ba09fb024cb4058"
+  },
+  {
+    "path": "scripts/generate-geographic.mjs",
+    "bytes": 7490,
+    "sha256": "7fa2c0f49d2a42a10c532463abd4cf3d0b040ef5b4d4e16cd62c0f4f48bfa550"
+  },
+  {
+    "path": "scripts/generate.mjs",
+    "bytes": 6813,
+    "sha256": "61d827faa4dc085ecac76bd3f02b7ed6b13f9ab36e7bd17b4a49c26a4eca6083"
+  },
+  {
+    "path": "src/DoubleFrame.ts",
+    "bytes": 5023,
+    "sha256": "cff12daf203f90c1b47e653d8e97bb5d1bd6b1fc2a9b5306978a3c1fca3b85ec"
+  },
+  {
+    "path": "src/GlbRebase.ts",
+    "bytes": 5467,
+    "sha256": "5934e6a84fab70b862118c2909d1f00eaeb26eb01564eaa76029e3f4c331e09a"
+  },
+  {
+    "path": "src/LHTilesRenderer.ts",
+    "bytes": 15541,
+    "sha256": "f19e01e39c815a48203b5d1dd826aaff3501400d7ab97a448a508419384fc099"
+  },
+  {
+    "path": "src/LocalTileBounds.ts",
+    "bytes": 2691,
+    "sha256": "b4a79c5dc23d515a0e8ca14f7f01a3ced1623b0ea9a3f13f90df0e7149ba902b"
+  },
+  {
+    "path": "src/PluginLifetime.ts",
+    "bytes": 3023,
+    "sha256": "7865b57212e58662a951aebfa4b2d36a5fbe599804c75a67f7888f2e5a78bc54"
+  },
+  {
+    "path": "tests/auth.test.ts",
+    "bytes": 11489,
+    "sha256": "b555de0682e8040327828300875fbd8cbeebf17797ee01bc8be3856fe0d96a7d"
+  },
+  {
+    "path": "tests/frame-fixture.ts",
+    "bytes": 3440,
+    "sha256": "57fb78a1c192f64e9f62930d163be3f2c68f57020c27de8a6c2fb60af2af9f18"
+  },
+  {
+    "path": "tests/geographic-harness.ts",
+    "bytes": 2527,
+    "sha256": "90f2a48f8f52783c51110b574129281ac4bab4a7f59189cd04829aa83d9a7f6a"
+  },
+  {
+    "path": "tests/geographic.test.ts",
+    "bytes": 6395,
+    "sha256": "8a028d5fe602abdf650bc24c7d854852f9716ec0d7fc925eeeaf9cd64fec2dec"
+  },
+  {
+    "path": "tests/lh-renderer.test.ts",
+    "bytes": 18867,
+    "sha256": "27343b545c0291ed0d030b5bdb6db2c872bd3754c2e9a61de5c3ca22f3cf933f"
+  },
+  {
+    "path": "tests/renderer-harness.ts",
+    "bytes": 3866,
+    "sha256": "a7f6b5da277076459d0f63d0454c56edce56876ca0e01446293eb2a20633ca7c"
+  },
+  {
+    "path": "tsconfig.json",
+    "bytes": 367,
+    "sha256": "19d93699ce11d1e0a4fcfbdbc536df1691076fbb59a685c833efdb89c8b989b5"
+  }
+]
