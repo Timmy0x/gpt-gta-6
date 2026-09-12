@@ -1,0 +1,2783 @@
+{
+  "version": 1,
+  "id": "brickell-public-common-frame-r1",
+  "origin": {
+    "latitude": 25.7662,
+    "longitude": -80.1907,
+    "elevationM": 0
+  },
+  "bounds": {
+    "minX": -180.57015204100287,
+    "maxX": 180.57499314695923,
+    "minZ": -177.25941152524942,
+    "maxZ": 177.26191673200378
+  },
+  "roads": [
+    {
+      "id": "city-street:3200:0/common-0",
+      "name": "SE 9TH ST",
+      "centerline": [
+        [
+          -180.56849688910285,
+          -24.87845916967183,
+          -81.3443823844767
+        ],
+        [
+          -155.40770304213373,
+          -24.787940900408408,
+          -80.77422059295553
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "residential",
+      "widthM": 6.4,
+      "lanes": 2,
+      "sidewalkWidthM": 0,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "osm-brickell-supplement",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "matchedWayId": "osm:way/11163626",
+      "matchDistanceM": 0.6763585414933887,
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:4943:0/common-0",
+      "name": "SE 1ST AVE",
+      "centerline": [
+        [
+          -155.40770304213373,
+          -24.787940900408408,
+          -80.77422059295553
+        ],
+        [
+          -179.04816482121296,
+          -24.409394684846518,
+          -177.25316816135373
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "city-class-4",
+      "widthM": 6.4,
+      "lanes": 2,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 2; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:10126:0/common-0",
+      "name": "SE 7TH ST",
+      "centerline": [
+        [
+          -103.99375221403798,
+          -23.348349259420885,
+          125.19038735511538
+        ],
+        [
+          -113.18413670459378,
+          -23.365084144454556,
+          128.04780621931116
+        ],
+        [
+          -122.52265218938768,
+          -23.398416477499417,
+          130.37592423909746
+        ],
+        [
+          -131.97884212943637,
+          -23.4170433426859,
+          132.1671489819077
+        ],
+        [
+          -141.52186464576664,
+          -23.466262562435453,
+          133.41563748582266
+        ],
+        [
+          -151.12059657977585,
+          -23.500643597279904,
+          134.11731878382264
+        ],
+        [
+          -180.56479284623435,
+          -23.605895918434854,
+          132.98487882981485
+        ]
+      ],
+      "oneway": true,
+      "roadClass": "primary",
+      "widthM": 9.600000000000001,
+      "lanes": 3,
+      "sidewalkWidthM": 0,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "osm-brickell-supplement",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "Carriageway width inferred from 3 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "matchedWayId": "osm:way/159220175",
+      "matchDistanceM": 0.6671462980375842,
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:10127:0/common-0",
+      "name": "SE 7TH ST",
+      "centerline": [
+        [
+          20.80673529938189,
+          -22.809060227140385,
+          94.52494428553958
+        ],
+        [
+          -103.99375221403798,
+          -23.348349259420885,
+          125.19038735511538
+        ]
+      ],
+      "oneway": true,
+      "roadClass": "primary",
+      "widthM": 9.600000000000001,
+      "lanes": 3,
+      "sidewalkWidthM": 0,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "osm-brickell-supplement",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "Carriageway width inferred from 3 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "matchedWayId": "osm:way/159220175",
+      "matchDistanceM": 1.643971730791907,
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:10128:0/common-0",
+      "name": "SE 8TH ST",
+      "centerline": [
+        [
+          -129.70019458412187,
+          -24.11798562795489,
+          26.612341660122112
+        ],
+        [
+          -117.01603089039928,
+          -23.916733173394185,
+          24.27687062285974
+        ],
+        [
+          -2.252668067788762,
+          -22.57437720617645,
+          -2.788747025653027
+        ]
+      ],
+      "oneway": true,
+      "roadClass": "city-class-2",
+      "widthM": 3.2,
+      "lanes": 1,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 1; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 1 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:10129:0/common-0",
+      "name": "SE 8TH ST",
+      "centerline": [
+        [
+          -180.56663537633779,
+          -24.18211513432727,
+          26.46194244570225
+        ],
+        [
+          -155.44894911356465,
+          -24.268115710492786,
+          27.30564948321875
+        ],
+        [
+          -142.56628117160813,
+          -24.246458084783164,
+          27.266857535231622
+        ],
+        [
+          -129.70019458412187,
+          -24.11798562795489,
+          26.612341660122112
+        ]
+      ],
+      "oneway": true,
+      "roadClass": "city-class-2",
+      "widthM": 3.2,
+      "lanes": 1,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 1; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 1 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:10130:0/common-0",
+      "name": "SE 1ST AVE",
+      "centerline": [
+        [
+          -129.70019458412187,
+          -24.11798562795489,
+          26.612341660122112
+        ],
+        [
+          -131.6424019459332,
+          -24.1693733578863,
+          24.22524680008044
+        ],
+        [
+          -133.17995116012753,
+          -24.234177653239676,
+          21.559476027890966
+        ],
+        [
+          -134.27364953894983,
+          -24.27665409002166,
+          18.682982189116075
+        ],
+        [
+          -155.40770304213373,
+          -24.787940900408408,
+          -80.77422059295553
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "city-class-4",
+      "widthM": 6.4,
+      "lanes": 2,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 2; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:11810:0/common-0",
+      "name": "BRICKELL KEY DR",
+      "centerline": [
+        [
+          123.37933065031434,
+          -24.392222104081718,
+          -32.45146804854838
+        ],
+        [
+          180.57110655597447,
+          -24.607640116526362,
+          -46.97320324402817
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "city-class-4",
+      "widthM": 6.4,
+      "lanes": 2,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 2; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:11830:0/common-0",
+      "name": "BRICKELL AVE",
+      "centerline": [
+        [
+          41.2207305320217,
+          -22.863362124032776,
+          177.25812098431842
+        ],
+        [
+          20.80673529938189,
+          -22.809060227140385,
+          94.52494428553958
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "city-class-2",
+      "widthM": 6.4,
+      "lanes": 2,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 2; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:11832:0/common-0",
+      "name": "BRICKELL AVE",
+      "centerline": [
+        [
+          20.80673529938189,
+          -22.809060227140385,
+          94.52494428553958
+        ],
+        [
+          -2.252668067788762,
+          -22.57437720617645,
+          -2.788747025653027
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "city-class-2",
+      "widthM": 6.4,
+      "lanes": 2,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 2; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:11833:0/common-0",
+      "name": "SE 8TH ST",
+      "centerline": [
+        [
+          -2.252668067788762,
+          -22.57437720617645,
+          -2.788747025653027
+        ],
+        [
+          123.37933065031434,
+          -24.392222104081718,
+          -32.45146804854838
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "city-class-4",
+      "widthM": 6.4,
+      "lanes": 2,
+      "sidewalkWidthM": 2,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 2; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:14178:0/common-0",
+      "name": "BRICKELL AVE",
+      "centerline": [
+        [
+          -2.252668067788762,
+          -22.57437720617645,
+          -2.788747025653027
+        ],
+        [
+          -30.28411538628786,
+          -22.911432240632497,
+          -124.9053359388338
+        ],
+        [
+          -42.85138184017092,
+          -23.676584582426194,
+          -177.255565136037
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "city-class-2",
+      "widthM": 20.7264,
+      "lanes": 4,
+      "sidewalkWidthM": 3.6576000000000004,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "miami-brickell-roadway-plan-2015",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "No sufficiently aligned, named OSM carriageway profile matched this City segment.",
+        "Lane count inferred as 2; source centerline does not survey carriageway edges.",
+        "Carriageway width inferred from 2 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Symmetric 2 m sidewalk width is provisional; individual side widths and separately mapped footpaths require integration.",
+        "Width follows approved2015 City B-30874 sheet3 typical section, stations105+00–136+00 (SE15thRoad–SE8thStreet): four11ft lanes,24ft median/turning band,12ft walks. Current as-built widths and junction-specific transitions remain unverified.",
+        "The24ft centre band includes turning pavement. Raised landscaped island footprints are not inferred from the typical section and require their own mapped polygons.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "medianWidthM": 7.315200000000001,
+      "elevationConfidence": "mapped"
+    },
+    {
+      "id": "city-street:14179:0/common-0",
+      "name": "BRICKELL BAY DR",
+      "centerline": [
+        [
+          123.37933065031434,
+          -24.392222104081718,
+          -32.45146804854838
+        ],
+        [
+          94.0757297256509,
+          -24.361593095587978,
+          -157.3340674149952
+        ],
+        [
+          89.55253737852374,
+          -24.38966871091074,
+          -177.25785557035817
+        ]
+      ],
+      "oneway": false,
+      "roadClass": "residential",
+      "widthM": 12.8,
+      "lanes": 4,
+      "sidewalkWidthM": 0,
+      "widthConfidence": "inferred",
+      "sourceIds": [
+        "city-streets",
+        "osm-brickell-supplement",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "Carriageway width inferred from 4 lanes at 3.2 m; requires imagery or surveyed-edge confirmation.",
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Ground road height uses USGS bare-earth elevations within the raster; surface/curb offsets are engineering assumptions. Full source polylines outside this AOI are not rendered.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ],
+      "matchedWayId": "osm:way/11122635",
+      "matchDistanceM": 1.9188557299304099,
+      "layer": 0,
+      "bridge": false,
+      "tunnel": false,
+      "confidence": "mapped",
+      "elevationConfidence": "mapped"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "county-footprint:40871:0",
+      "sourceBuildingId": "D1_MDC_Building_427",
+      "mappedMeshId": "county-i3s:317",
+      "name": "",
+      "footprint": [
+        [
+          [
+            -58.34054808933173,
+            179.584565266286
+          ],
+          [
+            -11.1675727340849,
+            168.64423028938904
+          ],
+          [
+            -10.868216032569043,
+            169.9349834244524
+          ],
+          [
+            12.526492948077287,
+            164.5093745149319
+          ],
+          [
+            4.8748203703066455,
+            133.88973509500119
+          ],
+          [
+            2.986497745561465,
+            125.74780091884006
+          ],
+          [
+            -1.3475946997248407,
+            126.75301774462241
+          ],
+          [
+            -2.101213263212479,
+            123.50318010130582
+          ],
+          [
+            -4.909776834498002,
+            124.14802200051608
+          ],
+          [
+            -6.851273919923296,
+            115.77655737003624
+          ],
+          [
+            -69.75524139912628,
+            130.36502785536908
+          ],
+          [
+            -58.34054808933173,
+            179.584565266286
+          ]
+        ]
+      ],
+      "groundM": -23.159385702631937,
+      "heightM": 154.7042999267578,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:110139:0",
+      "sourceBuildingId": "D1_MDC_Building_400",
+      "mappedMeshId": "county-i3s:291",
+      "name": "",
+      "footprint": [
+        [
+          [
+            -104.59994995918191,
+            112.75279556049195
+          ],
+          [
+            -69.66084879751575,
+            103.8391389337217
+          ],
+          [
+            -68.1961141914009,
+            109.5723542205498
+          ],
+          [
+            -35.707976438163875,
+            101.28302684431245
+          ],
+          [
+            -37.49647918815572,
+            94.40011253517704
+          ],
+          [
+            -38.01174826304265,
+            94.52504944890224
+          ],
+          [
+            3.290910886426369,
+            84.16018944575436
+          ],
+          [
+            3.3999484040705177,
+            84.13231647992073
+          ],
+          [
+            1.6535467829460586,
+            77.28613382273598
+          ],
+          [
+            3.25153126254445,
+            83.9945647064999
+          ],
+          [
+            -2.8271801733097197,
+            59.72155734708366
+          ],
+          [
+            -22.209031233037685,
+            64.58860255292356
+          ],
+          [
+            -24.03464548208273,
+            65.04712162262568
+          ],
+          [
+            -44.38511275312282,
+            70.15743836501616
+          ],
+          [
+            -46.522820934649054,
+            61.63690224125426
+          ],
+          [
+            -57.94968861969514,
+            64.55241323004499
+          ],
+          [
+            -67.4534581665873,
+            27.306326105527358
+          ],
+          [
+            -85.71134237273941,
+            31.966886925076388
+          ],
+          [
+            -84.4560228842999,
+            36.88769025111338
+          ],
+          [
+            -88.18790634229794,
+            37.84006014030508
+          ],
+          [
+            -88.13572899585922,
+            38.04377532583001
+          ],
+          [
+            -98.53657429279824,
+            40.4603825840305
+          ],
+          [
+            -99.07330844139517,
+            38.392311171341774
+          ],
+          [
+            -100.37545258651345,
+            38.73029338484629
+          ],
+          [
+            -105.81093493344933,
+            40.14119787714163
+          ],
+          [
+            -107.83056443553785,
+            40.66560459351818
+          ],
+          [
+            -107.29373889939856,
+            42.73349604229901
+          ],
+          [
+            -125.97043803603397,
+            47.30170811974659
+          ],
+          [
+            -124.05175253463834,
+            54.81540698286713
+          ],
+          [
+            -129.47785417103208,
+            56.19889448824449
+          ],
+          [
+            -126.33790010484157,
+            68.50924678149278
+          ],
+          [
+            -124.5894484678445,
+            75.36393128099758
+          ],
+          [
+            -120.28860155256085,
+            74.26653724046056
+          ],
+          [
+            -118.11669897386042,
+            82.31984431806018
+          ],
+          [
+            -81.32983845284765,
+            72.80868764893668
+          ],
+          [
+            -112.5352511414235,
+            80.90875872006868
+          ],
+          [
+            -104.59994995918191,
+            112.75279556049195
+          ]
+        ]
+      ],
+      "groundM": -23.474525556766856,
+      "heightM": 45.66818189620972,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:420015:0",
+      "sourceBuildingId": "D1_MDC_Building_6",
+      "mappedMeshId": "county-i3s:365",
+      "name": "",
+      "footprint": [
+        [
+          [
+            143.06510202384783,
+            -108.6733038288717
+          ],
+          [
+            144.79027900226814,
+            -110.17047161329918
+          ],
+          [
+            146.2329193447635,
+            -109.2623746438012
+          ],
+          [
+            148.05587455598408,
+            -111.03298706068276
+          ],
+          [
+            150.48887964163222,
+            -110.25501402821519
+          ],
+          [
+            152.48485659898486,
+            -112.05143602072042
+          ],
+          [
+            154.7941337594227,
+            -111.27265693728404
+          ],
+          [
+            157.06234942017224,
+            -113.12034072313098
+          ],
+          [
+            159.79219460416437,
+            -112.46801668942834
+          ],
+          [
+            161.6891364794981,
+            -114.23889563106634
+          ],
+          [
+            164.12205155212249,
+            -113.48574606435919
+          ],
+          [
+            165.97024068670927,
+            -115.15714126756092
+          ],
+          [
+            168.37756491855484,
+            -114.5525895823707
+          ],
+          [
+            169.2858517323766,
+            -115.94562083675662
+          ],
+          [
+            171.29630947655528,
+            -115.33865377622405
+          ],
+          [
+            174.00799130472367,
+            -117.73447664252122
+          ],
+          [
+            175.10113406362126,
+            -121.33506193029432
+          ],
+          [
+            173.5801931987336,
+            -122.91140896887109
+          ],
+          [
+            174.61122012700307,
+            -124.47867041243515
+          ],
+          [
+            172.84066299657727,
+            -126.27693294187705
+          ],
+          [
+            173.6178489239974,
+            -128.8338394516072
+          ],
+          [
+            171.8979341537806,
+            -130.50823974963396
+          ],
+          [
+            172.62537692303522,
+            -133.08943620534907
+          ],
+          [
+            170.80309740716487,
+            -135.28366455688965
+          ],
+          [
+            171.40501334310179,
+            -138.13696587249916
+          ],
+          [
+            169.63454437535262,
+            -139.95969750742077
+          ],
+          [
+            170.4621933983664,
+            -142.39310252971268
+          ],
+          [
+            168.64233996698206,
+            -144.1659139688332
+          ],
+          [
+            169.41934654408894,
+            -146.77256618914123
+          ],
+          [
+            167.67896363698398,
+            -147.72835267880276
+          ],
+          [
+            168.38522187473083,
+            -149.71462002753123
+          ],
+          [
+            166.01459367092093,
+            -152.3520547389864
+          ],
+          [
+            162.29023404581628,
+            -153.44436508313836
+          ],
+          [
+            160.93632518199115,
+            -152.02390951914018
+          ],
+          [
+            159.39482414335603,
+            -152.88155311979494
+          ],
+          [
+            157.5222982579274,
+            -151.1106684367541
+          ],
+          [
+            155.11424770311734,
+            -151.86399787195137
+          ],
+          [
+            153.26623475138146,
+            -150.16785996275067
+          ],
+          [
+            150.73472538303102,
+            -150.84590470816303
+          ],
+          [
+            148.6146541311173,
+            -149.04885125841076
+          ],
+          [
+            145.78648403336823,
+            -149.6013332473067
+          ],
+          [
+            143.9876763089727,
+            -147.97976204475722
+          ],
+          [
+            141.5058201105866,
+            -148.6336055197607
+          ],
+          [
+            139.657809353447,
+            -146.93728687407418
+          ],
+          [
+            137.22533654700845,
+            -147.61622406634632
+          ],
+          [
+            136.16953029243234,
+            -146.02386216490817
+          ],
+          [
+            134.08391143071233,
+            -146.7543297020826
+          ],
+          [
+            131.39737253016574,
+            -144.30910966876587
+          ],
+          [
+            130.37822482191893,
+            -140.7585247488717
+          ],
+          [
+            131.97324805562056,
+            -139.2322803529075
+          ],
+          [
+            130.99232805690346,
+            -137.56597746275762
+          ],
+          [
+            132.7878540431244,
+            -135.74334070182957
+          ],
+          [
+            132.05933925110904,
+            -133.33529747752277
+          ],
+          [
+            133.8294525488289,
+            -131.56222414234082
+          ],
+          [
+            133.0515542373174,
+            -129.10444023884085
+          ],
+          [
+            134.97413548350684,
+            -126.73741974055177
+          ],
+          [
+            134.37015855226312,
+            -124.20632165018367
+          ],
+          [
+            136.0920567243492,
+            -122.2346404003271
+          ],
+          [
+            135.2885671419091,
+            -119.90054128495841
+          ],
+          [
+            136.91088829163073,
+            -118.00253342533642
+          ],
+          [
+            136.28212976041388,
+            -115.47107882597025
+          ],
+          [
+            137.67538798725596,
+            -114.53806716688148
+          ],
+          [
+            136.9952675262229,
+            -112.3534628406873
+          ],
+          [
+            139.439699293888,
+            -109.79096699519265
+          ],
+          [
+            143.06510202384783,
+            -108.6733038288717
+          ]
+        ]
+      ],
+      "groundM": -24.333041713973497,
+      "heightM": 63.24435806274414,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:447538:0",
+      "sourceBuildingId": "D1_MDC_Building_422",
+      "mappedMeshId": "county-i3s:313",
+      "name": "",
+      "footprint": [
+        [
+          [
+            221.1628795452303,
+            14.059036072044687
+          ],
+          [
+            208.691907235706,
+            -37.941333993900734
+          ],
+          [
+            130.89356105760967,
+            -19.2834952861868
+          ],
+          [
+            136.82517158892196,
+            5.450111924549446
+          ],
+          [
+            137.6679728292851,
+            8.964288422581326
+          ],
+          [
+            139.07999957188284,
+            14.85198850560267
+          ],
+          [
+            144.1302151049735,
+            35.91067092126406
+          ],
+          [
+            216.55842560604668,
+            18.54079783081752
+          ],
+          [
+            221.92870577308742,
+            17.252807861518107
+          ],
+          [
+            221.1628795452303,
+            14.059036072044687
+          ]
+        ],
+        [
+          [
+            147.27822162040974,
+            6.661496382573961
+          ],
+          [
+            147.29318060547973,
+            6.657911578578032
+          ],
+          [
+            148.5250728867904,
+            11.860075866942346
+          ],
+          [
+            147.27822162040974,
+            6.661496382573961
+          ]
+        ]
+      ],
+      "groundM": -24.404226848149186,
+      "heightM": 21.11347198486328,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:476476:0",
+      "sourceBuildingId": "D1_MDC_Building_3",
+      "mappedMeshId": "county-i3s:194",
+      "name": "",
+      "footprint": [
+        [
+          [
+            3.512109604512707,
+            -142.09719050831427
+          ],
+          [
+            9.601554257373804,
+            -143.96703983430126
+          ],
+          [
+            9.401949731276245,
+            -144.85988716640088
+          ],
+          [
+            7.565131437208196,
+            -144.5756865378784
+          ],
+          [
+            13.5054364438805,
+            -145.77504756291492
+          ],
+          [
+            11.558144552130228,
+            -154.48725922003922
+          ],
+          [
+            13.791111252187312,
+            -154.9863807388781
+          ],
+          [
+            12.22545521029532,
+            -162.17711696507075
+          ],
+          [
+            11.31403245721421,
+            -166.36253566929793
+          ],
+          [
+            12.52779633080152,
+            -166.63383078356867
+          ],
+          [
+            11.037656139955274,
+            -175.29532748273905
+          ],
+          [
+            8.532993399495401,
+            -182.90238564419718
+          ],
+          [
+            7.4436776745092885,
+            -182.8106993679554
+          ],
+          [
+            6.824225864235402,
+            -186.41436440919975
+          ],
+          [
+            6.160166286117747,
+            -189.4647715960072
+          ],
+          [
+            7.493335224073949,
+            -189.7550682206709
+          ],
+          [
+            6.2679472366715245,
+            -195.38257179490444
+          ],
+          [
+            6.669141681736074,
+            -195.46995660243385
+          ],
+          [
+            5.1314127540914605,
+            -202.53165276282942
+          ],
+          [
+            7.490098624433925,
+            -203.10525603063462
+          ],
+          [
+            6.0792516547143425,
+            -209.24085356872905
+          ],
+          [
+            3.015139525490037,
+            -208.53630677787163
+          ],
+          [
+            4.434368583572558,
+            -202.36405299111664
+          ],
+          [
+            0.7672046053339194,
+            -201.45901358663104
+          ],
+          [
+            0.030960272129410882,
+            -204.83969460739564
+          ],
+          [
+            -3.5772688441316314,
+            -205.2580668963162
+          ],
+          [
+            -7.423763510863471,
+            -205.0424258660606
+          ],
+          [
+            -12.032995789745803,
+            -203.95562126784898
+          ],
+          [
+            -15.040692734942425,
+            -202.69969338461556
+          ],
+          [
+            -18.96225000168479,
+            -200.55664874287578
+          ],
+          [
+            -18.33630250250742,
+            -197.17749335115866
+          ],
+          [
+            -21.19611868098555,
+            -196.53827896199863
+          ],
+          [
+            -19.48670548969466,
+            -188.88954163254948
+          ],
+          [
+            -18.253655467484286,
+            -189.1651420880022
+          ],
+          [
+            -16.384649581105812,
+            -180.80272060231442
+          ],
+          [
+            -15.58748414556926,
+            -177.23607370329842
+          ],
+          [
+            -16.695903513380966,
+            -176.98834743233013
+          ],
+          [
+            -15.526465366398597,
+            -168.17197960288897
+          ],
+          [
+            -12.865981930294248,
+            -160.2889779120164
+          ],
+          [
+            -12.021507966400723,
+            -156.51046192710683
+          ],
+          [
+            -10.339410262927082,
+            -148.98462260650405
+          ],
+          [
+            -7.867910326706998,
+            -149.53707482669563
+          ],
+          [
+            -6.017300141283127,
+            -141.25668376815761
+          ],
+          [
+            -2.2091230645922186,
+            -142.10794583736998
+          ],
+          [
+            -2.015104936677627,
+            -141.24037318074386
+          ],
+          [
+            3.512109604512707,
+            -142.09719050831427
+          ]
+        ]
+      ],
+      "groundM": -23.985531008011257,
+      "heightM": 139.14820861816406,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:477744:0",
+      "sourceBuildingId": "D1_MDC_Building_165",
+      "mappedMeshId": "county-i3s:67",
+      "name": "",
+      "footprint": [
+        [
+          [
+            85.5760241274845,
+            191.39965456669694
+          ],
+          [
+            90.55558035743482,
+            190.2000835264595
+          ],
+          [
+            88.33598109637032,
+            180.98556310227946
+          ],
+          [
+            85.64799748030653,
+            181.63316187287367
+          ],
+          [
+            85.03821939834779,
+            179.10175358676855
+          ],
+          [
+            98.81002916688074,
+            175.8017469547203
+          ],
+          [
+            100.97249222933749,
+            184.77796453089113
+          ],
+          [
+            118.7644280464528,
+            180.4915300261648
+          ],
+          [
+            117.32979346423335,
+            174.41990962260525
+          ],
+          [
+            126.89990658893825,
+            172.11453225603464
+          ],
+          [
+            128.43654236766417,
+            178.44848256737723
+          ],
+          [
+            150.6632385680771,
+            173.1360374320771
+          ],
+          [
+            150.87859847406972,
+            174.02976184968264
+          ],
+          [
+            160.12566160341476,
+            171.80219767711145
+          ],
+          [
+            159.18727442203846,
+            167.66446395928676
+          ],
+          [
+            159.60017360946784,
+            167.56507682320606
+          ],
+          [
+            162.0732434485724,
+            166.9687542420508
+          ],
+          [
+            160.8016558322247,
+            159.75012687604612
+          ],
+          [
+            163.9224624989269,
+            158.96802321025945
+          ],
+          [
+            160.27784102448732,
+            143.83876051418179
+          ],
+          [
+            156.6937580446542,
+            144.7024176661063
+          ],
+          [
+            155.0181843078709,
+            137.7672528070303
+          ],
+          [
+            143.55439758545134,
+            140.46657936757532
+          ],
+          [
+            142.68096915435646,
+            136.8395118992679
+          ],
+          [
+            142.67898675327896,
+            136.83135614893732
+          ],
+          [
+            142.53940095085736,
+            136.86496341628066
+          ],
+          [
+            134.55480599352433,
+            138.78712203134032
+          ],
+          [
+            132.51721712356047,
+            133.6151147377139
+          ],
+          [
+            127.56079493990407,
+            134.80911862702743
+          ],
+          [
+            127.80566866264883,
+            140.41067203980364
+          ],
+          [
+            119.94354211845832,
+            142.30433993716875
+          ],
+          [
+            121.44305438565759,
+            149.0388297922962
+          ],
+          [
+            121.33780195845473,
+            149.06401297431526
+          ],
+          [
+            111.90680812139712,
+            151.33588041528898
+          ],
+          [
+            110.26464275389608,
+            144.51831077614656
+          ],
+          [
+            110.25941637075319,
+            144.49644263649267
+          ],
+          [
+            107.79805940728563,
+            145.08937031838212
+          ],
+          [
+            101.31710591350009,
+            146.65055743653366
+          ],
+          [
+            92.37497859551627,
+            148.80467794773213
+          ],
+          [
+            94.55321925676816,
+            157.91875327122793
+          ],
+          [
+            92.96181893949458,
+            158.30206060463198
+          ],
+          [
+            80.46797820467816,
+            161.28195121717212
+          ],
+          [
+            78.34631763118257,
+            152.4751990814348
+          ],
+          [
+            73.01629781065337,
+            153.75920129552276
+          ],
+          [
+            67.6862790252716,
+            155.04320552950173
+          ],
+          [
+            70.57839599898824,
+            167.04816210370308
+          ],
+          [
+            70.09493884656501,
+            167.16556591135472
+          ],
+          [
+            70.0907936409507,
+            167.16655174625114
+          ],
+          [
+            70.8800763061292,
+            170.44237256722974
+          ],
+          [
+            71.44444154723794,
+            172.78530411700683
+          ],
+          [
+            72.06701827494919,
+            175.36959069362055
+          ],
+          [
+            76.06415511193208,
+            191.96135353299144
+          ],
+          [
+            78.84035683997986,
+            191.28722542536602
+          ],
+          [
+            79.38002946971586,
+            193.5274455452211
+          ],
+          [
+            85.72065141548569,
+            192.00012973726376
+          ],
+          [
+            85.5760241274845,
+            191.39965456669694
+          ]
+        ],
+        [
+          [
+            132.82239636540945,
+            163.95377261443974
+          ],
+          [
+            130.3256454842586,
+            153.5882822308247
+          ],
+          [
+            138.68717518887894,
+            151.57408401024477
+          ],
+          [
+            141.17626062928306,
+            161.90722348164496
+          ],
+          [
+            137.22362001516154,
+            162.8936646164156
+          ],
+          [
+            132.82239636540945,
+            163.95377261443974
+          ]
+        ]
+      ],
+      "groundM": -25.53350193842752,
+      "heightM": 29.202884674072266,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:479964:0",
+      "sourceBuildingId": "D1_MDC_Building_213",
+      "mappedMeshId": "county-i3s:112",
+      "name": "",
+      "footprint": [
+        [
+          [
+            -104.38036445106215,
+            -74.03533297506281
+          ],
+          [
+            -117.22985024714845,
+            -128.08107312118523
+          ],
+          [
+            -121.33674610229147,
+            -127.10474899478191
+          ],
+          [
+            -123.32079965106614,
+            -135.68580628742836
+          ],
+          [
+            -119.52281532998946,
+            -136.5888154242932
+          ],
+          [
+            -132.34890266568053,
+            -190.53692279470383
+          ],
+          [
+            -167.72526113442353,
+            -182.12623684813016
+          ],
+          [
+            -163.0241448120925,
+            -162.3524950927425
+          ],
+          [
+            -153.34411611354767,
+            -121.63755078649837
+          ],
+          [
+            -140.01262434607386,
+            -65.56393719745247
+          ],
+          [
+            -104.38036445106215,
+            -74.03533297506281
+          ]
+        ]
+      ],
+      "groundM": -24.19529084956399,
+      "heightM": 36.95957088470459,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:533327:0",
+      "sourceBuildingId": "D1_MDC_Building_423",
+      "mappedMeshId": "county-i3s:314",
+      "name": "",
+      "footprint": [
+        [
+          [
+            73.1489814752178,
+            51.073126859688635
+          ],
+          [
+            98.51895980860701,
+            45.11141378390954
+          ],
+          [
+            99.58569392263529,
+            49.651325481068696
+          ],
+          [
+            119.0177086419713,
+            45.08496407083153
+          ],
+          [
+            114.54642195543627,
+            26.057553390669362
+          ],
+          [
+            115.52488206066283,
+            25.82758635106541
+          ],
+          [
+            114.88689833629537,
+            23.11286519741209
+          ],
+          [
+            107.8984363020516,
+            -6.626585188337312
+          ],
+          [
+            41.47895949874705,
+            8.981471602274333
+          ],
+          [
+            48.42268663629078,
+            38.53075937766654
+          ],
+          [
+            53.26325421402628,
+            59.13004548068598
+          ],
+          [
+            73.9024054977847,
+            54.27987648860626
+          ],
+          [
+            73.1489814752178,
+            51.073126859688635
+          ]
+        ]
+      ],
+      "groundM": -24.686250478152488,
+      "heightM": 60.73612022399902,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:598195:0",
+      "sourceBuildingId": "D1_MDC_Building_357",
+      "mappedMeshId": "county-i3s:251",
+      "name": "",
+      "footprint": [
+        [
+          [
+            -98.05309692184623,
+            -175.41786842293294
+          ],
+          [
+            -68.9255765833666,
+            -182.43304321009575
+          ],
+          [
+            -70.58896476821857,
+            -189.33895466499902
+          ],
+          [
+            -68.85829845458287,
+            -189.75572287631522
+          ],
+          [
+            -70.29990822072034,
+            -195.740914946828
+          ],
+          [
+            -71.99425874857283,
+            -195.3328402436145
+          ],
+          [
+            -72.6369775649651,
+            -198.00314357806747
+          ],
+          [
+            -79.88586385768033,
+            -196.2572835266274
+          ],
+          [
+            -83.83021602179284,
+            -195.30713758034972
+          ],
+          [
+            -92.12867333070548,
+            -193.3084305630496
+          ],
+          [
+            -91.70430701229105,
+            -191.54558700926788
+          ],
+          [
+            -92.97592511674011,
+            -191.23932738347213
+          ],
+          [
+            -92.67042458624874,
+            -189.97076854456188
+          ],
+          [
+            -96.80518770351266,
+            -188.9749984088176
+          ],
+          [
+            -97.19882428257579,
+            -190.60949779017363
+          ],
+          [
+            -102.69342655019283,
+            -189.11575581861592
+          ],
+          [
+            -100.59114187520223,
+            -179.91991899306373
+          ],
+          [
+            -99.21715407050424,
+            -180.2508268822579
+          ],
+          [
+            -98.05309692184623,
+            -175.41786842293294
+          ]
+        ]
+      ],
+      "groundM": -23.14360745089109,
+      "heightM": 26.772528409957886,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:692261:0",
+      "sourceBuildingId": "D1_MDC_Building_426",
+      "mappedMeshId": "county-i3s:316",
+      "name": "",
+      "footprint": [
+        [
+          [
+            90.80052911045715,
+            110.55967735937716
+          ],
+          [
+            123.49250041534519,
+            102.85240180843681
+          ],
+          [
+            126.11037208983191,
+            113.95625208787823
+          ],
+          [
+            165.47284558039553,
+            104.67643243299776
+          ],
+          [
+            167.0232528584011,
+            104.31096680243408
+          ],
+          [
+            226.92518006838907,
+            90.18878216557343
+          ],
+          [
+            233.9583049343747,
+            88.5307762632874
+          ],
+          [
+            239.01451065971483,
+            87.3386918150554
+          ],
+          [
+            226.69083856639224,
+            35.0653289553223
+          ],
+          [
+            221.63281167442034,
+            36.257781245266244
+          ],
+          [
+            214.68914404207257,
+            37.89473998213238
+          ],
+          [
+            154.56765525876332,
+            52.068566493922326
+          ],
+          [
+            151.6112821257486,
+            52.7656274974657
+          ],
+          [
+            111.73843854639284,
+            62.165795416243384
+          ],
+          [
+            110.3008023024873,
+            68.28646722216999
+          ],
+          [
+            57.08975501220637,
+            80.87469231082007
+          ],
+          [
+            57.47813771047126,
+            82.52242706128455
+          ],
+          [
+            65.49456920932441,
+            116.52567854797101
+          ],
+          [
+            90.80052911045715,
+            110.55967735937716
+          ]
+        ],
+        [
+          [
+            153.1572473139433,
+            70.73927172509534
+          ],
+          [
+            151.68134644268562,
+            64.47848981715117
+          ],
+          [
+            154.87141098421336,
+            76.69085152806686
+          ],
+          [
+            153.1572473139433,
+            70.73927172509534
+          ]
+        ],
+        [
+          [
+            144.3715217580788,
+            78.79483066030579
+          ],
+          [
+            141.59181901865887,
+            67.23888303201346
+          ],
+          [
+            143.0349270318954,
+            73.12476568614765
+          ],
+          [
+            144.3715217580788,
+            78.79483066030579
+          ]
+        ]
+      ],
+      "groundM": -24.433749091788634,
+      "heightM": 135.59457397460938,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:707462:0",
+      "sourceBuildingId": "D1_MDC_Building_5",
+      "mappedMeshId": "county-i3s:356",
+      "name": "",
+      "footprint": [
+        [
+          [
+            12.800157892348206,
+            -108.26511305317189
+          ],
+          [
+            25.24404619301902,
+            -111.10468585714895
+          ],
+          [
+            25.733997659433687,
+            -109.25267264310816
+          ],
+          [
+            30.349958422041183,
+            -110.34250356270262
+          ],
+          [
+            34.96204500701023,
+            -111.4314367244982
+          ],
+          [
+            35.23707256320412,
+            -110.18421358691305
+          ],
+          [
+            44.57253682484513,
+            -111.66586700239509
+          ],
+          [
+            53.57962901288104,
+            -114.33988746055608
+          ],
+          [
+            53.29487057719128,
+            -115.56237487882854
+          ],
+          [
+            57.127735580007084,
+            -116.45493525636317
+          ],
+          [
+            66.72896041644049,
+            -118.83264448021421
+          ],
+          [
+            60.95834823074799,
+            -117.3491078348568
+          ],
+          [
+            61.370165619259474,
+            -115.58089225270352
+          ],
+          [
+            67.41004072440252,
+            -117.06657816743768
+          ],
+          [
+            75.07198928950116,
+            -118.86988378582794
+          ],
+          [
+            75.67621132045173,
+            -119.01426641230104
+          ],
+          [
+            74.70055940980372,
+            -123.1584485608419
+          ],
+          [
+            78.51819882892816,
+            -124.08757038112441
+          ],
+          [
+            78.88914557223582,
+            -129.64934792552816
+          ],
+          [
+            77.28631531707198,
+            -137.6717107265245
+          ],
+          [
+            74.79673306877515,
+            -142.7850255358817
+          ],
+          [
+            73.14241176581301,
+            -145.17327984608184
+          ],
+          [
+            69.8073337018105,
+            -144.2831394620396
+          ],
+          [
+            68.81608789666019,
+            -148.37928991509
+          ],
+          [
+            68.18708279079259,
+            -148.2090050723297
+          ],
+          [
+            60.414907597170725,
+            -146.48088764689737
+          ],
+          [
+            54.360872623042695,
+            -145.20366376562862
+          ],
+          [
+            54.72294881586064,
+            -143.59040703727604
+          ],
+          [
+            50.707592860336334,
+            -142.69775524329145
+          ],
+          [
+            47.39351430645409,
+            -141.96077888259077
+          ],
+          [
+            47.20121160953753,
+            -142.82566350006744
+          ],
+          [
+            37.528784797087795,
+            -141.47360759303155
+          ],
+          [
+            28.481845980151206,
+            -138.57290858977765
+          ],
+          [
+            28.774717366835347,
+            -137.2554168194599
+          ],
+          [
+            24.143517772170238,
+            -136.10867115355035
+          ],
+          [
+            19.508263798284947,
+            -134.9608484785648
+          ],
+          [
+            20.30361714989315,
+            -133.1545405597886
+          ],
+          [
+            7.469870968874787,
+            -129.83116184987117
+          ],
+          [
+            8.752836500463568,
+            -125.21062465653192
+          ],
+          [
+            7.67506255272573,
+            -128.99890222052116
+          ],
+          [
+            3.450647182259071,
+            -127.95288847136399
+          ],
+          [
+            4.916456606575186,
+            -121.27688922950863
+          ],
+          [
+            7.925127641587798,
+            -121.85756902884668
+          ],
+          [
+            9.64514915352445,
+            -116.02628869075286
+          ],
+          [
+            6.400287967291325,
+            -115.46254879786187
+          ],
+          [
+            8.429763385243323,
+            -108.55774235313824
+          ],
+          [
+            12.459344469107343,
+            -109.64999970166767
+          ],
+          [
+            11.332281100012652,
+            -114.77556913919156
+          ],
+          [
+            12.800157892348206,
+            -108.26511305317189
+          ]
+        ]
+      ],
+      "groundM": -24.30082719304124,
+      "heightM": 181.65771484375,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    },
+    {
+      "id": "county-footprint:719917:0",
+      "sourceBuildingId": "D1_MDC_Building_89",
+      "mappedMeshId": "county-i3s:393",
+      "name": "",
+      "footprint": [
+        [
+          [
+            -78.55492815486022,
+            -31.15484729577439
+          ],
+          [
+            -79.04570423748046,
+            -33.336484477008405
+          ],
+          [
+            -83.92755581084852,
+            -32.24160119922294
+          ],
+          [
+            -84.06858885940673,
+            -32.8698682072078
+          ],
+          [
+            -83.20466322185767,
+            -33.07036373574114
+          ],
+          [
+            -83.20259052248018,
+            -33.060415425813744
+          ],
+          [
+            -46.82514325233162,
+            -41.722718024237565
+          ],
+          [
+            -45.178107887510414,
+            -37.89127328116429
+          ],
+          [
+            -44.43672667967519,
+            -35.02499307063231
+          ],
+          [
+            -44.141411857254084,
+            -32.07930460890919
+          ],
+          [
+            -44.57674615899336,
+            -29.584515233580486
+          ],
+          [
+            -45.418045931960215,
+            -27.195929931212657
+          ],
+          [
+            -46.64242215368772,
+            -24.979064153834575
+          ],
+          [
+            -48.216172131577316,
+            -22.99486244097845
+          ],
+          [
+            -50.0959510057783,
+            -21.297816425811806
+          ],
+          [
+            -52.23039381071727,
+            -19.934620374975836
+          ],
+          [
+            -54.560565995733725,
+            -18.942826963914257
+          ],
+          [
+            -70.51285349271616,
+            -15.211686913696036
+          ],
+          [
+            -76.65928603644798,
+            -0.8421791729277928
+          ],
+          [
+            -47.646143553878375,
+            -7.642382643918431
+          ],
+          [
+            -41.626162727413735,
+            -11.169749233561634
+          ],
+          [
+            -36.281593926764195,
+            -17.84113665294667
+          ],
+          [
+            -33.10507675739101,
+            -22.783305570185156
+          ],
+          [
+            -31.727784722280585,
+            -29.30223511922849
+          ],
+          [
+            -31.326338464824445,
+            -34.94078356137466
+          ],
+          [
+            -32.41277903622816,
+            -43.508351934096275
+          ],
+          [
+            -33.22661074371989,
+            -46.60021962484061
+          ],
+          [
+            -34.713318988922566,
+            -46.244854196105344
+          ],
+          [
+            -40.168387179005,
+            -71.47186156359571
+          ],
+          [
+            -89.23539502005187,
+            -60.46821195404323
+          ],
+          [
+            -87.37357142097474,
+            -52.009805352583065
+          ],
+          [
+            -91.95606987324743,
+            -51.08323463062703
+          ],
+          [
+            -97.95597705828841,
+            -49.87012198651812
+          ],
+          [
+            -99.89631011336365,
+            -60.0718152468651
+          ],
+          [
+            -133.31919935070155,
+            -52.57226475432699
+          ],
+          [
+            -118.53598246174782,
+            9.423336089402659
+          ],
+          [
+            -99.1730130560458,
+            4.970553955469389
+          ],
+          [
+            -99.83474353011155,
+            2.0295381165138746
+          ],
+          [
+            -92.1958685335534,
+            0.05729996178176222
+          ],
+          [
+            -92.9911479327054,
+            -3.0224548180197655
+          ],
+          [
+            -81.7941144885373,
+            -5.913361770841945
+          ],
+          [
+            -83.82228254649084,
+            -14.928754608110086
+          ],
+          [
+            -77.44463206348772,
+            -16.36350106413863
+          ],
+          [
+            -79.21173048860601,
+            -24.218266270979804
+          ],
+          [
+            -77.10522015544173,
+            -24.710675561939112
+          ],
+          [
+            -78.55492815486022,
+            -31.15484729577439
+          ]
+        ]
+      ],
+      "groundM": -25.52739492219002,
+      "heightM": 68.21425819396973,
+      "confidence": "mapped",
+      "heightConfidence": "mapped",
+      "sourceIds": [
+        "county-buildings",
+        "county-i3s-buildings"
+      ],
+      "gaps": [
+        "Building form is the County 2015 I3S source mesh; current exterior and changes since acquisition require review.",
+        "Building-specific facades, entrances, finish and current condition are not yet accepted.",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    }
+  ],
+  "land": [
+    {
+      "id": "common-dry-ground",
+      "name": "Public Brickell ground",
+      "polygons": [
+        [
+          [
+            [
+              -180.57015204100287,
+              -177.2531103073958
+            ],
+            [
+              180.56880673590453,
+              -177.25941152524942
+            ],
+            [
+              180.57499314695923,
+              177.25561476743525
+            ],
+            [
+              -180.56396589677314,
+              177.26191673200378
+            ],
+            [
+              -180.57015204100287,
+              -177.2531103073958
+            ]
+          ]
+        ]
+      ],
+      "elevationM": -25,
+      "confidence": "mapped",
+      "sourceIds": [
+        "city-water",
+        "usgs-3dep-brickell-r1"
+      ],
+      "gaps": [
+        "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+        "Water and shore elevations need water masks and tide treatment.",
+        "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+        "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+        "Horizontal dry-ground extent is raster coverage minus mapped City water; height uses the USGS bare-earth grid. Curbs, building thresholds and bridge decks need separate survey.",
+        "Dry coverage follows mapped land/raster extent minus mapped water, including islands; it is not a surveyed pavement-edge boundary.",
+        "Use runtime query for local Up; elevationM is not the DEM field",
+        "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim."
+      ]
+    }
+  ],
+  "water": [],
+  "sources": [
+    {
+      "id": "city-streets",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Streets/FeatureServer/0",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "attribution": "© 2019 City of Miami, Department of Innovation and Technology, GIS Team",
+      "sha256": "f0a58bfcfe11a38f7be93dc52cb5cf513cd7e92de9bdc686eeb7bf64f39777d7"
+    },
+    {
+      "id": "city-shoreline",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Shoreline/FeatureServer/0",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "attribution": "© 2025 City of Miami, Department of Innovation and Technology, GIS Team; Miami-Dade County, Information Technology Department",
+      "sha256": "b694fbea276271d0df97ba0e56656dcd3fb222e2f4a28688d1e1a66a05755d0c"
+    },
+    {
+      "id": "city-water",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Water_Bodies_(Polygons)/FeatureServer/0",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "attribution": "© 2025 City of Miami, Department of Innovation and Technology, GIS Team; Miami-Dade County, Information Technology Department",
+      "sha256": "2c7755eb36496cd2102b232649e286eee614f51072afd2db39c068f87430e11c"
+    },
+    {
+      "id": "city-boundary",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/City_Boundary/FeatureServer/0",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "attribution": "© 2019, City of Miami, Department of Innovation and Technology, GIS Team",
+      "sha256": "05959d49feb816a0736dbd554422f8dae947263100ea26ddbc37fbb49fb0cc0d"
+    },
+    {
+      "id": "county-buildings",
+      "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprint2D_gdb/FeatureServer/0",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "Miami-Dade County custom public-data as-is terms",
+      "attribution": "Miami-Dade County ITD - Geospatial Infrastructure Support Group",
+      "sha256": "0a51f05ab979c534250ab954903084de96aebd34f8c4d7de1ff390b11bac26e0"
+    },
+    {
+      "id": "county-ubid",
+      "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprintUBIDFolio_gdb/FeatureServer/0",
+      "retrieved": "2026-09-12T13:32:03.927Z",
+      "license": "Miami-Dade County custom public-data as-is terms",
+      "attribution": "Miami-Dade County GIS Technical Support Group",
+      "sha256": "cecef41e8fa8466eaea82c1fef0cda3a0bbd3874375c5126c1ed25438d79190e"
+    },
+    {
+      "id": "osm-brickell-supplement",
+      "url": "https://www.openstreetmap.org/copyright",
+      "retrieved": "2026-09-12T13:30:38.367537+00:00",
+      "license": "ODbL-1.0",
+      "attribution": "© OpenStreetMap contributors"
+    },
+    {
+      "id": "county-i3s-buildings",
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "Miami-Dade County open GIS terms; see source manifest",
+      "attribution": "Miami-Dade County Information Technology Department"
+    },
+    {
+      "id": "usgs-3dep-brickell-r1",
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "USGS public domain",
+      "attribution": "U.S. Geological Survey, 3D Elevation Program",
+      "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b"
+    },
+    {
+      "id": "miami-brickell-roadway-plan-2015",
+      "url": "https://archive.miamigov.com/miamicapital/docs/ProjectPages/ProcurementOpportunities/ITB_Brickell_Avenue_Roadway_Improvements/Section1_CPW_100%25Approved.pdf",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "City of Miami public engineering reference",
+      "attribution": "City of Miami, Brickell Avenue Roadway Improvements, approved2015 design"
+    }
+  ],
+  "coordinateFrame": {
+    "origin": {
+      "latitudeDegrees": 25.7662,
+      "longitudeDegrees": -80.1907,
+      "ellipsoidHeightM": 0
+    },
+    "originECEF": [
+      979220.4569088008,
+      -5663600.722989541,
+      2755758.447467897
+    ],
+    "axes": "x East,y Up,z North",
+    "policy": {
+      "id": "provisional-numeric-geoid18-v1",
+      "sourceHorizontal": "EPSG:4326; realization and coordinate epoch unresolved",
+      "sourceVertical": "NAVD88 metres (EPSG:5703)",
+      "geoidEvaluation": "Numeric source longitude/latitude used provisionally for GEOID18 evaluation; source is not relabelled NAD83(2011)",
+      "renderHeight": "H+N is NAD83(2011) ellipsoid height, used provisionally as WGS84-formula ellipsoid h",
+      "unresolved": "NAD83(2011) to renderer WGS84 realization/epoch transformation is not resolved; metre-scale, potentially 2m-level error remains. This is not a statistical bound or a surveyed correspondence claim.",
+      "status": "provisional"
+    },
+    "geoid18": {
+      "id": "noaa-geoid18-brickell-original-samples",
+      "sourceUrl": "https://cdn.proj.org/us_noaa_g2018u0.tif",
+      "sourceSha256": "fa9a407ac7ee3f5a3694008e4bcd09ce9cc250452f0c3b11700a4960340abce2",
+      "license": "NOAA Public Domain",
+      "licenseUrl": "https://cdn.proj.org/us_noaa_README.txt",
+      "width": 6,
+      "height": 6,
+      "longitudeOrigin": -80.23333333338309,
+      "latitudeOrigin": 25.800000000000367,
+      "longitudeStep": 0.01666666666665,
+      "latitudeStep": -0.01666666666667,
+      "rasterPixelIsPoint": true,
+      "sourceColumn": 2986,
+      "sourceRow": 1932,
+      "inputHorizontal": "NAD83(2011) EPSG:6318",
+      "operation": "NAVD88 H + GEOID18 N = NAD83(2011) ellipsoid h",
+      "values": [
+        -25.33919906616211,
+        -25.39459991455078,
+        -25.45170021057129,
+        -25.512100219726562,
+        -25.57360076904297,
+        -25.636600494384766,
+        -25.357500076293945,
+        -25.4143009185791,
+        -25.47209930419922,
+        -25.533000946044922,
+        -25.595199584960938,
+        -25.658700942993164,
+        -25.37689971923828,
+        -25.434999465942383,
+        -25.49410057067871,
+        -25.55590057373047,
+        -25.618999481201172,
+        -25.682300567626953,
+        -25.398799896240234,
+        -25.45840072631836,
+        -25.519100189208984,
+        -25.582199096679688,
+        -25.645200729370117,
+        -25.708599090576172,
+        -25.423599243164062,
+        -25.48539924621582,
+        -25.547100067138672,
+        -25.610000610351562,
+        -25.672800064086914,
+        -25.73740005493164,
+        -25.451499938964844,
+        -25.5132999420166,
+        -25.57539939880371,
+        -25.638500213623047,
+        -25.701799392700195,
+        -25.766000747680664
+      ]
+    }
+  },
+  "waterExclusionFeatures": [],
+  "locations": [
+    {
+      "name": "Brickell Avenue at SE 8th Street",
+      "longitude": -80.1907224560056,
+      "latitude": 25.7661748271726,
+      "navd88M": 2.954884595335508,
+      "point": [
+        -2.2526680665269145,
+        -22.574377205777548,
+        -2.7887470253285027
+      ],
+      "source": "City source junction or labelled nearby geographic query; not an automatic safe spawn",
+      "sourceMask": "D23"
+    },
+    {
+      "name": "SE 8th Street west continuation",
+      "longitude": -80.192,
+      "latitude": 25.76635,
+      "navd88M": 1.264859229324386,
+      "point": [
+        -130.4089189740277,
+        -24.260746283120838,
+        16.61824311036466
+      ],
+      "source": "City source junction or labelled nearby geographic query; not an automatic safe spawn",
+      "sourceMask": "D23"
+    },
+    {
+      "name": "Brickell Avenue south continuation",
+      "longitude": -80.191,
+      "latitude": 25.7652,
+      "navd88M": 2.1889871954664923,
+      "point": [
+        -30.094660224186203,
+        -23.341784794588435,
+        -110.78397301334988
+      ],
+      "source": "City source junction or labelled nearby geographic query; not an automatic safe spawn",
+      "sourceMask": "D23"
+    }
+  ]
+}

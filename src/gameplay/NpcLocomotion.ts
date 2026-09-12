@@ -3,6 +3,8 @@ import type { Character } from './Character';
 import { blockedCrawlEffects, type BodyInjuryEffects } from './Injuries';
 import { CrawlingCollider } from './CrawlingCollider';
 import { MovementQueries } from './MovementQueries';
+import type { WorldBoundary } from '../world/WorldBoundary';
+import { protectNpcController } from './NpcBoundary';
 
 /** Nearby civilian movement collides through the same Havok controller as the player. */
 export class NpcLocomotion {
@@ -10,7 +12,7 @@ export class NpcLocomotion {
   private crawl: CrawlingCollider;
   private queries?: MovementQueries;
   private disposed = false;
-  constructor(private scene: Scene, private model: Character, private metadata: Record<string, unknown>) {
+  constructor(private scene: Scene, private model: Character, private metadata: Record<string, unknown>, private boundary?: WorldBoundary) {
     this.crawl = new CrawlingCollider(scene);
     model.root.onDisposeObservable.addOnce(() => this.dispose());
   }
@@ -25,6 +27,7 @@ export class NpcLocomotion {
       for (const body of physics.getBodies()) if (!old.has(body)) body.transformNode.metadata = {...body.transformNode.metadata, ...this.metadata};
     }
     const controller = this.controller;
+    protectNpcController(controller, this.boundary, dt);
     if (this.model.root.metadata?.ragdollHandoffActive) speed = 0;
     if (direction.lengthSquared() > .001 && !this.model.root.metadata?.ragdollHandoffActive) {
       const yaw = this.model.root.rotation.y, desired = Math.atan2(direction.x, direction.z);
@@ -44,10 +47,12 @@ export class NpcLocomotion {
     const alongBody = Math.max(0, Vector3.Dot(direction, this.model.root.forward));
     const travel = crawling ? this.model.root.forward.scale(speed * alongBody) : direction.scale(speed);
     controller.setVelocity(new Vector3(travel.x, grounded ? Math.max(previous.y, 0) : previous.y - 9.81 * dt, travel.z));
+    protectNpcController(controller, this.boundary, dt);
     const start = controller.getPosition().clone();
     controller.integrate(dt, support, new Vector3(0, -9.81, 0));
+    const recovered = protectNpcController(controller, this.boundary, 0);
     this.model.root.position.copyFrom(controller.getPosition()).y -= controller.footOffset;
-    const actualSpeed = Math.hypot(controller.getPosition().x - start.x, controller.getPosition().z - start.z) / Math.max(.001, dt);
+    const actualSpeed = recovered ? 0 : Math.hypot(controller.getPosition().x - start.x, controller.getPosition().z - start.z) / Math.max(.001, dt);
     this.model.animate(dt, actualSpeed); this.model.applyInjuryPose(effects, dt, actualSpeed);
     return actualSpeed;
   }

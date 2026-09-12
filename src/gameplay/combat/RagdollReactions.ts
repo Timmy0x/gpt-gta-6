@@ -263,7 +263,7 @@ export class RagdollReactions {
     this.frozen.set(reaction.model, reaction);
     this.status(reaction);
   }
-  private recover(reaction: Reaction): void {
+  private recover(reaction: Reaction): boolean {
     const model = reaction.model,
       pelvis = reaction.pelvis.clone();
     if (!reaction.disposed) this.settle(reaction);
@@ -277,9 +277,10 @@ export class RagdollReactions {
       result,
       { shouldHitTriggers: false },
     );
-    const ground = result.hasHit
-        ? result.hitPointWorld.y
-        : Math.max(0, pelvis.y - 0.3),
+    // Missing streamed support is not a ground plane. Keep the down state so
+    // the ordinary update can retry when collision becomes available.
+    if (!result.hasHit || result.hitNormalWorld.y <= .5 || !Number.isFinite(result.hitPointWorld.y)) return false;
+    const ground = result.hitPointWorld.y,
       forward = reaction.regional
         ? model.jointPosition('chest').subtract(pelvis)
         : model.root.getDirection(Vector3.Forward());
@@ -300,11 +301,12 @@ export class RagdollReactions {
     reaction.life = INJURY_RULES.recoverySeconds;
     reaction.recovering = true;
     this.status(reaction);
+    return true;
   }
   private handoff(reaction: Reaction): void {
     if (reaction.fatal || reaction.model.dead) return;
     const model = reaction.model;
-    this.recover(reaction);
+    if (!this.recover(reaction)) return;
     const groundAnchor = model.root.position.clone();
     this.remove(reaction);
     model.root.metadata = { ...model.root.metadata, ragdollActive: false, ragdollRecovering: false, ragdollHandoffActive: false, injuryStatus: bodyInjuryEffects(model.bodyInjuries).mode };

@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "id": "brickell-core-r1",
+  "retrieved": "2026-09-12T13:27:41.920Z",
+  "bboxWgs84": [
+    -80.199,
+    25.7596,
+    -80.187,
+    25.7704
+  ],
+  "origin": {
+    "longitude": -80.193,
+    "latitude": 25.765,
+    "elevationM": 0
+  },
+  "projection": "src/world/miami/projection.ts WGS84 ECEF horizontal ENU; X east, Z north, Y independent survey elevation; no distance compression",
+  "geometryPolicy": "All source features intersecting AOI retained in full without simplification or clipping; adjacent tiles deduplicate by stable source ID. City boundary is complete.",
+  "heightPolicy": "County HEIGHT retained raw: unit and height-vs-elevation semantics absent from authoritative metadata; do not silently interpret as metres.",
+  "sources": [
+    {
+      "id": "city-streets",
+      "item": "7b7976cac8b34db29213d87ca2b65f05",
+      "kind": "roads",
+      "title": "Streets",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Streets/FeatureServer/0",
+      "itemUrl": "https://www.arcgis.com/sharing/rest/content/items/7b7976cac8b34db29213d87ca2b65f05?f=pjson",
+      "sourceModified": "2019-02-19T18:50:05.000Z",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "licenseInfo": "&lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.",
+      "attribution": "© 2019 City of Miami, Department of Innovation and Technology, GIS Team",
+      "objectIdField": "FID",
+      "featureCount": 135,
+      "path": "raw/city-streets.geojson",
+      "sha256": "f0a58bfcfe11a38f7be93dc52cb5cf513cd7e92de9bdc686eeb7bf64f39777d7",
+      "requests": [
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Streets/FeatureServer/0/query?f=json&where=1%3D1&returnIdsOnly=true&geometry=-80.199%2C25.7596%2C-80.187%2C25.7704&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+          "sha256": "b8c003bdfa09d42d1a14e27d860c32df86f75b4a9e448b15e1d942213d0b8a44"
+        },
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Streets/FeatureServer/0/query?f=geojson&objectIds=2263%2C2264%2C2265%2C2847%2C2848%2C2960%2C2961%2C2969%2C3021%2C3200%2C4943%2C5059%2C5259%2C5260%2C5261%2C5319%2C5320%2C5436%2C5437%2C5438%2C5977%2C5978%2C5980%2C5981%2C9550%2C9668%2C9669%2C9670%2C9671%2C9672%2C9673%2C9674%2C9675%2C9676%2C9696%2C9699%2C9846%2C9868%2C9869%2C9870%2C9871%2C9872%2C10126%2C10127%2C10128%2C10129%2C10130%2C11521%2C11810%2C11811%2C11812%2C11813%2C11814%2C11815%2C11828%2C11829%2C11830%2C11831%2C11832%2C11833%2C11834%2C11835%2C11836%2C11837%2C11841%2C11842%2C11843%2C11844%2C11845%2C11846%2C11847%2C11848%2C11849%2C11851%2C11856%2C11857%2C11858%2C11859%2C11860%2C11861%2C11862%2C12921%2C12922%2C12923%2C12924%2C12925%2C12926%2C12927%2C12928%2C12929%2C12930%2C12931%2C12932%2C12933%2C12934%2C12936%2C12937%2C12938%2C12939%2C12940%2C12941%2C12942%2C12943%2C12944%2C12968%2C12969%2C12970%2C12971%2C12972%2C12981%2C14067%2C14178%2C14179%2C14180%2C14181%2C14182%2C14412%2C14548%2C14667%2C14668%2C14891%2C15170%2C15731%2C15793%2C15794%2C15899%2C15931%2C16134%2C16135%2C16199%2C16201%2C16223%2C16449%2C16450%2C16451&outFields=*&outSR=4326&returnGeometry=true",
+          "sha256": "e58d40915a2b1612c4bbdbe15cc6453012a64be5d63cdccc5fe94f49d7a387d8"
+        }
+      ]
+    },
+    {
+      "id": "city-shoreline",
+      "item": "8dac762373f743ce8e0e814966dd160d",
+      "kind": "shoreline",
+      "title": "Shoreline",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Shoreline/FeatureServer/0",
+      "itemUrl": "https://www.arcgis.com/sharing/rest/content/items/8dac762373f743ce8e0e814966dd160d?f=pjson",
+      "sourceModified": "2025-08-28T16:18:19.000Z",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "licenseInfo": "<p><span style='font-family:&quot;Courier New&quot;;'>&lt;a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\"&gt;&lt;img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\"&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.</span></p>",
+      "attribution": "© 2025 City of Miami, Department of Innovation and Technology, GIS Team; Miami-Dade County, Information Technology Department",
+      "objectIdField": "FID",
+      "featureCount": 16,
+      "path": "raw/city-shoreline.geojson",
+      "sha256": "b694fbea276271d0df97ba0e56656dcd3fb222e2f4a28688d1e1a66a05755d0c",
+      "requests": [
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Shoreline/FeatureServer/0/query?f=json&where=1%3D1&returnIdsOnly=true&geometry=-80.199%2C25.7596%2C-80.187%2C25.7704&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+          "sha256": "6c6dcef59350e94117dbbebb0603562d3d5a745d6f223589b23b1aa584cb7796"
+        },
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Shoreline/FeatureServer/0/query?f=geojson&objectIds=43%2C44%2C141%2C142%2C143%2C144%2C145%2C146%2C147%2C167%2C168%2C214%2C221%2C242%2C243%2C244&outFields=*&outSR=4326&returnGeometry=true",
+          "sha256": "d5f38ed53366b14aad6461593b05eabd5f4eaa838fde1915700ddfb98d58d480"
+        }
+      ]
+    },
+    {
+      "id": "city-water",
+      "item": "8af681a358bc48a7aeade4ad7669258f",
+      "kind": "water",
+      "title": "Water Bodies (Polygons / Port of Miami)",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Water_Bodies_(Polygons)/FeatureServer/0",
+      "itemUrl": "https://www.arcgis.com/sharing/rest/content/items/8af681a358bc48a7aeade4ad7669258f?f=pjson",
+      "sourceModified": "2025-08-28T16:24:19.000Z",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "licenseInfo": "<p><span style='font-family:&quot;Courier New&quot;;'>&lt;a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\"&gt;&lt;img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\"&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.</span></p>",
+      "attribution": "© 2025 City of Miami, Department of Innovation and Technology, GIS Team; Miami-Dade County, Information Technology Department",
+      "objectIdField": "FID",
+      "featureCount": 12,
+      "path": "raw/city-water.geojson",
+      "sha256": "2c7755eb36496cd2102b232649e286eee614f51072afd2db39c068f87430e11c",
+      "requests": [
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Water_Bodies_(Polygons)/FeatureServer/0/query?f=json&where=1%3D1&returnIdsOnly=true&geometry=-80.199%2C25.7596%2C-80.187%2C25.7704&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+          "sha256": "b39d5b6e7f365c9887bc2c980825230c44f277c73ae2369111eda40c59ed41a6"
+        },
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Water_Bodies_(Polygons)/FeatureServer/0/query?f=geojson&objectIds=11%2C20%2C32%2C43%2C55%2C99%2C110%2C113%2C123%2C130%2C157%2C212&outFields=*&outSR=4326&returnGeometry=true",
+          "sha256": "b6b991fa62db6905d693067584f2710743b78fabca94a0208ede60687e99351a"
+        }
+      ]
+    },
+    {
+      "id": "city-boundary",
+      "item": "b583ea2da62445b195ddeb0c3f479e7d",
+      "kind": "boundary",
+      "complete": true,
+      "title": "City Boundary",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/City_Boundary/FeatureServer/0",
+      "itemUrl": "https://www.arcgis.com/sharing/rest/content/items/b583ea2da62445b195ddeb0c3f479e7d?f=pjson",
+      "sourceModified": "2021-02-08T15:51:39.000Z",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "CC-BY-4.0",
+      "licenseInfo": "&lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;.",
+      "attribution": "© 2019, City of Miami, Department of Innovation and Technology, GIS Team",
+      "objectIdField": "FID",
+      "featureCount": 1,
+      "path": "raw/city-boundary.geojson",
+      "sha256": "05959d49feb816a0736dbd554422f8dae947263100ea26ddbc37fbb49fb0cc0d",
+      "requests": [
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/City_Boundary/FeatureServer/0/query?f=json&where=1%3D1&returnIdsOnly=true",
+          "sha256": "7a3c54cbac7a424181b4b1604e2d49ac58188682f239d00b15e3ad754bba4ac2"
+        },
+        {
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/City_Boundary/FeatureServer/0/query?f=geojson&objectIds=1&outFields=*&outSR=4326&returnGeometry=true",
+          "sha256": "3e54f4613e96318b43983c8d4a43d3f1f7bc13e9e48ba91d0039c615d7fbb609"
+        }
+      ]
+    },
+    {
+      "id": "county-buildings",
+      "item": "d511e9ebc5aa4f49a23ff5fa2fb99786",
+      "kind": "buildings",
+      "title": "Building Footprint 2D",
+      "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprint2D_gdb/FeatureServer/0",
+      "itemUrl": "https://www.arcgis.com/sharing/rest/content/items/d511e9ebc5aa4f49a23ff5fa2fb99786?f=pjson",
+      "sourceModified": "2026-09-10T13:13:34.000Z",
+      "retrieved": "2026-09-12T13:27:41.920Z",
+      "license": "Miami-Dade County custom public-data as-is terms",
+      "licenseInfo": "Miami-Dade County provides this data for use \"as is\". The areas depicted by this map/data are approximate, and are not accurate to surveying or engineering standards. The maps/data shown here are for illustration purposes only and are not suitable for site-specific decision making. Information found here should not be used for making financial or any other commitments. Miami-Dade County provides this information with the understanding that it is not guaranteed to be accurate, correct or complete and conclusions drawn from such information are the sole responsibility of the user. While every effort has been made to ensure the accuracy, correctness and timeliness of materials presented, Miami-Dade County assumes no responsibility for errors or omissions, even if Miami-Dade County is advised of the possibility of such damage.",
+      "attribution": "Miami-Dade County ITD - Geospatial Infrastructure Support Group",
+      "objectIdField": "OBJECTID",
+      "featureCount": 590,
+      "path": "raw/county-buildings.geojson",
+      "sha256": "0a51f05ab979c534250ab954903084de96aebd34f8c4d7de1ff390b11bac26e0",
+      "requests": [
+        {
+          "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprint2D_gdb/FeatureServer/0/query?f=json&where=1%3D1&returnIdsOnly=true&geometry=-80.199%2C25.7596%2C-80.187%2C25.7704&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+          "sha256": "7b98fec4ae99f65ea1cfb455048e4ca292d60ad25f3042403776584e243a5e5f"
+        },
+        {
+          "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprint2D_gdb/FeatureServer/0/query?f=geojson&objectIds=4862%2C13552%2C15959%2C18766%2C25090%2C27672%2C27781%2C30664%2C40871%2C45914%2C48872%2C51438%2C63810%2C63870%2C65812%2C70371%2C71833%2C74357%2C74849%2C74894%2C77931%2C94147%2C94186%2C96911%2C106231%2C107164%2C108106%2C109089%2C110139%2C116734%2C117772%2C118350%2C120817%2C123526%2C126157%2C132200%2C134400%2C134485%2C137773%2C141367%2C147023%2C147148%2C151842%2C168356%2C177133%2C179454%2C195204%2C196653%2C196843%2C205366%2C207558%2C211276%2C220300%2C224879%2C226795%2C229013%2C235158%2C248292%2C250424%2C251733%2C264201%2C264927%2C269507%2C273683%2C296177%2C296707%2C299698%2C305595%2C310128%2C310734%2C317494%2C320243%2C320987%2C325111%2C325562%2C331351%2C335034%2C337872%2C338330%2C352343%2C355644%2C363491%2C367533%2C368864%2C370616%2C371302%2C373225%2C376554%2C378777%2C382732%2C384992%2C412343%2C417728%2C420015%2C421299%2C436549%2C441234%2C442739%2C447538%2C449450%2C463364%2C465771%2C465944%2C467179%2C469113%2C470626%2C472137%2C474282%2C476476%2C477744%2C479964%2C486110%2C488748%2C489875%2C496220%2C499485%2C500299%2C501763%2C501943%2C502950%2C507579%2C508905%2C509729%2C514796%2C518507%2C527489%2C530013%2C531754%2C533327%2C533525%2C534391%2C536272%2C536903%2C546080%2C552887%2C553593%2C553855%2C556955%2C557006%2C557070%2C564053%2C567911%2C570645%2C570806%2C572208%2C572399%2C582582%2C583310%2C586513%2C587633%2C598195%2C601614%2C602399%2C611168%2C614167%2C614880%2C636762%2C639030%2C644645%2C645243%2C650769%2C653580%2C658855%2C663804%2C663918%2C665001%2C665579%2C666255%2C666642%2C683326%2C683947%2C684530%2C689422%2C689776%2C692261%2C692417%2C692698%2C693420%2C703717%2C707462%2C708167%2C711064%2C716767%2C717130%2C719917%2C729373%2C730327%2C736655%2C737576%2C739923%2C740004%2C744077%2C745172%2C750799%2C753523%2C753531%2C755542%2C756735%2C758420%2C766491&outFields=*&outSR=4326&returnGeometry=true",
+          "sha256": "5f12ef0818225466ac05a13eeb350703e2d3ce4a2d557c71ce08852fa176d868"
+        },
+        {
+          "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprint2D_gdb/FeatureServer/0/query?f=geojson&objectIds=773425%2C773426%2C773427%2C773428%2C773429%2C773430%2C773431%2C773432%2C773433%2C773434%2C773435%2C773436%2C773437%2C773438%2C773439%2C777243%2C777244%2C794373%2C794375%2C794384%2C798199%2C798200%2C798201%2C798202%2C798203%2C798204%2C798205%2C798206%2C798207%2C798208%2C798209%2C798210%2C798211%2C798212%2C798213%2C798214%2C798215%2C798216%2C798217%2C798218%2C798219%2C798220%2C808525%2C808526%2C808527%2C808528%2C808542%2C808543%2C808544%2C808545%2C808546%2C808550%2C808551%2C808552%2C808578%2C808582%2C808584%2C808586%2C808587%2C815502%2C815645%2C818366%2C818367%2C818368%2C818369%2C818370%2C818371%2C818372%2C818373%2C818374%2C818375%2C818376%2C818377%2C818378%2C818379%2C818380%2C818381%2C818382%2C818383%2C818384%2C818385%2C818386%2C818387%2C818388%2C818389%2C818390%2C818395%2C818396%2C818401%2C818402%2C818408%2C818409%2C818410%2C818411%2C818412%2C818413%2C818414%2C818415%2C818416%2C818417%2C818418%2C818419%2C818420%2C818421%2C818422%2C818423%2C818424%2C818425%2C818426%2C818427%2C818428%2C818429%2C818430%2C818431%2C818432%2C818433%2C818434%2C818435%2C818436%2C818437%2C818438%2C818439%2C818440%2C818441%2C818442%2C818443%2C818444%2C818445%2C818446%2C818447%2C818608%2C818609%2C818610%2C818611%2C818612%2C818613%2C818614%2C818615%2C818616%2C818617%2C818618%2C818619%2C818620%2C818621%2C818622%2C818623%2C818624%2C818625%2C818626%2C818627%2C818628%2C818629%2C818630%2C818631%2C818632%2C818633%2C818634%2C818635%2C818636%2C818637%2C818638%2C818639%2C818640%2C818641%2C818642%2C818643%2C818644%2C818645%2C818646%2C818647%2C818648%2C818649%2C818727%2C818728%2C818729%2C818730%2C818731%2C818732%2C818738%2C818739%2C818740%2C818741%2C818742%2C818743%2C818744%2C818745%2C818746%2C819783%2C819784%2C819785%2C819786%2C819787%2C819788%2C819789%2C819790%2C819791%2C819792%2C819793%2C819794%2C819795&outFields=*&outSR=4326&returnGeometry=true",
+          "sha256": "2e13c38343f939252e197e7123e612bc2ae6ac608e9102acaf6f75579307c238"
+        },
+        {
+          "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprint2D_gdb/FeatureServer/0/query?f=geojson&objectIds=819796%2C819797%2C819798%2C819799%2C819800%2C819801%2C819802%2C819803%2C819804%2C819805%2C819806%2C819807%2C819808%2C819809%2C819810%2C819811%2C819812%2C819813%2C819814%2C819815%2C819816%2C819817%2C819818%2C819819%2C819820%2C819821%2C819822%2C819823%2C819824%2C819825%2C819826%2C819827%2C819828%2C819829%2C819830%2C819831%2C820029%2C820030%2C820048%2C820049%2C820050%2C820051%2C820052%2C820053%2C820054%2C820055%2C820056%2C820057%2C820058%2C820059%2C820060%2C820061%2C820062%2C820063%2C820064%2C820065%2C820066%2C820067%2C820068%2C820069%2C820070%2C820071%2C820072%2C820073%2C820074%2C820075%2C820076%2C820077%2C820078%2C820079%2C820080%2C820081%2C820082%2C820083%2C820084%2C820085%2C820086%2C820087%2C820088%2C820089%2C820090%2C820091%2C820092%2C820093%2C820094%2C820095%2C820096%2C820097%2C820098%2C820099%2C820100%2C820101%2C820102%2C820103%2C820104%2C820105%2C820106%2C820107%2C820108%2C820109%2C820110%2C820111%2C820112%2C820113%2C820114%2C820115%2C820116%2C820117%2C820118%2C820119%2C820120%2C820121%2C820122%2C820123%2C820124%2C820125%2C820152%2C820153%2C820154%2C820155%2C836407%2C836450%2C836463%2C836471%2C836474%2C836487%2C836489%2C836500%2C836513%2C836518%2C836525%2C836526%2C836563%2C836586%2C836587%2C836626%2C836627%2C836629%2C836695%2C836727%2C836746%2C836834%2C836990%2C837087%2C837090%2C837158%2C837759%2C837808%2C837869%2C862231%2C862232%2C862235%2C862238%2C862239%2C862240%2C862241%2C862242%2C862243%2C862244%2C862245%2C862246%2C862247%2C862248%2C862249%2C862250%2C862251%2C862279%2C862281%2C862284%2C862285%2C862286%2C862292%2C862306%2C862335%2C862336%2C862393%2C862394%2C862404%2C862405%2C862409%2C862982%2C862983%2C862985%2C862986%2C862987%2C862988%2C862989%2C863165%2C863166%2C863181&outFields=*&outSR=4326&returnGeometry=true",
+          "sha256": "e866bbed838f73e356c292a956c78fa272b84aa2e0d624aaa34f893631b80137"
+        }
+      ]
+    },
+    {
+      "id": "county-ubid",
+      "item": "7abe7f01391b4113b05030414669fef5",
+      "kind": "building-addresses",
+      "fields": "OBJECTID,UBID,UNIQUEID,ADDRESS,SOURCE,TYPE,BLDG_HEIGHT,FLOORS,YEAR_BUILT,BLDG_TYPE",
+      "title": "Building Footprint Ubid Folio",
+      "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprintUBIDFolio_gdb/FeatureServer/0",
+      "itemUrl": "https://www.arcgis.com/sharing/rest/content/items/7abe7f01391b4113b05030414669fef5?f=pjson",
+      "sourceModified": "2026-09-10T13:02:09.000Z",
+      "retrieved": "2026-09-12T13:32:03.927Z",
+      "license": "Miami-Dade County custom public-data as-is terms",
+      "licenseInfo": "Miami-Dade County provides this data for use \"as is\". The areas depicted by this map/data are approximate, and are not accurate to surveying or engineering standards. The maps/data shown here are for illustration purposes only and are not suitable for site-specific decision making. Information found here should not be used for making financial or any other commitments. Miami-Dade County provides this information with the understanding that it is not guaranteed to be accurate, correct or complete and conclusions drawn from such information are the sole responsibility of the user. While every effort has been made to ensure the accuracy, correctness and timeliness of materials presented, Miami-Dade County assumes no responsibility for errors or omissions, even if Miami-Dade County is advised of the possibility of such damage.",
+      "attribution": "Miami-Dade County GIS Technical Support Group",
+      "objectIdField": "OBJECTID",
+      "featureCount": 265,
+      "path": "raw/county-ubid.geojson",
+      "sha256": "cecef41e8fa8466eaea82c1fef0cda3a0bbd3874375c5126c1ed25438d79190e",
+      "requests": [
+        {
+          "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprintUBIDFolio_gdb/FeatureServer/0/query?f=json&where=1%3D1&returnIdsOnly=true&geometry=-80.199%2C25.7596%2C-80.187%2C25.7704&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+          "sha256": "0f01a5d6de5b527bb6815a77e762bfc8092f74beb52b746bb57f06dabf098929"
+        },
+        {
+          "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprintUBIDFolio_gdb/FeatureServer/0/query?f=geojson&objectIds=1187%2C1948%2C3810%2C6586%2C7574%2C7874%2C8230%2C9688%2C10013%2C10956%2C11529%2C11560%2C15356%2C18269%2C21156%2C22407%2C22420%2C23071%2C24869%2C29469%2C30549%2C33698%2C37913%2C38740%2C40279%2C44126%2C45440%2C48949%2C50174%2C52621%2C56216%2C61982%2C62420%2C66199%2C71500%2C71787%2C78481%2C78727%2C78912%2C82213%2C82442%2C83323%2C87251%2C92122%2C92749%2C92772%2C93041%2C94753%2C95762%2C96648%2C97362%2C97635%2C100558%2C101500%2C105429%2C110163%2C112159%2C113062%2C116358%2C124655%2C125730%2C126011%2C126234%2C129516%2C133508%2C133714%2C136381%2C138562%2C139168%2C141519%2C142712%2C145366%2C147546%2C152022%2C152112%2C158013%2C158614%2C159439%2C163812%2C164584%2C164827%2C165606%2C168546%2C179398%2C180495%2C187953%2C189145%2C189793%2C195419%2C199947%2C206458%2C208216%2C215101%2C216843%2C218510%2C220144%2C220453%2C229376%2C233907%2C236159%2C236416%2C236847%2C238713%2C242408%2C243203%2C243889%2C243971%2C247047%2C247452%2C248178%2C248856%2C257158%2C262979%2C266216%2C266514%2C268488%2C273521%2C275646%2C276654%2C276663%2C279664%2C279776%2C283124%2C286213%2C288507%2C290322%2C290652%2C291893%2C294330%2C294786%2C297664%2C298354%2C303794%2C304605%2C305319%2C307837%2C310131%2C310209%2C311080%2C311372%2C312602%2C319978%2C323151%2C324158%2C324786%2C325870%2C330742%2C331581%2C331952%2C335394%2C339097%2C339258%2C345154%2C345585%2C346087%2C349515%2C351944%2C353077%2C360375%2C361636%2C361929%2C362241%2C363234%2C364754%2C367109%2C368269%2C371760%2C372193%2C376667%2C376856%2C379835%2C380858%2C383666%2C386236%2C388078%2C389155%2C390096%2C394714%2C395120%2C395234%2C395240%2C397357%2C398737%2C402288%2C407199%2C409353%2C410556%2C413331%2C424835%2C426006%2C429628%2C431506%2C433396%2C434183%2C437100%2C444597%2C447163%2C451553%2C453589%2C454646&outFields=OBJECTID%2CUBID%2CUNIQUEID%2CADDRESS%2CSOURCE%2CTYPE%2CBLDG_HEIGHT%2CFLOORS%2CYEAR_BUILT%2CBLDG_TYPE&outSR=4326&returnGeometry=true",
+          "sha256": "5286e71c652573d89e9d753974220880e4161d2c9e2c016a0a539aff043f6bcd"
+        },
+        {
+          "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/BuildingFootprintUBIDFolio_gdb/FeatureServer/0/query?f=geojson&objectIds=454760%2C455723%2C462749%2C463349%2C465454%2C467124%2C470177%2C475616%2C475827%2C478397%2C483791%2C484257%2C484869%2C489174%2C489478%2C491574%2C491948%2C493588%2C494623%2C497692%2C500633%2C501704%2C501863%2C502054%2C502189%2C505067%2C506632%2C508808%2C513486%2C515734%2C519573%2C523010%2C523332%2C527357%2C527574%2C530522%2C531747%2C533628%2C535661%2C536498%2C544662%2C544965%2C546071%2C555154%2C555805%2C560360%2C561123%2C563158%2C563267%2C563686%2C565103%2C571332%2C572635%2C574646%2C575273%2C575464%2C576339%2C578062%2C580119%2C580340%2C586334%2C586617%2C587986%2C597764%2C602142&outFields=OBJECTID%2CUBID%2CUNIQUEID%2CADDRESS%2CSOURCE%2CTYPE%2CBLDG_HEIGHT%2CFLOORS%2CYEAR_BUILT%2CBLDG_TYPE&outSR=4326&returnGeometry=true",
+          "sha256": "ab6a900db251c5b3ba4a0bfd75d7dd1a0ca83acf6ea3d1371a062ac16dac3def"
+        }
+      ]
+    }
+  ]
+}

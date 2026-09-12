@@ -725,3 +725,27 @@ select:focus-visible {
 #scope:before { width: 70vh; height: 1px; }
 #scope:after { width: 1px; height: 70vh; }
 #scope span { position: absolute; top: calc(50% + 21vh); left: calc(50% + 15vh); font: 12px ui-monospace, monospace; color: #dae1db; }
+
+#miami-source { position: fixed; top: 105px; right: 38px; width: 290px; z-index: 55; color: #edf2ef; background: #111b22e8; border: 1px solid #ffffff29; border-radius: 12px; box-shadow: 0 8px 32px #0005; pointer-events: auto; }
+#miami-source-toggle { display: flex; justify-content: space-between; width: 100%; padding: 12px 16px; background: transparent; border: 0; color: inherit; cursor: pointer; text-align: left; }
+#miami-source.in-game { top: 78px; right: 30px; }
+#miami-source-form { padding: 0 16px 12px; }
+#miami-source-form p { margin: 4px 0 12px; font-size: 22px; }
+#miami-source-form label { font-size: 11px; color: #c7d5d6; }
+#miami-source-form input { box-sizing: border-box; width: 100%; margin: 6px 0 12px; padding: 10px; border: 1px solid #ffffff3b; border-radius: 5px; background: #091217; color: white; }
+#miami-source-form small { display: block; margin-top: 10px; color: #a5b6bb; font-size: 10px; }
+.miami-source-actions { display: flex; gap: 8px; }
+.miami-source-actions button { border: 1px solid #ffffff35; border-radius: 5px; padding: 8px 12px; background: #dfebdf; color: #16221c; cursor: pointer; }
+#miami-source-status { display: block; font-size: 11px; padding: 0 16px 12px; color: #c2d4d7; }
+#miami-attribution { position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 12px; padding: 5px 12px; background: #101a22e8; color: white; font: 10px/1.4 system-ui, sans-serif; pointer-events: auto; }
+#miami-attribution img { height: 18px; width: auto; vertical-align: middle; }
+#miami-provider-credits { display: flex; flex-wrap: wrap; gap: 8px; }
+#miami-attribution a { color: white; text-decoration: underline; }
+.miami-own-credit { color: #bfced4; }
+#miami-collision-loading { position: fixed; z-index: 65; top: 80px; left: 50%; transform: translateX(-50%); background: #101a22ef; color: white; padding: 10px 18px; border-radius: 24px; font-size: 13px; }
+#miami-source [hidden], #miami-attribution [hidden], #miami-collision-loading[hidden] { display: none; }
+@media(max-width: 800px) { #miami-source { width: 240px; right: 14px; top: 85px; } .miami-own-credit { display: none; } }
+
+#miami-source.in-game:has(form[hidden]) { top: 20px; right: 320px; width: 108px; background: #111b2280; border: 0; box-shadow: none; }
+#miami-source.in-game:has(form[hidden]) #miami-source-status { display: none; }
+@media(max-width: 620px) { #miami-source.in-game:has(form[hidden]) { top: 66px; right: 18px; } }

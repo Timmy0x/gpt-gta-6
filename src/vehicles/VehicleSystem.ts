@@ -1084,10 +1084,10 @@ export class VehicleSystem {
     return true;
   }
 
-  /** Explicit creative recovery only: right the car and teleport it above the supporting surface. */
-  recover(v: Vehicle, position?: Vector3): void {
+  /** Repairs damage; returns whether a supported recovery (or caller-supplied placement) was applied. */
+  recover(v: Vehicle, position?: Vector3): boolean {
     const runtime = this.runtime.get(v.id);
-    if (!runtime || runtime.vehicle !== v) return;
+    if (!runtime || runtime.vehicle !== v) return false;
     const target = position?.clone() ?? v.root.position.clone(),
       heading = v.heading;
     if (!position) {
@@ -1098,7 +1098,13 @@ export class VehicleSystem {
         ignoreBody: v.body,
         shouldHitTriggers: false,
       });
-      const ground = this.ray.hasHit ? this.ray.hitPointWorld.y : 0;
+      if (!this.ray.hasHit || this.ray.hitNormalWorld.y <= .5 || !Number.isFinite(this.ray.hitPointWorld.y)) {
+        // Preserve the explicit repair action, but never move a car to an
+        // invented Y=0 plane when its real support has not streamed in.
+        this.repair(v);
+        return false;
+      }
+      const ground = this.ray.hitPointWorld.y;
       target.y =
         v.kind === "boat"
           ? Math.max(this.waterLevel + 0.3, ground + 0.75)
@@ -1120,6 +1126,7 @@ export class VehicleSystem {
     this.ctx.scene.onAfterPhysicsObservable.addOnce(() => {
       if (this.owns(v)) v.body.disablePreStep = true;
     });
+    return true;
   }
 
   remove(v: Vehicle): void {

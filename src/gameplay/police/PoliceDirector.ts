@@ -154,7 +154,7 @@ export class PoliceDirector {
         distance(n, p) < 245 &&
         accessible(n, this.world.obstacles, 3) &&
         !drivers.some((d) => distance(d.v.root.position, n) < 18) &&
-        this.outsideView(new Vector3(n.x, 1, n.z)),
+        this.outsideView(new Vector3(n.x, (n.y ?? 0) + 1, n.z)),
     );
     candidates.sort((a, b) =>
       roadblock
@@ -171,14 +171,14 @@ export class PoliceDirector {
   ) {
     const node = this.spawnNode(drivers, assignment === "roadblock");
     if (!node) return false;
-    (this.world as WorldContract&{ensureCollision?:(p:Vector3)=>void}).ensureCollision?.(new Vector3(node.x,1,node.z));
+    (this.world as WorldContract&{ensureCollision?:(p:Vector3)=>void}).ensureCollision?.(new Vector3(node.x,(node.y ?? 0)+1,node.z));
     const next = this.world.roads.find((n) => n.id === node.next[0]) ?? node;
     const heading =
       Math.atan2(next.x - node.x, next.z - node.z) +
       (assignment === "roadblock" ? Math.PI / 2 : 0);
     const v = this.vehicles.spawn(
       assignment === "air" ? "helicopter" : "police",
-      new Vector3(node.x, assignment === "air" ? 1.8 : 1, node.z),
+      new Vector3(node.x, (node.y ?? 0) + (assignment === "air" ? 1.8 : 1), node.z),
       heading,
     );
     v.siren = true;
@@ -208,6 +208,7 @@ export class PoliceDirector {
           this.scene,
           this.shadows,
           seat,
+          this.player.boundary,
         ),
       );
     if (assignment === "air") {
@@ -726,7 +727,7 @@ export class PoliceDirector {
     this.nextOfficerId=Math.max(this.nextOfficerId,nextOfficerId,...entries.map(e=>Number(e.id.slice(8))+1));
     for(const entry of entries.slice(-CASUALTY_LIMITS.police)){
       const vehicle=entry.vehicleId&&this.vehicles.list.find(v=>v.id===entry.vehicleId);
-      const officer=new Officer(entry.id,entry.role,vehicle?vehicle.id:"retired-response",this.scene,this.shadows,entry.seat??0);officer.health=entry.health??0;officer.state="injured";
+      const officer=new Officer(entry.id,entry.role,vehicle?vehicle.id:"retired-response",this.scene,this.shadows,entry.seat??0,this.player.boundary);officer.health=entry.health??0;officer.state="injured";
       restoreCorpse(officer.model,entry);
       if(vehicle){
         officer.state='riding';this.seatOfficer(officer,vehicle);this.vehicles.control(vehicle,STOP);

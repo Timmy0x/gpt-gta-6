@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-12",
+  "baseCommit": "09416d942e6bef1d21bc94415ff74b177c67c124",
+  "nativeTests": {
+    "command": "npm test",
+    "passed": 302,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 107220.806833
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "pass",
+    "warning": "Main JavaScript bundle exceeds Vite chunk-size recommendation."
+  },
+  "browser": {
+    "url": "http://127.0.0.1:4393/",
+    "webgl": "Actual game, live Brickell, player and vehicles observed through the browser UI.",
+    "webgpu": "Entered actual game; DOM reported 19 FPS \u00b7 WebGPU and 214 visible tiles during one sample. This is not a performance benchmark.",
+    "screenshots": "Shown inline through native browser control; provider imagery was not exported into the repository.",
+    "limitations": "Browser exercised the integrated source build immediately before removal of the unused public material-library load. The final clean build and all native tests include that removal; no additional gameplay logic changed."
+  },
+  "audit": {
+    "relativeImportsResolved": 601,
+    "packageImportsResolved": 204,
+    "literalTestInputsResolved": 56,
+    "publicWorldFiles": 13,
+    "compilerFiles": 38,
+    "result": "No dependency or exclusion blocker."
+  },
+  "coverage": {
+    "approximateMetres": [
+      361,
+      355
+    ],
+    "chunks": 7,
+    "sourceBuildingVolumes": 20,
+    "roadPieces": 13,
+    "namedTravelDestinations": 8,
+    "provisionalDatum": true,
+    "fullCity": false
+  },
+  "credentialPolicy": "No credential stored in source, files, browser persistent storage or this evidence. Dedicated read-only asset token stays in connection memory."
+}

@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "worldId": "brickell-public-common-frame-r1",
+  "policyId": "provisional-numeric-geoid18-v1",
+  "geoid": {
+    "id": "noaa-geoid18-brickell-original-samples",
+    "sourceUrl": "https://cdn.proj.org/us_noaa_g2018u0.tif",
+    "sourceSha256": "fa9a407ac7ee3f5a3694008e4bcd09ce9cc250452f0c3b11700a4960340abce2",
+    "license": "NOAA Public Domain",
+    "licenseUrl": "https://cdn.proj.org/us_noaa_README.txt",
+    "width": 6,
+    "height": 6,
+    "longitudeOrigin": -80.23333333338309,
+    "latitudeOrigin": 25.800000000000367,
+    "longitudeStep": 0.01666666666665,
+    "latitudeStep": -0.01666666666667,
+    "rasterPixelIsPoint": true,
+    "sourceColumn": 2986,
+    "sourceRow": 1932,
+    "inputHorizontal": "NAD83(2011) EPSG:6318",
+    "operation": "NAVD88 H + GEOID18 N = NAD83(2011) ellipsoid h",
+    "values": [
+      -25.33919906616211,
+      -25.39459991455078,
+      -25.45170021057129,
+      -25.512100219726562,
+      -25.57360076904297,
+      -25.636600494384766,
+      -25.357500076293945,
+      -25.4143009185791,
+      -25.47209930419922,
+      -25.533000946044922,
+      -25.595199584960938,
+      -25.658700942993164,
+      -25.37689971923828,
+      -25.434999465942383,
+      -25.49410057067871,
+      -25.55590057373047,
+      -25.618999481201172,
+      -25.682300567626953,
+      -25.398799896240234,
+      -25.45840072631836,
+      -25.519100189208984,
+      -25.582199096679688,
+      -25.645200729370117,
+      -25.708599090576172,
+      -25.423599243164062,
+      -25.48539924621582,
+      -25.547100067138672,
+      -25.610000610351562,
+      -25.672800064086914,
+      -25.73740005493164,
+      -25.451499938964844,
+      -25.5132999420166,
+      -25.57539939880371,
+      -25.638500213623047,
+      -25.701799392700195,
+      -25.766000747680664
+    ]
+  },
+  "grid": {
+    "version": 1,
+    "id": "usgs-3dep-brickell-r1",
+    "source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+    "width": 1200,
+    "height": 1080,
+    "binary": "heights.f32",
+    "componentType": "float32",
+    "byteOrder": "little-endian",
+    "rowOrder": "north-to-south",
+    "columnOrder": "west-to-east",
+    "pixelCenterLongitude": -80.198995,
+    "pixelCenterLatitude": 25.770395,
+    "longitudeStep": 0.000010000000000000379,
+    "latitudeStep": -0.000009999999999999721,
+    "extentWgs84": {
+      "xmin": -80.199,
+      "ymin": 25.759600000000002,
+      "xmax": -80.187,
+      "ymax": 25.770400000000002,
+      "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326
+      }
+    },
+    "verticalDatum": "NAVD88 (EPSG:5703), explicit selected source catalog metadata",
+    "units": "meters",
+    "confidence": "mapped",
+    "sourceResolutionM": 1,
+    "resampling": "bilinear to WGS84 0.00001-degree grid",
+    "minM": -8.31060791015625,
+    "maxM": 11.676612854003906,
+    "noData": -999999,
+    "validPixels": 1296000,
+    "sourceSha256": "89415e0c1a1fb0a35a720bf31381044ade3629deace4374435a1af48edf609b4",
+    "sourceMask": "source-mask.u8",
+    "sourceMaskSha256": "70945fa3da47c9eb3d0366310737070d9f8520eefe53ef3fdc540f6c6c9b8869",
+    "sourceMaskValues": {
+      "0": "Miami-Dade D23 one-meter sources",
+      "1": "Older coastal NAVD88 source mosaic, fallbackRasters in terrain/manifest.json"
+    },
+    "fallbackPixels": 33408,
+    "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b",
+    "byteLength": 5184000,
+    "gaps": [
+      "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+      "Water and shore elevations need water masks and tide treatment.",
+      "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins."
+    ]
+  },
+  "dryCoverageLegacy": {
+    "polygons": [
+      [
+        [
+          [
+            50.156857794654044,
+            -44.313665243219006
+          ],
+          [
+            411.29726112626986,
+            -44.313665243219006
+          ],
+          [
+            411.29726112626986,
+            310.20278725627395
+          ],
+          [
+            50.156857794654044,
+            310.20278725627395
+          ],
+          [
+            50.156857794654044,
+            -44.313665243219006
+          ]
+        ]
+      ]
+    ],
+    "sourceIds": [
+      "city-water",
+      "usgs-3dep-brickell-r1"
+    ],
+    "confidence": "mapped",
+    "gaps": [
+      "Bare-earth DEM is not a bridge-deck/curb-height survey; elevated roads need their own profile.",
+      "Water and shore elevations need water masks and tide treatment.",
+      "2015 building mesh floors and D23 terrain may differ; inspect facade/ground joins.",
+      "33408 raster cells use the explicitly masked older coastal NAVD88 fallback; the remaining cells use Miami-Dade D23 one-meter sources.",
+      "Horizontal dry-ground extent is raster coverage minus mapped City water; height uses the USGS bare-earth grid. Curbs, building thresholds and bridge decks need separate survey.",
+      "Dry coverage follows mapped land/raster extent minus mapped water, including islands; it is not a surveyed pavement-edge boundary."
+    ]
+  },
+  "heightsUrl": "terrain/heights.f32",
+  "maskUrl": "terrain/source-mask.u8"
+}

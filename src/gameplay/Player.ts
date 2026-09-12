@@ -42,7 +42,7 @@ export class Player {
   readonly swim = new Swimming();
   readonly swimAnimation = new SwimAnimation();
   water?: SwimWater;
-  readonly boundary = new WorldBoundary();
+  readonly boundary: WorldBoundary;
   crouched = false;
   god = false;
   noclip = false;
@@ -83,7 +83,9 @@ export class Player {
     public shadows: ShadowGenerator,
     public input: Input,
     spawn: Vector3,
+    boundary?: WorldBoundary,
   ) {
+    this.boundary = boundary ?? new WorldBoundary();
     this.crawlCollider = new CrawlingCollider(scene);
     this.queries = new MovementQueries(scene, () => this.crawlCollider.queryExclusions(this.controller));
     const existingBodies = new Set((scene.getPhysicsEngine() as PhysicsEngineV2).getBodies());

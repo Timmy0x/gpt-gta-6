@@ -1,0 +1,282 @@
+{
+  "id": "miami-public-common-frame-r1",
+  "status": "native-and-typecheck-passed-provisional-source-frame",
+  "origin": {
+    "latitudeDegrees": 25.7662,
+    "longitudeDegrees": -80.1907,
+    "ellipsoidHeightM": 0
+  },
+  "tests": {
+    "passed": 5,
+    "nativeResult": "output/native-result.json",
+    "projectionOracle": "data/proj-oracle.json"
+  },
+  "runtimeFiles": [
+    "src/CommonFrame.ts",
+    "src/SourceCoordinates.ts",
+    "src/PublicCollisionQueries.ts"
+  ],
+  "runtimePublicDirectory": "output/",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "33b07e5c219f84a487512e3d333383e8e0172f73c468a38df7018c86d93cfe04",
+      "bytes": 6194
+    },
+    {
+      "path": "data/dataset-r5.json",
+      "sha256": "f193d78ab76ca2d6f10f847ee1025c09a4bdcbb1dc3b5b8ed19895537dc1fbc0",
+      "bytes": 1087207
+    },
+    {
+      "path": "data/geoid18-license.txt",
+      "sha256": "38561c43f20756a77d33406c54cda8c250d18b6b30bff1e00ff51578e3682723",
+      "bytes": 19653
+    },
+    {
+      "path": "data/geoid18.json",
+      "sha256": "462c13a0bd4c662d3dd124729dbbfc71da671177d9f42be252eb6be410ab4559",
+      "bytes": 1564
+    },
+    {
+      "path": "data/i3s-geographic.bin",
+      "sha256": "729a6db57e610ccf71a134ab2bc9987ef6442895c2dc62a513ac869a04120477",
+      "bytes": 4417416
+    },
+    {
+      "path": "data/i3s-geographic.json",
+      "sha256": "5e3fdc97aba136f47c8369892483e0a50035d591d3c0e9a836cf2aafa9beea78",
+      "bytes": 24355
+    },
+    {
+      "path": "data/manifest.json",
+      "sha256": "c8daa71850555701903ae14f217929ce7f86ba25c4c38dcd3b3eb00289cd9543",
+      "bytes": 23628
+    },
+    {
+      "path": "data/preparation.json",
+      "sha256": "00340fe5bc07576a0b6fc901a3ba26619a289143151d2e3a32b6022ec70b86ce",
+      "bytes": 4478
+    },
+    {
+      "path": "data/proj-oracle.json",
+      "sha256": "55756c65606d4ec1ab0118d8934396617b2faca383c25e07cec4a7c9517abb83",
+      "bytes": 11884
+    },
+    {
+      "path": "data/raw/city-streets.geojson",
+      "sha256": "f0a58bfcfe11a38f7be93dc52cb5cf513cd7e92de9bdc686eeb7bf64f39777d7",
+      "bytes": 140434
+    },
+    {
+      "path": "data/raw/city-water.geojson",
+      "sha256": "2c7755eb36496cd2102b232649e286eee614f51072afd2db39c068f87430e11c",
+      "bytes": 239661
+    },
+    {
+      "path": "data/research/county-3d-layer.json",
+      "sha256": "fa39072bcad5bcb86cba22bf4f9c36b39026054f26cce29f7046ebfdb7c90efe",
+      "bytes": 7970
+    },
+    {
+      "path": "data/terrain/grid.json",
+      "sha256": "ebea28402b546ca9385c7b421affbabee3f0607a1f5a48054c378e9ddc4a1b05",
+      "bytes": 1808
+    },
+    {
+      "path": "data/terrain/heights.f32",
+      "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b",
+      "bytes": 5184000
+    },
+    {
+      "path": "data/terrain/manifest.json",
+      "sha256": "667525c8ba4854fbac9688cf61b48e1e768b746e1193cec1a43a41c3a6e3d879",
+      "bytes": 7185
+    },
+    {
+      "path": "data/terrain/source-mask.u8",
+      "sha256": "70945fa3da47c9eb3d0366310737070d9f8520eefe53ef3fdc540f6c6c9b8869",
+      "bytes": 1296000
+    },
+    {
+      "path": "output/chunks/-1,-1.3e8750628c9f.bin",
+      "sha256": "3e8750628c9f92422a23ac61cd67317634c4e2b652122619156b522611f60a5c",
+      "bytes": 5891436
+    },
+    {
+      "path": "output/chunks/-1,-2.68560da5367c.bin",
+      "sha256": "68560da5367ccc80fb2180d97300f7b7082690dd877b0940e24d3e55971f9d93",
+      "bytes": 18408
+    },
+    {
+      "path": "output/chunks/-1,0.12356571b1b1.bin",
+      "sha256": "12356571b1b1f248715fd715194384f87632b0ac7031abe7bd4028c168cc6510",
+      "bytes": 2893380
+    },
+    {
+      "path": "output/chunks/-2,-1.5ef7d49427b9.bin",
+      "sha256": "5ef7d49427b9b8cfa12745854c30a8e2825c077ebb432d954e65c11f70f684d8",
+      "bytes": 180720
+    },
+    {
+      "path": "output/chunks/0,-1.cb9b92872df0.bin",
+      "sha256": "cb9b92872df0b4cd845cb71d8ac5fab3cea12f307b6a6800e3d92dfb983bd127",
+      "bytes": 8018760
+    },
+    {
+      "path": "output/chunks/0,0.49e988a4bcdc.bin",
+      "sha256": "49e988a4bcdc1b8bc0b8d9aa54b366b4970fd184d76f3e45e34eb9e0b62dd497",
+      "bytes": 4186980
+    },
+    {
+      "path": "output/chunks/1,-2.7d3f623cee1e.bin",
+      "sha256": "7d3f623cee1e8bf335557c192759211d8db10b843178ddc8357b4b979ba375f1",
+      "bytes": 178884
+    },
+    {
+      "path": "output/coordinates.json",
+      "sha256": "0b9d8ddc536eef357217ae8037ade2969e58bce06cf3602637f539b984036fd7",
+      "bytes": 401083
+    },
+    {
+      "path": "output/dataset.json",
+      "sha256": "94b0b6729bc0199f756b35dae013dc07c8bddd076cf145db6bb379acb05787e7",
+      "bytes": 83371
+    },
+    {
+      "path": "output/native-result.json",
+      "sha256": "0ef962eb20de92c3fe44ae27699c02ce92c4d0e8150ee8d6b2b78ca61ab53bfa",
+      "bytes": 472
+    },
+    {
+      "path": "output/packages.json",
+      "sha256": "db95863d372f24e42292a8b79730ae04f74c51dddcb820e8b0e9c704d63cff07",
+      "bytes": 177575
+    },
+    {
+      "path": "output/runtime-query.json",
+      "sha256": "034f4b603c6b628218ca6c5b62a9a6da93d22fc2dbdc61f54be40d2ff85885bd",
+      "bytes": 5191
+    },
+    {
+      "path": "output/terrain/grid.json",
+      "sha256": "9c0255812e4aacb453bdf12e0cfb8f2480651ea9d12d6e4b5e25938bc0ce9212",
+      "bytes": 1593
+    },
+    {
+      "path": "output/terrain/heights.f32",
+      "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b",
+      "bytes": 5184000
+    },
+    {
+      "path": "output/terrain/source-mask.u8",
+      "sha256": "70945fa3da47c9eb3d0366310737070d9f8520eefe53ef3fdc540f6c6c9b8869",
+      "bytes": 1296000
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "6aeb397e18cb4e0364f87fe5a46684f9c1d29c48a431e56a26e1c3f5cb65ed77",
+      "bytes": 19572
+    },
+    {
+      "path": "package.json",
+      "sha256": "6c1821c7af02e686a4b5ffeba63919b6b544b8173f6f393bff76611faadbeea4",
+      "bytes": 559
+    },
+    {
+      "path": "scripts/compile.ts",
+      "sha256": "a08bef030d9e475064e2eae22bcb4d04c38ac1414c45fd1c27b904556339ca68",
+      "bytes": 15819
+    },
+    {
+      "path": "scripts/oracle.py",
+      "sha256": "1615217edbaa26f25eca8ae5fe32762d619505d63a5c0f8fbeab59af24902b82",
+      "bytes": 1568
+    },
+    {
+      "path": "scripts/prepare.py",
+      "sha256": "de622602fb65c69aad3831a278f617a571b66c406e254fb81df6d256eecc4555",
+      "bytes": 4897
+    },
+    {
+      "path": "src/CommonFrame.ts",
+      "sha256": "2685c8e3dffd8852c1ba11cea92c38b7b2f494ad32eabeb4b74b36c51b70bb8b",
+      "bytes": 4611
+    },
+    {
+      "path": "src/PublicCollisionQueries.ts",
+      "sha256": "13359cad866abb98c8939a2c7abe1fa7a41246e49e2c1dea9e56f5299806faf0",
+      "bytes": 2228
+    },
+    {
+      "path": "src/SourceCoordinates.ts",
+      "sha256": "a321dacc058a15856d16776a3d2736e535c2bde348e05d5c56be55c7d7029e2b",
+      "bytes": 3011
+    },
+    {
+      "path": "tests/common-frame.test.ts",
+      "sha256": "007ddef427b12fb013e92a389d0ea6a59914dba77faf1de1d8324916b386a696",
+      "bytes": 3642
+    },
+    {
+      "path": "tests/native-collision.test.ts",
+      "sha256": "65be2b862c0a22f9d879436b53af4aa0aaf9a0cf9a0e830e3af89ad5841a011f",
+      "bytes": 6522
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "c34eccccc7fc1a44f33ac7ff4228f777ebdc9abd2cecdf97f9341d0b64037c66",
+      "bytes": 374
+    },
+    {
+      "path": "vendor/core/contracts.ts",
+      "sha256": "b9b18b4eaee40c3d752cd7ca1726cf415b35a7499fddbc8d7db68abcae85da3d",
+      "bytes": 82
+    },
+    {
+      "path": "vendor/world/ChunkResidency.ts",
+      "sha256": "54147a5a2b2cb988b67362664d894432dd402a1974857e696402d6fdf42a91e6",
+      "bytes": 79
+    },
+    {
+      "path": "vendor/world/miami/MiamiElevation.ts",
+      "sha256": "f8e0e396084b8804636eb1936e336cfb0b1e42ab7063b7dc4de260e6a0e889c4",
+      "bytes": 3793
+    },
+    {
+      "path": "vendor/world/miami/MiamiGeometry.ts",
+      "sha256": "368b0c22e1b3cff7d51e2058e258a5fa71888f902c38e73bf2c6199717dfcc2e",
+      "bytes": 7656
+    },
+    {
+      "path": "vendor/world/miami/MiamiPackages.ts",
+      "sha256": "4cb5dbfb244d2a23629b3062c70ea93f04bf71bb596f75ef166fec7e3d1787f9",
+      "bytes": 4949
+    },
+    {
+      "path": "vendor/world/miami/MiamiQueries.ts",
+      "sha256": "5ba81910cad0e190ed468bd5fce9dbcf6b93113f52a2b5ccecd33933333edb97",
+      "bytes": 754
+    },
+    {
+      "path": "vendor/world/miami/MiamiRoads.ts",
+      "sha256": "f4a93f4d9bdc4257784e85fad6ab198c5ebd494b6fb581dc091647263ac38eb5",
+      "bytes": 16153
+    },
+    {
+      "path": "vendor/world/miami/MiamiTerrain.ts",
+      "sha256": "89b982383a0e8a72a98d5054b761c2f485081d9943c02df7d7e10692cebc6d83",
+      "bytes": 8314
+    },
+    {
+      "path": "vendor/world/miami/projection.ts",
+      "sha256": "8ee6b8e5d2dd232a24635d126ec7fc6483a66e75ce3bb4d3c22344fc0103f5e5",
+      "bytes": 1341
+    },
+    {
+      "path": "vendor/world/miami/types.ts",
+      "sha256": "fe239d1573fc79a15095942b6277569eef79828c20d441e7477766707a7a8d16",
+      "bytes": 2786
+    }
+  ]
+}

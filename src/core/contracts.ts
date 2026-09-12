@@ -44,11 +44,17 @@ export interface WorldLocation {
 }
 export interface RoadNode {
   id: number;
+  y?: number;
   x: number;
   z: number;
   next: number[];
 }
 export interface WorldContract {
+  readonly worldId?: string;
+  readonly bounds?: import('../world/WorldBoundary').WorldBounds;
+  readonly mapData?: import('../world/miami/types').MiamiDataset;
+  readonly pedestrianSpawns?: Vector3[];
+  readonly restrictedFacility?: boolean;
   readonly streetObjects?: import("../world/StreetObjectSystem").StreetObjects;
   spawn: Vector3;
   obstacles: Obstacle[];

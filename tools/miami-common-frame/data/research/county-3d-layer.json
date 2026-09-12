@@ -1,0 +1,370 @@
+{
+  "id": 0,
+  "version": "1C5394DE-F3CD-457C-BC92-400B135F8EA9",
+  "name": "BuildingsModels3D",
+  "href": "./layers/0",
+  "layerType": "3DObject",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326,
+    "vcsWkid": 5703,
+    "latestVcsWkid": 5703
+  },
+  "alias": "BuildingsModels3D",
+  "description": "BuildingsModels3D",
+  "capabilities": [
+    "View",
+    "Query"
+  ],
+  "drawingInfo": {
+    "renderer": {
+      "type": "simple",
+      "symbol": {
+        "type": "MeshSymbol3D",
+        "symbolLayers": [
+          {
+            "type": "Fill",
+            "material": {
+              "color": [
+                255,
+                255,
+                255
+              ],
+              "transparency": 0,
+              "colorMixMode": "multiply"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "popupInfo": {
+    "title": "{UniqueID}",
+    "mediaInfos": [],
+    "fieldInfos": [
+      {
+        "fieldName": "UniqueID",
+        "visible": true,
+        "isEditable": true,
+        "label": "UniqueID"
+      },
+      {
+        "fieldName": "OBJECTID",
+        "visible": true,
+        "isEditable": false,
+        "label": "OBJECTID"
+      },
+      {
+        "fieldName": "SOURCE",
+        "visible": true,
+        "isEditable": true,
+        "label": "SOURCE"
+      },
+      {
+        "fieldName": "BUILDING_TYPE",
+        "visible": true,
+        "isEditable": true,
+        "label": "BUILDING_TYPE"
+      },
+      {
+        "fieldName": "YEAR_UPDATE",
+        "visible": true,
+        "isEditable": true,
+        "label": "YEAR_UPDATE"
+      },
+      {
+        "fieldName": "BUILDING_HEIGHT",
+        "visible": true,
+        "isEditable": true,
+        "label": "BUILDING_HEIGHT"
+      }
+    ],
+    "popupElements": [
+      {
+        "type": "fields"
+      }
+    ]
+  },
+  "disablePopup": false,
+  "store": {
+    "id": "7AF0BB49-EE88-46AC-A65F-9B8962A310E5",
+    "profile": "meshpyramids",
+    "resourcePattern": [
+      "3dNodeIndexDocument",
+      "Attributes",
+      "SharedResource",
+      "Geometry"
+    ],
+    "rootNode": "./nodes/root",
+    "version": "1.6",
+    "extent": [
+      -80.88191621621664,
+      25.230921201515,
+      -80.11843322355669,
+      25.98067230780102
+    ],
+    "indexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
+    "vertexCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
+    "normalReferenceFrame": "earth-centered",
+    "nidEncoding": "application/vnd.esri.i3s.json+gzip; version=1.6",
+    "featureEncoding": "application/vnd.esri.i3s.json+gzip; version=1.6",
+    "geometryEncoding": "application/octet-stream; version=1.6",
+    "attributeEncoding": "application/octet-stream; version=1.6",
+    "textureEncoding": [
+      "image/jpeg",
+      "image/vnd-ms.dds"
+    ],
+    "lodType": "MeshPyramid",
+    "lodModel": "node-switching",
+    "defaultGeometrySchema": {
+      "geometryType": "triangles",
+      "header": [
+        {
+          "property": "vertexCount",
+          "type": "UInt32"
+        },
+        {
+          "property": "featureCount",
+          "type": "UInt32"
+        }
+      ],
+      "topology": "PerAttributeArray",
+      "ordering": [
+        "position",
+        "normal",
+        "uv0",
+        "color"
+      ],
+      "vertexAttributes": {
+        "position": {
+          "valueType": "Float32",
+          "valuesPerElement": 3
+        },
+        "normal": {
+          "valueType": "Float32",
+          "valuesPerElement": 3
+        },
+        "uv0": {
+          "valueType": "Float32",
+          "valuesPerElement": 2
+        },
+        "color": {
+          "valueType": "UInt8",
+          "valuesPerElement": 4
+        }
+      },
+      "featureAttributeOrder": [
+        "id",
+        "faceRange"
+      ],
+      "featureAttributes": {
+        "id": {
+          "valueType": "UInt64",
+          "valuesPerElement": 1
+        },
+        "faceRange": {
+          "valueType": "UInt32",
+          "valuesPerElement": 2
+        }
+      }
+    }
+  },
+  "heightModelInfo": {
+    "heightModel": "gravity_related_height",
+    "ellipsoid": "NAVD_1988",
+    "heightUnit": "meter"
+  },
+  "fields": [
+    {
+      "name": "UniqueID",
+      "type": "esriFieldTypeString",
+      "alias": "UniqueID"
+    },
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID"
+    },
+    {
+      "name": "SOURCE",
+      "type": "esriFieldTypeString",
+      "alias": "SOURCE"
+    },
+    {
+      "name": "BUILDING_TYPE",
+      "type": "esriFieldTypeString",
+      "alias": "BUILDING_TYPE"
+    },
+    {
+      "name": "YEAR_UPDATE",
+      "type": "esriFieldTypeSmallInteger",
+      "alias": "YEAR_UPDATE"
+    },
+    {
+      "name": "BUILDING_HEIGHT",
+      "type": "esriFieldTypeInteger",
+      "alias": "BUILDING_HEIGHT"
+    }
+  ],
+  "attributeStorageInfo": [
+    {
+      "key": "f_0",
+      "name": "UniqueID",
+      "header": [
+        {
+          "property": "count",
+          "valueType": "UInt32"
+        },
+        {
+          "property": "attributeValuesByteCount",
+          "valueType": "UInt32"
+        }
+      ],
+      "ordering": [
+        "attributeByteCounts",
+        "attributeValues"
+      ],
+      "attributeByteCounts": {
+        "valueType": "UInt32",
+        "valuesPerElement": 1
+      },
+      "attributeValues": {
+        "valueType": "String",
+        "encoding": "UTF-8",
+        "valuesPerElement": 1
+      }
+    },
+    {
+      "key": "f_1",
+      "name": "OBJECTID",
+      "header": [
+        {
+          "property": "count",
+          "valueType": "UInt32"
+        }
+      ],
+      "ordering": [
+        "ObjectIds"
+      ],
+      "objectIds": {
+        "valueType": "UInt32",
+        "valuesPerElement": 1
+      }
+    },
+    {
+      "key": "f_2",
+      "name": "SOURCE",
+      "header": [
+        {
+          "property": "count",
+          "valueType": "UInt32"
+        },
+        {
+          "property": "attributeValuesByteCount",
+          "valueType": "UInt32"
+        }
+      ],
+      "ordering": [
+        "attributeByteCounts",
+        "attributeValues"
+      ],
+      "attributeByteCounts": {
+        "valueType": "UInt32",
+        "valuesPerElement": 1
+      },
+      "attributeValues": {
+        "valueType": "String",
+        "encoding": "UTF-8",
+        "valuesPerElement": 1
+      }
+    },
+    {
+      "key": "f_3",
+      "name": "BUILDING_TYPE",
+      "header": [
+        {
+          "property": "count",
+          "valueType": "UInt32"
+        },
+        {
+          "property": "attributeValuesByteCount",
+          "valueType": "UInt32"
+        }
+      ],
+      "ordering": [
+        "attributeByteCounts",
+        "attributeValues"
+      ],
+      "attributeByteCounts": {
+        "valueType": "UInt32",
+        "valuesPerElement": 1
+      },
+      "attributeValues": {
+        "valueType": "String",
+        "encoding": "UTF-8",
+        "valuesPerElement": 1
+      }
+    },
+    {
+      "key": "f_4",
+      "name": "YEAR_UPDATE",
+      "header": [
+        {
+          "property": "count",
+          "valueType": "UInt32"
+        }
+      ],
+      "ordering": [
+        "attributeValues"
+      ],
+      "attributeValues": {
+        "valueType": "Int16",
+        "valuesPerElement": 1
+      }
+    },
+    {
+      "key": "f_5",
+      "name": "BUILDING_HEIGHT",
+      "header": [
+        {
+          "property": "count",
+          "valueType": "UInt32"
+        }
+      ],
+      "ordering": [
+        "attributeValues"
+      ],
+      "attributeValues": {
+        "valueType": "Int32",
+        "valuesPerElement": 1
+      }
+    }
+  ],
+  "statisticsInfo": [
+    {
+      "key": "f_0",
+      "name": "UniqueID",
+      "href": "./statistics/f_0"
+    },
+    {
+      "key": "f_2",
+      "name": "SOURCE",
+      "href": "./statistics/f_2"
+    },
+    {
+      "key": "f_3",
+      "name": "BUILDING_TYPE",
+      "href": "./statistics/f_3"
+    },
+    {
+      "key": "f_4",
+      "name": "YEAR_UPDATE",
+      "href": "./statistics/f_4"
+    },
+    {
+      "key": "f_5",
+      "name": "BUILDING_HEIGHT",
+      "href": "./statistics/f_5"
+    }
+  ]
+}

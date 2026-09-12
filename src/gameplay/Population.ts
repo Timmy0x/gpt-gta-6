@@ -15,6 +15,7 @@ import type { CharacterDamageKind, CharacterImpact } from "./combat/injuries";
 import { bodyInjuryEffects } from './Injuries';
 import { damageCharacter, recoverCharacter, type DamageContact } from './CharacterDamage';
 import { NpcLocomotion } from './NpcLocomotion';
+import { terminalApproachDistance, terminalSpeedLimit } from './TrafficRoute';
 export interface Pedestrian {
   id: string;
   model: Character;
@@ -71,7 +72,8 @@ export class Population {
     this.facility = new RestrictedFacility(scene,shadows,world,vehicles,player,wanted);
     this.facility.onArrest=()=>this.onArrest();
     this.facility.onMessage=(message)=>this.onMessage(message);
-    for (let i = 0; i < 30; i++) {
+    if (world.pedestrianSpawns) for (const [i,p] of world.pedestrianSpawns.entries()) this.spawnPed(p.clone(),i,false,`miami-civilian-${i}`);
+    else for (let i = 0; i < 30; i++) {
       const roadX = [-144, -72, 0, 72, 144][i % 5];
       const x = roadX + (i % 2 ? 11 : -11);
       const z = -170 + Math.floor(i / 5) * 63 + this.rng() * 12;
@@ -82,7 +84,7 @@ export class Population {
     for (const location of world.locations.filter(l => l.id.startsWith('inner-') && ['market', 'park', 'landmark'].includes(l.type))) {
       for (let i = 0; i < 3; i++) this.spawnPed(new Vector3(location.x + (i - 1) * .9, 0, location.z + 2), undefined, false, `${location.id}-civilian-${i}`);
     }
-    const nodes = world.roads;
+    const nodes = world.worldId ? world.roads.filter(node => distance(node,world.spawn)<160 && node.next.length>0) : world.roads;
     for (let i = 0; i < 12 && nodes.length; i++) {
       const node = nodes[Math.floor((i * nodes.length) / 12)];
       if (distance(node, world.spawn) < 16) continue;
@@ -129,7 +131,7 @@ export class Population {
       creative,
     };
     model.parts.forEach((m) => (m.metadata = { ped }));
-    ped.movement = new NpcLocomotion(this.scene, model, {ped});
+    ped.movement = new NpcLocomotion(this.scene, model, {ped}, this.player.boundary);
     this.pedestrians.push(ped);
     return ped;
   }
@@ -142,7 +144,7 @@ export class Population {
       police
         ? "police"
         : detailed ? "concept" : (["sedan", "suv", "truck", "coupe"][i % 4] as "sedan"),
-      new Vector3(node.x, 1.0, node.z),
+      new Vector3(node.x, (node.y ?? 0) + 1.0, node.z),
       heading,
     );
     if (detailed) this.vehicles.setPaint(v, i < 6 ? "#51677D" : "#D9D9D2");
@@ -235,6 +237,7 @@ export class Population {
     this.police.update(dt, this.drivers, this.policeEnabled,this.facility.observesSuspect);
     const trafficPeople = this.pedestrians.filter(ped => !ped.vehicleId && ped.health > 0 && ped.model.root.isEnabled()).map(ped => ped.model.root.position);
     if (!this.player.vehicle && this.player.deadTimer <= 0) trafficPeople.push(this.player.position);
+    const roadNodes = new Map(this.world.roads.map(node => [node.id, node]));
     for (const d of this.drivers) {
       if (d.police || d.v.occupied) continue;
       if (!this.occupancy.canDrive(d.v)) {
@@ -255,15 +258,27 @@ export class Population {
         continue;
       }
       const p = d.v.root.position;
-      let target = this.world.roads.find((n) => n.id === d.target);
-      if (!target) continue;
-      if (distance(p, target) < 9) {
+      let target = roadNodes.get(d.target);
+      if (!target) {
+        d.stuck = 0;
+        this.vehicles.control(d.v, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
+        continue;
+      }
+      // Keep a terminal as the target: there is no authored road beyond it.
+      if (distance(p, target) < 9 && target.next.length > 0) {
         const options = target.next.filter((n) => n !== d.previous);
         d.previous = target.id;
         d.target =
           options[Math.floor(this.rng() * options.length)] ?? target.next[0];
-        target = this.world.roads.find((n) => n.id === d.target) || target;
+        const nextTarget = roadNodes.get(d.target);
+        if (!nextTarget) {
+          d.stuck = 0;
+          this.vehicles.control(d.v, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
+          continue;
+        }
+        target = nextTarget;
       }
+      const terminalDistance = terminalApproachDistance(roadNodes, target, p);
       const tx = target.x,
         tz = target.z;
       const heading = Math.atan2(d.v.root.forward.x, d.v.root.forward.z);
@@ -296,12 +311,14 @@ export class Population {
           (Math.floor(this.ticks / 10) % 2 === 0)
       )
         cruise = 0;
-      d.stuck = Math.abs(d.v.speed) < 0.7 && cruise > 0 ? d.stuck + dt : 0;
+      if (terminalDistance !== null) cruise = Math.min(cruise, terminalSpeedLimit(terminalDistance));
+      // Waiting at a map endpoint is intentional, so never invent a reverse route.
+      d.stuck = terminalDistance === null && Math.abs(d.v.speed) < 0.7 && cruise > 0 ? d.stuck + dt : 0;
       this.vehicles.control(d.v, {
         throttle: d.stuck > 6 ? -0.45 : Math.abs(d.v.speed) < cruise ? 0.65 : 0,
         steer: d.stuck > 6 ? -steer : steer,
-        brake: Math.abs(d.v.speed) > cruise + 1 ? 0.75 : 0,
-        handbrake: false,
+        brake: cruise <= 0 ? 1 : Math.abs(d.v.speed) > cruise ? 0.75 : 0,
+        handbrake: terminalDistance !== null && cruise <= 0 && Math.abs(d.v.speed) < .7,
         lift: 0,
       });
       if (d.stuck > 8) d.stuck = 0;

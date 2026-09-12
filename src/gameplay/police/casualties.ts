@@ -68,7 +68,8 @@ export function restoreCorpse(model:Character,entry:Casualty):void {
     for(const pose of entry.pose){const bone=model.skeleton.bones.find(b=>b.name.endsWith('/'+pose.name));if(bone){bone.setPosition(Vector3.FromArray(pose.position));bone.setRotationQuaternion(Quaternion.FromArray(pose.rotation));}}
   }else if(legacy){
     model.dead=false;model.root.metadata={...model.root.metadata,ragdollActive:false};model.animate(1/60,0);model.dead=(entry.health??0)<=0;
-    model.root.rotation.z=Math.PI/2;model.root.position.y=Math.max(.18,entry.y);
+    // Saved roots are already in their world's local frame; valid ground can be below Y=0.
+    model.root.rotation.z=Math.PI/2;
   }
   const physical=model.dead||legacy;
   model.root.metadata={...model.root.metadata,ragdollActive:physical,ragdollRecovering:false,ragdollHandoffActive:false,injuryStatus:model.dead?'dead':legacy?model.injury?.remaining===null?'incapacitated':'knocked-down':bodyInjuryEffects(model.bodyInjuries).mode};

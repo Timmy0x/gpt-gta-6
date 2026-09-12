@@ -50,6 +50,19 @@ test("save validation accepts extended and original version-one snapshots", () =
   const { combat, civilians, props, ...legacy } = data;
   assert.ok(load(legacy));
 });
+test('Miami saves are namespaced and never reinterpret the legacy world coordinates',()=>{
+  const old=Object.getOwnPropertyDescriptor(globalThis,'localStorage'),storage=new Map<string,string>();
+  Object.defineProperty(globalThis,'localStorage',{configurable:true,value:{getItem:(key:string)=>storage.get(key)??null,setItem:(key:string,value:string)=>storage.set(key,value)}});
+  try{
+    const legacy=fixture();Persistence.save(legacy as Parameters<typeof Persistence.save>[0]);
+    assert.equal(Persistence.load('brickell-core-r1'),null);
+    const miami={...legacy,worldId:'brickell-core-r1',player:{...legacy.player,x:237,z:149}};
+    Persistence.save(miami as Parameters<typeof Persistence.save>[0]);
+    assert.equal(Persistence.load()?.player.x,0);assert.equal(Persistence.load('brickell-core-r1')?.player.x,237);
+    assert.equal(storage.size,2);assert.equal(Persistence.load('other-map'),null);
+    assert.throws(()=>Persistence.save({...miami,worldId:'bad/world'} as Parameters<typeof Persistence.save>[0]),/identity/);
+  }finally{if(old)Object.defineProperty(globalThis,'localStorage',old);else Reflect.deleteProperty(globalThis,'localStorage');}
+});
 test("malformed prop rotation and duplicate IDs are rejected before world restoration", () => {
   for (const rotation of [undefined, [], [0, 0, 0, 0], [0, 0, 1]]) {
     const data = fixture();

@@ -10,6 +10,10 @@ export interface OceanOptions {
   bounds?: BoundsXZ;
   /** Supply the same bathymetry used by physical seabed collision. */
   floorHeightAt?: (x: number, z: number) => number;
+  /** Authored geographic water polygons; y coordinates are relative to waterLevel. */
+  surfaceGeometry?: { positions: number[]; normals: number[]; uvs: number[]; indices: number[] };
+  containsPoint?: (x: number, z: number) => boolean;
+  shoreFoam?: boolean;
 }
 export const OCEAN_LIMITS = { targetSize: 512, refreshRate: 2, reflectionMeshes: 32, refractionMeshes: 16, reflectionTriangles: 80000, refractionTriangles: 40000, candidateRadius: 720 } as const;
 const clamp = (value: number, min = 0, max = 1) => Math.max(min, Math.min(max, value));
@@ -62,6 +66,7 @@ export class Ocean {
   private readonly cameraObserver: Observer<Camera>;
   private readonly extinction: Underwater;
   private readonly floorHeightAt: (x: number, z: number) => number;
+  private readonly containsPoint?: (x: number, z: number) => boolean;
   private readonly foamPositions: Float32Array;
   private readonly foamColors: Float32Array;
   private readonly foamPatches: { z: number; length: number; width: number; phase: number }[] = [];
@@ -76,7 +81,8 @@ export class Ocean {
   constructor(private readonly scene: Scene, options: OceanOptions = {}) {
     this.waterLevel = options.waterLevel ?? -.18; this.shorelineX = options.shorelineX ?? 210;
     this.bounds = { minX: this.shorelineX, maxX: 14210, minZ: -9000, maxZ: 9000, ...options.bounds };
-    if (!Number.isFinite(this.waterLevel) || !Number.isFinite(this.shorelineX) || Object.values(this.bounds).some(value => !Number.isFinite(value)) || this.bounds.maxX <= this.bounds.minX || this.bounds.maxZ <= this.bounds.minZ || this.bounds.minX < this.shorelineX) throw new Error('Ocean needs finite non-empty bounds east of its shoreline');
+    if (!Number.isFinite(this.waterLevel) || !Number.isFinite(this.shorelineX) || Object.values(this.bounds).some(value => !Number.isFinite(value)) || this.bounds.maxX <= this.bounds.minX || this.bounds.maxZ <= this.bounds.minZ || (!options.surfaceGeometry && this.bounds.minX < this.shorelineX)) throw new Error('Ocean needs finite non-empty bounds east of its shoreline');
+    this.containsPoint = options.containsPoint;
     this.floorHeightAt = options.floorHeightAt ?? ((x: number) => this.waterLevel - Math.min(80, .12 + Math.max(0, x - this.shorelineX) * .065));
     this.material = new OceanWaterMaterial('ocean/native-water', scene, new Vector2(OCEAN_LIMITS.targetSize, OCEAN_LIMITS.targetSize));
     this.material.backFaceCulling = false;
@@ -126,12 +132,13 @@ export class Ocean {
     this.mesh = new Mesh('ocean/surface', scene);
     const positions: number[] = [], normals: number[] = [], uv: number[] = [], indices: number[] = [];
     const columns = 48, rows = 384, width = this.bounds.maxX - this.bounds.minX, depth = this.bounds.maxZ - this.bounds.minZ;
-    for (let row = 0; row <= rows; row++) for (let column = 0; column <= columns; column++) {
+    if (!options.surfaceGeometry) for (let row = 0; row <= rows; row++) for (let column = 0; column <= columns; column++) {
       const t = column / columns, x = this.bounds.minX + width * t * t * t, z = this.bounds.minZ + depth * row / rows;
       positions.push(x, 0, z); normals.push(0, 1, 0); uv.push(x / 5, z / 5);
     }
-    for (let row = 0; row < rows; row++) for (let column = 0; column < columns; column++) { const a = row * (columns + 1) + column, b = a + columns + 1; indices.push(a, a + 1, b, a + 1, b + 1, b); }
-    const data = new VertexData(); data.positions = positions; data.normals = normals; data.uvs = uv; data.indices = indices; data.applyToMesh(this.mesh);
+    if (!options.surfaceGeometry) for (let row = 0; row < rows; row++) for (let column = 0; column < columns; column++) { const a = row * (columns + 1) + column, b = a + columns + 1; indices.push(a, a + 1, b, a + 1, b + 1, b); }
+    const geometry = options.surfaceGeometry ?? { positions, normals, uvs: uv, indices };
+    const data = new VertexData(); data.positions = geometry.positions; data.normals = geometry.normals; data.uvs = geometry.uvs; data.indices = geometry.indices; if (geometry.positions.length) data.applyToMesh(this.mesh);
     this.mesh.position.y = this.waterLevel; this.mesh.material = this.material; this.mesh.isPickable = false; this.mesh.metadata = { ocean: true }; this.mesh.receiveShadows = true;
 
     this.foam = new Mesh('ocean/broken-shore-foam', scene);
@@ -145,13 +152,14 @@ export class Ocean {
     this.foamTexture.name = 'ocean/original-cellular-foam'; this.foamTexture.hasAlpha = true; this.foamTexture.wrapV = Texture.WRAP_ADDRESSMODE;
     this.foamMaterial = new StandardMaterial('ocean/foam', scene); this.foamMaterial.diffuseTexture = this.foamTexture; this.foamMaterial.useAlphaFromDiffuseTexture = true; this.foamMaterial.alpha = .55; this.foamMaterial.specularColor.setAll(0); this.foamMaterial.emissiveColor.setAll(.025); this.foamMaterial.backFaceCulling = false; this.foamMaterial.disableDepthWrite = true; this.foamMaterial.transparencyMode = Material.MATERIAL_ALPHABLEND;
     this.foam.material = this.foamMaterial; this.foam.isPickable = false; this.foam.metadata = { ocean: true }; this.foam.alwaysSelectAsActiveMesh = true;
+    if (options.shoreFoam === false) this.foam.setEnabled(false);
     this.extinction = new Underwater(scene);
     // This event follows the camera's render interpolation and precedes its material
     // RTTs, so a surface crossing cannot leave the targets on the previous medium.
     this.cameraObserver = scene.onBeforeCameraRenderObservable.add(camera => this.prepareView(camera));
   }
 
-  contains(x: number, z: number): boolean { return Number.isFinite(x) && Number.isFinite(z) && x >= this.bounds.minX && x <= this.bounds.maxX && z >= this.bounds.minZ && z <= this.bounds.maxZ; }
+  contains(x: number, z: number): boolean { return Number.isFinite(x) && Number.isFinite(z) && x >= this.bounds.minX && x <= this.bounds.maxX && z >= this.bounds.minZ && z <= this.bounds.maxZ && (this.containsPoint?.(x,z) ?? true); }
   surfaceHeight(x: number, z: number): number | null { return this.contains(x, z) ? this.waterLevel : null; }
   depthAt(x: number, z: number): number { if (!this.contains(x, z)) return 0; const floor = this.floorHeightAt(x, z); return Number.isFinite(floor) ? Math.max(0, this.waterLevel - floor) : 0; }
   setRenderSources(meshes: readonly AbstractMesh[] | undefined): void { this.sources = meshes; this.selectionClock = 1; }

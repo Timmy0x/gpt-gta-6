@@ -1,0 +1,43 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import HavokPhysics from '@babylonjs/havok';
+import { DirectionalLight,HavokPlugin,NullEngine,RawTexture,Scene,ShadowGenerator,Vector3 } from '@babylonjs/core';
+import { MiamiWorld } from '../src/world/miami/MiamiWorld';
+import { MovementQueries } from '../src/gameplay/MovementQueries';
+import { WorldBoundary } from '../src/world/WorldBoundary';
+import { findGroundVehicleSpawn } from '../src/vehicles/spawnPlacement';
+
+test('source Brickell world loads exact chunk bytes, has a supported sidewalk spawn and starter vehicle space',async t=>{
+  const descriptor=Object.getOwnPropertyDescriptor(globalThis,'name');Object.defineProperty(globalThis,'name',{value:'',configurable:true});t.after(()=>{if(descriptor)Object.defineProperty(globalThis,'name',descriptor);else Reflect.deleteProperty(globalThis,'name');});
+  const bytes=await readFile(new URL('../node_modules/@babylonjs/havok/lib/esm/HavokPhysics.wasm',import.meta.url));
+  const havok=await HavokPhysics({wasmBinary:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength) as ArrayBuffer});
+  const engine=new NullEngine(),scene=new Scene(engine);scene.enablePhysics(new Vector3(0,-9.81,0),new HavokPlugin(false,havok));
+  const light=new DirectionalLight('fixture',new Vector3(-1,-1,0),scene),shadows=new ShadowGenerator(128,light);
+  const root=new URL('../public/',import.meta.url);
+  const fetcher=(async (input:RequestInfo|URL)=>{
+    const url=new URL(String(input)),path=url.pathname.replace(/^\//,'');if(path.includes('..'))throw new Error('Unexpected path');
+    const bytes=await readFile(new URL(path,root));return new Response(bytes);
+  }) as typeof fetch;
+  const world=new MiamiWorld({scene,shadows},{baseUrl:'https://fixture.invalid/world/miami/',fetch:fetcher,loadTexture:()=>RawTexture.CreateRGBATexture(new Uint8Array([128,128,255,255]),1,1,scene)});
+  t.after(()=>{world.dispose();shadows.dispose();scene.dispose();engine.dispose();});
+  await world.ready;
+  assert.equal(world.worldId,'brickell-public-common-frame-r1');assert.equal(world.restrictedFacility,false);assert.ok(world.roads.length>20);
+  assert.ok(world.spawn.y < -15, "common-frame local Up is below the ellipsoid origin");
+  assert.equal(world.collisionReady(world.spawn),true);
+  const queries=new MovementQueries(scene);t.after(()=>queries.dispose());
+  assert.ok(queries.clear(world.spawn),'standing capsule has real clearance');
+  world.setSourceVisible(true);
+  const ground=queries.ground(world.spawn);assert.ok(ground);assert.ok(Math.abs(world.spawn.y-ground.y-.94)<.02);
+  assert.ok(world.pedestrianSpawns.length>=10);
+  const node=[...world.roads].filter(node=>node.next.length&&Math.hypot(node.x-world.spawn.x,node.z-world.spawn.z)>9).sort((a,b)=>Math.hypot(a.x-world.spawn.x,a.z-world.spawn.z)-Math.hypot(b.x-world.spawn.x,b.z-world.spawn.z))[0];
+  const next=world.roads.find(n=>n.id===node.next[0])!,heading=Math.atan2(next.x-node.x,next.z-node.z);
+  const car=findGroundVehicleSpawn({scene,kind:'coupe',origin:new Vector3(node.x,(node.y??world.floorHeightAt(node.x,node.z))+1,node.z),heading,obstacles:world.obstacles,vehicles:[]});
+  assert.ok(car,'real road has enough physical support and full body clearance for the starter car');
+  const boundary=new WorldBoundary({bounds:world.bounds,floorHeight:(x,z)=>world.floorHeightAt(x,z),fallback:world.spawn});
+  assert.equal(boundary.recovery(world.spawn),null);
+  assert.ok(boundary.recovery(new Vector3(world.bounds.maxX+20,-100,0)));
+  await assert.rejects(()=>world.preparePosition(new Vector3(world.bounds.maxX+10,1,0)),/outside/);
+  const stats=world.getStreamingStats();assert.equal(stats.failedPackages,0);assert.ok(stats.residentColliders>20);assert.ok(stats.loadedPackages<=stats.totalPackages);
+  console.log(JSON.stringify({spawn:world.spawn.asArray(),car:car.asArray(),pedestrians:world.pedestrianSpawns.length,roads:world.roads.length,stats}));
+});

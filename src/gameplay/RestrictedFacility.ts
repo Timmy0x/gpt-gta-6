@@ -2,7 +2,7 @@ import type { CharacterDamageKind, CharacterImpact } from "./combat/injuries";
 import { damageCharacter, type DamageContact } from './CharacterDamage';
 import { bodyInjuryEffects } from './Injuries';
 import { castSegment } from './combat/queries';
-import { Color3, MeshBuilder, PBRMaterial, PhysicsAggregate, PhysicsMotionType, PhysicsShapeType, Quaternion, Ray, Vector3, type Scene, type ShadowGenerator } from "@babylonjs/core";
+import { Color3, MeshBuilder, PBRMaterial, PhysicsAggregate, PhysicsMotionType, PhysicsShapeType, Quaternion, Ray, Vector3, type Mesh, type Scene, type ShadowGenerator } from "@babylonjs/core";
 import type { Obstacle, RoadNode, WorldContract } from "../core/contracts";
 import { clamp, distance, lineBlocked, type Point2 } from "../core/math";
 import { RESTRICTED_COMPOUND } from "../world/layout";
@@ -50,16 +50,17 @@ export class RestrictedFacility {
   private lastKnown:Point2={...B.entrance};
   private patrolIndices=[0,0,0,0];
   private gateAngle=0;
-  private readonly gate;
-  private readonly gatePhysics:PhysicsAggregate;
-  private readonly beacon;
-  private readonly material:PBRMaterial;
-  private readonly alarmMaterial:PBRMaterial;
+  private readonly gate?:Mesh;
+  private readonly gatePhysics?:PhysicsAggregate;
+  private readonly beacon?:Mesh;
+  private readonly material?:PBRMaterial;
+  private readonly alarmMaterial?:PBRMaterial;
   private nav:RoadNode[]=[];
   private obstacleCount=-1;
   private seconds=0;
   constructor(private scene:Scene,private shadows:ShadowGenerator,private world:WorldContract,private vehicles:VehicleSystem,private player:Player,private wanted:WantedSystem){
     this.lastPlayer=player.position.clone();
+    if(world.restrictedFacility===false)return;
     this.material=new PBRMaterial("reserve/gate-material",scene);this.material.albedoColor=new Color3(.85,.73,.28);this.material.roughness=.75;
     this.gate=MeshBuilder.CreateBox("reserve/access-boom",{width:.18,height:.17,depth:12.6},scene);this.gate.position.set(-456,1.15,144);this.gate.rotationQuaternion=Quaternion.Identity();this.gate.material=this.material;this.gate.metadata={cameraBlocker:true,facility:B.id};shadows.addShadowCaster(this.gate);
     this.gatePhysics=new PhysicsAggregate(this.gate,PhysicsShapeType.BOX,{mass:0,friction:.5},scene);this.gatePhysics.body.setMotionType(PhysicsMotionType.ANIMATED);
@@ -68,9 +69,9 @@ export class RestrictedFacility {
     this.createGuards();
   }
   private createGuards(){
-    this.guards=ROUTES.map((route,i)=>{const guard=new Officer(`reserve-guard-${i+1}`,"military",B.id,this.scene,this.shadows);guard.model.root.position.set(route[0].x,.15,route[0].z);guard.model.root.rotation.y=Math.PI/2;guard.state="search";guard.model.root.setEnabled(false);return guard;});
+    this.guards=ROUTES.map((route,i)=>{const guard=new Officer(`reserve-guard-${i+1}`,"military",B.id,this.scene,this.shadows,0,this.player.boundary);guard.model.root.position.set(route[0].x,.15,route[0].z);guard.model.root.rotation.y=Math.PI/2;guard.state="search";guard.model.root.setEnabled(false);return guard;});
   }
-  get canRequestAccess(){return distance(this.player.position,B.entrance)<B.warningRadius&&!insideFacility(this.player.position);}
+  get canRequestAccess(){return this.world.restrictedFacility!==false&&distance(this.player.position,B.entrance)<B.warningRadius&&!insideFacility(this.player.position);}
   requestAccess(){
     if(!this.canRequestAccess)return false;
     if(this.wanted.stars||this.wanted.phase==="reporting"||this.player.aim||this.resistance>0){this.onMessage("RESERVE: Visitor access denied while wanted or armed. Leave the gate area.");return false;}
@@ -78,6 +79,7 @@ export class RestrictedFacility {
     this.onMessage("RESERVE: 90-second visitor pass granted. Keep weapons lowered; use the marked gate.");return true;
   }
   resist(seconds=12){
+    if(this.world.restrictedFacility===false)return;
     if(annexDistance(this.player.position)>60)return;
     this.resistance=Math.max(this.resistance,seconds);this.accessRemaining=0;
     if(insideFacility(this.player.position)||this.guards.some(g=>g.health>0&&distance(g.position,this.player.position)<45&&clearSight(g.position,this.player.position,this.world.obstacles)))this.alarm("Armed incident reported at the annex.");
@@ -99,6 +101,7 @@ export class RestrictedFacility {
     if(guard.health<=0){guard.state="injured";guard.controller?.dispose();guard.controller=null;if(!this.onCharacterHit){guard.model.root.rotation.z=Math.PI/2;guard.model.root.position.y=.35;}}
   }
   update(dt:number,enabled=true){
+    if(this.world.restrictedFacility===false)return;
     this.seconds+=dt;this.messageTimer-=dt;this.accessRemaining=Math.max(0,this.accessRemaining-dt);this.resistance=Math.max(0,this.resistance-dt);this.observesSuspect=false;
     const p=this.player.position,inside=insideFacility(p),speed=distance(p,this.lastPlayer)/Math.max(.001,dt);this.lastPlayer.copyFrom(p);
     const near=annexDistance(p)<220;
@@ -117,9 +120,9 @@ export class RestrictedFacility {
     }
     const open=!enabled||inside||this.accessRemaining>0;
     this.gateAngle+=clamp((open?Math.PI/2:0)-this.gateAngle,-dt*1.1,dt*1.1);
-    this.gatePhysics.body.setTargetTransform(new Vector3(-456,1.15+Math.sin(this.gateAngle)*6.3,137.7+Math.cos(this.gateAngle)*6.3),Quaternion.RotationAxis(new Vector3(1,0,0),-this.gateAngle));
+    this.gatePhysics!.body.setTargetTransform(new Vector3(-456,1.15+Math.sin(this.gateAngle)*6.3,137.7+Math.cos(this.gateAngle)*6.3),Quaternion.RotationAxis(new Vector3(1,0,0),-this.gateAngle));
     const flash=this.phase==="alarm"&&Math.sin(this.seconds*12)>0;
-    this.alarmMaterial.emissiveColor.set(flash?1:0,flash?.05:.05,0);
+    this.alarmMaterial!.emissiveColor.set(flash?1:0,flash?.05:.05,0);
     if(near!==this.active){
       this.active=near;
       for(const guard of this.guards){guard.model.root.setEnabled(near);if(!near){guard.weapon.setEnabled(false);guard.flash.setEnabled(false);guard.controller?.dispose();guard.controller=null;}}
@@ -169,8 +172,8 @@ export class RestrictedFacility {
     const anatomical=castSegment(this.scene,origin,target.add(delta.normalizeToNew().scale(1)),{roots:[guard.model.root],characters:[this.player.model]});
     if(anatomical?.mesh?.metadata?.characterOwner===this.player)this.player.hurt(7,false,{kind:'projectile',region:anatomical.region,point:anatomical.point,direction:delta});
   }
-  reset(revive=true){if(revive){this.guards.forEach(g=>g.dispose());this.createGuards();this.active=false;this.patrolIndices=[0,0,0,0];}this.phase="quiet";this.warningRemaining=0;this.accessRemaining=0;this.alarmRemaining=0;this.arrestProgress=0;this.resistance=0;this.lastPlayer.copyFrom(this.player.position);}
+  reset(revive=true){if(this.world.restrictedFacility===false)return;if(revive){this.guards.forEach(g=>g.dispose());this.createGuards();this.active=false;this.patrolIndices=[0,0,0,0];}this.phase="quiet";this.warningRemaining=0;this.accessRemaining=0;this.alarmRemaining=0;this.arrestProgress=0;this.resistance=0;this.lastPlayer.copyFrom(this.player.position);}
   restoreCasualties(entries:Casualty[]){for(const entry of entries){const guard=this.guards.find(g=>g.id===entry.id);if(!guard)continue;guard.health=entry.health??0;guard.state="injured";guard.controller?.dispose();guard.controller=null;restoreCorpse(guard.model,entry);guard.weapon.setEnabled(false);}}
-  get stats(){return {id:B.id,classification:B.classification,phase:this.phase,inside:insideFacility(this.player.position),accessSeconds:Math.ceil(this.accessRemaining),warningSeconds:Math.ceil(this.warningRemaining),guards:this.guards.filter(g=>g.health>0).length,activeGuards:this.active?this.guards.filter(g=>g.health>0).length:0,gateOpen:this.gateAngle>1.4,arrestProgress:this.arrestProgress};}
-  dispose(){this.guards.forEach(g=>g.dispose());this.guards=[];this.gatePhysics.dispose();this.gate.dispose();this.beacon.dispose();this.material.dispose();this.alarmMaterial.dispose();}
+  get stats(){return {id:B.id,classification:B.classification,phase:this.phase,inside:this.world.restrictedFacility!==false&&insideFacility(this.player.position),accessSeconds:Math.ceil(this.accessRemaining),warningSeconds:Math.ceil(this.warningRemaining),guards:this.guards.filter(g=>g.health>0).length,activeGuards:this.active?this.guards.filter(g=>g.health>0).length:0,gateOpen:this.gateAngle>1.4,arrestProgress:this.arrestProgress};}
+  dispose(){this.guards.forEach(g=>g.dispose());this.guards=[];this.gatePhysics?.dispose();this.gate?.dispose();this.beacon?.dispose();this.material?.dispose();this.alarmMaterial?.dispose();}
 }

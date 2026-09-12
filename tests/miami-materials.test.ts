@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {NullEngine,RawTexture,Scene,Texture} from '@babylonjs/core';
 import {createMiamiMaterialLibrary,type MiamiMaterialManifest} from '../src/world/miami/MiamiMaterials';
 
-const manifest=JSON.parse(await readFile(new URL('../public/world/miami/materials/manifest.json',import.meta.url),'utf8')) as MiamiMaterialManifest;
+const manifest=JSON.parse(await readFile(new URL('./fixtures/miami-materials.json',import.meta.url),'utf8')) as MiamiMaterialManifest;
 
 test('Miami PBR channels keep their measured metre scale, linear data and shared scene resources',()=>{
  const engine=new NullEngine(),scene=new Scene(engine),requests:string[]=[],owned:Texture[]=[];
@@ -29,19 +29,10 @@ test('Miami PBR channels keep their measured metre scale, linear data and shared
  }finally{library.dispose();scene.dispose();engine.dispose();}
 });
 
-test('all 48 Miami material maps retain publisher checksums and expected channel/resolution pairs',async context=>{
- let files=0,bytes=0;
- for(const entry of manifest.entries){
-  assert.equal(entry.license,'CC0-1.0');assert.ok(entry.tileMetres.every(metres=>metres>0&&metres<10));
-  for(const resolution of ['1k','2k']){
-   const level=entry.levels.find(level=>level.resolution===resolution)!;assert.ok(level);assert.deepEqual(level.maps.map(map=>map.channel).sort(),['Diffuse','arm','nor_gl']);
-   for(const map of level.maps){
-    const content=await readFile(new URL('../public'+map.url,import.meta.url));assert.equal(content.length,map.bytes);assert.equal(createHash('sha256').update(content).digest('hex'),map.sha256);
-    assert.equal(content[0],0xff);assert.equal(content[1],0xd8);files++;bytes+=content.length;
-   }
-  }
- }
- assert.equal(files,48);context.diagnostic(JSON.stringify({files,bytes}));
+test('public common-frame collision does not require retired surface textures',async()=>{
+ const packages=JSON.parse(await readFile(new URL('../public/world/miami/packages.json',import.meta.url),'utf8'));
+ assert.ok(packages.chunks.length>0);
+ for(const chunk of packages.chunks)for(const mesh of chunk.meshes)assert.equal(mesh.render,false);
 });
 
 test('an incomplete material fails before allocating scene textures or a partial material',()=>{

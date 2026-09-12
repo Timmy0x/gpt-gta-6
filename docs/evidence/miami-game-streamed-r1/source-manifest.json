@@ -1,0 +1,983 @@
+{
+  "baseCommit": "09416d942e6bef1d21bc94415ff74b177c67c124",
+  "files": [
+    {
+      "path": "docs/miami/playable-miami.md",
+      "action": "add",
+      "sha256": "2d0bc50099a0912abcac5eaf5de1a2f553a1b80577fdac95b271da5d403e6133",
+      "bytes": 3229
+    },
+    {
+      "path": "index.html",
+      "action": "modify",
+      "sha256": "edf2036d6a02017e57cd656f98a9b3d8e07ec290f590c6203093c9bc444d3c95",
+      "bytes": 495
+    },
+    {
+      "path": "package-lock.json",
+      "action": "modify",
+      "sha256": "1a8b9cc92c5263b3592b59ead3c0c7f215331821c90939a581b284768ff69033",
+      "bytes": 50929
+    },
+    {
+      "path": "package.json",
+      "action": "modify",
+      "sha256": "2ab8d51548c5d9aa81b837d2dd0c019eab4b94307e5bf75de78d7a775387ef14",
+      "bytes": 779
+    },
+    {
+      "path": "public/attribution/google-maps.png",
+      "action": "add",
+      "sha256": "5164f7887666f68dcb3d6c26b757a118f4440a4b0974a5245d56709281750049",
+      "bytes": 4705
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-1.3e8750628c9f.bin",
+      "action": "add",
+      "sha256": "3e8750628c9f92422a23ac61cd67317634c4e2b652122619156b522611f60a5c",
+      "bytes": 5891436
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-2.68560da5367c.bin",
+      "action": "add",
+      "sha256": "68560da5367ccc80fb2180d97300f7b7082690dd877b0940e24d3e55971f9d93",
+      "bytes": 18408
+    },
+    {
+      "path": "public/world/miami/chunks/-1,0.12356571b1b1.bin",
+      "action": "add",
+      "sha256": "12356571b1b1f248715fd715194384f87632b0ac7031abe7bd4028c168cc6510",
+      "bytes": 2893380
+    },
+    {
+      "path": "public/world/miami/chunks/-2,-1.5ef7d49427b9.bin",
+      "action": "add",
+      "sha256": "5ef7d49427b9b8cfa12745854c30a8e2825c077ebb432d954e65c11f70f684d8",
+      "bytes": 180720
+    },
+    {
+      "path": "public/world/miami/chunks/0,-1.cb9b92872df0.bin",
+      "action": "add",
+      "sha256": "cb9b92872df0b4cd845cb71d8ac5fab3cea12f307b6a6800e3d92dfb983bd127",
+      "bytes": 8018760
+    },
+    {
+      "path": "public/world/miami/chunks/0,0.49e988a4bcdc.bin",
+      "action": "add",
+      "sha256": "49e988a4bcdc1b8bc0b8d9aa54b366b4970fd184d76f3e45e34eb9e0b62dd497",
+      "bytes": 4186980
+    },
+    {
+      "path": "public/world/miami/chunks/1,-2.7d3f623cee1e.bin",
+      "action": "add",
+      "sha256": "7d3f623cee1e8bf335557c192759211d8db10b843178ddc8357b4b979ba375f1",
+      "bytes": 178884
+    },
+    {
+      "path": "public/world/miami/dataset.json",
+      "action": "add",
+      "sha256": "94b0b6729bc0199f756b35dae013dc07c8bddd076cf145db6bb379acb05787e7",
+      "bytes": 83371
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "56bd8e591a3db579846fcb5185f60b0651e0bd4ea85c3529c339e6746243c9cf",
+      "previousBytes": 296770
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed",
+      "previousBytes": 731707
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3",
+      "previousBytes": 1240122
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "ed70e88640e4ed51cf1c3e57cb20db26983599b20b867c2526439e3a2c849fea",
+      "previousBytes": 1299186
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c",
+      "previousBytes": 3075676
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21",
+      "previousBytes": 4943950
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "136cbc6870e1d4d818f739af077b0c0700536b7eb4663c3b68bdb112d1940c82",
+      "previousBytes": 953367
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "c598c555f13cd5328409fd5e2a45496a26e319e52299e3959042f1449c2f1b06",
+      "previousBytes": 1206953
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "8dd5166ddcc293cefd331d491ce6b9162bc9202ddd999ac1e4141697560d38e0",
+      "previousBytes": 1486072
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "a80135a30b7ea0f29f093269acae10f83d327dcc0a20bc10083da59843988c15",
+      "previousBytes": 3697743
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "29c997d77f56e4ea16d3e998a306be0c17fddb28ab4822657c7cd8249040ffda",
+      "previousBytes": 4539452
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "b6ec386e00d9d2a1c3a1da6a98a67066b0dfaa88ddb779341df29700cf081bdf",
+      "previousBytes": 5688696
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "374e4408acfb0bb4512f904f6fd3ae1006195ed12f2e258625b5b8b3a91f6528",
+      "previousBytes": 783702
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "4054ed6eb65cd063356ffb4a88706b7d7b78c5435051c48bf0ee64290f04bc8c",
+      "previousBytes": 847278
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "f4953a881f34627cefcc22f780d392314635e31bb41f75cf3888a5af55c21820",
+      "previousBytes": 849228
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "87e7ee823a78d6d85dc98cd5d1b5a7d4e694429ef4a01f3947b7e4b8a8d284b2",
+      "previousBytes": 3636383
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "5af96604b20e29862b449d86981b196b18ba5cbcb8659c451dd8976411a36130",
+      "previousBytes": 3590812
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "3d1f1c7a5f20a5f7a15f3bc5c5f58c0fdcaf49e71e65a5f17e086b551895c00c",
+      "previousBytes": 3524683
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "2895506708adad25d64c3d7c3d0f922a6df0468af4a9afe3d5d3a0fb35bb3afd",
+      "previousBytes": 802384
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "70d3ff969a7421c7ae057b5d16386d11f5e59c6740db643352e1039413f419c4",
+      "previousBytes": 926197
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "a5009e409ff0f7b2d19e1316fe5e2b2b4f28e4a6b79990a664be69d4e8a0e690",
+      "previousBytes": 1184345
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "1ee3ab8013a6204c739b40ef9b87ccfdff32711525bccf94ee9b3c171aa731f6",
+      "previousBytes": 3465289
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "e5a1cecfe7765cc0b24a6ab0abf492bd21c9e7af64e97fc46ef6021d0645fbd3",
+      "previousBytes": 3817566
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "72def937e418ccc9d7736c9b1f51ae22a127fa2a53a54f4d1fe4d3cf828b781c",
+      "previousBytes": 5179971
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "8375d082a81e6e8043af5f6ec1c5c71ada9577e50faf60a3c412b8df5612eb4e",
+      "previousBytes": 697269
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "eea1fb8b498154754f4961ce0792092ef56cadc3d210becbb0dc3bf6c96c261d",
+      "previousBytes": 757968
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "761c8332b4b53ab06931adf83f5f8f4fa5b7559a1a8267bc7ef865f890b17894",
+      "previousBytes": 918300
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "b2e1e7f2b419a0be3ec3f130c40e1067429c3f26845b4c57d802e3ce02efd49a",
+      "previousBytes": 2507852
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "ac772172824543ce53a9ad60e0b7a00c02fcaf875ec6a65ae49806f6ae25539a",
+      "previousBytes": 3086820
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "e2c582e8cfbd1fd05a344fecba7d8cade8590ab2ebf24088118618a721c66149",
+      "previousBytes": 3724095
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "30d042f0b81e12eccdf2d32398c34c1f8416687a42f8ed453e9337c141c90015",
+      "previousBytes": 685180
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "0d2430c115167a2da3f60d60eb9ea2aa51e71472e2672f94c7f5df78342081ff",
+      "previousBytes": 681515
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "776fe4f5008ee5043a709b0b63a9a7ec758f18ac5e62db65a0e99c04cc782617",
+      "previousBytes": 993025
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "df0ebf4a2096e9fcc4cf32c3ae12adb2cc8df6318b82382393597a31fb63c1b1",
+      "previousBytes": 2689355
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "b2e3f157c315b9645d23e55d54b4c2c8fec39e5114001cbbc9a797ed27a06980",
+      "previousBytes": 2803876
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "22a97f0fb874ab6976c7ad566c09e776d4c191b074ed5fa258cdb29a2e83a7c6",
+      "previousBytes": 3923081
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "3262e58c2f3bd9fff8e374c9aa52ef88c28a4115b550934faa90433dba67470a",
+      "previousBytes": 718960
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "9df48b66055588708d446e69f37ea6146b8d5d3df54cd1ff088ec688acdca95c",
+      "previousBytes": 676597
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "bb9a122e0a1171c52458fc9ac82f588f4e100f1f7b461cc15028bed1c63fe961",
+      "previousBytes": 592362
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "d3f326fdddbc57341c15bb7f3dbb93a851d5625709b9aecf70f490c66618f23b",
+      "previousBytes": 3017037
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "758f9b1cdce11bc6f6a805cdea18fb789639befe40608020ab6087c5c1cba1e5",
+      "previousBytes": 2938829
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "53a80f10b8a8b38ac6551e4a838d1ef77602e74858dfb2364f96be5450c3bc11",
+      "previousBytes": 2486724
+    },
+    {
+      "path": "public/world/miami/materials/manifest.json",
+      "action": "delete",
+      "previousSha256": "c896e0b1dc2fa01048d119964fac79f4bdc7dba416e7bf595a7c5018e1e60446",
+      "previousBytes": 31808
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/1k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "f072f12ac50d667f23ec2c20dd03463923e405f109106cc7ad4d2d85eeb16bd6",
+      "previousBytes": 323604
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/1k/color.jpg",
+      "action": "delete",
+      "previousSha256": "5f2d11f5675ffe679155d8e38ed8eaa9b9972126675641e4977c8a4f905f276b",
+      "previousBytes": 557550
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/1k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "f0d4f34b30093ceca5e58d5168fc06c2f0cd0b81289708aa3eac7d0801bd069d",
+      "previousBytes": 932038
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/2k/arm.jpg",
+      "action": "delete",
+      "previousSha256": "15c6162bd93fc94b1fec078cabe595e44652b1b4d78d5932f8f143e3911b6bb1",
+      "previousBytes": 1390598
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/2k/color.jpg",
+      "action": "delete",
+      "previousSha256": "a1cf9063e72d82306c5f3330cfaa56ed75ee365dc6a6eb875cde125395dbe4ea",
+      "previousBytes": 2326889
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/2k/normal.jpg",
+      "action": "delete",
+      "previousSha256": "d11eae11d09af20a1bd4e1262b1d35ad4259451a19651307a7fa8f6c0cadfc59",
+      "previousBytes": 4025312
+    },
+    {
+      "path": "public/world/miami/packages.json",
+      "action": "add",
+      "sha256": "db95863d372f24e42292a8b79730ae04f74c51dddcb820e8b0e9c704d63cff07",
+      "bytes": 177575
+    },
+    {
+      "path": "public/world/miami/runtime-query.json",
+      "action": "add",
+      "sha256": "034f4b603c6b628218ca6c5b62a9a6da93d22fc2dbdc61f54be40d2ff85885bd",
+      "bytes": 5191
+    },
+    {
+      "path": "public/world/miami/terrain/grid.json",
+      "action": "add",
+      "sha256": "9c0255812e4aacb453bdf12e0cfb8f2480651ea9d12d6e4b5e25938bc0ce9212",
+      "bytes": 1593
+    },
+    {
+      "path": "public/world/miami/terrain/heights.f32",
+      "action": "add",
+      "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b",
+      "bytes": 5184000
+    },
+    {
+      "path": "public/world/miami/terrain/source-mask.u8",
+      "action": "add",
+      "sha256": "70945fa3da47c9eb3d0366310737070d9f8520eefe53ef3fdc540f6c6c9b8869",
+      "bytes": 1296000
+    },
+    {
+      "path": "src/core/Persistence.ts",
+      "action": "modify",
+      "sha256": "52b6a88f156d2af46af3223dccfd137e76913308aa27b412acfea913306cf711",
+      "bytes": 6604
+    },
+    {
+      "path": "src/core/contracts.ts",
+      "action": "modify",
+      "sha256": "4cb10375c4a8283ccb1f51ef306ce4bca597848a806dab988e34e0ed395b97bc",
+      "bytes": 1425
+    },
+    {
+      "path": "src/gameplay/NpcBoundary.ts",
+      "action": "add",
+      "sha256": "f472ec071ba507d899e8927ac989868124b08aa471691e8775fe7f943cd62e77",
+      "bytes": 1233
+    },
+    {
+      "path": "src/gameplay/NpcLocomotion.ts",
+      "action": "modify",
+      "sha256": "61745dc1ee0d9fb658e7247e42f5d3f2d37a2c0c8e2b93f79359199593818bae",
+      "bytes": 4341
+    },
+    {
+      "path": "src/gameplay/Player.ts",
+      "action": "modify",
+      "sha256": "33895c1a65edbe2d180093579ce79a9834ba4fd235fe13545da9b0f54ba877d8",
+      "bytes": 31254
+    },
+    {
+      "path": "src/gameplay/Population.ts",
+      "action": "modify",
+      "sha256": "eca302f68c12296a291771e80cc0f38d361f898e2c6ea89eb4ceaa2515d0f5d9",
+      "bytes": 21293
+    },
+    {
+      "path": "src/gameplay/RestrictedFacility.ts",
+      "action": "modify",
+      "sha256": "775b2fac955ae652a8492b9ace2cf2f61d90ffcd642292676cfda0aead998c1b",
+      "bytes": 15169
+    },
+    {
+      "path": "src/gameplay/TrafficRoute.ts",
+      "action": "add",
+      "sha256": "aafedd58e438cb50485b8b12a6e3fbbcdb34acc31a5b65bbb3ecb38239383eca",
+      "bytes": 1203
+    },
+    {
+      "path": "src/gameplay/TravelDestination.ts",
+      "action": "modify",
+      "sha256": "961a6e1e85943a9bd618b192143b417863e861deec68d529904dd1a44adaf83b",
+      "bytes": 1986
+    },
+    {
+      "path": "src/gameplay/combat/RagdollReactions.ts",
+      "action": "modify",
+      "sha256": "1ce1a2da5156acb2b714e1c15905c144c532e3af908bbf23ca2e8945e9e50b59",
+      "bytes": 26616
+    },
+    {
+      "path": "src/gameplay/police/Officer.ts",
+      "action": "modify",
+      "sha256": "d91a0cd31255b870ddae134f3749434937432ab17ba9a35da5397a3a08962570",
+      "bytes": 10522
+    },
+    {
+      "path": "src/gameplay/police/PoliceDirector.ts",
+      "action": "modify",
+      "sha256": "48555ffd38e23b65af401b1eeb8d4f70c1961b3d58cdd522693d7212eaae9270",
+      "bytes": 29364
+    },
+    {
+      "path": "src/gameplay/police/casualties.ts",
+      "action": "modify",
+      "sha256": "e74b0ae164ecb98e9b2bd2362a33eedcd27e02ac4b8b810f7447846b30f80464",
+      "bytes": 7102
+    },
+    {
+      "path": "src/main.ts",
+      "action": "modify",
+      "sha256": "63a77cc7c7d36640b670ed8c9b5a63073198e5c297d599f9a8038550c54f272e",
+      "bytes": 48048
+    },
+    {
+      "path": "src/ui/MapViewport.ts",
+      "action": "modify",
+      "sha256": "cf1fadaafb7100a6a0c6feccd72dd3fdbadb6b55de24704db37d0dd1d2b7d167",
+      "bytes": 2064
+    },
+    {
+      "path": "src/ui/MiamiVisualControls.ts",
+      "action": "add",
+      "sha256": "b0cdeff3482a981fed38ecd7ad75a1d08a0ce4480032e860d67ae0d2b7e69810",
+      "bytes": 4581
+    },
+    {
+      "path": "src/ui/SourceCredits.ts",
+      "action": "add",
+      "sha256": "50c9ffdd45cb901bb221f8595fb6ae6f4039b3d8db5193dd0fb895e57e2d9f9a",
+      "bytes": 2281
+    },
+    {
+      "path": "src/ui/UI.ts",
+      "action": "modify",
+      "sha256": "0859ad24716c7a714a5e11c20cd1c07e458a244665c6b2a5c26d5db6c8603d38",
+      "bytes": 33104
+    },
+    {
+      "path": "src/ui/style.css",
+      "action": "modify",
+      "sha256": "30ec344167e157549ebba4722a6db18ca45a5281ac8452e8ed87455c76187098",
+      "bytes": 17593
+    },
+    {
+      "path": "src/vehicles/VehicleSystem.ts",
+      "action": "modify",
+      "sha256": "d6d8b4b636e654a140d1ff911e739590d4f628fb7ed96b2d649cb127fe48656f",
+      "bytes": 43650
+    },
+    {
+      "path": "src/world/Ocean.ts",
+      "action": "modify",
+      "sha256": "750d9833ecce90e7c69ad165981ebc2a633d1d619a897ae78ce8338fbbef5986",
+      "bytes": 19920
+    },
+    {
+      "path": "src/world/miami/MiamiElevation.ts",
+      "action": "add",
+      "sha256": "f8e0e396084b8804636eb1936e336cfb0b1e42ab7063b7dc4de260e6a0e889c4",
+      "bytes": 3793
+    },
+    {
+      "path": "src/world/miami/MiamiGeometry.ts",
+      "action": "add",
+      "sha256": "368b0c22e1b3cff7d51e2058e258a5fa71888f902c38e73bf2c6199717dfcc2e",
+      "bytes": 7656
+    },
+    {
+      "path": "src/world/miami/MiamiPackages.ts",
+      "action": "add",
+      "sha256": "4cb5dbfb244d2a23629b3062c70ea93f04bf71bb596f75ef166fec7e3d1787f9",
+      "bytes": 4949
+    },
+    {
+      "path": "src/world/miami/MiamiQueries.ts",
+      "action": "add",
+      "sha256": "5ba81910cad0e190ed468bd5fce9dbcf6b93113f52a2b5ccecd33933333edb97",
+      "bytes": 754
+    },
+    {
+      "path": "src/world/miami/MiamiResidency.ts",
+      "action": "add",
+      "sha256": "5aa583d1fe115c15921b310da591457205f56560b10ca1ec60ff1922098afebe",
+      "bytes": 14675
+    },
+    {
+      "path": "src/world/miami/MiamiRoadOverrides.ts",
+      "action": "add",
+      "sha256": "280d1e7bfc302bf2ab6e6a4235d6ce77e088ae3a36b70d3869bdb8f62dc44e7a",
+      "bytes": 2248
+    },
+    {
+      "path": "src/world/miami/MiamiRoads.ts",
+      "action": "add",
+      "sha256": "f4a93f4d9bdc4257784e85fad6ab198c5ebd494b6fb581dc091647263ac38eb5",
+      "bytes": 16153
+    },
+    {
+      "path": "src/world/miami/MiamiTerrain.ts",
+      "action": "add",
+      "sha256": "89b982383a0e8a72a98d5054b761c2f485081d9943c02df7d7e10692cebc6d83",
+      "bytes": 8314
+    },
+    {
+      "path": "src/world/miami/MiamiWorld.ts",
+      "action": "add",
+      "sha256": "f4cd8a8ead01737759b3ee1f28680bca1ae101810323b5e4e7d497bbe26b5006",
+      "bytes": 8760
+    },
+    {
+      "path": "src/world/miami/frame/CommonFrame.ts",
+      "action": "add",
+      "sha256": "2685c8e3dffd8852c1ba11cea92c38b7b2f494ad32eabeb4b74b36c51b70bb8b",
+      "bytes": 4611
+    },
+    {
+      "path": "src/world/miami/frame/PublicCollisionQueries.ts",
+      "action": "add",
+      "sha256": "009a4cf23cb40455e124a833689e49443e012f56b8bea61f443e8b6debb94080",
+      "bytes": 2171
+    },
+    {
+      "path": "src/world/miami/frame/SourceCoordinates.ts",
+      "action": "add",
+      "sha256": "2998dac4ab7240edee47fa3320999fd386a64131c381f50ed4bde7a41b8b9512",
+      "bytes": 2992
+    },
+    {
+      "path": "src/world/miami/types.ts",
+      "action": "modify",
+      "sha256": "fe239d1573fc79a15095942b6277569eef79828c20d441e7477766707a7a8d16",
+      "bytes": 2786
+    },
+    {
+      "path": "src/world/miami/visuals/DoubleFrame.ts",
+      "action": "add",
+      "sha256": "cff12daf203f90c1b47e653d8e97bb5d1bd6b1fc2a9b5306978a3c1fca3b85ec",
+      "bytes": 5023
+    },
+    {
+      "path": "src/world/miami/visuals/GlbRebase.ts",
+      "action": "add",
+      "sha256": "5934e6a84fab70b862118c2909d1f00eaeb26eb01564eaa76029e3f4c331e09a",
+      "bytes": 5467
+    },
+    {
+      "path": "src/world/miami/visuals/LHTilesRenderer.ts",
+      "action": "add",
+      "sha256": "f19e01e39c815a48203b5d1dd826aaff3501400d7ab97a448a508419384fc099",
+      "bytes": 15541
+    },
+    {
+      "path": "src/world/miami/visuals/LocalTileBounds.ts",
+      "action": "add",
+      "sha256": "548a9f6900153974de125808a292a92b467194e6a2a425eff1307464d9aee90b",
+      "bytes": 4499
+    },
+    {
+      "path": "src/world/miami/visuals/PluginLifetime.ts",
+      "action": "add",
+      "sha256": "7865b57212e58662a951aebfa4b2d36a5fbe599804c75a67f7888f2e5a78bc54",
+      "bytes": 3023
+    },
+    {
+      "path": "src/world/miami/visuals/ScopedProviderTransport.ts",
+      "action": "add",
+      "sha256": "09330d3d5a412f2bfbbde3767d25ebe120faa6067e3727b2a91af375e4f140d5",
+      "bytes": 9270
+    },
+    {
+      "path": "src/world/miami/visuals/StreamedMiamiVisuals.ts",
+      "action": "add",
+      "sha256": "e0112c45c5d64943749713e6c780275fd587fe3d991372d9aa38febae0cc7c18",
+      "bytes": 9387
+    },
+    {
+      "path": "src/world/miami/visuals/TileResourceBudget.ts",
+      "action": "add",
+      "sha256": "579b42a99f7cb7229dd18de4c57a6cacdb2876dfad13b2477569197a7dd86682",
+      "bytes": 13334
+    },
+    {
+      "path": "src/world/miami/visuals/VisualConnectionTypes.ts",
+      "action": "add",
+      "sha256": "74ed1d4b11b7a900235600186a7896b753d05cb98d48ee2b32488c53fc8f1bcf",
+      "bytes": 1685
+    },
+    {
+      "path": "src/world/miami/visuals/resource-ledger.ts",
+      "action": "add",
+      "sha256": "a240f7886830c50510d0e9576557840515220f2049704e49ddd9476a0417829c",
+      "bytes": 6449
+    },
+    {
+      "path": "src/world/miami/visuals/stream-status.ts",
+      "action": "add",
+      "sha256": "78a854daf5ef7e56506dc30a6d46579b5b6e5edd5790c647fec5d452180d0aac",
+      "bytes": 8103
+    },
+    {
+      "path": "tests/civilian-assets.test.ts",
+      "action": "modify",
+      "sha256": "e2f66965921a13df91b9610b4b71089ce82a4145a2bb06ec5796164164804472",
+      "bytes": 12087
+    },
+    {
+      "path": "tests/fixtures/miami-materials.json",
+      "action": "add",
+      "sha256": "c896e0b1dc2fa01048d119964fac79f4bdc7dba416e7bf595a7c5018e1e60446",
+      "bytes": 31808
+    },
+    {
+      "path": "tests/miami-ground.test.ts",
+      "action": "add",
+      "sha256": "0e32e22c7df2b31db3a8936d27bc552a4825541cf0fae8bbfebac6acffa1dc7c",
+      "bytes": 13626
+    },
+    {
+      "path": "tests/miami-materials.test.ts",
+      "action": "modify",
+      "sha256": "f90bb034e1cdf45905909ff07a2f589fec5dcb111f47143cc27c3ddf215d16a1",
+      "bytes": 3554
+    },
+    {
+      "path": "tests/miami-residency.test.ts",
+      "action": "add",
+      "sha256": "c1acea78aea3c8271306cd459ac1366ea4f1827a60f02b5775d747bc27ec58f9",
+      "bytes": 16754
+    },
+    {
+      "path": "tests/miami-runtime.test.ts",
+      "action": "add",
+      "sha256": "3106c22e86026c9be0555a9eefc2ae31d7b650304f1b368c8e0a4806799a0f18",
+      "bytes": 4001
+    },
+    {
+      "path": "tests/miami-source-ground.test.ts",
+      "action": "add",
+      "sha256": "bd79813b2ea6f8882e401393fc4b1527e39d461db713246a2023dec0e1dd33e5",
+      "bytes": 8014
+    },
+    {
+      "path": "tests/miami-streamed-visuals.test.ts",
+      "action": "add",
+      "sha256": "2550dc74b01eeb21a7d74844f9c70b21640bc60adbe98619b79a0e72aea454f8",
+      "bytes": 17134
+    },
+    {
+      "path": "tests/miami-travel.test.ts",
+      "action": "add",
+      "sha256": "16939418ba22aeb26f854c5d4a6ddc312c56f41b9a74ad2ba97083036fe44eb2",
+      "bytes": 13113
+    },
+    {
+      "path": "tests/negative-local-height-recovery.test.ts",
+      "action": "add",
+      "sha256": "633ba0284124fb002851def8becd41d39ee903cd85eea595b77b25b9931f6ca2",
+      "bytes": 6250
+    },
+    {
+      "path": "tests/npc-world-boundary.test.ts",
+      "action": "add",
+      "sha256": "33780b7a3959df04733671edce1a15e47fcabf4ea9915860d45b797bf36edd97",
+      "bytes": 8267
+    },
+    {
+      "path": "tests/persistence.test.ts",
+      "action": "modify",
+      "sha256": "81e1483c14aa411dad7ac545de254265da79c42b12ed4885c50c5325b55a0516",
+      "bytes": 5550
+    },
+    {
+      "path": "tests/traffic-terminal.test.ts",
+      "action": "add",
+      "sha256": "05d275480e22adef1140a1842489d92a666b9fa3c112334340b8bce9eac0ba40",
+      "bytes": 3996
+    },
+    {
+      "path": "tools/miami-common-frame/README.md",
+      "action": "add",
+      "sha256": "33b07e5c219f84a487512e3d333383e8e0172f73c468a38df7018c86d93cfe04",
+      "bytes": 6194
+    },
+    {
+      "path": "tools/miami-common-frame/data/dataset-r5.json",
+      "action": "add",
+      "sha256": "f193d78ab76ca2d6f10f847ee1025c09a4bdcbb1dc3b5b8ed19895537dc1fbc0",
+      "bytes": 1087207
+    },
+    {
+      "path": "tools/miami-common-frame/data/geoid18-license.txt",
+      "action": "add",
+      "sha256": "38561c43f20756a77d33406c54cda8c250d18b6b30bff1e00ff51578e3682723",
+      "bytes": 19653
+    },
+    {
+      "path": "tools/miami-common-frame/data/geoid18.json",
+      "action": "add",
+      "sha256": "462c13a0bd4c662d3dd124729dbbfc71da671177d9f42be252eb6be410ab4559",
+      "bytes": 1564
+    },
+    {
+      "path": "tools/miami-common-frame/data/i3s-geographic.bin",
+      "action": "add",
+      "sha256": "729a6db57e610ccf71a134ab2bc9987ef6442895c2dc62a513ac869a04120477",
+      "bytes": 4417416
+    },
+    {
+      "path": "tools/miami-common-frame/data/i3s-geographic.json",
+      "action": "add",
+      "sha256": "5e3fdc97aba136f47c8369892483e0a50035d591d3c0e9a836cf2aafa9beea78",
+      "bytes": 24355
+    },
+    {
+      "path": "tools/miami-common-frame/data/manifest.json",
+      "action": "add",
+      "sha256": "c8daa71850555701903ae14f217929ce7f86ba25c4c38dcd3b3eb00289cd9543",
+      "bytes": 23628
+    },
+    {
+      "path": "tools/miami-common-frame/data/preparation.json",
+      "action": "add",
+      "sha256": "00340fe5bc07576a0b6fc901a3ba26619a289143151d2e3a32b6022ec70b86ce",
+      "bytes": 4478
+    },
+    {
+      "path": "tools/miami-common-frame/data/proj-oracle.json",
+      "action": "add",
+      "sha256": "55756c65606d4ec1ab0118d8934396617b2faca383c25e07cec4a7c9517abb83",
+      "bytes": 11884
+    },
+    {
+      "path": "tools/miami-common-frame/data/raw/city-streets.geojson",
+      "action": "add",
+      "sha256": "f0a58bfcfe11a38f7be93dc52cb5cf513cd7e92de9bdc686eeb7bf64f39777d7",
+      "bytes": 140434
+    },
+    {
+      "path": "tools/miami-common-frame/data/raw/city-water.geojson",
+      "action": "add",
+      "sha256": "2c7755eb36496cd2102b232649e286eee614f51072afd2db39c068f87430e11c",
+      "bytes": 239661
+    },
+    {
+      "path": "tools/miami-common-frame/data/research/county-3d-layer.json",
+      "action": "add",
+      "sha256": "fa39072bcad5bcb86cba22bf4f9c36b39026054f26cce29f7046ebfdb7c90efe",
+      "bytes": 7970
+    },
+    {
+      "path": "tools/miami-common-frame/data/terrain/grid.json",
+      "action": "add",
+      "sha256": "ebea28402b546ca9385c7b421affbabee3f0607a1f5a48054c378e9ddc4a1b05",
+      "bytes": 1808
+    },
+    {
+      "path": "tools/miami-common-frame/data/terrain/heights.f32",
+      "action": "add",
+      "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b",
+      "bytes": 5184000
+    },
+    {
+      "path": "tools/miami-common-frame/data/terrain/manifest.json",
+      "action": "add",
+      "sha256": "667525c8ba4854fbac9688cf61b48e1e768b746e1193cec1a43a41c3a6e3d879",
+      "bytes": 7185
+    },
+    {
+      "path": "tools/miami-common-frame/data/terrain/source-mask.u8",
+      "action": "add",
+      "sha256": "70945fa3da47c9eb3d0366310737070d9f8520eefe53ef3fdc540f6c6c9b8869",
+      "bytes": 1296000
+    },
+    {
+      "path": "tools/miami-common-frame/package-lock.json",
+      "action": "add",
+      "sha256": "6aeb397e18cb4e0364f87fe5a46684f9c1d29c48a431e56a26e1c3f5cb65ed77",
+      "bytes": 19572
+    },
+    {
+      "path": "tools/miami-common-frame/package.json",
+      "action": "add",
+      "sha256": "6c1821c7af02e686a4b5ffeba63919b6b544b8173f6f393bff76611faadbeea4",
+      "bytes": 559
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/compile.ts",
+      "action": "add",
+      "sha256": "a08bef030d9e475064e2eae22bcb4d04c38ac1414c45fd1c27b904556339ca68",
+      "bytes": 15819
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/oracle.py",
+      "action": "add",
+      "sha256": "1615217edbaa26f25eca8ae5fe32762d619505d63a5c0f8fbeab59af24902b82",
+      "bytes": 1568
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/prepare.py",
+      "action": "add",
+      "sha256": "de622602fb65c69aad3831a278f617a571b66c406e254fb81df6d256eecc4555",
+      "bytes": 4897
+    },
+    {
+      "path": "tools/miami-common-frame/source-manifest.json",
+      "action": "add",
+      "sha256": "9f46669567caeac22183d655f3068130a980ec5d2ef6ecba935e6d4e05b1e588",
+      "bytes": 8937
+    },
+    {
+      "path": "tools/miami-common-frame/src/CommonFrame.ts",
+      "action": "add",
+      "sha256": "2685c8e3dffd8852c1ba11cea92c38b7b2f494ad32eabeb4b74b36c51b70bb8b",
+      "bytes": 4611
+    },
+    {
+      "path": "tools/miami-common-frame/src/PublicCollisionQueries.ts",
+      "action": "add",
+      "sha256": "13359cad866abb98c8939a2c7abe1fa7a41246e49e2c1dea9e56f5299806faf0",
+      "bytes": 2228
+    },
+    {
+      "path": "tools/miami-common-frame/src/SourceCoordinates.ts",
+      "action": "add",
+      "sha256": "a321dacc058a15856d16776a3d2736e535c2bde348e05d5c56be55c7d7029e2b",
+      "bytes": 3011
+    },
+    {
+      "path": "tools/miami-common-frame/tests/common-frame.test.ts",
+      "action": "add",
+      "sha256": "007ddef427b12fb013e92a389d0ea6a59914dba77faf1de1d8324916b386a696",
+      "bytes": 3642
+    },
+    {
+      "path": "tools/miami-common-frame/tests/native-collision.test.ts",
+      "action": "add",
+      "sha256": "65be2b862c0a22f9d879436b53af4aa0aaf9a0cf9a0e830e3af89ad5841a011f",
+      "bytes": 6522
+    },
+    {
+      "path": "tools/miami-common-frame/tsconfig.json",
+      "action": "add",
+      "sha256": "c34eccccc7fc1a44f33ac7ff4228f777ebdc9abd2cecdf97f9341d0b64037c66",
+      "bytes": 374
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/core/contracts.ts",
+      "action": "add",
+      "sha256": "b9b18b4eaee40c3d752cd7ca1726cf415b35a7499fddbc8d7db68abcae85da3d",
+      "bytes": 82
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/ChunkResidency.ts",
+      "action": "add",
+      "sha256": "54147a5a2b2cb988b67362664d894432dd402a1974857e696402d6fdf42a91e6",
+      "bytes": 79
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/MiamiElevation.ts",
+      "action": "add",
+      "sha256": "f8e0e396084b8804636eb1936e336cfb0b1e42ab7063b7dc4de260e6a0e889c4",
+      "bytes": 3793
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/MiamiGeometry.ts",
+      "action": "add",
+      "sha256": "368b0c22e1b3cff7d51e2058e258a5fa71888f902c38e73bf2c6199717dfcc2e",
+      "bytes": 7656
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/MiamiPackages.ts",
+      "action": "add",
+      "sha256": "4cb5dbfb244d2a23629b3062c70ea93f04bf71bb596f75ef166fec7e3d1787f9",
+      "bytes": 4949
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/MiamiQueries.ts",
+      "action": "add",
+      "sha256": "5ba81910cad0e190ed468bd5fce9dbcf6b93113f52a2b5ccecd33933333edb97",
+      "bytes": 754
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/MiamiRoads.ts",
+      "action": "add",
+      "sha256": "f4a93f4d9bdc4257784e85fad6ab198c5ebd494b6fb581dc091647263ac38eb5",
+      "bytes": 16153
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/MiamiTerrain.ts",
+      "action": "add",
+      "sha256": "89b982383a0e8a72a98d5054b761c2f485081d9943c02df7d7e10692cebc6d83",
+      "bytes": 8314
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/projection.ts",
+      "action": "add",
+      "sha256": "8ee6b8e5d2dd232a24635d126ec7fc6483a66e75ce3bb4d3c22344fc0103f5e5",
+      "bytes": 1341
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/types.ts",
+      "action": "add",
+      "sha256": "fe239d1573fc79a15095942b6277569eef79828c20d441e7477766707a7a8d16",
+      "bytes": 2786
+    }
+  ]
+}

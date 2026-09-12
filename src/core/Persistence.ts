@@ -21,6 +21,7 @@ export interface SavedProp {
 }
 export interface SaveData {
   version: 1;
+  worldId?: string;
   savedAt: string;
   player: {
     x: number;
@@ -53,23 +54,28 @@ export interface SaveData {
   combat?: { selected: number; magazines: number[]; reserves: number[] };
 }
 export class Persistence {
+  private static key(worldId?: string) {
+    if(worldId!==undefined&&!/^[A-Za-z0-9_.-]{1,80}$/.test(worldId))throw new TypeError('Invalid saved world identity');
+    return worldId ? `leonida.sandbox.v1.world.${worldId}` : 'leonida.sandbox.v1';
+  }
   static save(data: Omit<SaveData, "version" | "savedAt">) {
     const save: SaveData = {
       ...data,
       version: 1,
       savedAt: new Date().toISOString(),
     };
-    localStorage.setItem("leonida.sandbox.v1", JSON.stringify(save));
+    localStorage.setItem(this.key(save.worldId), JSON.stringify(save));
     return save;
   }
-  static load(): SaveData | null {
+  static load(worldId?: string): SaveData | null {
     try {
       const s = JSON.parse(
-        localStorage.getItem("leonida.sandbox.v1") || "null",
+        localStorage.getItem(this.key(worldId)) || "null",
       );
       if (
         !s ||
         s.version !== 1 ||
+        s.worldId !== worldId ||
         !s.player ||
         !Array.isArray(s.vehicles) ||
         s.vehicles.length > 100 ||

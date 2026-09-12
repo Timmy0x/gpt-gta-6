@@ -61,7 +61,7 @@ test('population civilian appearance is stable by ID and does not change police 
   await prepareCivilianAssets(f.scene,civilianBase,f.loader);
   // Exercise the real spawn method without unrelated dispatch/vehicle fixtures.
   const population=Object.create(Population.prototype) as Population;
-  Object.assign(population,{scene:f.scene,shadows:f.shadows,pedestrians:[],nextPedId:0});
+  Object.assign(population,{scene:f.scene,shadows:f.shadows,pedestrians:[],nextPedId:0,player:{boundary:undefined}});
   const first=population.spawnPed(Vector3.Zero(),0,false),second=population.spawnPed(new Vector3(2,0,0),1,false);characters.push(first.model,second.model);
   assert.equal(first.model.parts[1].getTotalVertices(),4372);assert.equal(second.model.parts[1].getTotalVertices(),4427);
   const stable=population.spawnPed(new Vector3(4,0,0),20,true,'custom-civilian');characters.push(stable.model);const vertices=stable.model.parts[1].getTotalVertices();

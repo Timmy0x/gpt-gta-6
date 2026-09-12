@@ -17,6 +17,8 @@ import { Character } from "../Character";
 import { blockedCrawlEffects, bodyInjuryEffects } from '../Injuries';
 import { CrawlingCollider } from '../CrawlingCollider';
 import { MovementQueries } from '../MovementQueries';
+import type { WorldBoundary } from '../../world/WorldBoundary';
+import { protectNpcController } from '../NpcBoundary';
 export type OfficerRole = "patrol" | "swat" | "military";
 export type OfficerState =
   | "riding"
@@ -49,6 +51,7 @@ export class Officer {
     private scene: Scene,
     shadows: ShadowGenerator,
     public seat = 0,
+    private boundary?: WorldBoundary,
   ) {
     this.crawl = new CrawlingCollider(scene);
     this.queries = new MovementQueries(scene, () => this.crawl.queryExclusions(this.controller));
@@ -217,6 +220,7 @@ export class Officer {
   }
   move(dt: number, direction: Vector3, speed: number, aim: boolean) {
     if (!this.controller) return;
+    protectNpcController(this.controller, this.boundary, dt);
     if (this.model.root.metadata?.ragdollHandoffActive) speed = 0;
     else if (direction.lengthSquared() > .001) {
       const yaw = this.model.root.rotation.y, desired = Math.atan2(direction.x, direction.z);
@@ -246,9 +250,11 @@ export class Officer {
         travel.z,
       ),
     );
+    protectNpcController(this.controller, this.boundary, dt);
     this.controller.integrate(dt, support, new Vector3(0, -9.81, 0));
+    const recovered = protectNpcController(this.controller, this.boundary, 0);
     this.model.root.position.copyFrom(this.controller.getPosition()).y -= this.controller.footOffset;
-    const actualSpeed = Math.hypot(this.controller.getPosition().x - start.x, this.controller.getPosition().z - start.z) / Math.max(.001, dt);
+    const actualSpeed = recovered ? 0 : Math.hypot(this.controller.getPosition().x - start.x, this.controller.getPosition().z - start.z) / Math.max(.001, dt);
     this.model.animate(dt, actualSpeed, aim, false);
     this.model.applyInjuryPose(injuries, dt, actualSpeed);
     this.model.skeleton.computeAbsoluteMatrices(true);

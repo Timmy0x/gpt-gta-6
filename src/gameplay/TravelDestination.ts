@@ -1,25 +1,27 @@
 import { Vector3 } from '@babylonjs/core';
 import type { MovementQueries } from './MovementQueries';
 import type { SwimWater } from './Swimming';
-import { playableMapPoint } from '../world/Coast';
+import { playableMapPoint } from '../ui/MapViewport';
+import type { WorldBounds } from '../world/WorldBoundary';
 type MapPoint = { x: number; z: number };
 
-export function parseMapDestination(value: string | undefined): (MapPoint & { name: string }) | null {
+export function parseMapDestination(value: string | undefined, bounds?: WorldBounds): (MapPoint & { name: string }) | null {
   try {
     const point = JSON.parse(value ?? 'null');
-    if (!point || !playableMapPoint(point)) return null;
+    if (!point || !playableMapPoint(point,bounds)) return null;
     return { x: point.x, z: point.z, name: typeof point.name === 'string' ? point.name.slice(0, 80) : 'Map pin' };
   } catch { return null; }
 }
 
 /** Run after destination collision has streamed in. Searches safe support, never empty air. */
-export function resolveTravelDestination(point: MapPoint, queries: Pick<MovementQueries, 'ground' | 'clear'>, water: SwimWater, preferStreet = false): Vector3 | null {
-  if (!playableMapPoint(point)) return null;
+export function resolveTravelDestination(point: MapPoint, queries: Pick<MovementQueries, 'ground' | 'clear'>, water: SwimWater, preferStreet = false, bounds?: WorldBounds, groundHeight?: (x:number,z:number)=>number): Vector3 | null {
+  if (!playableMapPoint(point,bounds)) return null;
   const offsets: MapPoint[] = [{ x: 0, z: 0 }];
   for (const radius of [.75, 1.5, 3, 6, 12]) for (let i = 0; i < 12; i++) offsets.push({ x: Math.cos(i * Math.PI / 6) * radius, z: Math.sin(i * Math.PI / 6) * radius });
   for (const offset of offsets) {
-    const requested = new Vector3(point.x + offset.x, 1.5, point.z + offset.z);
-    if (!playableMapPoint(requested)) continue;
+    const x=point.x+offset.x,z=point.z+offset.z;
+    const requested = new Vector3(x, (groundHeight?.(x,z) ?? 0) + 1.5, z);
+    if (!playableMapPoint(requested,bounds)) continue;
     const ground = (preferStreet ? queries.ground(requested, 2, 24) : null) ?? queries.ground(requested, 510, 32);
     if (!ground) continue;
     const level = water.surfaceHeight(ground.x, ground.z), depth = water.depthAt(ground.x, ground.z);

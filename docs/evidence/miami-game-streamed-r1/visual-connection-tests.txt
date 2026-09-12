@@ -1,0 +1,60 @@
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ scene-owned ion→Google connection retains the actual game camera, geometry, all credits and fixed origin (83.585333ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ moving the existing camera hides and restores visual coverage and credits without reconnecting (15.638417ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ disconnect aborts a pending endpoint and reconnect cannot receive late assets or stale credits (23.518958ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ initial401 recovers once while403/503 remain terminal and explicit retry rebuilds a fresh connection (35.588584ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ scene disposal releases owned tiles and callbacks; immutable summaries are sampled rather than emitted every frame (16.608708ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ normal ion bearer and version stay on the issued origin; cross-origin content receives no private auth fields (22.566042ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ persistent401 is bounded and tile parse failures expose no credential-bearing content labels or raw error text (14.474625ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+VisualConnectionError: Visual source request failed (401).
+    at ScopedProviderTransport.#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-game-streamed-r1-clean/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+    at ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-game-streamed-r1-clean/src/world/miami/visuals/ScopedProviderTransport.ts:78:8)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:567:9)
+    at process.processTimers (node:internal/timers:541:7) {
+  code: 'http',
+  status: 401
+}
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+VisualConnectionError: Visual source request failed (503).
+    at ScopedProviderTransport.#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-game-streamed-r1-clean/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+    at ScopedProviderTransport.#json (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-game-streamed-r1-clean/src/world/miami/visuals/ScopedProviderTransport.ts:30:8)
+    at <anonymous> (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-game-streamed-r1-clean/src/world/miami/visuals/ScopedProviderTransport.ts:67:86)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:567:9)
+    at process.processTimers (node:internal/timers:541:7)
+    at async ScopedProviderTransport.#renew (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-game-streamed-r1-clean/src/world/miami/visuals/ScopedProviderTransport.ts:67:245)
+    at async ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-game-streamed-r1-clean/src/world/miami/visuals/ScopedProviderTransport.ts:75:29) {
+  code: 'http',
+  status: 503
+}
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ nested Google401 renews with a key-only root, propagates the new session, and bounds persistent failures (105.460875ms)
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+BJS - [20:11:04]: Babylon.js v9.25.0 - Null engine
+✔ ion external Google endpoint uses the pinned presence contract instead of a guessed externalType enum (54.539875ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5587.453875

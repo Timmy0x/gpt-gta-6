@@ -1,0 +1,103 @@
+{
+  "bboxWgs84": [
+    -80.1925,
+    25.7646,
+    -80.1889,
+    25.7678
+  ],
+  "copiedSources": [
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/types.ts",
+      "path": "vendor/world/miami/types.ts",
+      "sha256": "fe239d1573fc79a15095942b6277569eef79828c20d441e7477766707a7a8d16"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/projection.ts",
+      "path": "vendor/world/miami/projection.ts",
+      "sha256": "8ee6b8e5d2dd232a24635d126ec7fc6483a66e75ce3bb4d3c22344fc0103f5e5"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/MiamiGeometry.ts",
+      "path": "vendor/world/miami/MiamiGeometry.ts",
+      "sha256": "368b0c22e1b3cff7d51e2058e258a5fa71888f902c38e73bf2c6199717dfcc2e"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/MiamiElevation.ts",
+      "path": "vendor/world/miami/MiamiElevation.ts",
+      "sha256": "f8e0e396084b8804636eb1936e336cfb0b1e42ab7063b7dc4de260e6a0e889c4"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/MiamiQueries.ts",
+      "path": "vendor/world/miami/MiamiQueries.ts",
+      "sha256": "5ba81910cad0e190ed468bd5fce9dbcf6b93113f52a2b5ccecd33933333edb97"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/MiamiRoads.ts",
+      "path": "vendor/world/miami/MiamiRoads.ts",
+      "sha256": "f4a93f4d9bdc4257784e85fad6ab198c5ebd494b6fb581dc091647263ac38eb5"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/MiamiTerrain.ts",
+      "path": "vendor/world/miami/MiamiTerrain.ts",
+      "sha256": "89b982383a0e8a72a98d5054b761c2f485081d9943c02df7d7e10692cebc6d83"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/src/world/miami/MiamiPackages.ts",
+      "path": "vendor/world/miami/MiamiPackages.ts",
+      "sha256": "4cb5dbfb244d2a23629b3062c70ea93f04bf71bb596f75ef166fec7e3d1787f9"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/terrain/grid.json",
+      "path": "data/terrain/grid.json",
+      "sha256": "ebea28402b546ca9385c7b421affbabee3f0607a1f5a48054c378e9ddc4a1b05"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/terrain/heights.f32",
+      "path": "data/terrain/heights.f32",
+      "sha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/terrain/source-mask.u8",
+      "path": "data/terrain/source-mask.u8",
+      "sha256": "70945fa3da47c9eb3d0366310737070d9f8520eefe53ef3fdc540f6c6c9b8869"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/terrain/manifest.json",
+      "path": "data/terrain/manifest.json",
+      "sha256": "667525c8ba4854fbac9688cf61b48e1e768b746e1193cec1a43a41c3a6e3d879"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/manifest.json",
+      "path": "data/manifest.json",
+      "sha256": "c8daa71850555701903ae14f217929ce7f86ba25c4c38dcd3b3eb00289cd9543"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/raw/city-streets.geojson",
+      "path": "data/raw/city-streets.geojson",
+      "sha256": "f0a58bfcfe11a38f7be93dc52cb5cf513cd7e92de9bdc686eeb7bf64f39777d7"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/raw/city-water.geojson",
+      "path": "data/raw/city-water.geojson",
+      "sha256": "2c7755eb36496cd2102b232649e286eee614f51072afd2db39c068f87430e11c"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/data/world/miami/research/county-3d-layer.json",
+      "path": "data/research/county-3d-layer.json",
+      "sha256": "fa39072bcad5bcb86cba22bf4f9c36b39026054f26cce29f7046ebfdb7c90efe"
+    },
+    {
+      "sourcePath": ".local-builds/miami-game-r5-source/public/world/miami/dataset.json",
+      "path": "data/dataset-r5.json",
+      "sha256": "f193d78ab76ca2d6f10f847ee1025c09a4bdcbb1dc3b5b8ed19895537dc1fbc0"
+    },
+    {
+      "sourcePath": ".local-builds/miami-height-alignment-r1/us_noaa_README.txt",
+      "path": "data/geoid18-license.txt",
+      "sha256": "38561c43f20756a77d33406c54cda8c250d18b6b30bff1e00ff51578e3682723"
+    }
+  ],
+  "derivedGeographicInputSha256": "729a6db57e610ccf71a134ab2bc9987ef6442895c2dc62a513ac869a04120477",
+  "buildingCount": 20,
+  "triangles": 40902
+}

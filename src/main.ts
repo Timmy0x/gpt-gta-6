@@ -16,6 +16,7 @@ import {
   ShadowGenerator,
   Vector3,
   PhysicsEngineV2,
+  PhysicsMotionType,
 } from "@babylonjs/core";
 import HavokPhysics from "@babylonjs/havok";
 import havokWasm from "@babylonjs/havok/lib/esm/HavokPhysics.wasm?url";
@@ -26,11 +27,14 @@ import { Input, type Action } from "./core/Input";
 import { Persistence } from "./core/Persistence";
 import { GameAudio } from "./core/Audio";
 import { distance } from "./core/math";
-import { World } from "./world/World";
+import { StreamedMiamiVisuals } from "./world/miami/visuals/StreamedMiamiVisuals";
+import { MiamiVisualControls } from "./ui/MiamiVisualControls";
+import { MiamiWorld } from "./world/miami/MiamiWorld";
+import { WorldBoundary } from "./world/WorldBoundary";
 import { VehicleSystem, type Vehicle, VEHICLE_TUNING } from "./vehicles";
 import { isRoadCar } from './vehicles/RoadCarCatalog';
 import type { VehicleKind } from "./core/contracts";
-import { AIRCRAFT_SPAWNS, aircraftInput, aircraftPrompt, isAircraft } from "./vehicles/aircraft";
+import { aircraftInput, aircraftPrompt, isAircraft } from "./vehicles/aircraft";
 import { findGroundVehicleSpawn } from "./vehicles/spawnPlacement";
 import { Player } from "./gameplay/Player";
 import { parseMapDestination, resolveTravelDestination } from './gameplay/TravelDestination';
@@ -85,13 +89,13 @@ async function boot() {
   shadows.bias = 0.002;
   shadows.normalBias = 0.025;
   shadows.darkness = 0.18;
-  ui.loading("Loading the coast and nearby streets…");
+  ui.loading("Loading Brickell streets…");
   await new Promise((r) => setTimeout(r, 20));
-  ui.loading("Preparing coastal lighting…");
+  ui.loading("Preparing city lighting…");
   await prepareEnvironmentLighting(scene);
   scene.environmentIntensity = 0.85;
   const ctx = { scene, shadows };
-  const world = new World(ctx);
+  const world = new MiamiWorld(ctx);
   scene.onDisposeObservable.addOnce(() => world.dispose());
   await world.ready;
   const navigation = new Navigation(world.roads);
@@ -99,28 +103,27 @@ async function boot() {
   ui.loading("Loading weapon detail…");
   await prepareWeaponAssets(scene);
   ui.loading("Loading character detail…");
-  try { await prepareCharacterAssets(scene); }
-  catch (error) { console.warn("Using the procedural character fallback", error); }
+  await prepareCharacterAssets(scene);
   ui.loading("Loading street characters…");
-  try { await prepareCivilianAssets(scene); }
-  catch (error) { console.warn("Using the procedural civilian fallback", error); }
+  await prepareCivilianAssets(scene);
   const input = new Input(canvas);
-  const player = new Player(scene, shadows, input, world.spawn);
+  const player = new Player(scene, shadows, input, world.spawn, new WorldBoundary({ bounds: world.bounds, floorHeight: (x,z)=>world.floorHeightAt(x,z), fallback:world.spawn }));
   player.water = world.ocean;
   const vehicles = new VehicleSystem(ctx);
   const interpolation = new PhysicsInterpolation();
   vehicles.waterLevel = world.waterLevel;
-  ui.loading("Preparing the starter car…");
-  try { await vehicles.prepareModel("concept"); }
-  catch (error) { console.warn("Using the starter coupe fallback", error); }
-  const startCar = vehicles.spawn(vehicles.concept.ready ? "concept" : "coupe", new Vector3(3, 1, -23), 0);
   ui.loading("Loading street vehicles…");
-  await Promise.all((['coupe', 'sedan', 'suv', 'truck', 'police'] as VehicleKind[]).map(async kind => {
-    try { await vehicles.prepareModel(kind); }
-    catch (error) { console.warn(`Using the ${kind} fallback`, error); }
-  }));
-  vehicles.spawn("motorcycle", new Vector3(11, 1, -42), Math.PI);
-  vehicles.spawn("boat", new Vector3(239, 0.4, -230), 0);
+  await Promise.all((['coupe', 'sedan', 'suv', 'truck', 'police'] as VehicleKind[]).map(kind => vehicles.prepareModel(kind)));
+  const startNode = [...world.roads].filter(node=>node.next.length && Math.hypot(node.x-world.spawn.x,node.z-world.spawn.z)>9).sort((a,b)=>Math.hypot(a.x-world.spawn.x,a.z-world.spawn.z)-Math.hypot(b.x-world.spawn.x,b.z-world.spawn.z))[0];
+  if(!startNode)throw new Error('Brickell has no connected starter vehicle lane');
+  const startNext=world.roads.find(node=>node.id===startNode.next[0])!;
+  const startHeading=Math.atan2(startNext.x-startNode.x,startNext.z-startNode.z);
+  const startPosition=findGroundVehicleSpawn({scene,kind:'coupe',origin:new Vector3(startNode.x,(startNode.y??world.floorHeightAt(startNode.x,startNode.z))+1,startNode.z),heading:startHeading,obstacles:world.obstacles,vehicles:[]});
+  if(!startPosition)throw new Error('Brickell starter lane has no safe vehicle support');
+  const startCar = vehicles.spawn('coupe',startPosition,startHeading);
+  // Dispatch is synchronous during simulation, so its aircraft must be ready first.
+  ui.loading("Loading air support…");
+  await vehicles.prepareModel('helicopter');
   const wanted = new WantedSystem();
   const population = new Population(
     scene,
@@ -130,7 +133,7 @@ async function boot() {
     player,
     wanted,
   );
-  const damage = new DamageSystem(scene, shadows, world);
+  const damage = new DamageSystem(scene, shadows, world, false);
   const combat = new Combat(
     scene,
     player,
@@ -169,9 +172,18 @@ async function boot() {
   let recoveryTimer = 0,
     closest: Vehicle | null = null,
     crashCount = 0;
-  let loadingWorld = false;
+  let loadingWorld = false, collisionHeld = false, sourcePanelOpen = false, visualHeld = true;
+  const visuals = new StreamedMiamiVisuals(scene);
+  const sourceControls = new MiamiVisualControls(visuals, open => {
+    sourcePanelOpen = open;
+    input.clear();
+    if (open && document.pointerLockElement) document.exitPointerLock();
+  });
+  scene.onDisposeObservable.addOnce(() => sourceControls.dispose());
+  let lastSourceState: ReturnType<typeof visuals.snapshot> | null = null;
   async function prepareVehicleModels(kinds: VehicleKind[]): Promise<boolean> {
-    const pending = [...new Set(kinds)].filter(kind => kind === 'concept' ? !vehicles.concept.ready : isRoadCar(kind) && !vehicles.roadCars.ready(kind));
+    const pending = [...new Set(kinds)].filter(kind => kind === 'concept' ? !vehicles.concept.ready
+      : isRoadCar(kind) && !vehicles.roadCars.ready(kind));
     if (!pending.length) return true;
     if (loadingWorld) return false;
     loadingWorld = true;
@@ -199,14 +211,12 @@ async function boot() {
   }
   const frameTimes = new FrameHistory();
   let raceMarker: Mesh | null = null;
-  const racePoints = [
-    new Vector3(0, 2, 65),
-    new Vector3(72, 2, 144),
-    new Vector3(144, 2, 72),
-    new Vector3(72, 2, 0),
-    new Vector3(0, 2, -72),
-  ];
-  function resetPlayer(reason: string) {
+  const racePoints: Vector3[] = []; // Real Miami routes require an authored activity record.
+  async function resetPlayer(reason: string) {
+    if (!await prepareTravel(world.spawn.clone())) {
+      if (reason === "BUSTED") recoveryTimer = 1; else player.deadTimer = 1;
+      return;
+    }
     combat.reactions.resetCharacter(player.model);
     player.exit(true);
     player.restoreBodyState(null);
@@ -251,7 +261,7 @@ async function boot() {
   };
   function setPause(value: boolean) {
     paused = value;
-    scene.physicsEnabled = !paused;
+    scene.physicsEnabled = started && !paused && !loadingWorld && !collisionHeld && !sourcePanelOpen && !visualHeld;
     if (paused) {
       input.clear();
       if (document.pointerLockElement) document.exitPointerLock();
@@ -274,6 +284,7 @@ async function boot() {
       const casualties = population.serializeCasualties();
       const occupiedCasualtyCars = new Set([...casualties.civilians, ...casualties.police].map(c => c.vehicleId).filter(Boolean));
       Persistence.save({
+        worldId: world.worldId,
         player: {
           x: player.position.x,
           y: player.position.y,
@@ -330,13 +341,21 @@ async function boot() {
     }
   }
   async function load() {
-    const s = Persistence.load();
+    const current = Persistence.load(world.worldId), legacy = current ? null : Persistence.load();
+    const migrated = !current && !!legacy;
+    const s = current ?? (legacy ? { ...legacy, worldId:world.worldId,
+      player:{ x:world.spawn.x,y:world.spawn.y,z:world.spawn.z,postureHeight:1.8,character:legacy.player.character,health:100,armor:legacy.player.armor??50 },
+      vehicles:[],destroyed:[],props:[],casualties:undefined,streetObjects:[],civilians:[],
+    } : null);
     if (!s) {
       ui.toast("No compatible saved sandbox in this browser.");
       return false;
     }
     if (s.vehicles.filter(v => v.kind === "concept").length > DETAILED_CAR_LIMIT) { ui.toast("Saved sandbox exceeds the six detailed-car limit."); return false; }
     if (!await prepareVehicleModels(s.vehicles.map(v => v.kind as VehicleKind))) return false;
+    const savedLocations = [s.player, ...s.vehicles, ...(s.props ?? []), ...(s.civilians ?? [])]
+      .filter(p => [p.x, p.y, p.z].every(Number.isFinite)).map(p => new Vector3(p.x, p.y, p.z));
+    for (const destination of savedLocations) if (!await prepareTravel(destination)) return false;
     if (!await prepareTravel(new Vector3(s.player.x, s.player.y, s.player.z))) return false;
     combat.reactions.reset();
     world.streetObjects.restore(s.streetObjects ?? []);
@@ -410,10 +429,11 @@ async function boot() {
       ped.health = p.health;
     }
     if (s.casualties) population.restoreCasualties(s.casualties);
-    ui.toast("Saved sandbox restored.");
+    ui.toast(migrated ? "Miami started. Inventory and settings carried over; previous world save retained." : "Saved sandbox restored.");
     return true;
   }
   function beginRace() {
+    if(!racePoints.length){ui.toast("Race route not built yet.");return;}
     if (!player.vehicle) {
       ui.toast("Enter a vehicle to start the coastal sprint.");
       return;
@@ -513,7 +533,7 @@ async function boot() {
       return;
     }
     if ((action === "route" || action === "route-point") && value) {
-      const location = action === 'route-point' ? parseMapDestination(value) : world.locations.find((l) => l.id === value);
+      const location = action === 'route-point' ? parseMapDestination(value,world.bounds) : world.locations.find((l) => l.id === value);
       if (location) {
         navigation.set(location, player.position);
         ui.toast(`Route set · ${location.name}`);
@@ -528,10 +548,12 @@ async function boot() {
       return;
     }
     if (action === "play" || action === "continue") {
+      if (!visuals.snapshot().visibleTiles) { sourceControls.show(true); ui.toast("Connect Miami 3D to enter."); return; }
       audio.start();
       if (action === "continue" && !await load()) return;
       started = true;
       ui.start();
+      sourceControls.enterGame();
       ui.showPanel("");
       setPause(false);
       canvas.focus();
@@ -569,39 +591,19 @@ async function boot() {
       const kind = (document.querySelector<HTMLSelectElement>("#spawn-kind")
         ?.value || "coupe") as VehicleKind;
       if (kind === "concept" && vehicles.list.filter(v => v.kind === "concept").length >= DETAILED_CAR_LIMIT) { ui.toast("Six detailed cars are already nearby. Remove one first."); return; }
+      if (isAircraft(kind) || kind === "boat") { ui.toast("Launch site outside the constructed area."); return; }
       if (!await prepareVehicleModels([kind])) return;
-      let p = player.position.clone();
-      if (!isAircraft(kind) && kind !== "boat") {
-        const clear = findGroundVehicleSpawn({scene, kind, origin:player.position, heading:player.yaw, obstacles:world.obstacles, vehicles:vehicles.list});
-        if (!clear) { ui.toast("No clear space for this vehicle nearby. Move to a wider open area and try again."); return; }
-        p = clear;
-      }
-      if (kind === "boat") p = new Vector3(239, 0.4, -230);
-      if (kind === "plane" || kind === "helicopter") {
-        const launch = AIRCRAFT_SPAWNS[kind];
-        p = new Vector3(launch.x, launch.y, launch.z);
-      }
-      if (isAircraft(kind) && vehicles.list.some(v => Math.abs(v.root.position.x - p.x) < 10 && Math.abs(v.root.position.z - p.z) < 12 && Math.abs(v.root.position.y - p.y) < 6)) {
-        ui.toast("Aircraft launch area occupied. Move or remove the aircraft there before spawning another.");
-        return;
-      }
-      if (["boat", "plane", "helicopter"].includes(kind) && !await prepareTravel(p)) return;
-      const v = vehicles.spawn(kind, p, isAircraft(kind) ? 0 : player.yaw);
-      ui.toast(
-        `${v.tuning.label} spawned${kind === "boat" ? " at the marina" : kind === "plane" || kind === "helicopter" ? ` at ${AIRCRAFT_SPAWNS[kind].label}` : ""}. ${isAircraft(kind) ? "Close the menu, then press E to enter." : ""}`,
-      );
-      if (["boat", "plane", "helicopter"].includes(kind)) {
-        player.exit(true);
-        player.teleport(p.add(new Vector3(3, 1, 0)));
-        if (isAircraft(kind)) player.yaw = 0;
-      }
+      const p = findGroundVehicleSpawn({scene,kind,origin:player.position,heading:player.yaw,obstacles:world.obstacles,vehicles:vehicles.list});
+      if(!p){ui.toast("No clear vehicle space nearby.");return;}
+      vehicles.spawn(kind,p,player.yaw);
+      ui.toast(`${VEHICLE_TUNING[kind].label} spawned.`);
       return;
     }
     if (action === "repair") {
       const v = player.vehicle || nearestVehicle();
       if (v) {
-        vehicles.recover(v);
-        ui.toast("Vehicle repaired and recovered.");
+        const recovered = vehicles.recover(v);
+        ui.toast(recovered ? "Vehicle repaired and recovered." : "Repaired. Move to supported ground to recover.");
       }
       return;
     }
@@ -626,10 +628,13 @@ async function boot() {
       const point = player.position.add(
         new Vector3(
           Math.sin(player.yaw) * 4,
-          -player.position.y,
+          0,
           Math.cos(player.yaw) * 4,
         ),
       );
+      const support = player.queries.ground(point, 4, 24);
+      if (!support) { ui.toast("No clear ground here."); return; }
+      point.y = support.y;
       if (kind === "fence" || kind === "gate")
         damage.spawnBarrier(
           point,
@@ -757,11 +762,11 @@ async function boot() {
       ui.toast("Encounter reset.");
     }
     if (action === "teleport" || action === 'teleport-point') {
-      const l = action === 'teleport-point' ? parseMapDestination(value) : world.locations.find((l) => l.id === value);
+      const l = action === 'teleport-point' ? parseMapDestination(value,world.bounds) : world.locations.find((l) => l.id === value);
       if (l) {
         const origin = player.position.clone();
         if (!await prepareTravel(new Vector3(l.x, 1.5, l.z))) return;
-        const destination = resolveTravelDestination(l, player.queries, world.ocean, action === 'teleport');
+        const destination = resolveTravelDestination(l, player.queries, world.ocean, action === 'teleport', world.bounds, (x,z)=>world.floorHeightAt(x,z));
         if (!destination) { world.ensureCollision(origin); ui.toast('No clear landing here. Pick a nearby point.'); return; }
         player.exit(true);
         // Travel relocates the injured actor; it cannot leave its physical
@@ -806,19 +811,19 @@ async function boot() {
       void canvas.requestPointerLock();
   });
   scene.onBeforePhysicsObservable.add(() => {
-    if (paused || !started) return;
+    if (paused || !started || collisionHeld || sourcePanelOpen || loadingWorld) return;
     const dt = 1 / 60;
     interpolation.beforeStep(vehicles.list.map((v) => v.root));
     simTime += dt;
     time = (time + dt / 160) % 24;
     if (recoveryTimer > 0) {
       recoveryTimer -= dt;
-      if (recoveryTimer <= 0) resetPlayer("BUSTED");
+      if (recoveryTimer <= 0) void resetPlayer("BUSTED");
     }
     if (player.deadTimer > 0) {
       player.deadTimer -= dt;
       ui.outcome("WASTED");
-      if (player.deadTimer <= 0) resetPlayer("WASTED");
+      if (player.deadTimer <= 0) void resetPlayer("WASTED");
     }
     if (!ui.panel && recoveryTimer <= 0) {
       player.update(dt);
@@ -869,16 +874,26 @@ async function boot() {
     const accumulator = (
       scene as unknown as { _physicsTimeAccumulator: number }
     )._physicsTimeAccumulator;
-    const alpha = paused
+    const alpha = paused || collisionHeld || sourcePanelOpen || loadingWorld
       ? 1
       : Math.max(0, Math.min(1, accumulator / physics.getSubTimeStep()));
     interpolation.render(alpha);
     player.render(
       renderDt,
       alpha,
-      !ui.panel && !paused && !weaponWheel.active && player.deadTimer <= 0,
+      !ui.panel && !paused && !collisionHeld && !sourcePanelOpen && !weaponWheel.active && player.deadTimer <= 0,
     );
     combat.render(0);
+    visuals.update(performance.now());
+    const sourceState = visuals.snapshot();
+    if (sourceState !== lastSourceState) {
+      lastSourceState = sourceState;
+      sourceControls.update(sourceState);
+      if(sourceState.error)console.warn("Miami source connection",sourceState.error);
+      visualHeld = sourceState.visibleTiles === 0;
+      world.setSourceVisible(!visualHeld);
+      if (started && visualHeld && ['failed', 'disconnected'].includes(sourceState.phase)) sourceControls.show(true);
+    }
     const cameraWater = world.ocean.surfaceHeight(player.camera.position.x, player.camera.position.z);
     underwater = cameraWater != null && player.camera.position.y < cameraWater - .03 && world.ocean.depthAt(player.camera.position.x, player.camera.position.z) > 0;
     if (underwater) { scene.fogDensity = .095; scene.fogColor.set(.025 + renderDaylight * .03, .11 + renderDaylight * .10, .14 + renderDaylight * .10); }
@@ -911,7 +926,7 @@ async function boot() {
         wheelWasActive = weaponWheel.active;
         physics.setSubTimeStep(1000 / 60 / (simSpeed * (weaponWheel.active ? .12 : 1)));
       }
-      if (!ui.panel && !weaponWheel.active && player.deadTimer <= 0 && recoveryTimer <= 0) {
+      if (!ui.panel && !collisionHeld && !sourcePanelOpen && !weaponWheel.active && player.deadTimer <= 0 && recoveryTimer <= 0) {
         if (input.take("interact")) interact();
         if (input.take("switch")) player.switchCharacter();
         if (input.take("repair")) ui.onAction("repair");
@@ -953,13 +968,26 @@ async function boot() {
     );
     scene.fogDensity =
       weather === "Rain" ? 0.003 : weather === "Haze" ? 0.004 : 0.00125;
-    world.setActiveAnchors(
-      vehicles.list
-        .filter((v) => v.occupied || Math.abs(v.speed) > 0.4)
-        .map((v) => v.root.position),
-    );
+    // Keep support beneath every dynamic body, including sleeping cars and corpses.
+    // A 210 m collision halo exceeds the maximum five-step displacement (8.4 m).
+    const anchors = new Map<string, Vector3>();
+    for (const body of physics.getBodies()) {
+      if (body.isDisposed || body.getMotionType() === PhysicsMotionType.STATIC) continue;
+      const p = body.transformNode.getAbsolutePosition();
+      if (![p.x, p.y, p.z].every(Number.isFinite)) continue;
+      const key = `${Math.floor(p.x / 20)}:${Math.floor(p.z / 20)}`;
+      if (!anchors.has(key)) anchors.set(key, p);
+    }
+    for (const ped of [...population.pedestrians,...population.officers]) {
+      const p = ped.model.root.position;
+      if (ped.model.root.isEnabled()) anchors.set(`ped:${Math.floor(p.x / 20)}:${Math.floor(p.z / 20)}`, p);
+    }
+    world.setActiveAnchors([...anchors.values()]);
     world.ensureCollision(player.position);
     world.update(paused ? 0 : dt, player.position, time, weather);
+    collisionHeld = !world.collisionReady(player.position);
+    scene.physicsEnabled = started && !paused && !loadingWorld && !collisionHeld && !sourcePanelOpen && !visualHeld;
+    sourceControls.setCollisionLoading(collisionHeld);
     atmosphere.update(paused ? 0 : dt, player.position, time, weather, paused);
     scene.fogColor.copyFrom(solarState.horizonColor);
     world.ocean.setAtmosphericFog(scene.fogDensity, scene.fogColor);
@@ -1124,7 +1152,10 @@ async function boot() {
     resolution: [engine.getRenderWidth(), engine.getRenderHeight()],
     quality,
     frameTimes: frameTimes.latest(1800),
-    streamingBusy: loadingWorld,
+    streamingBusy: loadingWorld || collisionHeld,
+    collisionHeld,
+    visualHeld,
+    source: visuals.snapshot(),
     errors: [],
   });
   Object.assign(window, {
