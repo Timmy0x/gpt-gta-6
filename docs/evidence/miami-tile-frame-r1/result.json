@@ -1,0 +1,46 @@
+{
+  "babylon": "9.25.0",
+  "method": "Actual original GLB loader plus CPU world/projection/bounds/indexed-winding tests; no GPU raster or provider/geodesy claims.",
+  "loader": {
+    "meshes": 6,
+    "vertices": 72,
+    "triangles": 24,
+    "rootAutoLH": "diag(-1,1,1)",
+    "rootAutoRH": "identity",
+    "markerDistancesM": [
+      1,
+      1,
+      1
+    ]
+  },
+  "world": {
+    "maximumErrorM": 0.000001977847026227102,
+    "maximumBoundsErrorM": 0.000001965272169002219,
+    "toleranceM": 0.00002
+  },
+  "camera": {
+    "configurations": 54,
+    "pointChecks": 3888,
+    "triangleChecks": 1296,
+    "boundsChecks": 324,
+    "visibleBounds": 288,
+    "culledBounds": 36,
+    "maximumNdcDistance": 0,
+    "maximumNormalDistance": 0,
+    "limit": "CPU projection/culling only; GPU depth/front-face/postprocess still need renderer tests."
+  },
+  "negativeControls": {
+    "rejectedErrorsM": {
+      "double-importer-conversion": 5.099986837336523,
+      "reverse-tiles": 3.7612708396139807,
+      "omit-up": 2.7208175687765883,
+      "overwritten-auto-root-quaternion": 6.195163022301496
+    }
+  },
+  "tileBounds": {
+    "sourceVertices": 72,
+    "childCorners": 8,
+    "parentContainsWholeChild": true,
+    "undersizedNegativeControlRejected": true
+  }
+}

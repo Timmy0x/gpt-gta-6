@@ -1,0 +1,3 @@
+import {defineConfig,type Plugin} from 'vite';
+const errors:Plugin={name:'explicit-fixture-errors',configureServer(server){server.middlewares.use((req,res,next)=>{if(req.url?.startsWith('/fixture/missing-')){res.statusCode=404;res.setHeader('Content-Type','text/plain');res.end('Deliberately missing synthetic test resource');}else next();});},configurePreviewServer(server){server.middlewares.use((req,res,next)=>{if(req.url?.startsWith('/fixture/missing-')){res.statusCode=404;res.setHeader('Content-Type','text/plain');res.end('Deliberately missing synthetic test resource');}else next();});}};
+export default defineConfig({plugins:[errors],server:{host:'127.0.0.1',port:4293,strictPort:true},preview:{host:'127.0.0.1',port:4293,strictPort:true}});

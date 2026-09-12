@@ -1,0 +1,38 @@
+{
+  "base": "3e14e075222549de4826cfa71b5f1ff7a5fcd0e8",
+  "scope": "Separate source preview and original coordinate fixtures; no production game behavior or actual Miami data changes.",
+  "cleanDirectory": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-streamed-tools-r1-clean",
+  "validation": {
+    "rootProductionBuild": "passed",
+    "previewNativeTests": 13,
+    "previewProductionBuild": "passed",
+    "tileFrameNativeTests": 5,
+    "tileFrameTypecheck": "passed",
+    "tileFrameGeneration": "byte-identical",
+    "browserChecks": 15,
+    "uncaughtPageErrors": 0,
+    "rasterReview": "Parent inspected two synthetic boxes at420m and1500m after shader warm-up.",
+    "liveProviderAccess": "unverified; no real credentials supplied",
+    "providerHttpTests": "Responses intercepted locally, including denied403 and recovered401",
+    "knownAdvisories": [
+      "Vite large-chunk advisory",
+      "upstream3D Tiles1.1 limited-support advisory"
+    ]
+  },
+  "previewEntry": {
+    "entry": "/assets/index-CchtNSss.js",
+    "sha256": "08115b01f66026ddb30352b647f4412446fdf22e98750707784038619a5bf653"
+  },
+  "logSHA256": {
+    "miami-streamed-root-install.log": "521a6f1124c1a8d839518d9af24124b2d772accb5ae3f06fe68117c08c5e95b8",
+    "miami-streamed-root-build.log": "dedb43db51dc84afea3b26700d9b122669131c061d3685ad8fad826936242452",
+    "miami-streamed-preview-install.log": "605a81a782544ec4e77d7f24275d5a8ce558d20a6c027a2370ffd54c6eec46ba",
+    "miami-streamed-preview-tests.log": "78dd47610ed9c5b02781a4919172441ba8168caf02d284f9d6a1135e9d7ddfcd",
+    "miami-streamed-preview-build.log": "a1d03463f7f2be1587d4c416b386a1315b0cc38f247423e29efe8dbc5ac577e8",
+    "miami-tile-frame-install.log": "ecedb9d911c9d4c12653f8aee6dd6d3d3dd486bf3eff9523a5a61bb7d2e10118",
+    "miami-tile-frame-generate.log": "dbcf18e2866c440f515ca2675f649dc43eb706b6e2b9d1697e89a1843942e090",
+    "miami-tile-frame-tests.log": "e96bee254412b4bce74af88cab409e3753acfd405309724aacd075bde1b6b422",
+    "miami-tile-frame-typecheck.log": "29eb00c6d5f6b63f2f64fa69af78dcee1bfaf6a1ae497f2c3e6be38cda1d6d0b",
+    "miami-source-clean-browser.log": "eadefc5977f8f8c20418d3e200011bd04f0e1df5b5db83fae24bccb8932b0593"
+  }
+}

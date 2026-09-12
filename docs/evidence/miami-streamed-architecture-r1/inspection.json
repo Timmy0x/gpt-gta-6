@@ -1,0 +1,28 @@
+{
+  "version": "0.5.2",
+  "localPackage": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-streamed-preview-r1-source/node_modules/3d-tiles-renderer",
+  "sourceHashes": {
+    "package.json": "260bef732844ff2530925fe155d9de6c505aab4fd5a632a952315b0f3e4c90ee",
+    "src/babylonjs/renderer/README.md": "d00390fccf38d5763c16dacd3f1774387c7b74edf16e7cf79bd565f5190fbf48",
+    "src/babylonjs/renderer/tiles/TilesRenderer.js": "2ea733f00020464724f58410883a23b60f824a4a44c22baee5fdbcea85309b8f",
+    "src/babylonjs/renderer/loaders/GLTFLoader.js": "76027e0fe50d3454c51651447430e5ca63432209be46f79101709305460f4024",
+    "src/babylonjs/renderer/math/TileBoundingVolume.js": "11944c55b7f0d96934bd2a56e8ebe7bfeb1597851d67024444e24203299af5ac",
+    "src/core/plugins/GoogleCloudAuthPlugin.js": "3f4aa7bb004ac60abe56d6bdc03b372fcdead60f9f54a6a31a2274d058ee2a85",
+    "src/core/plugins/auth/GoogleCloudAuth.js": "0bb178a4e151e9ad4791f9518f30e2322ca3ae778079a99282c9ada2683a1416",
+    "src/core/plugins/CesiumIonAuthPlugin.js": "2bbab79142226ae5db3148e57e10391113b75da77d64a18f0855fdbf351fc869",
+    "src/core/plugins/auth/CesiumIonAuth.js": "12381dfe2bbed4ca44198588b9096a8b4785a57a765f721b1bed3c37b3d49f68"
+  },
+  "cpuCameraProbe": {
+    "babylon": "9.25.0",
+    "reflection": "(x,y,z) -> (x,y,-z), including target",
+    "clipMetres": [
+      0.12,
+      1500
+    ],
+    "fovRadians": 0.88,
+    "samplePoints": 4,
+    "maximumNdcDistance": 0,
+    "scope": "Matrix correspondence only; no GPU shared-depth or postprocess test"
+  },
+  "mutations": "No application source, dependencies, Git, frozen R5 or renderer package modified."
+}

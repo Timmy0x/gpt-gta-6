@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "retrievedDate": "2026-09-12",
+  "purpose": "Official source/documentation only. No city imagery, tiles, API secrets, or third-party viewer content was acquired.",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesRendererJS/master/README.md",
+      "sha256": "c59762c6a3b45e0ae3a5e495070229bdfd440b67281fa70aa9bc947b3db4cca0",
+      "bytes": 7678,
+      "note": "Official renderer README; read before implementation.",
+      "localResearchSnapshot": "references/nasa-readme.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesRendererJS/master/src/babylonjs/renderer/README.md",
+      "sha256": "d00390fccf38d5763c16dacd3f1774387c7b74edf16e7cf79bd565f5190fbf48",
+      "bytes": 1916,
+      "note": "Official Babylon integration guide.",
+      "localResearchSnapshot": "references/nasa-babylon-readme.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NASA-AMMOS/3DTilesRendererJS/master/example/babylonjs/googleMapsAerial.js",
+      "sha256": "19b53ad3b44ecb7696a6f837fc70d0788c2f0e7ade3f833ef237fbab2552afe5",
+      "bytes": 6570,
+      "note": "Official source example. Environment placeholder only; no demo credentials used.",
+      "localResearchSnapshot": "references/nasa-google-example.js"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BabylonJS/Demos/main/3d-tiles/src/index.ts",
+      "sha256": "8ef8d171cd27434daf9dba2342321736a540aaf11e229ea46b08ea16a93ca79a",
+      "bytes": 12789,
+      "note": "Official source example. Build placeholder only; no demo credentials used.",
+      "localResearchSnapshot": "references/babylon-demo-index.ts"
+    },
+    {
+      "url": "https://developers.google.com/static/maps/documentation/images/Google_Maps_Attribution_Assets.zip",
+      "sha256": "899e2ada2969330debb94adf6ec44290ee528fcec55ac18683485259e1bf82e8",
+      "bytes": 91462,
+      "note": "Official Google Maps attribution asset archive.",
+      "localResearchSnapshot": "references/google-attribution-assets.zip"
+    },
+    {
+      "path": "public/attribution/google-maps.png",
+      "url": "https://developers.google.com/static/maps/documentation/images/Google_Maps_Attribution_Assets.zip",
+      "sha256": "5164f7887666f68dcb3d6c26b757a118f4440a4b0974a5245d56709281750049",
+      "bytes": 4705,
+      "note": "Unchanged Google_Maps_Attribution_Assets/GoogleMaps_Logo_WithLightOutline/GoogleMaps_Logo_WithLightOutline_2x.png from official archive. Google trademark; not CC0."
+    }
+  ],
+  "note": "Research snapshots were inspected locally; only their source URLs and content hashes are committed. No snapshot is a runtime dependency."
+}

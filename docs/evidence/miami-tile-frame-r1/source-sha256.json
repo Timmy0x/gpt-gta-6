@@ -1,0 +1,41 @@
+{
+  "sourceFiles": {
+    ".gitignore": "2c14318e5e408e20402b1c2205996c36ac99740cbbb566fca89f20f48c201372",
+    "package.json": "24ed2e13c67d0e488e90a6970aca224605350a208f168bbdd2c7051d428d2985",
+    "package-lock.json": "f1d09926efa0a90237d780728e2ddfdbf123656e1bf9fcbeb50e5b0b72af30ac",
+    "tsconfig.json": "8f1700b6afc7a3653c7d6a8d7c9a150c48e1777ca86adc7a96e39d7839485dc7",
+    "README.md": "ac349faafefb3f9d3e15a70d80646e1c2a36a1b65b56a0a3ec325ab71efacc3a",
+    "scripts/generate.mjs": "61d827faa4dc085ecac76bd3f02b7ed6b13f9ab36e7bd17b4a49c26a4eca6083",
+    "fixtures/asymmetric.glb": "76b9127d73fcf37cd8e05531008400397193d4c785ad6dd22d197e2fa6b76b48",
+    "fixtures/expected.json": "0cdc75ef36bc4888d5585efea5cc469146472ca14d9a12c0deec9992493933dc",
+    "fixtures/tileset.json": "c24476379cca390fa60b62c1db8241fb896849593771b1d5a8aa7e86124a0201",
+    "tests/frame-fixture.ts": "57fb78a1c192f64e9f62930d163be3f2c68f57020c27de8a6c2fb60af2af9f18",
+    "tests/tile-frame.test.ts": "dfb9acc731131fd787277ffd45f9699a44b8141dbf4ae3054c21d89e9353bd0a"
+  },
+  "sourceDirectory": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-tile-frame-r1-source",
+  "cleanDirectory": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-tile-frame-r1-clean-source",
+  "nativeTests": 5,
+  "typecheck": "passed",
+  "generation": "identical to frozen fixture bytes",
+  "dependencies": {
+    "@babylonjs/core": "9.25.0",
+    "@babylonjs/loaders": "9.25.0",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "@types/node": "24.13.3"
+  },
+  "lockfileVersion": 3,
+  "lockedPackageCount": 35,
+  "installCommand": "npm ci --offline --no-audit --no-fund --cache ../tile-frame-npm-cache",
+  "installMethod": "Fresh node_modules directory created from npm integrity-checked cached tarballs; no symlink and no root module reuse. npm ci standard registry mode is documented for consumers.",
+  "runtime": {
+    "node": "24.18.0",
+    "npm": "11.16.0",
+    "platform": "darwin-arm64"
+  },
+  "retainedFindings": [
+    "Initial clean test exposed missing evidence-directory creation; fixed runner mkdir and retained rejected log.",
+    "npm11.16 emitted allow-scripts warnings for esbuild/fsevents; all commands completed successfully without approval or root npm configuration changes."
+  ],
+  "limits": "Native CPU frame acceptance fixture only; no whole adapter, provider data, geodesy, GPU or root tree/Git mutations."
+}

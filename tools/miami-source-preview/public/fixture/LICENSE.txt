@@ -1,0 +1,1 @@
+Synthetic box geometry and tileset authored for this preview are dedicated to CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ . They are test fixtures, not surveyed or photographed Miami data. Their ECEF placement only exercises large-world rendering.

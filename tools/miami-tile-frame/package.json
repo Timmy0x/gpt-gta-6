@@ -1,0 +1,23 @@
+{
+  "name": "miami-tile-frame-regression",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babylonjs/core": "9.25.0",
+    "@babylonjs/loaders": "9.25.0"
+  },
+  "devDependencies": {
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "@types/node": "24.13.3"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22"
+  }
+}
