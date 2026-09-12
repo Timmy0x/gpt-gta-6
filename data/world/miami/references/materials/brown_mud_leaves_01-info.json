@@ -1,0 +1,50 @@
+{
+  "date_published": 1529359200,
+  "name": "Brown Mud Leaves 01",
+  "old_id": 129,
+  "categories": [
+    "terrain",
+    "natural",
+    "outdoor"
+  ],
+  "type": 1,
+  "tags": [
+    "grass",
+    "mud",
+    "moss",
+    "stones",
+    "orange",
+    "forest"
+  ],
+  "authors": {
+    "Rob Tuytel": "All"
+  },
+  "dimensions": [
+    1299.9998331069946,
+    1299.9998331069946
+  ],
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "files_hash": "7b74cea31de3b88001ff3bd7b8c01b88a7a58cf0",
+  "description": "Free 8K texture of brown muddy ground with scattered leaves, moss patches, small pebbles and a damp, rough surface with fine organic detail.",
+  "category_id": "b9a51c27-1499-5f4d-b28f-0d96ef8e0319",
+  "category": "Ground & Terrain/Forest Floor/Leaf Litter",
+  "sponsors": [
+    "540619",
+    "172914019"
+  ],
+  "attributes": {
+    "surface_use": "ground",
+    "condition": [
+      "mossy",
+      "weathered"
+    ],
+    "origin": "natural",
+    "setting": "outdoor"
+  },
+  "img_version": "ce084bc9",
+  "download_count": 518201,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/brown_mud_leaves_01.png?width=256&height=256&v=ce084bc9"
+}

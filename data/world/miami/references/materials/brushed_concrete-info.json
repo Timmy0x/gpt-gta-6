@@ -1,0 +1,49 @@
+{
+  "date_published": 1658793600,
+  "name": "Brushed Concrete ",
+  "categories": [
+    "man made",
+    "dirty",
+    "floor",
+    "plaster-concrete",
+    "concrete"
+  ],
+  "type": 1,
+  "staging": null,
+  "tags": [
+    "rough",
+    "weathered",
+    "dirty",
+    "floor",
+    "ground",
+    "discolored",
+    "stained"
+  ],
+  "authors": {
+    "Dario Barresi": "Processing",
+    "Dimitrios Savva": "Photography"
+  },
+  "dimensions": [
+    2500,
+    2500
+  ],
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "files_hash": "2274ffd02c42d765d335c85e9067398253d6b45e",
+  "description": "Free 8K texture of rough brushed concrete with circular trowel marks, weathered discoloration, stains and subtle surface pitting.",
+  "category_id": "8e19ddef-056e-5554-834d-2fd52f1c17f7",
+  "category": "Concrete/Cast Walls & Floors/Trowel & Brushed Finish",
+  "attributes": {
+    "surface_use": "floor",
+    "condition": [
+      "weathered",
+      "damaged"
+    ],
+    "origin": "man_made"
+  },
+  "img_version": "33e6ea95",
+  "download_count": 74769,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/brushed_concrete.png?width=256&height=256&v=33e6ea95"
+}

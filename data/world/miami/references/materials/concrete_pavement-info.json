@@ -1,0 +1,54 @@
+{
+  "name": "Concrete Pavement",
+  "type": 1,
+  "tags": [
+    "rough",
+    "urban",
+    "concrete",
+    "floor",
+    "rough  ",
+    "exterior",
+    "pavers",
+    "outdoor flooring",
+    "cement",
+    "flat",
+    "coarse",
+    "pavement",
+    "sidewalk"
+  ],
+  "authors": {
+    "Charlotte Baglioni": "All"
+  },
+  "info": null,
+  "dimensions": [
+    1800.0000715255737,
+    1800.0000715255737
+  ],
+  "staging": null,
+  "date_published": 1708387200,
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "files_hash": "13659c72c1314d12b0c5cd809f89ccc9fec09cbf",
+  "description": "Free 8K concrete texture of rough, coarse rectangular pavement pavers with sandy aggregate, subtle wear and flat matte finish in warm gray-beige tones.",
+  "categories": [
+    "floor",
+    "man made",
+    "concrete",
+    "plaster-concrete"
+  ],
+  "category_id": "3d66fbeb-75a0-5a98-97b4-d2630544da3f",
+  "category": "Brick & Block/Concrete Block & Paver",
+  "attributes": {
+    "surface_use": "paving",
+    "condition": [
+      "worn"
+    ],
+    "origin": "man_made",
+    "setting": "outdoor"
+  },
+  "img_version": "5ab61f2c",
+  "download_count": 51522,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/concrete_pavement.png?width=256&height=256&v=5ab61f2c"
+}

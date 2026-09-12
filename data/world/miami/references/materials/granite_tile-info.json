@@ -1,0 +1,48 @@
+{
+  "name": "Granite Tile",
+  "categories": [
+    "floor",
+    "man made"
+  ],
+  "type": 1,
+  "tags": [
+    "granite",
+    "tiles",
+    "tiled",
+    "stone tile",
+    "granite tile",
+    "flooring",
+    "interior",
+    "home decor",
+    "square tiles",
+    "grid",
+    "decorative tiles"
+  ],
+  "authors": {
+    "Charlotte Baglioni": "All"
+  },
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "dimensions": [
+    2299.999952316284,
+    2299.999952316284
+  ],
+  "date_published": 1727136000,
+  "staging": null,
+  "files_hash": "e9721ed5c35b6d2dc5ad0dc9f8e9fd1b407949ff",
+  "description": "Free 8K texture: dark gray granite square tiles with subtle rough surface, low sheen and neat grout lines, tactile stone tile appearance.",
+  "category_id": "c1b6840e-81a6-56d1-9cf0-1ef10c0aa6a2",
+  "category": "Stone/Slabs & Tiles/Granite",
+  "attributes": {
+    "surface_use": "floor",
+    "origin": "man_made",
+    "condition": [
+      "clean"
+    ]
+  },
+  "img_version": "b15e38bf",
+  "download_count": 151929,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/granite_tile.png?width=256&height=256&v=b15e38bf"
+}

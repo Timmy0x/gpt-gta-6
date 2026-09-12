@@ -1,0 +1,1052 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 47068786,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_diff_8k.jpg",
+        "md5": "f6096b0f85b425fb9999efc98724a02a"
+      },
+      "png": {
+        "size": 351707917,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_diff_8k.png",
+        "md5": "5164ef827739494bf3c29977311f1e85"
+      },
+      "exr": {
+        "size": 76849382,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_diff_8k.exr",
+        "md5": "c98521f6157951703eacdfe061ad2911"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 161340817,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_diff_16k.jpg",
+        "md5": "411094004d485fe6bed1515e8b8ec628"
+      },
+      "png": {
+        "size": 1364570177,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_diff_16k.png",
+        "md5": "90494e16f6f80e684672f72558e6f90a"
+      },
+      "exr": {
+        "size": 249022951,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_diff_16k.exr",
+        "md5": "8452ac5f1c41b3bd96c9755c4d7ca189"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 12162066,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_diff_4k.jpg",
+        "md5": "57c799d583d15da2447ea0c90dbd0eec"
+      },
+      "png": {
+        "size": 88637792,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_diff_4k.png",
+        "md5": "718aa4396d508f54460a6cf11dae3543"
+      },
+      "exr": {
+        "size": 20184050,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_diff_4k.exr",
+        "md5": "bdf78cf11543a52231302647dbcff092"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3086820,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_diff_2k.jpg",
+        "md5": "3d816c59181f0a67d194b33aa22d0cb0"
+      },
+      "png": {
+        "size": 22247310,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_diff_2k.png",
+        "md5": "af2a45663be302785eb790e7beaae241"
+      },
+      "exr": {
+        "size": 5240726,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_diff_2k.exr",
+        "md5": "59c5bc02a35450b56a09426cde118b5f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 757968,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_diff_1k.jpg",
+        "md5": "377ad5aeb4c4abd79ce32f92dc8ddccd"
+      },
+      "png": {
+        "size": 5579959,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_diff_1k.png",
+        "md5": "793c8b58b21381884b2e554846f0f6de"
+      },
+      "exr": {
+        "size": 1401323,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_diff_1k.exr",
+        "md5": "6408ac034e00e3c9652e59d0349d3c32"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 39851903,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_nor_dx_8k.jpg",
+        "md5": "bf644c509a59ca25755d25d5877e60b9"
+      },
+      "png": {
+        "size": 325508366,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_nor_dx_8k.png",
+        "md5": "0edc32c402e2d2db657ede5c17894af1"
+      },
+      "exr": {
+        "size": 77123478,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_nor_dx_8k.exr",
+        "md5": "dc51dd35ae196b0c92863741003ca31c"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 119364576,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_nor_dx_16k.jpg",
+        "md5": "07e9d22c2ccf11b7903e81a1ffc58655"
+      },
+      "png": {
+        "size": 1169704551,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_nor_dx_16k.png",
+        "md5": "1611c56c906773ecf27e2b4f1322246f"
+      },
+      "exr": {
+        "size": 214768539,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_nor_dx_16k.exr",
+        "md5": "3e0407ea0b4ca12e7d112a9e297ab09f"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 12743205,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_nor_dx_4k.jpg",
+        "md5": "04a18d5bbdab9762bfbb7e47aafdfa88"
+      },
+      "png": {
+        "size": 84564941,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_nor_dx_4k.png",
+        "md5": "94d4562651083cb6cc3c44afbbaca312"
+      },
+      "exr": {
+        "size": 25812121,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_nor_dx_4k.exr",
+        "md5": "fb505bc1e8e5103005c5168a76c8967e"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3685483,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_nor_dx_2k.jpg",
+        "md5": "4eff58d48f33dca6161136260a164ac0"
+      },
+      "png": {
+        "size": 21741272,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_nor_dx_2k.png",
+        "md5": "b4c6fabafc32d0eaf62ddb6ec479c2a4"
+      },
+      "exr": {
+        "size": 7906359,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_nor_dx_2k.exr",
+        "md5": "9142f859d5b433552f6fc10192de6fc3"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 908370,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_nor_dx_1k.jpg",
+        "md5": "1e08b14af9d2ab09753f3454f2ead73d"
+      },
+      "png": {
+        "size": 5553116,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_nor_dx_1k.png",
+        "md5": "62dc0b9e198716684f0ddcfd1909e3dc"
+      },
+      "exr": {
+        "size": 2078624,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_nor_dx_1k.exr",
+        "md5": "53fed9de2019215cf07beb458b368829"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 40046271,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_nor_gl_8k.jpg",
+        "md5": "5687ee19e245610caca1e3bd2466c7b4"
+      },
+      "png": {
+        "size": 325527605,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_nor_gl_8k.png",
+        "md5": "22bb0bd63f72847cdc437d3d5e11d2f6"
+      },
+      "exr": {
+        "size": 77067933,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_nor_gl_8k.exr",
+        "md5": "2e7034b89c68c9cbad3c36b7185c1c71"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 119796418,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_nor_gl_16k.jpg",
+        "md5": "a8aa44ee16cfd39e78545fb7f5812a09"
+      },
+      "png": {
+        "size": 1173293876,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_nor_gl_16k.png",
+        "md5": "caeef5088b32cee553a238a08486fde2"
+      },
+      "exr": {
+        "size": 214672586,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_nor_gl_16k.exr",
+        "md5": "58b613d74d94baf6bcf22d88b036e4da"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 12827171,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_nor_gl_4k.jpg",
+        "md5": "d1cffaed6f8d3eb4dfcaf190b7c9b248"
+      },
+      "png": {
+        "size": 84578713,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_nor_gl_4k.png",
+        "md5": "bfd4c9fb5408492d5e0b7ec74310f50a"
+      },
+      "exr": {
+        "size": 25793154,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_nor_gl_4k.exr",
+        "md5": "6ee82b9184dffdd101089f769352a93f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3724095,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_nor_gl_2k.jpg",
+        "md5": "f083a123bf9f6c90e9d5c825a8a7d37a"
+      },
+      "png": {
+        "size": 21748171,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_nor_gl_2k.png",
+        "md5": "5e87160003321ea3835a9fa727a15a84"
+      },
+      "exr": {
+        "size": 7904119,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_nor_gl_2k.exr",
+        "md5": "c3c8667a61f5e6dc933c0ece314ae6b0"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 918300,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_nor_gl_1k.jpg",
+        "md5": "9288d26d449427bc468a13203a67ff73"
+      },
+      "png": {
+        "size": 5555670,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_nor_gl_1k.png",
+        "md5": "6e8930bc43c554b115c5d56eb70c9c45"
+      },
+      "exr": {
+        "size": 2077922,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_nor_gl_1k.exr",
+        "md5": "a4d3735396e844a972c094596ad21009"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/concrete_pavers_rough_8k.exr": {
+            "size": 15398187,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_rough_8k.exr",
+            "md5": "afd5d663038b55e6e168904927e4aa9f"
+          },
+          "textures/concrete_pavers_diff_8k.jpg": {
+            "size": 47068786,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_diff_8k.jpg",
+            "md5": "f6096b0f85b425fb9999efc98724a02a"
+          },
+          "textures/concrete_pavers_disp_8k.png": {
+            "size": 83282037,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_disp_8k.png",
+            "md5": "f002624f234018640189c3ffacd86bf9"
+          },
+          "textures/concrete_pavers_nor_gl_8k.exr": {
+            "size": 77067933,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_nor_gl_8k.exr",
+            "md5": "2e7034b89c68c9cbad3c36b7185c1c71"
+          }
+        },
+        "size": 216252,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/8k/concrete_pavers/concrete_pavers_8k.blend",
+        "md5": "611503e08e39095222b4ffb2e643bcf0"
+      }
+    },
+    "16k": {
+      "blend": {
+        "include": {
+          "textures/concrete_pavers_nor_gl_16k.exr": {
+            "size": 214672586,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_nor_gl_16k.exr",
+            "md5": "58b613d74d94baf6bcf22d88b036e4da"
+          },
+          "textures/concrete_pavers_diff_16k.jpg": {
+            "size": 161340817,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_diff_16k.jpg",
+            "md5": "411094004d485fe6bed1515e8b8ec628"
+          },
+          "textures/concrete_pavers_disp_16k.png": {
+            "size": 283026740,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_disp_16k.png",
+            "md5": "b29aeff9705d77a30bc122cc728616ac"
+          },
+          "textures/concrete_pavers_rough_16k.exr": {
+            "size": 52184482,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_rough_16k.exr",
+            "md5": "7e5aa0772fa96f3a65e85b07825863a5"
+          }
+        },
+        "size": 216156,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/16k/concrete_pavers/concrete_pavers_16k.blend",
+        "md5": "cda0093da24d0758ca576d9fe492c4bc"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/concrete_pavers_rough_4k.exr": {
+            "size": 4163468,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_rough_4k.exr",
+            "md5": "78e433322ce9171d0e07a7361944834b"
+          },
+          "textures/concrete_pavers_diff_4k.jpg": {
+            "size": 12162066,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_diff_4k.jpg",
+            "md5": "57c799d583d15da2447ea0c90dbd0eec"
+          },
+          "textures/concrete_pavers_disp_4k.png": {
+            "size": 23438567,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_disp_4k.png",
+            "md5": "bcb2465f55d34ff7c907dcfd2c53ef3d"
+          },
+          "textures/concrete_pavers_nor_gl_4k.exr": {
+            "size": 25793154,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_nor_gl_4k.exr",
+            "md5": "6ee82b9184dffdd101089f769352a93f"
+          }
+        },
+        "size": 216125,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/4k/concrete_pavers/concrete_pavers_4k.blend",
+        "md5": "4717fe318c5058467d332f68d7c229ef"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/concrete_pavers_diff_2k.jpg": {
+            "size": 3086820,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_diff_2k.jpg",
+            "md5": "3d816c59181f0a67d194b33aa22d0cb0"
+          },
+          "textures/concrete_pavers_rough_2k.exr": {
+            "size": 1123674,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_rough_2k.exr",
+            "md5": "41a764afe9284302675f55e3f2ba84c4"
+          },
+          "textures/concrete_pavers_disp_2k.png": {
+            "size": 6396316,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_disp_2k.png",
+            "md5": "6d1fbaedb030a6ab225faade2c56c55e"
+          },
+          "textures/concrete_pavers_nor_gl_2k.exr": {
+            "size": 7904119,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_nor_gl_2k.exr",
+            "md5": "c3c8667a61f5e6dc933c0ece314ae6b0"
+          }
+        },
+        "size": 215962,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/2k/concrete_pavers/concrete_pavers_2k.blend",
+        "md5": "3d9df06beca440cfacbbad74956d1b5f"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/concrete_pavers_nor_gl_1k.exr": {
+            "size": 2077922,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_nor_gl_1k.exr",
+            "md5": "a4d3735396e844a972c094596ad21009"
+          },
+          "textures/concrete_pavers_diff_1k.jpg": {
+            "size": 757968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_diff_1k.jpg",
+            "md5": "377ad5aeb4c4abd79ce32f92dc8ddccd"
+          },
+          "textures/concrete_pavers_disp_1k.png": {
+            "size": 1684729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_disp_1k.png",
+            "md5": "78b506c02d724a4a25b52cf236b052bb"
+          },
+          "textures/concrete_pavers_rough_1k.exr": {
+            "size": 270635,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_rough_1k.exr",
+            "md5": "1bb437748e66a8ebacdb2621201c82b9"
+          }
+        },
+        "size": 216268,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/1k/concrete_pavers/concrete_pavers_1k.blend",
+        "md5": "40ac9f1543b1d7d3503dac44193ef09b"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "concrete_pavers.bin": {
+            "size": 2368980,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/concrete_pavers/concrete_pavers.bin",
+            "md5": "fc674b7c443abf68e59f74b71ddad334"
+          },
+          "textures/concrete_pavers_arm_8k.jpg": {
+            "size": 27949940,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_arm_8k.jpg",
+            "md5": "79fe522903494bb7ca9d60247ef5fbc8"
+          },
+          "textures/concrete_pavers_nor_gl_8k.jpg": {
+            "size": 40046271,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_nor_gl_8k.jpg",
+            "md5": "5687ee19e245610caca1e3bd2466c7b4"
+          },
+          "textures/concrete_pavers_diff_8k.jpg": {
+            "size": 47068786,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_diff_8k.jpg",
+            "md5": "f6096b0f85b425fb9999efc98724a02a"
+          }
+        },
+        "size": 2805,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/concrete_pavers/concrete_pavers_8k.gltf",
+        "md5": "7c70c8f829f59623b8a8fe268908d61c"
+      }
+    },
+    "16k": {
+      "gltf": {
+        "include": {
+          "concrete_pavers.bin": {
+            "size": 2368980,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/concrete_pavers/concrete_pavers.bin",
+            "md5": "fc674b7c443abf68e59f74b71ddad334"
+          },
+          "textures/concrete_pavers_arm_16k.jpg": {
+            "size": 111474747,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_arm_16k.jpg",
+            "md5": "27315e0185460ce0527d564844c436fd"
+          },
+          "textures/concrete_pavers_diff_16k.jpg": {
+            "size": 161340817,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_diff_16k.jpg",
+            "md5": "411094004d485fe6bed1515e8b8ec628"
+          },
+          "textures/concrete_pavers_nor_gl_16k.jpg": {
+            "size": 119796418,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_nor_gl_16k.jpg",
+            "md5": "a8aa44ee16cfd39e78545fb7f5812a09"
+          }
+        },
+        "size": 2808,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/16k/concrete_pavers/concrete_pavers_16k.gltf",
+        "md5": "9023ce1072720b8c854536ef39576a34"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "concrete_pavers.bin": {
+            "size": 2368980,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/concrete_pavers/concrete_pavers.bin",
+            "md5": "fc674b7c443abf68e59f74b71ddad334"
+          },
+          "textures/concrete_pavers_arm_4k.jpg": {
+            "size": 8259586,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_arm_4k.jpg",
+            "md5": "ed6f93226f8302172fa41bc1f0820716"
+          },
+          "textures/concrete_pavers_nor_gl_4k.jpg": {
+            "size": 12827171,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_nor_gl_4k.jpg",
+            "md5": "d1cffaed6f8d3eb4dfcaf190b7c9b248"
+          },
+          "textures/concrete_pavers_diff_4k.jpg": {
+            "size": 12162066,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_diff_4k.jpg",
+            "md5": "57c799d583d15da2447ea0c90dbd0eec"
+          }
+        },
+        "size": 2805,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/4k/concrete_pavers/concrete_pavers_4k.gltf",
+        "md5": "80b721e90f9d2937ce8c5468cb6162d1"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/concrete_pavers_nor_gl_2k.jpg": {
+            "size": 3724095,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_nor_gl_2k.jpg",
+            "md5": "f083a123bf9f6c90e9d5c825a8a7d37a"
+          },
+          "textures/concrete_pavers_diff_2k.jpg": {
+            "size": 3086820,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_diff_2k.jpg",
+            "md5": "3d816c59181f0a67d194b33aa22d0cb0"
+          },
+          "concrete_pavers.bin": {
+            "size": 2368980,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/concrete_pavers/concrete_pavers.bin",
+            "md5": "fc674b7c443abf68e59f74b71ddad334"
+          },
+          "textures/concrete_pavers_arm_2k.jpg": {
+            "size": 2507852,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_arm_2k.jpg",
+            "md5": "f25cac159ed0d0aa1373139bdd07e750"
+          }
+        },
+        "size": 2805,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/2k/concrete_pavers/concrete_pavers_2k.gltf",
+        "md5": "2313a443e873168b421e077637f5f3f0"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "concrete_pavers.bin": {
+            "size": 2368980,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/concrete_pavers/concrete_pavers.bin",
+            "md5": "fc674b7c443abf68e59f74b71ddad334"
+          },
+          "textures/concrete_pavers_nor_gl_1k.jpg": {
+            "size": 918300,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_nor_gl_1k.jpg",
+            "md5": "9288d26d449427bc468a13203a67ff73"
+          },
+          "textures/concrete_pavers_arm_1k.jpg": {
+            "size": 697269,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_arm_1k.jpg",
+            "md5": "1479b6de19dee8ea9424f8af25adcfd1"
+          },
+          "textures/concrete_pavers_diff_1k.jpg": {
+            "size": 757968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_diff_1k.jpg",
+            "md5": "377ad5aeb4c4abd79ce32f92dc8ddccd"
+          }
+        },
+        "size": 2805,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/1k/concrete_pavers/concrete_pavers_1k.gltf",
+        "md5": "b7086b32d18e20409492d75037701c20"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 27949940,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_arm_8k.jpg",
+        "md5": "79fe522903494bb7ca9d60247ef5fbc8"
+      },
+      "png": {
+        "size": 173299960,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_arm_8k.png",
+        "md5": "7cfb6bdfcc2a47e5987a61006a255df6"
+      },
+      "exr": {
+        "size": 41343360,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_arm_8k.exr",
+        "md5": "adbcd4450f6eb931125bb7336fa8bb81"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 111474747,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_arm_16k.jpg",
+        "md5": "27315e0185460ce0527d564844c436fd"
+      },
+      "png": {
+        "size": 636028089,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_arm_16k.png",
+        "md5": "feea084522050300aaf192ba68cfc2cd"
+      },
+      "exr": {
+        "size": 179378387,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_arm_16k.exr",
+        "md5": "101a540665aaadaf5e8a524ef8a3a37b"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8259586,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_arm_4k.jpg",
+        "md5": "ed6f93226f8302172fa41bc1f0820716"
+      },
+      "png": {
+        "size": 51027836,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_arm_4k.png",
+        "md5": "1fc2dfdc4e5d5aef547771174581ab77"
+      },
+      "exr": {
+        "size": 12181358,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_arm_4k.exr",
+        "md5": "98f3b351df95ea22cdb86117f33b1e8e"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2507852,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_arm_2k.jpg",
+        "md5": "f25cac159ed0d0aa1373139bdd07e750"
+      },
+      "png": {
+        "size": 14458874,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_arm_2k.png",
+        "md5": "11fb3f19e504fca5525bd013bf70ae1c"
+      },
+      "exr": {
+        "size": 4035128,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_arm_2k.exr",
+        "md5": "38dd3dfeb71807065cb08cd23476881a"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 697269,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_arm_1k.jpg",
+        "md5": "1479b6de19dee8ea9424f8af25adcfd1"
+      },
+      "png": {
+        "size": 3965954,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_arm_1k.png",
+        "md5": "37bc641f51aee3a14eb50d9c97230f00"
+      },
+      "exr": {
+        "size": 1239864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_arm_1k.exr",
+        "md5": "efe82a51992dde333e460cdc0b69d4ea"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 30113944,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_ao_8k.jpg",
+        "md5": "2016083d277cd8d89cb13f2597555613"
+      },
+      "png": {
+        "size": 40827796,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_ao_8k.png",
+        "md5": "ebea938884d170f21398c57fdabb1af5"
+      },
+      "exr": {
+        "size": 28256767,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_ao_8k.exr",
+        "md5": "a70eb670febf145a17ca65d55d1dd69e"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 134206330,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_ao_16k.jpg",
+        "md5": "6a3b6ec998d90d42c1d38d5331fdabab"
+      },
+      "png": {
+        "size": 128531336,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_ao_16k.png",
+        "md5": "55839e201feb32fa3cfe18ce34e3dbfc"
+      },
+      "exr": {
+        "size": 132088039,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_ao_16k.exr",
+        "md5": "2d6f072efbd163ce5165bb7bc0e60b67"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8186536,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_ao_4k.jpg",
+        "md5": "297acdb3427bdcf833126f1c5ae746cf"
+      },
+      "png": {
+        "size": 16609196,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_ao_4k.png",
+        "md5": "796fe9b856622ca4790a7a2345c548e8"
+      },
+      "exr": {
+        "size": 7696244,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_ao_4k.exr",
+        "md5": "a44a6d3c3dc7228b184c313477d04a18"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2554098,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_ao_2k.jpg",
+        "md5": "0a6fd78b540b2666bd6f9b2ea11b2b47"
+      },
+      "png": {
+        "size": 5543713,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_ao_2k.png",
+        "md5": "b8a88d3ca5f0bc96b20ca493f12d92cb"
+      },
+      "exr": {
+        "size": 2488300,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_ao_2k.exr",
+        "md5": "711e7a428dfe633bc7918ad0a38bef44"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 744539,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_ao_1k.jpg",
+        "md5": "f9f59b6988a1636c89a6da95b31f2e2c"
+      },
+      "png": {
+        "size": 1741188,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_ao_1k.png",
+        "md5": "51b13604f6647f45f553608d165b49a6"
+      },
+      "exr": {
+        "size": 735624,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_ao_1k.exr",
+        "md5": "c3e4c6f87862177304adf2d253931ee3"
+      }
+    }
+  },
+  "Displacement": {
+    "8k": {
+      "jpg": {
+        "size": 8834161,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_disp_8k.jpg",
+        "md5": "b90122daaebc288f130eb07134e968b1"
+      },
+      "png": {
+        "size": 83282037,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_disp_8k.png",
+        "md5": "f002624f234018640189c3ffacd86bf9"
+      },
+      "exr": {
+        "size": 8364376,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_disp_8k.exr",
+        "md5": "501c3efc6ffe55ced5d0bf82921af19b"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 24566599,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_disp_16k.jpg",
+        "md5": "a1337c34f679f82a419c0d585c775b9e"
+      },
+      "png": {
+        "size": 283026740,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_disp_16k.png",
+        "md5": "b29aeff9705d77a30bc122cc728616ac"
+      },
+      "exr": {
+        "size": 20922261,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_disp_16k.exr",
+        "md5": "79f76b4250fbf3d4ea7a1f588e4068a3"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 3277211,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_disp_4k.jpg",
+        "md5": "0eadb690d657fa31a085a41471879de9"
+      },
+      "png": {
+        "size": 23438567,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_disp_4k.png",
+        "md5": "bcb2465f55d34ff7c907dcfd2c53ef3d"
+      },
+      "exr": {
+        "size": 3369938,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_disp_4k.exr",
+        "md5": "97d328d13b56442be9da28a5322194a7"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1209544,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_disp_2k.jpg",
+        "md5": "62b194a99bd3549ba2a4eaa03ff1df2d"
+      },
+      "png": {
+        "size": 6396316,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_disp_2k.png",
+        "md5": "6d1fbaedb030a6ab225faade2c56c55e"
+      },
+      "exr": {
+        "size": 1323745,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_disp_2k.exr",
+        "md5": "1e4d3cf5178832c64e1ca952ad8982b0"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 407797,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_disp_1k.jpg",
+        "md5": "5f624810d2fcd8c51e890f8137a718cf"
+      },
+      "png": {
+        "size": 1684729,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_disp_1k.png",
+        "md5": "78b506c02d724a4a25b52cf236b052bb"
+      },
+      "exr": {
+        "size": 462950,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_disp_1k.exr",
+        "md5": "595dd839467225b0d953436d533cd84a"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 19097044,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_rough_8k.jpg",
+        "md5": "7e5438a737e070c5f09b726be3590f30"
+      },
+      "png": {
+        "size": 104236168,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_rough_8k.png",
+        "md5": "d0d414b6a3e4486cc85e8f00ed749bf6"
+      },
+      "exr": {
+        "size": 15398187,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_rough_8k.exr",
+        "md5": "afd5d663038b55e6e168904927e4aa9f"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 66605363,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_rough_16k.jpg",
+        "md5": "4a3edf03faa5425063a18f75eeada463"
+      },
+      "png": {
+        "size": 412249493,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_rough_16k.png",
+        "md5": "f2a0aab4d97a5d2f367df05b3cfb867c"
+      },
+      "exr": {
+        "size": 52184482,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_rough_16k.exr",
+        "md5": "7e5aa0772fa96f3a65e85b07825863a5"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 5140914,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_rough_4k.jpg",
+        "md5": "074cbc64f45705d053070bfa079c9fac"
+      },
+      "png": {
+        "size": 26352139,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_rough_4k.png",
+        "md5": "69597699b31ed50fec4ea1a1188c9aef"
+      },
+      "exr": {
+        "size": 4163468,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_rough_4k.exr",
+        "md5": "78e433322ce9171d0e07a7361944834b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1324873,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_rough_2k.jpg",
+        "md5": "4bda2eeae3a96417364e148ae731d7fd"
+      },
+      "png": {
+        "size": 6629410,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_rough_2k.png",
+        "md5": "2b5fd8a385cb6919880d0e550782b8f2"
+      },
+      "exr": {
+        "size": 1123674,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_rough_2k.exr",
+        "md5": "41a764afe9284302675f55e3f2ba84c4"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 324326,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_rough_1k.jpg",
+        "md5": "8350471ae879e2909850ebf64ed5812c"
+      },
+      "png": {
+        "size": 1649748,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_rough_1k.png",
+        "md5": "777b2a4ec0916059c6b5ebfde70cd3b5"
+      },
+      "exr": {
+        "size": 270635,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_rough_1k.exr",
+        "md5": "1bb437748e66a8ebacdb2621201c82b9"
+      }
+    }
+  },
+  "mtlx": {
+    "8k": {
+      "mtlx": {
+        "include": {
+          "textures/concrete_pavers_rough_8k.exr": {
+            "size": 15398187,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_rough_8k.exr",
+            "md5": "afd5d663038b55e6e168904927e4aa9f"
+          },
+          "textures/concrete_pavers_diff_8k.jpg": {
+            "size": 47068786,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/concrete_pavers/concrete_pavers_diff_8k.jpg",
+            "md5": "f6096b0f85b425fb9999efc98724a02a"
+          },
+          "textures/concrete_pavers_disp_8k.png": {
+            "size": 83282037,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/concrete_pavers/concrete_pavers_disp_8k.png",
+            "md5": "f002624f234018640189c3ffacd86bf9"
+          },
+          "textures/concrete_pavers_nor_gl_8k.exr": {
+            "size": 77067933,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/concrete_pavers/concrete_pavers_nor_gl_8k.exr",
+            "md5": "2e7034b89c68c9cbad3c36b7185c1c71"
+          }
+        },
+        "size": 4742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/8k/concrete_pavers/concrete_pavers_8k.mtlx",
+        "md5": "3cba272bd162e2dd217ad0fe80187ca4"
+      }
+    },
+    "16k": {
+      "mtlx": {
+        "include": {
+          "textures/concrete_pavers_nor_gl_16k.exr": {
+            "size": 214672586,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_nor_gl_16k.exr",
+            "md5": "58b613d74d94baf6bcf22d88b036e4da"
+          },
+          "textures/concrete_pavers_diff_16k.jpg": {
+            "size": 161340817,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/16k/concrete_pavers/concrete_pavers_diff_16k.jpg",
+            "md5": "411094004d485fe6bed1515e8b8ec628"
+          },
+          "textures/concrete_pavers_disp_16k.png": {
+            "size": 283026740,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/16k/concrete_pavers/concrete_pavers_disp_16k.png",
+            "md5": "b29aeff9705d77a30bc122cc728616ac"
+          },
+          "textures/concrete_pavers_rough_16k.exr": {
+            "size": 52184482,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/16k/concrete_pavers/concrete_pavers_rough_16k.exr",
+            "md5": "7e5aa0772fa96f3a65e85b07825863a5"
+          }
+        },
+        "size": 4746,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/16k/concrete_pavers/concrete_pavers_16k.mtlx",
+        "md5": "803aacf490ba634e204b7cde5a9ff85d"
+      }
+    },
+    "4k": {
+      "mtlx": {
+        "include": {
+          "textures/concrete_pavers_rough_4k.exr": {
+            "size": 4163468,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_rough_4k.exr",
+            "md5": "78e433322ce9171d0e07a7361944834b"
+          },
+          "textures/concrete_pavers_diff_4k.jpg": {
+            "size": 12162066,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavers/concrete_pavers_diff_4k.jpg",
+            "md5": "57c799d583d15da2447ea0c90dbd0eec"
+          },
+          "textures/concrete_pavers_disp_4k.png": {
+            "size": 23438567,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/concrete_pavers/concrete_pavers_disp_4k.png",
+            "md5": "bcb2465f55d34ff7c907dcfd2c53ef3d"
+          },
+          "textures/concrete_pavers_nor_gl_4k.exr": {
+            "size": 25793154,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/concrete_pavers/concrete_pavers_nor_gl_4k.exr",
+            "md5": "6ee82b9184dffdd101089f769352a93f"
+          }
+        },
+        "size": 4742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/4k/concrete_pavers/concrete_pavers_4k.mtlx",
+        "md5": "db7791f33d6897f6a6fc6786ecb19ac2"
+      }
+    },
+    "2k": {
+      "mtlx": {
+        "include": {
+          "textures/concrete_pavers_diff_2k.jpg": {
+            "size": 3086820,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_diff_2k.jpg",
+            "md5": "3d816c59181f0a67d194b33aa22d0cb0"
+          },
+          "textures/concrete_pavers_rough_2k.exr": {
+            "size": 1123674,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_rough_2k.exr",
+            "md5": "41a764afe9284302675f55e3f2ba84c4"
+          },
+          "textures/concrete_pavers_disp_2k.png": {
+            "size": 6396316,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/concrete_pavers/concrete_pavers_disp_2k.png",
+            "md5": "6d1fbaedb030a6ab225faade2c56c55e"
+          },
+          "textures/concrete_pavers_nor_gl_2k.exr": {
+            "size": 7904119,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/concrete_pavers/concrete_pavers_nor_gl_2k.exr",
+            "md5": "c3c8667a61f5e6dc933c0ece314ae6b0"
+          }
+        },
+        "size": 4742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/2k/concrete_pavers/concrete_pavers_2k.mtlx",
+        "md5": "874e96a037e0bd2998c25cf1515d7d2d"
+      }
+    },
+    "1k": {
+      "mtlx": {
+        "include": {
+          "textures/concrete_pavers_nor_gl_1k.exr": {
+            "size": 2077922,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_nor_gl_1k.exr",
+            "md5": "a4d3735396e844a972c094596ad21009"
+          },
+          "textures/concrete_pavers_diff_1k.jpg": {
+            "size": 757968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_diff_1k.jpg",
+            "md5": "377ad5aeb4c4abd79ce32f92dc8ddccd"
+          },
+          "textures/concrete_pavers_disp_1k.png": {
+            "size": 1684729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/concrete_pavers/concrete_pavers_disp_1k.png",
+            "md5": "78b506c02d724a4a25b52cf236b052bb"
+          },
+          "textures/concrete_pavers_rough_1k.exr": {
+            "size": 270635,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/concrete_pavers/concrete_pavers_rough_1k.exr",
+            "md5": "1bb437748e66a8ebacdb2621201c82b9"
+          }
+        },
+        "size": 4742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/1k/concrete_pavers/concrete_pavers_1k.mtlx",
+        "md5": "2b6bed1a2db344393073bb8a71e05b0a"
+      }
+    }
+  }
+}

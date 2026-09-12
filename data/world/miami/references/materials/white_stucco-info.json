@@ -1,0 +1,52 @@
+{
+  "type": 1,
+  "name": "White Stucco",
+  "categories": [
+    "wall",
+    "man made",
+    "wall",
+    "man made",
+    "plaster",
+    "indoor"
+  ],
+  "category": "Concrete/Plaster & Stucco/Bare Plaster",
+  "tags": [
+    "rough",
+    "wall",
+    "painted",
+    "stucco",
+    "white",
+    "granular",
+    "matte",
+    "uneven",
+    "porous",
+    "plaster"
+  ],
+  "description": "Free 8K white stucco texture with fine granular bumps, subtle pores and a matte, slightly warm off‑white plaster finish.",
+  "authors": {
+    "Amal Kumar": "All"
+  },
+  "category_id": "ebaa964c-b45c-52e2-bd50-892d64616d87",
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "dimensions": [
+    1998.0629682540894,
+    1998.0640411376953
+  ],
+  "files_hash": "6130f832c1ced67099984a28a99031483624ce44",
+  "date_published": 1786406400,
+  "staging": null,
+  "attributes": {
+    "surface_use": "wall",
+    "condition": [
+      "clean"
+    ],
+    "origin": "man_made",
+    "setting": "outdoor"
+  },
+  "img_version": "10c37d5f",
+  "download_count": 9739,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/white_stucco.png?width=256&height=256&v=10c37d5f"
+}

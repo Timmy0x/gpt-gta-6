@@ -1,0 +1,50 @@
+{
+  "name": "Concrete Pavers",
+  "categories": [
+    "floor",
+    "man made"
+  ],
+  "type": 1,
+  "tags": [
+    "interlocking",
+    "pavers",
+    "pavement",
+    "outdoor",
+    "interlocking bricks",
+    "concrete",
+    "stamped concrete",
+    "precast",
+    "pavement patterned",
+    "patterned",
+    "sidewalk texture",
+    "patterned concrete"
+  ],
+  "authors": {
+    "Amal Kumar": "All"
+  },
+  "max_resolution": [
+    16384,
+    16384
+  ],
+  "dimensions": [
+    1920.0000762939453,
+    1920.0000762939453
+  ],
+  "date_published": 1715040000,
+  "staging": null,
+  "files_hash": "a40f838a871f7b23be44f38becdabce97eb76b3b",
+  "description": "Free 16K texture of interlocking concrete pavers with worn, slightly rough surface, recessed joints and subtle dirt staining on patterned pavement.",
+  "category_id": "ce26ba57-ef4b-54d4-a954-9a85bb053b9e",
+  "category": "Brick & Block/Concrete Block & Paver/Interlocking Pavers",
+  "attributes": {
+    "surface_use": "paving",
+    "condition": [
+      "worn"
+    ],
+    "origin": "man_made",
+    "setting": "outdoor"
+  },
+  "img_version": "7367fec9",
+  "download_count": 20887,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/concrete_pavers.png?width=256&height=256&v=7367fec9"
+}

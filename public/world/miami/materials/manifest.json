@@ -1,0 +1,746 @@
+{
+  "version": 1,
+  "acquired": "2026-09-12",
+  "credit": "Powered by Poly Haven",
+  "license": "https://polyhaven.com/license",
+  "scope": "Reusable first-block material candidates. No façade, street width or landmark accuracy is implied by material acquisition.",
+  "modifications": "Publisher 1K/2K JPEG maps copied unchanged; no photographs, preview renders, Google imagery or map tiles are included.",
+  "bindings": {
+    "asphalt": "asphalt_02",
+    "sidewalk": "brushed_concrete",
+    "curb": "brushed_concrete",
+    "soil": "brown_mud_leaves_01",
+    "sand": "dense_sand",
+    "waterbed": "dense_sand",
+    "facade-stone": "granite_tile",
+    "facade-concrete": "white_stucco",
+    "pavers-rectangular": "concrete_pavement",
+    "pavers-interlocking": "concrete_pavers"
+  },
+  "unavailable": {
+    "facade-glass": "Requires an authored glazing assembly with dielectric reflection/refraction, correctly modeled interior/spandrels and measured pane/mullion dimensions. No flat-color replacement is supplied."
+  },
+  "entries": [
+    {
+      "id": "asphalt_02",
+      "usage": "road-surface",
+      "note": "Weathered asphalt candidate; road wear and markings remain separate measured geometry/decals.",
+      "name": "Asphalt 02",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "source": "https://polyhaven.com/a/asphalt_02",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        3.000000238418579,
+        3
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/asphalt_02/1k/color.jpg",
+              "bytes": 731707,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg",
+              "md5": "fa19772d4817754c3efab708c651f5a8",
+              "sha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/asphalt_02/1k/normal.jpg",
+              "bytes": 1240122,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_nor_gl_1k.jpg",
+              "md5": "338da8de636ea36133170578cac82e8e",
+              "sha256": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/asphalt_02/1k/arm.jpg",
+              "bytes": 296770,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_arm_1k.jpg",
+              "md5": "33820445f43af5e5ee484674b6939271",
+              "sha256": "56bd8e591a3db579846fcb5185f60b0651e0bd4ea85c3529c339e6746243c9cf"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/asphalt_02/2k/color.jpg",
+              "bytes": 3075676,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_diff_2k.jpg",
+              "md5": "336af399fd98a39ab986d8b3bf73b4ff",
+              "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/asphalt_02/2k/normal.jpg",
+              "bytes": 4943950,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_nor_gl_2k.jpg",
+              "md5": "77ebd1cc0b020ccaa1c6b58f103d1f75",
+              "sha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/asphalt_02/2k/arm.jpg",
+              "bytes": 1299186,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_arm_2k.jpg",
+              "md5": "152c0fb79ad6f33040b79779fea98664",
+              "sha256": "ed70e88640e4ed51cf1c3e57cb20db26983599b20b867c2526439e3a2c849fea"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.45,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    },
+    {
+      "id": "brushed_concrete",
+      "usage": "sidewalk-and-curb",
+      "note": "Continuous brushed concrete candidate; expansion joints, curb faces and ramps require authored geometry.",
+      "name": "Brushed Concrete ",
+      "authors": {
+        "Dario Barresi": "Processing",
+        "Dimitrios Savva": "Photography"
+      },
+      "source": "https://polyhaven.com/a/brushed_concrete",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        2.5,
+        2.5
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/brushed_concrete/1k/color.jpg",
+              "bytes": 847278,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brushed_concrete/brushed_concrete_diff_1k.jpg",
+              "md5": "731d450cd11906e926adeb2d5caa29f9",
+              "sha256": "4054ed6eb65cd063356ffb4a88706b7d7b78c5435051c48bf0ee64290f04bc8c"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brushed_concrete/1k/normal.jpg",
+              "bytes": 849228,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brushed_concrete/brushed_concrete_nor_gl_1k.jpg",
+              "md5": "fc8c03e505d0f2acb932dde6deae557a",
+              "sha256": "f4953a881f34627cefcc22f780d392314635e31bb41f75cf3888a5af55c21820"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brushed_concrete/1k/arm.jpg",
+              "bytes": 783702,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brushed_concrete/brushed_concrete_arm_1k.jpg",
+              "md5": "1e7712c0e6f4094a594ac17e7b99b366",
+              "sha256": "374e4408acfb0bb4512f904f6fd3ae1006195ed12f2e258625b5b8b3a91f6528"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/brushed_concrete/2k/color.jpg",
+              "bytes": 3590812,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brushed_concrete/brushed_concrete_diff_2k.jpg",
+              "md5": "341c593c794bf18b0a49c542f6e381b7",
+              "sha256": "5af96604b20e29862b449d86981b196b18ba5cbcb8659c451dd8976411a36130"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brushed_concrete/2k/normal.jpg",
+              "bytes": 3524683,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brushed_concrete/brushed_concrete_nor_gl_2k.jpg",
+              "md5": "ca0204e32c2f2afad5f4bbe8c6b436ed",
+              "sha256": "3d1f1c7a5f20a5f7a15f3bc5c5f58c0fdcaf49e71e65a5f17e086b551895c00c"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brushed_concrete/2k/arm.jpg",
+              "bytes": 3636383,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brushed_concrete/brushed_concrete_arm_2k.jpg",
+              "md5": "5b394d736daadf4b772e8dd3b96dac2e",
+              "sha256": "87e7ee823a78d6d85dc98cd5d1b5a7d4e694429ef4a01f3947b7e4b8a8d284b2"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.35,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    },
+    {
+      "id": "concrete_pavement",
+      "usage": "rectangular-sidewalk-pavers",
+      "note": "Rectangular pavement candidate, only for mapped areas where compatible source reference confirms pavers.",
+      "name": "Concrete Pavement",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "source": "https://polyhaven.com/a/concrete_pavement",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        1.8000000715255737,
+        1.8000000715255737
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/concrete_pavement/1k/color.jpg",
+              "bytes": 926197,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavement/concrete_pavement_diff_1k.jpg",
+              "md5": "b7a0d071a3406d55a1c3e9a73a06df03",
+              "sha256": "70d3ff969a7421c7ae057b5d16386d11f5e59c6740db643352e1039413f419c4"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavement/1k/normal.jpg",
+              "bytes": 1184345,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavement/concrete_pavement_nor_gl_1k.jpg",
+              "md5": "025a1d4e910cf3e5b3d63ada43a791d8",
+              "sha256": "a5009e409ff0f7b2d19e1316fe5e2b2b4f28e4a6b79990a664be69d4e8a0e690"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavement/1k/arm.jpg",
+              "bytes": 802384,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavement/concrete_pavement_arm_1k.jpg",
+              "md5": "92d5d1f6449deacd7dbd13d1dff26741",
+              "sha256": "2895506708adad25d64c3d7c3d0f922a6df0468af4a9afe3d5d3a0fb35bb3afd"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/concrete_pavement/2k/color.jpg",
+              "bytes": 3817566,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavement/concrete_pavement_diff_2k.jpg",
+              "md5": "f7cdc6f38538e2739d48fbb4f1507ddb",
+              "sha256": "e5a1cecfe7765cc0b24a6ab0abf492bd21c9e7af64e97fc46ef6021d0645fbd3"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavement/2k/normal.jpg",
+              "bytes": 5179971,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavement/concrete_pavement_nor_gl_2k.jpg",
+              "md5": "0b6ff8180e61242be0b89e8fe1d6fda7",
+              "sha256": "72def937e418ccc9d7736c9b1f51ae22a127fa2a53a54f4d1fe4d3cf828b781c"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavement/2k/arm.jpg",
+              "bytes": 3465289,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavement/concrete_pavement_arm_2k.jpg",
+              "md5": "850a6ac811d73e993555058cc21471a1",
+              "sha256": "1ee3ab8013a6204c739b40ef9b87ccfdff32711525bccf94ee9b3c171aa731f6"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.35,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    },
+    {
+      "id": "concrete_pavers",
+      "usage": "interlocking-plaza-pavers",
+      "note": "Interlocking paver option, not an assertion that this exact pattern exists on the first block.",
+      "name": "Concrete Pavers",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "source": "https://polyhaven.com/a/concrete_pavers",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        1.9200000762939453,
+        1.9200000762939453
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/concrete_pavers/1k/color.jpg",
+              "bytes": 757968,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_diff_1k.jpg",
+              "md5": "377ad5aeb4c4abd79ce32f92dc8ddccd",
+              "sha256": "eea1fb8b498154754f4961ce0792092ef56cadc3d210becbb0dc3bf6c96c261d"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavers/1k/normal.jpg",
+              "bytes": 918300,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_nor_gl_1k.jpg",
+              "md5": "9288d26d449427bc468a13203a67ff73",
+              "sha256": "761c8332b4b53ab06931adf83f5f8f4fa5b7559a1a8267bc7ef865f890b17894"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavers/1k/arm.jpg",
+              "bytes": 697269,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_pavers/concrete_pavers_arm_1k.jpg",
+              "md5": "1479b6de19dee8ea9424f8af25adcfd1",
+              "sha256": "8375d082a81e6e8043af5f6ec1c5c71ada9577e50faf60a3c412b8df5612eb4e"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/concrete_pavers/2k/color.jpg",
+              "bytes": 3086820,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_diff_2k.jpg",
+              "md5": "3d816c59181f0a67d194b33aa22d0cb0",
+              "sha256": "ac772172824543ce53a9ad60e0b7a00c02fcaf875ec6a65ae49806f6ae25539a"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavers/2k/normal.jpg",
+              "bytes": 3724095,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_nor_gl_2k.jpg",
+              "md5": "f083a123bf9f6c90e9d5c825a8a7d37a",
+              "sha256": "e2c582e8cfbd1fd05a344fecba7d8cade8590ab2ebf24088118618a721c66149"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/concrete_pavers/2k/arm.jpg",
+              "bytes": 2507852,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_pavers/concrete_pavers_arm_2k.jpg",
+              "md5": "f25cac159ed0d0aa1373139bdd07e750",
+              "sha256": "b2e1e7f2b419a0be3ec3f130c40e1067429c3f26845b4c57d802e3ce02efd49a"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.35,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    },
+    {
+      "id": "granite_tile",
+      "usage": "dark-stone-plinth",
+      "note": "Granite cladding/plaza candidate. Does not replace the documented green marble finish at 801 Brickell.",
+      "name": "Granite Tile",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "source": "https://polyhaven.com/a/granite_tile",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        2.299999952316284,
+        2.299999952316284
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/granite_tile/1k/color.jpg",
+              "bytes": 676597,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_diff_1k.jpg",
+              "md5": "5dfd6dbdb5c0b22ca04505c6209cea9f",
+              "sha256": "9df48b66055588708d446e69f37ea6146b8d5d3df54cd1ff088ec688acdca95c"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/granite_tile/1k/normal.jpg",
+              "bytes": 592362,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_nor_gl_1k.jpg",
+              "md5": "e9053333e3db348d10466a781456ec58",
+              "sha256": "bb9a122e0a1171c52458fc9ac82f588f4e100f1f7b461cc15028bed1c63fe961"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/granite_tile/1k/arm.jpg",
+              "bytes": 718960,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_arm_1k.jpg",
+              "md5": "7c526438b1f83d77415227b81f24c964",
+              "sha256": "3262e58c2f3bd9fff8e374c9aa52ef88c28a4115b550934faa90433dba67470a"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/granite_tile/2k/color.jpg",
+              "bytes": 2938829,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_diff_2k.jpg",
+              "md5": "79a1eaac48a3d6720a88c216997dbd67",
+              "sha256": "758f9b1cdce11bc6f6a805cdea18fb789639befe40608020ab6087c5c1cba1e5"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/granite_tile/2k/normal.jpg",
+              "bytes": 2486724,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_nor_gl_2k.jpg",
+              "md5": "da6b09b4f8bff2e4d28cd29294b1b10f",
+              "sha256": "53a80f10b8a8b38ac6551e4a838d1ef77602e74858dfb2364f96be5450c3bc11"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/granite_tile/2k/arm.jpg",
+              "bytes": 3017037,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_arm_2k.jpg",
+              "md5": "d754c592f16e84b59d178ffd99ecf480",
+              "sha256": "d3f326fdddbc57341c15bb7f3dbb93a851d5625709b9aecf70f490c66618f23b"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.35,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    },
+    {
+      "id": "white_stucco",
+      "usage": "painted-concrete-facade",
+      "note": "Textured pale rendered-concrete candidate. Does not establish façade panel spacing or exact surface finish.",
+      "name": "White Stucco",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "source": "https://polyhaven.com/a/white_stucco",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        1.9980629682540894,
+        1.9980640411376953
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/white_stucco/1k/color.jpg",
+              "bytes": 557550,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_diff_1k.jpg",
+              "md5": "34b66656dbf2a90eec29306deb1a20d0",
+              "sha256": "5f2d11f5675ffe679155d8e38ed8eaa9b9972126675641e4977c8a4f905f276b"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/white_stucco/1k/normal.jpg",
+              "bytes": 932038,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_nor_gl_1k.jpg",
+              "md5": "3e70f3be77f582fd41a9a08c8e8a6e66",
+              "sha256": "f0d4f34b30093ceca5e58d5168fc06c2f0cd0b81289708aa3eac7d0801bd069d"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/white_stucco/1k/arm.jpg",
+              "bytes": 323604,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_arm_1k.jpg",
+              "md5": "8528cc4a2fe3c4c047161682ecacdf7f",
+              "sha256": "f072f12ac50d667f23ec2c20dd03463923e405f109106cc7ad4d2d85eeb16bd6"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/white_stucco/2k/color.jpg",
+              "bytes": 2326889,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_diff_2k.jpg",
+              "md5": "9f8369b068a4fee870f4f2f19a6cb66f",
+              "sha256": "a1cf9063e72d82306c5f3330cfaa56ed75ee365dc6a6eb875cde125395dbe4ea"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/white_stucco/2k/normal.jpg",
+              "bytes": 4025312,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_nor_gl_2k.jpg",
+              "md5": "aded1a765eca8ced74d4b8d1b6367818",
+              "sha256": "d11eae11d09af20a1bd4e1262b1d35ad4259451a19651307a7fa8f6c0cadfc59"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/white_stucco/2k/arm.jpg",
+              "bytes": 1390598,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_arm_2k.jpg",
+              "md5": "8331cf3cf11da2f4bad5729f305c7aee",
+              "sha256": "15c6162bd93fc94b1fec078cabe595e44652b1b4d78d5932f8f143e3911b6bb1"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.35,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    },
+    {
+      "id": "dense_sand",
+      "usage": "sand-and-waterbed",
+      "note": "Compacted sand candidate for unobstructed ground; surveyed underwater terrain and wet material response remain separate.",
+      "name": "Dense Sand",
+      "authors": {
+        "Dimitrios Savva": "All"
+      },
+      "source": "https://polyhaven.com/a/dense_sand",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        1.8000000715255737,
+        1.8000000715255737
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/dense_sand/1k/color.jpg",
+              "bytes": 681515,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dense_sand/dense_sand_diff_1k.jpg",
+              "md5": "1c3d2c1f41b24ea9133973f2dedd5fea",
+              "sha256": "0d2430c115167a2da3f60d60eb9ea2aa51e71472e2672f94c7f5df78342081ff"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/dense_sand/1k/normal.jpg",
+              "bytes": 993025,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dense_sand/dense_sand_nor_gl_1k.jpg",
+              "md5": "ade5aef220f7ad2904bf902ea02d003f",
+              "sha256": "776fe4f5008ee5043a709b0b63a9a7ec758f18ac5e62db65a0e99c04cc782617"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/dense_sand/1k/arm.jpg",
+              "bytes": 685180,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dense_sand/dense_sand_arm_1k.jpg",
+              "md5": "1310b2067203e410a0df79df9a080bfb",
+              "sha256": "30d042f0b81e12eccdf2d32398c34c1f8416687a42f8ed453e9337c141c90015"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/dense_sand/2k/color.jpg",
+              "bytes": 2803876,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dense_sand/dense_sand_diff_2k.jpg",
+              "md5": "5855029eadd3f5064b76abe41790fd68",
+              "sha256": "b2e3f157c315b9645d23e55d54b4c2c8fec39e5114001cbbc9a797ed27a06980"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/dense_sand/2k/normal.jpg",
+              "bytes": 3923081,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dense_sand/dense_sand_nor_gl_2k.jpg",
+              "md5": "baba455bc9a3789e74d77e8bb1d58d9b",
+              "sha256": "22a97f0fb874ab6976c7ad566c09e776d4c191b074ed5fa258cdb29a2e83a7c6"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/dense_sand/2k/arm.jpg",
+              "bytes": 2689355,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dense_sand/dense_sand_arm_2k.jpg",
+              "md5": "9a4213326f1a026392d6e6c4913f033d",
+              "sha256": "df0ebf4a2096e9fcc4cf32c3ae12adb2cc8df6318b82382393597a31fb63c1b1"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.35,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    },
+    {
+      "id": "brown_mud_leaves_01",
+      "usage": "planting-soil",
+      "note": "Soil with leaf litter for planting beds; do not carpet paved parcels or landscaped grass with this material.",
+      "name": "Brown Mud Leaves 01",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "source": "https://polyhaven.com/a/brown_mud_leaves_01",
+      "license": "CC0-1.0",
+      "tileMetres": [
+        1.2999998331069946,
+        1.2999998331069946
+      ],
+      "levels": [
+        {
+          "resolution": "1k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/brown_mud_leaves_01/1k/color.jpg",
+              "bytes": 1206953,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_mud_leaves_01/brown_mud_leaves_01_diff_1k.jpg",
+              "md5": "5340848384f9bb19bfa6e7ac459683d7",
+              "sha256": "c598c555f13cd5328409fd5e2a45496a26e319e52299e3959042f1449c2f1b06"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brown_mud_leaves_01/1k/normal.jpg",
+              "bytes": 1486072,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_mud_leaves_01/brown_mud_leaves_01_nor_gl_1k.jpg",
+              "md5": "3698df51ef8262ddf2248ffca1e73196",
+              "sha256": "8dd5166ddcc293cefd331d491ce6b9162bc9202ddd999ac1e4141697560d38e0"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brown_mud_leaves_01/1k/arm.jpg",
+              "bytes": 953367,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_mud_leaves_01/brown_mud_leaves_01_arm_1k.jpg",
+              "md5": "9d2a6f3c244c177503c5e441fad91a6e",
+              "sha256": "136cbc6870e1d4d818f739af077b0c0700536b7eb4663c3b68bdb112d1940c82"
+            }
+          ]
+        },
+        {
+          "resolution": "2k",
+          "maps": [
+            {
+              "channel": "Diffuse",
+              "colorSpace": "srgb",
+              "url": "/world/miami/materials/brown_mud_leaves_01/2k/color.jpg",
+              "bytes": 4539452,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_leaves_01/brown_mud_leaves_01_diff_2k.jpg",
+              "md5": "e8b45aee8e00a253eb3a2b08cea89776",
+              "sha256": "29c997d77f56e4ea16d3e998a306be0c17fddb28ab4822657c7cd8249040ffda"
+            },
+            {
+              "channel": "nor_gl",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brown_mud_leaves_01/2k/normal.jpg",
+              "bytes": 5688696,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_leaves_01/brown_mud_leaves_01_nor_gl_2k.jpg",
+              "md5": "eb2c704d2889e1e5a53148dc6a2ebdf4",
+              "sha256": "b6ec386e00d9d2a1c3a1da6a98a67066b0dfaa88ddb779341df29700cf081bdf"
+            },
+            {
+              "channel": "arm",
+              "colorSpace": "linear",
+              "url": "/world/miami/materials/brown_mud_leaves_01/2k/arm.jpg",
+              "bytes": 3697743,
+              "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_leaves_01/brown_mud_leaves_01_arm_2k.jpg",
+              "md5": "62ef9ac8da61a02f78e05d35ad05438d",
+              "sha256": "a80135a30b7ea0f29f093269acae10f83d327dcc0a20bc10083da59843988c15"
+            }
+          ]
+        }
+      ],
+      "normalConvention": "OpenGL +Y",
+      "armChannels": {
+        "red": "ambient-occlusion",
+        "green": "roughness",
+        "blue": "metalness"
+      },
+      "metallicFactor": 0,
+      "normalStrength": 0.35,
+      "scaleStatus": "Publisher measured texture tile, not a survey of a Miami surface."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": 1,
+  "name": "Dense Sand",
+  "categories": [
+    "outdoor",
+    "sand",
+    "natural"
+  ],
+  "tags": [
+    "rough",
+    "sand",
+    "sandy",
+    "sandpit",
+    "granular",
+    "coarse",
+    "gritty",
+    "compact",
+    "footprints",
+    "tan"
+  ],
+  "description": "Free 8K texture of compacted tan sand with crusted clumps, shallow pits and subtle granular detail. Dry, matte roughness with slight color variation.",
+  "authors": {
+    "Dimitrios Savva": "All"
+  },
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "dimensions": [
+    1800.0000715255737,
+    1800.0000715255737
+  ],
+  "files_hash": "a879d92e50ec8fa37f370a8d2ad69bffbe4893d3",
+  "staging": null,
+  "date_published": 1784851200,
+  "category_id": "2262e1f2-20db-5ba4-9915-764041ba9c4c",
+  "category": "Ground & Terrain/Sand/Compacted & Trampled Sand",
+  "attributes": {
+    "surface_use": "ground",
+    "origin": "natural",
+    "setting": "outdoor",
+    "condition": [
+      "worn"
+    ]
+  },
+  "img_version": "c0bf0384",
+  "download_count": 2661,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/dense_sand.png?width=256&height=256&v=c0bf0384"
+}

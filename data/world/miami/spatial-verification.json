@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "status": "pass",
+  "scope": "Source identity and geometric reconciliation; not contemporary architectural fidelity acceptance",
+  "sourceBinarySha256": "fbe0c7e6b42e96b187513d1bd698a7e2231d32f5f2157c829602cd99dc2ffba5",
+  "sourceMeshes": 262,
+  "currentFootprints": 590,
+  "exactSourceMatches": 200,
+  "minimumExactIntersectionOverUnion": 0.9841820779714497,
+  "minimumExactInputCoverage": 0.9920637403593716,
+  "newerParts": 390,
+  "newerPartsAtLeast95PercentCovered": 17,
+  "newerPartsRequiringReview": 373,
+  "closed701InspectionSections": 8,
+  "gaps": [
+    "Horizontal overlap alone does not prove unchanged height, facade, address or physical building identity.",
+    "701 source massing lacks rounded corners visible in the licensed reference and contains nested volumes."
+  ]
+}

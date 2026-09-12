@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "reviewDate": "2026-09-12",
+  "coordinateContract": {
+    "origin": {
+      "latitude": 25.765,
+      "longitude": -80.193
+    },
+    "units": "metres",
+    "axes": "x east, y up, z north",
+    "distanceCompression": false
+  },
+  "scope": "Brickell Avenue/SE8th first block; no claim of completed Miami reconstruction.",
+  "sources": [
+    {
+      "id": "miami-b30874-section1-2015",
+      "title": "Brickell Avenue Project Section One, B-30874",
+      "url": "https://archive.miamigov.com/miamicapital/docs/ProjectPages/ProcurementOpportunities/ITB_Brickell_Avenue_Roadway_Improvements/Section1_CPW_100%25Approved.pdf",
+      "publisher": "City of Miami / T.Y. Lin International",
+      "date": "2015-11-05",
+      "approvalDate": "2015-11-06",
+      "kind": "approved-engineering-design",
+      "reuse": "Facts and dimensions only; PDF is linked, not redistributed as a game asset.",
+      "reviewedSheets": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11
+      ],
+      "limitations": [
+        "Historic approved design, not an as-built survey.",
+        "Sheet2 prohibits scaling printed drawings for construction; dimensions here are printed numerical annotations."
+      ]
+    },
+    {
+      "id": "cvu-701",
+      "url": "https://www.skyscrapercenter.com/building/wd/4404",
+      "publisher": "Council on Vertical Urbanism / Skyscraper Center",
+      "kind": "institutional-building-database",
+      "facts": {
+        "architecturalHeightM": 137.1,
+        "floorsAboveGround": 33
+      },
+      "limitations": [
+        "Architectural height is a separate datum/definition from county mesh min/max."
+      ]
+    },
+    {
+      "id": "cvu-801",
+      "url": "https://www.skyscrapercenter.com/miami/one-brickell-square/20628/",
+      "publisher": "Council on Vertical Urbanism / Skyscraper Center",
+      "kind": "institutional-building-database",
+      "facts": {
+        "architecturalHeightM": 100,
+        "floorsAboveGround": 26,
+        "address": "801 Brickell Avenue",
+        "name": "One Brickell Square"
+      },
+      "limitations": [
+        "Floor count conflicts with current broker28-story description.",
+        "Do not apply to an entire multipart address parcel."
+      ]
+    },
+    {
+      "id": "801-owner-2025",
+      "url": "https://801brickellmia.com/",
+      "publisher": "801 Brickell ownership/leasing",
+      "kind": "primary-owner",
+      "facts": [
+        "SOM design",
+        "Ground-floor/plaza hospitality renovation delivered Q1 2025",
+        "Ludlow Coffee and outdoor-connected lobby"
+      ],
+      "limitations": [
+        "Current source identifies recent changes; no reusable image license."
+      ]
+    },
+    {
+      "id": "801-tvs-2021",
+      "url": "https://www.tvsdesign.com/projects/project-detail/801-brickell-avenue/",
+      "publisher": "TVS",
+      "kind": "primary-project-architect",
+      "facts": [
+        "2021 lobby intervention retained green marble and glazing",
+        "Round-window lighting feature"
+      ],
+      "limitations": [
+        "Interior details are not a measured exterior elevation; later2025 work may supersede."
+      ]
+    },
+    {
+      "id": "801-colliers-2025",
+      "url": "https://www.colliers.com/en/news/miami/801-brickell-lease",
+      "publisher": "Colliers leasing agent",
+      "date": "2025-02-18",
+      "kind": "primary-broker",
+      "facts": {
+        "stories": 28
+      }
+    },
+    {
+      "id": "800-owner",
+      "url": "https://www.gatsbyflorida.com/800brickell",
+      "publisher": "Gatsby Florida",
+      "kind": "primary-owner",
+      "facts": {
+        "stories": 15,
+        "address": "800 Brickell Avenue"
+      },
+      "limitations": [
+        "Current broker Blanca states16stories; metric height unresolved."
+      ]
+    },
+    {
+      "id": "800-broker",
+      "url": "https://blancacre.com/properties/800-brickell",
+      "publisher": "Blanca Commercial Real Estate",
+      "kind": "primary-broker",
+      "facts": {
+        "stories": 16
+      },
+      "limitations": [
+        "Conflicts with owner15stories; do not infer metric height from either count."
+      ]
+    },
+    {
+      "id": "bcc-architect",
+      "url": "https://arquitectonica.com/architecture/project/brickell-city-centre/",
+      "publisher": "Arquitectonica",
+      "kind": "primary-project-architect",
+      "facts": [
+        "Open-air connected development, not a sealed mall",
+        "Integrated Metromover station",
+        "Steel/fabric/glass Climate Ribbon",
+        "Phase1 opened2016"
+      ],
+      "limitations": [
+        "Complex has separate towers, podiums, air bridges and public paths."
+      ]
+    },
+    {
+      "id": "bcc-membrane-engineer",
+      "url": "https://www.form-tl.de/en/project/brickell-city-centre-miami-usa/",
+      "publisher": "formTL",
+      "kind": "primary-project-engineer",
+      "facts": {
+        "blades": 313,
+        "membrane": "PTFE-coated glass Verseidag B18039"
+      },
+      "limitations": [
+        "Engineering diagrams/images are reference-only; no reuse license granted."
+      ]
+    },
+    {
+      "id": "polyhaven-license",
+      "url": "https://polyhaven.com/license",
+      "publisher": "Poly Haven",
+      "kind": "asset-publisher-license",
+      "license": "CC0-1.0",
+      "limitations": [
+        "CC0 asset files are distinct from copyrighted site text and preview renders."
+      ]
+    },
+    {
+      "id": "google-locator-policy",
+      "url": "https://about.google/brand-resource-center/products-and-services/geo-guidelines/",
+      "publisher": "Google",
+      "kind": "provider-usage-policy",
+      "use": "Links as reference locators only; no downloaded tiles/imagery, tracing or image-derived geometry."
+    },
+    {
+      "id": "701-averette-2008",
+      "url": "https://commons.wikimedia.org/wiki/File:701_Brickell_Avenue.jpg",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/c/cc/701_Brickell_Avenue.jpg",
+      "publisher": "Marc Averette via Wikimedia Commons",
+      "kind": "first-person-licensed-photograph",
+      "date": "2008-05-14",
+      "view": "west",
+      "license": "CC-BY-3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "701 Brickell Avenue, Marc Averette,14May2008,CCBY3.0; source photograph unchanged.",
+      "localFile": "data/world/miami/references/photos/701-brickell-west-2008.jpg",
+      "sha1": "2e92eaeb4d2c53fda72c516b2b19190edab1ba3e",
+      "sha256": "384a3b0f8a72728224a181b232157a4377a6e97f80966ebc17502b29166589a4",
+      "bytes": 2365655,
+      "width": 1920,
+      "height": 2560,
+      "limitations": [
+        "Historic elevation reference, not evidence of current tenants, lower plaza or construction state.",
+        "No pixels used as runtime textures."
+      ],
+      "observations": [
+        "Broad reflective glazing ribbons separated by dark stone spandrel bands",
+        "Tight vertical pane joints and curved end of tower",
+        "Tall opaque roof crown",
+        "Recessed lower glazed base supported by slender columns"
+      ],
+      "observationConfidence": "Visual interpretation of a perspective photograph; pane dimensions and unpictured elevations are not measured."
+    },
+    {
+      "id": "701-tvs-2022",
+      "url": "https://www.tvsdesign.com/projects/project-detail/701-brickell-avenue/",
+      "publisher": "TVS",
+      "kind": "primary-project-architect",
+      "date": "2022",
+      "facts": [
+        "2022 lobby/common-floor repositioning with outdoor dining and landscape",
+        "Sweeping serpentine interior forms and integrated lighting"
+      ],
+      "limitations": [
+        "Confirms changes after2008 photograph; no current exterior dimensions or reusable image license."
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "id": "city-street:11901",
+      "name": "SE8th Street, SE1st Avenue to Brickell Avenue",
+      "sourceFeatureId": "St_SegID11901",
+      "coverage": "mapped-centerline; first-block art pending",
+      "sourceIds": [
+        "miami-b30874-section1-2015"
+      ],
+      "googleLocator": "https://www.google.com/maps/search/?api=1&query=SE+8th+Street+and+Brickell+Avenue+Miami",
+      "gaps": [
+        "Current curb-ramp coordinates",
+        "Streetlight/sign inventory",
+        "Current crossing pattern/condition",
+        "2025\u20132026 construction changes"
+      ]
+    },
+    {
+      "id": "city-street:11902",
+      "name": "SE8th Street, South Miami Avenue to SE1st Avenue",
+      "sourceFeatureId": "St_SegID11902",
+      "coverage": "mapped-centerline; reference-linked",
+      "sourceIds": [
+        "bcc-architect",
+        "bcc-membrane-engineer"
+      ],
+      "gaps": [
+        "Exact canopy frontage and Metromover clearance",
+        "Current shopfront modules",
+        "Pedestrian connections and bridge collision"
+      ]
+    },
+    {
+      "id": "county-building:D1_MDC_Building_426",
+      "name": "701 Brickell",
+      "sourceFeatureId": "D1_MDC_Building_426",
+      "sourceObjectId": 692261,
+      "sourceMeshId": "county-i3s:316",
+      "identityConfidence": "confirmed-address-and-geometry",
+      "coverage": "mapped massing only; R1 source-fitted facade rejected in visual review",
+      "sourceIds": [
+        "cvu-701",
+        "701-averette-2008",
+        "701-tvs-2022"
+      ],
+      "gaps": [
+        "Separate upper tower horizontal section from shared podium",
+        "2021/current lower-plaza changes",
+        "Measured mullion spacing and non-west elevations",
+        "2015 source is nested overlapping extruded massing and omits the visible rounded facade; cannot be accepted as finished architecture."
+      ]
+    },
+    {
+      "id": "county-building:D1_MDC_Building_89",
+      "name": "800 Brickell",
+      "sourceFeatureId": "D1_MDC_Building_89",
+      "sourceObjectId": 719917,
+      "identityConfidence": "confirmed-address-and-geometry",
+      "coverage": "mapped-envelope; art pending",
+      "sourceIds": [
+        "800-owner",
+        "800-broker"
+      ],
+      "gaps": [
+        "Exact metric height and floor-count discrepancy",
+        "Current atrium/retail facade measurements",
+        "Podium/garage separated from tower"
+      ]
+    },
+    {
+      "id": "parcel-address:801-brickell",
+      "name": "801 Brickell Avenue / One Brickell Square",
+      "sourceFeatureId": null,
+      "identityConfidence": "multipart-address-parcel-only",
+      "excludedAutomaticJoin": "D1_MDC_Building_3",
+      "coverage": "primary-reference-linked; exact office tower join pending",
+      "sourceIds": [
+        "cvu-801",
+        "801-owner-2025",
+        "801-tvs-2021",
+        "801-colliers-2025"
+      ],
+      "gaps": [
+        "Resolve correct northern office tower footprint; D1_3 is southern narrow tower",
+        "Reconcile floor count",
+        "2025 lobby/plaza update",
+        "Source green marble and exact round-window/crown geometry"
+      ]
+    }
+  ],
+  "datedDesignDimensions": {
+    "sourceId": "miami-b30874-section1-2015",
+    "status": "approved2015design-not-as-built",
+    "sheet3": {
+      "travelLanes": 4,
+      "eachTravelLaneM": 3.3528,
+      "centralMedianTurningBandM": 7.3152,
+      "sidewalkBandM": 3.6576,
+      "rightOfWayRangeM": [
+        30.48,
+        33.528
+      ],
+      "curbType": "F retained"
+    },
+    "sheet5": {
+      "crossingColoredBandM": 3.048,
+      "crossingEachWhiteEdgeM": 0.3048,
+      "crossingTotalWidthM": 3.6576,
+      "concreteSlabM": 0.2286
+    },
+    "limitations": [
+      "Typical dimensions do not establish junction geometry or present-day condition."
+    ]
+  }
+}

@@ -1,0 +1,846 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 53200794,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_diff_8k.jpg",
+        "md5": "d55f953796a1856a5e5069e4e138b447"
+      },
+      "png": {
+        "size": 307226401,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_diff_8k.png",
+        "md5": "6ae722e7b044643dd76fd9710b89bc71"
+      },
+      "exr": {
+        "size": 99243975,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_diff_8k.exr",
+        "md5": "f74895731ff4faea66ad603089b8104e"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 12787977,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_diff_4k.jpg",
+        "md5": "2a0253486ea71ce26a3a3cd5f913edce"
+      },
+      "png": {
+        "size": 89198198,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_diff_4k.png",
+        "md5": "2e3e3fa05634f0cf46caa1c055577cf8"
+      },
+      "exr": {
+        "size": 22895458,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_diff_4k.exr",
+        "md5": "50af7950f26b679f7c0138eef4181a3a"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2938829,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_diff_2k.jpg",
+        "md5": "79a1eaac48a3d6720a88c216997dbd67"
+      },
+      "png": {
+        "size": 22346946,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_diff_2k.png",
+        "md5": "2d8f4192bdd5650ee6cbd08f288a5885"
+      },
+      "exr": {
+        "size": 4930609,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_diff_2k.exr",
+        "md5": "8e0715e112bcbad0696c0cc683861f23"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 676597,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_diff_1k.jpg",
+        "md5": "5dfd6dbdb5c0b22ca04505c6209cea9f"
+      },
+      "png": {
+        "size": 5509211,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_diff_1k.png",
+        "md5": "9fd5757ef0fed00109339a1b327518da"
+      },
+      "exr": {
+        "size": 1093025,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_diff_1k.exr",
+        "md5": "7d251c86576778669492a0ca78631a1b"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 37311391,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_nor_dx_8k.jpg",
+        "md5": "8e0ea29e7108c449753d5e5dd6fc868e"
+      },
+      "png": {
+        "size": 244275709,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_nor_dx_8k.png",
+        "md5": "4316344f51622a8498b326f6e87323b4"
+      },
+      "exr": {
+        "size": 80823041,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_nor_dx_8k.exr",
+        "md5": "a8257667ede7fa7ab9f25e02fc58e0ae"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9573971,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_nor_dx_4k.jpg",
+        "md5": "513cf8d2f574f1f7172df483e45a4026"
+      },
+      "png": {
+        "size": 77220110,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_nor_dx_4k.png",
+        "md5": "3a94cd10309febd6b2d52e80f7d031e9"
+      },
+      "exr": {
+        "size": 20316737,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_nor_dx_4k.exr",
+        "md5": "747a07e552d1370ef326b316b3207745"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2487215,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_nor_dx_2k.jpg",
+        "md5": "1a1c1082d29d1d8ecca68a855818f7f4"
+      },
+      "png": {
+        "size": 20395320,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_nor_dx_2k.png",
+        "md5": "96dfb620b1aaa5907aabc713d1d4155c"
+      },
+      "exr": {
+        "size": 5472003,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_nor_dx_2k.exr",
+        "md5": "f3461cfae23afe22403cc15aaf911f17"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 592617,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_nor_dx_1k.jpg",
+        "md5": "80927297a718356114c047f1bb81ed6c"
+      },
+      "png": {
+        "size": 5117303,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_nor_dx_1k.png",
+        "md5": "31b2f518e858b2b41532b9038245ed66"
+      },
+      "exr": {
+        "size": 1430871,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_nor_dx_1k.exr",
+        "md5": "a7e88c735b9d27a6cfa49db2cbef3d6d"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 37357553,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_nor_gl_8k.jpg",
+        "md5": "29c480147edb56d33f62c05541cc6c52"
+      },
+      "png": {
+        "size": 263259216,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_nor_gl_8k.png",
+        "md5": "2397225ffa7ae1560941f043ce45c6c1"
+      },
+      "exr": {
+        "size": 80893439,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_nor_gl_8k.exr",
+        "md5": "a7b00c9464457c7d2e35890a06a05adf"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9577725,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_nor_gl_4k.jpg",
+        "md5": "2690f16a92f820f510f23bde6ce4ac87"
+      },
+      "png": {
+        "size": 77231826,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_nor_gl_4k.png",
+        "md5": "b381d1b111041b96de65feec550884a0"
+      },
+      "exr": {
+        "size": 20323894,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_nor_gl_4k.exr",
+        "md5": "eae5c37634f1e5e3a43b3100f59d7db1"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2486724,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_nor_gl_2k.jpg",
+        "md5": "da6b09b4f8bff2e4d28cd29294b1b10f"
+      },
+      "png": {
+        "size": 20397425,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_nor_gl_2k.png",
+        "md5": "e5e72567393aa73c622857fd13f52e66"
+      },
+      "exr": {
+        "size": 5472530,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_nor_gl_2k.exr",
+        "md5": "94c09438f210943de4f9234c1824a936"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 592362,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_nor_gl_1k.jpg",
+        "md5": "e9053333e3db348d10466a781456ec58"
+      },
+      "png": {
+        "size": 5117076,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_nor_gl_1k.png",
+        "md5": "ae2c56d4217e526e2263c6b09d3bce26"
+      },
+      "exr": {
+        "size": 1430532,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_nor_gl_1k.exr",
+        "md5": "4445d765ca1463ca2a5dbdec41c35e82"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/granite_tile_diff_8k.jpg": {
+            "size": 53200794,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_diff_8k.jpg",
+            "md5": "d55f953796a1856a5e5069e4e138b447"
+          },
+          "textures/granite_tile_disp_8k.png": {
+            "size": 54593701,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_disp_8k.png",
+            "md5": "1fcf10be94279063d5ebb911a824454f"
+          },
+          "textures/granite_tile_nor_gl_8k.exr": {
+            "size": 80893439,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_nor_gl_8k.exr",
+            "md5": "a7b00c9464457c7d2e35890a06a05adf"
+          },
+          "textures/granite_tile_rough_8k.exr": {
+            "size": 39868455,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_rough_8k.exr",
+            "md5": "0f0499ab7875647c7e3c6847cc32bedc"
+          }
+        },
+        "size": 217287,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/8k/granite_tile/granite_tile_8k.blend",
+        "md5": "801b013efbf06d011443890754b7f8f9"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/granite_tile_disp_4k.png": {
+            "size": 17576769,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_disp_4k.png",
+            "md5": "2867f6f9c3c723980ba741747e9ac41e"
+          },
+          "textures/granite_tile_rough_4k.exr": {
+            "size": 10924242,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_rough_4k.exr",
+            "md5": "b05e89ed64b900ce0dd37893fbcaec15"
+          },
+          "textures/granite_tile_nor_gl_4k.exr": {
+            "size": 20323894,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_nor_gl_4k.exr",
+            "md5": "eae5c37634f1e5e3a43b3100f59d7db1"
+          },
+          "textures/granite_tile_diff_4k.jpg": {
+            "size": 12787977,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_diff_4k.jpg",
+            "md5": "2a0253486ea71ce26a3a3cd5f913edce"
+          }
+        },
+        "size": 216768,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/4k/granite_tile/granite_tile_4k.blend",
+        "md5": "befa0b1ca1d7a3afb1dc67af13b3db09"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/granite_tile_diff_2k.jpg": {
+            "size": 2938829,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_diff_2k.jpg",
+            "md5": "79a1eaac48a3d6720a88c216997dbd67"
+          },
+          "textures/granite_tile_nor_gl_2k.exr": {
+            "size": 5472530,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_nor_gl_2k.exr",
+            "md5": "94c09438f210943de4f9234c1824a936"
+          },
+          "textures/granite_tile_rough_2k.exr": {
+            "size": 2860645,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_rough_2k.exr",
+            "md5": "77fe23def475d5561c5e8874c682a265"
+          },
+          "textures/granite_tile_disp_2k.png": {
+            "size": 6372255,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_disp_2k.png",
+            "md5": "dca0f48dc7bf1c76b7a0839d822db1b4"
+          }
+        },
+        "size": 216728,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/2k/granite_tile/granite_tile_2k.blend",
+        "md5": "d0c2970a2bce0e936a17241fddec9444"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/granite_tile_rough_1k.exr": {
+            "size": 724567,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_rough_1k.exr",
+            "md5": "4c1b3936b897e4a5731a8263b89391ad"
+          },
+          "textures/granite_tile_disp_1k.png": {
+            "size": 1702704,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_disp_1k.png",
+            "md5": "2a83221d45c432a395cfe68d4661c9de"
+          },
+          "textures/granite_tile_nor_gl_1k.exr": {
+            "size": 1430532,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_nor_gl_1k.exr",
+            "md5": "4445d765ca1463ca2a5dbdec41c35e82"
+          },
+          "textures/granite_tile_diff_1k.jpg": {
+            "size": 676597,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_diff_1k.jpg",
+            "md5": "5dfd6dbdb5c0b22ca04505c6209cea9f"
+          }
+        },
+        "size": 216639,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/1k/granite_tile/granite_tile_1k.blend",
+        "md5": "daf8818ee1e8702c440d633410235acd"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/granite_tile_nor_gl_8k.jpg": {
+            "size": 37357553,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_nor_gl_8k.jpg",
+            "md5": "29c480147edb56d33f62c05541cc6c52"
+          },
+          "textures/granite_tile_diff_8k.jpg": {
+            "size": 53200794,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_diff_8k.jpg",
+            "md5": "d55f953796a1856a5e5069e4e138b447"
+          },
+          "granite_tile.bin": {
+            "size": 2368468,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/granite_tile/granite_tile.bin",
+            "md5": "ce3b3014f722ad6a198fbe18425b36b0"
+          },
+          "textures/granite_tile_arm_8k.jpg": {
+            "size": 42850588,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_arm_8k.jpg",
+            "md5": "763969b1f612ce43636e100f4130037b"
+          }
+        },
+        "size": 2781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/granite_tile/granite_tile_8k.gltf",
+        "md5": "b7e896a84cdc12606c24e5c58f476c21"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/granite_tile_arm_4k.jpg": {
+            "size": 11705829,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_arm_4k.jpg",
+            "md5": "1ff32454f336299c7c890b6a215a9e24"
+          },
+          "granite_tile.bin": {
+            "size": 2368468,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/granite_tile/granite_tile.bin",
+            "md5": "ce3b3014f722ad6a198fbe18425b36b0"
+          },
+          "textures/granite_tile_nor_gl_4k.jpg": {
+            "size": 9577725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_nor_gl_4k.jpg",
+            "md5": "2690f16a92f820f510f23bde6ce4ac87"
+          },
+          "textures/granite_tile_diff_4k.jpg": {
+            "size": 12787977,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_diff_4k.jpg",
+            "md5": "2a0253486ea71ce26a3a3cd5f913edce"
+          }
+        },
+        "size": 2781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/4k/granite_tile/granite_tile_4k.gltf",
+        "md5": "d8a29236aa8e115354298041be474653"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/granite_tile_arm_2k.jpg": {
+            "size": 3017037,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_arm_2k.jpg",
+            "md5": "d754c592f16e84b59d178ffd99ecf480"
+          },
+          "granite_tile.bin": {
+            "size": 2368468,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/granite_tile/granite_tile.bin",
+            "md5": "ce3b3014f722ad6a198fbe18425b36b0"
+          },
+          "textures/granite_tile_nor_gl_2k.jpg": {
+            "size": 2486724,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_nor_gl_2k.jpg",
+            "md5": "da6b09b4f8bff2e4d28cd29294b1b10f"
+          },
+          "textures/granite_tile_diff_2k.jpg": {
+            "size": 2938829,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_diff_2k.jpg",
+            "md5": "79a1eaac48a3d6720a88c216997dbd67"
+          }
+        },
+        "size": 2781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/2k/granite_tile/granite_tile_2k.gltf",
+        "md5": "c1c984dac192edc6bdb2a2af23e66425"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "granite_tile.bin": {
+            "size": 2368468,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/granite_tile/granite_tile.bin",
+            "md5": "ce3b3014f722ad6a198fbe18425b36b0"
+          },
+          "textures/granite_tile_arm_1k.jpg": {
+            "size": 718960,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_arm_1k.jpg",
+            "md5": "7c526438b1f83d77415227b81f24c964"
+          },
+          "textures/granite_tile_diff_1k.jpg": {
+            "size": 676597,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_diff_1k.jpg",
+            "md5": "5dfd6dbdb5c0b22ca04505c6209cea9f"
+          },
+          "textures/granite_tile_nor_gl_1k.jpg": {
+            "size": 592362,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_nor_gl_1k.jpg",
+            "md5": "e9053333e3db348d10466a781456ec58"
+          }
+        },
+        "size": 2781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/1k/granite_tile/granite_tile_1k.gltf",
+        "md5": "c334df87ae10655d7b8036ec211e1e94"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 42850588,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_arm_8k.jpg",
+        "md5": "763969b1f612ce43636e100f4130037b"
+      },
+      "png": {
+        "size": 224271140,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_arm_8k.png",
+        "md5": "330d778acdc6f958251f3b0cb3cc9304"
+      },
+      "exr": {
+        "size": 92929429,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_arm_8k.exr",
+        "md5": "a7621de172000a912224cf49381a7d6b"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 11705829,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_arm_4k.jpg",
+        "md5": "1ff32454f336299c7c890b6a215a9e24"
+      },
+      "png": {
+        "size": 61977889,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_arm_4k.png",
+        "md5": "e49988af78b78971ede10d674ce52f84"
+      },
+      "exr": {
+        "size": 26367693,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_arm_4k.exr",
+        "md5": "5227fe267d378829ea223657e586d3bf"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3017037,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_arm_2k.jpg",
+        "md5": "d754c592f16e84b59d178ffd99ecf480"
+      },
+      "png": {
+        "size": 16738519,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_arm_2k.png",
+        "md5": "e3730ef3710f340a86283a48693254ed"
+      },
+      "exr": {
+        "size": 6922182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_arm_2k.exr",
+        "md5": "83016de9c0544471aac1e0af5a3f61a0"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 718960,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_arm_1k.jpg",
+        "md5": "7c526438b1f83d77415227b81f24c964"
+      },
+      "png": {
+        "size": 4246153,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_arm_1k.png",
+        "md5": "185151010a7b0c599107496be35dd2b4"
+      },
+      "exr": {
+        "size": 1732480,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_arm_1k.exr",
+        "md5": "eca31cc95115f885c4d1cc89200bde5e"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 24826092,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_ao_8k.jpg",
+        "md5": "23c9c731cee97855612dc3ccf199b048"
+      },
+      "png": {
+        "size": 73411246,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_ao_8k.png",
+        "md5": "79e190fa1af468d4d26f0670bb680c25"
+      },
+      "exr": {
+        "size": 21971217,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_ao_8k.exr",
+        "md5": "7d1911ff2375be0b55f1ea825808bd83"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 6938390,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_ao_4k.jpg",
+        "md5": "3c2671dfebacb0a9529a1ea2d105b1bd"
+      },
+      "png": {
+        "size": 22813644,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_ao_4k.png",
+        "md5": "37e5c85348cb198157d46a22097c1e3f"
+      },
+      "exr": {
+        "size": 6176923,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_ao_4k.exr",
+        "md5": "a2ad642acbd84d1f1bc437866d6ec191"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1827481,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_ao_2k.jpg",
+        "md5": "380a184db91e3fef9f2ff1e976ca728b"
+      },
+      "png": {
+        "size": 6778057,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_ao_2k.png",
+        "md5": "2555ff58c896a25dc2f81c03dc5f33b4"
+      },
+      "exr": {
+        "size": 1692086,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_ao_2k.exr",
+        "md5": "0f763364e28297c8df9c0cb77cc420b1"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 456910,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_ao_1k.jpg",
+        "md5": "aae77658f97e92904da05085080161c3"
+      },
+      "png": {
+        "size": 1743540,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_ao_1k.png",
+        "md5": "6c52b004e3e27933944369af8b3fde26"
+      },
+      "exr": {
+        "size": 446757,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_ao_1k.exr",
+        "md5": "732b66638a58ea79191379be732825c9"
+      }
+    }
+  },
+  "Displacement": {
+    "8k": {
+      "jpg": {
+        "size": 11988608,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_disp_8k.jpg",
+        "md5": "15bb8c089c75fb4f642b781f939f0112"
+      },
+      "png": {
+        "size": 54593701,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_disp_8k.png",
+        "md5": "1fcf10be94279063d5ebb911a824454f"
+      },
+      "exr": {
+        "size": 10105941,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_disp_8k.exr",
+        "md5": "a10f55eca7ec561a40636b92029bc4fe"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 3728241,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_disp_4k.jpg",
+        "md5": "30decb34b2c30e37ee9e37ea1f2d9bb6"
+      },
+      "png": {
+        "size": 17576769,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_disp_4k.png",
+        "md5": "2867f6f9c3c723980ba741747e9ac41e"
+      },
+      "exr": {
+        "size": 3580809,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_disp_4k.exr",
+        "md5": "8f9323624075562c8917bd5f652753bc"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1249779,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_disp_2k.jpg",
+        "md5": "3c70bf6420f96a4f0cf46362ab1995bf"
+      },
+      "png": {
+        "size": 6372255,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_disp_2k.png",
+        "md5": "dca0f48dc7bf1c76b7a0839d822db1b4"
+      },
+      "exr": {
+        "size": 1282965,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_disp_2k.exr",
+        "md5": "0a794ff4dea59c711dc39209157fc9cc"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 409126,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_disp_1k.jpg",
+        "md5": "3776cbebe6929f54b2a230cada1dcaba"
+      },
+      "png": {
+        "size": 1702704,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_disp_1k.png",
+        "md5": "2a83221d45c432a395cfe68d4661c9de"
+      },
+      "exr": {
+        "size": 437537,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_disp_1k.exr",
+        "md5": "2ffe350ff3d34138ef0cd1f448c36162"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 38553911,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_rough_8k.jpg",
+        "md5": "91794e1dd27245437fbec6624883a843"
+      },
+      "png": {
+        "size": 117174168,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_rough_8k.png",
+        "md5": "a9011c160be6b4f6684eaaf3bb11dc49"
+      },
+      "exr": {
+        "size": 39868455,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_rough_8k.exr",
+        "md5": "0f0499ab7875647c7e3c6847cc32bedc"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 10474922,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_rough_4k.jpg",
+        "md5": "4b4ecc5d7719d572bae2031415d737cc"
+      },
+      "png": {
+        "size": 29683507,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_rough_4k.png",
+        "md5": "2beec66521cd9eeae2241553f0c7ecf8"
+      },
+      "exr": {
+        "size": 10924242,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_rough_4k.exr",
+        "md5": "b05e89ed64b900ce0dd37893fbcaec15"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2738066,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_rough_2k.jpg",
+        "md5": "d772d400dd0f25ef2231fb000360d3d5"
+      },
+      "png": {
+        "size": 7504293,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_rough_2k.png",
+        "md5": "8041773d6b0db3d8ec3e9fb3619ae620"
+      },
+      "exr": {
+        "size": 2860645,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_rough_2k.exr",
+        "md5": "77fe23def475d5561c5e8874c682a265"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 674755,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_rough_1k.jpg",
+        "md5": "fd4d40cbc28323260038eedb43bc6ff8"
+      },
+      "png": {
+        "size": 1885499,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_rough_1k.png",
+        "md5": "75a03a0d335b61a0c6c67ce1939feab1"
+      },
+      "exr": {
+        "size": 724567,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_rough_1k.exr",
+        "md5": "4c1b3936b897e4a5731a8263b89391ad"
+      }
+    }
+  },
+  "mtlx": {
+    "8k": {
+      "mtlx": {
+        "include": {
+          "textures/granite_tile_diff_8k.jpg": {
+            "size": 53200794,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/granite_tile/granite_tile_diff_8k.jpg",
+            "md5": "d55f953796a1856a5e5069e4e138b447"
+          },
+          "textures/granite_tile_disp_8k.png": {
+            "size": 54593701,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/granite_tile/granite_tile_disp_8k.png",
+            "md5": "1fcf10be94279063d5ebb911a824454f"
+          },
+          "textures/granite_tile_nor_gl_8k.exr": {
+            "size": 80893439,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_nor_gl_8k.exr",
+            "md5": "a7b00c9464457c7d2e35890a06a05adf"
+          },
+          "textures/granite_tile_rough_8k.exr": {
+            "size": 39868455,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/granite_tile/granite_tile_rough_8k.exr",
+            "md5": "0f0499ab7875647c7e3c6847cc32bedc"
+          }
+        },
+        "size": 4703,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/8k/granite_tile/granite_tile_8k.mtlx",
+        "md5": "615694c211479a9512d582244d816987"
+      }
+    },
+    "4k": {
+      "mtlx": {
+        "include": {
+          "textures/granite_tile_disp_4k.png": {
+            "size": 17576769,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/granite_tile/granite_tile_disp_4k.png",
+            "md5": "2867f6f9c3c723980ba741747e9ac41e"
+          },
+          "textures/granite_tile_rough_4k.exr": {
+            "size": 10924242,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_rough_4k.exr",
+            "md5": "b05e89ed64b900ce0dd37893fbcaec15"
+          },
+          "textures/granite_tile_nor_gl_4k.exr": {
+            "size": 20323894,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/granite_tile/granite_tile_nor_gl_4k.exr",
+            "md5": "eae5c37634f1e5e3a43b3100f59d7db1"
+          },
+          "textures/granite_tile_diff_4k.jpg": {
+            "size": 12787977,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/granite_tile/granite_tile_diff_4k.jpg",
+            "md5": "2a0253486ea71ce26a3a3cd5f913edce"
+          }
+        },
+        "size": 4703,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/4k/granite_tile/granite_tile_4k.mtlx",
+        "md5": "3efe28f42e1c7e732715d71b49688e2a"
+      }
+    },
+    "2k": {
+      "mtlx": {
+        "include": {
+          "textures/granite_tile_diff_2k.jpg": {
+            "size": 2938829,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/granite_tile/granite_tile_diff_2k.jpg",
+            "md5": "79a1eaac48a3d6720a88c216997dbd67"
+          },
+          "textures/granite_tile_nor_gl_2k.exr": {
+            "size": 5472530,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_nor_gl_2k.exr",
+            "md5": "94c09438f210943de4f9234c1824a936"
+          },
+          "textures/granite_tile_rough_2k.exr": {
+            "size": 2860645,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/granite_tile/granite_tile_rough_2k.exr",
+            "md5": "77fe23def475d5561c5e8874c682a265"
+          },
+          "textures/granite_tile_disp_2k.png": {
+            "size": 6372255,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/granite_tile/granite_tile_disp_2k.png",
+            "md5": "dca0f48dc7bf1c76b7a0839d822db1b4"
+          }
+        },
+        "size": 4703,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/2k/granite_tile/granite_tile_2k.mtlx",
+        "md5": "9d601ef79ee49440018edde8c45df0ad"
+      }
+    },
+    "1k": {
+      "mtlx": {
+        "include": {
+          "textures/granite_tile_rough_1k.exr": {
+            "size": 724567,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_rough_1k.exr",
+            "md5": "4c1b3936b897e4a5731a8263b89391ad"
+          },
+          "textures/granite_tile_disp_1k.png": {
+            "size": 1702704,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/granite_tile/granite_tile_disp_1k.png",
+            "md5": "2a83221d45c432a395cfe68d4661c9de"
+          },
+          "textures/granite_tile_nor_gl_1k.exr": {
+            "size": 1430532,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/granite_tile/granite_tile_nor_gl_1k.exr",
+            "md5": "4445d765ca1463ca2a5dbdec41c35e82"
+          },
+          "textures/granite_tile_diff_1k.jpg": {
+            "size": 676597,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/granite_tile/granite_tile_diff_1k.jpg",
+            "md5": "5dfd6dbdb5c0b22ca04505c6209cea9f"
+          }
+        },
+        "size": 4703,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/1k/granite_tile/granite_tile_1k.mtlx",
+        "md5": "807f6797e8bf1ee34847d62775a77721"
+      }
+    }
+  }
+}

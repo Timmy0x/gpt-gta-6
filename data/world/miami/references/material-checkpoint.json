@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "candidate": "miami-materials-atlas-r1",
+  "source": ".local-builds/miami-materials-r1-source",
+  "status": "Ready as source acquisition/material implementation checkpoint. Generic material candidates and historical references do not establish current1:1 art fidelity.",
+  "tests": {
+    "materialTests": "3/3 PASS",
+    "textureChecks": "48 exact SHA256 and publisher MD5/byte checks;48 decoded RGB maps at1024/2048 PASS",
+    "typecheck": "PASS",
+    "webgl": "PBR maps load in rejected701 studio with zero page errors; favicon404 only. No full material/weather acceptance claimed."
+  },
+  "excluded": [
+    "src/world/miami/MiamiLandmarks.ts",
+    "tests/miami-landmarks.test.ts",
+    "public/world/miami/landmarks/",
+    "data/world/miami/references/701-facade-profile.json",
+    "scripts/world/miami/materials/preview*",
+    "scripts/world/miami/materials/compile-landmark.ts",
+    "scripts/world/miami/materials/build-preview.mjs",
+    "scripts/world/miami/materials/capture.mjs"
+  ],
+  "files": [
+    {
+      "path": "src/world/miami/MiamiMaterials.ts",
+      "bytes": 3132,
+      "sha256": "cf1f49c49124049775fe326b2a0eb97ef62b8ad52945ecb59fa370c8ad474914"
+    },
+    {
+      "path": "scripts/world/miami/materials/runtime.ts",
+      "bytes": 141,
+      "sha256": "592933c803763e7f6ac169ef933d5de8a5ef1c98c7d288ea8c2174dfe41f78ca"
+    },
+    {
+      "path": "scripts/world/miami/materials/acquire.mjs",
+      "bytes": 5069,
+      "sha256": "287f0a3192f18fc4b6aca2944b54369ee3ea42ba3b9bf9154a55df52232b4a56"
+    },
+    {
+      "path": "tests/miami-materials.test.ts",
+      "bytes": 4131,
+      "sha256": "64571513f4042ce374d0d0d3b54797f78453ff1b8906a67e911858a49b9b7d6e"
+    },
+    {
+      "path": "docs/miami/reference-atlas.md",
+      "bytes": 9895,
+      "sha256": "75a88be5dfa65e4d861c19821ce5e494bfe0f1106a18434cdd678c7b19565442"
+    },
+    {
+      "path": "data/world/miami/references/atlas.json",
+      "bytes": 11558,
+      "sha256": "0c5c9755c4b0082446ab4e40fc5faafc970be649083c544e2108cd67fd346459"
+    },
+    {
+      "path": "data/world/miami/references/photos/701-brickell-west-2008.jpg",
+      "bytes": 2365655,
+      "sha256": "384a3b0f8a72728224a181b232157a4377a6e97f80966ebc17502b29166589a4"
+    },
+    {
+      "path": "data/world/miami/references/photos/attribution.json",
+      "bytes": 1371,
+      "sha256": "e8772974f20ef30d52c7a2eec855fb467b72b542076029942e4634331dc7db9e"
+    },
+    {
+      "path": "data/world/miami/references/materials/acquisition.json",
+      "bytes": 55,
+      "sha256": "aeddf2d10187e67af69dcb908e91c0fb72771730cad37893754d34a31c132241"
+    },
+    {
+      "path": "public/world/miami/materials/manifest.json",
+      "bytes": 31808,
+      "sha256": "c896e0b1dc2fa01048d119964fac79f4bdc7dba416e7bf595a7c5018e1e60446"
+    },
+    {
+      "path": "data/world/miami/references/materials/asphalt_02-info.json",
+      "bytes": 1230,
+      "sha256": "e0eb309793acd8a382b2e59d8fe50d7492bafcff579a7edde62d7123229ae916"
+    },
+    {
+      "path": "data/world/miami/references/materials/asphalt_02-files.json",
+      "bytes": 36022,
+      "sha256": "8ac9a704ed8dd193c874c1dab0414b6d6158fde13b7acdd831b51e23bf7b54b5"
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/1k/color.jpg",
+      "bytes": 731707,
+      "sha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed"
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/1k/normal.jpg",
+      "bytes": 1240122,
+      "sha256": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3"
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/1k/arm.jpg",
+      "bytes": 296770,
+      "sha256": "56bd8e591a3db579846fcb5185f60b0651e0bd4ea85c3529c339e6746243c9cf"
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/2k/color.jpg",
+      "bytes": 3075676,
+      "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c"
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/2k/normal.jpg",
+      "bytes": 4943950,
+      "sha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21"
+    },
+    {
+      "path": "public/world/miami/materials/asphalt_02/2k/arm.jpg",
+      "bytes": 1299186,
+      "sha256": "ed70e88640e4ed51cf1c3e57cb20db26983599b20b867c2526439e3a2c849fea"
+    },
+    {
+      "path": "data/world/miami/references/materials/brushed_concrete-info.json",
+      "bytes": 1148,
+      "sha256": "00793e8bd20bc90eaf79c36fdf56f47b84a9af6e37e942f11807b9eeffe7788a"
+    },
+    {
+      "path": "data/world/miami/references/materials/brushed_concrete-files.json",
+      "bytes": 35414,
+      "sha256": "166c46a04a6ab290893ece1d67e85d8df8d3d9dc86c14cc9aa83688b93f6b97c"
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/1k/color.jpg",
+      "bytes": 847278,
+      "sha256": "4054ed6eb65cd063356ffb4a88706b7d7b78c5435051c48bf0ee64290f04bc8c"
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/1k/normal.jpg",
+      "bytes": 849228,
+      "sha256": "f4953a881f34627cefcc22f780d392314635e31bb41f75cf3888a5af55c21820"
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/1k/arm.jpg",
+      "bytes": 783702,
+      "sha256": "374e4408acfb0bb4512f904f6fd3ae1006195ed12f2e258625b5b8b3a91f6528"
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/2k/color.jpg",
+      "bytes": 3590812,
+      "sha256": "5af96604b20e29862b449d86981b196b18ba5cbcb8659c451dd8976411a36130"
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/2k/normal.jpg",
+      "bytes": 3524683,
+      "sha256": "3d1f1c7a5f20a5f7a15f3bc5c5f58c0fdcaf49e71e65a5f17e086b551895c00c"
+    },
+    {
+      "path": "public/world/miami/materials/brushed_concrete/2k/arm.jpg",
+      "bytes": 3636383,
+      "sha256": "87e7ee823a78d6d85dc98cd5d1b5a7d4e694429ef4a01f3947b7e4b8a8d284b2"
+    },
+    {
+      "path": "data/world/miami/references/materials/concrete_pavement-info.json",
+      "bytes": 1244,
+      "sha256": "80661089c08f80ec87aff35d777b5a84a4ed2a78138f651e1f20738038007f45"
+    },
+    {
+      "path": "data/world/miami/references/materials/concrete_pavement-files.json",
+      "bytes": 35737,
+      "sha256": "411ab1bec58746d167c307f431ac1e53cff55be62b3b195ef2e0ab1c74e11c6f"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/1k/color.jpg",
+      "bytes": 926197,
+      "sha256": "70d3ff969a7421c7ae057b5d16386d11f5e59c6740db643352e1039413f419c4"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/1k/normal.jpg",
+      "bytes": 1184345,
+      "sha256": "a5009e409ff0f7b2d19e1316fe5e2b2b4f28e4a6b79990a664be69d4e8a0e690"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/1k/arm.jpg",
+      "bytes": 802384,
+      "sha256": "2895506708adad25d64c3d7c3d0f922a6df0468af4a9afe3d5d3a0fb35bb3afd"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/2k/color.jpg",
+      "bytes": 3817566,
+      "sha256": "e5a1cecfe7765cc0b24a6ab0abf492bd21c9e7af64e97fc46ef6021d0645fbd3"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/2k/normal.jpg",
+      "bytes": 5179971,
+      "sha256": "72def937e418ccc9d7736c9b1f51ae22a127fa2a53a54f4d1fe4d3cf828b781c"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavement/2k/arm.jpg",
+      "bytes": 3465289,
+      "sha256": "1ee3ab8013a6204c739b40ef9b87ccfdff32711525bccf94ee9b3c171aa731f6"
+    },
+    {
+      "path": "data/world/miami/references/materials/concrete_pavers-info.json",
+      "bytes": 1238,
+      "sha256": "2eae545f38ec98413a09627c1372d2b22e7ea05fd07c2ecaec8b73b85b3d2548"
+    },
+    {
+      "path": "data/world/miami/references/materials/concrete_pavers-files.json",
+      "bytes": 43907,
+      "sha256": "513ed802f85b1fcaf9a56843a15269f21967d4935dee391750414271211a23ec"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/1k/color.jpg",
+      "bytes": 757968,
+      "sha256": "eea1fb8b498154754f4961ce0792092ef56cadc3d210becbb0dc3bf6c96c261d"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/1k/normal.jpg",
+      "bytes": 918300,
+      "sha256": "761c8332b4b53ab06931adf83f5f8f4fa5b7559a1a8267bc7ef865f890b17894"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/1k/arm.jpg",
+      "bytes": 697269,
+      "sha256": "8375d082a81e6e8043af5f6ec1c5c71ada9577e50faf60a3c412b8df5612eb4e"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/2k/color.jpg",
+      "bytes": 3086820,
+      "sha256": "ac772172824543ce53a9ad60e0b7a00c02fcaf875ec6a65ae49806f6ae25539a"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/2k/normal.jpg",
+      "bytes": 3724095,
+      "sha256": "e2c582e8cfbd1fd05a344fecba7d8cade8590ab2ebf24088118618a721c66149"
+    },
+    {
+      "path": "public/world/miami/materials/concrete_pavers/2k/arm.jpg",
+      "bytes": 2507852,
+      "sha256": "b2e1e7f2b419a0be3ec3f130c40e1067429c3f26845b4c57d802e3ce02efd49a"
+    },
+    {
+      "path": "data/world/miami/references/materials/granite_tile-info.json",
+      "bytes": 1117,
+      "sha256": "a8e85422367c1dd3a9d4987537a2f1e613d5841a4b2456604820086f551f8b20"
+    },
+    {
+      "path": "data/world/miami/references/materials/granite_tile-files.json",
+      "bytes": 34045,
+      "sha256": "78235976acb72a6ef76c6a7989d5ce571d45721680ca2b1eb673045909840da8"
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/1k/color.jpg",
+      "bytes": 676597,
+      "sha256": "9df48b66055588708d446e69f37ea6146b8d5d3df54cd1ff088ec688acdca95c"
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/1k/normal.jpg",
+      "bytes": 592362,
+      "sha256": "bb9a122e0a1171c52458fc9ac82f588f4e100f1f7b461cc15028bed1c63fe961"
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/1k/arm.jpg",
+      "bytes": 718960,
+      "sha256": "3262e58c2f3bd9fff8e374c9aa52ef88c28a4115b550934faa90433dba67470a"
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/2k/color.jpg",
+      "bytes": 2938829,
+      "sha256": "758f9b1cdce11bc6f6a805cdea18fb789639befe40608020ab6087c5c1cba1e5"
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/2k/normal.jpg",
+      "bytes": 2486724,
+      "sha256": "53a80f10b8a8b38ac6551e4a838d1ef77602e74858dfb2364f96be5450c3bc11"
+    },
+    {
+      "path": "public/world/miami/materials/granite_tile/2k/arm.jpg",
+      "bytes": 3017037,
+      "sha256": "d3f326fdddbc57341c15bb7f3dbb93a851d5625709b9aecf70f490c66618f23b"
+    },
+    {
+      "path": "data/world/miami/references/materials/white_stucco-info.json",
+      "bytes": 1140,
+      "sha256": "ef93f466126768903dc90156c3fb8c19b8acbf2a34b7cce1e0ba59317f03b47c"
+    },
+    {
+      "path": "data/world/miami/references/materials/white_stucco-files.json",
+      "bytes": 34034,
+      "sha256": "18855cb7ccc734ffe74f2dd31908440a8d3d66689a2521ba1da6cd6191faba17"
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/1k/color.jpg",
+      "bytes": 557550,
+      "sha256": "5f2d11f5675ffe679155d8e38ed8eaa9b9972126675641e4977c8a4f905f276b"
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/1k/normal.jpg",
+      "bytes": 932038,
+      "sha256": "f0d4f34b30093ceca5e58d5168fc06c2f0cd0b81289708aa3eac7d0801bd069d"
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/1k/arm.jpg",
+      "bytes": 323604,
+      "sha256": "f072f12ac50d667f23ec2c20dd03463923e405f109106cc7ad4d2d85eeb16bd6"
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/2k/color.jpg",
+      "bytes": 2326889,
+      "sha256": "a1cf9063e72d82306c5f3330cfaa56ed75ee365dc6a6eb875cde125395dbe4ea"
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/2k/normal.jpg",
+      "bytes": 4025312,
+      "sha256": "d11eae11d09af20a1bd4e1262b1d35ad4259451a19651307a7fa8f6c0cadfc59"
+    },
+    {
+      "path": "public/world/miami/materials/white_stucco/2k/arm.jpg",
+      "bytes": 1390598,
+      "sha256": "15c6162bd93fc94b1fec078cabe595e44652b1b4d78d5932f8f143e3911b6bb1"
+    },
+    {
+      "path": "data/world/miami/references/materials/dense_sand-info.json",
+      "bytes": 1136,
+      "sha256": "7c8ad2a542b86ee4918382ae9294a61e0f65c4560eba9aa5220c36f1d8522259"
+    },
+    {
+      "path": "data/world/miami/references/materials/dense_sand-files.json",
+      "bytes": 33372,
+      "sha256": "6a893f9e0b8ab3cc563c1e94946b668b36f2c4ee9d775f876c85d2b7db61e37f"
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/1k/color.jpg",
+      "bytes": 681515,
+      "sha256": "0d2430c115167a2da3f60d60eb9ea2aa51e71472e2672f94c7f5df78342081ff"
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/1k/normal.jpg",
+      "bytes": 993025,
+      "sha256": "776fe4f5008ee5043a709b0b63a9a7ec758f18ac5e62db65a0e99c04cc782617"
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/1k/arm.jpg",
+      "bytes": 685180,
+      "sha256": "30d042f0b81e12eccdf2d32398c34c1f8416687a42f8ed453e9337c141c90015"
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/2k/color.jpg",
+      "bytes": 2803876,
+      "sha256": "b2e3f157c315b9645d23e55d54b4c2c8fec39e5114001cbbc9a797ed27a06980"
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/2k/normal.jpg",
+      "bytes": 3923081,
+      "sha256": "22a97f0fb874ab6976c7ad566c09e776d4c191b074ed5fa258cdb29a2e83a7c6"
+    },
+    {
+      "path": "public/world/miami/materials/dense_sand/2k/arm.jpg",
+      "bytes": 2689355,
+      "sha256": "df0ebf4a2096e9fcc4cf32c3ae12adb2cc8df6318b82382393597a31fb63c1b1"
+    },
+    {
+      "path": "data/world/miami/references/materials/brown_mud_leaves_01-info.json",
+      "bytes": 1145,
+      "sha256": "b577bd5e6418f39ff74aec32329c0df9ad53bda75d3e87df34e301941bb3e8e7"
+    },
+    {
+      "path": "data/world/miami/references/materials/brown_mud_leaves_01-files.json",
+      "bytes": 36415,
+      "sha256": "6485b1c7d7a346e298ff49636a9c9e4114689da332a8b93929b586424b83bddc"
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/1k/color.jpg",
+      "bytes": 1206953,
+      "sha256": "c598c555f13cd5328409fd5e2a45496a26e319e52299e3959042f1449c2f1b06"
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/1k/normal.jpg",
+      "bytes": 1486072,
+      "sha256": "8dd5166ddcc293cefd331d491ce6b9162bc9202ddd999ac1e4141697560d38e0"
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/1k/arm.jpg",
+      "bytes": 953367,
+      "sha256": "136cbc6870e1d4d818f739af077b0c0700536b7eb4663c3b68bdb112d1940c82"
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/2k/color.jpg",
+      "bytes": 4539452,
+      "sha256": "29c997d77f56e4ea16d3e998a306be0c17fddb28ab4822657c7cd8249040ffda"
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/2k/normal.jpg",
+      "bytes": 5688696,
+      "sha256": "b6ec386e00d9d2a1c3a1da6a98a67066b0dfaa88ddb779341df29700cf081bdf"
+    },
+    {
+      "path": "public/world/miami/materials/brown_mud_leaves_01/2k/arm.jpg",
+      "bytes": 3697743,
+      "sha256": "a80135a30b7ea0f29f093269acae10f83d327dcc0a20bc10083da59843988c15"
+    }
+  ]
+}

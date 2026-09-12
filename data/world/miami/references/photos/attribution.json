@@ -1,0 +1,29 @@
+{
+  "id": "701-averette-2008",
+  "url": "https://commons.wikimedia.org/wiki/File:701_Brickell_Avenue.jpg",
+  "download": "https://upload.wikimedia.org/wikipedia/commons/c/cc/701_Brickell_Avenue.jpg",
+  "publisher": "Marc Averette via Wikimedia Commons",
+  "kind": "first-person-licensed-photograph",
+  "date": "2008-05-14",
+  "view": "west",
+  "license": "CC-BY-3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "attribution": "701 Brickell Avenue, Marc Averette,14May2008,CCBY3.0; source photograph unchanged.",
+  "localFile": "data/world/miami/references/photos/701-brickell-west-2008.jpg",
+  "sha1": "2e92eaeb4d2c53fda72c516b2b19190edab1ba3e",
+  "sha256": "384a3b0f8a72728224a181b232157a4377a6e97f80966ebc17502b29166589a4",
+  "bytes": 2365655,
+  "width": 1920,
+  "height": 2560,
+  "limitations": [
+    "Historic elevation reference, not evidence of current tenants, lower plaza or construction state.",
+    "No pixels used as runtime textures."
+  ],
+  "observations": [
+    "Broad reflective glazing ribbons separated by dark stone spandrel bands",
+    "Tight vertical pane joints and curved end of tower",
+    "Tall opaque roof crown",
+    "Recessed lower glazed base supported by slender columns"
+  ],
+  "observationConfidence": "Visual interpretation of a perspective photograph; pane dimensions and unpictured elevations are not measured."
+}

@@ -1,0 +1,846 @@
+{
+  "blend": {
+    "1k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/1k/white_stucco/white_stucco_1k.blend",
+        "md5": "32bd9ccae9fcb3a0219d146e11b469eb",
+        "size": 211649,
+        "include": {
+          "textures/white_stucco_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_diff_1k.jpg",
+            "md5": "34b66656dbf2a90eec29306deb1a20d0",
+            "size": 557550
+          },
+          "textures/white_stucco_disp_1k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_disp_1k.png",
+            "md5": "cb5ddcdef4dcd24911953fb4657ea038",
+            "size": 1838576
+          },
+          "textures/white_stucco_nor_gl_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_nor_gl_1k.exr",
+            "md5": "125fa98b3785b46b51f33cb427b8c64a",
+            "size": 2064214
+          },
+          "textures/white_stucco_rough_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_rough_1k.exr",
+            "md5": "ee757ad030f2c67f1794e0af2cea357e",
+            "size": 302829
+          }
+        }
+      }
+    },
+    "2k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/2k/white_stucco/white_stucco_2k.blend",
+        "md5": "568b98c31f7f463c8470ac56ed9c9a90",
+        "size": 211601,
+        "include": {
+          "textures/white_stucco_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_diff_2k.jpg",
+            "md5": "9f8369b068a4fee870f4f2f19a6cb66f",
+            "size": 2326889
+          },
+          "textures/white_stucco_disp_2k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_disp_2k.png",
+            "md5": "34184fe384382e73cc733ef2f5a45a25",
+            "size": 7127853
+          },
+          "textures/white_stucco_nor_gl_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_nor_gl_2k.exr",
+            "md5": "dd8d431a35e29ad93c2a62770657f1be",
+            "size": 8403184
+          },
+          "textures/white_stucco_rough_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_rough_2k.exr",
+            "md5": "15a5778194331c1c88fd7ce5fc24d84f",
+            "size": 1139080
+          }
+        }
+      }
+    },
+    "4k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/4k/white_stucco/white_stucco_4k.blend",
+        "md5": "9904ac65e3abeda27855a474abce8d7c",
+        "size": 211610,
+        "include": {
+          "textures/white_stucco_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_diff_4k.jpg",
+            "md5": "100e74b4b633220ec6077e7e50576b39",
+            "size": 8618925
+          },
+          "textures/white_stucco_disp_4k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_disp_4k.png",
+            "md5": "c0f139e7c9caefefd50c0504eb3e14fc",
+            "size": 27029552
+          },
+          "textures/white_stucco_nor_gl_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_nor_gl_4k.exr",
+            "md5": "f11f5d2f9e2f9428476fe5a8e66add6b",
+            "size": 25943653
+          },
+          "textures/white_stucco_rough_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_rough_4k.exr",
+            "md5": "512e743f55a7043660d30d372f323f12",
+            "size": 4136097
+          }
+        }
+      }
+    },
+    "8k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/blend/8k/white_stucco/white_stucco_8k.blend",
+        "md5": "1e976402364657c25a28a8c1808bde19",
+        "size": 211647,
+        "include": {
+          "textures/white_stucco_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_diff_8k.jpg",
+            "md5": "c49b6195d79115acd4a36a39af6e48d6",
+            "size": 28340699
+          },
+          "textures/white_stucco_disp_8k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_disp_8k.png",
+            "md5": "ba6ba707f8a067448bc6f83729edb6a2",
+            "size": 98870046
+          },
+          "textures/white_stucco_nor_gl_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_nor_gl_8k.exr",
+            "md5": "d02d506dfcf588426ae2d7a95803d990",
+            "size": 66133647
+          },
+          "textures/white_stucco_rough_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_rough_8k.exr",
+            "md5": "40110c01ea3b2fc6f5884a0678952756",
+            "size": 16027088
+          }
+        }
+      }
+    }
+  },
+  "AO": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_ao_1k.exr",
+        "md5": "cf55d8ee82a2d3f6b8cdd74d458bbe23",
+        "size": 462030
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_ao_1k.jpg",
+        "md5": "b6a0ecd7726bbd223fc5bfe01738f561",
+        "size": 477195
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_ao_1k.png",
+        "md5": "5287e3a7b1ec40dc2d762ae63690b63e",
+        "size": 1317775
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_ao_2k.exr",
+        "md5": "30cf49afc8e513955889adc1f96f436d",
+        "size": 1690459
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_ao_2k.jpg",
+        "md5": "6590aefa738a0e40efc3ad53598fd402",
+        "size": 1821323
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_ao_2k.png",
+        "md5": "dcc2113d975a2f07bd99a8d4b96449ff",
+        "size": 4051222
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_ao_4k.exr",
+        "md5": "e1ced97eba623faec63eb5b0108fae63",
+        "size": 6289853
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_ao_4k.jpg",
+        "md5": "6d79b7ae63a49ffbea7a438931dce3df",
+        "size": 7028833
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_ao_4k.png",
+        "md5": "4da8ac43a8142bc6196b9a160032ff7f",
+        "size": 9142633
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_ao_8k.exr",
+        "md5": "f9afc3f7c81c07bc45ff9f3ccb08cf5f",
+        "size": 29971027
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_ao_8k.jpg",
+        "md5": "76322e071e6924c6e8d2a78be19f9404",
+        "size": 31247477
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_ao_8k.png",
+        "md5": "e0e230c333c43680fee85dd55f0fb1ef",
+        "size": 28886106
+      }
+    }
+  },
+  "arm": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_arm_1k.exr",
+        "md5": "c458524c455f7410623a8b8c6e29622f",
+        "size": 609776
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_arm_1k.jpg",
+        "md5": "8528cc4a2fe3c4c047161682ecacdf7f",
+        "size": 323604
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_arm_1k.png",
+        "md5": "b9942e0629631528fb7d6bb04d1dae87",
+        "size": 3506134
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_arm_2k.exr",
+        "md5": "905dad5cc3a25369f6cd3f439694c357",
+        "size": 2402943
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_arm_2k.jpg",
+        "md5": "8331cf3cf11da2f4bad5729f305c7aee",
+        "size": 1390598
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_arm_2k.png",
+        "md5": "7a8dcb4c2343558c7c0dd5c6e72cb10e",
+        "size": 12610075
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_arm_4k.exr",
+        "md5": "8d6abcefbc4edafd00cfafdff533c5d4",
+        "size": 8921895
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_arm_4k.jpg",
+        "md5": "839ed7a5823756e7c5b494646cb0708a",
+        "size": 5720255
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_arm_4k.png",
+        "md5": "70a4f0d2364137ae7e97d49a2bc08c69",
+        "size": 42427876
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_arm_8k.exr",
+        "md5": "acdd5f9246be08dd1c3c193cddca08df",
+        "size": 40940803
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_arm_8k.jpg",
+        "md5": "b7e14bbc96072bca9932dcc288c159d8",
+        "size": 24824177
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_arm_8k.png",
+        "md5": "5e7515f4ea58d0c63973af3a931dba3d",
+        "size": 160338843
+      }
+    }
+  },
+  "Diffuse": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_diff_1k.exr",
+        "md5": "75ff29fdcf4e5fb28b001970974568eb",
+        "size": 677598
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_diff_1k.jpg",
+        "md5": "34b66656dbf2a90eec29306deb1a20d0",
+        "size": 557550
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_diff_1k.png",
+        "md5": "3dc354c11aa09d616702c21861a58e1d",
+        "size": 5328938
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_diff_2k.exr",
+        "md5": "d321ae326b30f3eb8640ddbfed2f90f1",
+        "size": 2863867
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_diff_2k.jpg",
+        "md5": "9f8369b068a4fee870f4f2f19a6cb66f",
+        "size": 2326889
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_diff_2k.png",
+        "md5": "0b4f7710595002c8e872054c1d4263af",
+        "size": 21222296
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_diff_4k.exr",
+        "md5": "80bcfed7cf7d38a45aab5925ddbc1769",
+        "size": 10507844
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_diff_4k.jpg",
+        "md5": "100e74b4b633220ec6077e7e50576b39",
+        "size": 8618925
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_diff_4k.png",
+        "md5": "94a8225b0ee0e0a60162d60ee7f24dd8",
+        "size": 83421513
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_diff_8k.exr",
+        "md5": "53118cfb334e1441377144a49ef44da6",
+        "size": 35414376
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_diff_8k.jpg",
+        "md5": "c49b6195d79115acd4a36a39af6e48d6",
+        "size": 28340699
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_diff_8k.png",
+        "md5": "489a2a20dc65f7dd075734aa3b3e95b3",
+        "size": 318687267
+      }
+    }
+  },
+  "Displacement": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_disp_1k.exr",
+        "md5": "d2ea7573ef442ae1176ee715685ad2c1",
+        "size": 724219
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_disp_1k.jpg",
+        "md5": "d18cadb8fb33677dbfe9389613e3ffcf",
+        "size": 621336
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_disp_1k.png",
+        "md5": "cb5ddcdef4dcd24911953fb4657ea038",
+        "size": 1838576
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_disp_2k.exr",
+        "md5": "ef9ce8d0a34b23f992008474f2045c97",
+        "size": 2393481
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_disp_2k.jpg",
+        "md5": "acc6d2ffa979bf92941505cde6de2651",
+        "size": 2056092
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_disp_2k.png",
+        "md5": "34184fe384382e73cc733ef2f5a45a25",
+        "size": 7127853
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_disp_4k.exr",
+        "md5": "3064fc46041e941f161fa64f74e71aaa",
+        "size": 6292799
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_disp_4k.jpg",
+        "md5": "44931bea5c05f496546c8d6a2322bc69",
+        "size": 5439013
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_disp_4k.png",
+        "md5": "c0f139e7c9caefefd50c0504eb3e14fc",
+        "size": 27029552
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_disp_8k.exr",
+        "md5": "30645f8a3493ec01072dd4b99d600f3b",
+        "size": 16262661
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_disp_8k.jpg",
+        "md5": "058b9566a85c3b88deefc440e1c523ca",
+        "size": 14930581
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_disp_8k.png",
+        "md5": "ba6ba707f8a067448bc6f83729edb6a2",
+        "size": 98870046
+      }
+    }
+  },
+  "nor_dx": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_nor_dx_1k.exr",
+        "md5": "f09442095ac305c55bcd6d4c7c537675",
+        "size": 2063900
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_nor_dx_1k.jpg",
+        "md5": "8e2584e8143140f0060dd58c612f691a",
+        "size": 927154
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_nor_dx_1k.png",
+        "md5": "b0d9471a7ef8823f0da66691b5ae7d91",
+        "size": 5674065
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_nor_dx_2k.exr",
+        "md5": "d5af6ba2d0c5d3f07add58103738d38f",
+        "size": 8398996
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_nor_dx_2k.jpg",
+        "md5": "00be84dafb607bb4c8d315ec61dd2683",
+        "size": 4000370
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_nor_dx_2k.png",
+        "md5": "5ec2277d705c20617d06eefccdf2d0c3",
+        "size": 22552567
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_nor_dx_4k.exr",
+        "md5": "b5630d2bde9aefaa7da739017ae2afd2",
+        "size": 25923067
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_nor_dx_4k.jpg",
+        "md5": "dbb356aa946b2b58f230130c2145c584",
+        "size": 13569262
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_nor_dx_4k.png",
+        "md5": "1dde194a0bca835ea0fe9d09266b71b5",
+        "size": 87242703
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_nor_dx_8k.exr",
+        "md5": "03ce8b958b8c7af66420efe7a87f95af",
+        "size": 66116434
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_nor_dx_8k.jpg",
+        "md5": "03e34c1648a3081f119e940c39269ec2",
+        "size": 38704492
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_nor_dx_8k.png",
+        "md5": "79350bd80e589dfae5cce6562f76d596",
+        "size": 322415427
+      }
+    }
+  },
+  "nor_gl": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_nor_gl_1k.exr",
+        "md5": "125fa98b3785b46b51f33cb427b8c64a",
+        "size": 2064214
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_nor_gl_1k.jpg",
+        "md5": "3e70f3be77f582fd41a9a08c8e8a6e66",
+        "size": 932038
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_nor_gl_1k.png",
+        "md5": "0c91c3962f11cf0536857a5e7ffc8a06",
+        "size": 5675112
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_nor_gl_2k.exr",
+        "md5": "dd8d431a35e29ad93c2a62770657f1be",
+        "size": 8403184
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_nor_gl_2k.jpg",
+        "md5": "aded1a765eca8ced74d4b8d1b6367818",
+        "size": 4025312
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_nor_gl_2k.png",
+        "md5": "dc400bce80d20eb54bd71809767c7fe4",
+        "size": 22555271
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_nor_gl_4k.exr",
+        "md5": "f11f5d2f9e2f9428476fe5a8e66add6b",
+        "size": 25943653
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_nor_gl_4k.jpg",
+        "md5": "d9d0d46d911b92eed627aaeb6244ece1",
+        "size": 13659017
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_nor_gl_4k.png",
+        "md5": "02f46f6ede15f73cbaeacb111b41c838",
+        "size": 87240583
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_nor_gl_8k.exr",
+        "md5": "d02d506dfcf588426ae2d7a95803d990",
+        "size": 66133647
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_nor_gl_8k.jpg",
+        "md5": "844c4bd0e17c87b8dab852e4624d6d81",
+        "size": 38888180
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_nor_gl_8k.png",
+        "md5": "34552bfc4586f512ede4d33283bbdb2d",
+        "size": 323288974
+      }
+    }
+  },
+  "Rough": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_rough_1k.exr",
+        "md5": "ee757ad030f2c67f1794e0af2cea357e",
+        "size": 302829
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_rough_1k.jpg",
+        "md5": "bf6289112520870861b21620fdf9c4d1",
+        "size": 347861
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_rough_1k.png",
+        "md5": "718a88c8e1a29079efd3087e2530e35a",
+        "size": 1660882
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_rough_2k.exr",
+        "md5": "15a5778194331c1c88fd7ce5fc24d84f",
+        "size": 1139080
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_rough_2k.jpg",
+        "md5": "bc891db382a77a74c17d81dfa6c9af73",
+        "size": 1348405
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_rough_2k.png",
+        "md5": "af21878a6ef02457e4dd923700491ef0",
+        "size": 6613399
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_rough_4k.exr",
+        "md5": "512e743f55a7043660d30d372f323f12",
+        "size": 4136097
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_rough_4k.jpg",
+        "md5": "63775934648ec49d3f0da6e7c7be03c4",
+        "size": 5170713
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_rough_4k.png",
+        "md5": "3d56dc36e62d1bcd41048634de6382cb",
+        "size": 26284805
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_rough_8k.exr",
+        "md5": "40110c01ea3b2fc6f5884a0678952756",
+        "size": 16027088
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_rough_8k.jpg",
+        "md5": "c1b16cd696d6f653935547bb40aff3b1",
+        "size": 20889907
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_rough_8k.png",
+        "md5": "b2474891e3cceacf5b6946130242e135",
+        "size": 106666679
+      }
+    }
+  },
+  "gltf": {
+    "1k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/1k/white_stucco/white_stucco_1k.gltf",
+        "md5": "634e2027654d6e2086de95401f8e8dfe",
+        "size": 2782,
+        "include": {
+          "textures/white_stucco_nor_gl_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_nor_gl_1k.jpg",
+            "md5": "3e70f3be77f582fd41a9a08c8e8a6e66",
+            "size": 932038
+          },
+          "textures/white_stucco_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_diff_1k.jpg",
+            "md5": "34b66656dbf2a90eec29306deb1a20d0",
+            "size": 557550
+          },
+          "textures/white_stucco_arm_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_arm_1k.jpg",
+            "md5": "8528cc4a2fe3c4c047161682ecacdf7f",
+            "size": 323604
+          },
+          "white_stucco.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/white_stucco/white_stucco.bin",
+            "md5": "d851e3fd551a6f55237d6d38d3ca8ecf",
+            "size": 2370420
+          }
+        }
+      }
+    },
+    "2k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/2k/white_stucco/white_stucco_2k.gltf",
+        "md5": "a535a545324dd9f3d0afa0026722fb61",
+        "size": 2782,
+        "include": {
+          "textures/white_stucco_nor_gl_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_nor_gl_2k.jpg",
+            "md5": "aded1a765eca8ced74d4b8d1b6367818",
+            "size": 4025312
+          },
+          "textures/white_stucco_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_diff_2k.jpg",
+            "md5": "9f8369b068a4fee870f4f2f19a6cb66f",
+            "size": 2326889
+          },
+          "textures/white_stucco_arm_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_arm_2k.jpg",
+            "md5": "8331cf3cf11da2f4bad5729f305c7aee",
+            "size": 1390598
+          },
+          "white_stucco.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/white_stucco/white_stucco.bin",
+            "md5": "d851e3fd551a6f55237d6d38d3ca8ecf",
+            "size": 2370420
+          }
+        }
+      }
+    },
+    "4k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/4k/white_stucco/white_stucco_4k.gltf",
+        "md5": "2dfbfabec9fc88ea58a5fd214e615fa6",
+        "size": 2782,
+        "include": {
+          "textures/white_stucco_nor_gl_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_nor_gl_4k.jpg",
+            "md5": "d9d0d46d911b92eed627aaeb6244ece1",
+            "size": 13659017
+          },
+          "textures/white_stucco_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_diff_4k.jpg",
+            "md5": "100e74b4b633220ec6077e7e50576b39",
+            "size": 8618925
+          },
+          "textures/white_stucco_arm_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_arm_4k.jpg",
+            "md5": "839ed7a5823756e7c5b494646cb0708a",
+            "size": 5720255
+          },
+          "white_stucco.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/white_stucco/white_stucco.bin",
+            "md5": "d851e3fd551a6f55237d6d38d3ca8ecf",
+            "size": 2370420
+          }
+        }
+      }
+    },
+    "8k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/white_stucco/white_stucco_8k.gltf",
+        "md5": "df85b8500ad02be936de23f530f48a6e",
+        "size": 2782,
+        "include": {
+          "textures/white_stucco_nor_gl_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_nor_gl_8k.jpg",
+            "md5": "844c4bd0e17c87b8dab852e4624d6d81",
+            "size": 38888180
+          },
+          "textures/white_stucco_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_diff_8k.jpg",
+            "md5": "c49b6195d79115acd4a36a39af6e48d6",
+            "size": 28340699
+          },
+          "textures/white_stucco_arm_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_arm_8k.jpg",
+            "md5": "b7e14bbc96072bca9932dcc288c159d8",
+            "size": 24824177
+          },
+          "white_stucco.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/gltf/8k/white_stucco/white_stucco.bin",
+            "md5": "d851e3fd551a6f55237d6d38d3ca8ecf",
+            "size": 2370420
+          }
+        }
+      }
+    }
+  },
+  "mtlx": {
+    "1k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/1k/white_stucco/white_stucco_1k.mtlx",
+        "md5": "7e5af6da960c3329d1e972d7812181d0",
+        "size": 4622,
+        "include": {
+          "textures/white_stucco_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_diff_1k.jpg",
+            "md5": "34b66656dbf2a90eec29306deb1a20d0",
+            "size": 557550
+          },
+          "textures/white_stucco_rough_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_rough_1k.exr",
+            "md5": "ee757ad030f2c67f1794e0af2cea357e",
+            "size": 302829
+          },
+          "textures/white_stucco_nor_gl_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/1k/white_stucco/white_stucco_nor_gl_1k.exr",
+            "md5": "125fa98b3785b46b51f33cb427b8c64a",
+            "size": 2064214
+          },
+          "textures/white_stucco_disp_1k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/white_stucco/white_stucco_disp_1k.png",
+            "md5": "cb5ddcdef4dcd24911953fb4657ea038",
+            "size": 1838576
+          }
+        }
+      }
+    },
+    "2k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/2k/white_stucco/white_stucco_2k.mtlx",
+        "md5": "6cdf363103251f1d10440c5f75c3eb90",
+        "size": 4622,
+        "include": {
+          "textures/white_stucco_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_stucco/white_stucco_diff_2k.jpg",
+            "md5": "9f8369b068a4fee870f4f2f19a6cb66f",
+            "size": 2326889
+          },
+          "textures/white_stucco_rough_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_rough_2k.exr",
+            "md5": "15a5778194331c1c88fd7ce5fc24d84f",
+            "size": 1139080
+          },
+          "textures/white_stucco_nor_gl_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/2k/white_stucco/white_stucco_nor_gl_2k.exr",
+            "md5": "dd8d431a35e29ad93c2a62770657f1be",
+            "size": 8403184
+          },
+          "textures/white_stucco_disp_2k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/white_stucco/white_stucco_disp_2k.png",
+            "md5": "34184fe384382e73cc733ef2f5a45a25",
+            "size": 7127853
+          }
+        }
+      }
+    },
+    "4k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/4k/white_stucco/white_stucco_4k.mtlx",
+        "md5": "b1eb36eb1c63f6366d14334539dc1e37",
+        "size": 4622,
+        "include": {
+          "textures/white_stucco_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/white_stucco/white_stucco_diff_4k.jpg",
+            "md5": "100e74b4b633220ec6077e7e50576b39",
+            "size": 8618925
+          },
+          "textures/white_stucco_rough_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_rough_4k.exr",
+            "md5": "512e743f55a7043660d30d372f323f12",
+            "size": 4136097
+          },
+          "textures/white_stucco_nor_gl_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/4k/white_stucco/white_stucco_nor_gl_4k.exr",
+            "md5": "f11f5d2f9e2f9428476fe5a8e66add6b",
+            "size": 25943653
+          },
+          "textures/white_stucco_disp_4k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/4k/white_stucco/white_stucco_disp_4k.png",
+            "md5": "c0f139e7c9caefefd50c0504eb3e14fc",
+            "size": 27029552
+          }
+        }
+      }
+    },
+    "8k": {
+      "mtlx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/mtlx/8k/white_stucco/white_stucco_8k.mtlx",
+        "md5": "c41636be6bc48701e7d0940877d453c6",
+        "size": 4622,
+        "include": {
+          "textures/white_stucco_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/8k/white_stucco/white_stucco_diff_8k.jpg",
+            "md5": "c49b6195d79115acd4a36a39af6e48d6",
+            "size": 28340699
+          },
+          "textures/white_stucco_rough_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_rough_8k.exr",
+            "md5": "40110c01ea3b2fc6f5884a0678952756",
+            "size": 16027088
+          },
+          "textures/white_stucco_nor_gl_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/exr/8k/white_stucco/white_stucco_nor_gl_8k.exr",
+            "md5": "d02d506dfcf588426ae2d7a95803d990",
+            "size": 66133647
+          },
+          "textures/white_stucco_disp_8k.png": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/white_stucco/white_stucco_disp_8k.png",
+            "md5": "ba6ba707f8a067448bc6f83729edb6a2",
+            "size": 98870046
+          }
+        }
+      }
+    }
+  }
+}
