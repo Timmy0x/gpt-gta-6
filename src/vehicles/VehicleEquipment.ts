@@ -1,6 +1,7 @@
 import { Color3, SpotLight, Vector3, type Scene } from "@babylonjs/core";
 import type { Vehicle } from "./VehicleSystem";
 import type { DoorVisual } from "./models";
+import { applyDoorPose } from './DoorPose';
 
 /** Entry and exit open the nearest front door; its spring closes it after the animation. */
 export function openVehicleDoor(v: Vehicle, side: number, seconds = 0.85): void {
@@ -28,10 +29,10 @@ export class VehicleEquipment {
     for (const v of vehicles) {
       for (const door of v.model.doors) {
         door.hold = Math.max(0, door.hold - dt);
-        const target = door.hold > 0 && v.speed < 5 ? 1.12 : 0;
+        const target = door.hold > 0 && v.speed < 5 ? door.maxAngle ?? 1.12 : 0;
         const change = Math.max(-dt * 3.8, Math.min(dt * 3.8, target - door.angle));
         door.angle = this.limitDoorAngle?.(v, door, door.angle + change) ?? door.angle + change;
-        door.mesh.rotation.y = -door.side * door.angle;
+        applyDoorPose(door, door.angle);
       }
       for (const mat of v.model.materials) {
         if (mat.name.startsWith("headlight-")) mat.emissiveColor.setAll(v.headlights && v.health > 0 ? 1.8 : 0.01);

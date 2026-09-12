@@ -33,6 +33,7 @@ import {
 } from "./handling";
 import { createVehicleModel, type VehicleModel } from "./models";
 import { VehicleEquipment } from "./VehicleEquipment";
+import { applyDoorPose } from './DoorPose';
 import { VehicleExterior, detachedComponentShape } from "./VehicleExterior";
 import { ConceptCarAssets } from "./ConceptCar";
 import { RoadCarAssets } from "./RoadCarAssets";
@@ -496,7 +497,7 @@ export class VehicleSystem {
       const door = m.doors[i];
       door.mesh.setEnabled(saved.enabled);
       door.angle = saved.angle;
-      door.mesh.rotation.y = -door.side * door.angle;
+      applyDoorPose(door, door.angle);
     });
     this.runtime.get(v.id)!.exterior.update();
   }
@@ -530,7 +531,7 @@ export class VehicleSystem {
       }
       for(const old of legacy.doors){
         const door=v.model.doors.find(d=>d.front===old.front&&d.side===old.side);
-        if(door){door.mesh.setEnabled(old.mesh.isEnabled());door.angle=old.angle;door.mesh.rotation.y=-door.side*old.angle;}
+        if(door){door.mesh.setEnabled(old.mesh.isEnabled());door.angle=old.angle;applyDoorPose(door,old.angle);}
       }
       for(const [slot,mesh]of legacy.panels.entries()){
         const data=mesh.getVerticesData(VertexBuffer.PositionKind)!,original=originals[slot];
@@ -665,8 +666,9 @@ export class VehicleSystem {
         : 0;
     const airbornePlane = v.kind === "plane";
     for (const wheel of wheels) {
+      const radius = wheel.radius ?? t.wheelRadius;
       const anchor = Vector3.TransformCoordinates(wheel.local, matrix),
-        rest = t.suspensionTravel + t.wheelRadius;
+        rest = t.suspensionTravel + radius;
       const end = anchor.subtract(up.scale(rest));
       this.ray.reset(anchor, end);
       this.physics.raycastToRef(anchor, end, this.ray, {
@@ -693,7 +695,7 @@ export class VehicleSystem {
       );
       v.body.applyForce(up.scale(support), anchor);
       wheel.pivot.position.y =
-        wheel.local.y - (distance - t.wheelRadius) + (wheel.damaged ? -0.1 : 0);
+        wheel.local.y - (distance - radius) + (wheel.damaged ? -0.1 : 0);
       const tireForward = wheel.front
         ? forward.scale(Math.cos(steering)).add(right.scale(Math.sin(steering)))
         : forward;
@@ -732,9 +734,9 @@ export class VehicleSystem {
         v.skidding,
         Math.abs(lateralSpeed) + (input.handbrake ? v.speed * 0.2 : 0),
       );
-      if (wheel.rolling) wheel.rolling.rotation.x += (longSpeed * dt) / t.wheelRadius;
+      if (wheel.rolling) wheel.rolling.rotation.x += (longSpeed * dt) / radius;
       else {
-        wheel.tire.rotation.x += (longSpeed * dt) / t.wheelRadius;
+        wheel.tire.rotation.x += (longSpeed * dt) / radius;
         wheel.rim.rotation.x = wheel.tire.rotation.x;
       }
     }
@@ -1065,7 +1067,7 @@ export class VehicleSystem {
       ...v.model.doors.map(door => door.mesh),
     ])
       mesh.setEnabled(true);
-    for (const door of v.model.doors) { door.angle = 0; door.hold = 0; door.mesh.rotation.y = 0; }
+    for (const door of v.model.doors) { door.angle = 0; door.hold = 0; applyDoorPose(door,0); }
     for (const wheel of v.model.wheels) {
       wheel.damaged = false;
       wheel.tire.scaling.setAll(1);

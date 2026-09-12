@@ -1,0 +1,93 @@
+{
+  "native": {
+    "passed": 195,
+    "failed": 0,
+    "durationSeconds": 13.004916958,
+    "command": "npm test",
+    "targetedExteriorCases": 10
+  },
+  "build": {
+    "command": "npm run build",
+    "passed": true
+  },
+  "rendererChecks": [
+    {
+      "backend": "webgpu",
+      "browser": "152.0.7977.83",
+      "fingerprint": {
+        "entry": "/assets/index-CqaggHBj.js",
+        "sha256": "69adfe14125ce759392aa97763358acc54df9016b01099e4726cba38d10df16c",
+        "world": "authored-860409-v8-street-objects"
+      },
+      "kinds": [
+        "hatchback"
+      ],
+      "method": "Normal UI map travel and vehicle spawn/removal; telemetry-guided WASD door approach, E entry/exit for Jason and Lucia, normal character switch, W propulsion, Space braking, night and L headlight toggle, police siren button. Read-only model and per-render joint/door observations. Weapon drive-by remains a separate combined-build gate.",
+      "errors": [],
+      "warnings": [],
+      "frameSamples": 151,
+      "checks": 19,
+      "checkpointLabels": [
+        "selected-road",
+        "hatchback-spawned",
+        "hatchback-jason-at-door",
+        "hatchback-jason-approaching",
+        "hatchback-jason-entering",
+        "hatchback-jason-seated",
+        "hatchback-jason-seat-side",
+        "hatchback-jason-exiting",
+        "hatchback-jason-on-foot",
+        "hatchback-lucia-at-door",
+        "hatchback-lucia-approaching",
+        "hatchback-lucia-entering",
+        "hatchback-lucia-seated",
+        "hatchback-lucia-seat-side",
+        "hatchback-driving",
+        "hatchback-night-lights",
+        "hatchback-lights-off",
+        "hatchback-lucia-exiting",
+        "hatchback-lucia-on-foot"
+      ]
+    },
+    {
+      "backend": "webgl",
+      "browser": "152.0.7977.83",
+      "fingerprint": {
+        "entry": "/assets/index-CqaggHBj.js",
+        "sha256": "69adfe14125ce759392aa97763358acc54df9016b01099e4726cba38d10df16c",
+        "world": "authored-860409-v8-street-objects"
+      },
+      "kinds": [
+        "hatchback"
+      ],
+      "method": "Normal UI map travel and vehicle spawn/removal; telemetry-guided WASD door approach, E entry/exit for Jason and Lucia, normal character switch, W propulsion, Space braking, night and L headlight toggle, police siren button. Read-only model and per-render joint/door observations. Weapon drive-by remains a separate combined-build gate.",
+      "errors": [],
+      "warnings": [],
+      "frameSamples": 178,
+      "checks": 19,
+      "checkpointLabels": [
+        "selected-road",
+        "hatchback-spawned",
+        "hatchback-jason-at-door",
+        "hatchback-jason-approaching",
+        "hatchback-jason-entering",
+        "hatchback-jason-seated",
+        "hatchback-jason-seat-side",
+        "hatchback-jason-exiting",
+        "hatchback-jason-on-foot",
+        "hatchback-lucia-at-door",
+        "hatchback-lucia-approaching",
+        "hatchback-lucia-entering",
+        "hatchback-lucia-seated",
+        "hatchback-lucia-seat-side",
+        "hatchback-driving",
+        "hatchback-night-lights",
+        "hatchback-lights-off",
+        "hatchback-lucia-exiting",
+        "hatchback-lucia-on-foot"
+      ]
+    }
+  ],
+  "source": ".local-builds/door-physics-r1-source",
+  "scope": "Authored hinge and individual radius support; pending branded car and aircraft integration is separate."
+}

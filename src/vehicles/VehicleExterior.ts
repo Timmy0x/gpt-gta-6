@@ -5,6 +5,7 @@ import {
 import type { Vehicle } from "./VehicleSystem";
 import type { DoorVisual, WheelVisual } from "./models";
 import { ROAD_CAR_KINDS } from "./RoadCarCatalog";
+import { applyDoorPose } from './DoorPose';
 
 /** A deliberate clearance below a ray-supported wheel, not a replacement suspension. */
 export const WHEEL_COLLISION_INSET = 0.025;
@@ -113,7 +114,7 @@ export class VehicleExterior {
     }
     const position = Vector3.Zero(), rotation = Quaternion.Identity();
     const separation = (angle: number) => {
-      door.mesh.rotation.y = -door.side * angle;
+      applyDoorPose(door, angle);
       door.mesh.computeWorldMatrix(true).decompose(undefined, rotation, position);
       this.plugin.shapeProximity({ shape: query, position, rotation, maxDistance: 0,
         shouldHitTriggers: false, ignoreBody: this.vehicle.body }, this.proximityInput, this.proximityHit);
@@ -128,7 +129,7 @@ export class VehicleExterior {
       accepted = candidate;
       clearance = next;
     }
-    door.mesh.rotation.y = -door.side * original;
+    applyDoorPose(door, original);
     door.mesh.computeWorldMatrix(true);
     return accepted;
   }
@@ -152,7 +153,7 @@ export class VehicleExterior {
         this.scale.set(Math.max(0.01, Math.abs(this.scale.x)), Math.max(0.01, Math.abs(this.scale.y)), Math.max(0.01, Math.abs(this.scale.z)));
       } else {
         Vector3.TransformCoordinatesToRef(component.wheelCenter!, this.relative, this.position);
-        const radius = this.vehicle.tuning.wheelRadius * (component.wheel!.damaged ? 0.75 : 1) - WHEEL_COLLISION_INSET;
+        const radius = (component.wheel!.radius ?? this.vehicle.tuning.wheelRadius) * (component.wheel!.damaged ? 0.75 : 1) - WHEEL_COLLISION_INSET;
         this.scale.set(component.wheelWidth!, radius, radius);
       }
       if (Vector3.DistanceSquared(component.position, this.position) > 1e-8

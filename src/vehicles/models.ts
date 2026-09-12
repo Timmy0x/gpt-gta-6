@@ -20,6 +20,8 @@ export interface WheelVisual {
   local: Vector3;
   front: boolean;
   damaged: boolean;
+  /** Nominal unloaded tire radius in metres, when front and rear sizes differ. */
+  radius?: number;
   /** Imported wheels rotate the complete tire/rim/disc hierarchy in this neutral axle frame. */
   rolling?: TransformNode;
 }
@@ -44,6 +46,9 @@ export interface DoorVisual {
   front: boolean;
   angle: number;
   hold: number;
+  /** Signed unit hinge axis in the neutral door frame; absent uses the conventional side hinge. */
+  hingeAxis?: Vector3;
+  maxAngle?: number;
 }
 
 const PALETTE = [

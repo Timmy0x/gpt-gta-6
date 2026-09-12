@@ -11,6 +11,7 @@ import { VehicleSystem } from "../src/vehicles/VehicleSystem";
 import { openVehicleDoor } from "../src/vehicles/VehicleEquipment";
 import { MovementQueries } from "../src/gameplay/MovementQueries";
 import type { VehicleExterior } from "../src/vehicles/VehicleExterior";
+import { applyDoorPose } from '../src/vehicles/DoorPose';
 
 async function fixture(concept = false) {
   const wasm = await readFile(new URL("../node_modules/@babylonjs/havok/lib/esm/HavokPhysics.wasm", import.meta.url));
@@ -36,6 +37,60 @@ function center(mesh: Mesh) {
   mesh.computeWorldMatrix(true);
   return mesh.getBoundingInfo().boundingBox.centerWorld.clone();
 }
+
+test('an authored scissor hinge raises the physical door and stops against an overhead obstruction', async () => {
+  const f = await fixture();
+  try {
+    const { car, system, scene, physics } = f;
+    car.body.setMotionType(PhysicsMotionType.STATIC);
+    const door = car.model.doors.find(d => d.front && d.side === -1)!;
+    door.hingeAxis = Vector3.Right(); door.maxAngle = 1.15;
+    const closed = center(door.mesh);
+    openVehicleDoor(car, -1, 4);
+    for (let i = 0; i < 30; i++) { system.equipment.update(1 / 60, [car], Vector3.Zero()); f.exterior.update(); }
+    f.sync();
+    const raised = center(door.mesh);
+    assert.ok(raised.y > closed.y + .25, 'the complete source door rises about its authored front hinge');
+    assert.ok(Math.abs(raised.x - closed.x) < .01, 'a scissor door does not use the conventional yaw swing');
+    const normal = door.mesh.getDirection(Vector3.Right());
+    assert.equal(physics.raycast(raised.subtract(normal.scale(.4)), raised.add(normal.scale(.04))).body, car.body);
+    applyDoorPose(door, .75);
+    const obstruction = MeshBuilder.CreateBox('scissor-door-overhang', { size: .22 }, scene);
+    obstruction.position.copyFrom(center(door.mesh));
+    door.angle = 0; applyDoorPose(door, 0);
+    const beam = new PhysicsAggregate(obstruction, PhysicsShapeType.BOX, { mass: 0 }, scene);
+    f.sync();
+    for (let i = 0; i < 60; i++) { system.equipment.update(1 / 60, [car], Vector3.Zero()); f.exterior.update(); }
+    assert.ok(door.angle < .75, `native obstruction blocks the rising panel at ${door.angle}`);
+    beam.dispose(); obstruction.dispose();
+    for (let i = 0; i < 30; i++) system.equipment.update(1 / 60, [car], Vector3.Zero());
+    assert.ok(Math.abs(door.angle - door.maxAngle) < .001, 'removing the obstruction permits the authored opening');
+    system.repair(car); f.sync();
+    assert.equal(door.angle, 0); assert.ok(center(door.mesh).equalsWithEpsilon(closed, .001));
+  } finally { f.dispose(); }
+});
+
+test('different front and rear tire radii drive suspension placement and native wheel contact', async () => {
+  const f = await fixture();
+  try {
+    const { car, physics } = f;
+    car.body.setMotionType(PhysicsMotionType.STATIC);
+    for (const wheel of car.model.wheels) {
+      wheel.radius = wheel.front ? .3305 : .35545;
+      for (const mesh of [wheel.tire, wheel.rim]) mesh.scaling.set(wheel.radius / car.tuning.wheelRadius, 1, wheel.radius / car.tuning.wheelRadius);
+    }
+    f.step(2); f.sync();
+    assert.equal(car.grounded, 4);
+    for (const wheel of car.model.wheels) {
+      const center = wheel.pivot.getAbsolutePosition();
+      assert.ok(Math.abs(center.y - wheel.radius!) < .002, 'each tire rests at its own unloaded radius');
+      const outside = center.add(new Vector3(Math.sign(wheel.local.x) * .12, 0, 0));
+      const hit = physics.raycast(outside.add(new Vector3(0, -wheel.radius! + .002, 0)), outside);
+      assert.equal(hit.body, car.body);
+      assert.ok(Math.abs(hit.hitPointWorld.y - center.y + wheel.radius! - .025) < .004, `native cylinder uses each radius: center=${center.asArray()}, hit=${hit.hitPointWorld.asArray()}, radius=${wheel.radius}`);
+    }
+  } finally { f.dispose(); }
+});
 
 for (const concept of [false, true]) test(`${concept ? "imported concept" : "procedural sedan"} exterior follows real wheels, door geometry, mirrors and disabled parts on the same Havok body`, async context => {
   const f = await fixture(concept);
