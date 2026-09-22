@@ -1,0 +1,7 @@
+# Expanded playable Miami evidence
+
+The root test log reports 331 passing tests. The final production build includes the subsequent map-heading text correction. The separate travel rerun records exact final runtime hashes and 34 named destinations. Compiler collision residuals measure agreement with retained inputs, not survey or provider alignment accuracy.
+
+The frozen compiler `tools/miami-common-frame/source-manifest.json` describes its original handoff layout. The 39 source/input entries remain at those paths. Generated `output/chunks/`, `output/terrain/`, `output/packages.json`, `output/dataset.json` and `output/runtime-query.json` are retained under `public/world/miami/`. The other generated files are here: `output/coordinates.json` → `coordinates.json`; `output/native-result.json` → `collision-native-result.json`; `output/expansion-audit.json` → `expansion-audit.json`. Its `evidence/{audit,compile,native-tests,typecheck}.log` entries map to `compiler-{audit,compile,native-tests,typecheck}.txt` here, unchanged. Prepared inputs permit offline compilation; the public source archive remains in the repository's original data location.
+
+`coverage.png` and `coverage.svg` use public GIS data, not proprietary provider imagery. Actual provider views were inspected and displayed natively in the browser conversation; they are not exported here. Browser observations and limitations are recorded in `verification.json`.

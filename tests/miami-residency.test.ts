@@ -27,14 +27,14 @@ function pack(id: string, locations: { x: number; collision: boolean }[]): Pack 
     bounds: { minX: Math.min(...meshes.map(m => m.bounds.minX)), maxX: Math.max(...meshes.map(m => m.bounds.maxX)), minZ: -5, maxZ: 5 } } };
 }
 function manifest(packs: Pack[]): MiamiPackageManifest { return { version: 1, worldId: 'fixture', chunks: packs.map(p => p.chunk), totalBytes: packs.reduce((n, p) => n + p.bytes.byteLength, 0) }; }
-async function fixture(packs: Pack[], fetcher?: typeof fetch) {
+async function fixture(packs: Pack[], fetcher?: typeof fetch, cpuBudget?: number) {
   const bytes = await readFile(new URL('../node_modules/@babylonjs/havok/lib/esm/HavokPhysics.wasm', import.meta.url));
   const havok = await HavokPhysics({ wasmBinary: bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength) as ArrayBuffer });
   const engine = new NullEngine(), scene = new Scene(engine); scene.enablePhysics(new Vector3(0, -9.81, 0), new HavokPlugin(false, havok));
   const light = new DirectionalLight('fixture', new Vector3(-1, -1, 0), scene), shadows = new ShadowGenerator(64, light), material = new StandardMaterial('shared', scene);
   new StandardMaterial('unrelated-scene-material', scene);
   const source = fetcher ?? (async input => { const id = new URL(String(input)).pathname.slice(1).replace('.bin', ''); return new Response(packs.find(p => p.chunk.id === id)!.bytes); }) as typeof fetch;
-  const residency = new MiamiResidency(scene, shadows, manifest(packs), 'https://fixture.invalid/', () => material, source);
+  const residency = new MiamiResidency(scene, shadows, manifest(packs), 'https://fixture.invalid/', () => material, source, cpuBudget);
   return { residency, scene, shadows, material, physics: scene.getPhysicsEngine() as PhysicsEngineV2,
     dispose() { residency.dispose(); shadows.dispose(); scene.dispose(); engine.dispose(); } };
 }
@@ -126,6 +126,7 @@ test('hidden structural shells load only for collision, never render or cast sha
   const ground = pack('ground', [{ x: 0, collision: true }]), shell = pack('shell', [{ x: 250, collision: true }]);
   shell.chunk.meshes[0].render = false; shell.chunk.meshes[0].kind = 'building';
   const f = await fixture([ground, shell]); t.after(() => f.dispose()); await f.residency.preparePosition(Vector3.Zero());
+  await until(() => f.residency.getStats().pendingPackages === 0);
   assert.equal(f.residency.getStats().residentMeshes, 1); assert.equal(f.residency.getStats().pendingMeshes, 0, 'an invisible distant shell is not queued as visual work');
   f.residency.update(new Vector3(250, 0, 0)); const mesh = f.scene.getMeshByName('shell/0'); assert.ok(mesh); assert.equal(mesh.isVisible, false);
   assert.ok(!f.shadows.getShadowMap()!.renderList!.includes(mesh));
@@ -180,4 +181,61 @@ test('hiding public display preserves Havok support and missing arrivals fail th
   assert.ok(f.physics.raycast(new Vector3(700,5,0),new Vector3(700,-5,0)).hasHit);
   assert.ok(f.physics.raycast(new Vector3(0,5,0),new Vector3(0,-5,0)).hasHit,'parked anchors retain their floor');
   assert.ok(f.scene.meshes.every(mesh=>!mesh.isVisible),'new collision arrivals remain hidden under the live basemap');
+});
+
+test('expanded-world prefetch reserves its byte budget and evicts old nearby buffers without dropping anchored Havok support', async t => {
+  const packs = [0, 300, 600, 900].map((x, i) => pack(`budget-${i}`, [{ x, collision: true }]));
+  const one = packs[0].bytes.byteLength, f = await fixture(packs, undefined, one * 2); t.after(() => f.dispose());
+  await f.residency.preparePosition(Vector3.Zero());
+  await until(() => f.residency.getStats().pendingPackages === 0);
+  assert.equal(f.residency.getStats().loadedPackages, 2, 'nearby prefetch fits the source buffer target');
+  f.residency.setActiveAnchors([Vector3.Zero()]);
+  await f.residency.preparePosition(new Vector3(600, 0, 0));
+  await until(() => f.residency.getStats().pendingPackages === 0); f.residency.update(new Vector3(600, 0, 0));
+  let stats = f.residency.getStats();
+  assert.equal(stats.cpuGeometryBytes, one * 2);
+  assert.equal(stats.requiredSourceBufferBytes, one * 2);
+  assert.equal(stats.packagesEvicted, 1, 'an optional old chunk inside the old 820m hysteresis is reclaimed');
+  f.physics._step(1 / 60);
+  for (const x of [0, 600]) assert.ok(f.physics.raycast(new Vector3(x, 5, 0), new Vector3(x, -5, 0)).hasHit, 'primary and anchored support remain native');
+  assert.equal(f.physics.raycast(new Vector3(300, 5, 0), new Vector3(300, -5, 0)).hasHit, false);
+  const requests = stats.requests;
+  for (let i = 0; i < 20; i++) f.residency.update(new Vector3(600, 0, 0));
+  await nextTurn();
+  stats = f.residency.getStats(); assert.equal(stats.requests, requests, 'over-budget optional prefetch cannot churn every frame');
+  assert.equal(stats.ready, true);
+});
+
+test('required active-body support is retained and explicitly reported when it exceeds the optional cache target', async t => {
+  const packs = [0, 300, 600, 900].map((x, i) => pack(`protected-${i}`, [{ x, collision: true }]));
+  const one = packs[0].bytes.byteLength, f = await fixture(packs, undefined, one * 2); t.after(() => f.dispose());
+  f.residency.setActiveAnchors([Vector3.Zero(), new Vector3(300, 0, 0)]);
+  await f.residency.preparePosition(new Vector3(600, 0, 0));
+  await until(() => f.residency.getStats().pendingPackages === 0); f.residency.update(new Vector3(600, 0, 0));
+  let stats = f.residency.getStats();
+  assert.equal(stats.cpuGeometryBytes, one * 3); assert.equal(stats.requiredSourceBufferBytes, one * 3);
+  assert.equal(stats.sourceBufferBudgetBytes, one * 2); assert.equal(stats.ready, true);
+  f.physics._step(1 / 60);
+  for (const x of [0, 300, 600]) assert.ok(f.physics.raycast(new Vector3(x, 5, 0), new Vector3(x, -5, 0)).hasHit);
+  f.residency.setActiveAnchors([]); f.residency.update(new Vector3(600, 0, 0));
+  await until(() => f.residency.getStats().pendingPackages === 0); f.residency.update(new Vector3(600, 0, 0));
+  stats = f.residency.getStats(); assert.ok(stats.cpuGeometryBytes <= one * 2); assert.equal(stats.ready, true);
+});
+
+test('an unavailable optional preload cannot block a destination whose required native support is ready', async t => {
+  const near = pack('required', [{ x: 0, collision: true }]), far = pack('optional', [{ x: 300, collision: true }]);
+  let release: (() => void) | undefined;
+  const f = await fixture([near, far], (async input => {
+    if (String(input).includes('optional')) { await new Promise<void>(resolve => { release = resolve; }); return new Response('', { status: 503 }); }
+    return new Response(near.bytes);
+  }) as typeof fetch); t.after(() => f.dispose());
+  await f.residency.preparePosition(Vector3.Zero());
+  assert.equal(f.residency.getStats().ready, true);
+  assert.equal(f.residency.getStats().pendingPackages, 1);
+  f.physics._step(1 / 60);
+  assert.ok(f.physics.raycast(new Vector3(0, 5, 0), new Vector3(0, -5, 0)).hasHit);
+  for (let attempt=0;attempt<3;attempt++) { await until(()=>!!release); const finish=release!; release=undefined; finish(); await nextTurn(); }
+  await until(()=>f.residency.getStats().pendingPackages===0);
+  assert.equal(f.residency.getStats().failedPackages, 1);
+  assert.equal(f.residency.getStats().ready, true, 'optional detail failure does not mislabel collision safety');
 });

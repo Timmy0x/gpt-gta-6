@@ -50,6 +50,8 @@ export interface RoadNode {
   next: number[];
 }
 export interface WorldContract {
+  /** Source coverage only; arrival still requires native support and clearance. */
+  hasGroundCoverage?: (x: number, z: number, radius?: number) => boolean;
   readonly worldId?: string;
   readonly bounds?: import('../world/WorldBoundary').WorldBounds;
   readonly mapData?: import('../world/miami/types').MiamiDataset;

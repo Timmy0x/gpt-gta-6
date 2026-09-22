@@ -22,7 +22,7 @@ test('source Brickell world loads exact chunk bytes, has a supported sidewalk sp
   const world=new MiamiWorld({scene,shadows},{baseUrl:'https://fixture.invalid/world/miami/',fetch:fetcher,loadTexture:()=>RawTexture.CreateRGBATexture(new Uint8Array([128,128,255,255]),1,1,scene)});
   t.after(()=>{world.dispose();shadows.dispose();scene.dispose();engine.dispose();});
   await world.ready;
-  assert.equal(world.worldId,'brickell-public-common-frame-r1');assert.equal(world.restrictedFacility,false);assert.ok(world.roads.length>20);
+  assert.equal(world.worldId,'brickell-public-common-frame-r2');assert.equal(world.restrictedFacility,false);assert.ok(world.roads.length>20);
   assert.ok(world.spawn.y < -15, "common-frame local Up is below the ellipsoid origin");
   assert.equal(world.collisionReady(world.spawn),true);
   const queries=new MovementQueries(scene);t.after(()=>queries.dispose());

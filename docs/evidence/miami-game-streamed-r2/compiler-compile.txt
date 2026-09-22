@@ -1,0 +1,5 @@
+
+> miami-public-common-frame-compiler@0.0.1 compile
+> node --import tsx scripts/compile.ts
+
+{"chunks":51,"meshes":437,"buildings":262,"triangles":6335492,"bytes":211968600,"maxFloat32ErrorM":0.00001075683547629396,"removedDegenerateTriangles":0,"locations":3}

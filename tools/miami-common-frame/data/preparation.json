@@ -1,9 +1,9 @@
 {
   "bboxWgs84": [
-    -80.1925,
-    25.7646,
-    -80.1889,
-    25.7678
+    -80.199,
+    25.7596,
+    -80.187,
+    25.7704
   ],
   "copiedSources": [
     {
@@ -97,7 +97,21 @@
       "sha256": "38561c43f20756a77d33406c54cda8c250d18b6b30bff1e00ff51578e3682723"
     }
   ],
-  "derivedGeographicInputSha256": "729a6db57e610ccf71a134ab2bc9987ef6442895c2dc62a513ac869a04120477",
-  "buildingCount": 20,
-  "triangles": 40902
+  "derivedGeographicInputSha256": "6123507e587d344ed1c52fd70e1d08c71a02bb807b0a9b40dce38740c4c4abc6",
+  "buildingCount": 262,
+  "triangles": 368152,
+  "sourcePreparation": {
+    "script": "scripts/prepare-buildings.py",
+    "sourceFolderRequired": "data/world/miami with building-envelopes.json, i3s/manifest.json and i3s/source-nodes.tar.gz",
+    "archiveSha256": "c579f8eb6ec5061418812a354de63c4d5504c4613a7aeb14c872a0163b9be73d",
+    "verifiedRequestCount": 82,
+    "envelopeSha256": "de8006a16bbd96dfaeeac099004f06a80ee7bf1e61e219066dbb9bdff193d700"
+  },
+  "surfaceBboxWgs84": [
+    -80.19899,
+    25.75961,
+    -80.18701,
+    25.77039
+  ],
+  "surfaceCoverageNote": "One source-grid-step inset from requested extent keeps all common surface-query Newton derivative samples inside actual bilinear raster pixel-center coverage; complete source building features still selected against original requested AOI."
 }

@@ -15,7 +15,7 @@ import { WorldBoundary } from '../src/world/WorldBoundary';
 type Point = { x: number; z: number };
 type Landing = { id: string; kind: string; requested: number[]; destination?: number[]; movedM?: number; nativeGroundM?: number; footSupportRays?: number; swimming?: boolean; ready?: boolean; error?: string };
 
-test('every named common-frame Brickell destination and inset map corner resolves to loaded native support', async t => {
+test('expanded Brickell named destinations and supported edge pins resolve to real loaded support; mapped water remains unavailable', async t => {
   const descriptor = Object.getOwnPropertyDescriptor(globalThis, 'name'); Object.defineProperty(globalThis, 'name', { value: '', configurable: true });
   t.after(() => { if (descriptor) Object.defineProperty(globalThis, 'name', descriptor); else Reflect.deleteProperty(globalThis, 'name'); });
   const bytes = await readFile(new URL('../node_modules/@babylonjs/havok/lib/esm/HavokPhysics.wasm', import.meta.url));
@@ -27,7 +27,7 @@ test('every named common-frame Brickell destination and inset map corner resolve
   const world = new MiamiWorld({ scene, shadows }, { baseUrl: 'https://fixture.invalid/world/miami/', fetch: fetcher, loadTexture: () => RawTexture.CreateRGBATexture(new Uint8Array([128, 128, 255, 255]), 1, 1, scene) });
   const queries = new MovementQueries(scene); t.after(() => { queries.dispose(); world.dispose(); shadows.dispose(); scene.dispose(); engine.dispose(); });
   await world.ready;
-  const boundary = new WorldBoundary({ bounds: world.bounds, floorHeight: (x, z) => world.floorHeightAt(x, z), fallback: world.spawn });
+  const boundary = new WorldBoundary({ bounds: world.bounds, floorHeight: (x, z) => world.floorHeightAt(x, z), fallback: world.spawn, supportedGround: world.supportedGround });
   const landings: Landing[] = [], failures: string[] = [];
   const check = async (id: string, kind: string, point: Point, expected: 'dry' | 'wet' | 'either', preferStreet: boolean) => {
     const row: Landing = { id, kind, requested: [point.x, point.z] }; landings.push(row);
@@ -61,8 +61,10 @@ test('every named common-frame Brickell destination and inset map corner resolve
     } catch (error) { row.error = error instanceof Error ? error.message : String(error); failures.push(`${kind}/${id}: ${row.error}`); }
     return row;
   };
-  assert.ok(world.locations.length >= 5, 'audit includes each named street in the current physical AOI');
-  assert.equal(world.mapData.water.length, 0, 'initial surveyed collision AOI contains dry streets only');
+  assert.equal(world.locations.length, 34, 'audit includes every retained named street');
+  assert.equal(world.mapData.water.length, 12, 'source water is mapped but does not invent a playable bathymetry');
+  assert.ok(world.bounds.maxX-world.bounds.minX>1200 && world.bounds.maxZ-world.bounds.minZ>1190);
+  assert.ok(world.locations.some(p=>Math.hypot(p.x-world.spawn.x,p.z-world.spawn.z)>700), 'travel reaches the expanded district, not only the initial patch');
   assert.equal(new Set(world.locations.map(location => location.id)).size, world.locations.length);
   for (const location of world.locations) await check(location.id + ':' + location.name, 'named', location, 'dry', true);
 
@@ -73,7 +75,8 @@ test('every named common-frame Brickell destination and inset map corner resolve
     ['west', b.minX + inset, middleZ], ['east', b.maxX - inset, middleZ], ['south', middleX, b.minZ + inset], ['north', middleX, b.maxZ - inset],
   ] as const;
   for (const [id, x, z] of edgePoints) {
-    await check(id, 'inset-edge', { x, z }, 'either', false);
+    if (!world.hasGroundCoverage(x,z)) { await assert.rejects(world.preparePosition(new Vector3(x,world.spawn.y,z)), /outside/); continue; }
+    await check(id, 'inset-edge', { x, z }, 'dry', false);
     const p = new Vector3(x, world.floorHeightAt(x, z) + 1.5, z), velocity = new Vector3(Math.sign(x - middleX) * 80, 0, Math.sign(z - middleZ) * 80);
     const limited = boundary.limitVelocity(p, velocity, 1 / 60, .32), next = p.add(limited.scale(1 / 60));
     assert.ok(next.x > b.minX + .32 && next.x < b.maxX - .32 && next.z > b.minZ + .32 && next.z < b.maxZ - .32, 'outward boundary motion remains on supported geography');
@@ -85,19 +88,14 @@ test('every named common-frame Brickell destination and inset map corner resolve
   for (const point of [{ x: b.minX - 1, z: middleZ }, { x: b.maxX + 1, z: middleZ }, { x: middleX, z: b.minZ - 1 }, { x: middleX, z: b.maxZ + 1 }]) await assert.rejects(world.preparePosition(new Vector3(point.x, 1.5, point.z)), /outside/);
 
   const excluded = world.mapData.roads.filter(road => road.unavailableReason); assert.equal(excluded.length, 0);
-  const bridgeAudits: { id: string; name: string; wetSamples: number; deepestSample?: number[]; nativeSurfaceM?: number; error?: string }[] = [];
-  for (const road of excluded) {
-    const wet: Point[] = [];
-    for (let i = 1; i < road.centerline.length; i++) {
-      const a = road.centerline[i - 1], c = road.centerline[i], steps = Math.max(1, Math.ceil(Math.hypot(c[0] - a[0], c[2] - a[2]) / 2));
-      for (let n = 0; n <= steps; n++) { const fraction = n / steps, point = { x: a[0] + (c[0] - a[0]) * fraction, z: a[2] + (c[2] - a[2]) * fraction }; if (playableMapPoint(point, b) && world.ocean.contains(point.x, point.z)) wet.push(point); }
-    }
-    const audit = { id: road.id, name: road.name, wetSamples: wet.length } as typeof bridgeAudits[number]; bridgeAudits.push(audit);
-    if (!wet.length) { failures.push(`excluded/${road.id}: no mapped-water sample to verify`); continue; }
-    const point = wet[Math.floor(wet.length / 2)]; audit.deepestSample = [point.x, point.z];
-    const landing = await check(road.id + ':' + road.name, 'excluded-water-crossing', point, 'wet', false);
-    audit.nativeSurfaceM = landing.nativeGroundM; audit.error = landing.error;
+  let rejectedWater = 0;
+  for (let x=b.minX+12;x<b.maxX-12;x+=47) for(let z=b.minZ+12;z<b.maxZ-12;z+=47) {
+    if(!world.ocean.contains(x,z))continue;
+    assert.equal(world.hasGroundCoverage(x,z),false);
+    await assert.rejects(world.preparePosition(new Vector3(x,world.spawn.y,z)), /outside/);
+    rejectedWater++;
   }
+  assert.ok(rejectedWater>20,'mapped waterways do not accept unsupported fast travel');
   const wetTraffic: { id: number; next?: number; x: number; z: number; nativeHeightM?: number; nativeKind?: string; sourceRoad?: string; sourceName?: string; sourceDistanceM?: number; waterBoundaryDistanceM?: number }[] = []; let trafficChecks = 0;
   for (const node of world.roads) for (const nextId of node.next) {
     const next = world.roads[nextId]; assert.ok(next); const steps = Math.max(1, Math.ceil(Math.hypot(next.x - node.x, next.z - node.z) / 4));
@@ -122,8 +120,8 @@ test('every named common-frame Brickell destination and inset map corner resolve
   if (wetTraffic.length) failures.push(`traffic: ${wetTraffic.length} supported-graph samples cross mapped water without a verified deck`);
   const sourceHashes: Record<string, string> = {};
   for (const name of ['src/world/miami/MiamiWorld.ts', 'src/world/miami/MiamiResidency.ts', 'src/gameplay/TravelDestination.ts', 'public/world/miami/dataset.json', 'public/world/miami/packages.json']) sourceHashes[name] = createHash('sha256').update(await readFile(new URL('../' + name, import.meta.url))).digest('hex');
-  const report = { sourceHashes, namedDestinations: world.locations.length, landings, rejectedEdges, excludedBridges: bridgeAudits, trafficChecks, wetTraffic, failures, stats: world.getStreamingStats() };
+  const report = { sourceHashes, namedDestinations: world.locations.length, landings, rejectedEdges, rejectedWater, trafficChecks, wetTraffic, failures, stats: world.getStreamingStats() };
   if (process.env.MIAMI_TRAVEL_EVIDENCE) { await mkdir(dirname(process.env.MIAMI_TRAVEL_EVIDENCE), { recursive: true }); await writeFile(process.env.MIAMI_TRAVEL_EVIDENCE, JSON.stringify(report, null, 2) + '\n'); }
-  t.diagnostic(JSON.stringify({ named: world.locations.length, landings: landings.length, rejectedEdges, excludedBridges: excluded.length, trafficChecks, wetTraffic: wetTraffic.length, failures, stats: report.stats }));
+  t.diagnostic(JSON.stringify({ named: world.locations.length, landings: landings.length, rejectedEdges, excludedBridges: excluded.length, rejectedWater, trafficChecks, wetTraffic: wetTraffic.length, failures, stats: report.stats }));
   assert.deepEqual(failures, [], 'all destinations need supported, clear landings; failures are retained in the evidence report');
 });

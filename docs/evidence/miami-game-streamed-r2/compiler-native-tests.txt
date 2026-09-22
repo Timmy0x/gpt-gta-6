@@ -1,0 +1,46 @@
+
+> miami-public-common-frame-compiler@0.0.2 test
+> node --import tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: actual source points match independent full PROJ arithmetic and retain NAVD88 on inverse
+ok 1 - actual source points match independent full PROJ arithmetic and retain NAVD88 on inverse
+  ---
+  duration_ms: 1.3615
+  type: 'test'
+  ...
+# Subtest: source uncertainty is mandatory, missing grid coverage fails, and zero-height ellipsoid has curvature
+ok 2 - source uncertainty is mandatory, missing grid coverage fails, and zero-height ellipsoid has curvature
+  ---
+  duration_ms: 0.301833
+  type: 'test'
+  ...
+# Subtest: old horizontal source frame can be inverted without treating its NAVD88 ordinate as ellipsoid height
+ok 3 - old horizontal source frame can be inverted without treating its NAVD88 ordinate as ellipsoid height
+  ---
+  duration_ms: 1.058833
+  type: 'test'
+  ...
+# Subtest: common x/z surface query solves converted DEM and excludes water/out-of-AOI
+ok 4 - common x/z surface query solves converted DEM and excludes water/out-of-AOI
+  ---
+  duration_ms: 13.359167
+  type: 'test'
+  ...
+# BJS - [11:48:56]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual common-frame Brickell packages support native ground, road and resting body without waterbed
+ok 5 - actual common-frame Brickell packages support native ground, road and resting body without waterbed
+  ---
+  duration_ms: 17180.490167
+  type: 'test'
+  ...
+# {"scope":"Actual public Brickell geometry under explicitly provisional common-frame policy; native Havok, no GPU/provider geometry","meshes":437,"buildingMeshes":262,"buildingFaceChecks":520,"nonExposedCandidates":15,"triangles":6335492,"groundChecks":3348,"roadChecks":1470,"maxGroundErrorM":0.030270711417514917,"maxRoadErrorM":0.01891296606060422,"restingErrorM":0.00048332214355539804,"excludedRoads":4,"waterbedMeshes":0,"absentFaceCategories":[{"id":"county-i3s:48953","category":"upward-roof"},{"id":"county-i3s:135401","category":"upward-roof"},{"id":"county-i3s:135423","category":"upward-roof"},{"id":"county-i3s:50","category":"upward-roof"}],"maximumGroundSample":{"x":183.34556295942582,"z":322.94284258585833,"expected":-24.525172368522007,"actual":-24.494901657104492},"steepSamples":[{"x":-576.6544370405742,"z":-361.05715741414167,"expected":-31.67067150962822,"actual":-31.670148849487305,"mask":2,"normalY":0.5088721513748169}],"errorSamples":[]}
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20085.234542

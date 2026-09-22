@@ -1,0 +1,890 @@
+{
+  "baseCommit": "46fb8a832596d3e3c53833ed28b782173d570ea5",
+  "scope": "Exact changed files against base commit. This manifest excludes itself. Unchanged source/assets are inherited from base.",
+  "files": [
+    {
+      "path": "docs/continuation.md",
+      "gitBlob": "ae581f4cc17548dc118036f7e0c8a18434e5a3a3",
+      "sha256": "9c679f3c781e60d9f01c2491260da3f5f04a5801058b996834061401c6a10006",
+      "bytes": 61937,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/README.md",
+      "gitBlob": "e832040f79389f5a3457be264b007ef8aa63c67e",
+      "sha256": "9e223cc0bb8f006b6d68f1bc9cdf4193f093df86735497eefced7d4a0895b9a9",
+      "bytes": 1442,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/boundary-audit.json",
+      "gitBlob": "54935e1fe8c81c25ba403d74bf052fa2bd1f7974",
+      "sha256": "341fe7115e887aac8d08294920f0748224b1edc47f56712bf1f7801cf1e1db5a",
+      "bytes": 978,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/boundary-frame-audit.json",
+      "gitBlob": "cb4cc17e82da6a5fb681c76e3300494b14cc268b",
+      "sha256": "bcac9bb3475854726c4313432fb343f8822181b67b7ef034372bc13d04ae640e",
+      "bytes": 322,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/collision-native-result.json",
+      "gitBlob": "526ba23be16e943ff5a074192651e3e1fd99eb62",
+      "sha256": "7cc2a7030898c8f15798e2cb357881e0d1d1ccbf0f97ae013cd679c615efab93",
+      "bytes": 1230,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/compiler-audit.txt",
+      "gitBlob": "d4078a6150cbf0bebad631c0abc6e579c1a13061",
+      "sha256": "2b530fcf92de0b2c214f914f998723a821690bc65ec6387c40bcdd33808a7806",
+      "bytes": 4526,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/compiler-compile.txt",
+      "gitBlob": "1cb199d7e60468dd8b9dc21f507aa5af1189735a",
+      "sha256": "ff863f774bb30f6a5e8214834b0593059ebd261fe38266d950c6779e83601ee4",
+      "bytes": 260,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/compiler-native-tests.txt",
+      "gitBlob": "355e6313b5685d0ff581cc5e58b133a697ca4222",
+      "sha256": "be7fb9c3ce555a9f387d24df94591e88c5fa3465816fa8c6de53bf50c09bf54e",
+      "bytes": 2519,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/compiler-typecheck.txt",
+      "gitBlob": "247cb07b031fbdff5bfd74e8171fe3e9c3e69649",
+      "sha256": "2058ee7913b5f85528ead604124a6c72adabad50d77a7daf27d00cbfae2b081c",
+      "bytes": 70,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/coordinates.json",
+      "gitBlob": "b966a3028080110727026e3f4724cc3514cf7ced",
+      "sha256": "59ba2b3af0eb12e2aea70980f959b7c9469c977be893800c2ecb33eb2afa26ad",
+      "bytes": 510265,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/coverage.png",
+      "gitBlob": "65505106bdcf15c2d730d2d7fe3fd5773dc71a54",
+      "sha256": "fa41e4638fbb33b40b396bf92cd030a9f43da94c1c9505cb696f052e0d8804fb",
+      "bytes": 308529,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/coverage.svg",
+      "gitBlob": "d92e430ff1a8e7f54020ef05d4456642213c570d",
+      "sha256": "1ced5ab710f5635fa131c6a611e4bc01312817b7cec3218d5c27fbc2c5442727",
+      "bytes": 105067,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/expansion-audit.json",
+      "gitBlob": "343afd2f4198f694acd1424a0594012355c93817",
+      "sha256": "7dc7061f6585f3963cae87fcff4eff13b9868fc9646170f807a9d288d7b29e9d",
+      "bytes": 23101,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/native-tests.txt",
+      "gitBlob": "7235ab555b9ead28f368d94f8325cbc3f0f0ec00",
+      "sha256": "221492ae8b2ea0c5d55fe4ad3539e12d834d112b08220256004bc73564decccb",
+      "bytes": 143280,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/navigation-audit.json",
+      "gitBlob": "2288396eb72f929a59fc2a0c9f9cd1e25ae031d4",
+      "sha256": "47b70d02babf1fa8771ca80a7f443feb68fddb018bfee80777b27de144ebd5b8",
+      "bytes": 27809,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/production-build.txt",
+      "gitBlob": "8cfb6efd693cade737cb895583823d853763fbd7",
+      "sha256": "b264b1d55b956a4e5de0d666449b77e96e4f239d5ca70b6e049c353751127f4e",
+      "bytes": 26880,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/travel-tests.txt",
+      "gitBlob": "a14117930566c44cb6a426c0357cd239827bf836",
+      "sha256": "d11a7f7cfa932cc26407de99283ad48e3247516ba386357429d4a04023c03f00",
+      "bytes": 1447,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/travel.json",
+      "gitBlob": "c05cc92fccc75de5a27d4284f9126b72e26c7bd8",
+      "sha256": "e74507928c4a45f69dfb48e50e23cd388fa02ef6de82a0b598e71146d44e4f4a",
+      "bytes": 17841,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-game-streamed-r2/verification.json",
+      "gitBlob": "49504fdf71f428873e8526e68e854445f4fdc3f0",
+      "sha256": "a2c9f7788fc340ae95a9aa69558d3f15803a4855bde30f242f6c99d3e87b9985",
+      "bytes": 4022,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/miami/playable-miami.md",
+      "gitBlob": "df093b327e3af12ae17c5c0b7a9fbcd5fa7e038a",
+      "sha256": "59722be3ae53481191b06004c03fcb63791d97cec85cf4164c8c6f2d140fdcc2",
+      "bytes": 4926,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-1.3e8750628c9f.bin",
+      "status": "deleted"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-1.fd1df459e9b2.bin",
+      "gitBlob": "3634c4fe3e9cccb29d40384819a15e3b513c90fc",
+      "sha256": "fd1df459e9b2b54cd206e82883099bf4d6f594077e890e2ee49bfb1dde9752b0",
+      "bytes": 5643252,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-2.68560da5367c.bin",
+      "status": "deleted"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-2.6e50eefe3016.bin",
+      "gitBlob": "c6c7cf7e2fb634bf29fa833d536dad6d64105ce0",
+      "sha256": "6e50eefe301680421e57a3f5da58a548094f023099b2c0aaef8b3b5d0a5272c4",
+      "bytes": 5481876,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-3.89d0aaca6e15.bin",
+      "gitBlob": "e2d3fea8c2cdf3f732cba1e5d438d6e992b55af5",
+      "sha256": "89d0aaca6e1547ff1909e2322e3f590953331a59ea4cd611c49443a03c3bfc20",
+      "bytes": 5475024,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-4.9f6bdfff096b.bin",
+      "gitBlob": "78a99c452af59255f93c2f882060b63508aff872",
+      "sha256": "9f6bdfff096b2c8f54d0dd74f46dd0eddcc658570ed2e78694f070fd2b935af2",
+      "bytes": 7507044,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,-5.0ffb88c53b11.bin",
+      "gitBlob": "53f6f445a9c9f375955527d43a80026397f677c3",
+      "sha256": "0ffb88c53b11341fd26b205806caf743125b52f85cee3c1574e18346f09530fe",
+      "bytes": 171756,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,0.12356571b1b1.bin",
+      "status": "deleted"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,0.d1f84c5048d0.bin",
+      "gitBlob": "ca903d7f3f53b55745f716cf1f72e4307ebc2626",
+      "sha256": "d1f84c5048d0bb2778f4b104743f533f68fd817ee6b7d4acb2a69abea85c915e",
+      "bytes": 2999220,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,1.efd1a59e6b48.bin",
+      "gitBlob": "d67c14276186fce1cdde8ffcca3a77894936e877",
+      "sha256": "efd1a59e6b48e1f7247f0181c527d23775098073e543d87d220b458c224bb51f",
+      "bytes": 4543068,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-1,2.0333ac13a0a4.bin",
+      "gitBlob": "ff3cef0a34f1bdb87b5977763707f0a9d86c5178",
+      "sha256": "0333ac13a0a44344b21d0f4903289231fd14a56566f5f697b93b02f85db93e2f",
+      "bytes": 1747080,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,-1.015aa8a31a58.bin",
+      "gitBlob": "9df045f1d85e1f2c806f8ae81adab755c354209d",
+      "sha256": "015aa8a31a58f1ed08153aec7d35b8a5187acba2bc967fd569f1714dcd0a61eb",
+      "bytes": 6761388,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,-1.5ef7d49427b9.bin",
+      "status": "deleted"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,-2.1b1135c0dcdd.bin",
+      "gitBlob": "6935001661910bbbc267b6c1b7ccda88ec5e48c5",
+      "sha256": "1b1135c0dcddd158584fa6cef211aac426d48164c7a5991619bc5e82403330a8",
+      "bytes": 3378660,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,-3.110377352ece.bin",
+      "gitBlob": "c3b00b61302d61678948d5faf18a711768a28240",
+      "sha256": "110377352eceeea53e08f1d18f3aab9734603de9dfd71487c9aed63e18b7d09c",
+      "bytes": 3892332,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,-4.5f2441bbcac7.bin",
+      "gitBlob": "e93f1db9509e15f3eabdd6342040029654cfd636",
+      "sha256": "5f2441bbcac7fb251625940f1c380956dcfe1984dded849b55a3bba579552688",
+      "bytes": 6547152,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,-5.64193232ca9d.bin",
+      "gitBlob": "c8b0f4006ad457dd7d07361d88efffa9b506e84c",
+      "sha256": "64193232ca9de24619b62c348f172b8488b9ee708372764eb132a0db88c0fae1",
+      "bytes": 545724,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,0.d4bea7603c9a.bin",
+      "gitBlob": "f406eb52d1e93aaf5c6eb4a1d5a9c78b9a0bfa2d",
+      "sha256": "d4bea7603c9a0b21646db8cf3cd0cec1bbe14d250aff69b19e49c514648e83fb",
+      "bytes": 7357392,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,1.4134d07f7e95.bin",
+      "gitBlob": "91995ff06ec1f7998b83c23c4f979001f250b49d",
+      "sha256": "4134d07f7e95dd7d1cf647b7f1e0197982f2f17287e4fbd1549c42aa8e8fd889",
+      "bytes": 6791040,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-2,2.bfa7826296df.bin",
+      "gitBlob": "10803383d740aa241f1ab517b2eb53c836bee497",
+      "sha256": "bfa7826296df88d88aa0508fd3146d365c4f4dfcf0422b5a927e1a2cfec1c357",
+      "bytes": 1351632,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-3,-1.6f9b9a756678.bin",
+      "gitBlob": "02bb5dfe5659b70ce948b20a7c0d4cc226e61b08",
+      "sha256": "6f9b9a756678d206d972eee76c40ed930c345e4b33e5f595c454205ec200df2d",
+      "bytes": 5985672,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-3,-2.3f22407144d9.bin",
+      "gitBlob": "cd8969c1e6fc308f17b0b4a1797fb6c99ba889e4",
+      "sha256": "3f22407144d936f52e2e8b3bf0d4fd3be6d83ac974ec5cef1cd656e0b3ea69e3",
+      "bytes": 5157840,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-3,-3.5e98040e574b.bin",
+      "gitBlob": "47a0c7d428e3c5f4d4fb1eed62d92b9852e5c512",
+      "sha256": "5e98040e574b1338b85cac18b372dd518e4cc73db59206e20ba0bc7de36c36d3",
+      "bytes": 4861284,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-3,-4.c26fd9a4d22f.bin",
+      "gitBlob": "9814b6bdb24dd5ae15316781904fb633ae94094d",
+      "sha256": "c26fd9a4d22f11141db4c333a1270248df24636bd4058a07f2390845211a7bfd",
+      "bytes": 7813152,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-3,0.2debb8749495.bin",
+      "gitBlob": "41f55d2cf2fff2b1468a5aafad30d5b30d191a0c",
+      "sha256": "2debb874949579f1afe775a4389d4e17fb9dba19a2a2e62adc78f9c3dd463bec",
+      "bytes": 6387288,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-3,1.1c27c32150f6.bin",
+      "gitBlob": "41eebbf7724af7c41672d8a44c2553801871b31d",
+      "sha256": "1c27c32150f6a8caf39233c4357cc93c3928c7501f3d78ae125fb8bb79ca2be5",
+      "bytes": 4168440,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-3,2.6251008d0a26.bin",
+      "gitBlob": "d3baadbf4ebbb148773b55e357628d34b8378f90",
+      "sha256": "6251008d0a26ccccce45b773f90eed2360f96ba2cdf3f49d533e9bedb50cae56",
+      "bytes": 2323428,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-4,-1.142136003c5e.bin",
+      "gitBlob": "7a2ffe145fb3b788dbd74b40868205ab3548d365",
+      "sha256": "142136003c5e948f73bea4642a7d9fe703fd8f6c7643350f94fab0431794eb6f",
+      "bytes": 5456004,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-4,-2.103c0580faf4.bin",
+      "gitBlob": "d0b2abf3fd04bc7a2fbe9cc61c90c729646e1fb2",
+      "sha256": "103c0580faf4e36702fac12f8a10e537ca55b6a63509543e83b1a9b1bc031683",
+      "bytes": 3290508,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-4,-3.76f934ad9df0.bin",
+      "gitBlob": "a4d1dc05cd160b1ffdf74ffb496e477d0b2068df",
+      "sha256": "76f934ad9df0e6529aaaa4c85f4505d8c9a6d09aec3bfdcda2e3edefc4744265",
+      "bytes": 4214076,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-4,-4.08adc247b419.bin",
+      "gitBlob": "1495b0ac7dbea8bf5e75238032bea39e37ecb2a8",
+      "sha256": "08adc247b4194e0d1bec033d1131e40f082d13048c9fbeb7911d1ff8c8042dc2",
+      "bytes": 7031208,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-4,0.fadc69effcbb.bin",
+      "gitBlob": "113bfbe671adc49f1af07f63f27963326d134db4",
+      "sha256": "fadc69effcbb412713e832df3489fe238aa3add2f993787b1a045ee4e8395803",
+      "bytes": 4558572,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-4,1.5f9608a8455c.bin",
+      "gitBlob": "79b549fea589d2ef65261dc68e6f1e3c6769a79f",
+      "sha256": "5f9608a8455c613ac46d490e4532ff9d5b62813c26c764a321de5d1ce2da3052",
+      "bytes": 7417344,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-4,2.59c9434d5e0b.bin",
+      "gitBlob": "afcb8e3924251a5d672044ffa8ef09eb2c206637",
+      "sha256": "59c9434d5e0b17aba033961402411b541f250a1872fd398b4c53bf1c938348d8",
+      "bytes": 1636584,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,-1.d883ae950421.bin",
+      "gitBlob": "3149e75c7de9f93c5013dc15cfaf1ad44894018d",
+      "sha256": "d883ae95042108442c611cd0cf7528e47b88bb2d328f8b90f0dbe1ce7c31416f",
+      "bytes": 1678212,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,-2.cf4fcdd7b38a.bin",
+      "gitBlob": "f29fb15c22844ee745078f8e0d1ae367cd238282",
+      "sha256": "cf4fcdd7b38a6c54e9f9c1463efa5b06191a38719265bc0f2a8a42ce3a5634ed",
+      "bytes": 1382184,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,-3.005adb006083.bin",
+      "gitBlob": "42ce5f7377e120bcc29dcbefedfef6a5fedc7282",
+      "sha256": "005adb0060834f904e5dffa22a0de7a402cef8593915ac7bd6a07494f5cf2d5b",
+      "bytes": 2426604,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,-4.c652d5f7c636.bin",
+      "gitBlob": "9c2b50fdaef757c4e1dbfa20b182aa1742ec2e36",
+      "sha256": "c652d5f7c636dd850426da7de001401b7fa807e313af1325cc2f13b80a23cb99",
+      "bytes": 2282760,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,-5.43482168656b.bin",
+      "gitBlob": "b45fd4e1d9d391a1abc3201266228c186cc4b247",
+      "sha256": "43482168656bbcdf2224acc307e0485d97a5e0aedc21ceed430b058661b660f0",
+      "bytes": 127728,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,0.3d1e338c6818.bin",
+      "gitBlob": "39b995fca12d59bcef067389d4bab39c6ba8e57c",
+      "sha256": "3d1e338c6818d754566147a49e8f4cee80b5846db7eae34890d6f2b1c87c6953",
+      "bytes": 2987208,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,1.12cb231b950a.bin",
+      "gitBlob": "5f591429a1158ad6d0fc73a4fc980a27afd9ca52",
+      "sha256": "12cb231b950aabdc6bb187ae36b17955479f7cf08139767ff279f54c3d858f6c",
+      "bytes": 1453416,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/-5,2.b11165d32e11.bin",
+      "gitBlob": "5d4883775d6cf59607c4fa27df99d9a83706e731",
+      "sha256": "b11165d32e112d26f50998c18c8cbdbe5c60b87c29478f647ada45743a3ce35f",
+      "bytes": 420624,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,-1.b76929ad5a5b.bin",
+      "gitBlob": "306f806c412ea7379697cef7b434693711a97f99",
+      "sha256": "b76929ad5a5b2578c80a4808d398b7b2fa4ba8e539d9a0aec54fde4850687864",
+      "bytes": 6003744,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,-1.cb9b92872df0.bin",
+      "status": "deleted"
+    },
+    {
+      "path": "public/world/miami/chunks/0,-2.3c2bf835b1b3.bin",
+      "gitBlob": "540ac25bf9a8702593e7661b84d705c02c0b8ea1",
+      "sha256": "3c2bf835b1b342488899aec383cdc468efe64134527eedd512057754f32c9467",
+      "bytes": 4401528,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,-3.3b16573145f7.bin",
+      "gitBlob": "066f075d07a4e5d2b6f7196f2c39d82a0dfd52d8",
+      "sha256": "3b16573145f710dd53a9d62691c8193fed807e7613f518813bc75c67223dd80d",
+      "bytes": 10050504,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,-4.133c27654eb1.bin",
+      "gitBlob": "600b49a07e25aae7278d5ac581a070a3475e3074",
+      "sha256": "133c27654eb13db942b7d491c1206457edcd9486c48fc1c241e9563804f0bb61",
+      "bytes": 8182956,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,-5.43233f710708.bin",
+      "gitBlob": "f9db9e0ec99a1f4679a161d53e72a2d9781edff6",
+      "sha256": "43233f710708479fa523a810e41f3664d8ed42865259d9e8fb476deb62db8e3e",
+      "bytes": 339048,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,0.49e988a4bcdc.bin",
+      "status": "deleted"
+    },
+    {
+      "path": "public/world/miami/chunks/0,0.8e7fa473bfa6.bin",
+      "gitBlob": "458ae7468323d49ccd03a38f25ab8d997c770016",
+      "sha256": "8e7fa473bfa663f963573bf7895e5981b5eb566b63fbe1cf5034ec605788ac05",
+      "bytes": 4407660,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,1.0c181546811f.bin",
+      "gitBlob": "22ca75f18934930bba8ef2cf6238b4353351c7be",
+      "sha256": "0c181546811f2666bd4d806acc5b5f7192b38a339c98f5d6cc4df3fa7e4ba00e",
+      "bytes": 5413284,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/0,2.259b9d4f1b5a.bin",
+      "gitBlob": "d7788ec17c33bb04601769fa95452072d7738510",
+      "sha256": "259b9d4f1b5abac33321eab7226f97ea6b04fdfcfc76d343bbf7037649d90a86",
+      "bytes": 2458488,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/1,-1.2f6ad4217517.bin",
+      "gitBlob": "cb011b5d50b23181bf061046e8dd973bf796ab4c",
+      "sha256": "2f6ad4217517f88e94df80791dabfd0dd3f09ea3b119f11e135385bd832e9dc8",
+      "bytes": 5021508,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/1,-2.1e64ad899dda.bin",
+      "gitBlob": "4f718427a799658adcd95ecb0fe6412a898ea6e7",
+      "sha256": "1e64ad899ddab27ff139ef8a65ee55fc13cc7b1cbb1834b58ab4b569be3a5e88",
+      "bytes": 2181468,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/1,-2.7d3f623cee1e.bin",
+      "status": "deleted"
+    },
+    {
+      "path": "public/world/miami/chunks/1,0.a55713513b14.bin",
+      "gitBlob": "168b441485dbfe0289a227eb76d46c920f044780",
+      "sha256": "a55713513b14e261bb3113d89a0d8bae2072c3c2f33015300a22d0c6998fe18d",
+      "bytes": 5235672,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/1,1.765d0fae30e8.bin",
+      "gitBlob": "b1a32308bf368c31dd884b2847ed988045df1c7f",
+      "sha256": "765d0fae30e8aae9773d8852d70da1363dbf14583396421f4424a0c99c597a7c",
+      "bytes": 4019736,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/chunks/2,1.84db698e2e74.bin",
+      "gitBlob": "74a44ffb310ad9703c0ecff9c9ec8a507f82a9db",
+      "sha256": "84db698e2e74da2c8d08cab61d6f572a87dcf24af1adc582cec04689479c81cf",
+      "bytes": 999228,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "public/world/miami/dataset.json",
+      "gitBlob": "98958d605752059254d6b994bfae165afa1b0984",
+      "sha256": "9aa72ecab7365e3b760708e837c07ec341db54e3d407566b37caa70d45669d3e",
+      "bytes": 948925,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "public/world/miami/packages.json",
+      "gitBlob": "c65d131947fdfad8d5cbfd70124927f3505119cc",
+      "sha256": "b666a6a63113636ea131ea42b3366f63030eff47bf4be626a4c1a54f14e645c4",
+      "bytes": 1699385,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "public/world/miami/runtime-query.json",
+      "gitBlob": "4c5671b73dd2d9985f01023134a0aa53f8b0ad59",
+      "sha256": "06b0ea95828e332a923f4d05a5c5a0b71e8c1f735329b123fc7e38856a99d8f5",
+      "bytes": 41230,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/core/WorldSave.ts",
+      "gitBlob": "7152928f5d44c251e0134466446ddfe2bf762fd7",
+      "sha256": "b7f52e9ca943f8b4f8f792da8c6948a12bcb8e2907031bbea3a4275e87b19d2f",
+      "bytes": 859,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/core/contracts.ts",
+      "gitBlob": "31e8a158d726054c697b5ae5f02e9f5953205328",
+      "sha256": "51d19acbec16ee783bed0e2f8f854ae255f2f8a8028474cd73baef7d1f57de7a",
+      "bytes": 1583,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/gameplay/Navigation.ts",
+      "gitBlob": "47b445760aaaf90a9782d40afe769b754df37856",
+      "sha256": "1ce3c4540f261877b64b36756ab551c8ce15369b921d6492870855b68ad98ed0",
+      "bytes": 4971,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/main.ts",
+      "gitBlob": "af0db0fcfc26d1181906c60947063579d0f2ee5f",
+      "sha256": "ec493bad7a4a3bb1fc309ce494125d86ba83755584e4fe15ee8b29671e6326e4",
+      "bytes": 48560,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/ui/UI.ts",
+      "gitBlob": "8df6fbe85b0099dfbc2cfbc8a1be157b1ba844f1",
+      "sha256": "4f8a79b165e16b208d468d8ae920a96ab615e74600c94d1b80deed6055d0c9aa",
+      "bytes": 33245,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/world/PolygonGroundCoverage.ts",
+      "gitBlob": "9aeff0166b7908f87359f698ef949992ef89ea33",
+      "sha256": "5bb588eade367baaf0efb6e6aa4a25fcd714a62b93be80756b4a5ab623d2480e",
+      "bytes": 10842,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/world/WorldBoundary.ts",
+      "gitBlob": "0ee427d1fe78518ac7fd25c747c3625a761bff87",
+      "sha256": "f1035cccb66f3a876ad062f0a42b9b01121e5a3923aa3ea799840749deabcd55",
+      "bytes": 10987,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/world/miami/MiamiResidency.ts",
+      "gitBlob": "624c1d2d826880a220b86f0efb362ae002558295",
+      "sha256": "91ca2380a843716f73770d8b257ef774b5f9d77f0024368cfa81c3dab1e8d4dc",
+      "bytes": 18066,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/world/miami/MiamiWorld.ts",
+      "gitBlob": "796d2cf897b0faa1a71f760af61f64b441db6a8b",
+      "sha256": "ed3a9e49648d4930491fc27f44a8d53d5c8700f42ba8a0c2d32bd34bae741321",
+      "bytes": 9312,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/world/packages.ts",
+      "gitBlob": "b32f500ffae6898fff1a875cc4f1832d78aaa2c1",
+      "sha256": "63a218eee7b5adaec6bb731630cf5d30ed018097674a3195ff3a17afbd4d9b97",
+      "bytes": 1922,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/miami-residency-queue.test.ts",
+      "gitBlob": "469321125bda32d9f977427a26ef801042d37aaf",
+      "sha256": "c4ffd3bfb40fa401691787e5f3cc4417a81796a04bbe9f4d4cfa193aadc15312",
+      "bytes": 8772,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/miami-residency.test.ts",
+      "gitBlob": "13dea877b7bfd75727327aadfa4d4ad2a5137cc0",
+      "sha256": "6e1b8141a15693abb2b52d48699b1c06f65eb54e81d0607cc05ca363f2c7be33",
+      "bytes": 20995,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/miami-runtime-hold.test.ts",
+      "gitBlob": "fed74bc26a5eea0559c59b03dbef5e7b4e4d3aea",
+      "sha256": "9ed9c9f688d76f204b8ef39a0ef50a4e83ebfa61b5d4798373002ff63880065d",
+      "bytes": 5682,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/miami-runtime.test.ts",
+      "gitBlob": "ac01ae943724d1c74cfabb788552a43924090b1e",
+      "sha256": "3a9d9222d31327b89d8471756c6a179140d0c5c268c5fd33161e666286a4c849",
+      "bytes": 4001,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/miami-source-ground.test.ts",
+      "gitBlob": "ebc25bf5a664c660ba11951421af8c1ba09e43f2",
+      "sha256": "b470e07f1fc64a45401df3d3a7bb4e8c15b4ece10742b168db3593005b2da686",
+      "bytes": 8346,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/miami-travel.test.ts",
+      "gitBlob": "8de36bb810aa0b707fdd1b4ed61bd24084da47c9",
+      "sha256": "a6c57cbb15eb122452ea561dcdb674f7d3a6195e6d184f18173e1c94a335a087",
+      "bytes": 12800,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/navigation-endpoints.test.ts",
+      "gitBlob": "e220223ed43f47875315fffceea191c1d045d971",
+      "sha256": "70fe2edfb637c6cdbb3a7427b438432ccf7366dad18a59728599490c5ab10426",
+      "bytes": 4296,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/supported-ground-boundary.test.ts",
+      "gitBlob": "39f69a6ea12eea632fdb76d5cbbbcfccf66655c9",
+      "sha256": "2e3cc698b35595a9b5cbf92eb7ce1ba23c7ebc0b65917a69c86e2c27e3effc16",
+      "bytes": 10546,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/world-save.test.ts",
+      "gitBlob": "55213a0c7e7a427ee8ff194d4309d50e3869bc18",
+      "sha256": "212eb2bb21367d44d6f787bd035f20c9bbf60685a397a47fb8d99d6e033afabd",
+      "bytes": 2037,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tools/miami-common-frame/README.md",
+      "gitBlob": "fc77cc9bd676945882833117e9d68c7614742c5d",
+      "sha256": "4f74cf7e70281bd9d7e905612f2da33f96117dbaee0be77d2318d77d040d2fa4",
+      "bytes": 6517,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/data/i3s-geographic.bin",
+      "gitBlob": "dd5e43d4f5b72411ea6b0cbed3f5f709f0bdc8b4",
+      "sha256": "6123507e587d344ed1c52fd70e1d08c71a02bb807b0a9b40dce38740c4c4abc6",
+      "bytes": 39760416,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/data/i3s-geographic.json",
+      "gitBlob": "a909dc3057322bb28ff8e1b6e21105b0f4e562be",
+      "sha256": "89070041120634765e4ed33a5b0a6f222f6bb078fcde35cc8089d9718a875a28",
+      "bytes": 270317,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/data/preparation.json",
+      "gitBlob": "bae5be1bb3b2a4dd860072c6b4029e73c60c4614",
+      "sha256": "8aced49fbcbbfe50d5442bf7b7b80aee529e0d1eaf5cd0e0aab330ab339cb5bb",
+      "bytes": 5242,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/package-lock.json",
+      "gitBlob": "6884174eebafd2481a2a7709e16509629a8f6bda",
+      "sha256": "ca785e7abb98fac14dd98d479ad49b975305e5b76004fa1e828906b1155a9a36",
+      "bytes": 19572,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/package.json",
+      "gitBlob": "7837cf128810bf2b2a8b2e214d16a8f543947718",
+      "sha256": "8ecc4c38b795eb1f490b77079b049850a1d0e329b0728c9bd35ce671ff6a94d7",
+      "bytes": 610,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/audit.ts",
+      "gitBlob": "9acd6fb5c9b1f1d9a5f8a737208080d9d2ad4da5",
+      "sha256": "531ddc509bc7b9c69fb55d091f61a197da6bc589899df7a7d089858caf5a4997",
+      "bytes": 5089,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/compile.ts",
+      "gitBlob": "60b62061ecef365d1ec591cf2e9fe950ba4d066b",
+      "sha256": "8782ac27f2a345590f528ce881b0e7c113b8794123e7bdf9599dc3d07ccd9b95",
+      "bytes": 15992,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/oracle.py",
+      "gitBlob": "5a3438f43e96d41e687d3047b028d0bfd9b1a640",
+      "sha256": "993bab0debdffbbe00938fb2c7c935bd71b9ff8adb7ee8361d63fb506d8ae640",
+      "bytes": 1672,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/prepare-buildings.py",
+      "gitBlob": "59bc2bc333c308b27d13a00f9f2a8de77d8b7ac9",
+      "sha256": "dfacb3f374d61640770a6f6d2045d06ddd8135005da4d60b5ca7cf5d430c2766",
+      "bytes": 3349,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tools/miami-common-frame/scripts/prepare.py",
+      "gitBlob": "ebf812c56b99d7a7941c35cf320afb028e6c82c5",
+      "sha256": "dd6ceba2fd2ab4f201a72902368399a9a692c5ca766fedf6e892ff227fa257b7",
+      "bytes": 215,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/source-manifest.json",
+      "gitBlob": "c795fe2d637216b46ca7518c4afba518daec5ce9",
+      "sha256": "e0c0bc28cbc0ae792135c05b200d301baaed8cc27a2a2b4f7e3a79a2798ba207",
+      "bytes": 18212,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/tests/native-collision.test.ts",
+      "gitBlob": "33ec80b30a3139f6451dd141a05071e9d97567ea",
+      "sha256": "ff3b6884e25e3a5e4b583506c1c4c411c4317b13739c38b8b46a65e52eb56ce9",
+      "bytes": 7642,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tools/miami-common-frame/vendor/world/miami/MiamiGeometry.ts",
+      "gitBlob": "7f624c4213d16af6528e328351d96e94c0ce743e",
+      "sha256": "0ee18d6c6f49a9159f962b1deb6faa1cd278d00145c654218ba8af9c8471b263",
+      "bytes": 7693,
+      "mode": "100644",
+      "status": "modified"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+
+> miami-public-common-frame-compiler@0.0.2 typecheck
+> tsc --noEmit
+

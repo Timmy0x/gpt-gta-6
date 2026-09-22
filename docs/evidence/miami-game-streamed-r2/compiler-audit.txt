@@ -1,0 +1,169 @@
+
+> miami-public-common-frame-compiler@0.0.2 audit
+> node --import tsx scripts/audit.ts
+
+{
+  "worldId": "brickell-public-common-frame-r2",
+  "sourceBboxWgs84": [
+    -80.199,
+    25.7596,
+    -80.187,
+    25.7704
+  ],
+  "physicalSurfaceBboxWgs84": [
+    -80.19899,
+    25.75961,
+    -80.18701,
+    25.77039
+  ],
+  "bounds": {
+    "minX": -831.6544370405742,
+    "maxX": 370.2005663187381,
+    "minZ": -730.0571574141417,
+    "maxZ": 464.21105815940996
+  },
+  "areaSquareMetres": {
+    "bounds": 1435337.2302400707,
+    "dry": 1204869.0797198324,
+    "mappedWater": 230424.8068943342,
+    "dryComponents": [
+      1129331.209054469,
+      66054.8382542315,
+      5285.279247212942,
+      4197.753163919064
+    ]
+  },
+  "buildingCount": 262,
+  "buildingVertices": 1104456,
+  "buildingsWithoutJoinedFootprint": 62,
+  "countyFootprintParts": {
+    "retainedInput": 613,
+    "joinedOutput": 223,
+    "unjoinedInput": 390
+  },
+  "roads": {
+    "count": 130,
+    "centerlineM": 15106.819490510105,
+    "names": [
+      "BRICKELL AVE",
+      "BRICKELL BAY DR",
+      "BRICKELL KEY DR",
+      "S MIAMI AVE",
+      "S MIAMI PL",
+      "SE 10TH ST",
+      "SE 11TH ST",
+      "SE 12TH ST",
+      "SE 12TH TER",
+      "SE 13TH ST",
+      "SE 14TH ST",
+      "SE 1ST AVE",
+      "SE 5TH ST",
+      "SE 6TH ST",
+      "SE 7TH ST",
+      "SE 8TH ST",
+      "SE 9TH ST",
+      "SW 10TH ST",
+      "SW 11TH ST",
+      "SW 12TH ST",
+      "SW 13TH ST",
+      "SW 14TH ST",
+      "SW 14TH TER",
+      "SW 15TH RD",
+      "SW 17TH RD",
+      "SW 1ST AVE",
+      "SW 1ST CT",
+      "SW 2ND AVE",
+      "SW 2ND CT",
+      "SW 3RD AVE",
+      "SW 5TH ST",
+      "SW 6TH ST",
+      "SW 7TH ST",
+      "SW 8TH ST",
+      "SW 9TH ST",
+      "SW MIAMI AVENUE RD"
+    ],
+    "excluded": [
+      {
+        "id": "city-street:9846:0",
+        "name": "SE 2ND AVE",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      },
+      {
+        "id": "city-street:11811:0",
+        "name": "BRICKELL KEY DR",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      },
+      {
+        "id": "city-street:14180:0",
+        "name": "SW 2ND AVE",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      },
+      {
+        "id": "city-street:16449:0",
+        "name": "S MIAMI AVE",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      }
+    ]
+  },
+  "navigation": {
+    "laneNodes": 1871,
+    "terminalNodes": 32,
+    "weakComponentNodeCounts": [
+      1799,
+      18,
+      18,
+      7,
+      7,
+      7,
+      7,
+      4,
+      4
+    ],
+    "largestComponentCoverage": 0.9615179048637092,
+    "invalidHeights": 0
+  },
+  "terrain": {
+    "sourcePixels": 1296000,
+    "olderFallbackPixels": 33408
+  },
+  "residency": {
+    "sampleSpacingM": 75,
+    "sampledDryPoints": 217,
+    "byteBudget": 100663296,
+    "maxCollision": {
+      "x": -286.6544370405742,
+      "z": -335.05715741414167,
+      "collisionBytes": 78555180,
+      "preloadBytes": 142567896
+    },
+    "maxPreload": {
+      "x": -211.65443704057418,
+      "z": -110.05715741414167,
+      "collisionBytes": 66945588,
+      "preloadBytes": 172371876
+    },
+    "note": "Chunk bytes only, excludes JS/physics/GPU duplication; active-body anchors can increase requirements."
+  },
+  "dataHashes": [
+    {
+      "path": "data/i3s-geographic.bin",
+      "sha256": "6123507e587d344ed1c52fd70e1d08c71a02bb807b0a9b40dce38740c4c4abc6"
+    },
+    {
+      "path": "data/i3s-geographic.json",
+      "sha256": "89070041120634765e4ed33a5b0a6f222f6bb078fcde35cc8089d9718a875a28"
+    },
+    {
+      "path": "data/preparation.json",
+      "sha256": "8aced49fbcbbfe50d5442bf7b7b80aee529e0d1eaf5cd0e0aab330ab339cb5bb"
+    },
+    {
+      "path": "output/packages.json",
+      "sha256": "b666a6a63113636ea131ea42b3366f63030eff47bf4be626a4c1a54f14e645c4"
+    },
+    {
+      "path": "output/dataset.json",
+      "sha256": "9aa72ecab7365e3b760708e837c07ec341db54e3d407566b37caa70d45669d3e"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import polygonClipping from 'polygon-clipping';
 import type { BuildContext, Obstacle, RoadNode, WorldContract, WorldLocation } from '../../core/contracts';
 import { MovementQueries } from '../../gameplay/MovementQueries';
 import { Ocean } from '../Ocean';
+import { PolygonGroundCoverage } from '../PolygonGroundCoverage';
 import { StreetObjects } from '../StreetObjectSystem';
 import type { NetworkStreamingStats } from '../packages';
 import { MiamiResidency } from './MiamiResidency';
@@ -29,6 +30,7 @@ export class MiamiWorld implements WorldContract {
   readonly ready:Promise<void>;
   ocean!:Ocean;
   mapData!:MiamiDataset;
+  supportedGround!:PolygonGroundCoverage;
   private residency!:MiamiResidency;
   private queries!:Awaited<ReturnType<typeof loadPublicCollisionQueries>>;
   private disposed=false;
@@ -48,6 +50,7 @@ export class MiamiWorld implements WorldContract {
     this.queries=await loadPublicCollisionQueries(baseUrl,fetcher);
     if(this.queries.worldId!==dataset.id)throw new Error('Miami public coordinate frame mismatch');
     this.mapData=dataset;
+    this.supportedGround=new PolygonGroundCoverage(dataset.land.flatMap(area=>area.polygons));
     this.referenceWaterLevel=this.queries.frame.navd88ToLocal(-80.1907,25.7662,0)[1];
     const bounds=dataset.bounds,box=miamiRectangle(bounds.minX,bounds.minZ,bounds.maxX,bounds.maxZ);
     const water=dataset.water.length?polygonClipping.intersection(polygonClipping.union(dataset.water.flatMap(w=>w.polygons)),box):[];
@@ -92,6 +95,9 @@ export class MiamiWorld implements WorldContract {
       }
       if(!this.pedestrianSpawns.length)throw new Error('No verified clear Brickell sidewalk spawn');
     }finally{queries.dispose();}
+    // The verified sidewalk may sit a few metres from the source junction.
+    // Prepare its own full collision halo before reporting the world ready.
+    await this.residency.preparePosition(this.spawn);
     this.locations.push({id:'brickell-se8',name:'Brickell Avenue · SE 8th Street',x:this.spawn.x,z:this.spawn.z,type:'landmark'});
     for(const name of [...new Set(supported.map(r=>r.name))]){
       const points=supported.filter(r=>r.name===name).flatMap(r=>r.centerline).map(p=>({x:p[0],z:p[2]})).filter(p=>inMiamiBounds(p,bounds,25)&&!this.ocean.contains(p.x,p.z));
@@ -102,7 +108,8 @@ export class MiamiWorld implements WorldContract {
   collisionReady(position:Vector3){return this.residency?.collisionReady(position)??false;}
   setSourceVisible(visible:boolean){this.residency?.setVisualVisibility(!visible);if(this.ocean)this.ocean.mesh.isVisible=!visible;}
   floorHeightAt(x:number,z:number){return this.queries?.floorHeightAt(x,z)??this.spawn.y-.94;}
-  async preparePosition(position:Vector3){await this.ready;if(!inMiamiBounds(position,this.bounds)||!this.queries.hasSourceGround(position.x,position.z))throw new Error('Destination is outside the constructed area');await this.residency.preparePosition(position);}
+  hasGroundCoverage(x:number,z:number,radius=.36){return this.supportedGround?.containsDisk(x,z,radius)===true&&this.queries.hasSourceGround(x,z);}
+  async preparePosition(position:Vector3){await this.ready;if(!inMiamiBounds(position,this.bounds)||!this.hasGroundCoverage(position.x,position.z))throw new Error('Destination is outside the constructed area');await this.residency.preparePosition(position);}
   setActiveAnchors(anchors:Vector3[]){this.residency?.setActiveAnchors(anchors);this.streetObjects.setActiveAnchors(anchors);}
   ensureCollision(position:Vector3){this.residency?.ensureCollision(position);this.streetObjects.ensureCollision(position);}
   update(dt:number,position:Vector3,time:number,weather:string){if(!this.residency||this.disposed)return;this.residency.update(position);this.streetObjects.updateResidency(position);this.ocean.update(dt,position,weather,Math.max(0,Math.sin((time-6)/12*Math.PI)));}

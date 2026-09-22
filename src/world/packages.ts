@@ -17,6 +17,10 @@ export interface WorldManifest {
   totals: { meshes:number; cpuGeometryBytes:number; compressedBytes:number; textureBytes:number; };
 }
 export interface NetworkStreamingStats extends StreamingStats {
+  /** Packed public source buffers only, excluding native/GPU copies. Required
+   * active support may exceed this target and is reported separately. */
+  sourceBufferBudgetBytes?: number;
+  requiredSourceBufferBytes?: number;
   streetObjects?: ReturnType<StreetObjects['getStats']>;
   loadedPackages: number; totalPackages: number; pendingPackages: number;
   failedPackages: number; retries: number; requests: number; fetchedBytes: number;

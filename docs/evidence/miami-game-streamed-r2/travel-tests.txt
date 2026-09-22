@@ -1,0 +1,18 @@
+TAP version 13
+# BJS - [12:05:53]: Babylon.js v9.25.0 - Null engine
+# Subtest: expanded Brickell named destinations and supported edge pins resolve to real loaded support; mapped water remains unavailable
+ok 1 - expanded Brickell named destinations and supported edge pins resolve to real loaded support; mapped water remains unavailable
+  ---
+  duration_ms: 61932.355583
+  type: 'test'
+  ...
+# {"named":34,"landings":37,"rejectedEdges":8,"excludedBridges":0,"rejectedWater":103,"trafficChecks":9727,"wetTraffic":0,"failures":[],"stats":{"requests":236,"fetchedBytes":1068760668,"retries":0,"packagesLoaded":235,"packagesEvicted":215,"meshLoads":1557,"meshDisposals":1506,"colliderLoads":1557,"colliderDisposals":1506,"lastError":"","totalChunks":51,"residentChunks":7,"totalMeshes":437,"residentMeshes":51,"totalColliders":437,"residentColliders":51,"cpuGeometryBytes":90056748,"totalCpuGeometryBytes":211968600,"pendingMeshes":0,"activeAnchors":0,"lastMeshOperations":72,"loadedPackages":20,"totalPackages":51,"pendingPackages":1,"failedPackages":0,"residentMaterials":0,"ready":true,"sourceBufferBudgetBytes":100663296,"requiredSourceBufferBytes":34660116,"streetObjects":{"objects":0,"residentBodies":0,"fallen":0,"colliderLoads":0,"colliderDisposals":0,"batches":0,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":0}}}
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 64431.193084

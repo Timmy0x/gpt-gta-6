@@ -1,0 +1,13 @@
+{
+  "dryEdgeSamples": 2060,
+  "maximumBoundaryHeightHorizontalShiftM": 0.000581092818657313,
+  "maximumSample": {
+    "longitude": -80.19899012774562,
+    "latitude": 25.76215588186293,
+    "navd88M": 3.921135193682193
+  },
+  "numericalSkinM": 0.02,
+  "skinCoversMeasuredShift": true,
+  "waterChecks": 4547,
+  "bad": []
+}

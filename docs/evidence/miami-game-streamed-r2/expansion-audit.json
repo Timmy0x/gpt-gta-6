@@ -1,0 +1,848 @@
+{
+  "worldId": "brickell-public-common-frame-r2",
+  "sourceBboxWgs84": [
+    -80.199,
+    25.7596,
+    -80.187,
+    25.7704
+  ],
+  "physicalSurfaceBboxWgs84": [
+    -80.19899,
+    25.75961,
+    -80.18701,
+    25.77039
+  ],
+  "bounds": {
+    "minX": -831.6544370405742,
+    "maxX": 370.2005663187381,
+    "minZ": -730.0571574141417,
+    "maxZ": 464.21105815940996
+  },
+  "areaSquareMetres": {
+    "bounds": 1435337.2302400707,
+    "dry": 1204869.0797198324,
+    "mappedWater": 230424.8068943342,
+    "dryComponents": [
+      1129331.209054469,
+      66054.8382542315,
+      5285.279247212942,
+      4197.753163919064
+    ]
+  },
+  "buildingCount": 262,
+  "buildingVertices": 1104456,
+  "buildingsWithoutJoinedFootprint": [
+    {
+      "id": "county-i3s:2",
+      "sourceUniqueId": "D1_MDC_Building_10",
+      "bboxWgs84": [
+        -80.19065622007398,
+        25.76515575599142,
+        -80.18970124475814,
+        25.76592802178884
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:17",
+      "sourceUniqueId": "D1_MDC_Building_115",
+      "bboxWgs84": [
+        -80.19237143467959,
+        25.762545075139954,
+        -80.191860604975,
+        25.762880805170155
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:21",
+      "sourceUniqueId": "D1_MDC_Building_119",
+      "bboxWgs84": [
+        -80.19316860261097,
+        25.764841507316305,
+        -80.19245929918907,
+        25.76541022672245
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:33",
+      "sourceUniqueId": "D1_MDC_Building_131",
+      "bboxWgs84": [
+        -80.19446941523907,
+        25.76169374521442,
+        -80.19385667132715,
+        25.762040189586973
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:49",
+      "sourceUniqueId": "D1_MDC_Building_147",
+      "bboxWgs84": [
+        -80.19514871596095,
+        25.764527535069234,
+        -80.19335900815406,
+        25.7653769454369
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:51",
+      "sourceUniqueId": "D1_MDC_Building_149",
+      "bboxWgs84": [
+        -80.1917001888499,
+        25.760850114559382,
+        -80.19027998996836,
+        25.761580286475457
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:52",
+      "sourceUniqueId": "D1_MDC_Building_15",
+      "bboxWgs84": [
+        -80.18711245646458,
+        25.76815736614358,
+        -80.18597211184218,
+        25.768933434363728
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:65",
+      "sourceUniqueId": "D1_MDC_Building_163",
+      "bboxWgs84": [
+        -80.19516571341285,
+        25.765489364424454,
+        -80.19458062834076,
+        25.765871387414833
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:80",
+      "sourceUniqueId": "D1_MDC_Building_18",
+      "bboxWgs84": [
+        -80.18734884871859,
+        25.76903550416014,
+        -80.1864650298235,
+        25.769409399018198
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:97",
+      "sourceUniqueId": "D1_MDC_Building_197",
+      "bboxWgs84": [
+        -80.19382585124703,
+        25.761710736788235,
+        -80.19325272621944,
+        25.762475642263315
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:99",
+      "sourceUniqueId": "D1_MDC_Building_2",
+      "bboxWgs84": [
+        -80.18912113469483,
+        25.764358419033943,
+        -80.18867532187065,
+        25.764763910829334
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:130",
+      "sourceUniqueId": "D1_MDC_Building_230",
+      "bboxWgs84": [
+        -80.19113717236095,
+        25.762936325785812,
+        -80.19066983958245,
+        25.763595253081984
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:157",
+      "sourceUniqueId": "D1_MDC_Building_258",
+      "bboxWgs84": [
+        -80.1936237353448,
+        25.767862739399163,
+        -80.19344266429201,
+        25.767993224502163
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:190",
+      "sourceUniqueId": "D1_MDC_Building_294",
+      "bboxWgs84": [
+        -80.19357403893599,
+        25.762649226763177,
+        -80.19328716638273,
+        25.763035341170042
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:221",
+      "sourceUniqueId": "D1_MDC_Building_328",
+      "bboxWgs84": [
+        -80.19258536466342,
+        25.765679474205374,
+        -80.19224705869593,
+        25.765964369797278
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:254",
+      "sourceUniqueId": "D1_MDC_Building_36",
+      "bboxWgs84": [
+        -80.19388830157638,
+        25.760976307371156,
+        -80.19373194957095,
+        25.761288668044134
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:255",
+      "sourceUniqueId": "D1_MDC_Building_360",
+      "bboxWgs84": [
+        -80.19375163057063,
+        25.761183313283826,
+        -80.19357712288272,
+        25.761432563610132
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:263",
+      "sourceUniqueId": "D1_MDC_Building_37",
+      "bboxWgs84": [
+        -80.1945509016316,
+        25.760685294386604,
+        -80.19408206843423,
+        25.761496950392285
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:272",
+      "sourceUniqueId": "D1_MDC_Building_378",
+      "bboxWgs84": [
+        -80.1921834688774,
+        25.766780371873494,
+        -80.19207520798321,
+        25.76706145131294
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:290",
+      "sourceUniqueId": "D1_MDC_Building_4",
+      "bboxWgs84": [
+        -80.19162613011841,
+        25.764732562396805,
+        -80.19127237742478,
+        25.765199766387216
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:292",
+      "sourceUniqueId": "D1_MDC_Building_401",
+      "bboxWgs84": [
+        -80.19014552676057,
+        25.75937868094224,
+        -80.1896549169713,
+        25.759726293367926
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:300",
+      "sourceUniqueId": "D1_MDC_Building_41",
+      "bboxWgs84": [
+        -80.19505230016344,
+        25.76258782368996,
+        -80.1943430534358,
+        25.762858615361896
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:304",
+      "sourceUniqueId": "D1_MDC_Building_414",
+      "bboxWgs84": [
+        -80.19383208003538,
+        25.765967966506853,
+        -80.19340038862256,
+        25.76618757033268
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:311",
+      "sourceUniqueId": "D1_MDC_Building_420",
+      "bboxWgs84": [
+        -80.19408646525028,
+        25.76478552515941,
+        -80.19351547203462,
+        25.765131243245875
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:320",
+      "sourceUniqueId": "D1_MDC_Building_43",
+      "bboxWgs84": [
+        -80.19208087760686,
+        25.762943192373953,
+        -80.1916923240789,
+        25.763378377963548
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:331",
+      "sourceUniqueId": "D1_MDC_Building_44",
+      "bboxWgs84": [
+        -80.19471727691607,
+        25.76313061260058,
+        -80.19401158577429,
+        25.763390227121054
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:341",
+      "sourceUniqueId": "D1_MDC_Building_45",
+      "bboxWgs84": [
+        -80.19266072378574,
+        25.763332832899053,
+        -80.19224793926892,
+        25.763796100032508
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:355",
+      "sourceUniqueId": "D1_MDC_Building_49",
+      "bboxWgs84": [
+        -80.19373730914324,
+        25.767439455908345,
+        -80.19343327968912,
+        25.76777897967014
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:375",
+      "sourceUniqueId": "D1_MDC_Building_7",
+      "bboxWgs84": [
+        -80.1914908536518,
+        25.76525510357735,
+        -80.19133639106704,
+        25.765398006477174
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:383",
+      "sourceUniqueId": "D1_MDC_Building_8",
+      "bboxWgs84": [
+        -80.1888774596147,
+        25.765053368461214,
+        -80.1884377843227,
+        25.76544981532452
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:394",
+      "sourceUniqueId": "D1_MDC_Building_9",
+      "bboxWgs84": [
+        -80.1927364455577,
+        25.765524328699232,
+        -80.19233787631211,
+        25.76567542854011
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:402",
+      "sourceUniqueId": "D1_MDC_Building_99",
+      "bboxWgs84": [
+        -80.1941374869208,
+        25.765926703784814,
+        -80.19387848920508,
+        25.766123473152717
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:30020",
+      "sourceUniqueId": "D3_MDC_Building_10",
+      "bboxWgs84": [
+        -80.19455131164264,
+        25.76206188492097,
+        -80.19382398929716,
+        25.762455902298374
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:31575",
+      "sourceUniqueId": "D3_MDC_Building_11429",
+      "bboxWgs84": [
+        -80.19881722974893,
+        25.763158830553266,
+        -80.19864998656627,
+        25.76326071351764
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:33966",
+      "sourceUniqueId": "D3_MDC_Building_13634",
+      "bboxWgs84": [
+        -80.1951834353755,
+        25.765895413849236,
+        -80.19477359215,
+        25.76627238010728
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:34132",
+      "sourceUniqueId": "D3_MDC_Building_13788",
+      "bboxWgs84": [
+        -80.19864423163304,
+        25.763145912876325,
+        -80.19861036909347,
+        25.76320031235923
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:34946",
+      "sourceUniqueId": "D3_MDC_Building_14537",
+      "bboxWgs84": [
+        -80.1976186582265,
+        25.762733840535716,
+        -80.19746683396218,
+        25.76282815103265
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:35606",
+      "sourceUniqueId": "D3_MDC_Building_15152",
+      "bboxWgs84": [
+        -80.1985569598393,
+        25.762545209932114,
+        -80.1984389840865,
+        25.76274614347608
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:35716",
+      "sourceUniqueId": "D3_MDC_Building_15253",
+      "bboxWgs84": [
+        -80.19857305536348,
+        25.763142537996146,
+        -80.1984549444525,
+        25.763249291777583
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:35807",
+      "sourceUniqueId": "D3_MDC_Building_15339",
+      "bboxWgs84": [
+        -80.19795321845518,
+        25.76253913864025,
+        -80.19786906752338,
+        25.762716055586907
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:40944",
+      "sourceUniqueId": "D3_MDC_Building_20086",
+      "bboxWgs84": [
+        -80.19881970177008,
+        25.763023172942894,
+        -80.19860686225653,
+        25.76311832500619
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:41611",
+      "sourceUniqueId": "D3_MDC_Building_20705",
+      "bboxWgs84": [
+        -80.19793856979882,
+        25.762828801555997,
+        -80.19783944424776,
+        25.762900023111115
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:42356",
+      "sourceUniqueId": "D3_MDC_Building_21392",
+      "bboxWgs84": [
+        -80.19764738347433,
+        25.762545102428035,
+        -80.19744464473618,
+        25.76268517625364
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:44065",
+      "sourceUniqueId": "D3_MDC_Building_22973",
+      "bboxWgs84": [
+        -80.19884410285809,
+        25.762534503913457,
+        -80.19871848746621,
+        25.7627314703725
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:44831",
+      "sourceUniqueId": "D3_MDC_Building_2368",
+      "bboxWgs84": [
+        -80.19869475570809,
+        25.762516941963668,
+        -80.19858381080044,
+        25.762738395454335
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:45059",
+      "sourceUniqueId": "D3_MDC_Building_23891",
+      "bboxWgs84": [
+        -80.19553244432021,
+        25.763156282925834,
+        -80.19539327888336,
+        25.764419483813313
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:46509",
+      "sourceUniqueId": "D3_MDC_Building_25237",
+      "bboxWgs84": [
+        -80.19822078181664,
+        25.761971588115813,
+        -80.19810705079931,
+        25.76229085573894
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:46533",
+      "sourceUniqueId": "D3_MDC_Building_2526",
+      "bboxWgs84": [
+        -80.19509906500784,
+        25.766845132498993,
+        -80.1949440233478,
+        25.767249539711038
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:46895",
+      "sourceUniqueId": "D3_MDC_Building_25596",
+      "bboxWgs84": [
+        -80.19795406220715,
+        25.76197052012165,
+        -80.19782622072148,
+        25.762297814697632
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:49285",
+      "sourceUniqueId": "D3_MDC_Building_27825",
+      "bboxWgs84": [
+        -80.19810283507755,
+        25.762632845581948,
+        -80.19800231184414,
+        25.762859608426197
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:49394",
+      "sourceUniqueId": "D3_MDC_Building_27930",
+      "bboxWgs84": [
+        -80.19915717895486,
+        25.759376542668797,
+        -80.19875206140017,
+        25.759767720269046
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:50416",
+      "sourceUniqueId": "D3_MDC_Building_28893",
+      "bboxWgs84": [
+        -80.19523192602023,
+        25.76645222077611,
+        -80.19493370944505,
+        25.766791495361822
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:52532",
+      "sourceUniqueId": "D3_MDC_Building_4580",
+      "bboxWgs84": [
+        -80.19881062472192,
+        25.762765446417006,
+        -80.19864612035522,
+        25.76285514803135
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:52535",
+      "sourceUniqueId": "D3_MDC_Building_4583",
+      "bboxWgs84": [
+        -80.19857523879105,
+        25.762810773362844,
+        -80.19848188656684,
+        25.762885089470046
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:54146",
+      "sourceUniqueId": "D3_MDC_Building_6079",
+      "bboxWgs84": [
+        -80.19653848957336,
+        25.76765821168136,
+        -80.19594820684819,
+        25.76827145488404
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:54229",
+      "sourceUniqueId": "D3_MDC_Building_6154",
+      "bboxWgs84": [
+        -80.19825123312253,
+        25.76263138282343,
+        -80.19815084987854,
+        25.762860303309253
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:54808",
+      "sourceUniqueId": "D3_MDC_Building_6692",
+      "bboxWgs84": [
+        -80.19765556863561,
+        25.762884590403033,
+        -80.1974425433232,
+        25.76330035133948
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:55068",
+      "sourceUniqueId": "D3_MDC_Building_6937",
+      "bboxWgs84": [
+        -80.19779444315057,
+        25.76256248684446,
+        -80.19768719798006,
+        25.762789669831605
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:55136",
+      "sourceUniqueId": "D3_MDC_Building_7",
+      "bboxWgs84": [
+        -80.19876800424566,
+        25.75950528579113,
+        -80.19847304885656,
+        25.759840139796033
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:56351",
+      "sourceUniqueId": "D3_MDC_Building_8121",
+      "bboxWgs84": [
+        -80.19857167904334,
+        25.762916224864284,
+        -80.19847852402668,
+        25.762990335789482
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:57301",
+      "sourceUniqueId": "D3_MDC_Building_9",
+      "bboxWgs84": [
+        -80.19503954316875,
+        25.76173641736705,
+        -80.19478168479523,
+        25.7624234582504
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    },
+    {
+      "id": "county-i3s:57525",
+      "sourceUniqueId": "D3_MDC_Building_9204",
+      "bboxWgs84": [
+        -80.19880680015845,
+        25.762901908922913,
+        -80.19865628277253,
+        25.762997469953234
+      ],
+      "note": "3D collider retained, no joined County footprint part"
+    }
+  ],
+  "countyFootprintParts": {
+    "retainedInput": 613,
+    "joinedOutput": 223,
+    "unjoinedInput": 390
+  },
+  "roads": {
+    "count": 130,
+    "centerlineM": 15106.819490510105,
+    "names": [
+      "BRICKELL AVE",
+      "BRICKELL BAY DR",
+      "BRICKELL KEY DR",
+      "S MIAMI AVE",
+      "S MIAMI PL",
+      "SE 10TH ST",
+      "SE 11TH ST",
+      "SE 12TH ST",
+      "SE 12TH TER",
+      "SE 13TH ST",
+      "SE 14TH ST",
+      "SE 1ST AVE",
+      "SE 5TH ST",
+      "SE 6TH ST",
+      "SE 7TH ST",
+      "SE 8TH ST",
+      "SE 9TH ST",
+      "SW 10TH ST",
+      "SW 11TH ST",
+      "SW 12TH ST",
+      "SW 13TH ST",
+      "SW 14TH ST",
+      "SW 14TH TER",
+      "SW 15TH RD",
+      "SW 17TH RD",
+      "SW 1ST AVE",
+      "SW 1ST CT",
+      "SW 2ND AVE",
+      "SW 2ND CT",
+      "SW 3RD AVE",
+      "SW 5TH ST",
+      "SW 6TH ST",
+      "SW 7TH ST",
+      "SW 8TH ST",
+      "SW 9TH ST",
+      "SW MIAMI AVENUE RD"
+    ],
+    "excluded": [
+      {
+        "id": "city-street:9846:0",
+        "name": "SE 2ND AVE",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      },
+      {
+        "id": "city-street:11811:0",
+        "name": "BRICKELL KEY DR",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      },
+      {
+        "id": "city-street:14180:0",
+        "name": "SW 2ND AVE",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      },
+      {
+        "id": "city-street:16449:0",
+        "name": "S MIAMI AVE",
+        "reason": "Mapped centerline crosses mapped water, but bridge/tunnel type and non-inferred deck elevation are not both available. This segment is omitted from physical road and traffic generation."
+      }
+    ]
+  },
+  "navigation": {
+    "laneNodes": 1871,
+    "terminalNodes": 32,
+    "weakComponentNodeCounts": [
+      1799,
+      18,
+      18,
+      7,
+      7,
+      7,
+      7,
+      4,
+      4
+    ],
+    "largestComponentCoverage": 0.9615179048637092,
+    "invalidHeights": 0
+  },
+  "terrain": {
+    "sourcePixels": 1296000,
+    "olderFallbackPixels": 33408
+  },
+  "residency": {
+    "sampleSpacingM": 75,
+    "sampledDryPoints": 217,
+    "byteBudget": 100663296,
+    "maxCollision": {
+      "x": -286.6544370405742,
+      "z": -335.05715741414167,
+      "collisionBytes": 78555180,
+      "preloadBytes": 142567896
+    },
+    "maxPreload": {
+      "x": -211.65443704057418,
+      "z": -110.05715741414167,
+      "collisionBytes": 66945588,
+      "preloadBytes": 172371876
+    },
+    "note": "Chunk bytes only, excludes JS/physics/GPU duplication; active-body anchors can increase requirements."
+  },
+  "dataHashes": [
+    {
+      "path": "data/i3s-geographic.bin",
+      "sha256": "6123507e587d344ed1c52fd70e1d08c71a02bb807b0a9b40dce38740c4c4abc6"
+    },
+    {
+      "path": "data/i3s-geographic.json",
+      "sha256": "89070041120634765e4ed33a5b0a6f222f6bb078fcde35cc8089d9718a875a28"
+    },
+    {
+      "path": "data/preparation.json",
+      "sha256": "8aced49fbcbbfe50d5442bf7b7b80aee529e0d1eaf5cd0e0aab330ab339cb5bb"
+    },
+    {
+      "path": "output/packages.json",
+      "sha256": "b666a6a63113636ea131ea42b3366f63030eff47bf4be626a4c1a54f14e645c4"
+    },
+    {
+      "path": "output/dataset.json",
+      "sha256": "9aa72ecab7365e3b760708e837c07ec341db54e3d407566b37caa70d45669d3e"
+    }
+  ]
+}

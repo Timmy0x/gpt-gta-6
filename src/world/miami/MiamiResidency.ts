@@ -5,7 +5,10 @@ import { decodeMiamiChunk, validateMiamiManifest, type MiamiChunk, type MiamiPac
 type Decoded = ReturnType<typeof decodeMiamiChunk>[number];
 interface Resident { data: Decoded; mesh?: Mesh; physics?: PhysicsAggregate; }
 interface Loaded { chunk: MiamiChunk; buffer: ArrayBuffer; residents: Resident[]; }
-interface Waiter { resolve: () => void; reject: (error: Error) => void; }
+interface Waiter { chunk: MiamiChunk; resolve: () => void; reject: (error: Error) => void; }
+class ObsoleteChunkRequest extends Error {
+  constructor() { super('Miami chunk is no longer demanded'); }
+}
 const LIMITS = { render: 650, collision: 210, preload: 420, unload: 820, cpuBytes: 96 * 1024 * 1024, network: 2, meshOperations: 12 } as const;
 
 /** Network, GPU and Havok residency share exact source bounds and geometry. */
@@ -28,8 +31,9 @@ export class MiamiResidency {
   private counts = { requests: 0, fetchedBytes: 0, retries: 0, packagesLoaded: 0, packagesEvicted: 0, meshLoads: 0, meshDisposals: 0, colliderLoads: 0, colliderDisposals: 0, lastError: '' };
   onMeshLoaded?: (mesh: Mesh, kind: string) => void;
   onMeshDisposed?: (mesh: Mesh) => void;
-  constructor(private scene: Scene, private shadows: ShadowGenerator, readonly manifest: MiamiPackageManifest, private baseUrl: string, private material: (key: string) => Material, private fetcher: typeof fetch = fetch) {
+  constructor(private scene: Scene, private shadows: ShadowGenerator, readonly manifest: MiamiPackageManifest, private baseUrl: string, private material: (key: string) => Material, private fetcher: typeof fetch = fetch, private cpuBudget = LIMITS.cpuBytes as number) {
     validateMiamiManifest(manifest);
+    if (!Number.isSafeInteger(cpuBudget) || cpuBudget <= 0) throw new RangeError('Invalid Miami source buffer budget');
   }
   setActiveAnchors(anchors: Vector3[]) {
     if (!this.disposed) this.anchors = anchors.filter(p => Number.isFinite(p.x) && Number.isFinite(p.z)).map(p => p.clone());
@@ -43,12 +47,54 @@ export class MiamiResidency {
     for (const anchor of this.anchors) distance = Math.min(distance, distanceToBounds(anchor, bounds));
     return distance;
   }
-  private async slot() {
+  /** Required native support wins over the cache target. Optional prefetch must
+   * fit after reserving every required chunk, including active-body anchors. */
+  private demand() {
+    const nearby = this.manifest.chunks.map(chunk => ({ chunk, distance: this.distance(chunk.bounds),
+      required: this.pins.has(chunk.id) || chunk.meshes.some(mesh => mesh.collision && this.distance(mesh.bounds) < LIMITS.collision),
+    })).sort((a, b) => Number(b.required) - Number(a.required) || a.distance - b.distance || a.chunk.id.localeCompare(b.chunk.id));
+    const selected = new Set<string>();
+    let requiredBytes = 0, bytes = 0;
+    for (const item of nearby) if (item.required) { selected.add(item.chunk.id); bytes += item.chunk.bytes; requiredBytes += item.chunk.bytes; }
+    for (const item of nearby) if (!item.required && item.distance < LIMITS.preload && bytes + item.chunk.bytes <= this.cpuBudget) {
+      selected.add(item.chunk.id); bytes += item.chunk.bytes;
+    }
+    return { selected, requiredBytes, bytes, chunks: nearby.filter(item => selected.has(item.chunk.id)).map(item => item.chunk) };
+  }
+  private trim(demand: ReturnType<MiamiResidency['demand']>) {
+    // Reserve bytes for incoming selected packages before admitting prefetch.
+    // Old in-flight requests can temporarily exceed this source-buffer target;
+    // they are reclaimed on the next update and never displace required support.
+    const incoming = demand.chunks.reduce((sum, chunk) => sum + (this.loaded.has(chunk.id) ? 0 : chunk.bytes), 0);
+    const target = Math.max(this.cpuBudget, demand.requiredBytes);
+    const farthest = [...this.loaded.values()].filter(asset => !demand.selected.has(asset.chunk.id))
+      .sort((a, b) => this.distance(b.chunk.bounds) - this.distance(a.chunk.bounds));
+    for (const asset of farthest) {
+      if (this.geometryBytes + incoming <= target) break;
+      for (const resident of asset.residents) this.remove(resident);
+      this.loaded.delete(asset.chunk.id); this.geometryBytes -= asset.buffer.byteLength; this.counts.packagesEvicted++;
+    }
+  }
+  private reconcileQueue(demand: ReturnType<MiamiResidency['demand']>) {
+    const order = new Map(demand.chunks.map((chunk, index) => [chunk.id, index]));
+    this.queue = this.queue.filter(waiter => {
+      if (order.has(waiter.chunk.id)) return true;
+      // Remove the old promise immediately so another position change in this
+      // same turn can request this chunk again rather than inherit cancellation.
+      this.pending.delete(waiter.chunk.id);
+      waiter.reject(new ObsoleteChunkRequest());
+      return false;
+    }).sort((a, b) => order.get(a.chunk.id)! - order.get(b.chunk.id)!);
+  }
+  private async slot(chunk: MiamiChunk) {
     if (this.disposed) throw new Error('Miami world disposed');
-    if (this.slots >= LIMITS.network) await new Promise<void>((resolve, reject) => this.queue.push({ resolve, reject }));
+    if (this.slots >= LIMITS.network) await new Promise<void>((resolve, reject) => this.queue.push({ chunk, resolve, reject }));
     else this.slots++;
   }
   private release() {
+    // At most two requests are already in flight. Each released slot goes to
+    // current collision/pinned demand before still-useful optional prefetch.
+    this.reconcileQueue(this.demand());
     const next = this.queue.shift();
     if (next) next.resolve(); else this.slots--;
   }
@@ -56,13 +102,15 @@ export class MiamiResidency {
     if (this.disposed) return Promise.reject(new Error('Miami world disposed'));
     const loaded = this.loaded.get(chunk.id); if (loaded) return Promise.resolve(loaded);
     const pending = this.pending.get(chunk.id); if (pending) return pending;
-    const operation = (async () => {
+    let operation!: Promise<Loaded>;
+    operation = (async () => {
       let entered = false, stage = 'queue';
       try {
-        await this.slot(); entered = true;
+        await this.slot(chunk); entered = true;
         if (this.disposed) throw new Error('Miami world disposed');
         let error: unknown;
         for (let attempt = 0; attempt < 3; attempt++) try {
+          if (!this.demand().selected.has(chunk.id)) throw new ObsoleteChunkRequest();
           if (attempt) this.counts.retries++;
           this.counts.requests++;
           stage = 'fetch';
@@ -82,23 +130,32 @@ export class MiamiResidency {
           this.failed.delete(chunk.id); this.nextRetry.delete(chunk.id);
           if (!this.failed.size) this.counts.lastError = '';
           this.counts.packagesLoaded++; return asset;
-        } catch (cause) { error = cause; if (this.disposed) throw cause; }
+        } catch (cause) { error = cause; if (this.disposed || cause instanceof ObsoleteChunkRequest) throw cause; }
         throw error;
       } catch (error) {
+        if (error instanceof ObsoleteChunkRequest) throw error;
         const failure = new Error(`Miami chunk ${chunk.id} (${chunk.url}) ${stage}: ${error instanceof Error ? error.message : String(error)}`, { cause: error });
         if (!this.disposed) { this.failed.add(chunk.id); this.nextRetry.set(chunk.id, performance.now() + 10000); this.counts.lastError = failure.message; }
         throw failure;
-      } finally { if (entered) this.release(); this.pending.delete(chunk.id); }
+      } finally {
+        if (entered) this.release();
+        // A cancelled queued operation can have been replaced in the same turn.
+        if (this.pending.get(chunk.id) === operation) this.pending.delete(chunk.id);
+      }
     })();
     this.pending.set(chunk.id, operation); return operation;
   }
   async preparePosition(position: Vector3) {
     this.assertPosition(position);
     const target = position.clone(); this.primary ??= target.clone(); this.primary.copyFrom(target);
-    const chunks = this.manifest.chunks.filter(c => distanceToBounds(target, c.bounds) < LIMITS.preload).sort((a, b) => distanceToBounds(target, a.bounds) - distanceToBounds(target, b.bounds));
+    const demand = this.demand(); this.reconcileQueue(demand); this.trim(demand);
+    const chunks = demand.chunks.filter(chunk => chunk.meshes.some(mesh => mesh.collision && distanceToBounds(target, mesh.bounds) < LIMITS.collision));
     for (const chunk of chunks) this.pins.set(chunk.id, (this.pins.get(chunk.id) ?? 0) + 1);
     try {
-      await Promise.all(chunks.map(c => this.load(c)));
+      const required = Promise.all(chunks.map(c => this.load(c)));
+      // Preloading a future street must not reject a fully supported arrival.
+      for (const chunk of demand.chunks) if (!chunks.includes(chunk)) void this.load(chunk).catch(() => {});
+      await required;
       this.assertPosition(target); this.update(target, true);
       if (!this.collisionReady(target, false)) throw new Error('No ready Miami collision coverage at destination');
     } finally {
@@ -160,7 +217,8 @@ export class MiamiResidency {
     if (this.disposed) return;
     this.assertPosition(position); this.primary ??= position.clone(); this.primary.copyFrom(position);
     const before = this.counts.meshLoads + this.counts.meshDisposals;
-    for (const chunk of this.manifest.chunks) if (!this.loaded.has(chunk.id) && !this.pending.has(chunk.id) && this.distance(chunk.bounds) < LIMITS.preload && (this.nextRetry.get(chunk.id) ?? 0) <= performance.now()) void this.load(chunk).catch(() => {});
+    const demand = this.demand(); this.reconcileQueue(demand); this.trim(demand);
+    for (const chunk of demand.chunks) if (!this.loaded.has(chunk.id) && !this.pending.has(chunk.id) && (this.nextRetry.get(chunk.id) ?? 0) <= performance.now()) void this.load(chunk).catch(() => {});
     let visualLoads = 0;
     for (const asset of this.loaded.values()) for (const resident of asset.residents) {
       const d = this.distance(resident.data.record.bounds);
@@ -169,15 +227,6 @@ export class MiamiResidency {
       else if (d > LIMITS.collision + 100 && resident.physics) { resident.physics.dispose(); resident.physics = undefined; this.counts.colliderDisposals++; }
       if (resident.data.record.render !== false && d < LIMITS.render && !resident.mesh && (immediate || visualLoads < LIMITS.meshOperations)) { this.create(resident); visualLoads++; }
       else if ((resident.data.record.render === false || d > LIMITS.unload) && resident.mesh && !resident.physics) this.remove(resident);
-    }
-    if (this.geometryBytes > LIMITS.cpuBytes) {
-      const farthest = [...this.loaded.values()].sort((a, b) => this.distance(b.chunk.bounds) - this.distance(a.chunk.bounds));
-      for (const asset of farthest) {
-        if (this.geometryBytes <= LIMITS.cpuBytes) break;
-        if (this.pins.has(asset.chunk.id) || this.distance(asset.chunk.bounds) <= LIMITS.unload) continue;
-        for (const resident of asset.residents) this.remove(resident);
-        this.loaded.delete(asset.chunk.id); this.geometryBytes -= asset.buffer.byteLength; this.counts.packagesEvicted++;
-      }
     }
     this.lastOperations = this.counts.meshLoads + this.counts.meshDisposals - before;
   }
@@ -197,9 +246,10 @@ export class MiamiResidency {
     return required > 0;
   }
   getStats(): NetworkStreamingStats {
+    const demand = this.demand();
     let residentChunks = 0, totalMeshes = 0, residentMeshes = 0, totalColliders = 0, residentColliders = 0, pendingMeshes = 0;
     for (const chunk of this.manifest.chunks) {
-      const asset = this.loaded.get(chunk.id), wanted = this.distance(chunk.bounds) < LIMITS.preload; let visible = false;
+      const asset = this.loaded.get(chunk.id), wanted = demand.selected.has(chunk.id); let visible = false;
       for (let i = 0; i < chunk.meshes.length; i++) {
         const record = chunk.meshes[i], resident = asset?.residents[i]; totalMeshes++; if (record.collision) totalColliders++;
         if (resident?.physics) residentColliders++;
@@ -210,7 +260,8 @@ export class MiamiResidency {
     }
     return { ...this.counts, totalChunks: this.manifest.chunks.length, residentChunks, totalMeshes, residentMeshes, totalColliders, residentColliders,
       cpuGeometryBytes: this.geometryBytes, totalCpuGeometryBytes: this.manifest.totalBytes, pendingMeshes, activeAnchors: this.anchors.length, lastMeshOperations: this.lastOperations,
-      loadedPackages: this.loaded.size, totalPackages: this.manifest.chunks.length, pendingPackages: this.pending.size, failedPackages: this.failed.size, residentMaterials: this.materials.size, ready: this.collisionReady() };
+      loadedPackages: this.loaded.size, totalPackages: this.manifest.chunks.length, pendingPackages: this.pending.size, failedPackages: this.failed.size, residentMaterials: this.materials.size, ready: this.collisionReady(),
+      sourceBufferBudgetBytes: this.cpuBudget, requiredSourceBufferBytes: demand.requiredBytes };
   }
   dispose() {
     if (this.disposed) return;

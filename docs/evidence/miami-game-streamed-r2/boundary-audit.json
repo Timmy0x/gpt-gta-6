@@ -1,0 +1,32 @@
+{
+  "dataset": "brickell-public-common-frame-r2",
+  "polygons": 4,
+  "ringCounts": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "edges": 412,
+  "diskChecks": 20000,
+  "edgeChecks": 9888,
+  "sweepChecks": 2000,
+  "limitChecks": 4000,
+  "recoveryChecks": 200,
+  "bad": [],
+  "scope": "Actual R2 public dry coverage, independent full-edge point/disk/distance oracle, seeded random paths, boundary approach and recovery; no native physics/browser claims",
+  "files": [
+    {
+      "path": "../miami-dry-boundary-r2-source/src/world/PolygonGroundCoverage.ts",
+      "sha256": "5bb588eade367baaf0efb6e6aa4a25fcd714a62b93be80756b4a5ab623d2480e"
+    },
+    {
+      "path": "../miami-dry-boundary-r2-source/src/world/WorldBoundary.ts",
+      "sha256": "f1035cccb66f3a876ad062f0a42b9b01121e5a3923aa3ea799840749deabcd55"
+    },
+    {
+      "path": "../miami-common-frame-r2-source/output/dataset.json",
+      "sha256": "9aa72ecab7365e3b760708e837c07ec341db54e3d407566b37caa70d45669d3e"
+    }
+  ]
+}

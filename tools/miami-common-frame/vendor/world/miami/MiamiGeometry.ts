@@ -40,9 +40,9 @@ export function miamiPolygonGeometry(polygons: MiamiPolygon[], top: MiamiHeight,
         const longest = Math.max(...lengths);
         const heights = typeof top === 'function' ? triangle.map(index => at(top, points[index])) : undefined;
         const residual = heights ? Math.max(...triangle.map((a, i) => { const b = triangle[(i + 1) % 3]; return Math.abs(at(top, [(points[a][0] + points[b][0]) / 2, (points[a][1] + points[b][1]) / 2]) - (heights[i] + heights[(i + 1) % 3]) / 2); })) : 0;
-        // Refine abrupt survey slopes beyond the coarse 4 m spacing. The
-        // 0.75 m floor tracks the source 1 m grid without fabricating detail.
-        if (longest <= limit && (residual <= .05 || longest <= .75 ** 2)) { triangles.push(...triangle); continue; }
+        // Refine the retained bilinear raster surface, including sharp slopes.
+        // Finer triangles reduce interpolation error; they add no source detail.
+        if (longest <= limit && (residual <= .025 || longest <= .5 ** 2)) { triangles.push(...triangle); continue; }
         const edge = lengths.indexOf(longest), a = triangle[edge], b = triangle[(edge + 1) % 3], c = triangle[(edge + 2) % 3], key = a < b ? a + '/' + b : b + '/' + a;
         let middle = middles.get(key);
         if (middle === undefined) { middle = points.length; points.push([(points[a][0] + points[b][0]) / 2, (points[a][1] + points[b][1]) / 2]); middles.set(key, middle); }
@@ -71,7 +71,7 @@ export function miamiPolygonGeometry(polygons: MiamiPolygon[], top: MiamiHeight,
       const testNormals: number[] = []; VertexData.ComputeNormals(local, face, testNormals);
       const up = testNormals.filter((_, i) => i % 3 === 1).reduce((sum, n) => sum + n, 0) > 0;
       if (up !== upward) for (let i = 0; i < face.length; i += 3) [face[i + 1], face[i + 2]] = [face[i + 2], face[i + 1]];
-      positions.push(...local); indices.push(...face.map(index => index + offset));
+      for (const value of local) positions.push(value); for (const index of face) indices.push(index + offset);
     };
     appendFace(top, true);
     if (bottom === undefined) continue;

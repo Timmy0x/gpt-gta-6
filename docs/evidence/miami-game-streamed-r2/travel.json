@@ -1,0 +1,725 @@
+{
+  "sourceHashes": {
+    "src/world/miami/MiamiWorld.ts": "ed3a9e49648d4930491fc27f44a8d53d5c8700f42ba8a0c2d32bd34bae741321",
+    "src/world/miami/MiamiResidency.ts": "91ca2380a843716f73770d8b257ef774b5f9d77f0024368cfa81c3dab1e8d4dc",
+    "src/gameplay/TravelDestination.ts": "961a6e1e85943a9bd618b192143b417863e861deec68d529904dd1a44adaf83b",
+    "public/world/miami/dataset.json": "9aa72ecab7365e3b760708e837c07ec341db54e3d407566b37caa70d45669d3e",
+    "public/world/miami/packages.json": "b666a6a63113636ea131ea42b3366f63030eff47bf4be626a4c1a54f14e645c4"
+  },
+  "namedDestinations": 34,
+  "landings": [
+    {
+      "id": "brickell-se8:Brickell Avenue · SE 8th Street",
+      "kind": "named",
+      "requested": [
+        6.7379608154296875,
+        15.636405944824219
+      ],
+      "destination": [
+        6.7379608154296875,
+        -21.57852798461914,
+        15.636405944824219
+      ],
+      "movedM": 0,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.51852798461914,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-1:S MIAMI AVE",
+      "kind": "named",
+      "requested": [
+        -262.13131966955245,
+        23.7221722974556
+      ],
+      "destination": [
+        -262.1313171386719,
+        -22.854912338256835,
+        23.72216796875
+      ],
+      "movedM": 0.00000501428446317977,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.794912338256836,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-2:SW 2ND AVE",
+      "kind": "named",
+      "requested": [
+        -674.3085146626148,
+        9.146279695948804
+      ],
+      "destination": [
+        -674.3085327148438,
+        -23.296446380615233,
+        9.146278381347656
+      ],
+      "movedM": 0.000018100031652488494,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.236446380615234,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-3:SW 1ST CT",
+      "kind": "named",
+      "requested": [
+        -503.04750679259115,
+        15.733697101922122
+      ],
+      "destination": [
+        -503.0475158691406,
+        -22.45392852783203,
+        15.733695983886719
+      ],
+      "movedM": 0.000009145149180226269,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.39392852783203,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-4:SW 9TH ST",
+      "kind": "named",
+      "requested": [
+        -258.92027884816275,
+        -83.11989849354197
+      ],
+      "destination": [
+        -258.9202880859375,
+        -23.53383689880371,
+        -83.1198959350586
+      ],
+      "movedM": 0.000009585526561666418,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.47383689880371,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-5:SW 1ST AVE",
+      "kind": "named",
+      "requested": [
+        -434.459271445077,
+        151.36861815267855
+      ],
+      "destination": [
+        -434.4592590332031,
+        -23.579947052001952,
+        151.36862182617188
+      ],
+      "movedM": 0.000012944078405767198,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.51994514465332,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-6:SE 14TH ST",
+      "kind": "named",
+      "requested": [
+        -125.08950192579564,
+        -653.327266473344
+      ],
+      "destination": [
+        -125.0895004272461,
+        -24.03798156738281,
+        -653.3272705078125
+      ],
+      "movedM": 0.000004303787475207887,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.977981567382812,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-7:SE 9TH ST",
+      "kind": "named",
+      "requested": [
+        -155.40770304213373,
+        -80.77422059295553
+      ],
+      "destination": [
+        -155.40769958496094,
+        -23.81955581665039,
+        -80.77422332763672
+      ],
+      "movedM": 0.000004408006912574097,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.75955581665039,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-8:SE 1ST AVE",
+      "kind": "named",
+      "requested": [
+        -129.70019458412187,
+        26.612341660122112
+      ],
+      "destination": [
+        -129.7001953125,
+        -23.14803367614746,
+        26.612342834472656
+      ],
+      "movedM": 0.0000013818950373197803,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.08803367614746,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-9:SW 8TH ST",
+      "kind": "named",
+      "requested": [
+        -262.13131966955245,
+        23.7221722974556
+      ],
+      "destination": [
+        -262.1313171386719,
+        -22.854912338256835,
+        23.72216796875
+      ],
+      "movedM": 0.00000501428446317977,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.794912338256836,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-10:SE 12TH ST",
+      "kind": "named",
+      "requested": [
+        -103.52589873371242,
+        -436.11616709697194
+      ],
+      "destination": [
+        -103.5259017944336,
+        -23.949083862304686,
+        -436.1161804199219
+      ],
+      "movedM": 0.00001367000399326318,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.889083862304688,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-11:BRICKELL BAY DR",
+      "kind": "named",
+      "requested": [
+        123.37933065031434,
+        -32.45146804854838
+      ],
+      "destination": [
+        123.37933349609375,
+        -23.42669921875,
+        -32.45146942138672
+      ],
+      "movedM": 0.000003159611611731278,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.36669921875,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-12:SW 11TH ST",
+      "kind": "named",
+      "requested": [
+        -251.59068748858675,
+        -297.9526476168998
+      ],
+      "destination": [
+        -251.59068298339844,
+        -22.409084854125975,
+        -297.95263671875
+      ],
+      "movedM": 0.00001179264139354093,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.349084854125977,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-13:SE 13TH ST",
+      "kind": "named",
+      "requested": [
+        -118.42279231129262,
+        -501.25160519811976
+      ],
+      "destination": [
+        -118.42279052734375,
+        -24.198261795043944,
+        -501.2516174316406
+      ],
+      "movedM": 0.00001236290848843109,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -25.138261795043945,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-14:BRICKELL AVE",
+      "kind": "named",
+      "requested": [
+        -2.252668067788762,
+        -2.788747025653027
+      ],
+      "destination": [
+        -2.2526702880859375,
+        -21.609037933349608,
+        -2.7887496948242188
+      ],
+      "movedM": 0.0000034719150907698145,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.54903793334961,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-15:SW 15TH RD",
+      "kind": "named",
+      "requested": [
+        -580.4319857152599,
+        -676.7321476537164
+      ],
+      "destination": [
+        -580.4320068359375,
+        -20.341837463378905,
+        -676.732177734375
+      ],
+      "movedM": 0.000036754986645182324,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -21.281837463378906,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-16:SW 6TH ST",
+      "kind": "named",
+      "requested": [
+        -318.95432462763364,
+        233.96604761790238
+      ],
+      "destination": [
+        -318.9543151855469,
+        -23.59350257873535,
+        233.96604919433594
+      ],
+      "movedM": 0.000009572781478380982,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.53350067138672,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-17:SW 7TH ST",
+      "kind": "named",
+      "requested": [
+        -265.7286528170123,
+        129.709429935286
+      ],
+      "destination": [
+        -265.7286376953125,
+        -22.954706726074217,
+        129.7094268798828
+      ],
+      "movedM": 0.000015427290533923244,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.89470672607422,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-18:SW 5TH ST",
+      "kind": "named",
+      "requested": [
+        -784.4299765851665,
+        325.5669276109597
+      ],
+      "destination": [
+        -784.4299926757812,
+        -23.074965057373046,
+        325.5669250488281
+      ],
+      "movedM": 0.000016293323807098893,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.014965057373047,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-19:SE 7TH ST",
+      "kind": "named",
+      "requested": [
+        20.80673529938189,
+        94.52494428553958
+      ],
+      "destination": [
+        20.806732177734375,
+        -21.84487205505371,
+        94.52494049072266
+      ],
+      "movedM": 0.000004913788626778436,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.78487205505371,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-20:SE 8TH ST",
+      "kind": "named",
+      "requested": [
+        -2.252668067788762,
+        -2.788747025653027
+      ],
+      "destination": [
+        -2.2526702880859375,
+        -21.609037933349608,
+        -2.7887496948242188
+      ],
+      "movedM": 0.0000034719150907698145,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.54903793334961,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-21:BRICKELL KEY DR",
+      "kind": "named",
+      "requested": [
+        123.37933065031434,
+        -32.45146804854838
+      ],
+      "destination": [
+        123.37933349609375,
+        -23.42669921875,
+        -32.45146942138672
+      ],
+      "movedM": 0.000003159611611731278,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.36669921875,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-22:SE 12TH TER",
+      "kind": "named",
+      "requested": [
+        -64.38389795345992,
+        -499.068836564655
+      ],
+      "destination": [
+        -64.38389587402344,
+        -23.694832382202147,
+        -499.06884765625
+      ],
+      "movedM": 0.000011284836552972467,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.63483238220215,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-23:SE 5TH ST",
+      "kind": "named",
+      "requested": [
+        59.40977782762912,
+        248.56077198822334
+      ],
+      "destination": [
+        59.4097785949707,
+        -21.423225936889647,
+        248.56077575683594
+      ],
+      "movedM": 0.000003845939942027346,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.36322784423828,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-24:SE 10TH ST",
+      "kind": "named",
+      "requested": [
+        -53.86118483674275,
+        -223.11802155772457
+      ],
+      "destination": [
+        -53.861183166503906,
+        -23.044889984130858,
+        -223.11802673339844
+      ],
+      "movedM": 0.000005438501423524908,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.98488998413086,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-25:SE 11TH ST",
+      "kind": "named",
+      "requested": [
+        -207.1419484181269,
+        -296.5624578142932
+      ],
+      "destination": [
+        -207.14195251464844,
+        -22.697416839599608,
+        -296.5624694824219
+      ],
+      "movedM": 0.000012366354146970711,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.63741683959961,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-26:SW 14TH ST",
+      "kind": "named",
+      "requested": [
+        -283.8793123308082,
+        -620.2715508329253
+      ],
+      "destination": [
+        -283.8793029785156,
+        -21.96387725830078,
+        -620.2715454101562
+      ],
+      "movedM": 0.000010810726185583065,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.90387725830078,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-27:SW 2ND CT",
+      "kind": "named",
+      "requested": [
+        -743.455189262238,
+        -573.3379891395465
+      ],
+      "destination": [
+        -743.4552001953125,
+        -20.341789779663085,
+        -573.3380126953125
+      ],
+      "movedM": 0.00002596933247822576,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -21.281789779663086,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-28:SW 12TH ST",
+      "kind": "named",
+      "requested": [
+        -244.71606678200823,
+        -406.11803396282056
+      ],
+      "destination": [
+        -244.716064453125,
+        -22.10206085205078,
+        -406.1180419921875
+      ],
+      "movedM": 0.000008360288901457744,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -23.04206085205078,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-29:SW 10TH ST",
+      "kind": "named",
+      "requested": [
+        -254.12316670570243,
+        -189.18111489323795
+      ],
+      "destination": [
+        -254.1231689453125,
+        -23.357517776489257,
+        -189.18112182617188
+      ],
+      "movedM": 0.000007285700111513134,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.297517776489258,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-30:SW MIAMI AVENUE RD",
+      "kind": "named",
+      "requested": [
+        -274.27623624338287,
+        294.8175501965081
+      ],
+      "destination": [
+        -274.2762451171875,
+        -23.652189788818358,
+        294.8175354003906
+      ],
+      "movedM": 0.000017253101181391755,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.59218978881836,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-31:SE 6TH ST",
+      "kind": "named",
+      "requested": [
+        45.721724031452055,
+        195.4996011072041
+      ],
+      "destination": [
+        45.72172546386719,
+        -21.966993865966796,
+        195.49960327148438
+      ],
+      "movedM": 0.0000025953655390815093,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.906993865966797,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-32:S MIAMI PL",
+      "kind": "named",
+      "requested": [
+        -392.39603420805014,
+        163.24082810043691
+      ],
+      "destination": [
+        -392.3960266113281,
+        -23.783363876342772,
+        163.24082946777344
+      ],
+      "movedM": 0.000007718794888269186,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -24.723363876342773,
+      "footSupportRays": 5
+    },
+    {
+      "id": "miami-street-33:SW 13TH ST",
+      "kind": "named",
+      "requested": [
+        -257.0276013910257,
+        -509.95255942859814
+      ],
+      "destination": [
+        -257.027587890625,
+        -21.845104751586913,
+        -509.9525451660156
+      ],
+      "movedM": 0.000019638790167834884,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.785104751586914,
+      "footSupportRays": 5
+    },
+    {
+      "id": "south-west",
+      "kind": "inset-edge",
+      "requested": [
+        -829.6444370405742,
+        -728.0471574141417
+      ],
+      "destination": [
+        -829.6444091796875,
+        2.72515625,
+        -728.0471801757812
+      ],
+      "movedM": 0.00003597667637580126,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": 1.78515625,
+      "footSupportRays": 3
+    },
+    {
+      "id": "west",
+      "kind": "inset-edge",
+      "requested": [
+        -829.6444370405742,
+        -132.92304962736586
+      ],
+      "destination": [
+        -829.6444091796875,
+        -20.6917138671875,
+        -132.9230499267578
+      ],
+      "movedM": 0.00002786249526973304,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -21.631717681884766,
+      "footSupportRays": 5
+    },
+    {
+      "id": "south",
+      "kind": "inset-edge",
+      "requested": [
+        -230.72693536091805,
+        -728.0471574141417
+      ],
+      "destination": [
+        -230.7269287109375,
+        -21.946383056640624,
+        -728.0471801757812
+      ],
+      "movedM": 0.000023713170965343206,
+      "ready": true,
+      "swimming": false,
+      "nativeGroundM": -22.886404037475586,
+      "footSupportRays": 5
+    }
+  ],
+  "rejectedEdges": 8,
+  "rejectedWater": 103,
+  "trafficChecks": 9727,
+  "wetTraffic": [],
+  "failures": [],
+  "stats": {
+    "requests": 236,
+    "fetchedBytes": 1068760668,
+    "retries": 0,
+    "packagesLoaded": 235,
+    "packagesEvicted": 215,
+    "meshLoads": 1557,
+    "meshDisposals": 1506,
+    "colliderLoads": 1557,
+    "colliderDisposals": 1506,
+    "lastError": "",
+    "totalChunks": 51,
+    "residentChunks": 7,
+    "totalMeshes": 437,
+    "residentMeshes": 51,
+    "totalColliders": 437,
+    "residentColliders": 51,
+    "cpuGeometryBytes": 90056748,
+    "totalCpuGeometryBytes": 211968600,
+    "pendingMeshes": 0,
+    "activeAnchors": 0,
+    "lastMeshOperations": 72,
+    "loadedPackages": 20,
+    "totalPackages": 51,
+    "pendingPackages": 1,
+    "failedPackages": 0,
+    "residentMaterials": 0,
+    "ready": true,
+    "sourceBufferBudgetBytes": 100663296,
+    "requiredSourceBufferBytes": 34660116,
+    "streetObjects": {
+      "objects": 0,
+      "residentBodies": 0,
+      "fallen": 0,
+      "colliderLoads": 0,
+      "colliderDisposals": 0,
+      "batches": 0,
+      "extractedMeshes": 0,
+      "extractedGeometryBytes": 0,
+      "indexBackupBytes": 0
+    }
+  }
+}

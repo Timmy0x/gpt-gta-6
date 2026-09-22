@@ -1,0 +1,72 @@
+{
+  "checkpoint": "miami-game-streamed-r2",
+  "date": "2026-09-22",
+  "baseCommit": "46fb8a832596d3e3c53833ed28b782173d570ea5",
+  "scope": "Expanded public collision and navigation integrated with live Google/Cesium visuals in the normal Babylon game. Full goal remains incomplete.",
+  "build": {
+    "passed": true,
+    "entry": "index-D5puVY3k.js",
+    "sha256": "010d590ac2d3bff370c6e2bdbd5f1f7484deaa0c19474061ade017efbb893659",
+    "warning": "Main bundle exceeds 500 kB; performance target not established."
+  },
+  "native": {
+    "rootTests": 331,
+    "passed": 331,
+    "failed": 0,
+    "finalTravelRerunPassed": true,
+    "namedDestinations": 34,
+    "dryLandings": 37,
+    "rejectedOutsidePins": 8,
+    "rejectedWaterPins": 103,
+    "dryTrafficLinkSamples": 9727,
+    "compilerTests": 5
+  },
+  "independentReview": {
+    "runtimeClosure": "51 exact packages, 211968600 bytes; no missing/orphan chunks; all hashes and sizes match",
+    "compilerClosure": "39 retained source/input files and original I3S source archive hash-match",
+    "credentials": "No JWT, Google/GitHub/AWS credential or private-key patterns found in 1027 inspected text files; no .env files",
+    "removedFiles": "Seven replaced R1 collision chunks only",
+    "boundary": "Independent full-edge/disk oracle, sweep and recovery checks retained",
+    "navigation": "1050 of1116 nontrivial destination pairs routable;66 remain genuinely disconnected;94 recovered and0 lost"
+  },
+  "browser": {
+    "method": "Normal live UI via CUA, no hidden game-state mutation. Native provider screenshots displayed in conversation only; no proprietary exports.",
+    "localOrigin": "http://127.0.0.1:4393/",
+    "webgpu": {
+      "entry": true,
+      "map": true,
+      "travelToSW15thRoad": true,
+      "laterObservation": "Loading streets was visible after the long-lived session. Chromium emitted two UnknownError diagnostics at10:00:17 and10:00:21 UTC; cause unresolved. Not sustained-stability acceptance.",
+      "instantaneousFpsSample": 10
+    },
+    "webgl2": {
+      "finalBuild": true,
+      "entry": true,
+      "mapHeading": "Miami",
+      "destinationButtons": 34,
+      "wholeMap": true,
+      "travelToSW5thStreet": true,
+      "travelToSW15thRoad": true,
+      "loadingClearedAtBothArrivals": true,
+      "finalProviderStatus": "Live Brickell",
+      "instantaneousFpsSamples": [
+        69,
+        76
+      ],
+      "newConsoleErrorsDuringCheck": 0,
+      "consoleScope": "The same tab retained two earlier WebGPU diagnostics; no later timestamped errors observed."
+    },
+    "performanceScope": "HUD samples only at narrow app viewport; not frame-time benchmarks, 1080p acceptance or sustained memory tests.",
+    "credentialHandling": "Existing GitHub SSO restored Cesium session; dedicated existing asset token transferred in browser memory then temporary variable cleared. No new permissions, purchase, vendor contact, repository credential or persistent token storage."
+  },
+  "knownGaps": [
+    "Coverage is approximately1.2km square in Brickell, not all Miami or exact building/street parity.",
+    "Photogrammetry detail is blurred and irregular. At SW5thStreet captured foliage/surfaces visibly obstructed the camera and character; SW15thRoad also showed distorted captured geometry.",
+    "Public collision is independent and older than imagery; visible props/trees and modern geometry may lack matching collision. Survey/provider alignment is not proved.",
+    "Provisional vertical datum conversion and differing source dates can produce metre-level correspondence errors.",
+    "Miami waterbeds, swimming, boat use, unsupported bridge decks and aircraft movement across the dry boundary remain unfinished.",
+    "Population is concentrated near initial spawn; outer streets need local traffic and pedestrians.",
+    "Police aircraft retain absolute-height assumptions requiring a follow-up fix for negative-local-height Miami.",
+    "No complete gameplay, photorealism, performance or sustained stability acceptance."
+  ]
+}

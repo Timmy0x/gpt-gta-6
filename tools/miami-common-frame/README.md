@@ -1,47 +1,44 @@
-# Brickell public collision data in the common renderer frame
+# Brickell public collision expansion R2
 
-This is a bounded, actual public-data collision package for the Brickell Avenue / SE 8th Street area. It does not use streamed provider geometry. Surface coverage is approximately 361 × 355 metres, centred at latitude 25.7662, longitude −80.1907. Twenty complete selected County source-building volumes are included; their bounds can extend beyond the surface AOI. Gameplay navigation/spawning must stay on the actual dry surface coverage and use normal obstruction checks.
+This compiler retains the complete available public source area around the first playable Brickell Avenue / SE 8th Street junction. It uses source geometry, terrain and mapped roads; it does not extract or author collision from streamed Google imagery.
 
-The output is provisional: source EPSG:4326 realization/epoch is unresolved. GEOID18 is evaluated at the numeric source coordinates, and NAVD88 H + geoid N is used as an approximate WGS84-formula ellipsoid height. The input is **not** relabelled NAD83(2011), and the missing NAD83↔WGS84 realization/epoch step is **not** called exact. Metre-scale, potentially 2m-level mismatch remains; that is not a statistical bound. Survey/source age and physical correspondence are separate uncertainties.
+The original acquisition rectangle is longitude −80.199 to −80.187, latitude 25.7596 to 25.7704. The surface rectangle is inset one retained raster step (about one metre) to keep the numerical surface-query derivatives inside actual bilinear pixel-centre coverage. Its common-frame bounds are approximately x −831.654 to 370.201, z −730.057 to 464.211: **1,202 × 1,194 metres**, without scale compression. The same origin, latitude 25.7662 / longitude −80.1907 / ellipsoid height 0, remains unchanged. Output world ID is `brickell-public-common-frame-r2`; save compatibility requires an explicit runtime migration for the unchanged frame.
 
-## Runtime handoff
+## Sources and coverage
 
-Copy `output/` to the game's selected public world directory. `packages.json` uses the existing `MiamiPackages` layout: Float32 local positions/normals/UVs, Uint32 indices, exact binary hashes, per-mesh origin and residency bounds. Its additional frame/provenance/exclusion fields should remain available. Every mesh has `render:false`, `collision:true`; use the streamed visual module for city appearance. The package has 7 chunks, 48 meshes, 630,610 triangles and 21,368,568 mesh bytes. There are no waterbed colliders.
+- All **262** County 2015 I3S source-building features intersecting the original acquisition rectangle are retained whole, including parts extending beyond it: 368,152 original building triangles. Geographic input is decoded directly from original request bytes, not inverted from an older quantized local mesh. The existing archive SHA-256 is `c579f8eb6ec5061418812a354de63c4d5504c4613a7aeb14c872a0163b9be73d`; preparation verifies the archive and all 82 required original request payloads. The archive itself is already retained in the repository and is not duplicated here.
+- Terrain uses 1,296,000 USGS one-metre-source raster samples resampled to the recorded WGS84 grid. 33,408 cells are explicitly marked older coastal fallback; the remainder use Miami-Dade D23. Bilinear interpolation and adaptive triangulation are numerical surface approximations, not additional surveyed detail.
+- **130 clipped road pieces**, approximately **15.1 km of centreline**, retain City street geometry and the frozen, documented R5 OSM direction/width/profile joins. Road widths, curbs and paving offsets remain authored assumptions where the source lacks surveyed edges.
+- Mapped dry land covers approximately **1.205 km²**, including one contiguous polygon of 1.129 km² and three smaller disconnected pieces. Twelve mapped water features cover approximately 0.230 km². Water and every unmeasured waterbed remain non-supporting. Four source road records crossing water without a verified bridge profile remain excluded; no deck is fabricated.
+- The existing lane builder produces 1,871 lane nodes, 32 terminal nodes, and nine weak components; 1,799 nodes belong to the largest component. This is a source-backed street network, not proof that every turn, traffic rule or pavement edge is current.
+- 223 joined County footprint parts correspond to 200 of the 262 retained source-building colliders. 62 colliders have no joined footprint, and 390 other County input footprint parts lack a joined 3D source feature. The differing source catalogues and acquisition dates do **not** establish current building-by-building completeness. Do not substitute arbitrary-height footprint extrusions to make this count appear complete.
 
-`dataset.json` shares the package world ID, contains common-frame bounds, 13 clipped source-road pieces, 12 joined footprint parts, dry land and the AOI's clipped water list (empty for this first land AOI). All 20 source-building colliders remain in the package even where the County footprint join is unavailable. `locations` are labelled source/query locations, not automatically clear or safe spawns. Four unsupported road/deck records are retained in the exclusion ledger. Original whole-AOI water IDs are retained there too.
+The compiled frame remains explicitly provisional. Source EPSG:4326 realization/epoch is unresolved; NAVD88 H + NOAA GEOID18 N is used as an approximate ellipsoid height in the WGS84-formula local frame. This is not an exact NAD83-to-WGS84 realization conversion. Metre-scale, potentially 2m-level source/provider mismatch remains, as do source age and physical correspondence uncertainties. Original NOAA point samples, public-domain attribution, geoid source hash, source dates and County provenance remain retained.
 
-Runtime source files are `src/CommonFrame.ts`, `src/SourceCoordinates.ts`, `src/PublicCollisionQueries.ts`. The latter two refer to the pinned legacy projection and polygon containment helpers under `vendor/world/miami`; when integrating into the existing game, those imports may target the identical existing helpers.
-
-```ts
-const queries = await loadPublicCollisionQueries('/world/miami/');
-queries.floorHeightAt(x, z); // local Up, or null outside retained dry ground
-queries.surfaceAt(x, z); // local point, geodetic coordinates, NAVD88, source-mask flag
-queries.hasSourceGround(x, z); // coverage only, not collision clearance/walkability
-queries.frame.navd88ToLocal(longitude, latitude, navd88Metres);
-queries.frame.localToGeodetic([x, y, z]);
-queries.frame.localToProvisionalNavd88([x, y, z]);
-```
-
-The loader reads `runtime-query.json`, `terrain/heights.f32` and `terrain/source-mask.u8`; `terrain/grid.json` is also supplied for inspection. If these arrays are already loaded, call `createPublicCollisionQueries(config, heights, mask)` directly. Floor queries iteratively solve the transformed DEM surface's x/z coordinates; they do not treat NAVD88 as local Up. There is no bridge, water or out-of-coverage fallback. Road/sidewalk top surfaces have the pinned authored surface/curb offsets, so final support/clearance must use native collision checks. Preserve a frame version in saves and transform all dynamic spawn/navigation/map locations coherently.
-
-## Source and arithmetic
-
-- Terrain is the retained USGS D23/older-fallback NAVD88 raster, with source-mask values preserved. Roads use the frozen R5 mapped City centerlines, documented widths, mapped dry clipping, 2 m adaptive surface subdivision and authored curb offsets.
-- Selected I3S inputs are decoded directly from the original verified node geometry bytes: Float32 longitude/latitude/NAVD88 offsets plus node MBS, retained as Float64 geographic input. No inverse of the older quantized building export is used. Source object/UNIQUEID, node, 2015 date and original archive/request hashes are preserved. There were no zero-area triangle removals in the selected set.
-- GEOID18's 6×6 cutout contains exact original Float32 point samples without resampling; it preserves the public-domain NOAA grid SHA, source indices, CRS and license. Bilinear sampling rejects missing coverage. Full ECEF coordinates and origin subtraction use doubles, with x=East, y=Up, z=North. Only final chunk-relative buffers are Float32. Maximum measured packing error is 10.43 micrometres.
-- Original source NAVD88 vertex heights are retained in a packed Float32 sidecar; original building geographic inputs remain Float64 under `data/`. Normals are recomputed from transformed geometry while existing hard-edge vertex splits are preserved. Legacy ground/road horizontal positions are inverted with a checked Newton solve before reprojecting.
-
-## Reproduce and verify
-
-`package.json` and the pruned lockfile pin the compiler/runtime dependencies. This local review used the existing matching installed dependency tree through a development symlink; the symlink is not part of the freeze.
+## Reproduction
 
 ```sh
 npm ci --ignore-scripts
 npm run compile
 npm run typecheck
 npm test
+npm run audit
 ```
 
-`data/` contains the prepared public inputs, so compilation/tests need no network, geodesy installation or provider access. The optional original-source preparation script requires the retained R5 source directory and official grid; the independent PROJ oracle script requires the existing pyproj runtime. The retained oracle can be tested directly without either Python runtime.
+Prepared `data/` is sufficient for compilation and native testing, with no network or proprietary access. To independently rebuild only the geographic building input from the already retained public archive:
 
-Independent full-PROJ arithmetic agrees on 23 actual source points to 4.66e-10 m under the same explicitly provisional policy. Native Havok tests load every static mesh, check actual ground and road rays, exposed building faces, and a resting dynamic body at the source junction. `output/native-result.json` contains the measured counts and errors. These arithmetic/physics checks do not establish exact provider/public-source surface correspondence or current architectural fidelity.
+```sh
+python3 scripts/prepare-buildings.py /path/to/repository/data/world/miami
+```
+
+That folder must contain `building-envelopes.json`, `i3s/manifest.json`, and `i3s/source-nodes.tar.gz`. The prior script that depended on an implicit task-local R5 directory is replaced by this explicit-input command. The prepared terrain, GIS dataset, geoid cutout and metadata remain the pinned R1 inputs; their provenance is recorded in `data/preparation.json`. The retained 23-point PROJ oracle validates unchanged frame arithmetic under the same provisional datum policy; it does not validate modern surface correspondence.
+
+## Runtime handoff and evidence
+
+The compiled package contains 51 chunks, 437 mesh records, 6,335,492 total triangles and 211,968,600 bytes of mesh data. Native samples measured maximum ground interpolation error 30.27mm, road error 18.91mm and resting-body error 0.483mm; these are sampled mesh-versus-retained-raster checks, not survey accuracy.
+
+Copy only `output/packages.json`, `dataset.json`, `runtime-query.json`, `terrain/`, and chunks referenced by the package manifest into the game's world directory. All mesh records are `render:false`, `collision:true`. `coordinates.json`, `native-result.json` and `expansion-audit.json` are evidence/authoring records, not required startup payloads. No credentials or streamed provider content are included.
+
+`npm test` exercises the actual generated public meshes in native Havok, source terrain and road height agreement, selected exposed building faces, missing coverage, source-frame arithmetic and a dynamic resting body. Building checks use a temporary single-body collision membership bit; they do not wrap a bit per building past 32 bits. Not every source building has both an upward roof face and a near-vertical wall in the selected normal categories; native evidence lists actual checked groups rather than pretending 524 categories exist.
+
+`npm run audit` writes actual source coverage, road connectivity, source hashes and sampled collision/preload byte envelopes to `output/expansion-audit.json`. The runtime's old 420m prefetch and 820m eviction exclusion can exceed the nominal 96MiB CPU geometry budget on this larger area. Parent integration must prioritize required/anchored collision and bound optional prefetch; the audit's byte totals exclude JS, physics and GPU duplication. Real play, streaming boundaries, shoreline behavior and rendering performance must be verified in the integrated game separately.

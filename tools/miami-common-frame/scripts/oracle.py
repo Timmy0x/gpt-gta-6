@@ -1,9 +1,10 @@
 """Independent official PROJ arithmetic oracle, under the same explicitly provisional policy."""
-import json,math
+import json,math,sys,hashlib
 from pathlib import Path
 from pyproj import Transformer
 p=Path(__file__).resolve().parents[1]
-grid=p.parent/'miami-height-alignment-r1/us_noaa_g2018u0.tif'
+grid=Path(sys.argv[1]).resolve()
+assert hashlib.sha256(grid.read_bytes()).hexdigest()=='fa9a407ac7ee3f5a3694008e4bcd09ce9cc250452f0c3b11700a4960340abce2'
 vertical=Transformer.from_pipeline(f'+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids={grid} +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg')
 local=Transformer.from_pipeline('+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=cart +ellps=WGS84 +step +proj=topocentric +ellps=WGS84 +lat_0=25.7662 +lon_0=-80.1907 +h_0=0')
 data=json.loads((p/'output/coordinates.json').read_text());rows=[];maxerror=0

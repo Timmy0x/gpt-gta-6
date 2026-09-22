@@ -25,6 +25,7 @@ import { prepareEnvironmentLighting } from "./core/EnvironmentLighting";
 import { Sky } from "./core/Sky";
 import { Input, type Action } from "./core/Input";
 import { Persistence } from "./core/Persistence";
+import { loadCompatibleWorldSave } from "./core/WorldSave";
 import { GameAudio } from "./core/Audio";
 import { distance } from "./core/math";
 import { StreamedMiamiVisuals } from "./world/miami/visuals/StreamedMiamiVisuals";
@@ -107,7 +108,7 @@ async function boot() {
   ui.loading("Loading street characters…");
   await prepareCivilianAssets(scene);
   const input = new Input(canvas);
-  const player = new Player(scene, shadows, input, world.spawn, new WorldBoundary({ bounds: world.bounds, floorHeight: (x,z)=>world.floorHeightAt(x,z), fallback:world.spawn }));
+  const player = new Player(scene, shadows, input, world.spawn, new WorldBoundary({ bounds: world.bounds, floorHeight: (x,z)=>world.floorHeightAt(x,z), fallback:world.spawn, supportedGround:world.supportedGround }));
   player.water = world.ocean;
   const vehicles = new VehicleSystem(ctx);
   const interpolation = new PhysicsInterpolation();
@@ -341,7 +342,7 @@ async function boot() {
     }
   }
   async function load() {
-    const current = Persistence.load(world.worldId), legacy = current ? null : Persistence.load();
+    const current = loadCompatibleWorldSave(world.worldId), legacy = current ? null : Persistence.load();
     const migrated = !current && !!legacy;
     const s = current ?? (legacy ? { ...legacy, worldId:world.worldId,
       player:{ x:world.spawn.x,y:world.spawn.y,z:world.spawn.z,postureHeight:1.8,character:legacy.player.character,health:100,armor:legacy.player.armor??50 },
@@ -535,8 +536,9 @@ async function boot() {
     if ((action === "route" || action === "route-point") && value) {
       const location = action === 'route-point' ? parseMapDestination(value,world.bounds) : world.locations.find((l) => l.id === value);
       if (location) {
-        navigation.set(location, player.position);
-        ui.toast(`Route set · ${location.name}`);
+        const routeStatus = navigation.set(location, player.position);
+        ui.toast(routeStatus === 'unavailable' ? 'No road route. Choose another point or use Travel.' : routeStatus === 'arrived' ? 'Already here.' : `Route set · ${location.name}`);
+        if (routeStatus === 'unavailable') return;
         ui.showPanel("");
         setPause(false);
       }
@@ -811,7 +813,7 @@ async function boot() {
       void canvas.requestPointerLock();
   });
   scene.onBeforePhysicsObservable.add(() => {
-    if (paused || !started || collisionHeld || sourcePanelOpen || loadingWorld) return;
+    if (paused || !started || collisionHeld || sourcePanelOpen || loadingWorld || visualHeld) return;
     const dt = 1 / 60;
     interpolation.beforeStep(vehicles.list.map((v) => v.root));
     simTime += dt;
@@ -874,7 +876,7 @@ async function boot() {
     const accumulator = (
       scene as unknown as { _physicsTimeAccumulator: number }
     )._physicsTimeAccumulator;
-    const alpha = paused || collisionHeld || sourcePanelOpen || loadingWorld
+    const alpha = paused || collisionHeld || sourcePanelOpen || loadingWorld || visualHeld
       ? 1
       : Math.max(0, Math.min(1, accumulator / physics.getSubTimeStep()));
     interpolation.render(alpha);
@@ -920,13 +922,13 @@ async function boot() {
       }
       if (input.take("creative")) ui.onAction("creative");
       if (input.take("map")) ui.onAction("map");
-      weaponWheel.update(input, dt, combat.handling.target, combat.inventory.magazines, combat.inventory.reserves, !!player.vehicle, !ui.panel && !paused && !player.transitioning && player.deadTimer <= 0 && recoveryTimer <= 0);
+      weaponWheel.update(input, dt, combat.handling.target, combat.inventory.magazines, combat.inventory.reserves, !!player.vehicle, !ui.panel && !paused && !collisionHeld && !sourcePanelOpen && !loadingWorld && !visualHeld && !player.transitioning && player.deadTimer <= 0 && recoveryTimer <= 0);
       player.weaponInputBlocked = weaponWheel.active;
       if (weaponWheel.active !== wheelWasActive) {
         wheelWasActive = weaponWheel.active;
         physics.setSubTimeStep(1000 / 60 / (simSpeed * (weaponWheel.active ? .12 : 1)));
       }
-      if (!ui.panel && !collisionHeld && !sourcePanelOpen && !weaponWheel.active && player.deadTimer <= 0 && recoveryTimer <= 0) {
+      if (!ui.panel && !paused && !collisionHeld && !sourcePanelOpen && !loadingWorld && !visualHeld && !weaponWheel.active && player.deadTimer <= 0 && recoveryTimer <= 0) {
         if (input.take("interact")) interact();
         if (input.take("switch")) player.switchCharacter();
         if (input.take("repair")) ui.onAction("repair");
@@ -1085,7 +1087,7 @@ async function boot() {
         activity,
         route: navigation.route,
         destination: navigation.destination
-          ? `${navigation.destination.name} · ${Math.round(navigation.remaining)} m`
+          ? `${navigation.destination.name} · ${navigation.status === 'unavailable' ? 'No road route' : `${Math.round(navigation.remaining)} m`}`
           : "",
         police: population.drivers
           .filter((d) => d.police)
