@@ -1,0 +1,66 @@
+{
+  "baseCommit": "88a8b2b20ba45dfaad4441a8c88a68e1907e1b3b",
+  "scope": "Police source-elevation fixes, public building sight-height fixes, local readable performance report. Camera/population work deliberately excluded from this first checkpoint.",
+  "tests": {
+    "nativeTotal": 352,
+    "nativePass": 352,
+    "fail": 0,
+    "independentSightAndReportPass": 4,
+    "productionBuild": "passed"
+  },
+  "productionEntry": {
+    "path": "assets/index-CKV3uET9.js",
+    "sha256": "76fad6224bbcdcc94a010428622780a3fa0f67a69260483a09c84e8f5637f7f1"
+  },
+  "browser": {
+    "url": "http://127.0.0.1:4393/?backend=webgl",
+    "engine": "WebGL2",
+    "quality": "high",
+    "resolution": [
+      1512,
+      812
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "reportedLogicalProcessors": 5,
+    "hardwareModel": "not established",
+    "providerConnection": "Live Brickell via existing dedicated asset-scoped Cesium token; memory only; variable cleared; account returned to My Assets",
+    "normalUI": [
+      "Enter free roam",
+      "Sandbox: Invulnerability and three-star wanted level",
+      "Pursuit followed by arrest and return; cash decreased 300",
+      "Pause: Export performance",
+      "Visible readonly Performance report textarea parses as schema1 JSON; Download JSON link present"
+    ],
+    "download": "Download events timed out in IAB and Chromium; standalone download completion is not verified. JSON is readable/copyable through the normal UI.",
+    "consoleErrors": "No errors or warnings on the earlier startup/export checks; not a broad zero-error session claim"
+  },
+  "observedSample": {
+    "capturedAt": "2026-09-29T18:31:26.737Z",
+    "frames": 1359,
+    "activeDurationMs": 38241.10000002384,
+    "medianFrameMs": 23.099999994039536,
+    "medianFps": 43.290043301213366,
+    "onePercentLowFps": 7.161491636597356,
+    "maxFrameMs": 227,
+    "framesOver33ms": 222,
+    "framesOver100ms": 29,
+    "jsHeapBytes": {
+      "used": 685508594,
+      "total": 1168346138,
+      "limit": 4395630592
+    },
+    "scene": {
+      "meshes": 2079,
+      "activeMeshes": 603,
+      "physicsBodies": 149
+    },
+    "conditions": "Short spawn/pursuit/arrest sample. Native suite running concurrently and second in-app WebGL preview open. Not the 30-minute 1080p performance gate; does not meet 60/30 project FPS targets."
+  },
+  "limitations": [
+    "Exact whole Miami/street/building/terrain parity incomplete.",
+    "Provider visual/public collision alignment remains provisional; all visible props do not yet have independent collision.",
+    "Tall-building aircraft avoidance, swimming/waterbeds and supported bridge decks remain unfinished.",
+    "Current two accepted civilian skins do not satisfy unique photorealistic diversity.",
+    "Camera/population next candidate still pending separate integration verification."
+  ]
+}

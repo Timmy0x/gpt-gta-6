@@ -33,6 +33,8 @@ export interface Obstacle {
   w: number;
   d: number;
   height: number;
+  /** Physical bottom elevation; legacy structural obstacles start at zero. */
+  baseY?: number;
   mesh?: AbstractMesh;
 }
 export interface WorldLocation {

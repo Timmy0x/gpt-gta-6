@@ -52,6 +52,7 @@ import { Navigation } from "./gameplay/Navigation";
 import { PhysicsInterpolation } from "./core/PhysicsInterpolation";
 import { Atmosphere } from "./core/Atmosphere";
 import { FrameHistory } from "./core/FrameHistory";
+import { summarizeFrames } from "./core/PerformanceReport";
 import { nearbyGarage, serviceAtGarage } from "./gameplay/Garage";
 const ui = new UI();
 async function boot() {
@@ -782,6 +783,27 @@ async function boot() {
         setPause(false);
         ui.toast(l.name);
       }
+    }
+    if (action === "performance-report") {
+      const rawFrames = frameTimes.latest();
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const report = {
+        schema: 1, capturedAt: new Date().toISOString(), worldId: world.worldId,
+        backend, quality, resolution: [engine.getRenderWidth(), engine.getRenderHeight()],
+        browser: navigator.userAgent, logicalProcessors: navigator.hardwareConcurrency,
+        scope: "Most recent 108000 unpaused rendered frames. Menus and travel/vehicle loading pauses excluded; unpaused collision/visual holds and raw stalls retained. This is a sample, not an acceptance verdict.",
+        metadataScope: "Settings, resolution, scene and memory values describe export time. Earlier frame samples may use other quality settings or viewport sizes.",
+        onePercentLowDefinition: "1000 divided by mean duration of the slowest ceil(frameCount * 0.01) frames",
+        frames: summarizeFrames(rawFrames), rawFrameMs: rawFrames,
+        jsHeapBytes: memory ? { used: memory.usedJSHeapSize, total: memory.totalJSHeapSize, limit: memory.jsHeapSizeLimit } : null,
+        memoryScope: "JS heap only when available. Public source buffers and visual resource estimates below exclude other allocations and are not measured VRAM or process memory.",
+        population: { pedestrians: population.pedestrians.length, drivers: population.drivers.length, police: population.policeStats },
+        scene: { meshes: scene.meshes.length, activeMeshes: scene.getActiveMeshes().length, physicsBodies: physics.getBodies().length },
+        collisionStreaming: world.getStreamingStats(), visualStreaming: visuals.snapshot(),
+      };
+      setPause(true);
+      ui.showPerformanceReport(JSON.stringify(report, null, 2));
+      return;
     }
     if (action === "quality") {
       quality = value!;

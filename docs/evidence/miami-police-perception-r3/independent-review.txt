@@ -1,0 +1,35 @@
+TAP version 13
+# Subtest: performance summary keeps a real stall in its duration and slowest-one-percent result
+ok 1 - performance summary keeps a real stall in its duration and slowest-one-percent result
+  ---
+  duration_ms: 1.029834
+  type: 'test'
+  ...
+# Subtest: no measured frames produces unavailable metrics instead of fictional zero or infinite FPS
+ok 2 - no measured frames produces unavailable metrics instead of fictional zero or infinite FPS
+  ---
+  duration_ms: 0.140833
+  type: 'test'
+  ...
+# Subtest: building sight occlusion is invariant under negative and elevated world frames
+ok 3 - building sight occlusion is invariant under negative and elevated world frames
+  ---
+  duration_ms: 0.950208
+  type: 'test'
+  ...
+# BJS - [14:26:04]: Babylon.js v9.25.0 - Null engine
+# Subtest: translated building visibility agrees with real Havok ray obstruction
+ok 4 - translated building visibility agrees with real Havok ray obstruction
+  ---
+  duration_ms: 28.880917
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2300.192667

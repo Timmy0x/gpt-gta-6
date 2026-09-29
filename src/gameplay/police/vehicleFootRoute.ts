@@ -4,11 +4,23 @@ import type { Vehicle } from "../../vehicles/VehicleSystem";
 import { footRoute } from "./rules";
 
 /** Local visibility corners let a dismounted responder walk around physical traffic. */
-export function vehicleFootRoute(start: Point2, goal: Point2, roads: RoadNode[], obstacles: Obstacle[], vehicles: readonly Vehicle[]): Point2[] {
+export function vehicleFootRoute(start: Point2 & { y?: number }, goal: Point2, roads: RoadNode[], obstacles: Obstacle[], vehicles: readonly Vehicle[]): Point2[] {
   const nearby: Obstacle[] = [];
+  let roadHeight: number | undefined;
+  if (!Number.isFinite(start.y)) {
+    let nearest = Infinity;
+    for (const road of roads) if (Number.isFinite(road.y)) {
+      const gap = distance(road, start);
+      if (gap < nearest) { nearest = gap; roadHeight = road.y; }
+    }
+  }
+  const centerY = Number.isFinite(start.y) ? start.y! : roadHeight != null ? roadHeight + .94 : null;
   for (const vehicle of vehicles) {
-    if (!vehicle.root.isEnabled() || distance(start, vehicle.root.position) > 28 || vehicle.root.position.y > 4) continue;
+    if (!vehicle.root.isEnabled() || distance(start, vehicle.root.position) > 28) continue;
     const bounds = vehicle.root.getHierarchyBoundingVectors(true, mesh => mesh.isEnabled());
+    // An overhead aircraft does not obstruct a walking capsule. Ground cars
+    // remain obstacles at every world elevation, including Miami's negative Y.
+    if (centerY != null && (bounds.min.y > centerY + 1 || bounds.max.y < centerY - 1)) continue;
     nearby.push({ x: (bounds.min.x + bounds.max.x) / 2, z: (bounds.min.z + bounds.max.z) / 2,
       w: bounds.max.x - bounds.min.x, d: bounds.max.z - bounds.min.z, height: bounds.max.y - bounds.min.y });
   }

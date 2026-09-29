@@ -1,0 +1,174 @@
+{
+  "baseCommit": "88a8b2b20ba45dfaad4441a8c88a68e1907e1b3b",
+  "scope": "Exact changed candidate files against base; excludes this manifest; all unchanged files inherited from base.",
+  "files": [
+    {
+      "path": "docs/continuation.md",
+      "gitBlob": "7c6d8874234aea09bc45c17dca525c174d1fd3f6",
+      "sha256": "5832866bd6ed172225e01e366dc38456a3fd8c53060a466a1014e5ed96c0366f",
+      "bytes": 64857,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "docs/evidence/miami-police-perception-r3/README.md",
+      "gitBlob": "839e5b636f68f3feea0a179a580ce2debfda12e4",
+      "sha256": "b15785a4bd81f09140c7f6154cff03d8dce99f2eb89374419e26ea26666d85f4",
+      "bytes": 1421,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-police-perception-r3/independent-review.txt",
+      "gitBlob": "8274edf386028439de4422343a81cd1bdcaab3c2",
+      "sha256": "e39a427104199bc5e626b6081f1e9b35eedb6c4dbcca8068de016a9273c1e278",
+      "bytes": 1100,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-police-perception-r3/native-tests.txt",
+      "gitBlob": "cb52a0cbdcebaaa8134c67aa843b82c76688ecd0",
+      "sha256": "94d79236a169636b3add0d40499d03ed8530e6e8f0470f5013b4b3178847372a",
+      "bytes": 149175,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-police-perception-r3/performance-tests.txt",
+      "gitBlob": "5228e0f489b1743c4fd3649523f403b2e63d57b8",
+      "sha256": "f1197b82b94d335449897a523de9b213b83940030124d4caf35e6e450b1b4604",
+      "bytes": 609,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-police-perception-r3/production-build.txt",
+      "gitBlob": "7f3b27bffdc9416598e3cfe026f8b0755e8e896e",
+      "sha256": "9ade71fc92ceb720c4451a5b48d61df1bdf16d23ffcdfaeafa713b4651fa8524",
+      "bytes": 26880,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-police-perception-r3/verification.json",
+      "gitBlob": "6d0ac3f840709b9c9d9827ae2b1ed3c93978d80d",
+      "sha256": "b21091b14a7454ca6ce9102932342fd8445188cbd6a2dec7fa5ecd4a375c3eb6",
+      "bytes": 2942,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/miami/police-elevation-and-performance.md",
+      "gitBlob": "157c7c882c2742cf0ae50855448437a5780e2e9d",
+      "sha256": "71fc39e7ae2096f454be8d300e8aab500477333d7a215f2f44081cb2eba5e28b",
+      "bytes": 1897,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/core/PerformanceReport.ts",
+      "gitBlob": "2e51d5337b20c7a7c7505aab4e335f376b903bf5",
+      "sha256": "c83ab9fa7d309495f7b3e6cc99b2cd7597fa3a5bf52f936f79916efa18e2e661",
+      "bytes": 931,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/core/contracts.ts",
+      "gitBlob": "c47f8a2c9d808a3d5fa0de9886bfe34defaea68b",
+      "sha256": "09c742e26e2813635336b3f305131eb13d272193358b57620d2e3687f205acaa",
+      "bytes": 1680,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/gameplay/police/PoliceDirector.ts",
+      "gitBlob": "71fa588f9f649bf1334b744efabc546bd27ea17f",
+      "sha256": "190cd0dd4f689fa0e356301cb98ab0f6ae07c50353de863e0c14f5e2681c4b55",
+      "bytes": 31250,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/gameplay/police/groundSupport.ts",
+      "gitBlob": "fd4f4ad1a6b5814e32b77ee2ce65ffdf9ac3ba26",
+      "sha256": "259536aa4b04a020a528ebef751d46ade053b4194168a30e5e34a964baac9b4c",
+      "bytes": 2864,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/gameplay/police/rules.ts",
+      "gitBlob": "a0805b464b420b0e28108b3a21742a7e6c44ac12",
+      "sha256": "c03b36d685a0be6cd0684a8ccf3595c6995a1cf87d5696f7f965301a2bf65757",
+      "bytes": 6485,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/gameplay/police/vehicleFootRoute.ts",
+      "gitBlob": "d0b034e1a1bc91b1b51e79e9fa78c15d3c06acbe",
+      "sha256": "89b6d501edc07666fa5d141312b44e64f536ba8af60f9a8db3d159b969adec1a",
+      "bytes": 2498,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/main.ts",
+      "gitBlob": "e0da9a5081467ff29cb0cd0b51435961b5a5f8c4",
+      "sha256": "25781acf08d408484932ac297a8fe598b1a39a0465f16dcb9f1b0d810cdb7ad8",
+      "bytes": 50496,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/ui/UI.ts",
+      "gitBlob": "3de403a737be62e07a737c1fd967c79d25f7c201",
+      "sha256": "4d63cf561ac692c1d84459e4106b11442e5ac9d91716e965e5f8036404749c4d",
+      "bytes": 34349,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/world/miami/MiamiWorld.ts",
+      "gitBlob": "150e8b7e479ff496444caf039b2f6ad86e5bb376",
+      "sha256": "b9efbe971ec91decbda44d9fdc15873dec33895a34a59e02dd3b0d76bd23f3ff",
+      "bytes": 9335,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/miami-runtime.test.ts",
+      "gitBlob": "b485956c814cd871b632b93790a8252dee63d321",
+      "sha256": "d4d874b5307007606542d5638dcc629c52dac1332ba5caa502ce5e1820b2a43f",
+      "bytes": 4353,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/performance-report.test.ts",
+      "gitBlob": "99a26747debf778b3030ba7355488b1f4c729fe4",
+      "sha256": "bf81ca082dea86ccfc1d1f023b3a641b554cc44f069e21c3f78ac05571de6de1",
+      "bytes": 1037,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/police-ground-support.test.ts",
+      "gitBlob": "2912b4a72159e4b9d7c2995e5159302da7a54b9b",
+      "sha256": "50b4d171d1a946c6f3f832c321b2d2dd6b1a7668881efc48b3766c7103b2d7fe",
+      "bytes": 12393,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/police-sight-height.test.ts",
+      "gitBlob": "afd5bf0bf301d52fe91c7b76383de12bb223974a",
+      "sha256": "9b1792ec3a4f839b875316024a9f0873acd4cacc65253a628b3c0484dee0c9af",
+      "bytes": 2763,
+      "mode": "100644",
+      "status": "added"
+    }
+  ]
+}

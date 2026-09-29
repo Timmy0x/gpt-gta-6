@@ -29,6 +29,7 @@ import type { Player } from "../Player";
 import type { WantedSystem } from "../Wanted";
 import { Officer, type OfficerRole } from "./Officer";
 import { vehicleFootRoute } from "./vehicleFootRoute";
+import { PoliceExitQueries, policeGroundHeight } from './groundSupport';
 import {
   accessible,
   ARREST_SECONDS,
@@ -67,6 +68,7 @@ export class PoliceDirector {
   private challengeTimer = 0;
   private clearTime = 0;
   private searchlight: SpotLight | null = null;
+  private exitQueries: PoliceExitQueries | null = null;
   private lastPlayer = Vector3.Zero();
   constructor(
     private scene: Scene,
@@ -77,6 +79,7 @@ export class PoliceDirector {
     private wanted: WantedSystem,
   ) {
     this.lastPlayer.copyFrom(player.position);
+    this.scene.onDisposeObservable.addOnce(() => this.exitQueries?.dispose());
   }
   resist(seconds = 12) {
     this.resistance = Math.max(this.resistance, seconds);
@@ -109,8 +112,10 @@ export class PoliceDirector {
       officer.state = "pursuit";
       this.onCharacterHit(officer.model, result.impulse, officer.health <= 0, result.impact);
     } else if (officer.health <= 0) {
+      const anchor = officer.model.root.position.clone();
+      const ground = this.exitQueriesFor().ground(anchor, .2, 1.5);
       officer.model.root.rotation.z = Math.PI / 2;
-      officer.model.root.position.y = 0.35;
+      officer.model.root.position.y = ground ? ground.y + .35 : anchor.y;
     }
     if (officer.health <= 0) {
       officer.state = "injured";
@@ -291,10 +296,11 @@ export class PoliceDirector {
           break;
         }
       const air = drivers.find((d) => d.assignment === "air");
+      const airGround = air ? policeGroundHeight(this.scene, this.world, air.v.root.position, air.v.body) : null;
       if (
         air &&
         air.v.health > 0 &&
-        air.v.root.position.y > 15 &&
+        airGround != null && air.v.root.position.y - airGround > 15 &&
         this.sees(air.v.root.position, 175)
       )
         seen = true;
@@ -549,14 +555,25 @@ export class PoliceDirector {
     }
   }
   private dismount(o: Officer, v: Vehicle) {
+    if (v.grounded === 0) return;
+    const queries = this.exitQueriesFor();
     for (const sign of [o.seat ? 1 : -1, o.seat ? -1 : 1]) {
       const p = v.root.position.add(v.root.right.scale(sign * 2.5));
-      p.y = Math.max(1.15, p.y + 0.5);
-      if (accessible(p, this.world.obstacles)) {
+      if (this.world.hasGroundCoverage && !this.world.hasGroundCoverage(p.x, p.z, .36)) continue;
+      const ground = queries.ground(p, 1.5, 1.6, v.body);
+      // A grounded cabin can exit onto a nearby walkable surface. An airborne
+      // car must keep its crew seated instead of dropping them to distant land.
+      if (!ground || ground.y > v.root.position.y + .45) continue;
+      p.y = ground.y + .94;
+      const start = new Vector3(v.root.position.x, p.y, v.root.position.z);
+      if (accessible(p, this.world.obstacles) && queries.clear(p) && queries.path(start, p, v.body)) {
         o.dismount(p);
         return;
       }
     }
+  }
+  private exitQueriesFor() {
+    return this.exitQueries ??= new PoliceExitQueries(this.scene);
   }
   private drive(dt: number, d: Driver, drivers: Driver[]) {
     const v = d.v;
@@ -575,14 +592,24 @@ export class PoliceDirector {
     const p = v.root.position,
       goal = this.wanted.lastKnown;
     if (d.assignment === "air") {
-      const targetHeight = this.wanted.stars ? 58 : 3;
+      const ground = policeGroundHeight(this.scene, this.world, p, v.body);
+      const goalPoint = new Vector3(goal.x, p.y, goal.z);
+      const goalGround = policeGroundHeight(this.scene, this.world, goalPoint, v.body);
+      // Unknown terrain never becomes an invented sea-level target. Neutral
+      // collective keeps the powered helicopter stable while travel is held.
+      if (ground == null || goalGround == null) {
+        this.vehicles.control(v, { throttle: 0, steer: 0, brake: 0, handbrake: false, lift: 0 });
+        this.searchlight?.setEnabled(false);
+        return;
+      }
+      const targetHeight = Math.max(ground, goalGround) + (this.wanted.stars ? 58 : 3);
       const error = angleDelta(
         v.heading,
         Math.atan2(goal.x - p.x, goal.z - p.z),
       );
       this.vehicles.control(v, {
         throttle:
-          p.y > 24 && distance(p, goal) > 35
+          p.y - ground > 24 && distance(p, goal) > 35
             ? Math.max(0, Math.cos(error)) * 0.5
             : 0,
         steer: clamp(error * 0.9, -1, 1),
@@ -591,9 +618,10 @@ export class PoliceDirector {
         lift: clamp((targetHeight - p.y) * 0.15, -1, 1),
       });
       if (this.searchlight) {
+        this.searchlight.setEnabled(true);
         this.searchlight.position.copyFrom(p);
         this.searchlight.direction.copyFrom(
-          new Vector3(goal.x - p.x, -p.y, goal.z - p.z).normalize(),
+          new Vector3(goal.x - p.x, goalGround + .6 - p.y, goal.z - p.z).normalize(),
         );
       }
       return;

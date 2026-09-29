@@ -80,7 +80,7 @@ export function clearSight(
     for (const [start, delta, min, max] of [
       [a.x, b.x - a.x, o.x - o.w / 2, o.x + o.w / 2],
       [a.z, b.z - a.z, o.z - o.d / 2, o.z + o.d / 2],
-      [a.y, b.y - a.y, 0, o.height],
+      [a.y, b.y - a.y, o.baseY ?? 0, (o.baseY ?? 0) + o.height],
     ]) {
       if (Math.abs(delta) < 1e-8) {
         if (start < min || start > max) return false;

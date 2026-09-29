@@ -25,6 +25,13 @@ test('source Brickell world loads exact chunk bytes, has a supported sidewalk sp
   assert.equal(world.worldId,'brickell-public-common-frame-r2');assert.equal(world.restrictedFacility,false);assert.ok(world.roads.length>20);
   assert.ok(world.spawn.y < -15, "common-frame local Up is below the ellipsoid origin");
   assert.equal(world.collisionReady(world.spawn),true);
+  assert.ok(world.obstacles.length > 0);
+  for (const obstacle of world.obstacles) {
+    const bounds=obstacle.mesh!.getBoundingInfo().boundingBox;
+    assert.equal(obstacle.baseY,bounds.minimumWorld.y,'source sight volume retains actual native building base');
+    assert.ok(Math.abs(obstacle.baseY!+obstacle.height-bounds.maximumWorld.y)<1e-5);
+  }
+
   const queries=new MovementQueries(scene);t.after(()=>queries.dispose());
   assert.ok(queries.clear(world.spawn),'standing capsule has real clearance');
   world.setSourceVisible(true);

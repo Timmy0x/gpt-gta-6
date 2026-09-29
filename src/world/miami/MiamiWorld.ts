@@ -60,7 +60,7 @@ export class MiamiWorld implements WorldContract {
     if(!water.length){this.ocean.mesh.setEnabled(false);this.ocean.material.enableRenderTargets(false);}
     this.residency=new MiamiResidency(this.ctx.scene,this.ctx.shadows,packages,baseUrl,()=>{throw new Error('Public collision records must be non-rendered');},fetcher);
     this.residency.onMeshLoaded=(mesh,kind)=>{if(kind!=='building')return;const b=mesh.getBoundingInfo().boundingBox;
-      this.obstacles.push({x:(b.minimumWorld.x+b.maximumWorld.x)/2,z:(b.minimumWorld.z+b.maximumWorld.z)/2,w:b.maximumWorld.x-b.minimumWorld.x,d:b.maximumWorld.z-b.minimumWorld.z,height:b.maximumWorld.y-b.minimumWorld.y,mesh});};
+      this.obstacles.push({x:(b.minimumWorld.x+b.maximumWorld.x)/2,z:(b.minimumWorld.z+b.maximumWorld.z)/2,w:b.maximumWorld.x-b.minimumWorld.x,d:b.maximumWorld.z-b.minimumWorld.z,height:b.maximumWorld.y-b.minimumWorld.y,baseY:b.minimumWorld.y,mesh});};
     this.residency.onMeshDisposed=mesh=>{const i=this.obstacles.findIndex(o=>o.mesh===mesh);if(i>=0)this.obstacles.splice(i,1);};
     const supported=dataset.roads.filter(r=>!r.unavailableReason&&!r.bridge&&!r.tunnel&&r.layer===0);
     const dryCoverage={polygons:dataset.land.flatMap(l=>l.polygons),sourceIds:dataset.land.flatMap(l=>l.sourceIds),confidence:'mapped' as const,gaps:[]};

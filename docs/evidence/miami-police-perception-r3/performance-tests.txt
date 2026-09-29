@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: performance summary keeps a real stall in its duration and slowest-one-percent result
+ok 1 - performance summary keeps a real stall in its duration and slowest-one-percent result
+  ---
+  duration_ms: 0.992583
+  type: 'test'
+  ...
+# Subtest: no measured frames produces unavailable metrics instead of fictional zero or infinite FPS
+ok 2 - no measured frames produces unavailable metrics instead of fictional zero or infinite FPS
+  ---
+  duration_ms: 0.073167
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 153.869375
