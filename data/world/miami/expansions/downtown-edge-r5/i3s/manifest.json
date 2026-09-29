@@ -1,0 +1,1339 @@
+{
+  "source": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0",
+  "item": "ce420278a45a4bf4a349c37c197263b3",
+  "retrieved": "2026-09-29T19:44:16.770Z",
+  "sourceModified": "2024-02-15T14:54:44.000Z",
+  "sourceVersion": "1C5394DE-F3CD-457C-BC92-400B135F8EA9",
+  "bboxWgs84": [
+    -80.199,
+    25.7704,
+    -80.193,
+    25.7758
+  ],
+  "selection": "Conservative source MBS intersection, full finest-leaf source vertices retained; no source imagery/textures requested",
+  "visited": 50,
+  "leaves": [
+    "17-0-3-1-2-0",
+    "17-1-2-0-0-0",
+    "17-1-2-0-1-3",
+    "17-1-2-0-0-3-0",
+    "17-1-2-0-0-3-1",
+    "17-1-2-0-0-3-3",
+    "17-0-3-1-1-2-0-0",
+    "17-0-3-1-1-2-0-3",
+    "17-0-3-1-1-2-2-2",
+    "17-0-3-1-2-1-3-1",
+    "17-0-3-1-2-1-3-3",
+    "17-1-2-0-0-3-2-0",
+    "17-1-2-0-0-3-2-1",
+    "17-1-2-0-0-3-2-2"
+  ],
+  "sameVersionAsRetained": true,
+  "license": "Miami-Dade County custom public-data as-is terms",
+  "licenseInfo": "Miami-Dade County provides this data for use &quot;as is&quot;. The areas depicted by this map/data are approximate, and are not accurate to surveying or engineering standards. The maps/data shown here are for illustration purposes only and are not suitable for site-specific decision making. Information found here should not be used for making financial or any other commitments. Miami-Dade County provides this information with the understanding that it is not guaranteed to be accurate, correct or complete and conclusions drawn from such information are the sole responsibility of the user. While every effort has been made to ensure the accuracy, correctness and timeliness of materials presented, Miami-Dade County assumes no responsibility for errors or omissions, even if Miami-Dade County is advised of the possibility of such damage",
+  "attribution": "Miami-Dade County GIS Technical Support Group",
+  "requests": [
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/root",
+      "path": "nodes_root.bin",
+      "sha256": "29b140e60a4e043d1bb335a7e8456fbca18588df6daa9554091c31babeba152f",
+      "bytes": 7537,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/7",
+      "path": "nodes_7.bin",
+      "sha256": "0fab3119be1e881541edbadead38f93bec7260e07823948fc761163c06781276",
+      "bytes": 7461,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17",
+      "path": "nodes_17.bin",
+      "sha256": "86f6233b292eedc74868ff0c88e7ec89d0d284ab46fab8518f16222b94cc3899",
+      "bytes": 6151,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/26",
+      "path": "nodes_26.bin",
+      "sha256": "f0bb05e5fb456a7c7d16415efa15da33a690fbf65cc3758b39de47b03724ba5b",
+      "bytes": 5177,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/30",
+      "path": "nodes_30.bin",
+      "sha256": "b91db3644decf976dd9fb4935f2bf0f99baa4f15505073231cfa8b2c69a16bdd",
+      "bytes": 4620,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0",
+      "path": "nodes_17-0.bin",
+      "sha256": "25dc14026fde38a4365dd7e6bb4fb2af5a7ff47b00f8c24e8fad8e02c50e0ee4",
+      "bytes": 1331,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1",
+      "path": "nodes_17-1.bin",
+      "sha256": "77103f7b115b3b3826ef818fd4a2d4f5b88c257779c4426571cbc184699ca5bf",
+      "bytes": 1101,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/30-0",
+      "path": "nodes_30-0.bin",
+      "sha256": "dfa826c2e6733893036b61619ab2b232b178f8947641fd47ca0891fa6693b842",
+      "bytes": 980,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-0",
+      "path": "nodes_17-0-0.bin",
+      "sha256": "2b1a8a44b48fb78ffda93faaac4b6bf3b095d8bc02274cb94505b778320a80f6",
+      "bytes": 1602,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3",
+      "path": "nodes_17-0-3.bin",
+      "sha256": "bca5d83ca08fb56181f850da04c1af0f60ecc84a50f0fe0fca6502de955ddc8a",
+      "bytes": 996,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-1",
+      "path": "nodes_17-1-1.bin",
+      "sha256": "30f374647b52a717c7c6229855f9910fdb1bbbc3e334484566f0096a3257a79e",
+      "bytes": 1360,
+      "retrieved": "2026-09-29T19:43:54.869Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2",
+      "path": "nodes_17-1-2.bin",
+      "sha256": "47531e5d9603834cbb6ba987304f4b0d50face6b6174238101c9eaf8387a427d",
+      "bytes": 1241,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/30-0-1",
+      "path": "nodes_30-0-1.bin",
+      "sha256": "476c9641868d2aabdaa7b18fd3ffc97095c052586440b84b979cf6587e3a27d8",
+      "bytes": 1244,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-0-2",
+      "path": "nodes_17-0-0-2.bin",
+      "sha256": "14d28ac103c48760a488186920c7a1e16064d18899e8b6f24e74cc1e944a03d5",
+      "bytes": 1392,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1",
+      "path": "nodes_17-0-3-1.bin",
+      "sha256": "874d30b4bb5a1e273a17cfcc242763464c4f705e3a98b5db2d5f03e6327f630d",
+      "bytes": 1266,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0",
+      "path": "nodes_17-1-2-0.bin",
+      "sha256": "f80a4bf642e52e20f9763b81cef66a9628ec81e03a7968afad080a92ba3c7a08",
+      "bytes": 1508,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-1",
+      "path": "nodes_17-1-2-1.bin",
+      "sha256": "b91351fd0ed409b4d059d936a602fb3add1f05cf7d806cd0ac7000f2bc02d138",
+      "bytes": 1506,
+      "retrieved": "2026-09-29T19:43:55.115Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-2",
+      "path": "nodes_17-1-2-2.bin",
+      "sha256": "f11a9c7b3745e4a423bc04089e18ef58a28eed47cc6965598197784c1d8714ae",
+      "bytes": 1380,
+      "retrieved": "2026-09-29T19:43:55.323Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-3",
+      "path": "nodes_17-1-2-3.bin",
+      "sha256": "ad1dc54daba9b2253b0bd45483726c45e0ec2e90ed56abcd60fa1a25e3d695d7",
+      "bytes": 1262,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1",
+      "path": "nodes_17-0-3-1-1.bin",
+      "sha256": "1089b238eb4f4fda7fd18e91079c691f947583339d06316712b4822475713af8",
+      "bytes": 1533,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2",
+      "path": "nodes_17-0-3-1-2.bin",
+      "sha256": "9eae5540815011dbe581e5ccf31a4d7a8154b71a6e8f2e5948f49ed5ac397238",
+      "bytes": 1151,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0",
+      "path": "nodes_17-1-2-0-0.bin",
+      "sha256": "391a1ecc254059027f3b21c418d31d753a61ea6374e673c6b0748834315add3e",
+      "bytes": 1545,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1",
+      "path": "nodes_17-1-2-0-1.bin",
+      "sha256": "18a1280ceb9b04ef4a0aa3918efaa99e51a01e0d5f188cbc8a7fb311e68f3c23",
+      "bytes": 1415,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-2",
+      "path": "nodes_17-1-2-0-2.bin",
+      "sha256": "eda79cf383ff86d877ffd50deda5e69d8a65e93b41b2a402501bc7ee72f1dd5b",
+      "bytes": 1287,
+      "retrieved": "2026-09-29T19:43:55.469Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-0",
+      "path": "nodes_17-0-3-1-1-0.bin",
+      "sha256": "d9d5feec696d9badc111f5230cb0b7027ba82b03ef60c786e6957c837e022483",
+      "bytes": 1695,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-1",
+      "path": "nodes_17-0-3-1-1-1.bin",
+      "sha256": "4660d6eb5ad6fc7d8a3fba35c1ad4201e9149057b9246413986fc2e5caa08e92",
+      "bytes": 1433,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2",
+      "path": "nodes_17-0-3-1-1-2.bin",
+      "sha256": "1f389e03e0e249a5ff698116cf646b30b4aa8747d36b97e5a211f99d2e5341a5",
+      "bytes": 1435,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-3",
+      "path": "nodes_17-0-3-1-1-3.bin",
+      "sha256": "cb35e422dc63c97ae37755cb08dd2c0d6bdd0740cb4b64288dfd121e7f833d00",
+      "bytes": 1169,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0",
+      "path": "nodes_17-0-3-1-2-0.bin",
+      "sha256": "788d83471de8775633c0d5f5f93be2cd47cf11eb5bc171cfc40030147389fb26",
+      "bytes": 897,
+      "retrieved": "2026-09-29T19:43:55.586Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1",
+      "path": "nodes_17-0-3-1-2-1.bin",
+      "sha256": "642bd92c5376b043ee87798aed11f8b51dca5bff58ee43d5c8b2c37a7f3531d0",
+      "bytes": 1305,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0",
+      "path": "nodes_17-1-2-0-0-0.bin",
+      "sha256": "8782aaa483a6c5ecec68795b0872743885d66dab47eae7513d9c72b881075861",
+      "bytes": 1163,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3",
+      "path": "nodes_17-1-2-0-0-3.bin",
+      "sha256": "48be40f2b4832c3f9e26bc1bd437c966db52f1cb5876004ad527ce02725f7a84",
+      "bytes": 1310,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3",
+      "path": "nodes_17-1-2-0-1-3.bin",
+      "sha256": "15c227c06afaff88e6c7b628b16a35f84eeab419709c866f56a8b9a97d2d4176",
+      "bytes": 775,
+      "retrieved": "2026-09-29T19:43:55.766Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-2-0",
+      "path": "nodes_17-1-2-0-2-0.bin",
+      "sha256": "16cb9c5b4f58ce66105323c95b886fb19dffbc1d3c57709a9069c3673cb1fea5",
+      "bytes": 1701,
+      "retrieved": "2026-09-29T19:43:56.007Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0",
+      "path": "nodes_17-0-3-1-1-2-0.bin",
+      "sha256": "e99d485b38019389f3852b66b92dafd2f3d3fb1eb7cac04347aef5659da22619",
+      "bytes": 1734,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2",
+      "path": "nodes_17-0-3-1-1-2-2.bin",
+      "sha256": "80c60cc49eea886b98accc5897a5bf5343b22a989dc375ca85c684ab4ba159ed",
+      "bytes": 1468,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-0",
+      "path": "nodes_17-0-3-1-2-1-0.bin",
+      "sha256": "7653dc8d926db45f0206a50ae97db2d3f42733982add6c13230ae3fc196145a3",
+      "bytes": 1458,
+      "retrieved": "2026-09-29T19:43:56.309Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3",
+      "path": "nodes_17-0-3-1-2-1-3.bin",
+      "sha256": "c52619cae760eb1d3fd5018ac7ccecfce22b3ddafe9e0540ba7f4c47faeccf24",
+      "bytes": 1333,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0",
+      "path": "nodes_17-1-2-0-0-3-0.bin",
+      "sha256": "f35f122405e370c47fd1a98d27ac8582d742b3c34346bc28df368acffafbedad",
+      "bytes": 1182,
+      "retrieved": "2026-09-29T19:43:56.516Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1",
+      "path": "nodes_17-1-2-0-0-3-1.bin",
+      "sha256": "ac15cfdfa819f1215d84be5c79b96cdf6fbaa5b61cc977450250fb18c8af9f93",
+      "bytes": 1047,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2",
+      "path": "nodes_17-1-2-0-0-3-2.bin",
+      "sha256": "921493c343f9074b8a377075b710d1397d1dbda4484b8d11732c7e8f40118863",
+      "bytes": 1462,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3",
+      "path": "nodes_17-1-2-0-0-3-3.bin",
+      "sha256": "cd1c8ebecd576f7cd4160cdaac96c89be9c2dacfc80cdb83b9b859c90d418035",
+      "bytes": 778,
+      "retrieved": "2026-09-29T19:43:56.596Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0",
+      "path": "nodes_17-0-3-1-1-2-0-0.bin",
+      "sha256": "4d6da58ee07649928b171fa3bb796f6bb97081aa06668effc6cf5c826669de97",
+      "bytes": 1195,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3",
+      "path": "nodes_17-0-3-1-1-2-0-3.bin",
+      "sha256": "b4917c7a2a7a797cb428d5d7da3f6337a80071d5997cde7fdc249722ee1b472c",
+      "bytes": 782,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2",
+      "path": "nodes_17-0-3-1-1-2-2-2.bin",
+      "sha256": "db0fe95285f91b621ca635e108cd9268fc7ed3abf5cea26ce34d4b7146b9ea4f",
+      "bytes": 921,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1",
+      "path": "nodes_17-0-3-1-2-1-3-1.bin",
+      "sha256": "1238fe5fbf2347495180242f9ee7486e806f827064c906d3b85c129f20c36fcc",
+      "bytes": 1063,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3",
+      "path": "nodes_17-0-3-1-2-1-3-3.bin",
+      "sha256": "1fa50c9b12444fbc5c17bc4c48a08ac097666fbf96b9f8d68d126069d2ce6802",
+      "bytes": 785,
+      "retrieved": "2026-09-29T19:43:56.834Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0",
+      "path": "nodes_17-1-2-0-0-3-2-0.bin",
+      "sha256": "26e11eb079ee493e2ecf3c9ca0a6cc780080ed7e0fbacf9c2ed09ebbe93899eb",
+      "bytes": 1200,
+      "retrieved": "2026-09-29T19:43:57.052Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1",
+      "path": "nodes_17-1-2-0-0-3-2-1.bin",
+      "sha256": "ef7df9a77a1f4d58adf9fce26fbd0d8de1bf8638d7ae59f2e98b3941429adcb9",
+      "bytes": 1059,
+      "retrieved": "2026-09-29T19:43:57.143Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2",
+      "path": "nodes_17-1-2-0-0-3-2-2.bin",
+      "sha256": "56d93cdf91e3c9fb1909244aefc8ab728bf0e5ad4fd2bc0c1c67bdfcd25104e6",
+      "bytes": 919,
+      "retrieved": "2026-09-29T19:43:57.351Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/features/0",
+      "path": "nodes_17-0-3-1-2-0_features_0.bin",
+      "sha256": "33f548bad083b7eda9c3b802ffcb1bee8f5d27fb139cc728f8ad3826c1acd31d",
+      "bytes": 5207,
+      "retrieved": "2026-09-29T19:43:57.562Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/geometries/0",
+      "path": "nodes_17-0-3-1-2-0_geometries_0.bin",
+      "sha256": "0ebe7ed97db2264e8440a617f0cee26e87ddf38dae81231e01f2dc86a008981f",
+      "bytes": 1906740,
+      "retrieved": "2026-09-29T19:43:57.819Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/attributes/f_0/0",
+      "path": "nodes_17-0-3-1-2-0_attributes_f_0_0.bin",
+      "sha256": "1a18fb5fc9a3e8f864be0ceb938cb415c04ce3ddcf25ca587c0fe412ee22c734",
+      "bytes": 320,
+      "retrieved": "2026-09-29T19:43:58.100Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/attributes/f_1/0",
+      "path": "nodes_17-0-3-1-2-0_attributes_f_1_0.bin",
+      "sha256": "dc3d3c5ddde9d90fd63cdb0ee3f4fe3dcd672c1b562ef4735840365d91e03fb5",
+      "bytes": 56,
+      "retrieved": "2026-09-29T19:43:58.520Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/attributes/f_2/0",
+      "path": "nodes_17-0-3-1-2-0_attributes_f_2_0.bin",
+      "sha256": "19629bc34386c4001dd5fc4aa7bcb77a3ec311679e212f9c3b83d01c088dd36e",
+      "bytes": 86,
+      "retrieved": "2026-09-29T19:44:00.056Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/attributes/f_3/0",
+      "path": "nodes_17-0-3-1-2-0_attributes_f_3_0.bin",
+      "sha256": "7b2357b6dada434260b4c3abba59fcf31dc93d8e69d9280dbf57c3da6a1e1da3",
+      "bytes": 86,
+      "retrieved": "2026-09-29T19:44:00.935Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/attributes/f_4/0",
+      "path": "nodes_17-0-3-1-2-0_attributes_f_4_0.bin",
+      "sha256": "18e032a23522a94b0ecd71b19c29b9af43e8597dc449a31ce8d201cee029bc6c",
+      "bytes": 30,
+      "retrieved": "2026-09-29T19:44:01.805Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-0/attributes/f_5/0",
+      "path": "nodes_17-0-3-1-2-0_attributes_f_5_0.bin",
+      "sha256": "f6b67eb817d69ef04cb08f587c93b127557f6c678fbe8fdec6995fcdd474ac11",
+      "bytes": 56,
+      "retrieved": "2026-09-29T19:44:02.485Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/features/0",
+      "path": "nodes_17-1-2-0-0-0_features_0.bin",
+      "sha256": "8fa7e84e4f02307643859ce06d932c9c5af8cbb40444fa5700169120359fb899",
+      "bytes": 30351,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/geometries/0",
+      "path": "nodes_17-1-2-0-0-0_geometries_0.bin",
+      "sha256": "aef2c00a8dfcaf40d241db268e0bbf35f7a87763188e0020ecd86fbb3971370b",
+      "bytes": 719800,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-0-0_attributes_f_0_0.bin",
+      "sha256": "466e9a796ee77601e94e80423a55794463b0151e80a678c3c3924d5209a02055",
+      "bytes": 2221,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-0-0_attributes_f_1_0.bin",
+      "sha256": "1aac8ac08f46bb8debcfd7611718d84920e4184da4602e3840222937338920a6",
+      "bytes": 348,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-0-0_attributes_f_2_0.bin",
+      "sha256": "7281a9902a276ebc703cb498ad2fb6478d101f720de0277d63ab008cec405fe1",
+      "bytes": 524,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-0-0_attributes_f_3_0.bin",
+      "sha256": "fe3b1bed56faa177df091c197dc3b59c008668d26b415980bb35ea05871354ca",
+      "bytes": 524,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-0-0_attributes_f_4_0.bin",
+      "sha256": "9ccb3d638183c80b8cc4823dec5ad89cd02bdf8c366cffe23b60804503a6e72f",
+      "bytes": 176,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-0/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-0-0_attributes_f_5_0.bin",
+      "sha256": "1de9f37ba33600d67db97ffb7dce47fd5965428c8b3955d3a1b222b0e6e51b21",
+      "bytes": 348,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/features/0",
+      "path": "nodes_17-1-2-0-1-3_features_0.bin",
+      "sha256": "727896c23c0a1aadb8034448f353a941186ee4618a1494d3e42fc4eb6b2c788a",
+      "bytes": 11123,
+      "retrieved": "2026-09-29T19:44:03.278Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/geometries/0",
+      "path": "nodes_17-1-2-0-1-3_geometries_0.bin",
+      "sha256": "1f03faab5d81d0f83df1642ab14d0d89d4b9ea8acd25d832a1e0df86b3b11755",
+      "bytes": 1025192,
+      "retrieved": "2026-09-29T19:44:04.253Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-1-3_attributes_f_0_0.bin",
+      "sha256": "e0e543a4b4ac522c0f3b574b7e24ffa80f06947179236718e46696dd859165da",
+      "bytes": 785,
+      "retrieved": "2026-09-29T19:44:05.092Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-1-3_attributes_f_1_0.bin",
+      "sha256": "14be9e9a28f7f8dff815ad92e3fdf356edb1b311cf46c6a0037a61795f149a35",
+      "bytes": 124,
+      "retrieved": "2026-09-29T19:44:06.032Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-1-3_attributes_f_2_0.bin",
+      "sha256": "f17d07ffb7dbffb337cb4b9f4a8f416160dd5c2f6e7e797a6d87d2f57ac05f0a",
+      "bytes": 188,
+      "retrieved": "2026-09-29T19:44:06.913Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-1-3_attributes_f_3_0.bin",
+      "sha256": "1ab647f015909a66a4d0cdeb336b593794a3a599c3db6b4ec7caa816679bb71f",
+      "bytes": 188,
+      "retrieved": "2026-09-29T19:44:07.465Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-1-3_attributes_f_4_0.bin",
+      "sha256": "7eca8be65d9222be1eb48b5a1dfb7a7bb135e03d3b9bd9cadd057d6b9fa96ef7",
+      "bytes": 64,
+      "retrieved": "2026-09-29T19:44:07.609Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-1-3/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-1-3_attributes_f_5_0.bin",
+      "sha256": "97c63b1c365ea8235b9eb7687b439cb0afd00f6cd0a3b5f8241cbeab8bc5c26d",
+      "bytes": 124,
+      "retrieved": "2026-09-29T19:44:07.782Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/features/0",
+      "path": "nodes_17-1-2-0-0-3-0_features_0.bin",
+      "sha256": "76e21926110beddafea2d6ff1ea7614b82c7f7d502714b727c437fd6f7bd9e03",
+      "bytes": 4218,
+      "retrieved": "2026-09-29T19:44:08.035Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/geometries/0",
+      "path": "nodes_17-1-2-0-0-3-0_geometries_0.bin",
+      "sha256": "8786ba21aae9286b589e33b2f996cc88479e1b10db6f01158d1f8ef0fb419887",
+      "bytes": 1993200,
+      "retrieved": "2026-09-29T19:44:08.352Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-0-3-0_attributes_f_0_0.bin",
+      "sha256": "9844cbb4355efface889ec18d285625488f3273edbfdaecf9570bde25344715e",
+      "bytes": 256,
+      "retrieved": "2026-09-29T19:44:08.499Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-0-3-0_attributes_f_1_0.bin",
+      "sha256": "c6f5202512ad1b14c0da62a906992b1d53d93dac0be9f97ed26108f743f386af",
+      "bytes": 44,
+      "retrieved": "2026-09-29T19:44:08.608Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-0-3-0_attributes_f_2_0.bin",
+      "sha256": "f354e3b5e0aa41365c7a57966b7e5c61ebb1f5aea2a2561d7faa24e6b270d65d",
+      "bytes": 68,
+      "retrieved": "2026-09-29T19:44:08.737Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-0-3-0_attributes_f_3_0.bin",
+      "sha256": "cbc0f7490d5ae440585986b90c46943b36a6c0d8f6fdf2d0ac7c61cbee8e8ef9",
+      "bytes": 68,
+      "retrieved": "2026-09-29T19:44:08.894Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-0-3-0_attributes_f_4_0.bin",
+      "sha256": "ce3be95344d29cc62d1117369cf44d0cba228889c4d285b48fa478d477b5fa41",
+      "bytes": 24,
+      "retrieved": "2026-09-29T19:44:09.100Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-0/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-0-3-0_attributes_f_5_0.bin",
+      "sha256": "050b44cd86b20b95fb0e1ec4f3365f505b17273c89915141aae2114053e90f8d",
+      "bytes": 44,
+      "retrieved": "2026-09-29T19:44:09.187Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/features/0",
+      "path": "nodes_17-1-2-0-0-3-1_features_0.bin",
+      "sha256": "0875c4bb1859f7acd803ebf43423569705dc0b2c50ed7c8ffc90d8a71320ea33",
+      "bytes": 7003,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/geometries/0",
+      "path": "nodes_17-1-2-0-0-3-1_geometries_0.bin",
+      "sha256": "da28c77bc1e3483d428f1087219dff6c2238fc71998b36d7c9189a07b413fcf9",
+      "bytes": 940112,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-0-3-1_attributes_f_0_0.bin",
+      "sha256": "d616f04d5230da3d00ad73b47f06ac299c4b363d514b2d631ba0339591801a36",
+      "bytes": 475,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-0-3-1_attributes_f_1_0.bin",
+      "sha256": "2b7967b79c5f8ccd9c66b338f5a4e5883a3fc051226bb964f75555100f357813",
+      "bytes": 76,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-0-3-1_attributes_f_2_0.bin",
+      "sha256": "425caa62ff6a0f6e612ab11856f61e810955785ceaa01ad4c0f85bfaf4f4c282",
+      "bytes": 116,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-0-3-1_attributes_f_3_0.bin",
+      "sha256": "01ec2a06d3e146b2a6777a1216a4aa4cd3940b17299cdb525f28420beaf57ac7",
+      "bytes": 116,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-0-3-1_attributes_f_4_0.bin",
+      "sha256": "3bee8400224755059d5b9c7fd1ea5f4601c8b8b4194175030bc5bd46496f26c8",
+      "bytes": 40,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-1/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-0-3-1_attributes_f_5_0.bin",
+      "sha256": "7cd32524118ca6c4a84b8a6e07787434828e8b6c7abb91bf2eb3925d6bc85528",
+      "bytes": 76,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/features/0",
+      "path": "nodes_17-1-2-0-0-3-3_features_0.bin",
+      "sha256": "e8aa421e205444a3a395c35db92a736c49e8a52b376a71baa6f3c80d266d3262",
+      "bytes": 5585,
+      "retrieved": "2026-09-29T19:44:09.367Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/geometries/0",
+      "path": "nodes_17-1-2-0-0-3-3_geometries_0.bin",
+      "sha256": "39bfa591c1841d0b960962833654e2abbe351623b97c511ea14e067e137a0c42",
+      "bytes": 531592,
+      "retrieved": "2026-09-29T19:44:09.578Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-0-3-3_attributes_f_0_0.bin",
+      "sha256": "d94bea523ef695117f4ab68ffc881f7ecf907975fdfe231b62c7dc59a1dd59e0",
+      "bytes": 359,
+      "retrieved": "2026-09-29T19:44:09.660Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-0-3-3_attributes_f_1_0.bin",
+      "sha256": "bf1134b1371c2f9e13ad8579ed1df79ee9b5a24ec4b2deda5b211fc9c836501e",
+      "bytes": 60,
+      "retrieved": "2026-09-29T19:44:09.757Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-0-3-3_attributes_f_2_0.bin",
+      "sha256": "4e5ac5c7b4b5a2d41a0a433ad1531f034aa1c6c55cf6676fa6964c17f7de76fe",
+      "bytes": 92,
+      "retrieved": "2026-09-29T19:44:09.849Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-0-3-3_attributes_f_3_0.bin",
+      "sha256": "8e0a0a11e569ec89c6ec38b63d863e5fc4aee7c45fbeb8276fb07fae6fa21156",
+      "bytes": 92,
+      "retrieved": "2026-09-29T19:44:09.966Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-0-3-3_attributes_f_4_0.bin",
+      "sha256": "bee6b1899da8d1db16a6b8f5a869f20645add37072502720d7f7f44014dd6807",
+      "bytes": 32,
+      "retrieved": "2026-09-29T19:44:10.101Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-3/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-0-3-3_attributes_f_5_0.bin",
+      "sha256": "28fdcc4d3ab2b97dd517acb0cb624ea38489eb12f5ca702dcef5ecfb0fad592e",
+      "bytes": 60,
+      "retrieved": "2026-09-29T19:44:10.267Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/features/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_features_0.bin",
+      "sha256": "5dfee6eed07a75d3f882539d5cf7faca725dd013f24f7c75e67f7ede107adacd",
+      "bytes": 3873,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/geometries/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_geometries_0.bin",
+      "sha256": "300bf91a72b299e0859978cc0fb666017603f171a69eafcb06f2cd3ff37a19ae",
+      "bytes": 433664,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/attributes/f_0/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_attributes_f_0_0.bin",
+      "sha256": "e239dbb297a05cb2fc8e0a7cc5aee8796caa7958e2a662737cce4d205f5b33fa",
+      "bytes": 239,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/attributes/f_1/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_attributes_f_1_0.bin",
+      "sha256": "b6bafff23d9cd0178742e0b52f9faa3b25294622076a6fbd2d57fade45dfd1d0",
+      "bytes": 40,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/attributes/f_2/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_attributes_f_2_0.bin",
+      "sha256": "96e3d989651e922c0d2d6f077a83d16369bd8fdfae7cb5ded6dca08b23112101",
+      "bytes": 62,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/attributes/f_3/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_attributes_f_3_0.bin",
+      "sha256": "ed627e9ff9649aa999478a94e84fbd47dcb5409afda90c9b5c27135468e9f853",
+      "bytes": 62,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/attributes/f_4/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_attributes_f_4_0.bin",
+      "sha256": "7f788616ac043cad9dac50184fda0597d6daff2c9828d9fa35500180b40dc00a",
+      "bytes": 22,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-0/attributes/f_5/0",
+      "path": "nodes_17-0-3-1-1-2-0-0_attributes_f_5_0.bin",
+      "sha256": "830de7fa6bca27219368c7e7a35b27cfe6138197fdc0df7b7627ff2764c9141b",
+      "bytes": 40,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/features/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_features_0.bin",
+      "sha256": "11ad53b18b0eb2bf687d7f373d011751ebf2b33008b7f792aac6cae4ee5ec71f",
+      "bytes": 2164,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/geometries/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_geometries_0.bin",
+      "sha256": "049d0eacd38272ed8ef08457ba21f5114873b16b6579c1ea9b60c0cad4db4b22",
+      "bytes": 1522008,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/attributes/f_0/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_attributes_f_0_0.bin",
+      "sha256": "12ea951c46646e7c095e36b366d244ea561a8ea9fddd88e6af854473805a9e0d",
+      "bytes": 109,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/attributes/f_1/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_attributes_f_1_0.bin",
+      "sha256": "63c069322a216c91aeefc5b3ebd44741b3e736984d32db1ae0b190e43f779521",
+      "bytes": 20,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/attributes/f_2/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_attributes_f_2_0.bin",
+      "sha256": "df8178e6ec88c618dcc838f255326617cb74831fbcb85d133ccc880286c9f3de",
+      "bytes": 32,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/attributes/f_3/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_attributes_f_3_0.bin",
+      "sha256": "390d97a2d2e6139299e66933133616e1a2de310ed20bb22936cc24f653df8996",
+      "bytes": 32,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/attributes/f_4/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_attributes_f_4_0.bin",
+      "sha256": "3239398971c63e9230cd98281388dc7d877de19c58be8dfb2e5ee2ef20d6e9d8",
+      "bytes": 12,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-0-3/attributes/f_5/0",
+      "path": "nodes_17-0-3-1-1-2-0-3_attributes_f_5_0.bin",
+      "sha256": "071bbafc6f25fbcd4829550894f0a686085fe65d44fb5ba6d997ee490f55de0b",
+      "bytes": 20,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/features/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_features_0.bin",
+      "sha256": "c06f2e2022d949f598ad5d4de62b0db656bcd9959a0d4a28955fff5b42bf5d8d",
+      "bytes": 2142,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/geometries/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_geometries_0.bin",
+      "sha256": "dec60aaf3738d71db1e6f429b46f983a76963b74b6cee30c52ae6f3c6e2006fb",
+      "bytes": 2849976,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/attributes/f_0/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_attributes_f_0_0.bin",
+      "sha256": "8e146790b795327c72ba5ade8f398a2a7faf5eba793d2cf5686b9fc6492ddec5",
+      "bytes": 103,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/attributes/f_1/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_attributes_f_1_0.bin",
+      "sha256": "3cde0a1740eb5fbed4d3d494b6e5b277b6edd92b5591b0aef809a45e40f8a13e",
+      "bytes": 20,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/attributes/f_2/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_attributes_f_2_0.bin",
+      "sha256": "a12c38cc23c8ac1c8f88e2953ea2a3b2e2278b702ce518986042bb3a0b54cae9",
+      "bytes": 32,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/attributes/f_3/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_attributes_f_3_0.bin",
+      "sha256": "a6668fe6fc3c9c3062ae82c21a976db7ca9d4b5e04e2ac0a97a71265a6020717",
+      "bytes": 32,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/attributes/f_4/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_attributes_f_4_0.bin",
+      "sha256": "3239398971c63e9230cd98281388dc7d877de19c58be8dfb2e5ee2ef20d6e9d8",
+      "bytes": 12,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-1-2-2-2/attributes/f_5/0",
+      "path": "nodes_17-0-3-1-1-2-2-2_attributes_f_5_0.bin",
+      "sha256": "f408664bf8a9824bf9cecd8cbe346b5f32a22e771420817dd392c235774703fb",
+      "bytes": 20,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/features/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_features_0.bin",
+      "sha256": "7b5798a230928217bcb79cac655057a42cb24eefa96408c10ed61f912bcdb290",
+      "bytes": 3144,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/geometries/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_geometries_0.bin",
+      "sha256": "bd26968ddc1737c67eb53efe901838d37b29f52b2e88795eda1f8f8b4eceaf21",
+      "bytes": 1772184,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/attributes/f_0/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_attributes_f_0_0.bin",
+      "sha256": "4807ca3ce51262a18a339ee62c096d8ec1bfd736bfc3cf70273a7f86535cf3ae",
+      "bytes": 175,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/attributes/f_1/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_attributes_f_1_0.bin",
+      "sha256": "2da1c29d072a1c08b3a58c5ffff8ad71478e1cb16680b7323e674b92d051bf15",
+      "bytes": 32,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/attributes/f_2/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_attributes_f_2_0.bin",
+      "sha256": "6b861b3b00f01c853f6c4f9c0fda454f6526c38b94bfc79fdc40b772a3de2e41",
+      "bytes": 50,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/attributes/f_3/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_attributes_f_3_0.bin",
+      "sha256": "68c5a3016c44c9b8a748114f87300d88dd24918c35d9954bc458cf560c016008",
+      "bytes": 50,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/attributes/f_4/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_attributes_f_4_0.bin",
+      "sha256": "37c8c8dcee6178818808b960a57ffdfa3c170122861f37002d090dfecc2e3cbb",
+      "bytes": 18,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-1/attributes/f_5/0",
+      "path": "nodes_17-0-3-1-2-1-3-1_attributes_f_5_0.bin",
+      "sha256": "a31208c55b5ee0db821c80d18d9ddbd06d0270aec9ca9f5abdd6735f56147191",
+      "bytes": 32,
+      "retrieved": "2026-09-12T13:34:27.505Z",
+      "reusedVerifiedArchive": true
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/features/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_features_0.bin",
+      "sha256": "5f48b9ba7b00371dfd32b6a3fe3e2a80b8023f63aea3c94c6a3b1398defe500f",
+      "bytes": 2139,
+      "retrieved": "2026-09-29T19:44:10.483Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/geometries/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_geometries_0.bin",
+      "sha256": "4a8afd7f3d6759288b2b4b0c162d2c945159e1b5e8ebab9e54c03faa9a3b6f8f",
+      "bytes": 1390680,
+      "retrieved": "2026-09-29T19:44:10.740Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/attributes/f_0/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_attributes_f_0_0.bin",
+      "sha256": "e5908d3ac4ebf3345e6c362bde031fe06a2c6eb619954a4f03a31677de7edb12",
+      "bytes": 106,
+      "retrieved": "2026-09-29T19:44:11.299Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/attributes/f_1/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_attributes_f_1_0.bin",
+      "sha256": "420877443486cb914a7362358006571f138c9176560110cacfbc6c4af475c314",
+      "bytes": 20,
+      "retrieved": "2026-09-29T19:44:11.932Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/attributes/f_2/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_attributes_f_2_0.bin",
+      "sha256": "6983e6c673938a9d7628aec1fc11e6af6d23a170f9993c02ad308334fb967591",
+      "bytes": 32,
+      "retrieved": "2026-09-29T19:44:12.477Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/attributes/f_3/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_attributes_f_3_0.bin",
+      "sha256": "ef4b1b2906f52071b54158c1b5ab41edd4dd076a1dd34f8e996552cd7970ae0a",
+      "bytes": 32,
+      "retrieved": "2026-09-29T19:44:12.756Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/attributes/f_4/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_attributes_f_4_0.bin",
+      "sha256": "3239398971c63e9230cd98281388dc7d877de19c58be8dfb2e5ee2ef20d6e9d8",
+      "bytes": 12,
+      "retrieved": "2026-09-29T19:44:12.898Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-0-3-1-2-1-3-3/attributes/f_5/0",
+      "path": "nodes_17-0-3-1-2-1-3-3_attributes_f_5_0.bin",
+      "sha256": "b167a2631674d524c331c765810518d994b284f90b7e92463d49003cd4517b81",
+      "bytes": 20,
+      "retrieved": "2026-09-29T19:44:13.046Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/features/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_features_0.bin",
+      "sha256": "c040a42037f06b1170c0848c5396ee5cf4698a1d26059c504e181fb0ad554c08",
+      "bytes": 2140,
+      "retrieved": "2026-09-29T19:44:13.228Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/geometries/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_geometries_0.bin",
+      "sha256": "7b5b7720977fdfb4877f1e865767ab93e378ad86aa9cee158fed3a86937f477a",
+      "bytes": 1081368,
+      "retrieved": "2026-09-29T19:44:13.388Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_attributes_f_0_0.bin",
+      "sha256": "0a730d852599e011bbf54c0d3f253fa6e2912bf4e150616cfd3883fc2af46f80",
+      "bytes": 103,
+      "retrieved": "2026-09-29T19:44:13.564Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_attributes_f_1_0.bin",
+      "sha256": "cfab807e06512452e18f5051f232aca933230e55acfb3a4b2f791b3ecd6561e2",
+      "bytes": 20,
+      "retrieved": "2026-09-29T19:44:13.737Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_attributes_f_2_0.bin",
+      "sha256": "a12c38cc23c8ac1c8f88e2953ea2a3b2e2278b702ce518986042bb3a0b54cae9",
+      "bytes": 32,
+      "retrieved": "2026-09-29T19:44:13.870Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_attributes_f_3_0.bin",
+      "sha256": "a6668fe6fc3c9c3062ae82c21a976db7ca9d4b5e04e2ac0a97a71265a6020717",
+      "bytes": 32,
+      "retrieved": "2026-09-29T19:44:14.046Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_attributes_f_4_0.bin",
+      "sha256": "3239398971c63e9230cd98281388dc7d877de19c58be8dfb2e5ee2ef20d6e9d8",
+      "bytes": 12,
+      "retrieved": "2026-09-29T19:44:14.247Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-0/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-0-3-2-0_attributes_f_5_0.bin",
+      "sha256": "7806d7f95b34a702779078b167e9eb79017d1716f1dd131364356e2233a0d680",
+      "bytes": 20,
+      "retrieved": "2026-09-29T19:44:14.463Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/features/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_features_0.bin",
+      "sha256": "fee67b754244948cc70656383ab27e772935856621e2372959998a5b9cb765cc",
+      "bytes": 1442,
+      "retrieved": "2026-09-29T19:44:14.688Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/geometries/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_geometries_0.bin",
+      "sha256": "7515e9b82aabd4c2fb5c24af73c4e0f53ad0284a11cb3d810d411b28fe2eac9f",
+      "bytes": 168520,
+      "retrieved": "2026-09-29T19:44:14.846Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_attributes_f_0_0.bin",
+      "sha256": "2f4c209bd9614e512e5cb749d9d40456f5daa2cedcda68288e30f508d53880e8",
+      "bytes": 56,
+      "retrieved": "2026-09-29T19:44:14.939Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_attributes_f_1_0.bin",
+      "sha256": "957de14269aba0e394c45e391da24ecd488d7467740040782c9dc17eb3eb2b7b",
+      "bytes": 12,
+      "retrieved": "2026-09-29T19:44:15.067Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_attributes_f_2_0.bin",
+      "sha256": "66d1cba5f19dd2131adca82efaba7b1dab487baa49b1e9d1b682776de9fe62c1",
+      "bytes": 20,
+      "retrieved": "2026-09-29T19:44:15.243Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_attributes_f_3_0.bin",
+      "sha256": "7cb7891066b5c30e82c1800c0b32c2beff69bf66405c97a6d4c3a922b6e946ee",
+      "bytes": 20,
+      "retrieved": "2026-09-29T19:44:15.376Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_attributes_f_4_0.bin",
+      "sha256": "ac741b2bca13b9edd4c717ee04ff6bb1c5c498a08cd487562c372e4b30c48097",
+      "bytes": 8,
+      "retrieved": "2026-09-29T19:44:15.455Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-1/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-0-3-2-1_attributes_f_5_0.bin",
+      "sha256": "592e9705e92765c728094778742a610276f85ebefa8b2a623e563c06368ef9d4",
+      "bytes": 12,
+      "retrieved": "2026-09-29T19:44:15.620Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/features/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_features_0.bin",
+      "sha256": "5b6e99ddf5b3502ca994fc5e5719f386c0e01ae60b26eee0ba05b7347c5e3e5f",
+      "bytes": 3834,
+      "retrieved": "2026-09-29T19:44:15.767Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/geometries/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_geometries_0.bin",
+      "sha256": "6dbed0b1ca0c7c793e37c3be025ee79220ee6b02924ac9ede704dc682696857a",
+      "bytes": 2274200,
+      "retrieved": "2026-09-29T19:44:15.980Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/attributes/f_0/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_attributes_f_0_0.bin",
+      "sha256": "80ca17bc0fa8d639ed856259d03c641c7407e2c63a35357024b3e8742e66740d",
+      "bytes": 222,
+      "retrieved": "2026-09-29T19:44:16.116Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/attributes/f_1/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_attributes_f_1_0.bin",
+      "sha256": "5fdd8e772feb813a6529b7e33eab1d04dab73c40c4d606e2f60129f3b766b8be",
+      "bytes": 40,
+      "retrieved": "2026-09-29T19:44:16.232Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/attributes/f_2/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_attributes_f_2_0.bin",
+      "sha256": "96e3d989651e922c0d2d6f077a83d16369bd8fdfae7cb5ded6dca08b23112101",
+      "bytes": 62,
+      "retrieved": "2026-09-29T19:44:16.381Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/attributes/f_3/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_attributes_f_3_0.bin",
+      "sha256": "ed627e9ff9649aa999478a94e84fbd47dcb5409afda90c9b5c27135468e9f853",
+      "bytes": 62,
+      "retrieved": "2026-09-29T19:44:16.491Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/attributes/f_4/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_attributes_f_4_0.bin",
+      "sha256": "7f788616ac043cad9dac50184fda0597d6daff2c9828d9fa35500180b40dc00a",
+      "bytes": 22,
+      "retrieved": "2026-09-29T19:44:16.631Z",
+      "reusedVerifiedArchive": false
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/Buildings_Models_3D/SceneServer/layers/0/nodes/17-1-2-0-0-3-2-2/attributes/f_5/0",
+      "path": "nodes_17-1-2-0-0-3-2-2_attributes_f_5_0.bin",
+      "sha256": "9e16509f58a9b2c691f92464619153f5fa62ecf66d4d1f45829ddce2d97e84cc",
+      "bytes": 40,
+      "retrieved": "2026-09-29T19:44:16.770Z",
+      "reusedVerifiedArchive": false
+    }
+  ],
+  "archive": {
+    "path": "source-nodes.tar.gz",
+    "sha256": "7f37b59317269b97bc75c82876aeb3541ac657ce1fd83d5e3d106fc2c4479032",
+    "bytes": 986937,
+    "contents": "Exact source node/geometry/feature/attribute payloads; no source imagery/textures"
+  }
+}

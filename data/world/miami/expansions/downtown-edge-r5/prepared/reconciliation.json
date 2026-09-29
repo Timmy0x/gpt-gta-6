@@ -1,0 +1,62 @@
+{
+  "overlap": [
+    {
+      "source": "city-streets",
+      "sharedIds": 2,
+      "geometryIdentical": 2,
+      "ids": [
+        14180,
+        16449
+      ]
+    },
+    {
+      "source": "city-water",
+      "sharedIds": 2,
+      "geometryIdentical": 2,
+      "ids": [
+        123,
+        212
+      ]
+    },
+    {
+      "source": "city-shoreline",
+      "sharedIds": 2,
+      "geometryIdentical": 2,
+      "ids": [
+        144,
+        167
+      ]
+    },
+    {
+      "source": "county-buildings",
+      "sharedIds": 4,
+      "geometryIdentical": 4,
+      "ids": [
+        264201,
+        421299,
+        711064,
+        836407
+      ]
+    }
+  ],
+  "shared3dSourceIds": [
+    36752,
+    37651,
+    52984
+  ],
+  "shared3dCount": 3,
+  "terrainGridPhaseColumns": 0.0,
+  "terrainGridPhaseRows": -539.9999999998223,
+  "seamAdjacentPixelStep": -0.9999999996068988,
+  "seamAdjacentSampleAbsoluteDeltaM": {
+    "maximum": 0.5637297928333282,
+    "mean": 0.030529851435373227,
+    "interpretation": "Adjacent ~1m cells, not same-point survey residual; large curb/riverbank gradients require local inspection."
+  },
+  "strip": {
+    "width": 600,
+    "height": 1620,
+    "bytes": 3888000,
+    "noSyntheticSamples": true
+  }
+}

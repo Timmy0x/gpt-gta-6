@@ -1,0 +1,2 @@
+# Preserve exact acquired and compiled geometry bytes; never treat binary samples as text.
+*.bin binary

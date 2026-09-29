@@ -55,7 +55,10 @@ test('opening the source panel also closes the weapon wheel input path', () => {
 });
 test('a visual hold renders the current physical pose while still permitting camera recovery', () => {
   const render = callback('scene.onBeforeRenderObservable.add'); assert.ok(ts.isBlock(render.body));
-  const throughPlayer = render.body.statements.slice(0, 4).map(statement => statement.getText(source)).join('\n');
+  const playerStatement = render.body.statements.findIndex(statement => ts.isExpressionStatement(statement)
+    && ts.isCallExpression(statement.expression) && statement.expression.expression.getText(source) === 'player.render');
+  assert.ok(playerStatement>=0,'execute through the actual player.render statement rather than a fixed source line count');
+  const throughPlayer = render.body.statements.slice(0, playerStatement+1).map(statement => statement.getText(source)).join('\n');
   let alpha = -1, look = false;
   run(throughPlayer, {
     scene: { _physicsTimeAccumulator: 4 }, physics: { getSubTimeStep: () => 1000 / 60 },

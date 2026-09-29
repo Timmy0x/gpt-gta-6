@@ -1,0 +1,22 @@
+{
+  "features3D": 38,
+  "triangles": 75098,
+  "geographicBytes": 8110584,
+  "years": [
+    2015
+  ],
+  "excludedOutsideAOI": 176,
+  "terrainPixels": 324000,
+  "terrainRangeM": [
+    0.06093987822532654,
+    7.678861141204834
+  ],
+  "archiveBytes": 986937,
+  "archiveSha256": "7f37b59317269b97bc75c82876aeb3541ac657ce1fd83d5e3d106fc2c4479032",
+  "shared3DCount": 3,
+  "seam": {
+    "maximum": 0.5637297928333282,
+    "mean": 0.030529851435373227,
+    "interpretation": "Adjacent ~1m cells, not same-point survey residual; large curb/riverbank gradients require local inspection."
+  }
+}

@@ -13,4 +13,8 @@ test('long-session frame history retains raw stalls in chronological order acros
   assert.deepEqual(history.latest(3), tail.slice(-3));
   history.push(Number.NaN);
   assert.deepEqual(history.latest(3), tail.slice(-3));
+  history.clear();
+  assert.deepEqual(history.latest(),[]);
+  history.push(1700);history.push(16);
+  assert.deepEqual(history.latest(),[1700,16],'fresh sample drops the old wrapped window and retains new stalls');
 });

@@ -1,0 +1,25 @@
+{
+  "baseline": "9cf3af6c1a1ee5df559d93eec098bbefa1121d27",
+  "files": [
+    {
+      "path": "src/world/miami/visuals/StreamedMiamiVisuals.ts",
+      "bytes": 12199,
+      "sha256": "2d39973ea58d38d98fcd02dac51458e35d948fe9e774b1db7758e3ac4954bcde"
+    },
+    {
+      "path": "src/world/miami/visuals/FailedTileFallback.ts",
+      "bytes": 1703,
+      "sha256": "2eaaaf77f3d679a033da02eda1ea9c4c388273bf0bf5917768f91b44dd7f7520"
+    },
+    {
+      "path": "tests/miami-detail-profile.test.ts",
+      "bytes": 17792,
+      "sha256": "9b65a290d338b6651a0a66a3e97c0b90b2d36d4a16736cb4615e734e074258a8"
+    },
+    {
+      "path": "tests/fixtures/miami-detail-profile.ts",
+      "bytes": 6503,
+      "sha256": "89e51ee9e91bb8b7eef5a691432936cc5e4c29fd261c8e78d5525f2d9630e438"
+    }
+  ]
+}

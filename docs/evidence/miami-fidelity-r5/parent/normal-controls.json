@@ -1,0 +1,44 @@
+{
+  "scope": "Normal UI functional checks in actual locally built game; not visual parity, a matched A/B benchmark, or performance acceptance.",
+  "date": "2026-09-29",
+  "backend": "WebGL2",
+  "resolution": [
+    1280,
+    720
+  ],
+  "steps": [
+    {
+      "action": "Existing restricted Cesium token connected through local form; enter free roam",
+      "result": "Brickell rendered; Google/Cesium source attribution visible; credential kept only in browser memory."
+    },
+    {
+      "action": "Pause Map detail High; Save sandbox; select Ultra; Load sandbox; Export performance",
+      "result": "Restored high, 12 pixel requested error, visible phase, 215 visible tiles."
+    },
+    {
+      "action": "Restart sample; select Ultra and resume; export performance",
+      "result": "Ultra, 8 pixel requested error, visible phase, 301 visible tiles; restarted sampleStartedAt 2026-09-29T20:15:54.565Z; 3279 raw frames and 3279 samples in every CPU stage."
+    },
+    {
+      "action": "Back; select Balanced; Save sandbox",
+      "result": "Balanced selected and sandbox saved."
+    },
+    {
+      "action": "World map \u2192 Fast travel to SW 5TH ST; await source-loading indicator hidden; return to Brickell Avenue \u00b7 SE 8th Street",
+      "result": "Travel completed and source rendered, but nearby captured vegetation intersects the camera/character. This is a retained visual/physical correspondence defect, not evidence of finished street fidelity."
+    }
+  ],
+  "shortInitialSample": {
+    "scope": "4.809active seconds at spawn; settings changed and other nativework may occur concurrently; no broadbenchmarkclaim",
+    "frames": 249,
+    "medianFps": 59.88023945684179,
+    "onePercentLowFps": 7.477567298327866,
+    "maxFrameMs": 275.40000000596046
+  },
+  "visualDefects": [
+    "Captured trees and cars remain photogrammetric blobs",
+    "Close pavement and sidewalk detail is distorted",
+    "Source/physical surface mismatch and character support need further work"
+  ],
+  "capture": "ActualCUAscreenshotdisplayedinline;APIreturnedJPEGbyteswithoutalocalpath. No fabricatedimagepath."
+}

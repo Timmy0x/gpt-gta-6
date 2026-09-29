@@ -5,19 +5,28 @@ import {LHTilesRenderer,type LHTile} from './LHTilesRenderer';
 import {ResourceLedger,resourceLedgerPlugin,type ResourceSummary} from './resource-ledger';
 import {StreamStatus,streamStatusPlugin,type StreamSnapshot} from './stream-status';
 import {ScopedProviderTransport,type VisualFetch} from './ScopedProviderTransport';
-import {connection,MIAMI_VISUAL_ORIGIN,safeFailure,VisualConnectionError,type VisualConnection,type VisualCredit,type VisualProvider,type VisualErrorCode} from './VisualConnectionTypes';
+import {FailedTileFallback} from './FailedTileFallback';
+import {abortError,connection,MIAMI_VISUAL_ORIGIN,safeFailure,VisualConnectionError,type VisualConnection,type VisualCredit,type VisualProvider,type VisualErrorCode} from './VisualConnectionTypes';
 export {MIAMI_VISUAL_ORIGIN,VisualConnectionError};
 export type {VisualConnection,VisualCredit,VisualProvider};
 export type VisualPhase='disconnected'|'connecting'|'loading'|'visible'|'partial'|'failed'|'disposed';
+/** Requested framebuffer SSE targets; a selection never certifies achieved source detail. */
+export const VISUAL_DETAIL_PROFILES=Object.freeze({balanced:20,high:12,ultra:8} as const);
+export type VisualDetailProfile=keyof typeof VISUAL_DETAIL_PROFILES;
+function detailProfile(value:unknown):VisualDetailProfile {
+ if(value!=='balanced'&&value!=='high'&&value!=='ultra')throw new RangeError('Unsupported visual detail profile.');
+ return value;
+}
 export interface VisualSnapshot {
  readonly phase:VisualPhase;readonly provider:VisualProvider|null;readonly rootLoaded:boolean;
  readonly visibleTiles:number;readonly creditVersion:number;readonly requiresGoogleBranding:boolean;
  readonly error:Readonly<{code:VisualErrorCode;httpStatus:number|null;scope:'root'|'tile'|'frame'}>|null;
  readonly countLimit:960;readonly resources:Readonly<ResourceSummary>|null;readonly stream:Readonly<StreamSnapshot>|null;
+ readonly detailProfile:VisualDetailProfile;readonly errorTargetPixels:20|12|8;
  /** This module never establishes physical collision or safe-travel readiness. */
  readonly collisionReady:false;
 }
-export interface VisualOptions {fetch?:VisualFetch;onChange?:(state:VisualSnapshot)=>void;}
+export interface VisualOptions {fetch?:VisualFetch;onChange?:(state:VisualSnapshot)=>void;detailProfile?:VisualDetailProfile;}
 interface Session {
  renderer:LHTilesRenderer;transport:ScopedProviderTransport;abort:AbortController;resources:ResourceLedger;stream:StreamStatus;
  root:boolean;provider:VisualProvider;failure:VisualSnapshot['error'];resourceInfo:ResourceSummary|null;streamInfo:StreamSnapshot|null;
@@ -25,23 +34,55 @@ interface Session {
 function freeze<T>(value:T):T{if(value&&typeof value==='object'&&!Object.isFrozen(value)){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 /** Only fixed errors enter the pinned renderer's own failure log; no global console hook is installed. */
 class PrivateTileRenderer extends LHTilesRenderer {
+ readonly failedFallback=new FailedTileFallback();
+ #updating=false;#fallbackPrepared=false;#disposed=false;
  preprocessTileset(json:Tileset&{asset:{gltfUpAxis?:string}},url:string,parent:Tile|null=null){try{return super.preprocessTileset(json,url,parent);}catch(error){throw safeFailure(error);}}
  preprocessNode(tile:LHTile,directory:string,parent:LHTile|null=null){try{return super.preprocessNode(tile,directory,parent);}catch(error){throw safeFailure(error);}}
  async parseTile(buffer:ArrayBuffer,tile:LHTile,extension:string,url:string,signal:AbortSignal){try{return await super.parseTile(buffer,tile,extension,url,signal);}catch(error){throw safeFailure(error);}}
+ prepareForTraversal(){if(this.#disposed){if(this.#updating)throw abortError();return;}super.prepareForTraversal();if(this.#updating){this.failedFallback.prepare();this.#fallbackPrepared=true;}}
+ update(){
+  if(this.#disposed||this.#updating)return;
+  this.#updating=true;
+  try{return super.update();}finally{this.failedFallback.restore();this.#fallbackPrepared=false;this.#updating=false;}
+ }
+ dispatchEvent(event:{type:string;[key:string]:unknown}){
+  const wasUpdating=this.#updating&&!this.#disposed;
+  if(event.type==='load-error'&&event.tile)this.failedFallback.failed(event.tile as Tile);
+  const resume=this.#fallbackPrepared&&event.type!=='update-after';
+  if(event.type==='update-after')this.#fallbackPrepared=false;
+  // Observers always see the genuine backend state, including visibility callbacks.
+  this.failedFallback.restore();
+  super.dispatchEvent(event);
+  // A callback may disconnect or replace this session. Do not resume its captured old root.
+  if(wasUpdating&&this.#disposed)throw abortError();
+  if(resume&&!this.#disposed)this.failedFallback.prepare();
+ }
+ disposeTile(tile:LHTile){this.failedFallback.forgotten(tile);super.disposeTile(tile);}
+ dispose(){if(this.#disposed)return;this.#disposed=true;this.#fallbackPrepared=false;this.failedFallback.dispose();super.dispose();}
 }
 /** Scene-owned visual streaming. It never creates an engine, scene, camera, pipeline or collision body. */
 export class StreamedMiamiVisuals {
  #scene:Scene;#fetch:VisualFetch;#onChange:VisualOptions['onChange'];#sceneObserver:Observer<Scene>|null;
  #session:Session|null=null;#saved:VisualConnection|null=null;#closed=false;#credits:readonly VisualCredit[]=Object.freeze([]);#creditSignature='[]';#creditVersion=0;
  #snapshot:VisualSnapshot;#signature='';#dirty=true;
+ #detailProfile:VisualDetailProfile;
  constructor(scene:Scene,options:VisualOptions={}){
   if(scene.useRightHandedSystem)throw new VisualConnectionError('camera');
+  this.#detailProfile=detailProfile(options.detailProfile??'balanced');
   this.#scene=scene;this.#fetch=options.fetch??globalThis.fetch.bind(globalThis);this.#onChange=options.onChange;
-  this.#snapshot=freeze({phase:'disconnected',provider:null,rootLoaded:false,visibleTiles:0,creditVersion:0,requiresGoogleBranding:false,error:null,countLimit:960,resources:null,stream:null,collisionReady:false});
+  this.#snapshot=freeze({phase:'disconnected',provider:null,rootLoaded:false,visibleTiles:0,creditVersion:0,requiresGoogleBranding:false,error:null,countLimit:960,resources:null,stream:null,collisionReady:false,detailProfile:this.#detailProfile,errorTargetPixels:VISUAL_DETAIL_PROFILES[this.#detailProfile]});
   this.#sceneObserver=scene.onDisposeObservable.add(()=>this.dispose());
  }
  snapshot():VisualSnapshot{return this.#snapshot;}
  credits():readonly VisualCredit[]{return this.#credits;}
+ /** Reuses this scene's connection/cache; ordinary update applies the next refinement frontier. */
+ setDetailProfile(value:VisualDetailProfile):boolean {
+  const profile=detailProfile(value);
+  if(this.#closed||profile===this.#detailProfile)return false;
+  this.#detailProfile=profile;
+  if(this.#session)this.#session.renderer.errorTarget=VISUAL_DETAIL_PROFILES[profile];
+  this.#dirty=true;this.#publish();return true;
+ }
  connect(input:VisualConnection):void{
   const config=connection(input);if(this.#closed)throw new VisualConnectionError('disposed');
   if(this.#scene.useRightHandedSystem||!this.#scene.activeCamera)throw new VisualConnectionError('camera');
@@ -53,7 +94,7 @@ export class StreamedMiamiVisuals {
   renderer.lruCache.maxSize=960;renderer.lruCache.minSize=640;
   // The backend's byte estimate is1, so these are tracker safeguards, not a measured memory budget.
   renderer.lruCache.maxBytesSize=128*1024*1024;renderer.lruCache.minBytesSize=96*1024*1024;
-  renderer.downloadQueue.maxJobsPerOrigin=4;renderer.parseQueue.maxJobs=2;renderer.errorTarget=20;renderer.loadAncestors=true;renderer.loadSiblings=false;renderer.checkCollisions=false;
+  renderer.downloadQueue.maxJobsPerOrigin=4;renderer.parseQueue.maxJobs=2;renderer.errorTarget=VISUAL_DETAIL_PROFILES[this.#detailProfile];renderer.loadAncestors=true;renderer.loadSiblings=false;renderer.checkCollisions=false;
   renderer.addEventListener('load-root-tileset',()=>{if(this.#session===session){session.root=true;this.#dirty=true;}});
   renderer.addEventListener('load-error',event=>{if(this.#session!==session)return;const error=safeFailure(event.error);session.failure={code:error.code,httpStatus:error.status,scope:event.tile?'tile':'root'};this.#dirty=true;});
   this.#dirty=true;this.#publish();if(this.#session===session)this.update();
@@ -80,7 +121,7 @@ export class StreamedMiamiVisuals {
   if(signature!==this.#creditSignature){this.#creditSignature=signature;this.#credits=freeze(unique);this.#creditVersion++;this.#dirty=true;}
  }
  #publish(){
-  const session=this.#session,value:VisualSnapshot=freeze({phase:this.#phase(session),provider:session?.provider??null,rootLoaded:session?.root??false,visibleTiles:session?.renderer.visibleTiles.size??0,creditVersion:this.#creditVersion,requiresGoogleBranding:Boolean(session?.renderer.visibleTiles.size&&session.transport.googleBranding),error:session?.failure??null,countLimit:960,resources:session?.resourceInfo??null,stream:session?.streamInfo??null,collisionReady:false});
+  const session=this.#session,value:VisualSnapshot=freeze({phase:this.#phase(session),provider:session?.provider??null,rootLoaded:session?.root??false,visibleTiles:session?.renderer.visibleTiles.size??0,creditVersion:this.#creditVersion,requiresGoogleBranding:Boolean(session?.renderer.visibleTiles.size&&session.transport.googleBranding),error:session?.failure??null,countLimit:960,resources:session?.resourceInfo??null,stream:session?.streamInfo??null,collisionReady:false,detailProfile:this.#detailProfile,errorTargetPixels:VISUAL_DETAIL_PROFILES[this.#detailProfile]});
   const signature=JSON.stringify(value);this.#snapshot=value;this.#dirty=false;if(signature===this.#signature)return;this.#signature=signature;
   try{this.#onChange?.(value);}catch{/* UI notification failures must not alter renderer ownership. */}
  }

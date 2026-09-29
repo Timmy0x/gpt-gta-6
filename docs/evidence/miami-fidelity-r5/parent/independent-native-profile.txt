@@ -1,0 +1,31 @@
+TAP version 13
+# BJS - [16:03:53]: Babylon.js v9.25.0 - Null engine
+# {"scope":"Independent synthetic actual native scene/Havok ordering; no live FPS claim","steps":3,"first":{"collisionStreaming":{"samples":1,"meanMs":3.4914580000004207,"medianMs":3.4914580000004207,"p95Ms":3.4914580000004207,"maxMs":3.4914580000004207},"cameraAndPose":{"samples":1,"meanMs":2.2261250000001382,"medianMs":2.2261250000001382,"p95Ms":2.2261250000001382,"maxMs":2.2261250000001382},"visualTraversal":{"samples":1,"meanMs":1.1485830000001442,"medianMs":1.1485830000001442,"p95Ms":1.1485830000001442,"maxMs":1.1485830000001442},"sceneCpu":{"samples":1,"meanMs":29,"medianMs":29,"p95Ms":29,"maxMs":29},"physicsCpu":{"samples":1,"meanMs":15,"medianMs":15,"p95Ms":15,"maxMs":15},"activeMeshEvaluation":{"samples":1,"meanMs":4,"medianMs":4,"p95Ms":4,"maxMs":4}},"heldPhysics":{"samples":2,"meanMs":7.5,"medianMs":7.5,"p95Ms":15,"maxMs":15},"restarted":{"collisionStreaming":{"samples":1,"meanMs":0,"medianMs":0,"p95Ms":0,"maxMs":0},"cameraAndPose":{"samples":1,"meanMs":2.0084170000000086,"medianMs":2.0084170000000086,"p95Ms":2.0084170000000086,"maxMs":2.0084170000000086},"visualTraversal":{"samples":1,"meanMs":1.0071250000000873,"medianMs":1.0071250000000873,"p95Ms":1.0071250000000873,"maxMs":1.0071250000000873},"sceneCpu":{"samples":1,"meanMs":3,"medianMs":3,"p95Ms":3,"maxMs":3},"physicsCpu":{"samples":1,"meanMs":0,"medianMs":0,"p95Ms":0,"maxMs":0},"activeMeshEvaluation":{"samples":1,"meanMs":0,"medianMs":0,"p95Ms":0,"maxMs":0}}}
+# Subtest: actual native scene lifecycle reports current CPU, sums all physical substeps and excludes outside-render application work
+ok 1 - actual native scene lifecycle reports current CPU, sums all physical substeps and excludes outside-render application work
+  ---
+  duration_ms: 152.438791
+  type: 'test'
+  ...
+# BJS - [16:03:53]: Babylon.js v9.25.0 - Null engine
+# Subtest: native instrumentation releases every installed observer and repeated disposal remains harmless
+ok 2 - native instrumentation releases every installed observer and repeated disposal remains harmless
+  ---
+  duration_ms: 17.449459
+  type: 'test'
+  ...
+# Subtest: raw history keeps long stalls and restart drops the old window; CPU summaries cannot be paired to same-index raw intervals
+ok 3 - raw history keeps long stalls and restart drops the old window; CPU summaries cannot be paired to same-index raw intervals
+  ---
+  duration_ms: 6.646625
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6618.234625

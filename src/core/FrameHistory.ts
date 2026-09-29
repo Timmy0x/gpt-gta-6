@@ -13,6 +13,7 @@ export class FrameHistory {
     this.cursor = (this.cursor + 1) % this.values.length;
     this.count = Math.min(this.count + 1, this.values.length);
   }
+  clear(): void { this.cursor = 0; this.count = 0; }
   latest(limit = this.count): number[] {
     const length = Math.max(0, Math.min(this.count, Math.floor(limit)));
     const start = (this.cursor - length + this.values.length) % this.values.length;

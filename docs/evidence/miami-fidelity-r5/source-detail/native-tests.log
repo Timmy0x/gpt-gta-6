@@ -1,0 +1,181 @@
+TAP version 13
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: scene-owned detail profiles select actual native loaded frontiers in place and retain all source safeguards
+ok 1 - scene-owned detail profiles select actual native loaded frontiers in place and retain all source safeguards
+  ---
+  duration_ms: 369.919083
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: all scene-owned thresholds preserve exact framebuffer SSE across native camera/projection/viewport changes
+ok 2 - all scene-owned thresholds preserve exact framebuffer SSE across native camera/projection/viewport changes
+  ---
+  duration_ms: 113.93025
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: delayed fine children retain visible ancestor and a late inflight child cannot replace a newly selected coarse frontier
+ok 3 - delayed fine children retain visible ancestor and a late inflight child cannot replace a newly selected coarse frontier
+  ---
+  duration_ms: 113.120667
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:51]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:51]: Babylon.js v9.25.0 - Null engine
+# Subtest: failed HTTP/network/unsupported fine children keep coarse coverage, truthful callback states and fixed errors without retries
+ok 4 - failed HTTP/network/unsupported fine children keep coarse coverage, truthful callback states and fixed errors without retries
+  ---
+  duration_ms: 481.679667
+  type: 'test'
+  ...
+# BJS - [15:56:53]: Babylon.js v9.25.0 - Null engine
+# Subtest: finer requested frontiers respect the production 960-item cap and keep a coarse ancestor when capacity cannot cover children
+ok 5 - finer requested frontiers respect the production 960-item cap and keep a coarse ancestor when capacity cannot cover children
+  ---
+  duration_ms: 2049.7875
+  type: 'test'
+  ...
+# Subtest: detail selection survives scene-owned disconnect/retry and disposal rejects further changes without persisting credentials
+ok 6 - detail selection survives scene-owned disconnect/retry and disposal rejects further changes without persisting credentials
+  ---
+  duration_ms: 123.693042
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: scene-owned ion→Google connection retains the actual game camera, geometry, all credits and fixed origin
+ok 7 - scene-owned ion→Google connection retains the actual game camera, geometry, all credits and fixed origin
+  ---
+  duration_ms: 112.760292
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: moving the existing camera hides and restores visual coverage and credits without reconnecting
+ok 8 - moving the existing camera hides and restores visual coverage and credits without reconnecting
+  ---
+  duration_ms: 35.648417
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: disconnect aborts a pending endpoint and reconnect cannot receive late assets or stale credits
+ok 9 - disconnect aborts a pending endpoint and reconnect cannot receive late assets or stale credits
+  ---
+  duration_ms: 58.258417
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: initial401 recovers once while403/503 remain terminal and explicit retry rebuilds a fresh connection
+ok 10 - initial401 recovers once while403/503 remain terminal and explicit retry rebuilds a fresh connection
+  ---
+  duration_ms: 62.386625
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: scene disposal releases owned tiles and callbacks; immutable summaries are sampled rather than emitted every frame
+ok 11 - scene disposal releases owned tiles and callbacks; immutable summaries are sampled rather than emitted every frame
+  ---
+  duration_ms: 28.070458
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: normal ion bearer and version stay on the issued origin; cross-origin content receives no private auth fields
+ok 12 - normal ion bearer and version stay on the issued origin; cross-origin content receives no private auth fields
+  ---
+  duration_ms: 19.2765
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: persistent401 is bounded and tile parse failures expose no credential-bearing content labels or raw error text
+ok 13 - persistent401 is bounded and tile parse failures expose no credential-bearing content labels or raw error text
+  ---
+  duration_ms: 19.724542
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+# VisualConnectionError: Visual source request failed (401).
+#     at ScopedProviderTransport.\#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-fidelity-r5-renderer/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+#     at ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-fidelity-r5-renderer/src/world/miami/visuals/ScopedProviderTransport.ts:78:8)
+#     at runNextTicks (node:internal/process/task_queues:64:5)
+#     at listOnTimeout (node:internal/timers:547:9)
+#     at process.processTimers (node:internal/timers:521:7) {
+#   code: 'http',
+#   status: 401
+# }
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+# VisualConnectionError: Visual source request failed (503).
+#     at ScopedProviderTransport.\#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-fidelity-r5-renderer/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+#     at ScopedProviderTransport.\#json (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-fidelity-r5-renderer/src/world/miami/visuals/ScopedProviderTransport.ts:30:8)
+#     at <anonymous> (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-fidelity-r5-renderer/src/world/miami/visuals/ScopedProviderTransport.ts:67:86)
+#     at runNextTicks (node:internal/process/task_queues:64:5)
+#     at listOnTimeout (node:internal/timers:547:9)
+#     at process.processTimers (node:internal/timers:521:7)
+#     at async ScopedProviderTransport.\#renew (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-fidelity-r5-renderer/src/world/miami/visuals/ScopedProviderTransport.ts:67:245)
+#     at async ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-fidelity-r5-renderer/src/world/miami/visuals/ScopedProviderTransport.ts:75:29) {
+#   code: 'http',
+#   status: 503
+# }
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: nested Google401 renews with a key-only root, propagates the new session, and bounds persistent failures
+ok 14 - nested Google401 renews with a key-only root, propagates the new session, and bounds persistent failures
+  ---
+  duration_ms: 133.715792
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: ion external Google endpoint uses the pinned presence contract instead of a guessed externalType enum
+ok 15 - ion external Google endpoint uses the pinned presence contract instead of a guessed externalType enum
+  ---
+  duration_ms: 69.959833
+  type: 'test'
+  ...
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:56:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: native core traversal has exact original view decisions through changing camera, projection, framebuffer, viewport and group states
+ok 16 - native core traversal has exact original view decisions through changing camera, projection, framebuffer, viewport and group states
+  ---
+  duration_ms: 195.279208
+  type: 'test'
+  ...
+# Subtest: a stable native update builds one frustum for 1001 tile queries and independent direct calls stay fresh
+ok 17 - a stable native update builds one frustum for 1001 tile queries and independent direct calls stay fresh
+  ---
+  duration_ms: 22.32
+  type: 'test'
+  ...
+# Subtest: before/after listeners, plugin-skipped updates, rootless updates and exceptions cannot retain stale view math
+ok 18 - before/after listeners, plugin-skipped updates, rootless updates and exceptions cannot retain stale view math
+  ---
+  duration_ms: 7.034708
+  type: 'test'
+  ...
+# Subtest: outgoing traversal events invalidate the cached view before listeners query a moved camera
+ok 19 - outgoing traversal events invalidate the cached view before listeners query a moved camera
+  ---
+  duration_ms: 1.510458
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6292.982625

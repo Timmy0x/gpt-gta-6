@@ -52,6 +52,7 @@ import { Navigation } from "./gameplay/Navigation";
 import { PhysicsInterpolation } from "./core/PhysicsInterpolation";
 import { Atmosphere } from "./core/Atmosphere";
 import { FrameHistory } from "./core/FrameHistory";
+import { SceneCpuProfile } from "./core/SceneCpuProfile";
 import { summarizeFrames } from "./core/PerformanceReport";
 import { nearbyGarage, serviceAtGarage } from "./gameplay/Garage";
 const ui = new UI();
@@ -212,6 +213,9 @@ async function boot() {
     } finally { loadingWorld = false; setPause(previousPause); }
   }
   const frameTimes = new FrameHistory();
+  const cpuProfile = new SceneCpuProfile(scene);
+  scene.onDisposeObservable.addOnce(()=>cpuProfile.dispose());
+  let sampleStartedAt = new Date().toISOString();
   let raceMarker: Mesh | null = null;
   const racePoints: Vector3[] = []; // Real Miami routes require an authored activity record.
   async function resetPlayer(reason: string) {
@@ -330,6 +334,7 @@ async function boot() {
           peds: population.density,
           traffic: population.trafficDensity,
           quality,
+          "map-detail": visuals.snapshot().detailProfile,
           police: population.policeEnabled,
           "sim-speed": simSpeed,
           sound: audio.enabled,
@@ -415,6 +420,8 @@ async function boot() {
       ui.onAction("stats", String(s.settings.stats));
     if (["high", "medium", "low"].includes(String(s.settings.quality)))
       ui.onAction("quality", String(s.settings.quality));
+    if (["balanced", "high", "ultra"].includes(String(s.settings["map-detail"])))
+      ui.onAction("map-detail", String(s.settings["map-detail"]));
     if (s.props) damage.restoreState(s.props);
     else damage.restore(s.destroyed);
     for (const p of population.pedestrians.filter((p) => p.creative))
@@ -788,13 +795,14 @@ async function boot() {
       const rawFrames = frameTimes.latest();
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const report = {
-        schema: 1, capturedAt: new Date().toISOString(), worldId: world.worldId,
+        schema: 2, capturedAt: new Date().toISOString(), sampleStartedAt, worldId: world.worldId,
         backend, quality, resolution: [engine.getRenderWidth(), engine.getRenderHeight()],
         browser: navigator.userAgent, logicalProcessors: navigator.hardwareConcurrency,
         scope: "Most recent 108000 unpaused rendered frames. Menus and travel/vehicle loading pauses excluded; unpaused collision/visual holds and raw stalls retained. This is a sample, not an acceptance verdict.",
         metadataScope: "Settings, resolution, scene and memory values describe export time. Earlier frame samples may use other quality settings or viewport sizes.",
         onePercentLowDefinition: "1000 divided by mean duration of the slowest ceil(frameCount * 0.01) frames",
         frames: summarizeFrames(rawFrames), rawFrameMs: rawFrames,
+        cpu: cpuProfile.snapshot(),
         jsHeapBytes: memory ? { used: memory.usedJSHeapSize, total: memory.totalJSHeapSize, limit: memory.jsHeapSizeLimit } : null,
         memoryScope: "JS heap only when available. Public source buffers and visual resource estimates below exclude other allocations and are not measured VRAM or process memory.",
         population: { pedestrians: population.pedestrians.length, drivers: population.drivers.length, police: population.policeStats },
@@ -804,6 +812,13 @@ async function boot() {
       setPause(true);
       ui.showPerformanceReport(JSON.stringify(report, null, 2));
       return;
+    }
+    if (action === "performance-reset") {
+      frameTimes.clear(); cpuProfile.clear(); sampleStartedAt=new Date().toISOString();
+      ui.showPanel(""); setPause(false); return;
+    }
+    if (action === "map-detail" && (value==='balanced'||value==='high'||value==='ultra')) {
+      visuals.setDetailProfile(value);
     }
     if (action === "quality") {
       quality = value!;
@@ -902,13 +917,17 @@ async function boot() {
       ? 1
       : Math.max(0, Math.min(1, accumulator / physics.getSubTimeStep()));
     interpolation.render(alpha);
+    const cameraStarted = performance.now();
     player.render(
       renderDt,
       alpha,
       !ui.panel && !paused && !collisionHeld && !sourcePanelOpen && !weaponWheel.active && player.deadTimer <= 0,
     );
     combat.render(0);
+    cpuProfile.record('cameraAndPose',performance.now()-cameraStarted);
+    const traversalStarted=performance.now();
     visuals.update(performance.now());
+    cpuProfile.record('visualTraversal',performance.now()-traversalStarted);
     const sourceState = visuals.snapshot();
     if (sourceState !== lastSourceState) {
       lastSourceState = sourceState;
@@ -934,6 +953,7 @@ async function boot() {
       dt = Math.min(rawDt, 0.1);
     lastFrame = now;
     renderDt = dt;
+    cpuProfile.beginFrame();
     frame++;
     input.poll();
     if (ui.pollGamepad(input.gamepad, dt)) input.clear();
@@ -994,6 +1014,7 @@ async function boot() {
       weather === "Rain" ? 0.003 : weather === "Haze" ? 0.004 : 0.00125;
     // Keep support beneath every dynamic body, including sleeping cars and corpses.
     // A 210 m collision halo exceeds the maximum five-step displacement (8.4 m).
+    const collisionStarted=performance.now();
     const anchors = new Map<string, Vector3>();
     for (const body of physics.getBodies()) {
       if (body.isDisposed || body.getMotionType() === PhysicsMotionType.STATIC) continue;
@@ -1010,6 +1031,7 @@ async function boot() {
     world.ensureCollision(player.position);
     world.update(paused ? 0 : dt, player.position, time, weather);
     collisionHeld = !world.collisionReady(player.position);
+    cpuProfile.record('collisionStreaming',performance.now()-collisionStarted);
     scene.physicsEnabled = started && !paused && !loadingWorld && !collisionHeld && !sourcePanelOpen && !visualHeld;
     sourceControls.setCollisionLoading(collisionHeld);
     atmosphere.update(paused ? 0 : dt, player.position, time, weather, paused);
@@ -1050,6 +1072,7 @@ async function boot() {
     if (started && !paused) {
       frameTimes.push(rawDt * 1000);
     }
+    cpuProfile.endFrame(started&&!paused);
     hudTime += dt;
     if (hudTime > 0.09) {
       hudTime = 0;
@@ -1081,6 +1104,7 @@ async function boot() {
         ammo: combat.unlimited,
         noclip: player.noclip,
         quality,
+        "map-detail": visuals.snapshot().detailProfile,
         sound: audio.enabled,
         stats,
       };

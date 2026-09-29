@@ -4,6 +4,22 @@ Baseline **2026-09-09**, with an independent implementation-status update below.
 
 Evidence IDs link to [references.md](references.md); geometry to [map-atlas.md](map-atlas.md); asset families to [asset-catalog.md](asset-catalog.md). **C** = confirmed GTA VI identity/theme, **O** = observed official image/caption (specified), **V** = GTA V-inspired fallback whose direct behavior evidence is still pending, **I** = inferred reconstruction/project specification, **A** = creative-mode addition. A row can combine identity evidence with inferred mechanics. No unpublished numeric value below is represented as Rockstar's specification.
 
+## 2026-09-29 Miami source and performance acceptance
+
+Later user instructions replace the fictional geographic layout with uncompressed City of Miami reconstruction, beginning in Brickell, and authorize immediate pushes after every commit. They do not waive the complete game, physics, animation, visual or sustained-performance requirements. The accepted runtime baseline is `9cf3af6`; its 393 native tests and production build passed, and the exact public deployed bundle is verified in the next checkpoint's evidence. The live connected area is approximately 1.2 km square, with 34 supported dry-ground destinations. Whole-city fidelity remains unverified and incomplete.
+
+| Requirement | Authoritative evidence and current limit | Next acceptance |
+|---|---|---|
+| Source appearance | Live Google/Cesium rendering with credits; close street views visibly distort trees, sidewalks and captured cars | Compare finer available source frontiers at the same reference viewpoints; record source gaps instead of fabricating exact geometry |
+| Public source geometry | County 2015 meshes, City street vectors and USGS one-metre terrain within the retained acquisition rectangle; datum realization is provisional | Extend contiguous acquisition, join stable original feature IDs, reconcile overlap and compile/test every new native surface before making travel available |
+| Physical streaming | 51 chunks, 437 exact collision records; existing all-destination native checks; safety holds retain stalls in frame reports | Bound synchronous native shape preparation without dropping triangles, exposing collision holes or resuming before active-body support is complete |
+| Sustained performance | R4 live 793×1344 WebGL2 High: 43.86 median FPS, 1.41 FPS 1% low over 252.47 active seconds | Retain raw frame durations; identify actual CPU stages and loader work; pass 60/30 at 1080p over 30 minutes of traversal/pursuit |
+| Characters | Only two licensed civilian skins and prototype responder representations; local injury/death persistence tested | Expand distinct assets and review every animation/physical reaction through normal controls |
+| Water/air/map boundary | Current mapped dry support excludes unsupported bridge decks and waterbeds, including overwater flight | Acquire/author explicitly sourced deck and water support, then integrate swim/boat/aircraft traversal without escaping world support |
+| Every visible object | County structures block movement, but provider-captured trees, furniture and parked cars lack complete independent physical equivalents | Acquire semantic public inventories/usable assets and validate location, physical response and damage for each object class |
+
+The R5 source-detail checkpoint passes all 401 integrated native tests and production build; normal local UI verifies connected High/Ultra detail, sandbox enum persistence and CPU/report reset. New north-of-Brickell public sources are acquired and verified, but are not yet playable. Native preparation scheduling and the masked source expansion compiler remain separate pending checkpoints. None of these checks proves whole-Miami visual fidelity, every-object physics or the sustained 1080p performance targets.
+
 ## Shared authored defaults
 
 These defaults make acceptance concrete; the implementation may refine them through tested tuning, updating the record and changelog. They are **specifications, not assertions about current code**.

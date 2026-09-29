@@ -1,0 +1,40 @@
+{
+  "baseline": "9cf3af6c1a1ee5df559d93eec098bbefa1121d27",
+  "files": [
+    {
+      "path": "src/main.ts",
+      "bytes": 51802,
+      "sha256": "f1b6309fbb79c93039cc958aef07a84a51018bd09ba5159f997ea7d6bd76d449"
+    },
+    {
+      "path": "src/ui/UI.ts",
+      "bytes": 34492,
+      "sha256": "ed721d171b5a5da9ddcac7cff21714d4082e10de4551effec110f14964bacb64"
+    },
+    {
+      "path": "src/core/FrameHistory.ts",
+      "bytes": 1021,
+      "sha256": "46e6a49cee74d6a3882b8d42296ca0baf33d8d5d00ef851019775b7c65aa9cad"
+    },
+    {
+      "path": "src/core/SceneCpuProfile.ts",
+      "bytes": 2826,
+      "sha256": "b4ecc4ed50c78760a0091b500dc3530c1ee2a0627a1ce24c7eb92fddb4394105"
+    },
+    {
+      "path": "tests/scene-cpu-profile.test.ts",
+      "bytes": 2745,
+      "sha256": "e45794ea7a0ce87709d02255b977dba483975008d378865154ac30d6febb8f06"
+    },
+    {
+      "path": "tests/frame-history.test.ts",
+      "bytes": 987,
+      "sha256": "f332f8c60ca3ce0ec024550990b32fd44d38a412c83dab8e67d2c2fb445662df"
+    },
+    {
+      "path": "tests/miami-runtime-hold.test.ts",
+      "bytes": 6052,
+      "sha256": "a73767ed08caec73a298ce101023b7173fa521073270da309a9c8ee783b875d1"
+    }
+  ]
+}

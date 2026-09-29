@@ -1,0 +1,278 @@
+{
+  "scope": "Frozen independently prepared official public source cell and exact original source archive; no proprietary imagery/provider-derived collision/credentials; not runtime integration",
+  "baseline": "9cf3af6",
+  "files": [
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/README.md",
+      "sha256": "b51ffcd1de22c905347a57c9f0b41ff90c7c19fc806ef693ea440aa70b8913c8",
+      "bytes": 10049
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/i3s/manifest.json",
+      "sha256": "31d680a7c2b47b01149a7a42647c10a37e67e589a2d503c6f340c07efd845ab7",
+      "bytes": 68646
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/i3s/source-nodes.tar.gz",
+      "sha256": "7f37b59317269b97bc75c82876aeb3541ac657ce1fd83d5e3d106fc2c4479032",
+      "bytes": 986937
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/manifest.json",
+      "sha256": "bda0559293bcaba5732dd01cbb5db079da86fa28404b7bed623cdd9558da8810",
+      "bytes": 46684
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-shoreline-ids.json",
+      "sha256": "add0ad07c70d4577384e67f4a4c25cfdba94aa4ff9080b387a397b91b866e70e",
+      "bytes": 49
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-shoreline-item.json",
+      "sha256": "15b96d6e01a76d749c05004b81ac239728a08671b24a63916f0e48cb55ef6bec",
+      "bytes": 3829
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-shoreline-layer.json",
+      "sha256": "6a7659543311ea1dcf89f1d32422dd6f120fbed686e124a868364687f3d14721",
+      "bytes": 12185
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-streets-ids.json",
+      "sha256": "93362a9fa94931f3bdb8d6bc3b01c8efc3945b7231c13cdf518051947f8a0480",
+      "bytes": 534
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-streets-item.json",
+      "sha256": "1c59ef039f6c2b9e89c706da007a166530c7689c7f4b6b5922400f657b5e9af8",
+      "bytes": 2520
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-streets-layer.json",
+      "sha256": "45d34df2eff760e8e3c025756b90cb251fc0d74af938ad9d47ceb255a1b474fa",
+      "bytes": 25153
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-water-ids.json",
+      "sha256": "c95fe2771a00df7199c52db41258bd63c242b01b78d7810826b41aad08369fd1",
+      "bytes": 49
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-water-item.json",
+      "sha256": "818ac6655185263e8d90850f48c255ab6a2a34c359867ef1a297b534ac3fb414",
+      "bytes": 4190
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/city-water-layer.json",
+      "sha256": "78c49d91b8b2c18cc7059edb70f9dd862040cee7f34dfda962b8594a98103175",
+      "bytes": 13060
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/county-3d-item.json",
+      "sha256": "407c9728875718e2bf0552ccc970e46d607709c11b15f4947e4723e6e4c22f5c",
+      "bytes": 3948
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/county-3d-layer.json",
+      "sha256": "bd573dd7e6fbb58084e2b9219da14ed74d1008969c9828175215f2d71f850cd6",
+      "bytes": 5017
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/county-buildings-ids.json",
+      "sha256": "afd22ba6fd2fde3bf228c28bdce50b1e643428e0674ef3be26e7f065ae61443f",
+      "bytes": 448
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/county-buildings-item.json",
+      "sha256": "4124310ba492a939f2f9cbe40b66caf2c851103354a1e7009d14ece2eb454df9",
+      "bytes": 5274
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/county-buildings-layer.json",
+      "sha256": "e6dbc6565c775a5e7628310f15cd58933552b7467dc2b829b606de4de991533a",
+      "bytes": 12824
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/usgs-dem-product-request.json",
+      "sha256": "93077b37e27bc426e5fbcc6a209ba6e8f90b0fa5a10cafde66810827376bfad3",
+      "bytes": 286
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/usgs-dem-product.xml",
+      "sha256": "7648dbe3435bc22741f03ed65e07eed59d270f17878522b9d20ea1b29aa41de9",
+      "bytes": 13456
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/usgs-sciencebase-item.json",
+      "sha256": "1ae7b6c418c4d8a510878009514cd2f3f6f543f47b07d85ff823701ac66beb6b",
+      "bytes": 9482
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/usgs-sciencebase-request.json",
+      "sha256": "2a483f5e9684fe898f09c216d5fd71a260d84cc098444837a2babc086740c3bb",
+      "bytes": 233
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/usgs-tnm-products.json",
+      "sha256": "b499be4287c9a41570480d2c7a46ec8123e172b5b3581fabd0efd744595f2b74",
+      "bytes": 8254
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/metadata/usgs-tnm-request.json",
+      "sha256": "d526450bfe1896d9b6f59bb396bbbeff3d6741b9230fa4190efac188c82c42f1",
+      "bytes": 323
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/i3s-geographic.bin",
+      "sha256": "0f89a4d1d29edf9b45bf4de2fd57fc565606acc04164163dd5aee36fbf9a54c5",
+      "bytes": 8110584
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/i3s-geographic.json",
+      "sha256": "0de9ef126618553132df4a62e6211fa9b01833d5bcdd7359920c1e93ba83b838",
+      "bytes": 34948
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/reconciliation.json",
+      "sha256": "6fd7271ac0e7de66845484b68b8a330690e20e78ec3a5d7c466d8295a90e091b",
+      "bytes": 1216
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/source-coverage.png",
+      "sha256": "94e9d48b904a445d1756ea8a9e4c9e481e7a8695c2e5c60c89ad107af1b905e4",
+      "bytes": 108176
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/summary.json",
+      "sha256": "37678d83df48a92a1f4e4ce31bf1b303cd48f27f07baecbc7df4cd92aecc28b4",
+      "bytes": 585
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/terrain/grid.json",
+      "sha256": "fe5870906a09f2d283e947fba3b430d258afe72da7e8ff20d079d6517567da0c",
+      "bytes": 1637
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/terrain/heights.f32",
+      "sha256": "3d2dccfda8a05d88ddf3c1936d3745dffd791d38f3b96879e255c355ffa5cb2e",
+      "bytes": 1296000
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/terrain/northwest-strip-grid.json",
+      "sha256": "82f6b5b8ac77e2343251c4c8757ad986ec0b30928e8d1ac5020742c528f2335f",
+      "bytes": 2380
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/terrain/northwest-strip-heights.f32",
+      "sha256": "3cd8904363e54c5ea4b31fc21dffc80af2567718b2cc1bdcd13cd541f36b3016",
+      "bytes": 3888000
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/terrain/northwest-strip-source-mask.u8",
+      "sha256": "9adfb36dbf5a8082c8ce8c0da272b6daceca067104be186a022bb9502ba68641",
+      "bytes": 972000
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/terrain/source-mask.u8",
+      "sha256": "b6561d13dd094c653bbe0d83767f268818fd7783b8eaa2fcb1666426ca0cc271",
+      "bytes": 324000
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/prepared/verification.json",
+      "sha256": "49da5de1dc048060f8fa353c9b1b21f1415ba790bc0e60d918e3b5e0db338b60",
+      "bytes": 12776
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/city-shoreline-0.geojson",
+      "sha256": "bd2cac473eb907be818bdcec7c27224b234e47b2ccc479b02591a72c6dab6d71",
+      "bytes": 4149
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/city-shoreline.geojson",
+      "sha256": "bf459964d3cee91f21401ee79665cd586b6e2a2c3e637f60c3a7a9e3fd6d6396",
+      "bytes": 4091
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/city-streets-0.geojson",
+      "sha256": "5c2b71540344b99a53ba39615ca0257a4c185541ebe1922b980b15f6b5054796",
+      "bytes": 99063
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/city-streets.geojson",
+      "sha256": "bffca1815edc6cc0829501bb95236f724ff7aff92a3f8749de015d10ae8c550b",
+      "bytes": 98983
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/city-water-0.geojson",
+      "sha256": "d93185c10e18a01bc899a6ef52de085d2e12bb9998f3ee81b146f6b77f433b3e",
+      "bytes": 4346
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/city-water.geojson",
+      "sha256": "157ed0282d2c243dab357ec0d36afd272e24433f978247edcb5d1f73fe0f1f7d",
+      "bytes": 4289
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/county-buildings-0.geojson",
+      "sha256": "255830ee37ad51daa0cfde79660fb6d9393fee0bc6abeeb75aa0b03019381c42",
+      "bytes": 73155
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/raw/county-buildings.geojson",
+      "sha256": "d0c932f5cab0ddf4749f7cfef72bce9ea5fc21e720e960c6d65226fb2b349c03",
+      "bytes": 73075
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/terrain/catalog.json",
+      "sha256": "0b8fe12df8a54b27ff42a8d5df499b39be413796c9f0031a7d8ceeba346ff746",
+      "bytes": 26608
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/terrain/dem.tif",
+      "sha256": "2dc299c94031a102dc5c979fba5e1f085c2a8fd7277b50a0acff0d01bdd82157",
+      "bytes": 1304389
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/terrain/export.json",
+      "sha256": "060e58098b8315f49e8816de988b02e2e37c224506786db63c7b405d8feaf88c",
+      "bytes": 349
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/terrain/manifest.json",
+      "sha256": "24d059b4a670152bd44dbdee36a5867ffc4cbd0bc0b6b9cd0eba1ad4f0a943de",
+      "bytes": 1807
+    },
+    {
+      "path": "data/world/miami/expansions/downtown-edge-r5/terrain/service.json",
+      "sha256": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb",
+      "bytes": 12981
+    },
+    {
+      "path": "scripts/world/miami/acquire-expansion-r5.mjs",
+      "sha256": "6e2aec6bcde83b32a0336fc58715e52d6108c985e2c3a9e8a74db80b7190169e",
+      "bytes": 12501
+    },
+    {
+      "path": "scripts/world/miami/acquire-expansion-metadata-r5.mjs",
+      "sha256": "3135993693f0a47e67e6faa9fbeb5a18423b9c1e4e1c5a27398b7dff3439ef9c",
+      "bytes": 2327
+    },
+    {
+      "path": "scripts/world/miami/prepare-expansion-r5.py",
+      "sha256": "eca19563ba621ffb8852754a335865df18ed0765c9e09485e8aa03bc2e63d798",
+      "bytes": 11506
+    },
+    {
+      "path": "scripts/world/miami/verify-expansion-r5.ts",
+      "sha256": "8d347af20fdbd48058b906e245f60bc3f0ef9501c0b33435668ed0c48f2378e1",
+      "bytes": 5568
+    },
+    {
+      "path": "scripts/world/miami/plot-expansion-r5.py",
+      "sha256": "b27ff1b59c300be858917b881ce87ffb33216f24df5302cc747903f146e33213",
+      "bytes": 3545
+    }
+  ],
+  "rawI3SCachePolicy": "Exact .bin payloads are in i3s/source-nodes.tar.gz; per-payload hashes in i3s/manifest.json; unpack before offline preparation",
+  "totalRetainedBytes": 17728464
+}

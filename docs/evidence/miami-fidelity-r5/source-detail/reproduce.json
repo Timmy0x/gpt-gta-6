@@ -1,0 +1,154 @@
+{
+  "scope": "Actual pinned native traversal/importer/scoped transport using original synthetic fixture-only responses. No real provider requests/content/tokens, browser rendering or FPS acceptance.",
+  "dependencies": {
+    "babylon": "9.25.0",
+    "tilesRenderer": "0.5.2"
+  },
+  "directGoogleFrontiers": [
+    {
+      "profile": "balanced",
+      "errorTargetPixels": 20,
+      "visibleOriginalFixtureMeshes": [
+        "level-0"
+      ],
+      "rootRequests": 1,
+      "contentRequests": 1,
+      "countLimit": 960,
+      "residentTiles": 1,
+      "collisionReady": false,
+      "googleBranding": true
+    },
+    {
+      "profile": "high",
+      "errorTargetPixels": 12,
+      "visibleOriginalFixtureMeshes": [
+        "level-1"
+      ],
+      "rootRequests": 1,
+      "contentRequests": 2,
+      "countLimit": 960,
+      "residentTiles": 2,
+      "collisionReady": false,
+      "googleBranding": true
+    },
+    {
+      "profile": "ultra",
+      "errorTargetPixels": 8,
+      "visibleOriginalFixtureMeshes": [
+        "level-2"
+      ],
+      "rootRequests": 1,
+      "contentRequests": 3,
+      "countLimit": 960,
+      "residentTiles": 3,
+      "collisionReady": false,
+      "googleBranding": true
+    }
+  ],
+  "ionToGoogleFrontiers": [
+    {
+      "profile": "balanced",
+      "errorTargetPixels": 20,
+      "visibleOriginalFixtureMeshes": [
+        "level-0"
+      ],
+      "rootRequests": 1,
+      "contentRequests": 1,
+      "countLimit": 960,
+      "residentTiles": 1,
+      "collisionReady": false,
+      "googleBranding": true
+    },
+    {
+      "profile": "high",
+      "errorTargetPixels": 12,
+      "visibleOriginalFixtureMeshes": [
+        "level-1"
+      ],
+      "rootRequests": 1,
+      "contentRequests": 2,
+      "countLimit": 960,
+      "residentTiles": 2,
+      "collisionReady": false,
+      "googleBranding": true
+    },
+    {
+      "profile": "ultra",
+      "errorTargetPixels": 8,
+      "visibleOriginalFixtureMeshes": [
+        "level-2"
+      ],
+      "rootRequests": 1,
+      "contentRequests": 3,
+      "countLimit": 960,
+      "residentTiles": 3,
+      "collisionReady": false,
+      "googleBranding": true
+    }
+  ],
+  "failedChild": {
+    "profile": "high",
+    "errorTargetPixels": 12,
+    "phase": "partial",
+    "error": {
+      "code": "http",
+      "httpStatus": 503,
+      "scope": "tile"
+    },
+    "visibleOriginalFixtureMeshes": [
+      "level-0"
+    ],
+    "failedChildRequests": 1,
+    "rootRequests": 1,
+    "collisionReady": false
+  },
+  "productionCap": {
+    "requestedSyntheticChildren": 1000,
+    "profile": "high",
+    "errorTargetPixels": 12,
+    "cache": {
+      "admitted": 960,
+      "countLimit": 960,
+      "countLimitReached": 1,
+      "protectedUsed": 960,
+      "settledIncludingFailed": 960,
+      "trackedByteLimitReached": 0
+    },
+    "queues": {
+      "downloadPending": 0,
+      "downloadRunning": 0,
+      "downloadOriginQueues": 1,
+      "downloadLimitPerOrigin": 4,
+      "parsePending": 0,
+      "parseRunning": 0,
+      "parseLimit": 2,
+      "nodePending": 0,
+      "nodeRunning": 0,
+      "nodeLimit": 25,
+      "originScanLimitReached": 0
+    },
+    "renderer": {
+      "cached": 960,
+      "successfulContents": 960,
+      "queuedDownloads": 0,
+      "downloading": 0,
+      "pendingOrParsing": 0,
+      "failedSinceReset": 0,
+      "visible": 1,
+      "active": 1,
+      "traversalUsed": 1001,
+      "inFrustum": 1001,
+      "processedThisUpdate": 0,
+      "processLimit": 250,
+      "frame": 590,
+      "rootReady": 1
+    },
+    "residentSyntheticModels": 960,
+    "visibleOriginalFixtureMeshes": [
+      "level-0"
+    ],
+    "error": null,
+    "collisionReady": false,
+    "memoryScope": "Count cap only; synthetic fixture resources do not estimate real provider RAM/VRAM."
+  }
+}

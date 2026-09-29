@@ -1,0 +1,54 @@
+{
+  "id": "usgs-3dep-downtown-edge-r5",
+  "source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+  "bboxRequested": [
+    -80.199,
+    25.7704,
+    -80.193,
+    25.7758
+  ],
+  "extent": {
+    "xmin": -80.199,
+    "ymin": 25.7704,
+    "xmax": -80.193,
+    "ymax": 25.7758,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    }
+  },
+  "width": 600,
+  "height": 540,
+  "pixelType": "Float32",
+  "units": "meters",
+  "verticalDatum": "NAVD88 (EPSG:5703)",
+  "method": "Original one-meter-source D23 bare-earth samples, bilinear resampling to retained0.00001° WGS84 grid phase. No unmarked fallback, bridge deck, water support or invented fill.",
+  "selectedRasters": [
+    {
+      "OBJECTID": 29040,
+      "Name": "FL_MiamiDade_D23",
+      "Source": "USGS",
+      "VerticalDatum": "North American Vertical Datum of 1988 (NAVD 88)",
+      "AcquisitionDate": 1716940800000,
+      "URL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/FL_MiamiDade_D23/TIFF/USGS_1M_17_x58y286_FL_MiamiDade_D23.tif",
+      "Metadata": "D:\\USGS_3DEP\\data\\1m\\FL_MiamiDade_D23\\USGS_1M_17_x58y286_FL_MiamiDade_D23.xml",
+      "Resolution_X": null,
+      "Resolution_Y": null,
+      "ProductName": "USGS_3DEP",
+      "Best": 9938,
+      "StartDate": 20231227,
+      "EndDate": "20240529"
+    }
+  ],
+  "mosaicRule": {
+    "mosaicMethod": "esriMosaicLockRaster",
+    "lockRasterIds": [
+      29040
+    ],
+    "mosaicOperation": "MT_FIRST"
+  },
+  "attribution": "USGS National Map3D Elevation Program(3DEP)",
+  "license": "USGS-produced public domain data",
+  "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+  "serviceSnapshot": "USGS National Map 3D Elevation Program (3DEP). August 25, 2026."
+}

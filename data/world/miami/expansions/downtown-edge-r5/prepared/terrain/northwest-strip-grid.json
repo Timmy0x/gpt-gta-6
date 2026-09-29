@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "brickell-to-downtown-west-strip-r5-preparation",
+  "source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+  "width": 600,
+  "height": 1620,
+  "binary": "northwest-strip-heights.f32",
+  "componentType": "float32",
+  "byteOrder": "little-endian",
+  "rowOrder": "north-to-south",
+  "columnOrder": "west-to-east",
+  "pixelCenterLongitude": -80.198995,
+  "pixelCenterLatitude": 25.775795,
+  "longitudeStep": 1.0000000000000379e-05,
+  "latitudeStep": -1.0000000000003011e-05,
+  "extentWgs84": {
+    "xmin": -80.199,
+    "xmax": -80.193,
+    "ymin": 25.759600000000002,
+    "ymax": 25.7758
+  },
+  "verticalDatum": "NAVD88 (EPSG:5703)",
+  "units": "meters",
+  "sourceResolutionM": 1,
+  "resampling": "bilinear to retained0.00001-degree WGS84 phase",
+  "minM": -8.31060791015625,
+  "maxM": 7.678861141204834,
+  "noData": -999999.0,
+  "validPixels": 972000,
+  "sourceSha256": "2dc299c94031a102dc5c979fba5e1f085c2a8fd7277b50a0acff0d01bdd82157",
+  "sourceMask": "northwest-strip-source-mask.u8",
+  "sourceMaskSha256": "9adfb36dbf5a8082c8ce8c0da272b6daceca067104be186a022bb9502ba68641",
+  "sourceMaskValues": {
+    "0": "Miami-Dade D23 one-meter sources",
+    "1": "Older coastal NAVD88 source mosaic, fallbackRasters in terrain/manifest.json"
+  },
+  "fallbackPixels": 0,
+  "sha256": "3cd8904363e54c5ea4b31fc21dffc80af2567718b2cc1bdcd13cd541f36b3016",
+  "byteLength": 3888000,
+  "gaps": [
+    "Bare-earth elevations do not establish bridge decks, curbs, tide or bathymetry.",
+    "Water must remain excluded from standing/driving support.",
+    "Horizontal realization/epoch and mixed2015building/D23terrain physical correspondence remain unresolved."
+  ],
+  "inputSources": [
+    {
+      "grid": "data/world/miami/terrain/grid.json",
+      "heightsSha256": "d2341e71bde5597159a542837dc21f0e9efa1a375863c4683f9ae30d9daafc7b",
+      "maskSha256": "70945fa3da47c9eb3d0366310737070d9f8520eefe53ef3fdc540f6c6c9b8869"
+    },
+    {
+      "grid": "prepared/terrain/grid.json",
+      "heightsSha256": "3d2dccfda8a05d88ddf3c1936d3745dffd791d38f3b96879e255c355ffa5cb2e",
+      "maskSha256": "b6561d13dd094c653bbe0d83767f268818fd7783b8eaa2fcb1666426ca0cc271"
+    }
+  ],
+  "method": "New north cell followed by original accepted west600columns, byte-for-byte. Cross-seam samples are real adjacent source cells, no extra terrain values."
+}
