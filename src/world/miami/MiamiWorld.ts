@@ -1,6 +1,6 @@
 import { Vector3, type Scene, type Texture } from '@babylonjs/core';
 import polygonClipping from 'polygon-clipping';
-import type { BuildContext, Obstacle, RoadNode, WorldContract, WorldLocation } from '../../core/contracts';
+import type { BuildContext, Obstacle, RoadNode, WorldContract, WorldLocation, WorldPopulationSite } from '../../core/contracts';
 import { MovementQueries } from '../../gameplay/MovementQueries';
 import { Ocean } from '../Ocean';
 import { PolygonGroundCoverage } from '../PolygonGroundCoverage';
@@ -9,6 +9,7 @@ import type { NetworkStreamingStats } from '../packages';
 import { MiamiResidency } from './MiamiResidency';
 import type { MiamiPackageManifest } from './MiamiPackages';
 import { buildMiamiLaneGraph } from './MiamiRoads';
+import { buildMiamiPopulationSites } from './MiamiPopulationSites';
 import { loadPublicCollisionQueries } from './frame/PublicCollisionQueries';
 import { miamiPolygonGeometry, miamiRectangle } from './MiamiGeometry';
 import { inMiamiBounds, insideMiamiPolygon } from './MiamiQueries';
@@ -26,6 +27,7 @@ export class MiamiWorld implements WorldContract {
   readonly roads:RoadNode[]=[];
   readonly locations:WorldLocation[]=[];
   readonly pedestrianSpawns:Vector3[]=[];
+  readonly pedestrianSites:WorldPopulationSite[]=[];
   readonly streetObjects:StreetObjects;
   readonly ready:Promise<void>;
   ocean!:Ocean;
@@ -98,6 +100,8 @@ export class MiamiWorld implements WorldContract {
     // The verified sidewalk may sit a few metres from the source junction.
     // Prepare its own full collision halo before reporting the world ready.
     await this.residency.preparePosition(this.spawn);
+    this.pedestrianSites.push(...buildMiamiPopulationSites(dataset,this.pedestrianSpawns,
+      (x,z)=>this.queries.floorHeightAt(x,z),(x,z,radius)=>this.hasGroundCoverage(x,z,radius)));
     this.locations.push({id:'brickell-se8',name:'Brickell Avenue · SE 8th Street',x:this.spawn.x,z:this.spawn.z,type:'landmark'});
     for(const name of [...new Set(supported.map(r=>r.name))]){
       const points=supported.filter(r=>r.name===name).flatMap(r=>r.centerline).map(p=>({x:p[0],z:p[2]})).filter(p=>inMiamiBounds(p,bounds,25)&&!this.ocean.contains(p.x,p.z));

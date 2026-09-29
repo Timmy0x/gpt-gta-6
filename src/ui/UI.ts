@@ -156,7 +156,7 @@ export class UI {
   showPerformanceReport(contents: string) {
     this.showPanel("performance");
     const panel = document.querySelector("#panel")!;
-    panel.innerHTML = `<div class="panel-top"><span class="eyebrow">PERFORMANCE</span><button data-action="close" aria-label="Close performance report">✕</button></div><h2>Frame report</h2><a id="performance-download" download="miami-performance.json">Download JSON ↗</a><label>Report<textarea aria-label="Performance report" readonly rows="12" style="width:100%;box-sizing:border-box"></textarea></label><button data-action="pause">Back</button>`;
+    panel.innerHTML = `<div class="panel-top"><span class="eyebrow">PERFORMANCE</span><button data-action="close" aria-label="Close performance report">✕</button></div><h2>Frame report</h2><a id="performance-download" download="miami-performance.json">Download JSON ↗</a><label>Report<textarea aria-label="Performance report" readonly rows="12"></textarea></label><button data-action="pause">Back</button>`;
     panel.querySelector<HTMLTextAreaElement>("textarea")!.value = contents;
     this.performanceReportUrl = URL.createObjectURL(new Blob([contents], { type: "application/json" }));
     panel.querySelector<HTMLAnchorElement>("a")!.href = this.performanceReportUrl;
@@ -170,6 +170,7 @@ export class UI {
     const el = document.querySelector("#panel")!;
     el.classList.toggle("hidden", !panel);
     el.classList.toggle("map-panel", panel === "map");
+    el.classList.toggle("performance-panel", panel === "performance");
     if (!panel) return;
     const head = (label: string, sub: string) =>
       `<div class="panel-top"><span class="eyebrow">LEONIDA / ${sub}</span><button data-action="close">✕</button></div><h2>${label}</h2>`;

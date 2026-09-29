@@ -5,14 +5,14 @@ import type { CharacterDamageKind } from "../combat/injuries";
 export interface SavedBonePose { name:string; position:number[]; rotation:number[]; }
 export interface Casualty { id:string;x:number;y:number;z:number;yaw:number;health?:number;recoverySeconds?:number|null;kind?:CharacterDamageKind;bodyInjuries?:BodyInjuryState;fallen?:boolean;pose?:SavedBonePose[];rootRotation?:number[];vehicleId?:string; }
 export interface PoliceCasualty extends Casualty { role:"patrol"|"swat"; seat?:0|1; }
-export interface PopulationCasualties { version:1|2|3;civilians:Casualty[];guards:Casualty[];police:PoliceCasualty[];nextOfficerId:number; }
-export const CASUALTY_LIMITS={civilians:60,guards:4,police:24} as const;
+export interface PopulationCasualties { version:1|2|3|4;civilians:Casualty[];guards:Casualty[];police:PoliceCasualty[];nextOfficerId:number; }
+export const CASUALTY_LIMITS={civilians:4096,guards:4,police:24} as const;
 export function validateCasualties(value:unknown):value is PopulationCasualties {
   if(!value||typeof value!=="object")return false;
   const s=value as PopulationCasualties;
-  if(![1,2,3].includes(s.version)||!Number.isSafeInteger(s.nextOfficerId)||s.nextOfficerId<1||s.nextOfficerId>1e9)return false;
+  if(![1,2,3,4].includes(s.version)||!Number.isSafeInteger(s.nextOfficerId)||s.nextOfficerId<1||s.nextOfficerId>1e9)return false;
   for(const key of ["civilians","guards","police"] as const){
-    const entries=s[key];if(!Array.isArray(entries)||entries.length>CASUALTY_LIMITS[key])return false;
+    const entries=s[key];if(!Array.isArray(entries)||entries.length>(key==='civilians'&&s.version<4?60:CASUALTY_LIMITS[key]))return false;
     const ids=new Set<string>();
     for(const entry of entries){
       if(!entry||typeof entry.id!=="string"||!(/^[A-Za-z0-9_.:-]{1,96}$/).test(entry.id)||ids.has(entry.id))return false;
@@ -23,7 +23,7 @@ export function validateCasualties(value:unknown):value is PopulationCasualties 
         if(typeof entry.kind!=="string"||!["impact","melee","projectile","explosion","fire"].includes(entry.kind))return false;
         if(entry.health===0&&entry.recoverySeconds!==null)return false;
       }else if(entry.health!==undefined||entry.recoverySeconds!==undefined||entry.kind!==undefined)return false;
-      if(s.version===3){
+      if(s.version>=3){
         if(entry.vehicleId!==undefined&&(typeof entry.vehicleId!=='string'||!(/^[A-Za-z0-9_.:-]{1,96}$/).test(entry.vehicleId)))return false;
         if(typeof entry.fallen!=='boolean'||entry.bodyInjuries!==undefined&&!validateBodyInjuries(entry.bodyInjuries))return false;
         if(entry.rootRotation&&(!Array.isArray(entry.rootRotation)||entry.rootRotation.length!==4||!entry.rootRotation.every(Number.isFinite)||Math.abs(Math.hypot(...entry.rootRotation)-1)>.01))return false;
@@ -34,7 +34,7 @@ export function validateCasualties(value:unknown):value is PopulationCasualties 
       }else if(entry.bodyInjuries!==undefined||entry.fallen!==undefined||entry.pose!==undefined||entry.rootRotation!==undefined||entry.vehicleId!==undefined)return false;
       if(key==="guards"&&!/^reserve-guard-[1-4]$/.test(entry.id))return false;
       if(key==="police"&&(!/^officer-\d+$/.test(entry.id)||Number(entry.id.slice(8))>=s.nextOfficerId||!["patrol","swat"].includes((entry as PoliceCasualty).role)))return false;
-      if(key==='police'&&(entry as PoliceCasualty).seat!==undefined&&(s.version!==3||!entry.vehicleId||![0,1].includes((entry as PoliceCasualty).seat!)))return false;
+      if(key==='police'&&(entry as PoliceCasualty).seat!==undefined&&(s.version<3||!entry.vehicleId||![0,1].includes((entry as PoliceCasualty).seat!)))return false;
       ids.add(entry.id);
     }
   }
@@ -58,7 +58,9 @@ export function snapshotCasualty(id:string,model:Character,health=0):Casualty {
 export function restoreCorpse(model:Character,entry:Casualty):void {
   model.dead=(entry.health??0)<=0;
   model.bodyInjuries=entry.bodyInjuries?cloneBodyInjuries(entry.bodyInjuries):null;
-  const legacy=!entry.bodyInjuries;
+  // Modern healthy crew snapshots deliberately have no limb injuries.
+  // Explicit fallen=false distinguishes them from versions 1–2 knockdowns.
+  const legacy=!entry.bodyInjuries&&entry.fallen!==false;
   model.injury=model.dead||!legacy?null:{kind:entry.kind??'impact',remaining:entry.recoverySeconds??null};
   model.skeleton.returnToRest();model.root.parent=null;model.root.rotationQuaternion=null;model.root.scaling.setAll(1);
   model.root.position.set(entry.x,entry.y,entry.z);

@@ -1,0 +1,358 @@
+{
+  "baseCommit": "ca538bce7a260fbc004ed2e94c868e340675dd24",
+  "candidate": "miami-gameplay-r3-source",
+  "files": [
+    {
+      "path": "docs/continuation.md",
+      "blob": "c036a7ef3b016cabbaf2c447a3227b112bfe8119",
+      "sha256": "dc7c86a234bbbdf46f387a08121e36642883e9ed4f5022b4c416ee13cb47756f",
+      "bytes": 68822,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/README.md",
+      "blob": "4ba6127db59604d007d13a85e1db08e0c2675012",
+      "sha256": "c30f59a025d985e712c879b0b22e165ce6ecec42d339b19176a67823c8b77d59",
+      "bytes": 1955,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/camera-handoff.json",
+      "blob": "2fa9c3693f8f0ff4a7cdcb796cce248805bbdd9c",
+      "sha256": "34a7875b9b13484532627f8cbea1b0e0498bb50a256dd96121447023d71a6e37",
+      "bytes": 3002,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/camera-independent-review.json",
+      "blob": "61e91037f6b11ab528000423547d44f61349b6c2",
+      "sha256": "8a3af3acc07f66660253692c23a5e417e1ca1ca83cfe8e6f16ae33f925c50856",
+      "bytes": 590,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/camera-independent-review.txt",
+      "blob": "4f7eeed742ab123facd39e61cbe0718abafcd95d",
+      "sha256": "bb310e0f41b3b3950884198dc9c3d4d3bfdb4dc25fc325c7dc3696adac84c68c",
+      "bytes": 2364,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/camera-independent.txt",
+      "blob": "4f7eeed742ab123facd39e61cbe0718abafcd95d",
+      "sha256": "bb310e0f41b3b3950884198dc9c3d4d3bfdb4dc25fc325c7dc3696adac84c68c",
+      "bytes": 2364,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/camera-native-tests.txt",
+      "blob": "935e586a4c5f9594fa5cbe4a10d4034b2ea56a40",
+      "sha256": "cbfda1bf621f258ee84dcaf45972c3cf0525962d75c33d72b313758f7bc4187e",
+      "bytes": 6249,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/camera-query-profile.json",
+      "blob": "9d52b8a3751db4702d525f83592e9395fdf8e05e",
+      "sha256": "e5f0adc18fd72deac2c7a41cc8b948a640f34d7a94355f0a509e9e3f2e2af255",
+      "bytes": 750,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/camera-typecheck.txt",
+      "blob": "e8072c22bfdcfefd01c631b3ad1d9ec19046a4ff",
+      "sha256": "d39cc4fb21390899b438cc62ab86252a58aa26826e70a01da7fffc08e33da522",
+      "bytes": 53,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/native-tests.txt",
+      "blob": "acfbe5b07763442db08191d29957697bd2a3e928",
+      "sha256": "f86c2edf9d865a9f94826f57d505f9f6cf200dfc460faf581c52b2fa985e37ba",
+      "bytes": 160883,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/performance-followups/README.md",
+      "blob": "8ca6cdc5759a6a327d42fd449ee90ec4335af0fb",
+      "sha256": "6a4681cb821f6f3045b259c9e82c5268e5e0c3d525b2b273699e80bcf58fa23a",
+      "bytes": 7174,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/performance-followups/native-points-memory-observed.json",
+      "blob": "d3eded115a3e49561a7edecef0d1145314165779",
+      "sha256": "4bde81e01bdf2ee74f1f6f2a75d8de64b8628fcc74c31ef64c6599a0114abfa1",
+      "bytes": 2294,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/performance-followups/native-points-memory.ts",
+      "blob": "6bfc48e75c6b82828a2324c1c9c3f46c244b61c3",
+      "sha256": "63b790b540428e9ab324b59e39c91d88494ac80ff0153e40024e53a66d4eef58",
+      "bytes": 2544,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/performance-followups/tile-view-profile.json",
+      "blob": "99e64f114b2ada0c0e73b584df18a31d9b9b94fe",
+      "sha256": "12904372707ff90e958d1b4e00dc5396df809a5f7e706378511202d04ad0b254",
+      "bytes": 560,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/performance-followups/tile-view-profile.ts",
+      "blob": "2d307bb194056e239eef8a2a56030a4bc94080ab",
+      "sha256": "b8dc359670f10b88fe5d3c875e5c903355c85dd6fe4bbe3371a30e73d5e922f7",
+      "bytes": 4440,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/population-independent.txt",
+      "blob": "9df2e3e98f8451e713b437a01e5451f340be233a",
+      "sha256": "7eadfd601ee89e5ea763aeea36afccc9c0547564740b9971be8e4899b31f2560",
+      "bytes": 1609,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/production-build.txt",
+      "blob": "79e711bfcb03f4ce7d2e1f506e0c5f0db3763bfb",
+      "sha256": "af2cb5e1ed9989104e0ad33875f3af41d8fed9844b818c2fcbe4a70449f7db5d",
+      "bytes": 26880,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/verification.json",
+      "blob": "980ea991d8731925d8275f933cb3a30b72744d50",
+      "sha256": "036f69986e3316eb160d74013b27a690d944fcc95562843b2d3c6a2c3118e8fd",
+      "bytes": 4973,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-police-perception-r3/deployment.json",
+      "blob": "d9a28d1f1d6a42c0ebe630371290769f0dee67f8",
+      "sha256": "7dd1c0b1682dd4fa67f54d95e1adc9d646e8b7442595f40f442b2766eb6f79c4",
+      "bytes": 314,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/focused-final-tests.txt",
+      "blob": "c62a19e70adaa1e4b9e83896273eac44edfefa1a",
+      "sha256": "17d8125b42416aa783a968551643fa7d95779ae8dfd82b39512c34e28d206f2d",
+      "bytes": 2530,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/handoff.md",
+      "blob": "f350753e19b015157f2f0dcd38e45ffe58967043",
+      "sha256": "28290b1abef9e4a1efa9bf0c5c6efbba0a77f132edc6e0943075bc0377c9fd4a",
+      "bytes": 7202,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/independent-prior-repair.txt",
+      "blob": "99994714ffbb4e4125fa5f7ef2305e49a1eddfc2",
+      "sha256": "25ea03f29a301a3c0c3be154ac3350222cc5b324f3325241a644f34a1302862c",
+      "bytes": 1210,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/native-tests.txt",
+      "blob": "8d6c13c6fb4e12c979d61cd1019514ed68aa5611",
+      "sha256": "d105c6ed02823f7d61df746dda507f70f63cd1c1d9c9e0c2d62f48f18e62aee0",
+      "bytes": 5625,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/native-travel.json",
+      "blob": "f6630add3e94796e418ff7feb6af7baa980fd634",
+      "sha256": "7fdd10690047b4b7466cf8bea0bba8d5570a4db899294b38d8eb40a5be6194f3",
+      "bytes": 14291,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/regressions.txt",
+      "blob": "a17ff6d0df5dd15fbfcda8b89c49ae2872227b3d",
+      "sha256": "ef12593baff752debc3ab9d67a9ab25a5c49e417de352866604cb86282e4c7d7",
+      "bytes": 9455,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/source-files.json",
+      "blob": "54597d4becb2dcf9fe2877ab7a5617efc3ccee62",
+      "sha256": "bc3b73261e78455bd68e948f423bd8e9f7525acfac0623ae85d19e1589b99881",
+      "bytes": 1308,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/typecheck.txt",
+      "blob": "e8072c22bfdcfefd01c631b3ad1d9ec19046a4ff",
+      "sha256": "d39cc4fb21390899b438cc62ab86252a58aa26826e70a01da7fffc08e33da522",
+      "bytes": 53,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/wide-canopy-after.txt",
+      "blob": "b0cf03343a500c95ce240ce4a665c49e541d5578",
+      "sha256": "2c8c92c84f991df5a078f22e3c7d32466f982b309d75b5359fe85cc39b8f2dd8",
+      "bytes": 123,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-population-r3/wide-canopy-before.txt",
+      "blob": "6430a293440c7a68e5dd6194f614e76c71ab904e",
+      "sha256": "2b5683477fc4efb7f0a5bc6588895ac2a061abee95bd29883bee0c580c742c96",
+      "bytes": 124,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/miami/camera-and-local-population.md",
+      "blob": "5547896eafbdfe6c40a47b4b43b7b654179f9290",
+      "sha256": "643124cd48d06fdc0d698933fb9dc73b5fbffd2c248653a0f73ea92b5ea7e7f5",
+      "bytes": 3280,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/core/CameraMeshQueries.ts",
+      "blob": "2f395f4c0a736e9bbc6e71a839869b4f887dad67",
+      "sha256": "2be8412682eafb34cb86d931da01ca7ef04d33cef48061b16866dffcfc57f9e2",
+      "bytes": 11436,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/core/CameraOcclusion.ts",
+      "blob": "46097deda57b14c91e3cb32c31abb7c436275178",
+      "sha256": "d867d403bd71c0b2f34d4ce981eb039161e28f0ebb712cb709914e9ad4524a4b",
+      "bytes": 7100,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/core/contracts.ts",
+      "blob": "2b58136df8ccb227056ba54db1752b802164d85b",
+      "sha256": "1d88cf606cadf29c4e9f26e5fc155e17bd95208e26a9b3394d8ae0cdb8892bb8",
+      "bytes": 2084,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/gameplay/CasualtyPlacement.ts",
+      "blob": "a08c7b85449e2fb2dbf4029eaa544dac56ea10b2",
+      "sha256": "81b3c2c2b527a98b666f8e2c75716f066d5b696b9dcc888bdac8de90aa767851",
+      "bytes": 3946,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/gameplay/Player.ts",
+      "blob": "11b103f48c2e8dd068cc620dc1b915b53dd1c4e6",
+      "sha256": "9a1850e199192b18e748df57e5f4574b34b49e35d934d142f832327ca8ebaab9",
+      "bytes": 31302,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/gameplay/Population.ts",
+      "blob": "5215609be49ec9d9f1f1db1b3d60b5884db84d6a",
+      "sha256": "b87decbb381ba05762cb6afc7df984b72cbee324e5ef27b02dddeb8783e39d28",
+      "bytes": 35594,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/gameplay/police/casualties.ts",
+      "blob": "878ed93ed5b5ef70a181c1cf3a301b35ec0c7189",
+      "sha256": "2379383c986b620dc4d6227ca3dd49220c64bea55e89d98e585329586a664e05",
+      "bytes": 7312,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/ui/UI.ts",
+      "blob": "1423948ba1aa8613fe5c04262b85f779b42b3a26",
+      "sha256": "5e9ead5458970263e3c7e1beda72c7157c84e38ebebe379120323e7395918f6e",
+      "bytes": 34379,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/ui/style.css",
+      "blob": "a456ff4ed3063fbe7599a02abd8a10907f0a2664",
+      "sha256": "154c014370ef3e8595770063d7265ef266612205e14e2a670a563773d0fbe1dc",
+      "bytes": 18406,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/world/miami/MiamiPopulationSites.ts",
+      "blob": "2cac1f1a477c71bd679f63b7b429e7e75f1e6609",
+      "sha256": "6c612c24fafbfcadf4167eac43d6cca319517e5407ac3805affd9e1d5603ec56",
+      "bytes": 4490,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/world/miami/MiamiWorld.ts",
+      "blob": "57c91f0b41056b050c5c9dd615e250bcdd38eda0",
+      "sha256": "1176b6b158aeb586ac59950b3daf8ef43ffb63e9a3ad847470b5575c243912ee",
+      "bytes": 9664,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/camera-occlusion-profile.ts",
+      "blob": "5bba4db099bb13c52bbec2311abd52593da7beac",
+      "sha256": "274ec6f07067ef624ccd8ceb603a35a5a3fa51b9d87a3e6fb87f6eab0baebb99",
+      "bytes": 2561,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/camera-occlusion.test.ts",
+      "blob": "524abf23bec4ce560fe9a4abaa5c9763cde2d513",
+      "sha256": "838bc96bc2262f0052c367cb5cd058d26c7330ead365cce2b6e63bc5f2064f23",
+      "bytes": 17310,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/miami-population.test.ts",
+      "blob": "6960a9dda78752b124282bfe0a4f26dfbdf689d3",
+      "sha256": "9c2fdddc237e5f629e189a0e9ada8f37dea6e052a056ea4198bc20908cb06fcd",
+      "bytes": 19248,
+      "mode": "100644",
+      "status": "added"
+    }
+  ]
+}

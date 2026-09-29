@@ -1,0 +1,102 @@
+TAP version 13
+# BJS - [14:41:24]: Babylon.js v9.25.0 - Null engine
+# BJS - [14:41:27]: Babylon.js v9.25.0 - Null engine
+# Subtest: source residents retire with exact limb injuries and death, survive travel, save/load, density zero and explicit reset
+ok 1 - source residents retire with exact limb injuries and death, survive travel, save/load, density zero and explicit reset
+  ---
+  duration_ms: 3785.586333
+  type: 'test'
+  ...
+# BJS - [14:41:27]: Babylon.js v9.25.0 - Null engine
+# Subtest: native placement excludes occupied, wet and obstructed source candidates and obeys collision/density holds
+ok 2 - native placement excludes occupied, wet and obstructed source candidates and obeys collision/density holds
+  ---
+  duration_ms: 97.177125
+  type: 'test'
+  ...
+# BJS - [14:41:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: local traffic retires pristine offscreen cars but preserves damaged and injured occupants, stable IDs and saves
+ok 3 - local traffic retires pristine offscreen cars but preserves damaged and injured occupants, stable IDs and saves
+  ---
+  duration_ms: 940.738083
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: healthy crew in changed-car saves restores without acquiring a false permanent legacy injury
+ok 4 - healthy crew in changed-car saves restores without acquiring a false permanent legacy injury
+  ---
+  duration_ms: 306.579334
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: cached lying corpses restore under low clearance in their saved pose and reject genuinely occupied lying space
+ok 5 - cached lying corpses restore under low clearance in their saved pose and reject genuinely occupied lying space
+  ---
+  duration_ms: 19.406458
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: civilian fallback falls onto native negative-height ground and preserves height when support is absent
+ok 6 - civilian fallback falls onto native negative-height ground and preserves height when support is absent
+  ---
+  duration_ms: 97.170625
+  type: 'test'
+  ...
+# Subtest: versioned source ledger retains more than sixty unique casualties without weakening legacy save bounds
+ok 7 - versioned source ledger retains more than sixty unique casualties without weakening legacy save bounds
+  ---
+  duration_ms: 0.939959
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# {"populationVisit":"Brickell Avenue · SE 8th Street","pedestrians":30,"traffic":10,"vehicles":10}
+# {"populationVisit":"BRICKELL AVE","pedestrians":30,"traffic":12,"vehicles":12}
+# {"populationVisit":"BRICKELL BAY DR","pedestrians":19,"traffic":12,"vehicles":12}
+# {"populationVisit":"BRICKELL KEY DR","pedestrians":23,"traffic":12,"vehicles":12}
+# {"populationVisit":"S MIAMI AVE","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"S MIAMI PL","pedestrians":9,"traffic":5,"vehicles":6}
+# {"populationVisit":"SE 10TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 11TH ST","pedestrians":9,"traffic":5,"vehicles":6}
+# {"populationVisit":"SE 12TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 12TH TER","pedestrians":17,"traffic":6,"vehicles":7}
+# {"populationVisit":"SE 13TH ST","pedestrians":23,"traffic":8,"vehicles":9}
+# {"populationVisit":"SE 14TH ST","pedestrians":14,"traffic":8,"vehicles":9}
+# {"populationVisit":"SE 1ST AVE","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 5TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 6TH ST","pedestrians":18,"traffic":6,"vehicles":7}
+# {"populationVisit":"SE 7TH ST","pedestrians":16,"traffic":9,"vehicles":10}
+# {"populationVisit":"SE 8TH ST","pedestrians":18,"traffic":8,"vehicles":8}
+# {"populationVisit":"SE 9TH ST","pedestrians":9,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 10TH ST","pedestrians":15,"traffic":4,"vehicles":5}
+# {"populationVisit":"SW 11TH ST","pedestrians":15,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW 12TH ST","pedestrians":12,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW 13TH ST","pedestrians":15,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 14TH ST","pedestrians":14,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW 15TH RD","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 1ST AVE","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 1ST CT","pedestrians":10,"traffic":4,"vehicles":5}
+# {"populationVisit":"SW 2ND AVE","pedestrians":10,"traffic":4,"vehicles":5}
+# {"populationVisit":"SW 2ND CT","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 5TH ST","pedestrians":9,"traffic":2,"vehicles":3}
+# {"populationVisit":"SW 6TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 7TH ST","pedestrians":8,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 8TH ST","pedestrians":15,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 9TH ST","pedestrians":15,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW MIAMI AVENUE RD","pedestrians":9,"traffic":3,"vehicles":4}
+# Subtest: actual R2 public source catalogue and native residents cover all named Miami destinations with bounded actors
+ok 8 - actual R2 public source catalogue and native residents cover all named Miami destinations with bounded actors
+  ---
+  duration_ms: 69022.644541
+  type: 'test'
+  ...
+# {"catalogueSites":803,"destinations":34,"maxPeople":30,"maxVehicles":12,"minPeople":8,"minTraffic":2}
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 83475.021

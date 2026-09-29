@@ -1,0 +1,113 @@
+{
+  "baseCommit": "ca538bce7a260fbc004ed2e94c868e340675dd24",
+  "scope": "Camera presentation clearance, bounded local residents/traffic and casualty persistence, readable report styling. No new geography or source-content export.",
+  "tests": {
+    "fullNative": 381,
+    "pass": 381,
+    "fail": 0,
+    "productionBuild": "PASS",
+    "cameraNative": 21,
+    "populationNative": 8,
+    "independent": "Final camera mutation/tiny blocker/render invariants and population healthy crew/lying-canopy/blocker/missing-floor cases passed"
+  },
+  "productionEntry": {
+    "path": "assets/index-CuPZ81_q.js",
+    "sha256": "c1078f4eb3642dec03b13be669b32fba926ca09ff18c0020029de2a3fd12e2b4"
+  },
+  "normalUI": {
+    "browser": "Codex in-app browser / Chrome154",
+    "backend": "WebGL2",
+    "quality": "high",
+    "resolution": [
+      793,
+      1344
+    ],
+    "controls": [
+      "Reconnected existing dedicated Cesium token in memory; cleared variable and returned account to My Assets",
+      "Entered free roam",
+      "Map fast travel to SW5THST then SW15THRD",
+      "KeyboardW/A/D movement inputs",
+      "Mouse input fired one pistol round; witness reporting\u2192one-star search\u2192cooldown\u2192clear",
+      "E vehicle interaction attempted: door side prompt appeared, but returned to on-foot state. No successful entry/drive claim.",
+      "Pause\u2192Export performance displayed valid JSON and styled readonly textarea; provider controls clear of panel and required attribution remains visible"
+    ],
+    "visualObservations": [
+      "SW5THST now shows player and surroundings rather than camera buried in foliage, but warped photogrammetry/overhanging surfaces remain.",
+      "SW15THRD camera retracts very close to player at a source obstruction. View remains distorted and does not meet street-level visual fidelity.",
+      "New pedestrians mostly enter outside view by design; normal report atSW15THRD confirms29pedestrians/12drivers. Native traversal separately verifies all34destinations."
+    ],
+    "downloadCompletion": "Unverified; readable/copyable JSON is verified.",
+    "consoleAtStartup": "No captured errors in immediate startup check; final scan recorded separately."
+  },
+  "observedSample": {
+    "capturedAt": "2026-09-29T18:54:37.018Z",
+    "hardware": {
+      "cpu": "Apple M5 Pro",
+      "logicalProcessors": 15,
+      "ramBytes": 25769803776,
+      "method": "sysctl brand/core/RAM only; no device identifiers collected"
+    },
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "frames": 9875,
+    "activeDurationMs": 228425.20000001788,
+    "medianFrameMs": 18.099999994039536,
+    "medianFps": 55.24861880272417,
+    "onePercentLowFps": 5.979271857586287,
+    "maxFrameMs": 1806.2000000178816,
+    "framesOver33ms": 1346,
+    "framesOver100ms": 99,
+    "jsHeapBytes": {
+      "used": 810190158,
+      "total": 1064998290,
+      "limit": 4395630592
+    },
+    "scene": {
+      "meshes": 2085,
+      "activeMeshes": 347,
+      "physicsBodies": 198
+    },
+    "population": {
+      "pedestrians": 29,
+      "drivers": 12,
+      "police": 0
+    },
+    "collision": {
+      "residentChunks": 22,
+      "residentColliders": 167,
+      "activeAnchors": 29,
+      "cpuGeometryBytes": 100388856,
+      "sourceBudgetBytes": 100663296,
+      "requiredSourceBufferBytes": 97835688,
+      "failedPackages": 0,
+      "ready": true
+    },
+    "visual": {
+      "visibleTiles": 152,
+      "cacheEntries": 640,
+      "residentTiles": 496,
+      "hiddenResidentTiles": 344,
+      "knownSubtotalBytes": 590333536,
+      "unknownResources": 711,
+      "sourceErrors": 0
+    },
+    "limits": "Approximately3.8unpaused minutes through spawn and two destinations, not30minutes/1080p. Native background tests were finished by this live entry; browser automation/source loading still affect sample. Different viewport/browser and activity from first checkpoint, so no A/B FPS improvement claim. These55/6FPS results do not meet60/30targets. JS-only heap and partial visual-resource estimates do not measure total memory/VRAM."
+  },
+  "nativeCoverage": {
+    "publicResidentSites": 803,
+    "destinations": 34,
+    "minNearbyFootActors": 8,
+    "minNearbyTrafficCars": 2,
+    "traversalMaxWalkers": 30,
+    "traversalMaxCars": 12,
+    "civilianSaveLimit": 4096,
+    "legacySaveLimit": 60
+  },
+  "remaining": [
+    "FullMiami geographic/facade/terrain fidelity incomplete; existing1.2kmBrickellregion unchanged.",
+    "All visible props do not yet have independently sourced physical/damageable equivalents.",
+    "Only2accepted civilian skins; photorealistic character/vehicle/animation objectives incomplete.",
+    "Swimming/waterbed/bridge/boat/tall-building flight work incomplete.",
+    "Sustained FPS and bounded total memory targets not accepted.",
+    "Camera has3correction passes, finite boom probes, alpha-cutout/source-enclosure/scoped-camera limits."
+  ]
+}

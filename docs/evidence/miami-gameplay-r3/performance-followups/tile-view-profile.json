@@ -1,0 +1,20 @@
+{
+  "scope": "Synthetic native CPU-only 1000 local bounds evaluations; no provider data, live traversal or browser FPS claim",
+  "node": "v22.23.2",
+  "cpu": "Apple M5 Pro",
+  "measuredAt": "2026-09-29T18:50:07.298Z",
+  "tilesPerBatch": 1000,
+  "equivalenceChecks": 4000,
+  "native": {
+    "batches": 30,
+    "medianMs": 0.8364579999997659,
+    "p95Ms": 1.6496669999996811,
+    "maxMs": 1.812750000000051
+  },
+  "frameSnapshot": {
+    "batches": 30,
+    "medianMs": 0.05179199999975026,
+    "p95Ms": 0.05712500000026921,
+    "maxMs": 0.07524999999986903
+  }
+}

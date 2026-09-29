@@ -1,5 +1,5 @@
-import { Vector3, type Scene, type ShadowGenerator } from "@babylonjs/core";
-import type { RoadNode, WorldContract } from "../core/contracts";
+import { PhysicsMotionType, Vector3, type Scene, type ShadowGenerator, type PhysicsEngineV2 } from "@babylonjs/core";
+import type { RoadNode, WorldContract, WorldPopulationSite } from "../core/contracts";
 import { angleDelta, clamp, distance, lineBlocked, random } from "../core/math";
 import { DETAILED_CAR_LIMIT } from "../vehicles/ConceptCar";
 import type { Vehicle, VehicleSystem } from "../vehicles/VehicleSystem";
@@ -10,12 +10,18 @@ import { PoliceDirector, type Driver } from "./police/PoliceDirector";
 import type { Officer } from "./police/Officer";
 import { RestrictedFacility } from "./RestrictedFacility";
 import { VehicleOccupancy } from './VehicleOccupancy';
-import { hasCasualtyState, isDown, restoreCorpse, snapshotCasualty, validateCasualties, type PopulationCasualties } from "./police/casualties";
+import { hasCasualtyState, isDown, restoreCorpse, snapshotCasualty, validateCasualties, type PopulationCasualties, type Casualty, CASUALTY_LIMITS } from "./police/casualties";
 import type { CharacterDamageKind, CharacterImpact } from "./combat/injuries";
 import { bodyInjuryEffects } from './Injuries';
 import { damageCharacter, recoverCharacter, type DamageContact } from './CharacterDamage';
 import { NpcLocomotion } from './NpcLocomotion';
 import { terminalApproachDistance, terminalSpeedLimit } from './TrafficRoute';
+import { MovementQueries } from './MovementQueries';
+import { CasualtyPlacement } from './CasualtyPlacement';
+import { populationIdentitySeed } from '../world/miami/MiamiPopulationSites';
+import { findGroundVehicleSpawn } from '../vehicles/spawnPlacement';
+
+export const LOCAL_POPULATION_BUDGET = { pedestrians: 30, traffic: 12, totalAmbientVehicles: 48, spawnRadius: 115, pedestrianRetireRadius: 120, retireRadius: 180 } as const;
 export interface Pedestrian {
   id: string;
   model: Character;
@@ -30,6 +36,7 @@ export interface Pedestrian {
   /** Visible civilian crew remain hittable; occupancy owns their pose until dismount. */
   vehicleId?: string;
   formerDriver?: boolean;
+  idleRemaining?: number;
 }
 export class Population {
   drivers: Driver[] = [];
@@ -43,6 +50,15 @@ export class Population {
   readonly facility: RestrictedFacility;
   readonly occupancy: VehicleOccupancy;
   private nextPedId = 0;
+  private readonly residentSites = new Map<string, WorldPopulationSite>();
+  private readonly residentIds = new Set<string>();
+  private readonly retiredCasualties = new Map<string, Casualty>();
+  private readonly ambientDrivers = new Map<Vehicle, string>();
+  private readonly originalCarDamage = new Map<Vehicle, string>();
+  private readonly preservedTrafficVehicles = new Set<string>();
+  private residentQueries?: MovementQueries;
+  private casualtyPlacement?: CasualtyPlacement;
+  private residentTimer = 0;
   onCharacterHit:
     | ((model: Character, impulse: Vector3, fatal: boolean, impact: CharacterImpact) => void)
     | null = null;
@@ -57,6 +73,12 @@ export class Population {
     public player: Player,
     public wanted: WantedSystem,
   ) {
+    if (world.pedestrianSites?.length) {
+      for (const site of world.pedestrianSites) this.residentSites.set(site.id, site);
+      this.residentQueries = new MovementQueries(scene);
+      this.casualtyPlacement = new CasualtyPlacement(scene);
+      scene.onDisposeObservable.addOnce(() => this.residentQueries?.dispose());
+    }
     // Simulation fixtures may provide only a lightweight Player view.
     this.occupancy = player.occupancy ?? new VehicleOccupancy();
     this.police = new PoliceDirector(
@@ -79,6 +101,10 @@ export class Population {
       const z = -170 + Math.floor(i / 5) * 63 + this.rng() * 12;
       this.spawnPed(new Vector3(x, 0, z), i, false);
     }
+    for (const ped of this.pedestrians) {
+      const site = this.residentSites.get(ped.id);
+      if (site) { this.residentIds.add(ped.id); ped.target.copyFrom(site.target); }
+    }
     // Keep original identities, then seed the new courts and park with persistent locals.
     // Their activity budget follows proximity so a growing map does not multiply AI work.
     for (const location of world.locations.filter(l => l.id.startsWith('inner-') && ['market', 'park', 'landmark'].includes(l.type))) {
@@ -86,6 +112,7 @@ export class Population {
     }
     const nodes = world.worldId ? world.roads.filter(node => distance(node,world.spawn)<160 && node.next.length>0) : world.roads;
     for (let i = 0; i < 12 && nodes.length; i++) {
+      if (world.pedestrianSites?.length && this.vehicles.list.length >= LOCAL_POPULATION_BUDGET.totalAmbientVehicles) break;
       const node = nodes[Math.floor((i * nodes.length) / 12)];
       if (distance(node, world.spawn) < 16) continue;
       this.spawnDriver(node, false, i);
@@ -106,6 +133,7 @@ export class Population {
       id = "ped-" + this.nextPedId++;
     const appearance = /^ped-(\d+)$/.test(id)
       ? Number(id.slice(4))
+      : /^(miami-local-|driver-miami-traffic-)/.test(id) ? populationIdentitySeed(id)
       : [...id].reduce((sum, c) => sum + c.charCodeAt(0), 0);
     const model = new Character(
       this.scene,
@@ -135,24 +163,32 @@ export class Population {
     this.pedestrians.push(ped);
     return ped;
   }
-  private spawnDriver(node: RoadNode, police: boolean, i: number) {
+  private spawnDriver(node: RoadNode, police: boolean, i: number, stableId?: string) {
     const next = this.world.roads.find((n) => n.id === node.next[0]) || node;
     const heading = Math.atan2(next.x - node.x, next.z - node.z);
     const detailed = !police && i % 6 === 3 && this.vehicles.concept.ready
       && this.vehicles.list.filter(v => v.kind === "concept").length < DETAILED_CAR_LIMIT;
-    const v = this.vehicles.spawn(
-      police
-        ? "police"
-        : detailed ? "concept" : (["sedan", "suv", "truck", "coupe"][i % 4] as "sedan"),
-      new Vector3(node.x, (node.y ?? 0) + 1.0, node.z),
-      heading,
-    );
+    const kind = police ? "police" : detailed ? "concept" : (["sedan", "suv", "truck", "coupe"][i % 4] as "sedan");
+    let position = new Vector3(node.x, (node.y ?? 0) + 1, node.z);
+    if (this.world.pedestrianSites?.length) {
+      // The search's first forward sample lands exactly on this sourced lane.
+      const forward = new Vector3(Math.sin(heading), 0, Math.cos(heading));
+      const clear = findGroundVehicleSpawn({scene:this.scene,kind,origin:position.subtract(forward.scale(6)),heading,
+        obstacles:this.world.obstacles,vehicles:this.vehicles.list});
+      if (!clear || distance(clear, node) > 2 || !this.world.hasGroundCoverage?.(clear.x, clear.z, 3.5)) return null;
+      position = clear;
+    }
+    const v = this.vehicles.spawn(kind, position, heading, stableId);
     if (detailed) this.vehicles.setPaint(v, i < 6 ? "#51677D" : "#D9D9D2");
     const d = { v, target: next.id, previous: node.id, police, stuck: 0 };
     this.drivers.push(d);
     if (!police) {
       const ped = this.spawnPed(v.root.position, 100 + i, false, `driver-${v.id}`);
       ped.vehicleId = v.id;
+      if (this.world.pedestrianSites?.length) {
+        this.residentIds.add(ped.id); this.ambientDrivers.set(v, ped.id);
+        this.originalCarDamage.set(v, JSON.stringify(this.vehicles.serialize(v).damage));
+      }
       ped.activity = 'driving';
       this.occupancy.register(v, ped.model,
         () => ped.health > 0 && !ped.model.dead,
@@ -221,7 +257,14 @@ export class Population {
     } else this.onCharacterHit?.(ped.model, result.impulse, ped.health <= 0, result.impact);
     if (ped.health <= 0 && !this.onCharacterHit) {
       ped.model.root.rotation.z = Math.PI / 2;
-      ped.model.root.position.y = 0.35;
+      const origin=ped.model.root.position.clone(), physics=this.scene.getPhysicsEngine() as PhysicsEngineV2|null;
+      const own=ped.movement?.controller?.shape, membership=own?.filterMembershipMask;
+      if(own)own.filterMembershipMask=0;
+      try {
+        const support=physics?.raycast(origin.add(new Vector3(0,3,0)),origin.subtract(new Vector3(0,5,0)),{shouldHitTriggers:false});
+        if(support?.hasHit && support.hitNormalWorld.y>.65 && Math.abs(support.hitPointWorld.y-origin.y)<3)
+          ped.model.root.position.y = support.hitPointWorld.y + .35;
+      } finally {if(own&&membership!==undefined)own.filterMembershipMask=membership;}
       ped.activity = "dead";
     }
     this.frighten(ped.model.root.position);
@@ -229,6 +272,7 @@ export class Population {
   update(dt: number) {
     this.ticks += dt;
     const position = this.player.position;
+    this.updateLocalPopulation(dt, position);
     for (const officer of this.officers) officer.health = recoverCharacter(officer.model, officer.health, dt, officer.role === 'patrol' ? 100 : officer.role === 'swat' ? 150 : 140);
     this.occupancy.update(dt);
     this.police.onCharacterHit = this.onCharacterHit;
@@ -238,15 +282,19 @@ export class Population {
     const trafficPeople = this.pedestrians.filter(ped => !ped.vehicleId && ped.health > 0 && ped.model.root.isEnabled()).map(ped => ped.model.root.position);
     if (!this.player.vehicle && this.player.deadTimer <= 0) trafficPeople.push(this.player.position);
     const roadNodes = new Map(this.world.roads.map(node => [node.id, node]));
+    const nearbyCivilianDrivers = this.drivers.filter(d => !d.police && (!this.world.pedestrianSites?.length || distance(d.v.root.position, position) <= LOCAL_POPULATION_BUDGET.retireRadius));
     for (const d of this.drivers) {
       if (d.police || d.v.occupied) continue;
+      if (this.world.pedestrianSites?.length && distance(d.v.root.position,position) > LOCAL_POPULATION_BUDGET.retireRadius) {
+        this.vehicles.control(d.v,{throttle:0,steer:0,brake:1,handbrake:true,lift:0}); continue;
+      }
       if (!this.occupancy.canDrive(d.v)) {
         this.vehicles.control(d.v, { throttle: 0, steer: 0, brake: 1, handbrake: true, lift: 0 });
         continue;
       }
       if (
         !d.police &&
-        this.drivers.indexOf(d) > Math.floor(12 * this.trafficDensity)
+        nearbyCivilianDrivers.indexOf(d) >= Math.floor(12 * this.trafficDensity)
       ) {
         this.vehicles.control(d.v, {
           throttle: 0,
@@ -333,7 +381,7 @@ export class Population {
       if (ped.vehicleId) {
         ped.movement?.pause();
         const vehicle = this.vehicles.list.find(v => v.id === ped.vehicleId);
-        if (vehicle) { ped.model.root.setEnabled(true); continue; }
+        if (vehicle) { ped.model.root.setEnabled(!this.world.pedestrianSites?.length || vehicle.occupied || vehicle.controlLocked || distance(vehicle.root.position,position) <= LOCAL_POPULATION_BUDGET.retireRadius); continue; }
         delete ped.vehicleId;
         ped.formerDriver = true;
         ped.activity = ped.health > 0 ? 'walking' : 'dead';
@@ -342,7 +390,7 @@ export class Population {
       }
       // Older saves recorded health without a corpse pose/ledger.
       if(ped.health<=0&&!ped.model.dead){restoreCorpse(ped.model,snapshotCasualty(ped.id,ped.model));ped.activity="dead";ped.report=0;}
-      const active = ped.creative || ped.formerDriver || ambient.has(ped);
+      const active = ped.creative || ped.formerDriver || hasCasualtyState(ped.model,ped.health) || ambient.has(ped);
       ped.model.root.setEnabled(active);
       if (!active || ped.health <= 0 || ped.model.root.metadata?.ragdollActive) {
         ped.movement?.pause(); continue;
@@ -354,15 +402,24 @@ export class Population {
       // controller falling through an unloaded distant street.
       if (far) { ped.movement?.pause(); continue; }
       const elapsed = dt;
-      if (distance(p, ped.target) < 1) {
-        ped.target = ped.home.add(new Vector3(0, 0, (this.rng() - 0.5) * 55));
+      if (ped.idleRemaining) {
+        ped.idleRemaining = Math.max(0, ped.idleRemaining - elapsed);
+        if (ped.idleRemaining <= 0) ped.activity = 'walking';
+      }
+      if (distance(p, ped.target) < 1 && !ped.idleRemaining) {
+        const site = this.residentSites.get(ped.id);
+        ped.target = site ? (distance(p, site.target) < 1 ? site.position.clone() : site.target.clone())
+          : ped.home.add(new Vector3(0, 0, (this.rng() - 0.5) * 55));
         ped.activity = ped.panic
           ? "fleeing"
           : this.rng() < 0.25
             ? "on phone"
             : "walking";
+        if (ped.activity === "on phone") ped.idleRemaining = 3 + this.rng() * 6;
       }
-      let speed = ped.panic ? 4.2 : ped.activity === "on phone" ? 0.0 : 1.25;
+      const stationary=this.residentSites.get(ped.id)?.stationary;
+      let speed = ped.panic ? 4.2 : stationary || ped.activity === "on phone" ? 0.0 : 1.25;
+      if(stationary&&!ped.panic)ped.activity="standing";
       const direction = ped.target.subtract(p);
       direction.y = 0;
       direction.normalize();
@@ -387,8 +444,138 @@ export class Population {
       if (speed > .2 && actual < .05) ped.target = ped.home.clone();
     }
   }
+  /** Distant pristine activity retires; changed people retain their identity and injury state. */
+  private updateLocalPopulation(dt: number, position: Vector3): void {
+    if (!this.world.pedestrianSites?.length || !this.residentQueries) return;
+    this.residentTimer -= dt;
+    if (this.residentTimer > 0) return;
+    this.residentTimer = .5;
+    // Do not create bodies until the player's current support halo is ready.
+    if (this.world.collisionReady?.(position) === false) return;
+    for (const [vehicle, id] of this.ambientDrivers) {
+      const ped = this.pedestrians.find(person => person.id === id);
+      if (vehicle.root.isDisposed() || !this.vehicles.list.includes(vehicle)) {
+        this.ambientDrivers.delete(vehicle); this.originalCarDamage.delete(vehicle); continue;
+      }
+      if (!ped || ped.formerDriver || !ped.vehicleId) {
+        this.ambientDrivers.delete(vehicle); this.originalCarDamage.delete(vehicle); continue;
+      }
+      // Entry can be cancelled before the civilian is ejected. Keep the
+      // original damage baseline and identity through that temporary handoff.
+      if (vehicle.occupied || vehicle.controlLocked) continue;
+      if (distance(vehicle.root.position, position) <= LOCAL_POPULATION_BUDGET.retireRadius) continue;
+      // Damage, casualties, theft and ongoing door handoffs never vanish through culling.
+      if (ped.health < 100 || hasCasualtyState(ped.model,ped.health) || this.changedAmbientCar(vehicle)) continue;
+      this.occupancy.forget(vehicle);
+      this.drivers = this.drivers.filter(driver => driver.v !== vehicle);
+      this.removeResident(ped);
+      this.vehicles.remove(vehicle);
+      this.ambientDrivers.delete(vehicle); this.originalCarDamage.delete(vehicle);
+    }
+    for (const ped of [...this.pedestrians]) {
+      if (!this.residentIds.has(ped.id) || ped.creative || ped.vehicleId) continue;
+      const range=distance(ped.model.root.position, position);
+      if (range <= LOCAL_POPULATION_BUDGET.retireRadius && (range <= LOCAL_POPULATION_BUDGET.pedestrianRetireRadius || !this.outsideView(ped.model.root.position))) continue;
+      if (ped.health < 100 || hasCasualtyState(ped.model,ped.health))
+        this.retiredCasualties.set(ped.id,snapshotCasualty(ped.id,ped.model,ped.health));
+      else this.retiredCasualties.delete(ped.id);
+      this.removeResident(ped);
+    }
+    const budget = Math.floor(LOCAL_POPULATION_BUDGET.pedestrians * clamp(this.density,0,1));
+    const residentCount=this.pedestrians.filter(p => this.residentIds.has(p.id) && !p.vehicleId).length;
+    let available = budget - residentCount;
+    // Existing injuries and corpses are world state, independent of crowd density.
+    let restorationAvailable=LOCAL_POPULATION_BUDGET.pedestrians-residentCount;
+    if (restorationAvailable > 0) {
+      // Cached casualties use their saved positions, never their original home.
+      const dormant = [...this.retiredCasualties.values()].filter(entry => !entry.vehicleId
+        && !this.pedestrians.some(ped => ped.id === entry.id) && distance(entry,position) <= LOCAL_POPULATION_BUDGET.spawnRadius)
+        .sort((a,b)=>distance(a,position)-distance(b,position)||a.id.localeCompare(b.id));
+      for (const entry of dormant) {
+        if (restorationAvailable <= 0) break;
+        const point = new Vector3(entry.x,entry.y,entry.z);
+        const support=this.supportedResidentPoint(point,true);
+        if (!support) continue;
+        const lying=entry.fallen!==false || !bodyInjuryEffects(entry.bodyInjuries??null).canStand;
+        if (lying ? !this.casualtyPlacement!.clear(entry,support.ground,support.body)
+          : !this.residentQueries.clear(support.ground.add(new Vector3(0,.94,0)))) continue;
+        const ped = this.spawnPed(point,undefined,false,entry.id);
+        this.residentIds.add(ped.id);
+        ped.health=entry.health??0; ped.activity=ped.health>0?'injured':'dead';
+        ped.target.copyFrom(this.residentSites.get(ped.id)?.target??point);
+        restoreCorpse(ped.model,entry);
+        this.onCharacterRestored?.(ped.model);
+        available--; restorationAvailable--;
+      }
+      const candidates = [...this.residentSites.values()].filter(site => !this.retiredCasualties.has(site.id)
+        && !this.pedestrians.some(ped => ped.id===site.id) && distance(site.position,position)>=18
+        && distance(site.position,position)<=LOCAL_POPULATION_BUDGET.spawnRadius && this.outsideView(site.position))
+        .sort((a,b)=>distance(a.position,position)-distance(b.position,position)||a.id.localeCompare(b.id));
+      // Spread allocations over time rather than creating a frame-sized crowd.
+      let created=0;
+      for (const site of candidates) {
+        if (available<=0 || created>=3) break;
+        const point = this.verifiedResidentPoint(site.position), target = this.verifiedResidentPoint(site.target);
+        if (!point || !target || !this.residentQueries.path(point.add(new Vector3(0,.94,0)),target.add(new Vector3(0,.94,0)))) continue;
+        if (this.pedestrians.some(ped => distance(ped.model.root.position,point)<2.5)) continue;
+        const ped=this.spawnPed(point,undefined,false,site.id); this.residentIds.add(ped.id);
+        ped.target.copyFrom(target); ped.home.copyFrom(point); if(site.stationary)ped.activity='standing';
+        available--;created++;
+      }
+    }
+    const trafficBudget=Math.floor(LOCAL_POPULATION_BUDGET.traffic*clamp(this.trafficDensity,0,1));
+    const activeTraffic=this.drivers.filter(driver=>!driver.police&&distance(driver.v.root.position,position)<=LOCAL_POPULATION_BUDGET.retireRadius).length;
+    if(activeTraffic>=trafficBudget || this.vehicles.list.length>=LOCAL_POPULATION_BUDGET.totalAmbientVehicles) return;
+    const roadNodes = new Map(this.world.roads.map(node=>[node.id,node]));
+    const lanes=this.world.roads.filter(node=>node.next.some(id=>roadNodes.has(id)) && distance(node,position)>=45
+      && distance(node,position)<=105 && this.outsideView(new Vector3(node.x,node.y??position.y,node.z))
+      && !this.vehicles.list.some(vehicle=>vehicle.id===`miami-traffic-${node.id}`)
+      && !this.retiredCasualties.has(`driver-miami-traffic-${node.id}`))
+      .sort((a,b)=>distance(a,position)-distance(b,position)||a.id-b.id);
+    for(const node of lanes) if(this.spawnDriver(node,false,populationIdentitySeed(`miami-traffic-${node.id}`)%24,`miami-traffic-${node.id}`)) break;
+  }
+  private supportedResidentPoint(position: Vector3, cached=false) {
+    if (!this.world.hasGroundCoverage?.(position.x,position.z,.45)) return null;
+    const physics=this.scene.getPhysicsEngine() as PhysicsEngineV2;
+    // Cached roots are ground anchors. Start just above that anchor, beneath
+    // any low overhead structure, so an overhang is not mistaken for support.
+    const support=physics.raycast(position.add(new Vector3(0,cached ? .15 : 3.5,0)),position.subtract(new Vector3(0,3.5,0)),{shouldHitTriggers:false});
+    if(!support.hasHit || support.hitNormalWorld.y<=.65 || support.body?.getMotionType()!==PhysicsMotionType.STATIC
+      || support.body.transformNode.metadata?.miamiKind==='building') return null;
+    const ground=support.hitPointWorld.clone();
+    if(Math.abs(ground.y-position.y)>2) return null;
+    return {ground,body:support.body};
+  }
+  private verifiedResidentPoint(position:Vector3):Vector3|null{
+    const support=this.supportedResidentPoint(position);
+    return support&&this.residentQueries!.clear(support.ground.add(new Vector3(0,.94,0)))?support.ground:null;
+  }
+  private outsideView(position: Vector3): boolean {
+    const camera=this.player.camera;
+    if (!camera) return true;
+    const cameraPosition=camera.globalPosition, delta=position.subtract(cameraPosition);
+    if (delta.lengthSquared()<1) return false;
+    return Vector3.Dot(delta.normalize(),camera.getForwardRay().direction)<.35;
+  }
+  private changedAmbientCar(vehicle: Vehicle): boolean {
+    if (this.preservedTrafficVehicles.has(vehicle.id)) return true;
+    const original=this.originalCarDamage.get(vehicle);
+    const changed=vehicle.health<100 || !!original && original!==JSON.stringify(this.vehicles.serialize(vehicle).damage);
+    if(changed)this.preservedTrafficVehicles.add(vehicle.id);
+    return changed;
+  }
+  private removeResident(ped: Pedestrian): void {
+    ped.movement?.pause(); ped.model.dispose();
+    this.pedestrians=this.pedestrians.filter(person=>person!==ped);
+  }
+  get ambientStats() {
+    return {sites:this.residentSites.size,residentPedestrians:this.pedestrians.filter(p=>this.residentIds.has(p.id)&&!p.vehicleId).length,
+      cachedCasualties:[...this.retiredCasualties.keys()].filter(id=>!this.pedestrians.some(p=>p.id===id)).length,traffic:this.drivers.filter(d=>!d.police&&distance(d.v.root.position,this.player.position)<=LOCAL_POPULATION_BUDGET.retireRadius).length,
+      preservedTrafficVehicles:this.preservedTrafficVehicles.size};
+  }
   /** Player recovery clears pursuit, but only an explicit encounter reset revives the world. */
   reset(revive = true) {
+    if (revive) this.retiredCasualties?.clear();
     this.police.reset(this.drivers,revive);
     this.facility.reset(revive);
     for (const p of this.pedestrians) {
@@ -403,10 +590,22 @@ export class Population {
     }
   }
   serializeCasualties():PopulationCasualties {
-    return {version:3,civilians:this.pedestrians.filter(p=>hasCasualtyState(p.model,p.health)).slice(0,60).map(p=>({...snapshotCasualty(p.id,p.model,p.health),...(p.vehicleId?{vehicleId:p.vehicleId}:{})})),guards:this.facility.guards.filter(g=>hasCasualtyState(g.model,g.health)).map(g=>snapshotCasualty(g.id,g.model,g.health)),...this.police.serializeCasualties()};
+    const civilians = new Map(this.retiredCasualties);
+    for (const ped of this.pedestrians) {
+      const seat = ped.vehicleId && this.vehicles.list.find(vehicle => vehicle.id === ped.vehicleId);
+      if (hasCasualtyState(ped.model,ped.health) || this.world.pedestrianSites?.length && (ped.health < 100 || !!seat && this.changedAmbientCar(seat)))
+        civilians.set(ped.id,{...snapshotCasualty(ped.id,ped.model,ped.health),...(ped.vehicleId?{vehicleId:ped.vehicleId}:{})});
+      else civilians.delete(ped.id);
+    }
+    if (civilians.size > CASUALTY_LIMITS.civilians) throw new Error('Civilian persistence budget exceeded');
+    return {version:this.world.pedestrianSites?.length||civilians.size>60?4:3,civilians:[...civilians.values()].sort((a,b)=>a.id.localeCompare(b.id)),guards:this.facility.guards.filter(g=>hasCasualtyState(g.model,g.health)).map(g=>snapshotCasualty(g.id,g.model,g.health)),...this.police.serializeCasualties()};
   }
   restoreCasualties(value:unknown):boolean {
     if(!validateCasualties(value))return false;
+    if (this.world.pedestrianSites?.length) {
+      this.retiredCasualties.clear();
+      for (const entry of value.civilians) this.retiredCasualties.set(entry.id, structuredClone(entry));
+    }
     for (const entry of value.civilians) {
       const seat = entry.vehicleId && this.vehicles.list.find(v => v.id === entry.vehicleId);
       const p = this.pedestrians.find(p => p.id === entry.id) ?? (seat ? this.spawnPed(new Vector3(entry.x,entry.y,entry.z),undefined,false,entry.id) : null); if (!p) continue;
@@ -420,6 +619,7 @@ export class Population {
           this.occupancy.register(seat,p.model,()=>p.health>0&&!p.model.dead,position=>this.adoptFormerDriver(p,seat,position));
         }
         p.vehicleId = seat.id; p.activity='driving'; this.occupancy.restoreSeat(seat);
+        if(this.world.pedestrianSites?.length){this.residentIds.add(p.id);this.ambientDrivers.set(seat,p.id);this.preservedTrafficVehicles.add(seat.id);}
         if(!this.drivers.some(d=>d.v===seat)){
           const node=this.world.roads.reduce<RoadNode|null>((closest,node)=>!closest||distance(seat.root.position,node)<distance(seat.root.position,closest)?node:closest,null);
           this.drivers.push({v:seat,target:node?.id??-1,previous:node?.id??-1,police:false,stuck:0});

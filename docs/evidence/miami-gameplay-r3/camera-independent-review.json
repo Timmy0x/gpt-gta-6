@@ -1,0 +1,17 @@
+{
+  "reviewedManifestSha256": "34a7875b9b13484532627f8cbea1b0e0498bb50a256dd96121447023d71a6e37",
+  "sourceMutation": "PASS",
+  "nearPlaneSamples": 2601,
+  "nearPlanePenetrations": 0,
+  "nativeBodiesBefore": 1,
+  "nativeBodiesAfter": 1,
+  "renderSubmeshesMaterialsAndIndicesPreserved": true,
+  "remainingConfirmedBlockers": 0,
+  "verticalWallWorkload": {
+    "triangles": 500000,
+    "coldMs": 47.658791,
+    "warmMedianMs": 4.4565,
+    "warmP95Ms": 5.206417,
+    "scope": "Independent synthetic native CPU workload during parallel native tests; not live FPS and not floor workload."
+  }
+}

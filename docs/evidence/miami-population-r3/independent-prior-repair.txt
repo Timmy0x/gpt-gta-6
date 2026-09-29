@@ -1,0 +1,10 @@
+7ee51d677b9607a7e08f67fdb39e1154a15dadee74cbddd0064a60190a3bb309  docs/evidence/miami-population-r3/source-files.json
+88360850b7a6a6d548b7fdc78202876c541e8b3ff7d155c0ff30cd2cdfb971d8  src/gameplay/Population.ts
+81b3c2c2b527a98b666f8e2c75716f066d5b696b9dcc888bdac8de90aa767851  src/gameplay/CasualtyPlacement.ts
+2379383c986b620dc4d6227ca3dd49220c64bea55e89d98e585329586a664e05  src/gameplay/police/casualties.ts
+BJS - [14:44:17]: Babylon.js v9.25.0 - Null engine
+BJS - [14:44:17]: Babylon.js v9.25.0 - Null engine
+{"case":"healthy changed-car crew","saved":{"id":"driver-miami-traffic-4","x":59.56949996948242,"y":-21.927654266357422,"z":-4.03000020980835,"yaw":6.762597356349525e-18,"health":100,"recoverySeconds":null,"kind":"impact","fallen":false,"vehicleId":"miami-traffic-4"},"health":100,"injury":null,"rotation":[0,7.907746567152826e-18,0],"metadata":{"ragdollActive":false,"ragdollRecovering":false,"ragdollHandoffActive":false,"injuryStatus":"healthy"},"hasCasualtyState":false,"canDrive":true}
+BJS - [14:44:17]: Babylon.js v9.25.0 - Null engine
+{"case":"low canopy casualty restore","restored":true,"cached":true,"savedY":-22}
+{"case":"same casualty after canopy removed","restored":true,"health":0}

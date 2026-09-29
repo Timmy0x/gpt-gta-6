@@ -1,0 +1,88 @@
+{
+  "scope": "Synthetic Node/V8 heap and CPU timings; excludes browser/GPU/Havok memory and source data",
+  "node": "v22.23.2",
+  "cpu": "Apple M5 Pro",
+  "arch": "arm64",
+  "records": [
+    {
+      "triangles": 125001,
+      "vertices": 63004,
+      "typedSourceBytes": 2256060,
+      "before": {
+        "heapUsed": 132567632,
+        "external": 4442995,
+        "arrayBuffers": 2188790
+      },
+      "geometry": {
+        "heapUsed": 132736552,
+        "external": 6699095,
+        "arrayBuffers": 4444850
+      },
+      "points": {
+        "heapUsed": 139983992,
+        "external": 6737779,
+        "arrayBuffers": 4444850
+      },
+      "partitions": {
+        "heapUsed": 141262192,
+        "external": 6737779,
+        "arrayBuffers": 4444850
+      },
+      "disabled": {
+        "heapUsed": 140187320,
+        "external": 6737779,
+        "arrayBuffers": 4444850
+      },
+      "disposed": {
+        "heapUsed": 140199024,
+        "external": 6737779,
+        "arrayBuffers": 4444850
+      },
+      "pointsMs": 4.245167000000038,
+      "partitionMs": 16.424417000000176,
+      "pointHeapIncreaseBytes": 7247440,
+      "queryPartitionsHeapIncreaseBytes": 1278200,
+      "nativePointCacheRetainedAfterDisable": true
+    },
+    {
+      "triangles": 500001,
+      "vertices": 251004,
+      "typedSourceBytes": 9012060,
+      "before": {
+        "heapUsed": 140288520,
+        "external": 6737779,
+        "arrayBuffers": 4444850
+      },
+      "geometry": {
+        "heapUsed": 140381880,
+        "external": 13493779,
+        "arrayBuffers": 11200850
+      },
+      "points": {
+        "heapUsed": 168527472,
+        "external": 13493779,
+        "arrayBuffers": 11200850
+      },
+      "partitions": {
+        "heapUsed": 172880864,
+        "external": 13493779,
+        "arrayBuffers": 11200850
+      },
+      "disabled": {
+        "heapUsed": 168620416,
+        "external": 13493779,
+        "arrayBuffers": 11200850
+      },
+      "disposed": {
+        "heapUsed": 168621600,
+        "external": 13493779,
+        "arrayBuffers": 11200850
+      },
+      "pointsMs": 25.284082999999555,
+      "partitionMs": 28.279375000000073,
+      "pointHeapIncreaseBytes": 28145592,
+      "queryPartitionsHeapIncreaseBytes": 4353392,
+      "nativePointCacheRetainedAfterDisable": true
+    }
+  ]
+}

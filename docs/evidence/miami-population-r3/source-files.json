@@ -1,0 +1,41 @@
+{
+  "originalBaseCommit": "88a8b2b20ba45dfaad4441a8c88a68e1907e1b3b",
+  "status": "source-frozen-after-wide-canopy-support-repair",
+  "files": [
+    {
+      "path": "src/core/contracts.ts",
+      "sha256": "1d88cf606cadf29c4e9f26e5fc155e17bd95208e26a9b3394d8ae0cdb8892bb8",
+      "bytes": 2084
+    },
+    {
+      "path": "src/gameplay/Population.ts",
+      "sha256": "b87decbb381ba05762cb6afc7df984b72cbee324e5ef27b02dddeb8783e39d28",
+      "bytes": 35594
+    },
+    {
+      "path": "src/gameplay/police/casualties.ts",
+      "sha256": "2379383c986b620dc4d6227ca3dd49220c64bea55e89d98e585329586a664e05",
+      "bytes": 7312
+    },
+    {
+      "path": "src/world/miami/MiamiWorld.ts",
+      "sha256": "1176b6b158aeb586ac59950b3daf8ef43ffb63e9a3ad847470b5575c243912ee",
+      "bytes": 9664
+    },
+    {
+      "path": "src/world/miami/MiamiPopulationSites.ts",
+      "sha256": "6c612c24fafbfcadf4167eac43d6cca319517e5407ac3805affd9e1d5603ec56",
+      "bytes": 4490
+    },
+    {
+      "path": "src/gameplay/CasualtyPlacement.ts",
+      "sha256": "81b3c2c2b527a98b666f8e2c75716f066d5b696b9dcc888bdac8de90aa767851",
+      "bytes": 3946
+    },
+    {
+      "path": "tests/miami-population.test.ts",
+      "sha256": "9c2fdddc237e5f629e189a0e9ada8f37dea6e052a056ea4198bc20908cb06fcd",
+      "bytes": 19248
+    }
+  ]
+}

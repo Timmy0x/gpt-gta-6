@@ -33,7 +33,7 @@ export interface Obstacle {
   w: number;
   d: number;
   height: number;
-  /** Physical bottom elevation; legacy structural obstacles start at zero. */
+  /** Bottom of the physical obstacle in the current world coordinate frame. */
   baseY?: number;
   mesh?: AbstractMesh;
 }
@@ -51,7 +51,17 @@ export interface RoadNode {
   z: number;
   next: number[];
 }
+export interface WorldPopulationSite {
+  id: string;
+  position: Vector3;
+  target: Vector3;
+  /** Native clear roadside waiting sites where the source has no sidewalk width. */
+  stationary?: boolean;
+}
 export interface WorldContract {
+  /** Stable public-source ambient sites; creation still requires native clearance. */
+  readonly pedestrianSites?: readonly WorldPopulationSite[];
+  collisionReady?: (position: Vector3) => boolean;
   /** Source coverage only; arrival still requires native support and clearance. */
   hasGroundCoverage?: (x: number, z: number, radius?: number) => boolean;
   readonly worldId?: string;

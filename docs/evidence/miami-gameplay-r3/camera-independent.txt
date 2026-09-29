@@ -1,0 +1,91 @@
+34a7875b9b13484532627f8cbea1b0e0498bb50a256dd96121447023d71a6e37  .local-builds/miami-camera-r3-repaired-frozen/handoff.json
+d867d403bd71c0b2f34d4ce981eb039161e28f0ebb712cb709914e9ad4524a4b  .local-builds/miami-camera-r3-repaired-frozen/src/core/CameraOcclusion.ts
+2be8412682eafb34cb86d931da01ca7ef04d33cef48061b16866dffcfc57f9e2  .local-builds/miami-camera-r3-repaired-frozen/src/core/CameraMeshQueries.ts
+BJS - [14:49:17]: Babylon.js v9.25.0 - Null engine
+BJS - [14:49:17]: Babylon.js v9.25.0 - Null engine
+BJS - [14:49:17]: Babylon.js v9.25.0 - Null engine
+BJS - [14:49:17]: Babylon.js v9.25.0 - Null engine
+BJS - [14:49:17]: Babylon.js v9.25.0 - Null engine
+{
+  "nativeInvariants": {
+    "before": 1,
+    "after": 1,
+    "renderSubMeshesUnchanged": true,
+    "nearPlaneSamples": 2601,
+    "nearPlanePenetrations": 0
+  },
+  "interior": {
+    "resolved": [
+      0,
+      -20,
+      -4.642500114440917
+    ],
+    "nearPoint": [
+      0.07,
+      -20,
+      -4.522500114440917
+    ],
+    "pointInsideNativeBox": false,
+    "nativeVisibleRayHit": false,
+    "distance": 0,
+    "normalNearHalfWidth": 0.10168859389196629
+  },
+  "tile50": {
+    "triangles": 5000,
+    "coldMs": 6.8354999999996835,
+    "warmMedianMs": 0.881666000000223,
+    "warmP95Ms": 1.5484999999998763,
+    "warmMaxMs": 1.6360420000000886,
+    "trianglePicksPerFrame": 0,
+    "resolved": [
+      0,
+      -20,
+      -1.77
+    ]
+  },
+  "tile200": {
+    "triangles": 80000,
+    "coldMs": 13.352082999999766,
+    "warmMedianMs": 0.8144579999998314,
+    "warmP95Ms": 2.502332999999453,
+    "warmMaxMs": 4.75329099999999,
+    "trianglePicksPerFrame": 0,
+    "resolved": [
+      0,
+      -20,
+      -1.77
+    ]
+  },
+  "tile500": {
+    "triangles": 500000,
+    "coldMs": 47.65879099999984,
+    "warmMedianMs": 4.456500000000233,
+    "warmP95Ms": 5.206417000000329,
+    "warmMaxMs": 8.550207999999657,
+    "trianglePicksPerFrame": 0,
+    "resolved": [
+      0,
+      -20,
+      -1.77
+    ]
+  },
+  "deformedWholeResolver": {
+    "resolved": [
+      0,
+      -20,
+      -1.669999998509884
+    ]
+  },
+  "activeGeometryMutation": {
+    "before": 1.8999999985098839,
+    "after": 1.8999999985098839,
+    "nativeHit": true,
+    "nativeDistance": 1.8999999985098839,
+    "renderSubmeshUnchanged": true,
+    "indicesUnchanged": true
+  },
+  "eviction": {
+    "renderSubmeshUnchanged": true,
+    "count": 1
+  }
+}

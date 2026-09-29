@@ -1,0 +1,55 @@
+{
+  "candidate": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-gameplay-r3-source",
+  "files": [
+    {
+      "path": "src/core/CameraOcclusion.ts",
+      "sha256": "d867d403bd71c0b2f34d4ce981eb039161e28f0ebb712cb709914e9ad4524a4b",
+      "bytes": 7100
+    },
+    {
+      "path": "src/core/CameraMeshQueries.ts",
+      "sha256": "2be8412682eafb34cb86d931da01ca7ef04d33cef48061b16866dffcfc57f9e2",
+      "bytes": 11436
+    },
+    {
+      "path": "src/gameplay/Player.ts",
+      "sha256": "9a1850e199192b18e748df57e5f4574b34b49e35d934d142f832327ca8ebaab9",
+      "bytes": 31302
+    },
+    {
+      "path": "tests/camera-occlusion.test.ts",
+      "sha256": "838bc96bc2262f0052c367cb5cd058d26c7330ead365cce2b6e63bc5f2064f23",
+      "bytes": 17310
+    },
+    {
+      "path": "tests/camera-occlusion-profile.ts",
+      "sha256": "274ec6f07067ef624ccd8ceb603a35a5a3fa51b9d87a3e6fb87f6eab0baebb99",
+      "bytes": 2561
+    }
+  ],
+  "verification": {
+    "nativeTests": 21,
+    "nativePass": 21,
+    "nativeFailures": 0,
+    "typecheck": "PASS",
+    "profile": "Synthetic CPU query workload only; no live browser FPS claim"
+  },
+  "limits": [
+    "Source geometry and public physical collision alignment remain independent and provisional.",
+    "Five boom samples do not prove a continuous visibility corridor around every thin object; camera-endpoint triangle clearance is exact for eligible static triangle meshes within each query pass.",
+    "Camera clearance runs at most three correction passes; overlapping malformed source surfaces enclosing the subject may remain obstructed.",
+    "Native triangle queries ignore texture alpha and can conservatively retract through foliage cutouts.",
+    "The existing scoped first-person camera override remains unchanged.",
+    "Non-triangle/skeletal/morph geometry uses native ray picking and does not get exact static endpoint triangle clearance.",
+    "First dense immutable-mesh query builds bounded in-memory index partitions and Babylon native Vector3 position caches. Cold allocation cost remains; hidden enabled meshes can retain native point arrays until geometry release even after camera partition eviction."
+  ],
+  "repair": [
+    "Mutable position/index buffers use fresh native closest-hit picking and uncached endpoint partitions.",
+    "Immutable geometry entries validate native position/index buffer identities in addition to native array/submesh identity.",
+    "Four native regressions cover actual in-place vertex deformation, tiny deformed endpoint blockers, updatable indices, and immutable buffer replacement."
+  ],
+  "profileNotes": {
+    "floorWorkload": "query-profile.json: synthetic broad-bound floor plus far high-triangle geometry, NullEngine CPU query cost; not live FPS.",
+    "independentWallWorkload": "Independent reviewer dense vertical 500k-triangle wall: warm median 3.92ms/p95 5.44ms, cold 58.5ms in the pre-repair frozen cohort. Different workload from floor profile; repaired independent rerun pending."
+  }
+}

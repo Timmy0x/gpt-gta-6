@@ -1,0 +1,627 @@
+{
+  "catalogueSites": 803,
+  "destinations": 34,
+  "maxPeople": 30,
+  "maxVehicles": 12,
+  "visits": [
+    {
+      "id": "brickell-se8",
+      "name": "Brickell Avenue · SE 8th Street",
+      "pedestrians": 30,
+      "traffic": 10,
+      "position": [
+        6.7379608154296875,
+        -21.753832258534537,
+        15.636405944824219
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 30,
+        "cachedCasualties": 0,
+        "traffic": 10,
+        "preservedTrafficVehicles": 0
+      }
+    },
+    {
+      "id": "miami-street-14",
+      "name": "BRICKELL AVE",
+      "pedestrians": 30,
+      "traffic": 12,
+      "position": [
+        -2.252668067788762,
+        -21.63437720617645,
+        -2.788747025653027
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 30,
+        "cachedCasualties": 0,
+        "traffic": 12,
+        "preservedTrafficVehicles": 0
+      }
+    },
+    {
+      "id": "miami-street-11",
+      "name": "BRICKELL BAY DR",
+      "pedestrians": 19,
+      "traffic": 12,
+      "position": [
+        123.37933065031434,
+        -23.452222104081716,
+        -32.45146804854838
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 19,
+        "cachedCasualties": 0,
+        "traffic": 12,
+        "preservedTrafficVehicles": 0
+      }
+    },
+    {
+      "id": "miami-street-21",
+      "name": "BRICKELL KEY DR",
+      "pedestrians": 23,
+      "traffic": 12,
+      "position": [
+        123.37933065031434,
+        -23.452222104081716,
+        -32.45146804854838
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 23,
+        "cachedCasualties": 0,
+        "traffic": 12,
+        "preservedTrafficVehicles": 0
+      }
+    },
+    {
+      "id": "miami-street-1",
+      "name": "S MIAMI AVE",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -262.13131966955245,
+        -22.879688775479686,
+        23.7221722974556
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-32",
+      "name": "S MIAMI PL",
+      "pedestrians": 9,
+      "traffic": 5,
+      "position": [
+        -392.39603420805014,
+        -23.810449169000588,
+        163.24082810043691
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 5,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-24",
+      "name": "SE 10TH ST",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -53.86118483674275,
+        -23.07088384543142,
+        -223.11802155772457
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-25",
+      "name": "SE 11TH ST",
+      "pedestrians": 9,
+      "traffic": 5,
+      "position": [
+        -207.1419484181269,
+        -22.720500923479374,
+        -296.5624578142932
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 5,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-10",
+      "name": "SE 12TH ST",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -103.52589873371242,
+        -23.97350489207116,
+        -436.11616709697194
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-22",
+      "name": "SE 12TH TER",
+      "pedestrians": 17,
+      "traffic": 6,
+      "position": [
+        -64.38389795345992,
+        -23.720543435567944,
+        -499.068836564655
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 17,
+        "cachedCasualties": 0,
+        "traffic": 6,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-13",
+      "name": "SE 13TH ST",
+      "pedestrians": 23,
+      "traffic": 8,
+      "position": [
+        -118.42279231129262,
+        -24.222594213932805,
+        -501.25160519811976
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 23,
+        "cachedCasualties": 0,
+        "traffic": 8,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-6",
+      "name": "SE 14TH ST",
+      "pedestrians": 14,
+      "traffic": 8,
+      "position": [
+        -125.08950192579564,
+        -24.066699189228526,
+        -653.327266473344
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 14,
+        "cachedCasualties": 0,
+        "traffic": 8,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-8",
+      "name": "SE 1ST AVE",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -129.70019458412187,
+        -23.177985628157312,
+        26.612341660122112
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-23",
+      "name": "SE 5TH ST",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        59.40977782762912,
+        -21.447188518740557,
+        248.56077198822334
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-31",
+      "name": "SE 6TH ST",
+      "pedestrians": 18,
+      "traffic": 6,
+      "position": [
+        45.721724031452055,
+        -21.98812686485132,
+        195.4996011072041
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 18,
+        "cachedCasualties": 0,
+        "traffic": 6,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-19",
+      "name": "SE 7TH ST",
+      "pedestrians": 16,
+      "traffic": 9,
+      "position": [
+        20.80673529938189,
+        -21.869060227140384,
+        94.52494428553958
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 16,
+        "cachedCasualties": 0,
+        "traffic": 9,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-20",
+      "name": "SE 8TH ST",
+      "pedestrians": 18,
+      "traffic": 8,
+      "position": [
+        -2.252668067788762,
+        -21.63437720617645,
+        -2.788747025653027
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 18,
+        "cachedCasualties": 0,
+        "traffic": 8,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-7",
+      "name": "SE 9TH ST",
+      "pedestrians": 9,
+      "traffic": 5,
+      "position": [
+        -155.40770304213373,
+        -23.847940900610826,
+        -80.77422059295553
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 5,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-29",
+      "name": "SW 10TH ST",
+      "pedestrians": 15,
+      "traffic": 4,
+      "position": [
+        -254.12316670570243,
+        -23.381872932365003,
+        -189.18111489323795
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 15,
+        "cachedCasualties": 0,
+        "traffic": 4,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-12",
+      "name": "SW 11TH ST",
+      "pedestrians": 15,
+      "traffic": 6,
+      "position": [
+        -251.59068748858675,
+        -22.435085135030914,
+        -297.9526476168998
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 15,
+        "cachedCasualties": 0,
+        "traffic": 6,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-28",
+      "name": "SW 12TH ST",
+      "pedestrians": 12,
+      "traffic": 6,
+      "position": [
+        -244.71606678200823,
+        -22.13196691798043,
+        -406.11803396282056
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 12,
+        "cachedCasualties": 0,
+        "traffic": 6,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-33",
+      "name": "SW 13TH ST",
+      "pedestrians": 15,
+      "traffic": 5,
+      "position": [
+        -257.0276013910257,
+        -21.87017055651327,
+        -509.95255942859814
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 15,
+        "cachedCasualties": 0,
+        "traffic": 5,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-26",
+      "name": "SW 14TH ST",
+      "pedestrians": 14,
+      "traffic": 6,
+      "position": [
+        -283.8793123308082,
+        -21.99153294075347,
+        -620.2715508329253
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 14,
+        "cachedCasualties": 0,
+        "traffic": 6,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-15",
+      "name": "SW 15TH RD",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -580.4319857152599,
+        -20.366228142958757,
+        -676.7321476537164
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-5",
+      "name": "SW 1ST AVE",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -434.459271445077,
+        -23.606636316630432,
+        151.36861815267855
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-3",
+      "name": "SW 1ST CT",
+      "pedestrians": 10,
+      "traffic": 4,
+      "position": [
+        -503.04750679259115,
+        -22.47882248274119,
+        15.733697101922122
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 10,
+        "cachedCasualties": 0,
+        "traffic": 4,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-2",
+      "name": "SW 2ND AVE",
+      "pedestrians": 10,
+      "traffic": 4,
+      "position": [
+        -674.3085146626148,
+        -23.313845049234978,
+        9.146279695948804
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 10,
+        "cachedCasualties": 0,
+        "traffic": 4,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-27",
+      "name": "SW 2ND CT",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -743.455189262238,
+        -20.365837074355905,
+        -573.3379891395465
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-18",
+      "name": "SW 5TH ST",
+      "pedestrians": 9,
+      "traffic": 2,
+      "position": [
+        -784.4299765851665,
+        -23.09878872178825,
+        325.5669276109597
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 2,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-16",
+      "name": "SW 6TH ST",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -318.95432462763364,
+        -23.617865165340003,
+        233.96604761790238
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-17",
+      "name": "SW 7TH ST",
+      "pedestrians": 8,
+      "traffic": 5,
+      "position": [
+        -265.7286528170123,
+        -22.975661176777667,
+        129.709429935286
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 8,
+        "cachedCasualties": 0,
+        "traffic": 5,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-9",
+      "name": "SW 8TH ST",
+      "pedestrians": 15,
+      "traffic": 5,
+      "position": [
+        -262.13131966955245,
+        -22.879688775479686,
+        23.7221722974556
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 15,
+        "cachedCasualties": 0,
+        "traffic": 5,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-4",
+      "name": "SW 9TH ST",
+      "pedestrians": 15,
+      "traffic": 6,
+      "position": [
+        -258.92027884816275,
+        -23.558982953423563,
+        -83.11989849354197
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 15,
+        "cachedCasualties": 0,
+        "traffic": 6,
+        "preservedTrafficVehicles": 1
+      }
+    },
+    {
+      "id": "miami-street-30",
+      "name": "SW MIAMI AVENUE RD",
+      "pedestrians": 9,
+      "traffic": 3,
+      "position": [
+        -274.27623624338287,
+        -23.677257074629562,
+        294.8175501965081
+      ],
+      "stats": {
+        "sites": 803,
+        "residentPedestrians": 9,
+        "cachedCasualties": 0,
+        "traffic": 3,
+        "preservedTrafficVehicles": 1
+      }
+    }
+  ],
+  "emptyDestinations": [],
+  "limitations": [
+    "Roadside waiting residents use native clear ground where the source has no mapped sidewalk width.",
+    "Two accepted licensed civilian skins; photorealistic character diversity remains incomplete.",
+    "Sidewalk paths follow public road widths and require native support/clearance; contextual routines are walking and short pauses.",
+    "Changed traffic cars retain physical support and count against the 48 ambient vehicle cap."
+  ]
+}

@@ -1,0 +1,60 @@
+TAP version 13
+# BJS - [14:46:39]: Babylon.js v9.25.0 - Null engine
+# BJS - [14:46:40]: Babylon.js v9.25.0 - Null engine
+# Subtest: source residents retire with exact limb injuries and death, survive travel, save/load, density zero and explicit reset
+ok 1 - source residents retire with exact limb injuries and death, survive travel, save/load, density zero and explicit reset
+  ---
+  duration_ms: 1962.806792
+  type: 'test'
+  ...
+# BJS - [14:46:41]: Babylon.js v9.25.0 - Null engine
+# Subtest: native placement excludes occupied, wet and obstructed source candidates and obeys collision/density holds
+ok 2 - native placement excludes occupied, wet and obstructed source candidates and obeys collision/density holds
+  ---
+  duration_ms: 82.755375
+  type: 'test'
+  ...
+# BJS - [14:46:41]: Babylon.js v9.25.0 - Null engine
+# Subtest: local traffic retires pristine offscreen cars but preserves damaged and injured occupants, stable IDs and saves
+ok 3 - local traffic retires pristine offscreen cars but preserves damaged and injured occupants, stable IDs and saves
+  ---
+  duration_ms: 733.051709
+  type: 'test'
+  ...
+# BJS - [14:46:41]: Babylon.js v9.25.0 - Null engine
+# BJS - [14:46:42]: Babylon.js v9.25.0 - Null engine
+# Subtest: healthy crew in changed-car saves restores without acquiring a false permanent legacy injury
+ok 4 - healthy crew in changed-car saves restores without acquiring a false permanent legacy injury
+  ---
+  duration_ms: 406.563167
+  type: 'test'
+  ...
+# BJS - [14:46:42]: Babylon.js v9.25.0 - Null engine
+# Subtest: cached lying corpses restore under low clearance in their saved pose and reject genuinely occupied lying space
+ok 5 - cached lying corpses restore under low clearance in their saved pose and reject genuinely occupied lying space
+  ---
+  duration_ms: 51.503083
+  type: 'test'
+  ...
+# BJS - [14:46:42]: Babylon.js v9.25.0 - Null engine
+# Subtest: civilian fallback falls onto native negative-height ground and preserves height when support is absent
+ok 6 - civilian fallback falls onto native negative-height ground and preserves height when support is absent
+  ---
+  duration_ms: 43.129
+  type: 'test'
+  ...
+# Subtest: versioned source ledger retains more than sixty unique casualties without weakening legacy save bounds
+ok 7 - versioned source ledger retains more than sixty unique casualties without weakening legacy save bounds
+  ---
+  duration_ms: 0.844958
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7006.098708

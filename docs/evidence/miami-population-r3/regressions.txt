@@ -1,0 +1,223 @@
+TAP version 13
+# Subtest: save validation accepts extended and original version-one snapshots
+ok 1 - save validation accepts extended and original version-one snapshots
+  ---
+  duration_ms: 2.664
+  type: 'test'
+  ...
+# Subtest: Miami saves are namespaced and never reinterpret the legacy world coordinates
+ok 2 - Miami saves are namespaced and never reinterpret the legacy world coordinates
+  ---
+  duration_ms: 6.7795
+  type: 'test'
+  ...
+# Subtest: malformed prop rotation and duplicate IDs are rejected before world restoration
+ok 3 - malformed prop rotation and duplicate IDs are rejected before world restoration
+  ---
+  duration_ms: 0.59275
+  type: 'test'
+  ...
+# Subtest: invalid ammunition cannot create impossible magazines or unusable weapon selection
+ok 4 - invalid ammunition cannot create impossible magazines or unusable weapon selection
+  ---
+  duration_ms: 4.669334
+  type: 'test'
+  ...
+# Subtest: casualty saves round trip and invalid records are rejected before restoring the world
+ok 5 - casualty saves round trip and invalid records are rejected before restoring the world
+  ---
+  duration_ms: 6.107791
+  type: 'test'
+  ...
+# Subtest: player regional injuries and physical pose survive save validation without accepting mismatched or malformed actors
+ok 6 - player regional injuries and physical pose survive save validation without accepting mismatched or malformed actors
+  ---
+  duration_ms: 4.8395
+  type: 'test'
+  ...
+# BJS - [14:41:24]: Babylon.js v9.25.0 - Null engine
+# Subtest: ordinary player recovery preserves lethal civilian, guard and officer casualties while nonfatal victims recover
+ok 7 - ordinary player recovery preserves lethal civilian, guard and officer casualties while nonfatal victims recover
+  ---
+  duration_ms: 3141.963958
+  type: 'test'
+  ...
+# Fatal health/dead gates survive ordinary recovery; explicit encounter reset revives; nonfatal recovery retains75health.
+# BJS - [14:41:27]: Babylon.js v9.25.0 - Null engine
+# Subtest: casualty save round trip retains ambient/custom civilian IDs, fixed guards and retired officers without resurrection or extra physics
+ok 8 - casualty save round trip retains ambient/custom civilian IDs, fixed guards and retired officers without resurrection or extra physics
+  ---
+  duration_ms: 1175.184834
+  type: 'test'
+  ...
+# BJS - [14:41:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: dead response crews do not count as living dispatch and disabled-response cleanup remains bounded without resurrecting IDs
+ok 9 - dead response crews do not count as living dispatch and disabled-response cleanup remains bounded without resurrecting IDs
+  ---
+  duration_ms: 548.186042
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: uniform trousers use the role palette and the firearm follows a live rigged hand through aiming
+ok 10 - uniform trousers use the role palette and the firearm follows a live rigged hand through aiming
+  ---
+  duration_ms: 213.206583
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: legacy saved health-zero creative civilians acquire a persistent corpse pose without a casualty field
+ok 11 - legacy saved health-zero creative civilians acquire a persistent corpse pose without a casualty field
+  ---
+  duration_ms: 308.822167
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: a wounded police driver remains supported in the cabin and an able passenger does not operate the car
+ok 12 - a wounded police driver remains supported in the cabin and an able passenger does not operate the car
+  ---
+  duration_ms: 147.666916
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: injured police seats survive vehicle replacement, response reset and casualty load
+ok 13 - injured police seats survive vehicle replacement, response reset and casualty load
+  ---
+  duration_ms: 285.895541
+  type: 'test'
+  ...
+# BJS - [14:41:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: partial and critical regional wounds survive version-three saves without duplicating officers
+ok 14 - partial and critical regional wounds survive version-three saves without duplicating officers
+  ---
+  duration_ms: 2601.853125
+  type: 'test'
+  ...
+# BJS - [14:41:32]: Babylon.js v9.25.0 - Null engine
+# Subtest: legacy version-one fatalities and version-two timed or incapacitating injuries retain their saved meanings
+ok 15 - legacy version-one fatalities and version-two timed or incapacitating injuries retain their saved meanings
+  ---
+  duration_ms: 513.903375
+  type: 'test'
+  ...
+# BJS - [14:41:33]: Babylon.js v9.25.0 - Null engine
+# Subtest: concurrent critical survivors obey the physical-body budget and remain injured across ordinary recovery
+ok 16 - concurrent critical survivors obey the physical-body budget and remain injured across ordinary recovery
+  ---
+  duration_ms: 6766.805375
+  type: 'test'
+  ...
+# BJS - [14:41:39]: Babylon.js v9.25.0 - Null engine
+# Subtest: production Combat shots damage a settled surviving target and can make the injury fatal
+ok 17 - production Combat shots damage a settled surviving target and can make the injury fatal
+  ---
+  duration_ms: 1223.602042
+  type: 'test'
+  ...
+# BJS - [14:41:41]: Babylon.js v9.25.0 - Null engine
+# Subtest: an incapacitated response crew does not permanently reserve an offscreen patrol assignment
+ok 18 - an incapacitated response crew does not permanently reserve an offscreen patrol assignment
+  ---
+  duration_ms: 527.74975
+  type: 'test'
+  ...
+# Subtest: terminal lookahead follows curved road length, respects 60 m and reserves six metres
+ok 19 - terminal lookahead follows curved road length, respects 60 m and reserves six metres
+  ---
+  duration_ms: 2.234916
+  type: 'test'
+  ...
+# Subtest: branches, cycles and zero-length cycles do not invent terminal routes
+ok 20 - branches, cycles and zero-length cycles do not invent terminal routes
+  ---
+  duration_ms: 0.270083
+  type: 'test'
+  ...
+# Subtest: actual Population holds the terminal target and brakes indefinitely without reversing
+ok 21 - actual Population holds the terminal target and brakes indefinitely without reversing
+  ---
+  duration_ms: 10.804792
+  type: 'test'
+  ...
+# Subtest: actual Population brakes before a chained terminal even for a frightened driver
+ok 22 - actual Population brakes before a chained terminal even for a frightened driver
+  ---
+  duration_ms: 0.157542
+  type: 'test'
+  ...
+# Subtest: actual Population actively clears stale throttle on missing targets and broken links
+ok 23 - actual Population actively clears stale throttle on missing targets and broken links
+  ---
+  duration_ms: 1.939541
+  type: 'test'
+  ...
+# Subtest: actual Population advances to a real successor and then retains that terminal
+ok 24 - actual Population advances to a real successor and then retains that terminal
+  ---
+  duration_ms: 0.165458
+  type: 'test'
+  ...
+# BJS - [14:41:24]: Babylon.js v9.25.0 - Null engine
+# Subtest: carjacking preserves the visible driver actor and locks held throttle until the player is seated
+ok 25 - carjacking preserves the visible driver actor and locks held throttle until the player is seated
+  ---
+  duration_ms: 796.080042
+  type: 'test'
+  ...
+# BJS - [14:41:25]: Babylon.js v9.25.0 - Null engine
+# Subtest: blocked driver door rejects carjacking without deleting crew or stealing controls
+ok 26 - blocked driver door rejects carjacking without deleting crew or stealing controls
+  ---
+  duration_ms: 1353.523375
+  type: 'test'
+  ...
+# BJS - [14:41:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: a right-hand pilot seat requires the right door and releases the occupant on that side
+ok 27 - a right-hand pilot seat requires the right door and releases the occupant on that side
+  ---
+  duration_ms: 391.859625
+  type: 'test'
+  ...
+# BJS - [14:41:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: nearby entrant capsule does not block the former driver exit query
+ok 28 - nearby entrant capsule does not block the former driver exit query
+  ---
+  duration_ms: 147.834041
+  type: 'test'
+  ...
+# BJS - [14:41:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: critical seated drivers release the throttle and stay supported in the moving cabin
+ok 29 - critical seated drivers release the throttle and stay supported in the moving cabin
+  ---
+  duration_ms: 78.953875
+  type: 'test'
+  ...
+# BJS - [14:41:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: the seated player loses driving capability after a critical injury without jumping out of the cabin
+ok 30 - the seated player loses driving capability after a critical injury without jumping out of the cabin
+  ---
+  duration_ms: 160.779334
+  type: 'test'
+  ...
+# BJS - [14:41:27]: Babylon.js v9.25.0 - Null engine
+# Subtest: population traffic has visible drivers, drives away under physics and retains a fleeing victim after theft
+ok 31 - population traffic has visible drivers, drives away under physics and retains a fleeing victim after theft
+  ---
+  duration_ms: 4583.670667
+  type: 'test'
+  ...
+# BJS - [14:41:31]: Babylon.js v9.25.0 - Null engine
+# Subtest: seated traffic wounds reload in the existing cabin without physical on-foot recovery
+ok 32 - seated traffic wounds reload in the existing cabin without physical on-foot recovery
+  ---
+  duration_ms: 322.472125
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 26553.155583

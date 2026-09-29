@@ -749,3 +749,10 @@ select:focus-visible {
 #miami-source.in-game:has(form[hidden]) { top: 20px; right: 320px; width: 108px; background: #111b2280; border: 0; box-shadow: none; }
 #miami-source.in-game:has(form[hidden]) #miami-source-status { display: none; }
 @media(max-width: 620px) { #miami-source.in-game:has(form[hidden]) { top: 66px; right: 18px; } }
+
+/* Keep session controls clear of game menus; provider attribution remains visible. */
+body:has(#panel:not(.hidden)) #miami-source.in-game:has(form[hidden]) { visibility: hidden; pointer-events: none; }
+#panel.performance-panel label { display: block; }
+#panel.performance-panel textarea { display: block; width: 100%; margin-top: 10px; padding: 14px; color: #e5eee8; background: #09171d; border: 1px solid #ffffff29; font: 12px/1.6 ui-monospace, monospace; resize: vertical; }
+#performance-download { display: inline-block; margin: 14px 0 8px; padding: 11px 15px; color: #152b2b; background: var(--accent); font-size: 11px; font-weight: 600; text-decoration: none; }
+#performance-download:focus-visible, #panel.performance-panel textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

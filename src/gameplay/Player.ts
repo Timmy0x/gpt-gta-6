@@ -2,7 +2,6 @@ import {
   CharacterSupportedState,
   PhysicsCharacterController,
   Quaternion,
-  Ray,
   UniversalCamera,
   Vector3,
   type PhysicsEngineV2,
@@ -26,6 +25,7 @@ import { blockedCrawlEffects, bodyInjuryEffects, cloneBodyInjuries, type BodyInj
 import { damageCharacter, recoverCharacter, type DamageContact } from './CharacterDamage';
 import type { CharacterImpact } from './combat/injuries';
 import { CrawlingCollider } from './CrawlingCollider';
+import { CameraOcclusion } from '../core/CameraOcclusion';
 export class Player {
   controller: PhysicsCharacterController;
   model: Character;
@@ -75,6 +75,7 @@ export class Player {
   private velocity = Vector3.Zero();
   private previous = Vector3.Zero();
   private cameraTarget = Vector3.Zero();
+  private readonly cameraOcclusion: CameraOcclusion;
   private crawlCollider: CrawlingCollider;
   private fallCollisionFilters: {shape: PhysicsShape; membership: number}[] | null = null;
   onCharacterHit: ((model: Character, impulse: Vector3, fatal: boolean, impact: CharacterImpact) => void) | null = null;
@@ -112,6 +113,7 @@ export class Player {
     this.camera.fov = 0.88;
     this.camera.inputs.clear();
     scene.activeCamera = this.camera;
+    this.cameraOcclusion = new CameraOcclusion(scene);
   }
   get position() {
     return this.vehicle
@@ -669,18 +671,10 @@ export class Player {
       desired.addInPlace(
         new Vector3(Math.cos(this.yaw) * 0.65, 0, -Math.sin(this.yaw) * 0.65),
       );
-    const delta = desired.subtract(target);
-    const hit = this.scene.pickWithRay(
-      new Ray(target, delta.normalizeToNew(), delta.length()),
-      (m) => !!m.metadata?.cameraBlocker,
-    );
-    if (hit?.hit && hit.pickedPoint)
-      desired = hit.pickedPoint.subtract(delta.normalizeToNew().scale(0.3));
-    this.camera.position = Vector3.Lerp(
-      this.camera.position,
-      desired,
-      1 - Math.exp(-dt * 12),
-    );
+    this.camera.position = this.cameraOcclusion.resolve(target, desired, this.camera.position, dt, {
+      ignoredRoots: this.vehicle ? [this.model.root, this.vehicle.root] : [this.model.root],
+      nearPlane: this.camera.minZ, fov: this.camera.fov, aspect: this.scene.getEngine().getAspectRatio(this.camera),
+    });
     this.cameraTarget.copyFrom(target);
     this.camera.setTarget(this.cameraTarget);
     if (this.scopeMagnification > 1 && !this.vehicle) {
