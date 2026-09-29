@@ -1,0 +1,52 @@
+{
+  "candidate": "/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source",
+  "baselineCommit": "b0bb9b7",
+  "ownedRuntime": "src/core/CameraMeshQueries.ts",
+  "files": [
+    {
+      "path": "src/core/CameraMeshQueries.ts",
+      "sha256": "a1e9713dc6fd21a76f0ff5925040d634ecdef3a938ec7fc3f5a12fdc1fa4f3eb",
+      "bytes": 14804
+    },
+    {
+      "path": "tests/camera-occlusion.test.ts",
+      "sha256": "5998ae094de8ae7ff864c6f217e7651c7efc0d21204f2bc90b125b7e879021f0",
+      "bytes": 17539
+    },
+    {
+      "path": "tests/camera-typed-queries.test.ts",
+      "sha256": "23043ae333f511a14904ced427920c79fa309b3cc58c2689fc6a71f025d5b8f1",
+      "bytes": 5352
+    },
+    {
+      "path": "tests/camera-typed-queries-profile.ts",
+      "sha256": "fb8ac5d6025a43dba50b4d131a5df7ddf9656c72b87a856f8d0ce07c60351cd1",
+      "bytes": 3796
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/before-CameraMeshQueries.ts",
+      "sha256": "2be8412682eafb34cb86d931da01ca7ef04d33cef48061b16866dffcfc57f9e2",
+      "bytes": 11436
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/README.md",
+      "sha256": "4fb89da0092711a2abc3ebaa4507af43f86be5180c3fef8df0eb39e310971b71",
+      "bytes": 4585
+    }
+  ],
+  "verification": {
+    "nativeTests": 27,
+    "nativePass": 27,
+    "nativeFailures": 0,
+    "typecheck": "PASS",
+    "independentReview": "pending"
+  },
+  "evidenceScope": "Sequential synthetic native CPU queries and retained V8 heap, not live FPS or total process/GPU/Havok memory",
+  "limits": [
+    "Presentation-only in-memory source references; no source export or physics conversion.",
+    "Native fallback/other game picking may independently allocate native Vector3 point arrays.",
+    "Cache remains bounded128meshes/8192parts; oversized single mesh can rebuild repeatedly.",
+    "Mutable position/index partition ranges rebuild each query.",
+    "Existing malformed source, correction-pass, alpha-cutout and scope-camera limits unchanged."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "Read-only source fidelity review; no runtime/quality change or live provider inspection.",
+  "inspectedCandidate": ".local-builds/miami-performance-r4-source",
+  "inspectedAt": "2026-09-29T19:21:40.484Z",
+  "dependencies": {
+    "babylon": "9.25.0",
+    "tilesRenderer": "0.5.2"
+  },
+  "sources": [
+    {
+      "path": "src/world/miami/visuals/StreamedMiamiVisuals.ts",
+      "sha256": "e0112c45c5d64943749713e6c780275fd587fe3d991372d9aa38febae0cc7c18"
+    },
+    {
+      "path": "src/world/miami/visuals/LHTilesRenderer.ts",
+      "sha256": "6ffeed370305f1ab486a10e5ff39ebcc1856765a92071d7f088af7ed0aeb2cab"
+    },
+    {
+      "path": "src/world/miami/visuals/LocalTileBounds.ts",
+      "sha256": "548a9f6900153974de125808a292a92b467194e6a2a425eff1307464d9aee90b"
+    },
+    {
+      "path": "node_modules/3d-tiles-renderer/src/core/renderer/tiles/TilesRendererBase.js",
+      "sha256": "d39c221bc61fbd216581b321868bcafcf1b935812e39b0cbcfbb0071bd8b829e"
+    },
+    {
+      "path": "node_modules/3d-tiles-renderer/src/core/renderer/tiles/traverseFunctions.js",
+      "sha256": "b18b50d47278825d6bd2543df318c94e36b069dee1dceeb75a0133a973cf78e4"
+    }
+  ],
+  "officialReferences": [
+    "https://developers.google.com/maps/documentation/tile/3d-tiles-overview",
+    "https://developers.google.com/maps/documentation/tile/create-renderer"
+  ],
+  "finding": "A controlled lower SSE target may choose finer available source tiles; source-limited geometry/texture fidelity and exact whole-city parity remain unproven."
+}

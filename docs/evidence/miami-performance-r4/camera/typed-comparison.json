@@ -1,0 +1,109 @@
+{
+  "scope": "Sequential synthetic vertical-wall CPU/native-query and retained V8 heap comparison; no source/provider data, live browser FPS, GPU, Havok or total process memory claim",
+  "node": "v22.23.2",
+  "cpu": "Apple M5 Pro",
+  "arch": "arm64",
+  "measuredAt": "2026-09-29T19:14:08.905Z",
+  "records": [
+    {
+      "kind": "before",
+      "triangles": 125000,
+      "vertices": 63001,
+      "typedSourceBytes": 2256012,
+      "coldMs": 17.95674999999983,
+      "retainedHeapDeltaBytes": 8478984,
+      "before": {
+        "heapUsed": 133030944,
+        "arrayBuffers": 4422173,
+        "external": 6746970
+      },
+      "after": {
+        "heapUsed": 141509928,
+        "arrayBuffers": 4422173,
+        "external": 6768660
+      },
+      "nativePointCount": 63001,
+      "warmFrames": 30,
+      "warmMedianMs": 0.1040419999999358,
+      "warmP95Ms": 0.37591599999996106,
+      "warmMaxMs": 0.4794999999999163,
+      "originalRenderSubmeshes": 1,
+      "nativeBodies": 0
+    },
+    {
+      "kind": "after",
+      "triangles": 125000,
+      "vertices": 63001,
+      "typedSourceBytes": 2256012,
+      "coldMs": 13.372208999999657,
+      "retainedHeapDeltaBytes": 89528,
+      "before": {
+        "heapUsed": 140744704,
+        "arrayBuffers": 4422173,
+        "external": 9053797
+      },
+      "after": {
+        "heapUsed": 140834232,
+        "arrayBuffers": 4422173,
+        "external": 6797785
+      },
+      "nativePointCount": 0,
+      "warmFrames": 30,
+      "warmMedianMs": 0.12029200000051787,
+      "warmP95Ms": 0.22100000000045839,
+      "warmMaxMs": 0.23233299999992596,
+      "originalRenderSubmeshes": 1,
+      "nativeBodies": 0
+    },
+    {
+      "kind": "before",
+      "triangles": 500000,
+      "vertices": 251001,
+      "typedSourceBytes": 9012012,
+      "coldMs": 62.57133299999987,
+      "retainedHeapDeltaBytes": 32441976,
+      "before": {
+        "heapUsed": 141008640,
+        "arrayBuffers": 11178173,
+        "external": 15809797
+      },
+      "after": {
+        "heapUsed": 173450616,
+        "arrayBuffers": 11178173,
+        "external": 13553785
+      },
+      "nativePointCount": 251001,
+      "warmFrames": 30,
+      "warmMedianMs": 0.1257500000001528,
+      "warmP95Ms": 0.27079200000025594,
+      "warmMaxMs": 0.36362499999995634,
+      "originalRenderSubmeshes": 1,
+      "nativeBodies": 0
+    },
+    {
+      "kind": "after",
+      "triangles": 500000,
+      "vertices": 251001,
+      "typedSourceBytes": 9012012,
+      "coldMs": 26.319250000000466,
+      "retainedHeapDeltaBytes": 188736,
+      "before": {
+        "heapUsed": 169287912,
+        "arrayBuffers": 11178173,
+        "external": 22565797
+      },
+      "after": {
+        "heapUsed": 169476648,
+        "arrayBuffers": 11178173,
+        "external": 13553785
+      },
+      "nativePointCount": 0,
+      "warmFrames": 30,
+      "warmMedianMs": 0.24641700000029232,
+      "warmP95Ms": 1.5310000000008586,
+      "warmMaxMs": 1.6237080000000788,
+      "originalRenderSubmeshes": 1,
+      "nativeBodies": 0
+    }
+  ]
+}

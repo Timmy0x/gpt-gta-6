@@ -1,0 +1,2853 @@
+
+> leonida-free-roam@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: private delivery inventories exact files and per-model geometry without claiming an import
+ok 1 - private delivery inventories exact files and per-model geometry without claiming an import
+  ---
+  duration_ms: 170.345125
+  type: 'test'
+  ...
+# Subtest: containment checks apply to materials, textures, symlinks and portable path syntax
+ok 2 - containment checks apply to materials, textures, symlinks and portable path syntax
+  ---
+  duration_ms: 103.479792
+  type: 'test'
+  ...
+# Subtest: reflection and spectral dependencies cannot disappear from the inventory
+ok 3 - reflection and spectral dependencies cannot disappear from the inventory
+  ---
+  duration_ms: 333.415042
+  type: 'test'
+  ...
+# Subtest: unknown external or non-polygon grammar fails explicitly
+ok 4 - unknown external or non-polygon grammar fails explicitly
+  ---
+  duration_ms: 187.812084
+  type: 'test'
+  ...
+# Subtest: finite vertex, UV and normal records are required independently for each OBJ
+ok 5 - finite vertex, UV and normal records are required independently for each OBJ
+  ---
+  duration_ms: 261.28475
+  type: 'test'
+  ...
+# Subtest: face indices cannot reference absent records or omit a textured material binding
+ok 6 - face indices cannot reference absent records or omit a textured material binding
+  ---
+  duration_ms: 863.0065
+  type: 'test'
+  ...
+# Subtest: multiple material libraries resolve separately and preserve first-library lookup order
+ok 7 - multiple material libraries resolve separately and preserve first-library lookup order
+  ---
+  duration_ms: 26.0665
+  type: 'test'
+  ...
+# Subtest: spaced filenames must not be confused with an mtllib list
+ok 8 - spaced filenames must not be confused with an mtllib list
+  ---
+  duration_ms: 34.574958
+  type: 'test'
+  ...
+# Subtest: shared material aliases retain texture dependencies from both tile folders
+ok 9 - shared material aliases retain texture dependencies from both tile folders
+  ---
+  duration_ms: 42.347875
+  type: 'test'
+  ...
+# Subtest: portable relative Windows paths, comments and continuations retain their dependencies
+ok 10 - portable relative Windows paths, comments and continuations retain their dependencies
+  ---
+  duration_ms: 26.916625
+  type: 'test'
+  ...
+# Subtest: empty files, invalid descriptor shapes and oversized lines fail before success
+ok 11 - empty files, invalid descriptor shapes and oversized lines fail before success
+  ---
+  duration_ms: 1218.800375
+  type: 'test'
+  ...
+# Subtest: native delivery preserves declared metric origin, US survey feet, vertical datum and source-axis orientation
+ok 12 - native delivery preserves declared metric origin, US survey feet, vertical datum and source-axis orientation
+  ---
+  duration_ms: 10.0885
+  type: 'test'
+  ...
+# Subtest: native transform refuses origin/datum omissions, projection guesses, shear and uncontrolled scale
+ok 13 - native transform refuses origin/datum omissions, projection guesses, shear and uncontrolled scale
+  ---
+  duration_ms: 0.504375
+  type: 'test'
+  ...
+# Subtest: control points reject actual placement/height errors and underdetermined alignment
+ok 14 - control points reject actual placement/height errors and underdetermined alignment
+  ---
+  duration_ms: 4.233625
+  type: 'test'
+  ...
+# Subtest: external geometry uses the supplied horizontal and vertical operations and local inverse-transpose normal
+ok 15 - external geometry uses the supplied horizontal and vertical operations and local inverse-transpose normal
+  ---
+  duration_ms: 6.203833
+  type: 'test'
+  ...
+# Subtest: external references cannot turn a CRS label or incomplete datum operation into georeferencing
+ok 16 - external references cannot turn a CRS label or incomplete datum operation into georeferencing
+  ---
+  duration_ms: 3.664416
+  type: 'test'
+  ...
+# Subtest: external normals reject singular, false and unstable supplied derivatives
+ok 17 - external normals reject singular, false and unstable supplied derivatives
+  ---
+  duration_ms: 0.508708
+  type: 'test'
+  ...
+# Subtest: Space / gamepad A is collective or elevator in aircraft, without applying the wheel handbrake
+ok 18 - Space / gamepad A is collective or elevator in aircraft, without applying the wheel handbrake
+  ---
+  duration_ms: 0.649667
+  type: 'test'
+  ...
+# Subtest: aircraft instructions expose required lift, change after runway acceleration, and follow remapped keys or gamepad
+ok 19 - aircraft instructions expose required lift, change after runway acceleration, and follow remapped keys or gamepad
+  ---
+  duration_ms: 0.378917
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: both full player skins and procedural fallbacks fit inside the actual aircraft cockpit surfaces
+ok 20 - both full player skins and procedural fallbacks fit inside the actual aircraft cockpit surfaces
+  ---
+  duration_ms: 2479.952417
+  type: 'test'
+  ...
+# plane Jason licensed: 14064 vertices, roof clearance 0.1224m, floor clearance 0.1033m; {"min":[-0.27936236028625233,-0.35945337987219594,-0.2352115676408362],"max":[0.27941963618989485,0.972627011216535,0.6839451872431811]}
+# plane Jason fallback: 4692 vertices, roof clearance 0.1027m, floor clearance 0.0790m; {"min":[-0.318,-0.37790343499183654,-0.23600000149011613],"max":[0.318,0.9923706939648838,0.6704392437338829]}
+# plane Lucia licensed: 16308 vertices, roof clearance 0.1420m, floor clearance 0.1013m; {"min":[-0.28872808609510076,-0.36117410861370175,-0.26059453574967195],"max":[0.2887278852675862,0.9528592406570904,0.6619557854125501]}
+# plane Lucia fallback: 4662 vertices, roof clearance 0.1027m, floor clearance 0.0790m; {"min":[-0.302,-0.3779034945964813,-0.23600000149011613],"max":[0.302,0.9923706939648838,0.6704392437338829]}
+# helicopter Jason licensed: 14064 vertices, roof clearance 0.0699m, floor clearance 0.0877m; {"min":[-0.5793623722071812,-0.3794534380239758,0.21478841938065918],"max":[-0.0205802994370905,0.9526269530647552,1.1339451827728197]}
+# helicopter Jason fallback: 4692 vertices, roof clearance 0.0508m, floor clearance 0.0637m; {"min":[-0.618000011920929,-0.3979034159183502,0.2139999940395355],"max":[0.01799998807907105,0.9723707130383701,1.1204392392635345]}
+# helicopter Lucia licensed: 16308 vertices, roof clearance 0.0888m, floor clearance 0.0903m; {"min":[-0.5887280217220966,-0.3811741276871872,0.189405446666972],"max":[-0.011272050359306673,0.9328592597305767,1.1119558572361845]}
+# helicopter Lucia fallback: 4662 vertices, roof clearance 0.0508m, floor clearance 0.0637m; {"min":[-0.602000011920929,-0.397903475522995,0.2139999940395355],"max":[0.0019999880790710356,0.9723707130383701,1.1204392392635345]}
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: posed anatomical ray volumes distinguish all six regions and leave empty space unhittable
+ok 21 - posed anatomical ray volumes distinguish all six regions and leave empty space unhittable
+  ---
+  duration_ms: 183.591792
+  type: 'test'
+  ...
+# Subtest: capsule rays handle parallel segments, end caps, interior starts and finite length
+ok 22 - capsule rays handle parallel segments, end caps, interior starts and finite length
+  ---
+  duration_ms: 0.165375
+  type: 'test'
+  ...
+# Subtest: left and right damage remain independent and affect gait, mobility, aiming and handling
+ok 23 - left and right damage remain independent and affect gait, mobility, aiming and handling
+  ---
+  duration_ms: 0.849166
+  type: 'test'
+  ...
+# Subtest: critical injury falls, stays crawling beyond a few seconds, and rises only after gradual healing
+ok 24 - critical injury falls, stays crawling beyond a few seconds, and rises only after gradual healing
+  ---
+  duration_ms: 5.978791
+  type: 'test'
+  ...
+# Subtest: healing uses elapsed simulation time, survives serialization, and cannot mutate a previous saved snapshot
+ok 25 - healing uses elapsed simulation time, survives serialization, and cannot mutate a previous saved snapshot
+  ---
+  duration_ms: 64.456
+  type: 'test'
+  ...
+# Subtest: repeated hits extend the affected injury without reviving or instantly recovering a critical survivor
+ok 26 - repeated hits extend the affected injury without reviving or instantly recovering a critical survivor
+  ---
+  duration_ms: 0.20525
+  type: 'test'
+  ...
+# Subtest: distributed critical health records systemic impairment without inventing a torso wound
+ok 27 - distributed critical health records systemic impairment without inventing a torso wound
+  ---
+  duration_ms: 0.125166
+  type: 'test'
+  ...
+# Subtest: blocked standing remains a controllable crawl and preserves actual regional state
+ok 28 - blocked standing remains a controllable crawl and preserves actual regional state
+  ---
+  duration_ms: 0.097333
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# Subtest: camera selects the nearest wall at Miami negative elevations and leaves near-plane clearance
+ok 29 - camera selects the nearest wall at Miami negative elevations and leaves near-plane clearance
+  ---
+  duration_ms: 22.639125
+  type: 'test'
+  ...
+# Subtest: a newly appearing wall retracts the camera immediately despite positional smoothing
+ok 30 - a newly appearing wall retracts the camera immediately despite positional smoothing
+  ---
+  duration_ms: 2.824458
+  type: 'test'
+  ...
+# Subtest: the camera recovers when its previous position is inside a thick wall
+ok 31 - the camera recovers when its previous position is inside a thick wall
+  ---
+  duration_ms: 4.485
+  type: 'test'
+  ...
+# Subtest: off-axis camera clearance detects a narrow obstacle missed by the center ray
+ok 32 - off-axis camera clearance detects a narrow obstacle missed by the center ray
+  ---
+  duration_ms: 1.819292
+  type: 'test'
+  ...
+# Subtest: short endpoint probes create side clearance beside a parallel wall
+ok 33 - short endpoint probes create side clearance beside a parallel wall
+  ---
+  duration_ms: 1.632292
+  type: 'test'
+  ...
+# Subtest: rendered tile geometry blocks only the camera and creates no physical world data
+ok 34 - rendered tile geometry blocks only the camera and creates no physical world data
+  ---
+  duration_ms: 4.282166
+  type: 'test'
+  ...
+# Subtest: invisible public collision and transformed visual surfaces retain their camera queries
+ok 35 - invisible public collision and transformed visual surfaces retain their camera queries
+  ---
+  duration_ms: 86.2715
+  type: 'test'
+  ...
+# Subtest: the controlled player and vehicle are excluded while unrelated scene blockers remain
+ok 36 - the controlled player and vehicle are excluded while unrelated scene blockers remain
+  ---
+  duration_ms: 25.522458
+  type: 'test'
+  ...
+# Subtest: a wider near plane increases clearance for ultrawide aspect ratios
+ok 37 - a wider near plane increases clearance for ultrawide aspect ratios
+  ---
+  duration_ms: 4.08775
+  type: 'test'
+  ...
+# Subtest: district teleport resolves the new camera locally without interpolating through the previous district
+ok 38 - district teleport resolves the new camera locally without interpolating through the previous district
+  ---
+  duration_ms: 1.876083
+  type: 'test'
+  ...
+# Subtest: camera probes never send far-away meshes to native triangle picking
+ok 39 - camera probes never send far-away meshes to native triangle picking
+  ---
+  duration_ms: 16.257958
+  type: 'test'
+  ...
+# Subtest: public thin-instance blockers retain Babylon instance-aware nearest picking
+ok 40 - public thin-instance blockers retain Babylon instance-aware nearest picking
+  ---
+  duration_ms: 2.190958
+  type: 'test'
+  ...
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual Player.render applies visual camera avoidance while leaving Havok and character positions unchanged
+ok 41 - actual Player.render applies visual camera avoidance while leaving Havok and character positions unchanged
+  ---
+  duration_ms: 138.489625
+  type: 'test'
+  ...
+# Subtest: exact clearance detects a 2 cm near-plane blocker between every finite boom ray
+ok 42 - exact clearance detects a 2 cm near-plane blocker between every finite boom ray
+  ---
+  duration_ms: 1.508333
+  type: 'test'
+  ...
+# Subtest: non-indexed visual triangles and ordinary transformed instances retain native picking
+ok 43 - non-indexed visual triangles and ordinary transformed instances retain native picking
+  ---
+  duration_ms: 2.346583
+  type: 'test'
+  ...
+# Subtest: partition eviction and geometry changes preserve original render submeshes, materials and buffers
+ok 44 - partition eviction and geometry changes preserve original render submeshes, materials and buffers
+  ---
+  duration_ms: 156.959959
+  type: 'test'
+  ...
+# Subtest: a tile-wide bounding box enclosing the camera is never treated as actual visual geometry
+ok 45 - a tile-wide bounding box enclosing the camera is never treated as actual visual geometry
+  ---
+  duration_ms: 0.849083
+  type: 'test'
+  ...
+# Subtest: actual updateVerticesData deformation invalidates in-place native point-cache bounds
+ok 46 - actual updateVerticesData deformation invalidates in-place native point-cache bounds
+  ---
+  duration_ms: 0.822916
+  type: 'test'
+  ...
+# Subtest: small deformed props between the boom rays still receive freshly rebuilt exact clearance
+ok 47 - small deformed props between the boom rays still receive freshly rebuilt exact clearance
+  ---
+  duration_ms: 1.1155
+  type: 'test'
+  ...
+# Subtest: native updatable index buffers cannot retain query bounds for an old triangle selection
+ok 48 - native updatable index buffers cannot retain query bounds for an old triangle selection
+  ---
+  duration_ms: 0.583708
+  type: 'test'
+  ...
+# Subtest: replacing an immutable vertex buffer invalidates query bounds even when native points are reused
+ok 49 - replacing an immutable vertex buffer invalidates query bounds even when native points are reused
+  ---
+  duration_ms: 4.54775
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: cold static camera rays and endpoint clearance do not generate native per-vertex point arrays or copy buffers
+ok 50 - cold static camera rays and endpoint clearance do not generate native per-vertex point arrays or copy buffers
+  ---
+  duration_ms: 15.908041
+  type: 'test'
+  ...
+# Subtest: scratch native triangle rays match both sides and finite ranges under reflected affine transforms
+ok 51 - scratch native triangle rays match both sides and finite ranges under reflected affine transforms
+  ---
+  duration_ms: 86.055458
+  type: 'test'
+  ...
+# Subtest: interleaved FLOAT position buffers with a typed-array byteOffset match native picking without deinterleaving
+ok 52 - interleaved FLOAT position buffers with a typed-array byteOffset match native picking without deinterleaving
+  ---
+  duration_ms: 2.959083
+  type: 'test'
+  ...
+# Subtest: normalized SHORT position data uses native Float32 conversion semantics
+ok 53 - normalized SHORT position data uses native Float32 conversion semantics
+  ---
+  duration_ms: 1.235667
+  type: 'test'
+  ...
+# Subtest: native nonindexed submesh vertex ranges and indexed material changes remain authoritative
+ok 54 - native nonindexed submesh vertex ranges and indexed material changes remain authoritative
+  ---
+  duration_ms: 4.185833
+  type: 'test'
+  ...
+# Subtest: unsupported morph geometry keeps the native picking fallback
+ok 55 - unsupported morph geometry keeps the native picking fallback
+  ---
+  duration_ms: 1.657458
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: licensed player skins load once, retarget direct bone changes, preserve NPC uniforms and release clones
+ok 56 - licensed player skins load once, retarget direct bone changes, preserve NPC uniforms and release clones
+  ---
+  duration_ms: 1736.254333
+  type: 'test'
+  ...
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: both licensed skins clear existing low and detailed concept car cabin floor and roof bounds
+ok 57 - both licensed skins clear existing low and detailed concept car cabin floor and roof bounds
+  ---
+  duration_ms: 285.876625
+  type: 'test'
+  ...
+# Jason low: cabin-space floor=-0.2176m, roof=0.9126m; all 14064 visible vertices evaluated.
+# Jason reclined: cabin-space floor=-0.4575m, roof=0.5010m; all 14064 visible vertices evaluated.
+# Lucia low: cabin-space floor=-0.2193m, roof=0.8929m; all 16308 visible vertices evaluated.
+# Lucia reclined: cabin-space floor=-0.4593m, roof=0.4790m; all 16308 visible vertices evaluated.
+# Subtest: a failed licensed character load retains fallback and can retry cleanly
+ok 58 - a failed licensed character load retains fallback and can retry cleanly
+  ---
+  duration_ms: 130.535541
+  type: 'test'
+  ...
+# BJS - [15:17:08]: Babylon.js v9.25.0 - Null engine
+# Subtest: Rocketbox GLB packages retain licensed provenance and valid three-material skin data
+ok 59 - Rocketbox GLB packages retain licensed provenance and valid three-material skin data
+  ---
+  duration_ms: 71.173
+  type: 'test'
+  ...
+# BJS - [15:17:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: visible player pelvis follows Havok ragdoll synchronization in the same render frame
+ok 60 - visible player pelvis follows Havok ragdoll synchronization in the same render frame
+  ---
+  duration_ms: 1422.313292
+  type: 'test'
+  ...
+# Subtest: critical licensed occupants slump and guard while preserving seated pelvis, legs and cabin clearance
+ok 61 - critical licensed occupants slump and guard while preserving seated pelvis, legs and cabin clearance
+  ---
+  duration_ms: 319.6725
+  type: 'test'
+  ...
+# Jason low: critical slump floor -0.2176 m / roof 0.7233 m.
+# Jason reclined: critical slump floor -0.4575 m / roof 0.3433 m.
+# Lucia low: critical slump floor -0.2193 m / roof 0.7764 m.
+# Lucia reclined: critical slump floor -0.4593 m / roof 0.3964 m.
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: player and NPC share partial region damage, torso armor and region-dependent critical reactions
+ok 62 - player and NPC share partial region damage, torso armor and region-dependent critical reactions
+  ---
+  duration_ms: 2081.561292
+  type: 'test'
+  ...
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: the entire crawling body collides with walls and can leave a low ceiling before standing
+ok 63 - the entire crawling body collides with walls and can leave a low ceiling before standing
+  ---
+  duration_ms: 1536.110416
+  type: 'test'
+  ...
+# BJS - [15:17:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: nearby civilian controllers stop at cover and release all native bodies across activity cycles
+ok 64 - nearby civilian controllers stop at cover and release all native bodies across activity cycles
+  ---
+  duration_ms: 361.234625
+  type: 'test'
+  ...
+# BJS - [15:17:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: anatomical combat queries leave the calf gap empty and respect actual cover in front of a moving limb
+ok 65 - anatomical combat queries leave the calf gap empty and respect actual cover in front of a moving limb
+  ---
+  duration_ms: 93.342791
+  type: 'test'
+  ...
+# BJS - [15:17:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: player physical fall hands back movement once and explicit recovery preserves other casualties
+ok 66 - player physical fall hands back movement once and explicit recovery preserves other casualties
+  ---
+  duration_ms: 336.619917
+  type: 'test'
+  ...
+# BJS - [15:17:10]: Babylon.js v9.25.0 - Null engine
+# Subtest: simulation-time health recovery waits for wounds, agrees across time partitions and never revives a fatal actor
+ok 67 - simulation-time health recovery waits for wounds, agrees across time partitions and never revives a fatal actor
+  ---
+  duration_ms: 59.7835
+  type: 'test'
+  ...
+# BJS - [15:17:10]: Babylon.js v9.25.0 - Null engine
+# Subtest: fire reaches a character through its own capsule while a solid wall still shields it
+ok 68 - fire reaches a character through its own capsule while a solid wall still shields it
+  ---
+  duration_ms: 723.570917
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# Subtest: low driving pose keeps both character variants' skinned feet above the cabin floor and head below the roof
+ok 69 - low driving pose keeps both character variants' skinned feet above the cabin floor and head below the roof
+  ---
+  duration_ms: 312.701375
+  type: 'test'
+  ...
+# Subtest: reclined driving pose clears the detailed concept car's floor and roof
+ok 70 - reclined driving pose clears the detailed concept car's floor and roof
+  ---
+  duration_ms: 18.128791
+  type: 'test'
+  ...
+# Subtest: both character variants have valid skinned geometry and one render submesh
+ok 71 - both character variants have valid skinned geometry and one render submesh
+  ---
+  duration_ms: 71.825042
+  type: 'test'
+  ...
+# Jason: 4692 vertices, 9160 triangles, 17 bones.
+# Lucia: 4662 vertices, 9100 triangles, 17 bones.
+# Subtest: walk and run skin the feet while aiming raises the hand and crouching recovers
+ok 72 - walk and run skin the feet while aiming raises the hand and crouching recovers
+  ---
+  duration_ms: 66.868708
+  type: 'test'
+  ...
+# Subtest: characters share their material safely across repeated character switching
+ok 73 - characters share their material safely across repeated character switching
+  ---
+  duration_ms: 256.456417
+  type: 'test'
+  ...
+# Subtest: equal fixed-step inputs produce equal joint poses without moving the controller root
+ok 74 - equal fixed-step inputs produce equal joint poses without moving the controller root
+  ---
+  duration_ms: 45.561709
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: civilian and player libraries load independently once and keep shared geometry with private rigs
+ok 75 - civilian and player libraries load independently once and keep shared geometry with private rigs
+  ---
+  duration_ms: 1826.133458
+  type: 'test'
+  ...
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: partial civilian loading failure retains working players and retries without accumulating assets
+ok 76 - partial civilian loading failure retains working players and retries without accumulating assets
+  ---
+  duration_ms: 186.2175
+  type: 'test'
+  ...
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: population civilian appearance is stable by ID and does not change police or player selection
+ok 77 - population civilian appearance is stable by ID and does not change police or player selection
+  ---
+  duration_ms: 170.623166
+  type: 'test'
+  ...
+# BJS - [15:17:10]: Babylon.js v9.25.0 - Null engine
+# Subtest: nearby detailed civilian budget prioritizes settled casualties and changes only visibility
+ok 78 - nearby detailed civilian budget prioritizes settled casualties and changes only visibility
+  ---
+  duration_ms: 2173.31025
+  type: 'test'
+  ...
+# BJS - [15:17:10]: Babylon.js v9.25.0 - Null engine
+# Subtest: civilian distance hysteresis avoids repeated visible mesh replacement at the detail threshold
+ok 79 - civilian distance hysteresis avoids repeated visible mesh replacement at the detail threshold
+  ---
+  duration_ms: 93.262583
+  type: 'test'
+  ...
+# Subtest: both civilian rigs follow the same-frame Havok pelvis and retain fatal poses after distant culling
+ok 80 - both civilian rigs follow the same-frame Havok pelvis and retain fatal poses after distant culling
+  ---
+  duration_ms: 1871.391417
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: authored slope collision matches water-depth queries across bank and offshore seabed
+ok 81 - authored slope collision matches water-depth queries across bank and offshore seabed
+  ---
+  duration_ms: 125.102667
+  type: 'test'
+  ...
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual character walks down the bank, swims, dives without crossing the seabed, surfaces and walks ashore
+ok 82 - actual character walks down the bank, swims, dives without crossing the seabed, surfaces and walks ashore
+  ---
+  duration_ms: 775.125375
+  type: 'test'
+  ...
+# Subtest: immersion ignores dry shallows, bridges and positions outside the ocean and tracks breath only below water
+ok 83 - immersion ignores dry shallows, bridges and positions outside the ocean and tracks breath only below water
+  ---
+  duration_ms: 0.157625
+  type: 'test'
+  ...
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# Subtest: fast travel restores destination colliders evicted while its visual packages are loading
+ok 84 - fast travel restores destination colliders evicted while its visual packages are loading
+  ---
+  duration_ms: 56.272458
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: normal reticle ray ignores its real character capsule before native collection and still stops at a thin pole or close cover
+ok 85 - normal reticle ray ignores its real character capsule before native collection and still stops at a thin pole or close cover
+  ---
+  duration_ms: 167.010584
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: many excluded bodies cannot saturate the collector or hide an allowed body sharing their shape
+ok 86 - many excluded bodies cannot saturate the collector or hide an allowed body sharing their shape
+  ---
+  duration_ms: 46.944417
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:06]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: weapon switching conserves rounds and reloading transfers only available reserve
+ok 87 - weapon switching conserves rounds and reloading transfers only available reserve
+  ---
+  duration_ms: 0.697208
+  type: 'test'
+  ...
+# Subtest: reticle sees target but muzzle ray stops at close cover, including invisible Havok proxies
+ok 88 - reticle sees target but muzzle ray stops at close cover, including invisible Havok proxies
+  ---
+  duration_ms: 42.185583
+  type: 'test'
+  ...
+# Subtest: physical grenade follows gravity, bounces off a thin wall and detonates at its actual body position
+ok 89 - physical grenade follows gravity, bounces off a thin wall and detonates at its actual body position
+  ---
+  duration_ms: 37.908084
+  type: 'test'
+  ...
+# Subtest: destructible fences collide and obstruct navigation until broken; material damage differs
+ok 90 - destructible fences collide and obstruct navigation until broken; material damage differs
+  ---
+  duration_ms: 321.608959
+  type: 'test'
+  ...
+# Subtest: explosion cover is resolved in three dimensions before destruction changes the scene
+ok 91 - explosion cover is resolved in three dimensions before destruction changes the scene
+  ---
+  duration_ms: 76.536
+  type: 'test'
+  ...
+# Subtest: fire has visible flames, causes material damage, extinguishes in rain and preserves deformed geometry on save
+ok 92 - fire has visible flames, causes material damage, extinguishes in rain and preserves deformed geometry on save
+  ---
+  duration_ms: 100.739834
+  type: 'test'
+  ...
+# Subtest: Babylon V2 ragdoll uses constrained bodies, physically falls, then safely returns the live rig to animation
+ok 93 - Babylon V2 ragdoll uses constrained bodies, physically falls, then safely returns the live rig to animation
+  ---
+  duration_ms: 367.929083
+  type: 'test'
+  ...
+# Subtest: held models follow the skinned hand, hide for traversal and release pooled submaterials when switching
+ok 94 - held models follow the skinned hand, hide for traversal and release pooled submaterials when switching
+  ---
+  duration_ms: 295.222416
+  type: 'test'
+  ...
+# Subtest: aimed weapon follows the firing direction at different pitches and yaws while its grip stays at the hand
+ok 95 - aimed weapon follows the firing direction at different pitches and yaws while its grip stays at the hand
+  ---
+  duration_ms: 79.678709
+  type: 'test'
+  ...
+# Subtest: fatal hit during recovery reactivates physics and frozen ragdolls retain exactly one cleanup observer until reset
+ok 96 - fatal hit during recovery reactivates physics and frozen ragdolls retain exactly one cleanup observer until reset
+  ---
+  duration_ms: 386.747584
+  type: 'test'
+  ...
+# Subtest: vehicle-like impacts queue prop destruction outside the physics callback and disposal restores resource counts
+ok 97 - vehicle-like impacts queue prop destruction outside the physics callback and disposal restores resource counts
+  ---
+  duration_ms: 72.403833
+  type: 'test'
+  ...
+# Subtest: Combat fire and melee use the normal public interfaces, dispatch officer impacts and spend ammunition
+ok 98 - Combat fire and melee use the normal public interfaces, dispatch officer impacts and spend ammunition
+  ---
+  duration_ms: 150.126125
+  type: 'test'
+  ...
+# Subtest: reset clears active, fatal and already-settled ragdolls before population respawn
+ok 99 - reset clears active, fatal and already-settled ragdolls before population respawn
+  ---
+  duration_ms: 267.728084
+  type: 'test'
+  ...
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: licensed concept car has neutral wheel axles and real suspension, acceleration, steering and attached doors
+ok 100 - licensed concept car has neutral wheel axles and real suspension, acceleration, steering and attached doors
+  ---
+  duration_ms: 2081.498042
+  type: 'test'
+  ...
+# Havok driving: 25.90 m/s, heading 0.499, body height 0.628 m.
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: dense body dents are isolated, compact, restorable and repairable, and removed doors have independent collision
+ok 101 - dense body dents are isolated, compact, restorable and repairable, and removed doors have independent collision
+  ---
+  duration_ms: 1745.522041
+  type: 'test'
+  ...
+# 405-coordinate lattice; damaged vehicle save 5918 bytes; five replacements have stable scene/physics resources.
+# BJS - [15:17:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: seated handgun fire clears a lowered driver window, respects aim arcs and leaves steering available
+ok 102 - seated handgun fire clears a lowered driver window, respects aim arcs and leaves steering available
+  ---
+  duration_ms: 2067.281667
+  type: 'test'
+  ...
+# BJS - [15:17:07]: Babylon.js v9.25.0 - Null engine
+# Subtest: annex gate physically blocks entry until normal visitor access opens its animated Havok body
+ok 103 - annex gate physically blocks entry until normal visitor access opens its animated Havok body
+  ---
+  duration_ms: 1506.244583
+  type: 'test'
+  ...
+# {"closed":[-455.4500000000008,1.05,144],"authorized":[-467.4500000000035,1.05,144],"guards":4}
+# BJS - [15:17:08]: Babylon.js v9.25.0 - Null engine
+# Subtest: leaving within the annex warning avoids a crime; ignoring it leads to calm detention rather than automatic shooting
+ok 104 - leaving within the annex warning avoids a crime; ignoring it leads to calm detention rather than automatic shooting
+  ---
+  duration_ms: 2028.184209
+  type: 'test'
+  ...
+# {"arrested":true,"stats":{"id":"coastal-reserve-annex","classification":"creative-mode addition","phase":"alarm","inside":true,"accessSeconds":0,"warningSeconds":0,"guards":4,"activeGuards":4,"gateOpen":true,"arrestProgress":0.21111111111111117},"health":100}
+# BJS - [15:17:10]: Babylon.js v9.25.0 - Null engine
+# Subtest: visitor authorization is revoked by armed behavior, guard shots damage a resisting suspect, patrols and resets retain bounded stable actors
+ok 105 - visitor authorization is revoked by armed behavior, guard shots damage a resisting suspect, patrols and resets retain bounded stable actors
+  ---
+  duration_ms: 2002.36275
+  type: 'test'
+  ...
+# {"healthAfterThreat":0,"guardIds":["reserve-guard-1","reserve-guard-2","reserve-guard-3","reserve-guard-4"],"phase":"quiet"}
+# Subtest: long-session frame history retains raw stalls in chronological order across repeated wraps
+ok 106 - long-session frame history retains raw stalls in chronological order across repeated wraps
+  ---
+  duration_ms: 28.582834
+  type: 'test'
+  ...
+# BJS - [15:17:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:01]: Babylon.js v9.25.0 - Null engine
+# Subtest: licensed player and civilian skins keep limb lengths and clear the floor throughout limp, fall, crawl and rise
+ok 107 - licensed player and civilian skins keep limb lengths and clear the floor throughout limp, fall, crawl and rise
+  ---
+  duration_ms: 49128.296625
+  type: 'test'
+  ...
+# 18771616 actual indexed skin vertices checked; minimum 0.00600 m, maximum 1.84789 m; max palm/sole surface gap 0.05355 / 0.08780 m; max planted palm gap 0.01306 m; max trunk/leg support gap 0.02380 m; max consecutive crawl joint movement 0.06435 m.
+# Subtest: opposite leg wounds mirror the actual gait and shorten only the injured stride; torso wounds visibly hunch and guard
+ok 108 - opposite leg wounds mirror the actual gait and shorten only the injured stride; torso wounds visibly hunch and guard
+  ---
+  duration_ms: 58.269583
+  type: 'test'
+  ...
+# Subtest: VC-INNER adds a connected metric street network with three two-way joins and no dead ends
+ok 109 - VC-INNER adds a connected metric street network with three two-way joins and no dead ends
+  ---
+  duration_ms: 24.192666
+  type: 'test'
+  ...
+# Subtest: every new lane remains on paved geometry over physical ground, away from the annex and buildings
+ok 110 - every new lane remains on paved geometry over physical ground, away from the annex and buildings
+  ---
+  duration_ms: 43.711958
+  type: 'test'
+  ...
+# Subtest: new district has explicit coverage, substantial architecture and traversable public destinations
+ok 111 - new district has explicit coverage, substantial architecture and traversable public destinations
+  ---
+  duration_ms: 34.683792
+  type: 'test'
+  ...
+# Subtest: authoring sink receives complete stable recipes and collision records without Babylon runtime dependency
+ok 112 - authoring sink receives complete stable recipes and collision records without Babylon runtime dependency
+  ---
+  duration_ms: 95.280917
+  type: 'test'
+  ...
+# Subtest: saved key bindings reject reserved/corrupt fields and keep every action reachable
+ok 113 - saved key bindings reject reserved/corrupt fields and keep every action reachable
+  ---
+  duration_ms: 1.690209
+  type: 'test'
+  ...
+# Subtest: radial stick deadzone removes drift, preserves direction and gives analog travel
+ok 114 - radial stick deadzone removes drift, preserves direction and gives analog travel
+  ---
+  duration_ms: 0.209084
+  type: 'test'
+  ...
+# Subtest: standard gamepad buttons supply held actions and exactly one press edge
+ok 115 - standard gamepad buttons supply held actions and exactly one press edge
+  ---
+  duration_ms: 1.320209
+  type: 'test'
+  ...
+# Subtest: holding Start while opening an overlay does not immediately toggle it closed
+ok 116 - holding Start while opening an overlay does not immediately toggle it closed
+  ---
+  duration_ms: 0.271542
+  type: 'test'
+  ...
+# Subtest: analog axes support movement/braking and camera filtering without digitalizing the stick
+ok 117 - analog axes support movement/braking and camera filtering without digitalizing the stick
+  ---
+  duration_ms: 0.4385
+  type: 'test'
+  ...
+# Subtest: triggers and weapon buttons work, and unplugging clears only controller input
+ok 118 - triggers and weapon buttons work, and unplugging clears only controller input
+  ---
+  duration_ms: 0.587083
+  type: 'test'
+  ...
+# Subtest: rebindings survive reload, swap duplicates and preserve keyboard/mouse release behavior
+ok 119 - rebindings survive reload, swap duplicates and preserve keyboard/mouse release behavior
+  ---
+  duration_ms: 0.605042
+  type: 'test'
+  ...
+# Subtest: focus loss cancels firing/movement and held controller buttons must release before resuming
+ok 120 - focus loss cancels firing/movement and held controller buttons must release before resuming
+  ---
+  duration_ms: 0.226708
+  type: 'test'
+  ...
+# Subtest: jump survives render frames without physics while render actions retain one-frame edges
+ok 121 - jump survives render frames without physics while render actions retain one-frame edges
+  ---
+  duration_ms: 0.240125
+  type: 'test'
+  ...
+# Subtest: jump buffering follows remapping and clear discards unconsumed jump edges
+ok 122 - jump buffering follows remapping and clear discards unconsumed jump edges
+  ---
+  duration_ms: 0.474041
+  type: 'test'
+  ...
+# Subtest: pointer buttons aim and fire before mouse compatibility events and release outside canvas
+ok 123 - pointer buttons aim and fire before mouse compatibility events and release outside canvas
+  ---
+  duration_ms: 0.277458
+  type: 'test'
+  ...
+# Subtest: pointer-only aim/fire chords and cancellation clear flags without clearing controller triggers
+ok 124 - pointer-only aim/fire chords and cancellation clear flags without clearing controller triggers
+  ---
+  duration_ms: 0.212417
+  type: 'test'
+  ...
+# BJS - [15:17:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:12]: Babylon.js v9.25.0 - Null engine
+# Subtest: render interpolation restores authoritative position/rotation and resets teleports
+ok 125 - render interpolation restores authoritative position/rotation and resets teleports
+  ---
+  duration_ms: 10.050375
+  type: 'test'
+  ...
+# Subtest: recovery between physics steps survives immediate render and authoritative restore
+ok 126 - recovery between physics steps survives immediate render and authoritative restore
+  ---
+  duration_ms: 1.438292
+  type: 'test'
+  ...
+# BJS - [15:17:12]: Babylon.js v9.25.0 - Null engine
+# Subtest: late glTF light overrides respect device capacity and explicit water budgets before rendering
+ok 127 - late glTF light overrides respect device capacity and explicit water budgets before rendering
+  ---
+  duration_ms: 17.988583
+  type: 'test'
+  ...
+# Subtest: map projections round-trip at different zooms, preserve zoom focus and expose the complete bounded world
+ok 128 - map projections round-trip at different zooms, preserve zoom focus and expose the complete bounded world
+  ---
+  duration_ms: 0.790792
+  type: 'test'
+  ...
+# BJS - [15:17:12]: Babylon.js v9.25.0 - Null engine
+# Subtest: teleport selection uses actual Havok support and head clearance on street, roof, shore and water
+ok 129 - teleport selection uses actual Havok support and head clearance on street, roof, shore and water
+  ---
+  duration_ms: 259.527959
+  type: 'test'
+  ...
+# Subtest: Miami projection is metre-scale ENU with independent survey elevation
+ok 130 - Miami projection is metre-scale ENU with independent survey elevation
+  ---
+  duration_ms: 1.686292
+  type: 'test'
+  ...
+# Subtest: source direction and full footprint holes survive normalization; null heights stay unavailable
+ok 131 - source direction and full footprint holes survive normalization; null heights stay unavailable
+  ---
+  duration_ms: 0.862958
+  type: 'test'
+  ...
+# Subtest: only exact source building identity joins height, with source date discrepancies retained
+ok 132 - only exact source building identity joins height, with source date discrepancies retained
+  ---
+  duration_ms: 0.421917
+  type: 'test'
+  ...
+# Subtest: contradictory City FT/TF direction is rejected instead of reversing traffic silently
+ok 133 - contradictory City FT/TF direction is rejected instead of reversing traffic silently
+  ---
+  duration_ms: 0.088083
+  type: 'test'
+  ...
+# Subtest: polygon extrusion retains a real courtyard hole, metre UVs and upward surface normals
+ok 134 - polygon extrusion retains a real courtyard hole, metre UVs and upward surface normals
+  ---
+  duration_ms: 2.458291
+  type: 'test'
+  ...
+# Subtest: a thin source clipping triangle retains its exact world vertices without a false relative-area failure
+ok 135 - a thin source clipping triangle retains its exact world vertices without a false relative-area failure
+  ---
+  duration_ms: 1.01525
+  type: 'test'
+  ...
+# BJS - [15:17:13]: Babylon.js v9.25.0 - Null engine
+# Subtest: native crossing has unobstructed asphalt, physical curbs and sidewalks, and separate bridge levels
+ok 136 - native crossing has unobstructed asphalt, physical curbs and sidewalks, and separate bridge levels
+  ---
+  duration_ms: 544.599167
+  type: 'test'
+  ...
+# BJS - [15:17:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: native river and island outlines agree with swimming floor queries, without a solid water surface
+ok 137 - native river and island outlines agree with swimming floor queries, without a solid water surface
+  ---
+  duration_ms: 222.0525
+  type: 'test'
+  ...
+# Subtest: lane graph follows source one-way direction and separates grade-crossing connections
+ok 138 - lane graph follows source one-way direction and separates grade-crossing connections
+  ---
+  duration_ms: 0.535459
+  type: 'test'
+  ...
+# Subtest: AOI lane graph removes routes ending outside the map and keeps a connected source loop
+ok 139 - AOI lane graph removes routes ending outside the map and keeps a connected source loop
+  ---
+  duration_ms: 1
+  type: 'test'
+  ...
+# BJS - [15:17:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: a reserved centre turning band offsets lanes but only mapped island polygons become raised obstacles
+ok 140 - a reserved centre turning band offsets lanes but only mapped island polygons become raised obstacles
+  ---
+  duration_ms: 153.484042
+  type: 'test'
+  ...
+# Subtest: unsupported source water crossings are withheld until bridge elevation provenance exists
+ok 141 - unsupported source water crossings are withheld until bridge elevation provenance exists
+  ---
+  duration_ms: 19.091625
+  type: 'test'
+  ...
+# BJS - [15:17:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: dry coverage clips road, sidewalk and curb buffers around mapped water holes while preserving islands and sourced decks
+ok 142 - dry coverage clips road, sidewalk and curb buffers around mapped water holes while preserving islands and sourced decks
+  ---
+  duration_ms: 375.2015
+  type: 'test'
+  ...
+# Subtest: lane segments cannot skip sub-metre water holes even when both graph nodes are on dry ground
+ok 143 - lane segments cannot skip sub-metre water holes even when both graph nodes are on dry ground
+  ---
+  duration_ms: 2.252416
+  type: 'test'
+  ...
+# BJS - [15:17:13]: Babylon.js v9.25.0 - Null engine
+# Subtest: Miami PBR channels keep their measured metre scale, linear data and shared scene resources
+ok 144 - Miami PBR channels keep their measured metre scale, linear data and shared scene resources
+  ---
+  duration_ms: 14.453709
+  type: 'test'
+  ...
+# BJS - [15:17:13]: Babylon.js v9.25.0 - Null engine
+# Subtest: public common-frame collision does not require retired surface textures
+ok 145 - public common-frame collision does not require retired surface textures
+  ---
+  duration_ms: 89.678917
+  type: 'test'
+  ...
+# Subtest: an incomplete material fails before allocating scene textures or a partial material
+ok 146 - an incomplete material fails before allocating scene textures or a partial material
+  ---
+  duration_ms: 1.067875
+  type: 'test'
+  ...
+# BJS - [15:17:14]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: source residents retire with exact limb injuries and death, survive travel, save/load, density zero and explicit reset
+ok 147 - source residents retire with exact limb injuries and death, survive travel, save/load, density zero and explicit reset
+  ---
+  duration_ms: 6446.748542
+  type: 'test'
+  ...
+# BJS - [15:17:21]: Babylon.js v9.25.0 - Null engine
+# Subtest: native placement excludes occupied, wet and obstructed source candidates and obeys collision/density holds
+ok 148 - native placement excludes occupied, wet and obstructed source candidates and obeys collision/density holds
+  ---
+  duration_ms: 512.009166
+  type: 'test'
+  ...
+# BJS - [15:17:21]: Babylon.js v9.25.0 - Null engine
+# Subtest: local traffic retires pristine offscreen cars but preserves damaged and injured occupants, stable IDs and saves
+ok 149 - local traffic retires pristine offscreen cars but preserves damaged and injured occupants, stable IDs and saves
+  ---
+  duration_ms: 3297.203625
+  type: 'test'
+  ...
+# BJS - [15:17:24]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: healthy crew in changed-car saves restores without acquiring a false permanent legacy injury
+ok 150 - healthy crew in changed-car saves restores without acquiring a false permanent legacy injury
+  ---
+  duration_ms: 1590.627917
+  type: 'test'
+  ...
+# BJS - [15:17:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: cached lying corpses restore under low clearance in their saved pose and reject genuinely occupied lying space
+ok 151 - cached lying corpses restore under low clearance in their saved pose and reject genuinely occupied lying space
+  ---
+  duration_ms: 121.249166
+  type: 'test'
+  ...
+# BJS - [15:17:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: civilian fallback falls onto native negative-height ground and preserves height when support is absent
+ok 152 - civilian fallback falls onto native negative-height ground and preserves height when support is absent
+  ---
+  duration_ms: 133.6645
+  type: 'test'
+  ...
+# Subtest: versioned source ledger retains more than sixty unique casualties without weakening legacy save bounds
+ok 153 - versioned source ledger retains more than sixty unique casualties without weakening legacy save bounds
+  ---
+  duration_ms: 0.850833
+  type: 'test'
+  ...
+# BJS - [15:17:26]: Babylon.js v9.25.0 - Null engine
+# {"populationVisit":"Brickell Avenue · SE 8th Street","pedestrians":30,"traffic":10,"vehicles":10}
+# {"populationVisit":"BRICKELL AVE","pedestrians":30,"traffic":12,"vehicles":12}
+# {"populationVisit":"BRICKELL BAY DR","pedestrians":19,"traffic":12,"vehicles":12}
+# {"populationVisit":"BRICKELL KEY DR","pedestrians":23,"traffic":12,"vehicles":12}
+# {"populationVisit":"S MIAMI AVE","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"S MIAMI PL","pedestrians":9,"traffic":5,"vehicles":6}
+# {"populationVisit":"SE 10TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 11TH ST","pedestrians":9,"traffic":5,"vehicles":6}
+# {"populationVisit":"SE 12TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 12TH TER","pedestrians":17,"traffic":6,"vehicles":7}
+# {"populationVisit":"SE 13TH ST","pedestrians":23,"traffic":8,"vehicles":9}
+# {"populationVisit":"SE 14TH ST","pedestrians":14,"traffic":8,"vehicles":9}
+# {"populationVisit":"SE 1ST AVE","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 5TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SE 6TH ST","pedestrians":18,"traffic":6,"vehicles":7}
+# {"populationVisit":"SE 7TH ST","pedestrians":16,"traffic":9,"vehicles":10}
+# {"populationVisit":"SE 8TH ST","pedestrians":18,"traffic":8,"vehicles":8}
+# {"populationVisit":"SE 9TH ST","pedestrians":9,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 10TH ST","pedestrians":15,"traffic":4,"vehicles":5}
+# {"populationVisit":"SW 11TH ST","pedestrians":15,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW 12TH ST","pedestrians":12,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW 13TH ST","pedestrians":15,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 14TH ST","pedestrians":14,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW 15TH RD","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 1ST AVE","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 1ST CT","pedestrians":10,"traffic":4,"vehicles":5}
+# {"populationVisit":"SW 2ND AVE","pedestrians":10,"traffic":4,"vehicles":5}
+# {"populationVisit":"SW 2ND CT","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 5TH ST","pedestrians":9,"traffic":2,"vehicles":3}
+# {"populationVisit":"SW 6TH ST","pedestrians":9,"traffic":3,"vehicles":4}
+# {"populationVisit":"SW 7TH ST","pedestrians":8,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 8TH ST","pedestrians":15,"traffic":5,"vehicles":6}
+# {"populationVisit":"SW 9TH ST","pedestrians":15,"traffic":6,"vehicles":7}
+# {"populationVisit":"SW MIAMI AVENUE RD","pedestrians":9,"traffic":3,"vehicles":4}
+# Subtest: actual R2 public source catalogue and native residents cover all named Miami destinations with bounded actors
+ok 154 - actual R2 public source catalogue and native residents cover all named Miami destinations with bounded actors
+  ---
+  duration_ms: 117097.227375
+  type: 'test'
+  ...
+# {"catalogueSites":803,"destinations":34,"maxPeople":30,"maxVehicles":12,"minPeople":8,"minTraffic":2}
+# BJS - [15:17:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: new required collision takes the next slot before still-useful optional prefetch
+ok 155 - new required collision takes the next slot before still-useful optional prefetch
+  ---
+  duration_ms: 291.518916
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: obsolete queued jobs never issue fetches or become failed packages
+ok 156 - obsolete queued jobs never issue fetches or become failed packages
+  ---
+  duration_ms: 239.776208
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: preparation pins retain destination priority while ordinary frames still update the origin
+ok 157 - preparation pins retain destination priority while ordinary frames still update the origin
+  ---
+  duration_ms: 43.955375
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: a cancelled chunk can be pinned again in the same turn without inheriting its rejected promise
+ok 158 - a cancelled chunk can be pinned again in the same turn without inheriting its rejected promise
+  ---
+  duration_ms: 99.149667
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: disposal cancels reprioritized queued jobs and cannot resurrect native resources
+ok 159 - disposal cancels reprioritized queued jobs and cannot resurrect native resources
+  ---
+  duration_ms: 17.478334
+  type: 'test'
+  ...
+# Subtest: packed Miami geometry is zero-copy and rejects incorrect residency bounds, duplicate IDs and malformed slices
+ok 160 - packed Miami geometry is zero-copy and rejects incorrect residency bounds, duplicate IDs and malformed slices
+  ---
+  duration_ms: 1.944875
+  type: 'test'
+  ...
+# BJS - [15:17:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: native fetch receives the global receiver, deduplicates preparation, limits concurrency and installs collision before resolving
+ok 161 - native fetch receives the global receiver, deduplicates preparation, limits concurrency and installs collision before resolving
+  ---
+  duration_ms: 263.908791
+  type: 'test'
+  ...
+# BJS - [15:17:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: failed integrity cannot report ready or allocate geometry, and explicit retry clears its error
+ok 162 - failed integrity cannot report ready or allocate geometry, and explicit retry clears its error
+  ---
+  duration_ms: 202.463917
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: disposal aborts active requests, rejects queued work and cannot resurrect meshes or counters
+ok 163 - disposal aborts active requests, rejects queued work and cannot resurrect meshes or counters
+  ---
+  duration_ms: 68.393833
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: visual budget and residency stats count actual work, shared storage and only referenced materials
+ok 164 - visual budget and residency stats count actual work, shared storage and only referenced materials
+  ---
+  duration_ms: 132.406541
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: failed material creation disposes its partial mesh and cached source can retry without a download
+ok 165 - failed material creation disposes its partial mesh and cached source can retry without a download
+  ---
+  duration_ms: 24.534166
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: hidden structural shells load only for collision, never render or cast shadows, and unload with physical residency
+ok 166 - hidden structural shells load only for collision, never render or cast shadows, and unload with physical residency
+  ---
+  duration_ms: 22.864458
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: late responses and a failing removal observer cannot retain or resurrect disposed native resources
+ok 167 - late responses and a failing removal observer cannot retain or resurrect disposed native resources
+  ---
+  duration_ms: 20.176833
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: opaque browser fetch failures retain the exact chunk, stage and original cause
+ok 168 - opaque browser fetch failures retain the exact chunk, stage and original cause
+  ---
+  duration_ms: 66.24925
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: hiding public display preserves Havok support and missing arrivals fail the readiness gate
+ok 169 - hiding public display preserves Havok support and missing arrivals fail the readiness gate
+  ---
+  duration_ms: 40.90475
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: expanded-world prefetch reserves its byte budget and evicts old nearby buffers without dropping anchored Havok support
+ok 170 - expanded-world prefetch reserves its byte budget and evicts old nearby buffers without dropping anchored Havok support
+  ---
+  duration_ms: 75.123375
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: required active-body support is retained and explicitly reported when it exceeds the optional cache target
+ok 171 - required active-body support is retained and explicitly reported when it exceeds the optional cache target
+  ---
+  duration_ms: 41.478792
+  type: 'test'
+  ...
+# BJS - [15:17:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: an unavailable optional preload cannot block a destination whose required native support is ready
+ok 172 - an unavailable optional preload cannot block a destination whose required native support is ready
+  ---
+  duration_ms: 107.610209
+  type: 'test'
+  ...
+# Subtest: normal frame controls remain available after Miami scenery is ready
+ok 173 - normal frame controls remain available after Miami scenery is ready
+  ---
+  duration_ms: 90.598834
+  type: 'test'
+  ...
+# Subtest: missing Miami scenery blocks melee, entry, repair and weapon changes in the real frame callback
+ok 174 - missing Miami scenery blocks melee, entry, repair and weapon changes in the real frame callback
+  ---
+  duration_ms: 29.896541
+  type: 'test'
+  ...
+# Subtest: opening the source panel also closes the weapon wheel input path
+ok 175 - opening the source panel also closes the weapon wheel input path
+  ---
+  duration_ms: 36.855417
+  type: 'test'
+  ...
+# Subtest: a visual hold renders the current physical pose while still permitting camera recovery
+ok 176 - a visual hold renders the current physical pose while still permitting camera recovery
+  ---
+  duration_ms: 16.907125
+  type: 'test'
+  ...
+# BJS - [15:17:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: native Babylon scene.physicsEnabled suspends Havok and its gameplay observers together
+ok 177 - native Babylon scene.physicsEnabled suspends Havok and its gameplay observers together
+  ---
+  duration_ms: 282.605166
+  type: 'test'
+  ...
+# BJS - [15:17:17]: Babylon.js v9.25.0 - Null engine
+# {"spawn":[6.7379608154296875,-21.57852798461914,15.636405944824219],"car":[8.374134448248686,-21.750420379638673,35.11855879322357],"pedestrians":30,"roads":1871,"stats":{"requests":13,"fetchedBytes":52680384,"retries":0,"packagesLoaded":11,"packagesEvicted":0,"meshLoads":49,"meshDisposals":0,"colliderLoads":49,"colliderDisposals":0,"lastError":"","totalChunks":51,"residentChunks":11,"totalMeshes":437,"residentMeshes":49,"totalColliders":437,"residentColliders":49,"cpuGeometryBytes":52680384,"totalCpuGeometryBytes":211968600,"pendingMeshes":0,"activeAnchors":0,"lastMeshOperations":1,"loadedPackages":11,"totalPackages":51,"pendingPackages":10,"failedPackages":0,"residentMaterials":0,"ready":true,"sourceBufferBudgetBytes":100663296,"requiredSourceBufferBytes":52680384,"streetObjects":{"objects":0,"residentBodies":0,"fallen":0,"colliderLoads":0,"colliderDisposals":0,"batches":0,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":0}}}
+# Subtest: source Brickell world loads exact chunk bytes, has a supported sidewalk spawn and starter vehicle space
+ok 178 - source Brickell world loads exact chunk bytes, has a supported sidewalk spawn and starter vehicle space
+  ---
+  duration_ms: 31649.37025
+  type: 'test'
+  ...
+# BJS - [15:17:18]: Babylon.js v9.25.0 - Null engine
+# Subtest: compiled common-frame Brickell payload supports native negative ground, roads and source building faces without invented waterbeds or bridge decks
+ok 179 - compiled common-frame Brickell payload supports native negative ground, roads and source building faces without invented waterbeds or bridge decks
+  ---
+  duration_ms: 58380.02575
+  type: 'test'
+  ...
+# {"scope":"Actual public Brickell geometry under explicitly provisional common-frame policy; native Havok, no GPU/provider geometry","meshes":437,"buildingMeshes":262,"buildingFaceChecks":520,"nonExposedCandidates":15,"triangles":6335492,"groundChecks":3348,"roadChecks":1470,"maxGroundErrorM":0.030270711417514917,"maxRoadErrorM":0.01891296606060422,"restingErrorM":0.00048332214355539804,"excludedRoads":4,"waterbedMeshes":0}
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: scene-owned ion→Google connection retains the actual game camera, geometry, all credits and fixed origin
+ok 180 - scene-owned ion→Google connection retains the actual game camera, geometry, all credits and fixed origin
+  ---
+  duration_ms: 175.449958
+  type: 'test'
+  ...
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: moving the existing camera hides and restores visual coverage and credits without reconnecting
+ok 181 - moving the existing camera hides and restores visual coverage and credits without reconnecting
+  ---
+  duration_ms: 127.335041
+  type: 'test'
+  ...
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: disconnect aborts a pending endpoint and reconnect cannot receive late assets or stale credits
+ok 182 - disconnect aborts a pending endpoint and reconnect cannot receive late assets or stale credits
+  ---
+  duration_ms: 73.393583
+  type: 'test'
+  ...
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: initial401 recovers once while403/503 remain terminal and explicit retry rebuilds a fresh connection
+ok 183 - initial401 recovers once while403/503 remain terminal and explicit retry rebuilds a fresh connection
+  ---
+  duration_ms: 111.603792
+  type: 'test'
+  ...
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: scene disposal releases owned tiles and callbacks; immutable summaries are sampled rather than emitted every frame
+ok 184 - scene disposal releases owned tiles and callbacks; immutable summaries are sampled rather than emitted every frame
+  ---
+  duration_ms: 88.277041
+  type: 'test'
+  ...
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# Subtest: normal ion bearer and version stay on the issued origin; cross-origin content receives no private auth fields
+ok 185 - normal ion bearer and version stay on the issued origin; cross-origin content receives no private auth fields
+  ---
+  duration_ms: 272.120625
+  type: 'test'
+  ...
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# Subtest: persistent401 is bounded and tile parse failures expose no credential-bearing content labels or raw error text
+ok 186 - persistent401 is bounded and tile parse failures expose no credential-bearing content labels or raw error text
+  ---
+  duration_ms: 94.45725
+  type: 'test'
+  ...
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+# VisualConnectionError: Visual source request failed (401).
+#     at ScopedProviderTransport.\#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+#     at ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:78:8)
+#     at runNextTicks (node:internal/process/task_queues:64:5)
+#     at listOnTimeout (node:internal/timers:547:9)
+#     at process.processTimers (node:internal/timers:521:7) {
+#   code: 'http',
+#   status: 401
+# }
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+# VisualConnectionError: Visual source request failed (503).
+#     at ScopedProviderTransport.\#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+#     at ScopedProviderTransport.\#json (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:30:8)
+#     at <anonymous> (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:67:86)
+#     at runNextTicks (node:internal/process/task_queues:64:5)
+#     at listOnTimeout (node:internal/timers:547:9)
+#     at process.processTimers (node:internal/timers:521:7)
+#     at async ScopedProviderTransport.\#renew (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:67:245)
+#     at async ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:75:29) {
+#   code: 'http',
+#   status: 503
+# }
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# Subtest: nested Google401 renews with a key-only root, propagates the new session, and bounds persistent failures
+ok 187 - nested Google401 renews with a key-only root, propagates the new session, and bounds persistent failures
+  ---
+  duration_ms: 459.05
+  type: 'test'
+  ...
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:20]: Babylon.js v9.25.0 - Null engine
+# Subtest: ion external Google endpoint uses the pinned presence contract instead of a guessed externalType enum
+ok 188 - ion external Google endpoint uses the pinned presence contract instead of a guessed externalType enum
+  ---
+  duration_ms: 166.149292
+  type: 'test'
+  ...
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: native core traversal has exact original view decisions through changing camera, projection, framebuffer, viewport and group states
+ok 189 - native core traversal has exact original view decisions through changing camera, projection, framebuffer, viewport and group states
+  ---
+  duration_ms: 518.827209
+  type: 'test'
+  ...
+# Subtest: a stable native update builds one frustum for 1001 tile queries and independent direct calls stay fresh
+ok 190 - a stable native update builds one frustum for 1001 tile queries and independent direct calls stay fresh
+  ---
+  duration_ms: 126.135125
+  type: 'test'
+  ...
+# Subtest: before/after listeners, plugin-skipped updates, rootless updates and exceptions cannot retain stale view math
+ok 191 - before/after listeners, plugin-skipped updates, rootless updates and exceptions cannot retain stale view math
+  ---
+  duration_ms: 8.413833
+  type: 'test'
+  ...
+# Subtest: outgoing traversal events invalidate the cached view before listeners query a moved camera
+ok 192 - outgoing traversal events invalidate the cached view before listeners query a moved camera
+  ---
+  duration_ms: 1.924917
+  type: 'test'
+  ...
+# BJS - [15:17:19]: Babylon.js v9.25.0 - Null engine
+# Subtest: expanded Brickell named destinations and supported edge pins resolve to real loaded support; mapped water remains unavailable
+ok 193 - expanded Brickell named destinations and supported edge pins resolve to real loaded support; mapped water remains unavailable
+  ---
+  duration_ms: 132746.986167
+  type: 'test'
+  ...
+# {"named":34,"landings":37,"rejectedEdges":8,"excludedBridges":0,"rejectedWater":103,"trafficChecks":9727,"wetTraffic":0,"failures":[],"stats":{"requests":238,"fetchedBytes":1085782164,"retries":0,"packagesLoaded":237,"packagesEvicted":217,"meshLoads":1557,"meshDisposals":1506,"colliderLoads":1557,"colliderDisposals":1506,"lastError":"","totalChunks":51,"residentChunks":7,"totalMeshes":437,"residentMeshes":51,"totalColliders":437,"residentColliders":51,"cpuGeometryBytes":85488120,"totalCpuGeometryBytes":211968600,"pendingMeshes":0,"activeAnchors":0,"lastMeshOperations":72,"loadedPackages":20,"totalPackages":51,"pendingPackages":1,"failedPackages":0,"residentMaterials":0,"ready":true,"sourceBufferBudgetBytes":100663296,"requiredSourceBufferBytes":34660116,"streetObjects":{"objects":0,"residentBodies":0,"fallen":0,"colliderLoads":0,"colliderDisposals":0,"batches":0,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":0}}}
+# BJS - [15:17:21]: Babylon.js v9.25.0 - Null engine
+# Subtest: Havok standing capsule rejects overlap, low ceilings, and swept wall crossings
+ok 194 - Havok standing capsule rejects overlap, low ceilings, and swept wall crossings
+  ---
+  duration_ms: 330.543833
+  type: 'test'
+  ...
+# BJS - [15:17:21]: Babylon.js v9.25.0 - Null engine
+# Subtest: Havok ledge query accepts a reachable low ledge and rejects an obstructed landing
+ok 195 - Havok ledge query accepts a reachable low ledge and rejects an obstructed landing
+  ---
+  duration_ms: 331.354708
+  type: 'test'
+  ...
+# BJS - [15:17:21]: Babylon.js v9.25.0 - Null engine
+# Subtest: character controller actually climbs the queried ledge and settles on top
+ok 196 - character controller actually climbs the queried ledge and settles on top
+  ---
+  duration_ms: 487.326834
+  type: 'test'
+  ...
+# BJS - [15:17:22]: Babylon.js v9.25.0 - Null engine
+# Subtest: vehicle exit finds the opposite door and refuses when every exit is blocked
+ok 197 - vehicle exit finds the opposite door and refuses when every exit is blocked
+  ---
+  duration_ms: 916.161834
+  type: 'test'
+  ...
+# BJS - [15:17:22]: Babylon.js v9.25.0 - Null engine
+# Subtest: WASTED rejects vehicle entry and jumping; paused controller look stays fixed
+ok 198 - WASTED rejects vehicle entry and jumping; paused controller look stays fixed
+  ---
+  duration_ms: 166.792875
+  type: 'test'
+  ...
+# BJS - [15:17:23]: Babylon.js v9.25.0 - Null engine
+# Subtest: hip firing raises the weapon and turns the actual player before its firing cone opens
+ok 199 - hip firing raises the weapon and turns the actual player before its firing cone opens
+  ---
+  duration_ms: 77.426375
+  type: 'test'
+  ...
+# Subtest: a nearby traversable lane rescues an unreachable nearest-lane snap
+ok 200 - a nearby traversable lane rescues an unreachable nearest-lane snap
+  ---
+  duration_ms: 2.669709
+  type: 'test'
+  ...
+# Subtest: destination alternatives also use actual directed connections
+ok 201 - destination alternatives also use actual directed connections
+  ---
+  duration_ms: 0.931875
+  type: 'test'
+  ...
+# Subtest: exact source nodes retain one-way constraints and nearest legal routes retain priority
+ok 202 - exact source nodes retain one-way constraints and nearest legal routes retain priority
+  ---
+  duration_ms: 0.2365
+  type: 'test'
+  ...
+# Subtest: bounded approaches never replace isolated nearby streets or accept a distant map pin
+ok 203 - bounded approaches never replace isolated nearby streets or accept a distant map pin
+  ---
+  duration_ms: 0.093541
+  type: 'test'
+  ...
+# Subtest: navigation distinguishes unavailable, restored, arrived and cleared routes
+ok 204 - navigation distinguishes unavailable, restored, arrived and cleared routes
+  ---
+  duration_ms: 0.483625
+  type: 'test'
+  ...
+# Subtest: the actual map action keeps unavailable routes open and the HUD never calls them zero metres
+ok 205 - the actual map action keeps unavailable routes open and the HUD never calls them zero metres
+  ---
+  duration_ms: 181.360959
+  type: 'test'
+  ...
+# Subtest: routing follows directed connections and reports disconnected destinations
+ok 206 - routing follows directed connections and reports disconnected destinations
+  ---
+  duration_ms: 1.584291
+  type: 'test'
+  ...
+# BJS - [15:17:22]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:22]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:22]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:23]: Babylon.js v9.25.0 - Null engine
+# Subtest: native vehicle recovery uses negative support and returns a settled car without jumping to Y=0
+ok 207 - native vehicle recovery uses negative support and returns a settled car without jumping to Y=0
+  ---
+  duration_ms: 615.570209
+  type: 'test'
+  ...
+# Subtest: missing native vehicle support repairs damage but preserves pose/motion, then allows recovery after support arrives
+ok 208 - missing native vehicle support repairs damage but preserves pose/motion, then allows recovery after support arrives
+  ---
+  duration_ms: 71.38025
+  type: 'test'
+  ...
+# Subtest: legacy fatal and nonfatal casualties preserve saved negative roots and native ground-relative recovery
+ok 209 - legacy fatal and nonfatal casualties preserve saved negative roots and native ground-relative recovery
+  ---
+  duration_ms: 170.648708
+  type: 'test'
+  ...
+# Subtest: saved survivor waits in its negative-height down pose when native support is missing
+ok 210 - saved survivor waits in its negative-height down pose when native support is missing
+  ---
+  duration_ms: 11.900416
+  type: 'test'
+  ...
+# BJS - [15:17:23]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:23]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:24]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: citizen spawn uses the actual map boundary: sustained corner flee stays on finite negative ground and can return
+ok 211 - citizen spawn uses the actual map boundary: sustained corner flee stays on finite negative ground and can return
+  ---
+  duration_ms: 507.903875
+  type: 'test'
+  ...
+# Subtest: dispatch, restored responders and guards receive the same playable boundary
+ok 212 - dispatch, restored responders and guards receive the same playable boundary
+  ---
+  duration_ms: 825.188292
+  type: 'test'
+  ...
+# Subtest: citizen and officer prone capsules remain completely inside the supported edge
+ok 213 - citizen and officer prone capsules remain completely inside the supported edge
+  ---
+  duration_ms: 1627.705416
+  type: 'test'
+  ...
+# Subtest: native controller guard preserves vertical and tangential velocity and repairs outside or below-floor positions without Y=0
+ok 214 - native controller guard preserves vertical and tangential velocity and repairs outside or below-floor positions without Y=0
+  ---
+  duration_ms: 17.175
+  type: 'test'
+  ...
+# BJS - [15:17:23]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:24]: Babylon.js v9.25.0 - Null engine
+# Subtest: water dielectric transmits near-normal rays and reflects beyond the critical water-to-air angle
+ok 215 - water dielectric transmits near-normal rays and reflects beyond the critical water-to-air angle
+  ---
+  duration_ms: 0.706625
+  type: 'test'
+  ...
+# Subtest: scoped optical extension modifies the exact pinned expression without changing global native shaders
+ok 216 - scoped optical extension modifies the exact pinned expression without changing global native shaders
+  ---
+  duration_ms: 4.220625
+  type: 'test'
+  ...
+# Subtest: ocean surface/depth use explicit bounded physical coordinates and original periodic normal data
+ok 217 - ocean surface/depth use explicit bounded physical coordinates and original periodic normal data
+  ---
+  duration_ms: 355.871666
+  type: 'test'
+  ...
+# BJS - [15:17:24]: Babylon.js v9.25.0 - Null engine
+# Subtest: native ocean bounds RTT work, excludes water/self and disposed sources, and disposes repeated instances
+ok 218 - native ocean bounds RTT work, excludes water/self and disposed sources, and disposes repeated instances
+  ---
+  duration_ms: 599.074125
+  type: 'test'
+  ...
+# Subtest: submerged native water reverses RTT media and restores atmosphere, clipping and visibility after each pass
+ok 219 - submerged native water reverses RTT media and restores atmosphere, clipping and visibility after each pass
+  ---
+  duration_ms: 72.57875
+  type: 'test'
+  ...
+# Subtest: performance summary keeps a real stall in its duration and slowest-one-percent result
+ok 220 - performance summary keeps a real stall in its duration and slowest-one-percent result
+  ---
+  duration_ms: 0.7765
+  type: 'test'
+  ...
+# Subtest: no measured frames produces unavailable metrics instead of fictional zero or infinite FPS
+ok 221 - no measured frames produces unavailable metrics instead of fictional zero or infinite FPS
+  ---
+  duration_ms: 0.10275
+  type: 'test'
+  ...
+# Subtest: save validation accepts extended and original version-one snapshots
+ok 222 - save validation accepts extended and original version-one snapshots
+  ---
+  duration_ms: 1.670292
+  type: 'test'
+  ...
+# Subtest: Miami saves are namespaced and never reinterpret the legacy world coordinates
+ok 223 - Miami saves are namespaced and never reinterpret the legacy world coordinates
+  ---
+  duration_ms: 2.084417
+  type: 'test'
+  ...
+# Subtest: malformed prop rotation and duplicate IDs are rejected before world restoration
+ok 224 - malformed prop rotation and duplicate IDs are rejected before world restoration
+  ---
+  duration_ms: 0.470792
+  type: 'test'
+  ...
+# Subtest: invalid ammunition cannot create impossible magazines or unusable weapon selection
+ok 225 - invalid ammunition cannot create impossible magazines or unusable weapon selection
+  ---
+  duration_ms: 0.082667
+  type: 'test'
+  ...
+# Subtest: casualty saves round trip and invalid records are rejected before restoring the world
+ok 226 - casualty saves round trip and invalid records are rejected before restoring the world
+  ---
+  duration_ms: 0.729417
+  type: 'test'
+  ...
+# Subtest: player regional injuries and physical pose survive save validation without accepting mismatched or malformed actors
+ok 227 - player regional injuries and physical pose survive save validation without accepting mismatched or malformed actors
+  ---
+  duration_ms: 0.790458
+  type: 'test'
+  ...
+# Subtest: streamed photographic materials resolve to intact local maps with the source color/data channels
+ok 228 - streamed photographic materials resolve to intact local maps with the source color/data channels
+  ---
+  duration_ms: 197.937958
+  type: 'test'
+  ...
+# BJS - [15:17:25]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:25]: Babylon.js v9.25.0 - Null engine
+# Subtest: Havok trainer left turn banks lift into the commanded turn after physical takeoff
+ok 229 - Havok trainer left turn banks lift into the commanded turn after physical takeoff
+  ---
+  duration_ms: 368.323375
+  type: 'test'
+  ...
+# {"direction":-1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66034698486328,"minAltitude":61.51572799682617,"headingChange":-0.4666378986939496,"meanSignedBank":0.15542083350493088,"meanSignedLateralAcceleration":1.5114566177258126,"startRight":[0.9999999994939266,-1.0389027410866852e-8,-0.00003181425561915374],"endVelocity":[-5.791051387786865,0.2294800728559494,28.53548812866211],"health":100}
+# Subtest: Havok trainer right turn banks lift into the commanded turn after physical takeoff
+ok 230 - Havok trainer right turn banks lift into the commanded turn after physical takeoff
+  ---
+  duration_ms: 199.494708
+  type: 'test'
+  ...
+# {"direction":1,"runwayTakeoffAltitude":61.51572799682617,"endAltitude":75.66032409667969,"minAltitude":61.51572799682617,"headingChange":0.4666380059653102,"meanSignedBank":0.15542098894274947,"meanSignedLateralAcceleration":1.511454584063789,"startRight":[0.9999999994939266,-1.0389027410866852e-8,-0.00003181425561915374],"endVelocity":[5.792882442474365,0.22948454320430756,28.535144805908203],"health":100}
+# BJS - [15:17:25]: Babylon.js v9.25.0 - Null engine
+# Subtest: a police cabin dismount uses native ground at -22m and remains supported
+ok 231 - a police cabin dismount uses native ground at -22m and remains supported
+  ---
+  duration_ms: 740.928792
+  type: 'test'
+  ...
+# BJS - [15:17:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: a police cabin dismount uses native ground at 0m and remains supported
+ok 232 - a police cabin dismount uses native ground at 0m and remains supported
+  ---
+  duration_ms: 358.446041
+  type: 'test'
+  ...
+# BJS - [15:17:26]: Babylon.js v9.25.0 - Null engine
+# Subtest: a police cabin dismount uses native ground at 20m and remains supported
+ok 233 - a police cabin dismount uses native ground at 20m and remains supported
+  ---
+  duration_ms: 269.153667
+  type: 'test'
+  ...
+# BJS - [15:17:27]: Babylon.js v9.25.0 - Null engine
+# Subtest: native capsule sweeps reject both door exits through an unlisted wall
+ok 234 - native capsule sweeps reject both door exits through an unlisted wall
+  ---
+  duration_ms: 417.712
+  type: 'test'
+  ...
+# BJS - [15:17:27]: Babylon.js v9.25.0 - Null engine
+# Subtest: a blocked standing capsule, missing physical ground, shoreline and airborne cabin all retain the seated officer
+ok 235 - a blocked standing capsule, missing physical ground, shoreline and airborne cabin all retain the seated officer
+  ---
+  duration_ms: 235.492292
+  type: 'test'
+  ...
+# BJS - [15:17:27]: Babylon.js v9.25.0 - Null engine
+# Subtest: fatal fallback poses preserve the negative world height without a sea-level jump
+ok 236 - fatal fallback poses preserve the negative world height without a sea-level jump
+  ---
+  duration_ms: 232.788459
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: air contact altitude is measured above -22m terrain
+ok 237 - air contact altitude is measured above -22m terrain
+  ---
+  duration_ms: 132.115
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: air contact altitude is measured above 20m terrain
+ok 238 - air contact altitude is measured above 20m terrain
+  ---
+  duration_ms: 47.501709
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: police helicopter control targets and searchlight follow -22m terrain
+ok 239 - police helicopter control targets and searchlight follow -22m terrain
+  ---
+  duration_ms: 69.256959
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: police helicopter control targets and searchlight follow 0m terrain
+ok 240 - police helicopter control targets and searchlight follow 0m terrain
+  ---
+  duration_ms: 19.660791
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: police helicopter control targets and searchlight follow 20m terrain
+ok 241 - police helicopter control targets and searchlight follow 20m terrain
+  ---
+  duration_ms: 116.341333
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: air support climbs toward higher sourced terrain and holds before an unsupported search destination
+ok 242 - air support climbs toward higher sourced terrain and holds before an unsupported search destination
+  ---
+  duration_ms: 103.411916
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: a negative-height police helicopter reaches its terrain-relative hover using Havok forces
+ok 243 - a negative-height police helicopter reaches its terrain-relative hover using Havok forces
+  ---
+  duration_ms: 305.675166
+  type: 'test'
+  ...
+# {"altitude":58.14421081542969,"highest":59.23237991333008,"position":[0.00841795839369297,36.14421081542969,-0.005195765756070614]}
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: source holes and unavailable native terrain never become an implicit zero-height floor
+ok 244 - source holes and unavailable native terrain never become an implicit zero-height floor
+  ---
+  duration_ms: 48.509291
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: legacy positive-height worlds use native terrain for aircraft rather than a zero floor
+ok 245 - legacy positive-height worlds use native terrain for aircraft rather than a zero floor
+  ---
+  duration_ms: 45.76575
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: vehicle foot routes consider only overlapping vertical bodies at -22m
+ok 246 - vehicle foot routes consider only overlapping vertical bodies at -22m
+  ---
+  duration_ms: 204.071833
+  type: 'test'
+  ...
+# BJS - [15:17:29]: Babylon.js v9.25.0 - Null engine
+# Subtest: vehicle foot routes consider only overlapping vertical bodies at 20m
+ok 247 - vehicle foot routes consider only overlapping vertical bodies at 20m
+  ---
+  duration_ms: 289.246375
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: ordinary player recovery preserves lethal civilian, guard and officer casualties while nonfatal victims recover
+ok 248 - ordinary player recovery preserves lethal civilian, guard and officer casualties while nonfatal victims recover
+  ---
+  duration_ms: 4423.4005
+  type: 'test'
+  ...
+# Fatal health/dead gates survive ordinary recovery; explicit encounter reset revives; nonfatal recovery retains75health.
+# BJS - [15:17:33]: Babylon.js v9.25.0 - Null engine
+# Subtest: casualty save round trip retains ambient/custom civilian IDs, fixed guards and retired officers without resurrection or extra physics
+ok 249 - casualty save round trip retains ambient/custom civilian IDs, fixed guards and retired officers without resurrection or extra physics
+  ---
+  duration_ms: 3446.163875
+  type: 'test'
+  ...
+# BJS - [15:17:36]: Babylon.js v9.25.0 - Null engine
+# Subtest: dead response crews do not count as living dispatch and disabled-response cleanup remains bounded without resurrecting IDs
+ok 250 - dead response crews do not count as living dispatch and disabled-response cleanup remains bounded without resurrecting IDs
+  ---
+  duration_ms: 2618.307042
+  type: 'test'
+  ...
+# BJS - [15:17:39]: Babylon.js v9.25.0 - Null engine
+# Subtest: uniform trousers use the role palette and the firearm follows a live rigged hand through aiming
+ok 251 - uniform trousers use the role palette and the firearm follows a live rigged hand through aiming
+  ---
+  duration_ms: 374.807833
+  type: 'test'
+  ...
+# BJS - [15:17:39]: Babylon.js v9.25.0 - Null engine
+# Subtest: legacy saved health-zero creative civilians acquire a persistent corpse pose without a casualty field
+ok 252 - legacy saved health-zero creative civilians acquire a persistent corpse pose without a casualty field
+  ---
+  duration_ms: 836.023125
+  type: 'test'
+  ...
+# BJS - [15:17:40]: Babylon.js v9.25.0 - Null engine
+# Subtest: a wounded police driver remains supported in the cabin and an able passenger does not operate the car
+ok 253 - a wounded police driver remains supported in the cabin and an able passenger does not operate the car
+  ---
+  duration_ms: 390.8595
+  type: 'test'
+  ...
+# BJS - [15:17:40]: Babylon.js v9.25.0 - Null engine
+# Subtest: injured police seats survive vehicle replacement, response reset and casualty load
+ok 254 - injured police seats survive vehicle replacement, response reset and casualty load
+  ---
+  duration_ms: 848.696709
+  type: 'test'
+  ...
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# Subtest: partial and critical regional wounds survive version-three saves without duplicating officers
+ok 255 - partial and critical regional wounds survive version-three saves without duplicating officers
+  ---
+  duration_ms: 7266.898917
+  type: 'test'
+  ...
+# BJS - [15:17:49]: Babylon.js v9.25.0 - Null engine
+# Subtest: legacy version-one fatalities and version-two timed or incapacitating injuries retain their saved meanings
+ok 256 - legacy version-one fatalities and version-two timed or incapacitating injuries retain their saved meanings
+  ---
+  duration_ms: 3179.839459
+  type: 'test'
+  ...
+# BJS - [15:17:52]: Babylon.js v9.25.0 - Null engine
+# Subtest: concurrent critical survivors obey the physical-body budget and remain injured across ordinary recovery
+ok 257 - concurrent critical survivors obey the physical-body budget and remain injured across ordinary recovery
+  ---
+  duration_ms: 22287.970292
+  type: 'test'
+  ...
+# BJS - [15:18:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: production Combat shots damage a settled surviving target and can make the injury fatal
+ok 258 - production Combat shots damage a settled surviving target and can make the injury fatal
+  ---
+  duration_ms: 1760.310875
+  type: 'test'
+  ...
+# BJS - [15:18:16]: Babylon.js v9.25.0 - Null engine
+# Subtest: an incapacitated response crew does not permanently reserve an offscreen patrol assignment
+ok 259 - an incapacitated response crew does not permanently reserve an offscreen patrol assignment
+  ---
+  duration_ms: 773.547042
+  type: 'test'
+  ...
+# Subtest: building sight occlusion is invariant under negative and elevated world frames
+ok 260 - building sight occlusion is invariant under negative and elevated world frames
+  ---
+  duration_ms: 0.985917
+  type: 'test'
+  ...
+# BJS - [15:17:28]: Babylon.js v9.25.0 - Null engine
+# Subtest: translated building visibility agrees with real Havok ray obstruction
+ok 261 - translated building visibility agrees with real Havok ray obstruction
+  ---
+  duration_ms: 197.672709
+  type: 'test'
+  ...
+# BJS - [15:17:30]: Babylon.js v9.25.0 - Null engine
+# Subtest: roadblock officer reaches the central suspect using production urban Havok collision
+ok 262 - roadblock officer reaches the central suspect using production urban Havok collision
+  ---
+  duration_ms: 2003.405583
+  type: 'test'
+  ...
+# {"obstacles":265,"samples":[{"seconds":0,"p":[68.7,1.1472749999999998,193.88666666666668],"path":[{"x":68.7,"z":82},{"x":3.3,"z":-28}]},{"seconds":10,"p":[68.7,1.027375,149.8866666666726],"path":[{"x":68.7,"z":82},{"x":3.3,"z":-28}]},{"seconds":20,"p":[67.84227321966273,1.027375,105.97214111392732],"path":[{"x":3.3,"z":-28}]},{"seconds":30,"p":[48.756603274967915,1.0445917354639365,66.33384644949166],"path":[{"x":3.3,"z":-28}]},{"seconds":40,"p":[29.66072947375592,1.1255677491935077,26.72146768144865],"path":[{"x":3.3,"z":-28}]},{"seconds":50,"p":[10.568387956697025,1.1470332785401436,-12.89034306095371],"path":[{"x":3.3,"z":-28}]},{"seconds":60,"p":[4.146889606286793,1.0489332785401435,-26.23947049985863],"path":[{"x":3.3,"z":-28}]}],"end":[4.146889606286793,1.0489332785401435,-26.23947049985863]}
+# BJS - [15:17:32]: Babylon.js v9.25.0 - Null engine
+# Subtest: urban cruiser follows lane corners instead of cutting into the garage approach
+ok 263 - urban cruiser follows lane corners instead of cutting into the garage approach
+  ---
+  duration_ms: 4738.991292
+  type: 'test'
+  ...
+# {"samples":[{"seconds":0,"p":[-3.299999952316284,0.998333752155304,-134],"target":171,"heading":3.141592653589793,"speed":0,"state":"riding"},{"seconds":10,"p":[-18.455896377563477,0.69959557056427,-215.0247802734375],"target":92,"heading":-1.5342400752433956,"speed":9.713667246567468,"state":"riding"},{"seconds":20,"p":[-68.505615234375,0.736243486404419,-143.77093505859375],"target":159,"heading":-0.010975466428798025,"speed":21.177730375882422,"state":"riding"},{"seconds":30,"p":[-15.795806884765625,0.615624725818634,-74.99200439453125],"target":232,"heading":1.6238870373054541,"speed":8.474245797260243,"state":"riding"}],"end":[3.0011415481567383,0.6356724500656128,-38.18458557128906],"officer":[0.5015385892645865,0.9399999403953552,-38.13343670818092],"arrived":true}
+# BJS - [15:17:37]: Babylon.js v9.25.0 - Null engine
+# Subtest: a cruiser deflected to the observed garage blockage recovers or safely continues pursuit on foot
+ok 264 - a cruiser deflected to the observed garage blockage recovers or safely continues pursuit on foot
+  ---
+  duration_ms: 9450.098209
+  type: 'test'
+  ...
+# {"arrived":true,"sawReverse":true,"samples":[{"seconds":0,"car":[-44.400001525878906,0.998333752155304,-52],"officer":[-44.4180315292757,0.98,-51.589798629902305],"state":"riding","recovery":{"anchor":{"x":-44.4,"z":-52},"timer":0.016666666666666666,"reverse":0,"attempts":0,"stranded":false}},{"seconds":10,"car":[-45.10734558105469,0.7614960670471191,-52.75641632080078],"officer":[-45.044984031070086,0.7414958227052544,-52.350582986605566],"state":"riding","recovery":{"anchor":{"x":-45.57128143310547,"z":-52.68795394897461},"timer":2.4333333333333296,"reverse":-0.016666666666663676,"attempts":1,"stranded":false}},{"seconds":20,"car":[-75.51299285888672,0.7004694938659668,-92.77143859863281],"officer":[-75.09619105743245,0.6840556701677851,-92.57711463324493],"state":"riding","recovery":{"anchor":{"x":-75.52400207519531,"z":-91.51904296875},"timer":0.09999999999999999,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}},{"seconds":30,"car":[-15.555283546447754,0.6161321997642517,-147.3154754638672],"officer":[-15.745634845766006,0.5967913224424959,-146.90649713996677],"state":"riding","recovery":{"anchor":{"x":-17.60900115966797,"z":-147.3211669921875},"timer":0.21666666666666665,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}},{"seconds":40,"car":[3.6439101696014404,0.5887702703475952,-21.955135345458984],"officer":[3.2463041164577007,0.5486800677385182,-22.139149969801306],"state":"riding","recovery":{"anchor":{"x":3.5263729095458984,"z":-22.749692916870117},"timer":0.05,"reverse":-0.016666666666663676,"attempts":2,"stranded":false}}],"end":[7.061527729034424,0.673108696937561,-11.232755661010742]}
+# Subtest: fallback escalation changes response roles within bounded five-level configuration
+ok 265 - fallback escalation changes response roles within bounded five-level configuration
+  ---
+  duration_ms: 2.095375
+  type: 'test'
+  ...
+# Subtest: compliance requires stopped movement, lowered weapon, no resistance and a living suspect
+ok 266 - compliance requires stopped movement, lowered weapon, no resistance and a living suspect
+  ---
+  duration_ms: 0.318584
+  type: 'test'
+  ...
+# Subtest: foot navigation routes around an opaque wall and never invents an unreachable shortcut
+ok 267 - foot navigation routes around an opaque wall and never invents an unreachable shortcut
+  ---
+  duration_ms: 2.442708
+  type: 'test'
+  ...
+# Subtest: search remembers observed identities but a different car masks a face at range
+ok 268 - search remembers observed identities but a different car masks a face at range
+  ---
+  duration_ms: 0.230833
+  type: 'test'
+  ...
+# BJS - [15:17:30]: Babylon.js v9.25.0 - Null engine
+# Subtest: real Havok officer walks, collides with a wall, and disposes its controller and skin
+ok 269 - real Havok officer walks, collides with a wall, and disposes its controller and skin
+  ---
+  duration_ms: 416.33475
+  type: 'test'
+  ...
+# BJS - [15:17:31]: Babylon.js v9.25.0 - Null engine
+# Subtest: physical dispatch arrives, visible officer dismounts and compliant suspect is arrested; response resets cleanly
+ok 270 - physical dispatch arrives, visible officer dismounts and compliant suspect is arrested; response resets cleanly
+  ---
+  duration_ms: 3209.725625
+  type: 'test'
+  ...
+# {"arrested":true,"sawFoot":true,"wanted":"pursuit","vehicles":[[-0.002795263659209013,0.6514961123466492,-7.032641887664795]],"officers":[{"state":"challenge","p":[-1.0260067137864675,0.94,-1.889549959251482]}]}
+# BJS - [15:17:34]: Babylon.js v9.25.0 - Null engine
+# Subtest: high escalation creates bounded tactical crew, collidable roadblocks and a helicopter that gains altitude through forces
+ok 271 - high escalation creates bounded tactical crew, collidable roadblocks and a helicopter that gains altitude through forces
+  ---
+  duration_ms: 34633.328209
+  type: 'test'
+  ...
+# {"helicopterMax":59.210933685302734,"maxOfficers":10,"maxVehicles":8,"tacticalOfficers":4}
+# Subtest: directed pursuit routing avoids a closer dead end
+ok 272 - directed pursuit routing avoids a closer dead end
+  ---
+  duration_ms: 3.519542
+  type: 'test'
+  ...
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: dispatch uses a lane behind the actual camera instead of popping into its visible approach
+ok 273 - dispatch uses a lane behind the actual camera instead of popping into its visible approach
+  ---
+  duration_ms: 295.546417
+  type: 'test'
+  ...
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: civilian deletion/restoration retains unique stable IDs and disabled actors do not witness crimes
+ok 274 - civilian deletion/restoration retains unique stable IDs and disabled actors do not witness crimes
+  ---
+  duration_ms: 459.679958
+  type: 'test'
+  ...
+# BJS - [15:17:30]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:38]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:39]: Babylon.js v9.25.0 - Null engine
+# Subtest: native anatomical fall keeps knees one-way at every yaw and supports the extremities
+ok 275 - native anatomical fall keeps knees one-way at every yaw and supports the extremities
+  ---
+  duration_ms: 7625.377334
+  type: 'test'
+  ...
+# {"yaw":0,"minimum":0.019812660441588237,"minimumBone":"rightFoot","minKnee":-0.008957166878113215,"maxKnee":2.398959382385746,"minElbow":-1.2638237779394736,"maxElbow":0.002637416478729875,"maxSpeed":3.304061006197767,"maxFootError":0.03399645138402412,"maxPivotError":0.028555114363255894,"pelvis":[-0.10614345222711563,0.19317173957824707,-0.2644062936306]}
+# {"yaw":1.5707963267948966,"minimum":0.003935582949081667,"minimumBone":"leftFoot","minKnee":-0.005828534129911314,"maxKnee":2.413364677727873,"minElbow":-1.758665716514751,"maxElbow":0.001330752217036783,"maxSpeed":3.1992515617820882,"maxFootError":0.05310551365782547,"maxPivotError":0.04832165341976214,"pelvis":[-0.2296983152627945,0.1933142989873886,0.03547203168272972]}
+# {"yaw":3.141592653589793,"minimum":0.007385687222558772,"minimumBone":"rightFoot","minKnee":-0.008433703763549938,"maxKnee":2.4212430497486244,"minElbow":-1.119022947448507,"maxElbow":0.00003021790300209439,"maxSpeed":3.0746503577920494,"maxFootError":0.050486335271098116,"maxPivotError":0.044047139361762654,"pelvis":[0.017641978338360786,0.19321751594543457,0.2945123016834259]}
+# {"yaw":-1.5707963267948966,"minimum":0.0013972461397643195,"minimumBone":"leftFoot","minKnee":-0.003064687804451099,"maxKnee":2.4012461683869892,"minElbow":-1.5292988799638443,"maxElbow":0.0010014777014097673,"maxSpeed":3.23284504297476,"maxFootError":0.05617384740337713,"maxPivotError":0.05276775556403464,"pelvis":[0.24104276299476624,0.19327323138713837,-0.020537884905934334]}
+# Subtest: regional partial injuries stay standing; a critical physical fall hands off once without healing trauma
+ok 276 - regional partial injuries stay standing; a critical physical fall hands off once without healing trauma
+  ---
+  duration_ms: 1431.8405
+  type: 'test'
+  ...
+# {"handoffMinimum":-0.015316588019978188,"largestJointStep":0.05970660314936364}
+# BJS - [15:18:16]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:16]: Babylon.js v9.25.0 - Null engine
+# Subtest: critical zero-impulse injuries lose balance and complete a supported fall from standing and a walking pose
+ok 277 - critical zero-impulse injuries lose balance and complete a supported fall from standing and a walking pose
+  ---
+  duration_ms: 36863.31225
+  type: 'test'
+  ...
+# {"variant":"Jason","sourcePose":"standing","zeroImpulseMinimum":0.017999897871396553,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19519106950610876,"chestY":0.1892402609810233}
+# {"variant":"Jason","sourcePose":"walking","zeroImpulseMinimum":0.017999897871392112,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19519162084907293,"chestY":0.1892407974228263}
+# {"variant":"Lucia","sourcePose":"standing","zeroImpulseMinimum":0.015135876532164527,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.15737061109393835,"chestY":0.15039782132953405}
+# {"variant":"Lucia","sourcePose":"walking","zeroImpulseMinimum":0.01025573442973482,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.1573767652735114,"chestY":0.15040394570678473}
+# {"variant":"male-adult-03","sourcePose":"standing","zeroImpulseMinimum":0.01799974528413295,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19868168141692877,"chestY":0.19273087289184332}
+# {"variant":"male-adult-03","sourcePose":"walking","zeroImpulseMinimum":0.017999897871045056,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.19868200924247503,"chestY":0.1927311858162284}
+# {"variant":"female-adult-06","sourcePose":"standing","zeroImpulseMinimum":0.004356381534102449,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.2148445686325431,"chestY":0.2078717788681388}
+# {"variant":"female-adult-06","sourcePose":"walking","zeroImpulseMinimum":0.010227047906830156,"handoffs":1,"active":false,"handoff":false,"pelvisY":0.2148428102955222,"chestY":0.20786999072879553}
+# Subtest: officer belt, torso equipment, patches and helmet follow their bones through a physical fall
+ok 278 - officer belt, torso equipment, patches and helmet follow their bones through a physical fall
+  ---
+  duration_ms: 58.254916
+  type: 'test'
+  ...
+# BJS - [15:19:16]: Babylon.js v9.25.0 - Null engine
+# Subtest: licensed skins remain grounded through standing and walking falls and crawl handoff at all four headings
+ok 279 - licensed skins remain grounded through standing and walking falls and crawl handoff at all four headings
+  ---
+  duration_ms: 59437.989709
+  type: 'test'
+  ...
+# {"variant":"Jason","yaw":0,"sourcePose":"standing","minimum":0.017999821577701636,"minPhysical":0.03086129269000859,"minHandoff":0.017999821577701636,"maxJointStep":0.06490758069397107,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.24448019172996283,"maxHandoffClearance":0.05142442715371498,"maxStepBone":"Jason/leftCalf","maxStepFrame":75,"maxRollTrunkGap":0.03780054429748652,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":104,"maxRollSupportGap":0.00600008090998673,"maxUnsupportedFrames":0,"finalPelvis":[-0.0013068137974390215,0.19519115891307592,-0.2630747724515796],"finalChest":[0.10023345125570438,0.18924033548682928,-0.6239990916920506]}
+# {"variant":"Jason","yaw":0,"sourcePose":"walking","minimum":0.017540064960395618,"minPhysical":0.017540064960395618,"minHandoff":0.01799989787139089,"maxJointStep":0.06648163611964288,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Thigh","maxHandoffPelvis":0.22405496146529913,"maxHandoffClearance":0.053402652817619245,"maxStepBone":"Jason/rightHand","maxStepFrame":129,"maxRollTrunkGap":0.014856828011260897,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":151,"maxRollSupportGap":0.006948262041438627,"maxUnsupportedFrames":0,"finalPelvis":[0.20629179815356924,0.195191471837461,-0.3255639291700463],"finalChest":[0.3190848921012575,0.18924064841121435,-0.6831318673115903]}
+# {"variant":"Jason","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.01799982157735014,"minPhysical":0.033757105613770766,"minHandoff":0.01799982157735014,"maxJointStep":0.07901836579594708,"vertexChecks":1406400,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_R_Toe0","maxHandoffPelvis":0.24866880383342505,"maxHandoffClearance":0.049838428654323086,"maxStepBone":"Jason/leftCalf","maxStepFrame":77,"maxRollTrunkGap":0.04317220299796398,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":104,"maxRollSupportGap":0.00600008090998673,"maxUnsupportedFrames":0,"finalPelvis":[-0.27068864359465783,0.19519115891307592,-0.04322027759094518],"finalChest":[-0.6434709694774884,0.18924035038799047,-0.08334183680448404]}
+# {"variant":"Jason","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.016021662894760702,"minPhysical":0.016021662894760702,"minHandoff":0.017999897871572634,"maxJointStep":0.0685150311173509,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_Pelvis","maxHandoffPelvis":0.24233463313430548,"maxHandoffClearance":0.05461969380603249,"maxStepBone":"Jason/leftHand","maxStepFrame":129,"maxRollTrunkGap":0.022392983687484068,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":133,"maxRollSupportGap":0.006000080909984731,"maxUnsupportedFrames":0,"finalPelvis":[-0.3881798053532335,0.1951914867386222,-0.12075699492678216],"finalChest":[-0.7415902024711394,0.18924064841121435,-0.24597034592871356]}
+# {"variant":"Jason","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.015092784131362502,"minPhysical":0.015092784131362502,"minHandoff":0.017999897871464388,"maxJointStep":0.07322100029941896,"vertexChecks":1406400,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.29568309988826513,"maxHandoffClearance":0.04036981619478264,"maxStepBone":"Jason/leftCalf","maxStepFrame":76,"maxRollTrunkGap":0.0885028298817158,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":97,"maxRollSupportGap":0.0060000046160431225,"maxUnsupportedFrames":0,"finalPelvis":[0.056195824720704446,0.19519100990146399,0.2988096727044345],"finalChest":[-0.028016585561277785,0.18924020137637854,0.6641651082915089]}
+# {"variant":"Jason","yaw":3.141592653589793,"sourcePose":"walking","minimum":0.013133860835269684,"minPhysical":0.013133860835269684,"minHandoff":0.017999897871530002,"maxJointStep":0.06468685817602016,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_Pelvis","maxHandoffPelvis":0.22157789673656225,"maxHandoffClearance":0.05592927934806191,"maxStepBone":"Jason/leftCalf","maxStepFrame":100,"maxRollTrunkGap":0.006000087548479749,"maxRollTrunkBone":"Bip01_Spine","maxRollTrunkFrame":170,"maxRollSupportGap":0.006000080909984731,"maxUnsupportedFrames":0,"finalPelvis":[-0.13084726686886816,0.19519154634326696,0.4025631201566606],"finalChest":[-0.28717172580276884,0.18924072291702032,0.7433560518552564]}
+# {"variant":"Jason","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.01799989787139622,"minPhysical":0.030275202615042796,"minHandoff":0.01799989787139622,"maxJointStep":0.06092835180134439,"vertexChecks":1406400,"physicalBone":"Bip01_Head","handoffBone":"Bip01_L_Thigh","maxHandoffPelvis":0.2883195420727134,"maxHandoffClearance":0.03027528822218606,"maxStepBone":"Jason/head","maxStepFrame":66,"maxRollTrunkGap":0.06549479863187149,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":102,"maxRollSupportGap":0.01065752099148877,"maxUnsupportedFrames":0,"finalPelvis":[0.23093658819794527,0.1951909950003028,0.01214250310140468],"finalChest":[0.605826578175117,0.18924018647521734,0.006336655928592755]}
+# {"variant":"Jason","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.011000376996213812,"minPhysical":0.011000376996213812,"minHandoff":0.01799989787151124,"maxJointStep":0.06604327825842153,"vertexChecks":1406400,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.23372900392860174,"maxHandoffClearance":0.05237024317239225,"maxStepBone":"Jason/leftCalf","maxStepFrame":93,"maxRollTrunkGap":0.017826746337463242,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":134,"maxRollSupportGap":0.006072407568453633,"maxUnsupportedFrames":0,"finalPelvis":[0.3870125211089144,0.19519153144210577,0.09634928507237384],"finalChest":[0.7421102480679919,0.18924070801585913,0.2166936482909159]}
+# {"variant":"Lucia","yaw":0,"sourcePose":"standing","minimum":0.01799980790060307,"minPhysical":0.0191221587921786,"minHandoff":0.01799980790060307,"maxJointStep":0.06420041936203302,"vertexChecks":1630800,"physicalBone":"Bip01_R_Toe0","handoffBone":"Bip01_L_UpperArm","maxHandoffPelvis":0.26239417400211096,"maxHandoffClearance":0.04060059169720598,"maxStepBone":"Lucia/rightCalf","maxStepFrame":80,"maxRollTrunkGap":0.036684536260850026,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":118,"maxRollSupportGap":0.02367043121799485,"maxUnsupportedFrames":0,"finalPelvis":[0.0012964454927575086,0.15737180318683386,-0.2874124516498595],"finalChest":[-0.03916357983130758,0.15039902832359076,-0.6953305246112735]}
+# {"variant":"Lucia","yaw":0,"sourcePose":"walking","minimum":0.011246334993530005,"minPhysical":0.011246334993530005,"minHandoff":0.01799988419455756,"maxJointStep":0.061558571489055434,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_UpperArm","maxHandoffPelvis":0.33091507758945227,"maxHandoffClearance":0.028718649213662184,"maxStepBone":"Lucia/rightHand","maxStepFrame":117,"maxRollTrunkGap":0.030776952614626277,"maxRollTrunkBone":"Bip01_R_Finger02","maxRollTrunkFrame":144,"maxRollSupportGap":0.030776983183167142,"maxUnsupportedFrames":4,"finalPelvis":[0.033393699676778354,0.15737546887248755,-0.2106930209358726],"finalChest":[0.1269793641066852,0.15040264930576086,-0.6097887237467687]}
+# {"variant":"Lucia","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.017999884194572657,"minPhysical":0.02306716602819059,"minHandoff":0.017999884194572657,"maxJointStep":0.0632972987360398,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Finger12","maxHandoffPelvis":0.20061494316905737,"maxHandoffClearance":0.04922981818895045,"maxStepBone":"Lucia/leftCalf","maxStepFrame":76,"maxRollTrunkGap":0.027593554671782247,"maxRollTrunkBone":"Bip01_R_Finger02","maxRollTrunkFrame":141,"maxRollSupportGap":0.02759361838615905,"maxUnsupportedFrames":3,"finalPelvis":[-0.25551205759792306,0.15737445559352636,0.08735706637676921],"finalChest":[-0.6388230196676166,0.15040166582912207,-0.05792620199610607]}
+# {"variant":"Lucia","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.017999688691516913,"minPhysical":0.02192741080458427,"minHandoff":0.017999688691516913,"maxJointStep":0.06109012723399348,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_UpperArm","maxHandoffPelvis":0.3310704967007041,"maxHandoffClearance":0.03524776569855803,"maxStepBone":"Lucia/leftCalf","maxStepFrame":86,"maxRollTrunkGap":0.03193900898242135,"maxRollTrunkBone":"Bip01_R_Finger02","maxRollTrunkFrame":152,"maxRollSupportGap":0.03193901623824848,"maxUnsupportedFrames":5,"finalPelvis":[-0.34952913651435935,0.15737710800021887,0.11453711889281992],"finalChest":[-0.7423226815857964,0.15040428843349218,-0.0027174977357482533]}
+# {"variant":"Lucia","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.008462445285050135,"minPhysical":0.008462445285050135,"minHandoff":0.017999884194515925,"maxJointStep":0.07157275247115487,"vertexChecks":1630800,"physicalBone":"Bip01_Head","handoffBone":"Bip01_R_UpperArm","maxHandoffPelvis":0.26242791023105383,"maxHandoffClearance":0.0434540614821437,"maxStepBone":"Lucia/leftHand","maxStepFrame":85,"maxRollTrunkGap":0.03131053780476324,"maxRollTrunkBone":"Bip01_L_Finger02","maxRollTrunkFrame":155,"maxRollSupportGap":0.031310506730890544,"maxUnsupportedFrames":8,"finalPelvis":[0.05990091971484605,0.15736775007098913,0.43796294942461045],"finalChest":[0.07533379899274556,0.15039494540542364,0.8475927882711201]}
+# {"variant":"Lucia","yaw":3.141592653589793,"sourcePose":"walking","minimum":0.017999731607010405,"minPhysical":0.0188542907561029,"minHandoff":0.017999731607010405,"maxJointStep":0.06185268619829531,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Finger02","maxHandoffPelvis":0.2954452773556113,"maxHandoffClearance":0.023007208301556226,"maxStepBone":"Lucia/head","maxStepFrame":79,"maxRollTrunkGap":0.030451604099474984,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":116,"maxRollSupportGap":0.030077901777971552,"maxUnsupportedFrames":4,"finalPelvis":[0.054817046330825625,0.15737372543662786,0.3369877971267268],"finalChest":[-0.05167347890010271,0.15040090586990118,0.7328360357428523]}
+# {"variant":"Lucia","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.013804699804126352,"minPhysical":0.013804699804126352,"minHandoff":0.017999884194514593,"maxJointStep":0.05959450627575435,"vertexChecks":1630800,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_L_UpperArm","maxHandoffPelvis":0.32975356187671423,"maxHandoffClearance":0.03647743810289228,"maxStepBone":"Lucia/rightCalf","maxStepFrame":80,"maxRollTrunkGap":0.03646027511602239,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":116,"maxRollSupportGap":0.023673635563626352,"maxUnsupportedFrames":0,"finalPelvis":[0.24134192243125896,0.15737529005855322,-0.09563368534062144],"finalChest":[0.6507235012773852,0.15040250029414892,-0.1166386837370858]}
+# {"variant":"Lucia","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.008631970427946722,"minPhysical":0.008631970427946722,"minHandoff":0.017999807900645592,"maxJointStep":0.10326536355182134,"vertexChecks":1630800,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Finger02","maxHandoffPelvis":0.3487580558285117,"maxHandoffClearance":0.02330872196672573,"maxStepBone":"Lucia/rightHand","maxStepFrame":79,"maxRollTrunkGap":0.040792953357166074,"maxRollTrunkBone":"Bip01_R_UpperArm","maxRollTrunkFrame":115,"maxRollSupportGap":0.024873205239031818,"maxUnsupportedFrames":0,"finalPelvis":[0.39273896346791926,0.1573760947212577,0.016672253065263987],"finalChest":[0.7878081327880468,0.150403275154531,0.12601634279997792]}
+# {"variant":"male-adult-03","yaw":0,"sourcePose":"standing","minimum":0.011906596458496455,"minPhysical":0.011906596458496455,"minHandoff":0.017999897871624482,"maxJointStep":0.06567779615775322,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.22805561032146215,"maxHandoffClearance":0.056080036181275106,"maxStepBone":"male-adult-03/leftCalf","maxStepFrame":120,"maxRollTrunkGap":0.028308195263554797,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":168,"maxRollSupportGap":0.006000080909991615,"maxUnsupportedFrames":0,"finalPelvis":[-0.08206540716847033,0.198681621812284,-0.5015806247230075],"finalChest":[-0.12387890517506595,0.19273081328719854,-0.874176782855014]}
+# {"variant":"male-adult-03","yaw":0,"sourcePose":"walking","minimum":0.011420146273620313,"minPhysical":0.011420146273620313,"minHandoff":0.017999897871619375,"maxJointStep":0.0641841178631858,"vertexChecks":1328100,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_Pelvis","maxHandoffPelvis":0.22696107532829046,"maxHandoffClearance":0.058346424069365854,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":123,"maxRollTrunkGap":0.02781142658405296,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":170,"maxRollSupportGap":0.00600000461604612,"maxUnsupportedFrames":0,"finalPelvis":[0.10955610963084035,0.19868214335292578,-0.5201547099640249],"finalChest":[0.09738715010064963,0.19273130502551794,-0.894893655425206]}
+# {"variant":"male-adult-03","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.00799759996380478,"minPhysical":0.00799759996380478,"minHandoff":0.01799982157829283,"maxJointStep":0.06421170727409097,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Finger22","maxHandoffPelvis":0.22739253845065832,"maxHandoffClearance":0.05231699000048595,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":108,"maxRollTrunkGap":0.028275440029974667,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":154,"maxRollSupportGap":0.01439439834927038,"maxUnsupportedFrames":0,"finalPelvis":[-0.4780104543265009,0.19868165161460638,0.04094337012031461],"finalChest":[-0.8526815520935374,0.19273084308952093,0.05500635704894341]}
+# {"variant":"male-adult-03","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.0009293475579082999,"minPhysical":0.0009293475579082999,"minHandoff":0.017999897871243675,"maxJointStep":0.07920903861534209,"vertexChecks":1328100,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_R_Toe0","maxHandoffPelvis":0.2525737574324012,"maxHandoffClearance":0.055690021540859114,"maxStepBone":"male-adult-03/leftCalf","maxStepFrame":128,"maxRollTrunkGap":0.04750270663670779,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":166,"maxRollSupportGap":0.006821614094775122,"maxUnsupportedFrames":0,"finalPelvis":[-0.6262194718300731,0.1986823072656989,-0.14376816111805324],"finalChest":[-0.9975273724789757,0.19273146893829107,-0.19580532764932873]}
+# {"variant":"male-adult-03","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.013716441388362921,"minPhysical":0.013716441388362921,"minHandoff":0.017999821577855735,"maxJointStep":0.07154270042812477,"vertexChecks":1328100,"physicalBone":"Bip01_L_Foot","handoffBone":"Bip01_R_Finger02","maxHandoffPelvis":0.22349853720515966,"maxHandoffClearance":0.05680849075413663,"maxStepBone":"male-adult-03/leftCalf","maxStepFrame":122,"maxRollTrunkGap":0.02630796790306164,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":170,"maxRollSupportGap":0.008736286903510262,"maxUnsupportedFrames":0,"finalPelvis":[0.08887820794868329,0.1986813833937049,0.5571986819724104],"finalChest":[0.13492767085569807,0.19273057486861944,0.9292948792553947]}
+# {"variant":"male-adult-03","yaw":3.141592653589793,"sourcePose":"walking","minimum":-0.004568088842286544,"minPhysical":-0.004568088842286544,"minHandoff":0.017999897871552206,"maxJointStep":0.0643511239409024,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.23158983793109655,"maxHandoffClearance":0.04134798084588165,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":121,"maxRollTrunkGap":0.029757762442432625,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":165,"maxRollSupportGap":0.007107945265102403,"maxUnsupportedFrames":0,"finalPelvis":[-0.07634784494078731,0.198682083748281,0.4488253952520116],"finalChest":[-0.04850683787135826,0.19273126032203436,0.8227265640302546]}
+# {"variant":"male-adult-03","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.012054683003041355,"minPhysical":0.012054683003041355,"minHandoff":0.017999897871618376,"maxJointStep":0.0785052369286134,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.23035292234271765,"maxHandoffClearance":0.05599878313062556,"maxStepBone":"male-adult-03/leftHand","maxStepFrame":154,"maxRollTrunkGap":0.029380756519429424,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":156,"maxRollSupportGap":0.006000080909991615,"maxUnsupportedFrames":0,"finalPelvis":[0.5424017383074393,0.198681621812284,-0.11608738571474356],"finalChest":[0.9143656915341277,0.19273081328719854,-0.16319477043260933]}
+# {"variant":"male-adult-03","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.0053425707262301225,"minPhysical":0.0053425707262301225,"minHandoff":0.01799989787152223,"maxJointStep":0.06406516874498089,"vertexChecks":1328100,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.249161078594625,"maxHandoffClearance":0.04279764206833747,"maxStepBone":"male-adult-03/rightCalf","maxStepFrame":119,"maxRollTrunkGap":0.039285719345761166,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":146,"maxRollSupportGap":0.006469517545067652,"maxUnsupportedFrames":0,"finalPelvis":[0.44322252049900546,0.19868220295757055,0.06601043680109311],"finalChest":[0.8178520566549616,0.19273136463016272,0.05084132802240006]}
+# {"variant":"female-adult-06","yaw":0,"sourcePose":"standing","minimum":0.01799980790067135,"minPhysical":0.024143978748047745,"minHandoff":0.01799980790067135,"maxJointStep":0.06653098089576073,"vertexChecks":1311600,"physicalBone":"Bip01_Spine1","handoffBone":"Bip01_R_Clavicle","maxHandoffPelvis":0.30349244084209204,"maxHandoffClearance":0.05616005485052955,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":79,"maxRollTrunkGap":0.04570849998423043,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":110,"maxRollSupportGap":0.00725952765415995,"maxUnsupportedFrames":0,"finalPelvis":[-0.06336954904156011,0.214844792149961,-0.22161291252616766],"finalChest":[0.029515017816907796,0.2078720172867179,-0.6208706070610868]}
+# {"variant":"female-adult-06","yaw":0,"sourcePose":"walking","minimum":0.017999884194557114,"minPhysical":0.024319836287565844,"minHandoff":0.017999884194557114,"maxJointStep":0.05896124744111752,"vertexChecks":1311600,"physicalBone":"Bip01_L_UpperArm","handoffBone":"Bip01_L_Clavicle","maxHandoffPelvis":0.24437372293323278,"maxHandoffClearance":0.04838005624503339,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":74,"maxRollTrunkGap":0.03703934139220802,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":100,"maxRollSupportGap":0.007437902894332563,"maxUnsupportedFrames":0,"finalPelvis":[0.015162349145018794,0.21484529878944159,-0.22722447170333404],"finalChest":[-0.04321747223094838,0.2078724792227149,-0.6329673183844249]}
+# {"variant":"female-adult-06","yaw":1.5707963267948966,"sourcePose":"standing","minimum":0.01799980790073752,"minPhysical":0.024808880466632544,"minHandoff":0.01799980790073752,"maxJointStep":0.06263187432252379,"vertexChecks":1311600,"physicalBone":"Bip01_Spine1","handoffBone":"Bip01_R_Thigh","maxHandoffPelvis":0.2379078110679984,"maxHandoffClearance":0.03271919844079607,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":79,"maxRollTrunkGap":0.022567817812017846,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":125,"maxRollSupportGap":0.00803566594245865,"maxUnsupportedFrames":0,"finalPelvis":[-0.14868351771002675,0.2148474594578147,0.003458112488172016],"finalChest":[-0.5550488988640596,0.2078746845945716,-0.05040696287429841]}
+# {"variant":"female-adult-06","yaw":1.5707963267948966,"sourcePose":"walking","minimum":0.017999884194658144,"minPhysical":0.03425147669121864,"minHandoff":0.017999884194658144,"maxJointStep":0.061066034078677334,"vertexChecks":1311600,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_UpperArm","maxHandoffPelvis":0.28988011088222265,"maxHandoffClearance":0.04422585101587362,"maxStepBone":"female-adult-06/rightFoot","maxStepFrame":76,"maxRollTrunkGap":0.07213494626087825,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":105,"maxRollSupportGap":0.008032309008940267,"maxUnsupportedFrames":0,"finalPelvis":[-0.1789472694294414,0.21484418120235205,-0.07307860490929263],"finalChest":[-0.5771646234575504,0.20787136163562536,0.024176996721684607]}
+# {"variant":"female-adult-06","yaw":3.141592653589793,"sourcePose":"standing","minimum":0.012128903333334606,"minPhysical":0.012128903333334606,"minHandoff":0.01799976498533984,"maxJointStep":0.0605194733409725,"vertexChecks":1311600,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_Head","maxHandoffPelvis":0.3472004970535636,"maxHandoffClearance":0.05029277878989247,"maxStepBone":"female-adult-06/leftCalf","maxStepFrame":79,"maxRollTrunkGap":0.05437045310600676,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":111,"maxRollSupportGap":0.02116852392520431,"maxUnsupportedFrames":0,"finalPelvis":[-0.006606597032874306,0.21484570112079382,0.19418816819071893],"finalChest":[-0.04312320071613196,0.20787292625755072,0.6024780668877854]}
+# {"variant":"female-adult-06","yaw":3.141592653589793,"sourcePose":"walking","minimum":0.017999807900492493,"minPhysical":0.03225753447501711,"minHandoff":0.017999807900492493,"maxJointStep":0.0603148777328626,"vertexChecks":1311600,"physicalBone":"Bip01_R_Foot","handoffBone":"Bip01_L_Finger02","maxHandoffPelvis":0.278199746273458,"maxHandoffClearance":0.05137032107103434,"maxStepBone":"female-adult-06/rightFoot","maxStepFrame":76,"maxRollTrunkGap":0.06491413322805008,"maxRollTrunkBone":"Bip01_L_UpperArm","maxRollTrunkFrame":103,"maxRollSupportGap":0.006215063566160653,"maxUnsupportedFrames":0,"finalPelvis":[-0.028569408000130303,0.21484397258609533,0.23560141811895963],"finalChest":[0.07838420532298872,0.20787115301936865,0.6313244346876018]}
+# {"variant":"female-adult-06","yaw":-1.5707963267948966,"sourcePose":"standing","minimum":0.010925595254732912,"minPhysical":0.010925595254732912,"minHandoff":0.017999884194263793,"maxJointStep":0.0736352328378562,"vertexChecks":1311600,"physicalBone":"Bip01_R_UpperArm","handoffBone":"Bip01_R_Foot","maxHandoffPelvis":0.3120056828483939,"maxHandoffClearance":0.04403641315375273,"maxStepBone":"female-adult-06/rightCalf","maxStepFrame":78,"maxRollTrunkGap":0.03456927121006311,"maxRollTrunkBone":"Bip01_R_Clavicle","maxRollTrunkFrame":109,"maxRollSupportGap":0.01389084464435121,"maxUnsupportedFrames":0,"finalPelvis":[0.19042181741723785,0.21484780218452215,-0.04107363357728511],"finalChest":[0.5910674279439889,0.20787501242011786,0.04563075767627239]}
+# {"variant":"female-adult-06","yaw":-1.5707963267948966,"sourcePose":"walking","minimum":0.017999807900983877,"minPhysical":0.021524197311986404,"minHandoff":0.017999807900983877,"maxJointStep":0.05814810936701631,"vertexChecks":1311600,"physicalBone":"Bip01_L_UpperArm","handoffBone":"Bip01_R_Forearm","maxHandoffPelvis":0.2764922818168998,"maxHandoffClearance":0.04021584133964906,"maxStepBone":"female-adult-06/leftHand","maxStepFrame":62,"maxRollTrunkGap":0.020985007657656596,"maxRollTrunkBone":"Bip01_L_Clavicle","maxRollTrunkFrame":120,"maxRollSupportGap":0.010950476057846839,"maxUnsupportedFrames":0,"finalPelvis":[0.23500847950134762,0.21484400238841772,-0.013614709411695292],"finalChest":[0.6437524479999497,0.20787118282169104,-0.044661229774240696]}
+# BJS - [15:19:16]: Babylon.js v9.25.0 - Null engine
+# Subtest: mid-fall restoration, repeated fatal hits, and explicit player reset preserve other casualties and release owned bodies
+ok 280 - mid-fall restoration, repeated fatal hits, and explicit player reset preserve other casualties and release owned bodies
+  ---
+  duration_ms: 548.9955
+  type: 'test'
+  ...
+# BJS - [15:19:24]: Babylon.js v9.25.0 - Null engine
+# Subtest: fatal hits during crawl and physical-to-crawl handoff preserve low posture and anatomical limb lengths
+ok 281 - fatal hits during crawl and physical-to-crawl handoff preserve low posture and anatomical limb lengths
+  ---
+  duration_ms: 8087.614584
+  type: 'test'
+  ...
+# {"variant":"Jason","startingPose":"crawl","fatalCrawlMinimum":0.026930247245688488,"fatalCrawlMaximum":0.48658420578243133,"initialSurfaceMaximum":0.4178665178042277,"minimumBone":"Bip01_R_Thigh","maxComRise":0.006107105842360322,"maxPelvisRise":0.0015678107738494873}
+# {"variant":"Jason","startingPose":"handoff","fatalCrawlMinimum":0.02506670069206285,"fatalCrawlMaximum":0.6054254409243307,"initialSurfaceMaximum":0.5584943087027822,"minimumBone":"Bip01_R_Thigh","maxComRise":0.05149742654664141,"maxPelvisRise":0.036135509610176086}
+# {"variant":"Lucia","startingPose":"crawl","fatalCrawlMinimum":-0.0030342890774828213,"fatalCrawlMaximum":0.5361842199885014,"initialSurfaceMaximum":0.41150095708943335,"minimumBone":"Bip01_L_Forearm","maxComRise":0.02127642862746934,"maxPelvisRise":0.027193576097488403}
+# {"variant":"Lucia","startingPose":"handoff","fatalCrawlMinimum":0.025483633417125118,"fatalCrawlMaximum":0.5621271074450638,"initialSurfaceMaximum":0.568538201967286,"minimumBone":"Bip01_L_UpperArm","maxComRise":0.003498825569699715,"maxPelvisRise":0}
+# {"variant":"male-adult-03","startingPose":"crawl","fatalCrawlMinimum":0.007563029660776155,"fatalCrawlMaximum":0.5189604181325198,"initialSurfaceMaximum":0.380109942110067,"minimumBone":"Bip01_Spine","maxComRise":0.07721775162773975,"maxPelvisRise":0.03836677968502045}
+# {"variant":"male-adult-03","startingPose":"handoff","fatalCrawlMinimum":0.0011278737122707438,"fatalCrawlMaximum":0.5934775995471002,"initialSurfaceMaximum":0.6220003001730232,"minimumBone":"Bip01_R_Finger22","maxComRise":0.030398773367176224,"maxPelvisRise":0.07314923405647278}
+# {"variant":"female-adult-06","startingPose":"crawl","fatalCrawlMinimum":-0.012594988326313228,"fatalCrawlMaximum":0.4647102607096683,"initialSurfaceMaximum":0.3766282161697152,"minimumBone":"Bip01_R_Thigh","maxComRise":0.02345668838446549,"maxPelvisRise":0.003604322671890259}
+# {"variant":"female-adult-06","startingPose":"handoff","fatalCrawlMinimum":0.02426064150109075,"fatalCrawlMaximum":0.6092165686732685,"initialSurfaceMaximum":0.6164910436080411,"minimumBone":"Bip01_Spine1","maxComRise":0.002344394359733326,"maxPelvisRise":0.034968435764312744}
+# Subtest: same-tick handoff callbacks and restored survivors expose the last visible pose to a new hit
+ok 282 - same-tick handoff callbacks and restored survivors expose the last visible pose to a new hit
+  ---
+  duration_ms: 45.961417
+  type: 'test'
+  ...
+# BJS - [15:17:31]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:34]: Babylon.js v9.25.0 - Null engine
+# Subtest: ten licensed bodies load with actual cabin geometry, four neutral wheel pivots and independently opening doors
+ok 283 - ten licensed bodies load with actual cabin geometry, four neutral wheel pivots and independently opening doors
+  ---
+  duration_ms: 2813.46775
+  type: 'test'
+  ...
+# coupe: 110934 triangles, 2 working doors, 11 glazing components.
+# sedan: 95324 triangles, 4 working doors, 16 glazing components.
+# suv: 101607 triangles, 4 working doors, 9 glazing components.
+# truck: 30092 triangles, 4 working doors, 7 glazing components.
+# police: 109505 triangles, 4 working doors, 17 glazing components.
+# hatchback: 102647 triangles, 2 working doors, 4 glazing components.
+# executive: 75661 triangles, 4 working doors, 14 glazing components.
+# van: 121890 triangles, 2 working doors, 5 glazing components.
+# offroad: 19453 triangles, 2 working doors, 5 glazing components.
+# mpv: 27059 triangles, 2 working doors, 8 glazing components.
+# BJS - [15:17:40]: Babylon.js v9.25.0 - Null engine
+# Subtest: ten source cars support their weight, drive on native suspension and retain damage through save/load
+ok 284 - ten source cars support their weight, drive on native suspension and retain damage through save/load
+  ---
+  duration_ms: 6135.13975
+  type: 'test'
+  ...
+# coupe: settle 0.680m, moved 31.47m, native shape children 12.
+# sedan: settle 0.653m, moved 21.35m, native shape children 18.
+# suv: settle 0.970m, moved 14.87m, native shape children 20.
+# truck: settle 0.993m, moved 19.20m, native shape children 18.
+# police: settle 0.661m, moved 32.16m, native shape children 18.
+# hatchback: settle 0.700m, moved 35.25m, native shape children 12.
+# executive: settle 0.692m, moved 24.64m, native shape children 18.
+# van: settle 0.891m, moved 17.13m, native shape children 14.
+# offroad: settle 0.949m, moved 19.90m, native shape children 22.
+# mpv: settle 0.682m, moved 29.87m, native shape children 22.
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# Subtest: a long van uses measured deformation bounds and independent source window panes
+ok 285 - a long van uses measured deformation bounds and independent source window panes
+  ---
+  duration_ms: 620.322292
+  type: 'test'
+  ...
+# Subtest: imported body dents are independent of another car and reset to original authored geometry
+ok 286 - imported body dents are independent of another car and reset to original authored geometry
+  ---
+  duration_ms: 381.228167
+  type: 'test'
+  ...
+# BJS - [15:17:33]: Babylon.js v9.25.0 - Null engine
+# Subtest: authored sun crosses the horizon at 06:00/18:00 and light direction stays finite through wraparound
+ok 287 - authored sun crosses the horizon at 06:00/18:00 and light direction stays finite through wraparound
+  ---
+  duration_ms: 1.489916
+  type: 'test'
+  ...
+# Subtest: native sky updates sun/weather without growing resources and releases its background nodes
+ok 288 - native sky updates sun/weather without growing resources and releases its background nodes
+  ---
+  duration_ms: 139.638458
+  type: 'test'
+  ...
+# BJS - [15:17:33]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:33]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:33]: Babylon.js v9.25.0 - Null engine
+# Subtest: oriented footprint checks include diagonal bumpers and avoid rejecting separated parallel cars
+ok 289 - oriented footprint checks include diagonal bumpers and avoid rejecting separated parallel cars
+  ---
+  duration_ms: 0.599083
+  type: 'test'
+  ...
+# Subtest: real Havok spawn search avoids starter car, a rotated truck, and collidable props without moving existing entities
+ok 290 - real Havok spawn search avoids starter car, a rotated truck, and collidable props without moving existing entities
+  ---
+  duration_ms: 113.416416
+  type: 'test'
+  ...
+# Subtest: unsupported edges and fully blocked world footprints reject spawn without adding bodies or vehicles
+ok 291 - unsupported edges and fully blocked world footprints reject spawn without adding bodies or vehicles
+  ---
+  duration_ms: 5.171083
+  type: 'test'
+  ...
+# Subtest: production export gives every lamp and palm disjoint exact geometry ranges inside shared native chunk batches
+ok 292 - production export gives every lamp and palm disjoint exact geometry ranges inside shared native chunk batches
+  ---
+  duration_ms: 4994.569417
+  type: 'test'
+  ...
+# {"objects":555,"batches":350,"children":4839,"manifestBytes":3153513,"manifestGzipBytes":394896,"meshes":1920,"cpuGeometryBytes":75149512,"compressedBytes":17456841,"textureBytes":5387386}
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# Subtest: production native packages extract the actual lamp, preserve damage across travel, and release all physics/render resources
+ok 293 - production native packages extract the actual lamp, preserve damage across travel, and release all physics/render resources
+  ---
+  duration_ms: 24135.594333
+  type: 'test'
+  ...
+# {"initial":{"objects":555,"residentBodies":167,"fallen":0,"colliderLoads":167,"colliderDisposals":0,"batches":42,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":1169568,"meshes":653,"geometries":486,"bodies":271},"afterReload":{"objects":555,"residentBodies":238,"fallen":1,"colliderLoads":643,"colliderDisposals":405,"batches":91,"extractedMeshes":2,"extractedGeometryBytes":6096,"indexBackupBytes":1810752},"simulatedSteps":360,"nullEnginePhysicsAndDamageMs":311.1993340000008,"savedBytes":359,"lamp":"street-object/lamppost/-9.000/-18.000"}
+# BJS - [15:17:36]: Babylon.js v9.25.0 - Null engine
+# Subtest: intact street objects keep shared batches while native collision stops a body at the actual lamp
+ok 294 - intact street objects keep shared batches while native collision stops a body at the actual lamp
+  ---
+  duration_ms: 248.71275
+  type: 'test'
+  ...
+# {"objects":3,"residentBodies":3,"fallen":0,"colliderLoads":3,"colliderDisposals":0,"batches":3,"extractedMeshes":0,"extractedGeometryBytes":0,"indexBackupBytes":4176}
+# BJS - [15:17:36]: Babylon.js v9.25.0 - Null engine
+# Subtest: projectile destruction extracts the same visible object, clears only its intact spans, and preserves fall/light/nav state through reload
+ok 295 - projectile destruction extracts the same visible object, clears only its intact spans, and preserves fall/light/nav state through reload
+  ---
+  duration_ms: 137.7425
+  type: 'test'
+  ...
+# Physical fallen quaternion 0.3643687665462494,0.60764080286026,-0.6024781465530396,0.36746177077293396; compact saved delta 349 bytes.
+# BJS - [15:17:36]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual vehicle impact breaks an authored lamppost and blast/fire affect a palm through the shared damage path
+ok 296 - actual vehicle impact breaks an authored lamppost and blast/fire affect a palm through the shared damage path
+  ---
+  duration_ms: 1216.779792
+  type: 'test'
+  ...
+# Subtest: street-object save validation rejects malformed or duplicated authored deltas
+ok 297 - street-object save validation rejects malformed or duplicated authored deltas
+  ---
+  duration_ms: 7.610834
+  type: 'test'
+  ...
+# BJS - [15:17:38]: Babylon.js v9.25.0 - Null engine
+# Subtest: solid cover blocks blast and fire exposure; a burning fallen palm keeps pose and heat across save/load, then rain extinguishes it
+ok 298 - solid cover blocks blast and fire exposure; a burning fallen palm keeps pose and heat across save/load, then rain extinguishes it
+  ---
+  duration_ms: 307.956791
+  type: 'test'
+  ...
+# BJS - [15:17:38]: Babylon.js v9.25.0 - Null engine
+# Subtest: eight real geometry eviction/reload cycles retain damage without duplicate meshes or leaking native shapes
+ok 299 - eight real geometry eviction/reload cycles retain damage without duplicate meshes or leaking native shapes
+  ---
+  duration_ms: 52.761583
+  type: 'test'
+  ...
+# {"cycles":8,"meshes":9,"geometry":6,"bodies":4,"shapes":6,"objects":3,"residentBodies":3,"fallen":1,"colliderLoads":27,"colliderDisposals":24,"batches":3,"extractedMeshes":2,"extractedGeometryBytes":6240,"indexBackupBytes":4176}
+# BJS - [15:17:38]: Babylon.js v9.25.0 - Null engine
+# Subtest: fallen bodies unload before the static cleanup queue can drop their streamed support
+ok 300 - fallen bodies unload before the static cleanup queue can drop their streamed support
+  ---
+  duration_ms: 45.970917
+  type: 'test'
+  ...
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:41]: Babylon.js v9.25.0 - Null engine
+# Subtest: disk sweep detects sub-centimetre holes, disconnected islands and rounded footprint contacts without path sampling
+ok 301 - disk sweep detects sub-centimetre holes, disconnected islands and rounded footprint contacts without path sampling
+  ---
+  duration_ms: 2.893459
+  type: 'test'
+  ...
+# Subtest: dry guard keeps tangent, vertical motion and immediate inward movement while limiting a whole vehicle footprint
+ok 302 - dry guard keeps tangent, vertical motion and immediate inward movement while limiting a whole vehicle footprint
+  ---
+  duration_ms: 1.356166
+  type: 'test'
+  ...
+# Subtest: radius-valid recovery stays on a nearby supported shore and does not repeat or clamp to Y=0
+ok 303 - radius-valid recovery stays on a nearby supported shore and does not repeat or clamp to Y=0
+  ---
+  duration_ms: 0.73225
+  type: 'test'
+  ...
+# Subtest: nonrectangular coast and concave holes remain safe under diagonal controls at varied steps
+ok 304 - nonrectangular coast and concave holes remain safe under diagonal controls at varied steps
+  ---
+  duration_ms: 152.668542
+  type: 'test'
+  ...
+# Subtest: native rigid body stays on dry coverage during sustained thrust and high speed without recovery or rotation changes
+ok 305 - native rigid body stays on dry coverage during sustained thrust and high speed without recovery or rotation changes
+  ---
+  duration_ms: 103.309
+  type: 'test'
+  ...
+# Subtest: solver impulse cannot jump unsupported water even when the end position lands on another dry patch
+ok 306 - solver impulse cannot jump unsupported water even when the end position lands on another dry patch
+  ---
+  duration_ms: 2.650666
+  type: 'test'
+  ...
+# Subtest: native capsule remains supported beside an actual missing floor and can move along or away from it
+ok 307 - native capsule remains supported beside an actual missing floor and can move along or away from it
+  ---
+  duration_ms: 296.150083
+  type: 'test'
+  ...
+# Subtest: optional dry guard does not change legacy coast swimming or offshore flight
+ok 308 - optional dry guard does not change legacy coast swimming or offshore flight
+  ---
+  duration_ms: 0.215292
+  type: 'test'
+  ...
+# Subtest: integrated Player walking and noclip respect source holes and retain a way back inland
+ok 309 - integrated Player walking and noclip respect source holes and retain a way back inland
+  ---
+  duration_ms: 211.238667
+  type: 'test'
+  ...
+# BJS - [15:17:40]: Babylon.js v9.25.0 - Null engine
+# Subtest: swim presentation transitions smoothly between vertical treading, prone travel and land
+ok 310 - swim presentation transitions smoothly between vertical treading, prone travel and land
+  ---
+  duration_ms: 1.69925
+  type: 'test'
+  ...
+# Subtest: actual character joints form a head-first crawl with alternating hands and trailing fluttering feet
+ok 311 - actual character joints form a head-first crawl with alternating hands and trailing fluttering feet
+  ---
+  duration_ms: 323.177
+  type: 'test'
+  ...
+# Subtest: unwitnessed crime does not dispatch police
+ok 312 - unwitnessed crime does not dispatch police
+  ---
+  duration_ms: 2.547792
+  type: 'test'
+  ...
+# Subtest: report, pursuit, last known, search, reacquisition and escape
+ok 313 - report, pursuit, last known, search, reacquisition and escape
+  ---
+  duration_ms: 0.811125
+  type: 'test'
+  ...
+# Subtest: walls block witnesses; parallel and open lines remain clear
+ok 314 - walls block witnesses; parallel and open lines remain clear
+  ---
+  duration_ms: 0.122792
+  type: 'test'
+  ...
+# Subtest: seeded world randomness is reproducible
+ok 315 - seeded world randomness is reproducible
+  ---
+  duration_ms: 0.155667
+  type: 'test'
+  ...
+# Subtest: police profile supports configured levels without claiming reference parity
+ok 316 - police profile supports configured levels without claiming reference parity
+  ---
+  duration_ms: 0.073917
+  type: 'test'
+  ...
+# Subtest: last-known coordinates copy public getters used by Babylon vectors
+ok 317 - last-known coordinates copy public getters used by Babylon vectors
+  ---
+  duration_ms: 0.087209
+  type: 'test'
+  ...
+# Subtest: terminal lookahead follows curved road length, respects 60 m and reserves six metres
+ok 318 - terminal lookahead follows curved road length, respects 60 m and reserves six metres
+  ---
+  duration_ms: 0.969291
+  type: 'test'
+  ...
+# Subtest: branches, cycles and zero-length cycles do not invent terminal routes
+ok 319 - branches, cycles and zero-length cycles do not invent terminal routes
+  ---
+  duration_ms: 0.206458
+  type: 'test'
+  ...
+# Subtest: actual Population holds the terminal target and brakes indefinitely without reversing
+ok 320 - actual Population holds the terminal target and brakes indefinitely without reversing
+  ---
+  duration_ms: 2.106875
+  type: 'test'
+  ...
+# Subtest: actual Population brakes before a chained terminal even for a frightened driver
+ok 321 - actual Population brakes before a chained terminal even for a frightened driver
+  ---
+  duration_ms: 0.170583
+  type: 'test'
+  ...
+# Subtest: actual Population actively clears stale throttle on missing targets and broken links
+ok 322 - actual Population actively clears stale throttle on missing targets and broken links
+  ---
+  duration_ms: 0.167458
+  type: 'test'
+  ...
+# Subtest: actual Population advances to a real successor and then retains that terminal
+ok 323 - actual Population advances to a real successor and then retains that terminal
+  ---
+  duration_ms: 0.076917
+  type: 'test'
+  ...
+# BJS - [15:17:48]: Babylon.js v9.25.0 - Null engine
+# Subtest: entry doors swing around their hinge, close, detach with real Havok motion and restore without leaks
+ok 324 - entry doors swing around their hinge, close, detach with real Havok motion and restore without leaks
+  ---
+  duration_ms: 1226.328209
+  type: 'test'
+  ...
+# 32 kg door fragment physically separated; 10 replacements retained damage with stable scene/body/light resources.
+# BJS - [15:17:49]: Babylon.js v9.25.0 - Null engine
+# Subtest: headlight budget stays fixed, broken lenses extinguish beams and brake/siren controls change lamps
+ok 325 - headlight budget stays fixed, broken lenses extinguish beams and brake/siren controls change lamps
+  ---
+  duration_ms: 465.454333
+  type: 'test'
+  ...
+# BJS - [15:17:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: garage charges only valid stopped-car services and paint persists through damage, repair and restore
+ok 326 - garage charges only valid stopped-car services and paint persists through damage, repair and restore
+  ---
+  duration_ms: 373.610792
+  type: 'test'
+  ...
+# BJS - [15:17:48]: Babylon.js v9.25.0 - Null engine
+# Subtest: licensed coupe entry and exit complete with its physical open door at 0m
+ok 327 - licensed coupe entry and exit complete with its physical open door at 0m
+  ---
+  duration_ms: 3182.694125
+  type: 'test'
+  ...
+# BJS - [15:17:52]: Babylon.js v9.25.0 - Null engine
+# Subtest: licensed coupe entry and exit complete with its physical open door at -22m
+ok 328 - licensed coupe entry and exit complete with its physical open door at -22m
+  ---
+  duration_ms: 736.800667
+  type: 'test'
+  ...
+# BJS - [15:17:49]: Babylon.js v9.25.0 - Null engine
+# Subtest: an authored scissor hinge raises the physical door and stops against an overhead obstruction
+ok 329 - an authored scissor hinge raises the physical door and stops against an overhead obstruction
+  ---
+  duration_ms: 1220.846958
+  type: 'test'
+  ...
+# BJS - [15:17:50]: Babylon.js v9.25.0 - Null engine
+# Subtest: different front and rear tire radii drive suspension placement and native wheel contact
+ok 330 - different front and rear tire radii drive suspension placement and native wheel contact
+  ---
+  duration_ms: 160.829958
+  type: 'test'
+  ...
+# BJS - [15:17:51]: Babylon.js v9.25.0 - Null engine
+# Subtest: procedural sedan exterior follows real wheels, door geometry, mirrors and disabled parts on the same Havok body
+ok 331 - procedural sedan exterior follows real wheels, door geometry, mirrors and disabled parts on the same Havok body
+  ---
+  duration_ms: 154.592708
+  type: 'test'
+  ...
+# 34 component instances share one chassis; outer wheel x=-1.060m, open door x=-1.250m.
+# BJS - [15:17:51]: Babylon.js v9.25.0 - Null engine
+# Subtest: imported concept exterior follows real wheels, door geometry, mirrors and disabled parts on the same Havok body
+ok 332 - imported concept exterior follows real wheels, door geometry, mirrors and disabled parts on the same Havok body
+  ---
+  duration_ms: 1022.846417
+  type: 'test'
+  ...
+# 41 component instances share one chassis; outer wheel x=-1.118m, open door x=-1.811m.
+# BJS - [15:17:52]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual player-size Havok capsule is stopped by an open door beyond the chassis, then can walk through the released space
+ok 333 - actual player-size Havok capsule is stopped by an open door beyond the chassis, then can walk through the released space
+  ---
+  duration_ms: 280.238917
+  type: 'test'
+  ...
+# Actual 1.8m/.32m controller traveled 0.700m into the attached door vs 1.722m after removal.
+# BJS - [15:17:52]: Babylon.js v9.25.0 - Null engine
+# Subtest: a dynamic prop contacts the open exterior and detached assemblies retain independent compound collision
+ok 334 - a dynamic prop contacts the open exterior and detached assemblies retain independent compound collision
+  ---
+  duration_ms: 112.333375
+  type: 'test'
+  ...
+# 2 Havok contact events; sphere stayed 0.181m outside the opened door plane.
+# BJS - [15:17:52]: Babylon.js v9.25.0 - Null engine
+# Subtest: procedural sedan door stops against a real wall without shoving its chassis and resumes when cleared
+ok 335 - procedural sedan door stops against a real wall without shoving its chassis and resumes when cleared
+  ---
+  duration_ms: 461.01375
+  type: 'test'
+  ...
+# Door stopped at 37.0 degrees; chassis displaced 0.0000m.
+# BJS - [15:17:53]: Babylon.js v9.25.0 - Null engine
+# Subtest: imported concept door stops against a real wall without shoving its chassis and resumes when cleared
+ok 336 - imported concept door stops against a real wall without shoving its chassis and resumes when cleared
+  ---
+  duration_ms: 998.845042
+  type: 'test'
+  ...
+# Door stopped at 9.1 degrees; chassis displaced 0.0000m.
+# BJS - [15:17:54]: Babylon.js v9.25.0 - Null engine
+# Subtest: another moving vehicle makes real contact with the outboard open door
+ok 337 - another moving vehicle makes real contact with the outboard open door
+  ---
+  duration_ms: 303.505583
+  type: 'test'
+  ...
+# 40 native car contacts, minimum contact x=-1.306m.
+# BJS - [15:17:54]: Babylon.js v9.25.0 - Null engine
+# Subtest: broken door glazing leaves a physical opening and repeated restored exteriors release Havok shapes
+ok 338 - broken door glazing leaves a physical opening and repeated restored exteriors release Havok shapes
+  ---
+  duration_ms: 1205.7875
+  type: 'test'
+  ...
+# 12 save replacements retained 10 registered Havok shapes; vehicle removal left only the ground shape.
+# BJS - [15:17:53]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:53]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:53]: Babylon.js v9.25.0 - Null engine
+# Subtest: native IK reaches all four actual gameplay limbs under translated and rotated character roots, then disposes its resources
+ok 339 - native IK reaches all four actual gameplay limbs under translated and rotated character roots, then disposes its resources
+  ---
+  duration_ms: 180.370625
+  type: 'test'
+  ...
+# Subtest: contact overlays preserve bone lengths, clamp unreachable targets and do not overwrite dead or ragdoll poses
+ok 340 - contact overlays preserve bone lengths, clamp unreachable targets and do not overwrite dead or ragdoll poses
+  ---
+  duration_ms: 43.193375
+  type: 'test'
+  ...
+# Subtest: entry path stays continuous between the validated doorway and seat while delaying hip lowering
+ok 341 - entry path stays continuous between the validated doorway and seat while delaying hip lowering
+  ---
+  duration_ms: 0.265542
+  type: 'test'
+  ...
+# Subtest: both licensed protagonists contact both licensed civilian drivers with grounded feet during sedan and concept-car withdrawal
+ok 342 - both licensed protagonists contact both licensed civilian drivers with grounded feet during sedan and concept-car withdrawal
+  ---
+  duration_ms: 6440.019083
+  type: 'test'
+  ...
+# 8 detailed actor/driver/vehicle combinations; max contact wrist gap 0.00000 m; max support ankle drift 0.0000000 m; minimum sampled visual height 0.02646 m; 69456 sampled skinned vertices checked.
+# BJS - [15:17:58]: Babylon.js v9.25.0 - Null engine
+# Subtest: carjacking preserves the visible driver actor and locks held throttle until the player is seated
+ok 343 - carjacking preserves the visible driver actor and locks held throttle until the player is seated
+  ---
+  duration_ms: 1747.414333
+  type: 'test'
+  ...
+# BJS - [15:17:59]: Babylon.js v9.25.0 - Null engine
+# Subtest: blocked driver door rejects carjacking without deleting crew or stealing controls
+ok 344 - blocked driver door rejects carjacking without deleting crew or stealing controls
+  ---
+  duration_ms: 552.749125
+  type: 'test'
+  ...
+# BJS - [15:18:00]: Babylon.js v9.25.0 - Null engine
+# Subtest: a right-hand pilot seat requires the right door and releases the occupant on that side
+ok 345 - a right-hand pilot seat requires the right door and releases the occupant on that side
+  ---
+  duration_ms: 518.827375
+  type: 'test'
+  ...
+# BJS - [15:18:01]: Babylon.js v9.25.0 - Null engine
+# Subtest: nearby entrant capsule does not block the former driver exit query
+ok 346 - nearby entrant capsule does not block the former driver exit query
+  ---
+  duration_ms: 288.55175
+  type: 'test'
+  ...
+# BJS - [15:18:01]: Babylon.js v9.25.0 - Null engine
+# Subtest: critical seated drivers release the throttle and stay supported in the moving cabin
+ok 347 - critical seated drivers release the throttle and stay supported in the moving cabin
+  ---
+  duration_ms: 227.636959
+  type: 'test'
+  ...
+# BJS - [15:18:01]: Babylon.js v9.25.0 - Null engine
+# Subtest: the seated player loses driving capability after a critical injury without jumping out of the cabin
+ok 348 - the seated player loses driving capability after a critical injury without jumping out of the cabin
+  ---
+  duration_ms: 643.805833
+  type: 'test'
+  ...
+# BJS - [15:18:02]: Babylon.js v9.25.0 - Null engine
+# Subtest: population traffic has visible drivers, drives away under physics and retains a fleeing victim after theft
+ok 349 - population traffic has visible drivers, drives away under physics and retains a fleeing victim after theft
+  ---
+  duration_ms: 10810.967292
+  type: 'test'
+  ...
+# BJS - [15:18:13]: Babylon.js v9.25.0 - Null engine
+# Subtest: seated traffic wounds reload in the existing cabin without physical on-foot recovery
+ok 350 - seated traffic wounds reload in the existing cabin without physical on-foot recovery
+  ---
+  duration_ms: 948.689458
+  type: 'test'
+  ...
+# Subtest: tire demand respects friction circle and loses braking when sliding hard
+ok 351 - tire demand respects friction circle and loses braking when sliding hard
+  ---
+  duration_ms: 2.138542
+  type: 'test'
+  ...
+# Subtest: suspension equilibrium supports the actual car weight
+ok 352 - suspension equilibrium supports the actual car weight
+  ---
+  duration_ms: 0.148
+  type: 'test'
+  ...
+# Subtest: engine respects top speed, reverse cap, and mechanical damage
+ok 353 - engine respects top speed, reverse cap, and mechanical damage
+  ---
+  duration_ms: 0.098583
+  type: 'test'
+  ...
+# Subtest: parking contact is harmless, high-speed impact is damaging
+ok 354 - parking contact is harmless, high-speed impact is damaging
+  ---
+  duration_ms: 0.049959
+  type: 'test'
+  ...
+# Subtest: wing stalls at high angle of attack
+ok 355 - wing stalls at high angle of attack
+  ---
+  duration_ms: 0.084458
+  type: 'test'
+  ...
+# BJS - [15:18:00]: Babylon.js v9.25.0 - Null engine
+# Subtest: Havok car settles, accelerates, steers and stops against a solid wall
+ok 356 - Havok car settles, accelerates, steers and stops against a solid wall
+  ---
+  duration_ms: 1591.696875
+  type: 'test'
+  ...
+# Coupe reached 20.80 m/s after 3 seconds of throttle.
+# Impact Δv=14.95
+# Sedan hit wall: health 47.2, 1 collision callbacks, position z=25.09.
+# BJS - [15:18:01]: Babylon.js v9.25.0 - Null engine
+# Subtest: Havok boat floats, helicopter takes off and lands, trainer rotates from runway
+ok 357 - Havok boat floats, helicopter takes off and lands, trainer rotates from runway
+  ---
+  duration_ms: 605.378417
+  type: 'test'
+  ...
+# Boat floating height -0.05 m; propulsion reached 17.98 m/s.
+# Helicopter collective reached 23.91 m; rotor tilt produced 5.23 m/s horizontal speed.
+# Trainer runway roll: 36.51 m/s; y=0.67.
+# Trainer rotation: 25.37 m/s; y=62.08; forward={X: 0.00038983026752248406 Y: 0.4436272382736206 Z: 0.8962113261222839}.
+# BJS - [15:18:02]: Babylon.js v9.25.0 - Null engine
+# Subtest: 62 m/s impact cannot tunnel through an 8 cm wall; creative recovery restores upright motion
+ok 358 - 62 m/s impact cannot tunnel through an 8 cm wall; creative recovery restores upright motion
+  ---
+  duration_ms: 1097.09725
+  type: 'test'
+  ...
+# 223 km/h crash: max center z=9.676 at wall z12, health=25.0.
+# BJS - [15:18:03]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:03]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:04]: Babylon.js v9.25.0 - Null engine
+# Subtest: fixed physics substeps preserve driving across 30, 60 and 144 Hz render cadence
+ok 359 - fixed physics substeps preserve driving across 30, 60 and 144 Hz render cadence
+  ---
+  duration_ms: 1641.461041
+  type: 'test'
+  ...
+# 30 Hz: 299 steps, 17.623 m/s, z=36.987; 60 Hz: 299 steps, 17.623 m/s, z=36.987; 144 Hz: 299 steps, 17.623 m/s, z=36.987
+# BJS - [15:18:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: vehicle save round-trip retains deformed vertices, broken components, punctures and overturned pose
+ok 360 - vehicle save round-trip retains deformed vertices, broken components, punctures and overturned pose
+  ---
+  duration_ms: 424.872791
+  type: 'test'
+  ...
+# Saved 3105 bytes with dents, puncture, glass/light/bumper damage; 8 replacements preserved state with stable mesh/body/material counts.
+# BJS - [15:18:05]: Babylon.js v9.25.0 - Null engine
+# Subtest: stable IDs reject collisions; invalid restoration leaves existing body intact; legacy saves load
+ok 361 - stable IDs reject collisions; invalid restoration leaves existing body intact; legacy saves load
+  ---
+  duration_ms: 6005.597916
+  type: 'test'
+  ...
+# BJS - [15:18:01]: Babylon.js v9.25.0 - Null engine
+# Subtest: licensed firearm packages retain mechanical parts, metre scale, normals and source hashes
+ok 362 - licensed firearm packages retain mechanical parts, metre scale, normals and source hashes
+  ---
+  duration_ms: 111.492625
+  type: 'test'
+  ...
+# BJS - [15:18:02]: Babylon.js v9.25.0 - Null engine
+# Subtest: native Babylon asset loading, attachment and switching with raw gzip data retain bounded resources
+ok 363 - native Babylon asset loading, attachment and switching with raw gzip data retain bounded resources
+  ---
+  duration_ms: 1001.44925
+  type: 'test'
+  ...
+# Subtest: native Babylon asset loading, attachment and switching with HTTP-decoded data retain bounded resources
+ok 364 - native Babylon asset loading, attachment and switching with HTTP-decoded data retain bounded resources
+  ---
+  duration_ms: 256.951334
+  type: 'test'
+  ...
+# Subtest: drawing acquires the grip before revealing a gun, and stowing completes before switching
+ok 365 - drawing acquires the grip before revealing a gun, and stowing completes before switching
+  ---
+  duration_ms: 1.260541
+  type: 'test'
+  ...
+# Subtest: rapid wheel choices resolve to the latest weapon without refilling magazines or firing during transitions
+ok 366 - rapid wheel choices resolve to the latest weapon without refilling magazines or firing during transitions
+  ---
+  duration_ms: 0.282375
+  type: 'test'
+  ...
+# Subtest: original three-weapon saves migrate without changing their ammunition, and all added weapons persist
+ok 367 - original three-weapon saves migrate without changing their ammunition, and all added weapons persist
+  ---
+  duration_ms: 0.956791
+  type: 'test'
+  ...
+# Subtest: wheel selection follows eight directions and the centre retains the highlighted weapon
+ok 368 - wheel selection follows eight directions and the centre retains the highlighted weapon
+  ---
+  duration_ms: 0.1005
+  type: 'test'
+  ...
+# BJS - [15:18:04]: Babylon.js v9.25.0 - Null engine
+# Subtest: long guns remain above the ground throughout drawing, relaxed carry, movement and stowing
+ok 369 - long guns remain above the ground throughout drawing, relaxed carry, movement and stowing
+  ---
+  duration_ms: 364.833709
+  type: 'test'
+  ...
+# Subtest: boundary limits only outward motion and accounts for footprint, altitude and long steps
+ok 370 - boundary limits only outward motion and accounts for footprint, altitude and long steps
+  ---
+  duration_ms: 4.789125
+  type: 'test'
+  ...
+# Subtest: recovery recognizes actual seabed, safe high-altitude flight and old or corrupt saves
+ok 371 - recovery recognizes actual seabed, safe high-altitude flight and old or corrupt saves
+  ---
+  duration_ms: 0.844625
+  type: 'test'
+  ...
+# BJS - [15:18:08]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual Havok bodies remain inside under sustained thrust, 200 m/s motion, corners and varied requested steps
+ok 372 - actual Havok bodies remain inside under sustained thrust, 200 m/s motion, corners and varied requested steps
+  ---
+  duration_ms: 827.767125
+  type: 'test'
+  ...
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: post-step impulse recovery is consumed by Havok before restoring exact prestep mode
+ok 373 - post-step impulse recovery is consumed by Havok before restoring exact prestep mode
+  ---
+  duration_ms: 133.360209
+  type: 'test'
+  ...
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: old save outside or below terrain is recovered before Havok without repairing or rotating it
+ok 374 - old save outside or below terrain is recovered before Havok without repairing or rotating it
+  ---
+  duration_ms: 32.631875
+  type: 'test'
+  ...
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual Havok walking capsule cannot be driven beyond an edge and can walk back
+ok 375 - actual Havok walking capsule cannot be driven beyond an edge and can walk back
+  ---
+  duration_ms: 157.972958
+  type: 'test'
+  ...
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: integrated Player update keeps walking and noclip inside default coast bounds and permits returning
+ok 376 - integrated Player update keeps walking and noclip inside default coast bounds and permits returning
+  ---
+  duration_ms: 436.945166
+  type: 'test'
+  ...
+# Subtest: WGS84 tangent-plane projection preserves origin, east/north orientation and local metre scale
+ok 377 - WGS84 tangent-plane projection preserves origin, east/north orientation and local metre scale
+  ---
+  duration_ms: 7.099542
+  type: 'test'
+  ...
+# Subtest: multipolygon chains join shared node IDs in either direction and reject open rings
+ok 378 - multipolygon chains join shared node IDs in either direction and reject open rings
+  ---
+  duration_ms: 0.47775
+  type: 'test'
+  ...
+# Subtest: acquired GIS extract retains provenance, closed footprints and explicit disconnected source topology
+ok 379 - acquired GIS extract retains provenance, closed footprints and explicit disconnected source topology
+  ---
+  duration_ms: 80.949375
+  type: 'test'
+  ...
+# BJS - [15:18:09]: Babylon.js v9.25.0 - Null engine
+# Subtest: long roads and beach surfaces retain equal physical texture scale in both directions without changing shared boxes
+ok 380 - long roads and beach surfaces retain equal physical texture scale in both directions without changing shared boxes
+  ---
+  duration_ms: 23.671667
+  type: 'test'
+  ...
+# BJS - [15:18:10]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:10]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:10]: Babylon.js v9.25.0 - Null engine
+# Subtest: material and chunk requests preserve the receiver required by native Window.fetch
+ok 381 - material and chunk requests preserve the receiver required by native Window.fetch
+  ---
+  duration_ms: 292.719667
+  type: 'test'
+  ...
+# Subtest: merging a box and gable cannot corrupt shared boxes in later district batches
+ok 382 - merging a box and gable cannot corrupt shared boxes in later district batches
+  ---
+  duration_ms: 16.548166
+  type: 'test'
+  ...
+# BJS - [15:18:11]: Babylon.js v9.25.0 - Null engine
+# Subtest: native Babylon packages fetch only required cells and evict CPU geometry, GPU meshes, and unused materials
+ok 383 - native Babylon packages fetch only required cells and evict CPU geometry, GPU meshes, and unused materials
+  ---
+  duration_ms: 256.988583
+  type: 'test'
+  ...
+# Subtest: transient package failures retry and preserve the current neighborhood until destination preparation succeeds
+ok 384 - transient package failures retry and preserve the current neighborhood until destination preparation succeeds
+  ---
+  duration_ms: 497.449125
+  type: 'test'
+  ...
+# BJS - [15:18:14]: Babylon.js v9.25.0 - Null engine
+# Subtest: production manifest preserves authored collision metadata and asset references
+ok 385 - production manifest preserves authored collision metadata and asset references
+  ---
+  duration_ms: 2499.299958
+  type: 'test'
+  ...
+# BJS - [15:18:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: an unavailable destination rejects preparation without evicting the playable origin
+ok 386 - an unavailable destination rejects preparation without evicting the playable origin
+  ---
+  duration_ms: 1373.334667
+  type: 'test'
+  ...
+# Subtest: disposing residency does not remove unrelated gameplay geometry or materials
+ok 387 - disposing residency does not remove unrelated gameplay geometry or materials
+  ---
+  duration_ms: 35.743166
+  type: 'test'
+  ...
+# BJS - [15:18:15]: Babylon.js v9.25.0 - Null engine
+# Subtest: production World awaits native packages, preserves runtime ocean identity and releases loaded CPU geometry
+ok 388 - production World awaits native packages, preserves runtime ocean identity and releases loaded CPU geometry
+  ---
+  duration_ms: 2610.252833
+  type: 'test'
+  ...
+# Subtest: the expanded Brickell world restores the previous coordinate-compatible sandbox without resetting it or mutating storage
+ok 389 - the expanded Brickell world restores the previous coordinate-compatible sandbox without resetting it or mutating storage
+  ---
+  duration_ms: 8.807667
+  type: 'test'
+  ...
+# BJS - [15:18:11]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:11]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:18:12]: Babylon.js v9.25.0 - Null engine
+# Subtest: streamed mesh disposal releases scene geometry and reconstruction preserves transformed vertices/material
+ok 390 - streamed mesh disposal releases scene geometry and reconstruction preserves transformed vertices/material
+  ---
+  duration_ms: 21.230959
+  type: 'test'
+  ...
+# 20 round trips: 43 actual mesh disposals; stable 1680 CPU geometry bytes.
+# Subtest: visual work is budgeted and hysteresis avoids residency thrashing
+ok 391 - visual work is budgeted and hysteresis avoids residency thrashing
+  ---
+  duration_ms: 25.528916
+  type: 'test'
+  ...
+# Subtest: active vehicle anchors retain Havok walls, global ground remains, and collider reloads do not leak bodies
+ok 392 - active vehicle anchors retain Havok walls, global ground remains, and collider reloads do not leak bodies
+  ---
+  duration_ms: 95.699917
+  type: 'test'
+  ...
+# 20 Havok unload/reload cycles: 3 bodies including restored wall, unchanged navigation box.
+# Subtest: west and south expansion preserves a strongly connected paved lane network
+ok 393 - west and south expansion preserves a strongly connected paved lane network
+  ---
+  duration_ms: 34.445667
+  type: 'test'
+  ...
+1..393
+# tests 393
+# suites 0
+# pass 393
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 156501.444792

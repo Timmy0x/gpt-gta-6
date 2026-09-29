@@ -1,0 +1,32 @@
+{
+  "scope": "Synthetic native CPU-only method work for 1000 independently authored local tile bounds. Not live provider traversal performance, browser FPS, GPU time, visual acceptance or a comparison of quality settings.",
+  "method": "Original per-tile application arithmetic versus production snapshot plus the same 1000 evaluations. Cached work is timed inside the actual pinned core prepareForTraversal lifecycle; other core traversal/loading work is excluded. 10 warmup batches, 100 measured batches, alternating before/after order, shared output objects.",
+  "node": "v22.23.2",
+  "cpu": "Apple M5 Pro",
+  "measuredAt": "2026-09-29T19:15:17.549Z",
+  "dependencies": {
+    "babylon": "9.25.0",
+    "tilesRenderer": "0.5.2"
+  },
+  "tilesPerBatch": 1000,
+  "equivalenceChecks": 4000,
+  "originalPerTile": {
+    "batches": 100,
+    "medianMs": 1.4629170000002887,
+    "p95Ms": 2.100040999999692,
+    "maxMs": 2.4183750000001965
+  },
+  "updateSnapshot": {
+    "batches": 100,
+    "medianMs": 0.2224580000001879,
+    "p95Ms": 0.34187500000007276,
+    "maxMs": 0.45354200000019773
+  },
+  "medianMethodWorkReductionPercent": 84.79353237400727,
+  "sourceHashes": {
+    "src/world/miami/visuals/LHTilesRenderer.ts": "6ffeed370305f1ab486a10e5ff39ebcc1856765a92071d7f088af7ed0aeb2cab",
+    "tests/fixtures/miami-tile-view.ts": "9886da328f75df9d12f25311949c3dcf906104735d577f297ddbedec29015dfc",
+    "tests/miami-tile-view.test.ts": "1f13d96a4b34a8a8451a8918a73fcc2a6152e5510d30c984252dc81f1336712e",
+    "docs/evidence/miami-performance-r4/tile-view/profile.ts": "216b66b5b42f22ef7021c009718446cca6ec8464ecf57b46a69136926fbb66db"
+  }
+}

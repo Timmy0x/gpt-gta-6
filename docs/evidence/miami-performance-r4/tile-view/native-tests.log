@@ -1,0 +1,136 @@
+TAP version 13
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: scene-owned ion→Google connection retains the actual game camera, geometry, all credits and fixed origin
+ok 1 - scene-owned ion→Google connection retains the actual game camera, geometry, all credits and fixed origin
+  ---
+  duration_ms: 102.745292
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: moving the existing camera hides and restores visual coverage and credits without reconnecting
+ok 2 - moving the existing camera hides and restores visual coverage and credits without reconnecting
+  ---
+  duration_ms: 22.090834
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: disconnect aborts a pending endpoint and reconnect cannot receive late assets or stale credits
+ok 3 - disconnect aborts a pending endpoint and reconnect cannot receive late assets or stale credits
+  ---
+  duration_ms: 31.389542
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: initial401 recovers once while403/503 remain terminal and explicit retry rebuilds a fresh connection
+ok 4 - initial401 recovers once while403/503 remain terminal and explicit retry rebuilds a fresh connection
+  ---
+  duration_ms: 57.574417
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: scene disposal releases owned tiles and callbacks; immutable summaries are sampled rather than emitted every frame
+ok 5 - scene disposal releases owned tiles and callbacks; immutable summaries are sampled rather than emitted every frame
+  ---
+  duration_ms: 19.868625
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: normal ion bearer and version stay on the issued origin; cross-origin content receives no private auth fields
+ok 6 - normal ion bearer and version stay on the issued origin; cross-origin content receives no private auth fields
+  ---
+  duration_ms: 14.26825
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: persistent401 is bounded and tile parse failures expose no credential-bearing content labels or raw error text
+ok 7 - persistent401 is bounded and tile parse failures expose no credential-bearing content labels or raw error text
+  ---
+  duration_ms: 18.863166
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+# VisualConnectionError: Visual source request failed (401).
+#     at ScopedProviderTransport.\#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+#     at ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:78:8)
+#     at runNextTicks (node:internal/process/task_queues:64:5)
+#     at listOnTimeout (node:internal/timers:547:9)
+#     at process.processTimers (node:internal/timers:521:7) {
+#   code: 'http',
+#   status: 401
+# }
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# TilesRenderer : Failed to load tile at url "https://streamed.invalid/content/1.json".
+# VisualConnectionError: Visual source request failed (503).
+#     at ScopedProviderTransport.\#check (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:28:50)
+#     at ScopedProviderTransport.\#json (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:30:8)
+#     at <anonymous> (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:67:86)
+#     at runNextTicks (node:internal/process/task_queues:64:5)
+#     at listOnTimeout (node:internal/timers:547:9)
+#     at process.processTimers (node:internal/timers:521:7)
+#     at async ScopedProviderTransport.\#renew (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:67:245)
+#     at async ScopedProviderTransport.fetchData (/Users/timmymckeegan/Desktop/gpt-gta-6/.local-builds/miami-performance-r4-source/src/world/miami/visuals/ScopedProviderTransport.ts:75:29) {
+#   code: 'http',
+#   status: 503
+# }
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: nested Google401 renews with a key-only root, propagates the new session, and bounds persistent failures
+ok 8 - nested Google401 renews with a key-only root, propagates the new session, and bounds persistent failures
+  ---
+  duration_ms: 111.234292
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: ion external Google endpoint uses the pinned presence contract instead of a guessed externalType enum
+ok 9 - ion external Google endpoint uses the pinned presence contract instead of a guessed externalType enum
+  ---
+  duration_ms: 60.087916
+  type: 'test'
+  ...
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:17]: Babylon.js v9.25.0 - Null engine
+# Subtest: native core traversal has exact original view decisions through changing camera, projection, framebuffer, viewport and group states
+ok 10 - native core traversal has exact original view decisions through changing camera, projection, framebuffer, viewport and group states
+  ---
+  duration_ms: 149.306666
+  type: 'test'
+  ...
+# Subtest: a stable native update builds one frustum for 1001 tile queries and independent direct calls stay fresh
+ok 11 - a stable native update builds one frustum for 1001 tile queries and independent direct calls stay fresh
+  ---
+  duration_ms: 21.466792
+  type: 'test'
+  ...
+# Subtest: before/after listeners, plugin-skipped updates, rootless updates and exceptions cannot retain stale view math
+ok 12 - before/after listeners, plugin-skipped updates, rootless updates and exceptions cannot retain stale view math
+  ---
+  duration_ms: 7.019125
+  type: 'test'
+  ...
+# Subtest: outgoing traversal events invalidate the cached view before listeners query a moved camera
+ok 13 - outgoing traversal events invalidate the cached view before listeners query a moved camera
+  ---
+  duration_ms: 1.813292
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2976.137959

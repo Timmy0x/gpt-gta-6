@@ -1,0 +1,29 @@
+{
+  "scope": "Synthetic CPU camera query workload; not live browser FPS or Google tile data",
+  "engine": "Babylon 9.25.0 NullEngine",
+  "node": "v22.23.2",
+  "platform": "darwin",
+  "arch": "arm64",
+  "cpu": "Apple M5 Pro",
+  "measuredAt": "2026-09-29T19:12:28.994Z",
+  "results": [
+    {
+      "triangles": 125001,
+      "frames": 28,
+      "coldMs": 13.599958999999672,
+      "medianMs": 0.1424579999998059,
+      "p95Ms": 1.1482080000000678,
+      "maxMs": 1.8318749999998545,
+      "renderSubmeshes": 1
+    },
+    {
+      "triangles": 500001,
+      "frames": 28,
+      "coldMs": 27.385457999999744,
+      "medianMs": 0.1944170000001577,
+      "p95Ms": 0.36420899999984613,
+      "maxMs": 2.507625000000189,
+      "renderSubmeshes": 1
+    }
+  ]
+}

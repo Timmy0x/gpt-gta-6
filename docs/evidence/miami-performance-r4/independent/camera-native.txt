@@ -1,0 +1,82 @@
+TAP version 13
+# BJS - [15:17:47]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:47]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:47]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:47]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:47]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:47]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:47]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:48]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:48]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:48]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:17:48]: Babylon.js v9.25.0 - Null engine
+# Subtest: finite rays preserve world distance under nonuniform reflection, rotation and affine shear
+ok 1 - finite rays preserve world distance under nonuniform reflection, rotation and affine shear
+  ---
+  duration_ms: 49.100208
+  type: 'test'
+  ...
+# Subtest: typed ordinary instance picking uses the instance affine transform rather than its source transform
+ok 2 - typed ordinary instance picking uses the instance affine transform rather than its source transform
+  ---
+  duration_ms: 4.41825
+  type: 'test'
+  ...
+# Subtest: indexed and nonindexed native submesh selections exclude unrendered nearer triangles
+ok 3 - indexed and nonindexed native submesh selections exclude unrendered nearer triangles
+  ---
+  duration_ms: 6.325125
+  type: 'test'
+  ...
+# Subtest: closest hit respects ordering across distinct native material submeshes
+ok 4 - closest hit respects ordering across distinct native material submeshes
+  ---
+  duration_ms: 2.395792
+  type: 'test'
+  ...
+# Subtest: interleaved FLOAT typed data honors byte stride, attribute offset and typed-view buffer offset
+ok 5 - interleaved FLOAT typed data honors byte stride, attribute offset and typed-view buffer offset
+  ---
+  duration_ms: 4.380916
+  type: 'test'
+  ...
+# Subtest: normalized integer accessors retain native conversion and finite ray semantics
+ok 6 - normalized integer accessors retain native conversion and finite ray semantics
+  ---
+  duration_ms: 47.972625
+  type: 'test'
+  ...
+# Subtest: active position mutation, index updates and immutable buffer replacements cannot retain stale bounds
+ok 7 - active position mutation, index updates and immutable buffer replacements cannot retain stale bounds
+  ---
+  duration_ms: 2.523625
+  type: 'test'
+  ...
+# Subtest: morphology, skeletons and native triangle-strip layout retain fallback delegation
+ok 8 - morphology, skeletons and native triangle-strip layout retain fallback delegation
+  ---
+  duration_ms: 16.221458
+  type: 'test'
+  ...
+# Subtest: thin-instance camera clearance preserves matrices and all native render instances
+ok 9 - thin-instance camera clearance preserves matrices and all native render instances
+  ---
+  duration_ms: 5.127334
+  type: 'test'
+  ...
+# {"scope":"Independent synthetic native Babylon oracle cases; no provider data or browser FPS claim","cases":[{"name":"affine-0-side-1-length--0.01","actual":null,"expected":null,"renderInvariant":true},{"name":"affine-0-side-1-length-0.01","actual":8.999999901842747,"expected":8.999999855701853,"renderInvariant":true},{"name":"affine-0-side-1-length-2","actual":8.999999901842747,"expected":8.999999855701853,"renderInvariant":true},{"name":"affine-0-side--1-length--0.01","actual":null,"expected":null,"renderInvariant":true},{"name":"affine-0-side--1-length-0.01","actual":8.999999901842743,"expected":9.000000033148396,"renderInvariant":true},{"name":"affine-0-side--1-length-2","actual":8.999999901842743,"expected":9.000000033148396,"renderInvariant":true},{"name":"affine-1-side-1-length--0.01","actual":null,"expected":null,"renderInvariant":true},{"name":"affine-1-side-1-length-0.01","actual":0.9000000007147454,"expected":0.9000014348868997,"renderInvariant":true},{"name":"affine-1-side-1-length-2","actual":0.9000000007147454,"expected":0.9000014348868997,"renderInvariant":true},{"name":"affine-1-side--1-length--0.01","actual":null,"expected":null,"renderInvariant":true},{"name":"affine-1-side--1-length-0.01","actual":0.9000000007147128,"expected":0.8999985531511556,"renderInvariant":true},{"name":"affine-1-side--1-length-2","actual":0.9000000007147128,"expected":0.8999985531511556,"renderInvariant":true},{"name":"affine-2-side-1-length--0.01","actual":null,"expected":null,"renderInvariant":true},{"name":"affine-2-side-1-length-0.01","actual":9.031196270065292,"expected":9.031196122351757,"renderInvariant":true},{"name":"affine-2-side-1-length-2","actual":9.031196270065292,"expected":9.031196122351757,"renderInvariant":true},{"name":"affine-2-side--1-length--0.01","actual":null,"expected":null,"renderInvariant":true},{"name":"affine-2-side--1-length-0.01","actual":9.03119560109365,"expected":9.03119591929545,"renderInvariant":true},{"name":"affine-2-side--1-length-2","actual":9.03119560109365,"expected":9.03119591929545,"renderInvariant":true},{"name":"ordinary-instance-affine","actual":8.999999916174882,"native":8.999999648171155,"renderInvariant":true},{"name":"selected-far-triangle-true","actual":4,"expected":4,"renderInvariant":true},{"name":"selected-far-triangle-false","actual":4,"expected":4,"renderInvariant":true},{"name":"far-inserted-first-submeshes","actual":2,"expected":2,"renderInvariant":true},{"name":"interleaved-float-view","actual":2,"expected":2,"renderInvariant":true},{"name":"normalized-int16-view","actual":2,"expected":2,"renderInvariant":true},{"name":"mutable-before","actual":2,"expected":2,"renderInvariant":true},{"name":"mutable-after-in-place","actual":2,"expected":2,"renderInvariant":true},{"name":"index-before","actual":2,"expected":2,"renderInvariant":true},{"name":"index-after","actual":2,"expected":2,"renderInvariant":true},{"name":"immutable-before","actual":2,"expected":2,"renderInvariant":true},{"name":"immutable-replaced","actual":2,"expected":2,"renderInvariant":true},{"name":"fallback-morph","calls":2,"nativeDistance":2},{"name":"fallback-skeleton","calls":2,"nativeDistance":2},{"name":"fallback-strip","calls":2,"nativeDistance":2},{"name":"thin-instance-clearance","resolved":[0,-20,-1.68],"renderInvariant":true},{"name":"physics-preserved-near-plane","bodyCount":1}]}
+# Subtest: cold and warm camera queries preserve native physical bodies and tiny endpoint clearance
+ok 10 - cold and warm camera queries preserve native physical bodies and tiny endpoint clearance
+  ---
+  duration_ms: 100.309084
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7530.751709

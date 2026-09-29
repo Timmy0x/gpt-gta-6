@@ -1,0 +1,37 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import HavokPhysics from '@babylonjs/havok';
+import { DirectionalLight, HavokPlugin, MeshBuilder, NullEngine, PhysicsAggregate, PhysicsShapeType, Scene, ShadowGenerator, Vector3, type PhysicsEngineV2 } from '@babylonjs/core';
+import type { Input } from '../src/core/Input';
+import { Player } from '../src/gameplay/Player';
+import { VehicleSystem } from '../src/vehicles/VehicleSystem';
+import { ROAD_CARS } from '../src/vehicles/RoadCarCatalog';
+
+for (const groundY of [0,-22]) test(`licensed coupe entry and exit complete with its physical open door at ${groundY}m`, async t => {
+  const wasm=await readFile(new URL('../node_modules/@babylonjs/havok/lib/esm/HavokPhysics.wasm',import.meta.url));
+  const havok=await HavokPhysics({wasmBinary:wasm.buffer.slice(wasm.byteOffset,wasm.byteOffset+wasm.byteLength) as ArrayBuffer});
+  const engine=new NullEngine(), scene=new Scene(engine);
+  scene.enablePhysics(new Vector3(0,-9.81,0),new HavokPlugin(false,havok));
+  const physics=scene.getPhysicsEngine() as PhysicsEngineV2;
+  const shadows=new ShadowGenerator(16,new DirectionalLight('sun',Vector3.Down(),scene));
+  const floorMesh=MeshBuilder.CreateBox('floor',{width:100,height:1,depth:100},scene);floorMesh.position.y=groundY-.5;
+  const floor=new PhysicsAggregate(floorMesh,PhysicsShapeType.BOX,{mass:0},scene);
+  const source=new Uint8Array(await readFile(new URL(`../public/vehicles/carla/${ROAD_CARS.coupe.file}`,import.meta.url)));
+  const vehicles=new VehicleSystem({scene,shadows},undefined,true,{coupe:source}); await vehicles.prepareModel('coupe');
+  const car=vehicles.spawn('coupe',new Vector3(0,groundY+1,0));
+  assert.equal(car.root.metadata.sourceModel, ROAD_CARS.coupe.source, 'test the imported source model rather than the procedural fallback');
+  const input={aim:false,down:()=>false,take:()=>false,axis:()=>0,dx:0,dy:0,gamepad:null} as unknown as Input;
+  const player=new Player(scene,shadows,input,new Vector3(-2.7,groundY+.94,0));
+  t.after(()=>{player.controller.dispose();player.queries.dispose();vehicles.dispose();floor.dispose();scene.dispose();engine.dispose();});
+  const step=()=>{player.update(1/60);player.occupancy.update(1/60);vehicles.update(1/60);physics._step(1/60);player.render(1/60,1,false);};
+  for(let i=0;i<120;i++)step();
+  assert.equal(player.enter(car),true,player.interactionMessage);
+  for(let i=0;i<240 && player.vehiclePhase!=='seated';i++)step();
+  assert.equal(player.vehiclePhase,'seated');
+  assert.equal(player.exit(),true,player.interactionMessage);
+  for(let i=0;i<120 && String(player.vehiclePhase)!=='on-foot';i++)step();
+  assert.equal(player.vehiclePhase,'on-foot',player.interactionMessage);
+  assert.equal(player.vehicle,null);assert.ok(player.position.y>groundY+.8 && player.position.y<groundY+1.2);
+  assert.equal(player.queries.clear(player.position),true,'dismounted capsule remains physically clear');
+});

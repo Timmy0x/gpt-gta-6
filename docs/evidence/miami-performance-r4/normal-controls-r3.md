@@ -1,0 +1,9 @@
+# Follow-up live controls on the pushed R3 build
+
+The connected local production build used assets/index-CuPZ81_q.js. Normal sandbox controls spawned the licensed coupe. The initial spawn message incorrectly displayed the old generic Cobalt GT tuning label; the spawned car HUD correctly showed Mercedes coupe. R4 changes the message to read the actual spawned vehicle tuning label.
+
+Twenty short W inputs approached the car until E Drive appeared. E visibly opened the passenger-side door and began entry. Subsequent W inputs completed seating and drove the car to 28 km/h. A vehicle collision produced a one-star police pursuit, then a search and clear state. E during residual motion showed an exit transition but returned to seated state; after the car stopped, E completed exit and the HUD returned to E Drive with no vehicle speed. The conservative revalidation was observed; no attached-door exit defect was confirmed. Two new native fixtures use the actual licensed coupe asset at 0 and -22 m and both completed entry/exit with the physical door and a clear standing capsule.
+
+The source scenery still has rough trees, warped close surfaces, photographed static cars and vertical/ground alignment differences. The car and character proportions/interaction poses are visible, but these observations do not establish frame-by-frame animation quality or photorealism. No map geometry or provider content was exported. Screenshots were displayed inline during computer use; no local screenshot file was returned by that API, so no filesystem capture path is asserted.
+
+Captured browser error history included an earlier Chromium UnknownError at 18:53 UTC; no inference is made that all browser error checks passed. This control check is a brief functional sample, not sustained performance acceptance.

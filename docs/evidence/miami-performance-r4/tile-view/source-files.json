@@ -1,0 +1,32 @@
+{
+  "scope": "Frozen R4 tile-view source cohort only; independent camera-query changes are excluded.",
+  "baseCommit": "b0bb9b7",
+  "files": [
+    {
+      "path": "src/world/miami/visuals/LHTilesRenderer.ts",
+      "sha256": "6ffeed370305f1ab486a10e5ff39ebcc1856765a92071d7f088af7ed0aeb2cab"
+    },
+    {
+      "path": "tests/fixtures/miami-tile-view.ts",
+      "sha256": "9886da328f75df9d12f25311949c3dcf906104735d577f297ddbedec29015dfc"
+    },
+    {
+      "path": "tests/miami-tile-view.test.ts",
+      "sha256": "1f13d96a4b34a8a8451a8918a73fcc2a6152e5510d30c984252dc81f1336712e"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/tile-view/profile.ts",
+      "sha256": "216b66b5b42f22ef7021c009718446cca6ec8464ecf57b46a69136926fbb66db"
+    }
+  ],
+  "pinnedLifecycleDependencies": [
+    {
+      "path": "node_modules/3d-tiles-renderer/src/core/renderer/tiles/TilesRendererBase.js",
+      "sha256": "d39c221bc61fbd216581b321868bcafcf1b935812e39b0cbcfbb0071bd8b829e"
+    },
+    {
+      "path": "node_modules/3d-tiles-renderer/src/babylonjs/renderer/tiles/TilesRenderer.js",
+      "sha256": "2ea733f00020464724f58410883a23b60f824a4a44c22baee5fdbcea85309b8f"
+    }
+  ]
+}

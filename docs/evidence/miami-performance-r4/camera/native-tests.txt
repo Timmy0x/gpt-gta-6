@@ -1,0 +1,199 @@
+TAP version 13
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# Subtest: camera selects the nearest wall at Miami negative elevations and leaves near-plane clearance
+ok 1 - camera selects the nearest wall at Miami negative elevations and leaves near-plane clearance
+  ---
+  duration_ms: 15.424667
+  type: 'test'
+  ...
+# Subtest: a newly appearing wall retracts the camera immediately despite positional smoothing
+ok 2 - a newly appearing wall retracts the camera immediately despite positional smoothing
+  ---
+  duration_ms: 2.419292
+  type: 'test'
+  ...
+# Subtest: the camera recovers when its previous position is inside a thick wall
+ok 3 - the camera recovers when its previous position is inside a thick wall
+  ---
+  duration_ms: 2.002458
+  type: 'test'
+  ...
+# Subtest: off-axis camera clearance detects a narrow obstacle missed by the center ray
+ok 4 - off-axis camera clearance detects a narrow obstacle missed by the center ray
+  ---
+  duration_ms: 1.703459
+  type: 'test'
+  ...
+# Subtest: short endpoint probes create side clearance beside a parallel wall
+ok 5 - short endpoint probes create side clearance beside a parallel wall
+  ---
+  duration_ms: 1.506833
+  type: 'test'
+  ...
+# Subtest: rendered tile geometry blocks only the camera and creates no physical world data
+ok 6 - rendered tile geometry blocks only the camera and creates no physical world data
+  ---
+  duration_ms: 1.292
+  type: 'test'
+  ...
+# Subtest: invisible public collision and transformed visual surfaces retain their camera queries
+ok 7 - invisible public collision and transformed visual surfaces retain their camera queries
+  ---
+  duration_ms: 1.546292
+  type: 'test'
+  ...
+# Subtest: the controlled player and vehicle are excluded while unrelated scene blockers remain
+ok 8 - the controlled player and vehicle are excluded while unrelated scene blockers remain
+  ---
+  duration_ms: 2.12575
+  type: 'test'
+  ...
+# Subtest: a wider near plane increases clearance for ultrawide aspect ratios
+ok 9 - a wider near plane increases clearance for ultrawide aspect ratios
+  ---
+  duration_ms: 4.755167
+  type: 'test'
+  ...
+# Subtest: district teleport resolves the new camera locally without interpolating through the previous district
+ok 10 - district teleport resolves the new camera locally without interpolating through the previous district
+  ---
+  duration_ms: 1.031875
+  type: 'test'
+  ...
+# Subtest: camera probes never send far-away meshes to native triangle picking
+ok 11 - camera probes never send far-away meshes to native triangle picking
+  ---
+  duration_ms: 20.259875
+  type: 'test'
+  ...
+# Subtest: public thin-instance blockers retain Babylon instance-aware nearest picking
+ok 12 - public thin-instance blockers retain Babylon instance-aware nearest picking
+  ---
+  duration_ms: 1.977334
+  type: 'test'
+  ...
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# Subtest: actual Player.render applies visual camera avoidance while leaving Havok and character positions unchanged
+ok 13 - actual Player.render applies visual camera avoidance while leaving Havok and character positions unchanged
+  ---
+  duration_ms: 36.318792
+  type: 'test'
+  ...
+# Subtest: exact clearance detects a 2 cm near-plane blocker between every finite boom ray
+ok 14 - exact clearance detects a 2 cm near-plane blocker between every finite boom ray
+  ---
+  duration_ms: 1.19525
+  type: 'test'
+  ...
+# Subtest: non-indexed visual triangles and ordinary transformed instances retain native picking
+ok 15 - non-indexed visual triangles and ordinary transformed instances retain native picking
+  ---
+  duration_ms: 1.145625
+  type: 'test'
+  ...
+# Subtest: partition eviction and geometry changes preserve original render submeshes, materials and buffers
+ok 16 - partition eviction and geometry changes preserve original render submeshes, materials and buffers
+  ---
+  duration_ms: 12.902584
+  type: 'test'
+  ...
+# Subtest: a tile-wide bounding box enclosing the camera is never treated as actual visual geometry
+ok 17 - a tile-wide bounding box enclosing the camera is never treated as actual visual geometry
+  ---
+  duration_ms: 1.073125
+  type: 'test'
+  ...
+# Subtest: actual updateVerticesData deformation invalidates in-place native point-cache bounds
+ok 18 - actual updateVerticesData deformation invalidates in-place native point-cache bounds
+  ---
+  duration_ms: 0.811625
+  type: 'test'
+  ...
+# Subtest: small deformed props between the boom rays still receive freshly rebuilt exact clearance
+ok 19 - small deformed props between the boom rays still receive freshly rebuilt exact clearance
+  ---
+  duration_ms: 0.854625
+  type: 'test'
+  ...
+# Subtest: native updatable index buffers cannot retain query bounds for an old triangle selection
+ok 20 - native updatable index buffers cannot retain query bounds for an old triangle selection
+  ---
+  duration_ms: 0.3615
+  type: 'test'
+  ...
+# Subtest: replacing an immutable vertex buffer invalidates query bounds even when native points are reused
+ok 21 - replacing an immutable vertex buffer invalidates query bounds even when native points are reused
+  ---
+  duration_ms: 0.56425
+  type: 'test'
+  ...
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# BJS - [15:15:12]: Babylon.js v9.25.0 - Null engine
+# Subtest: cold static camera rays and endpoint clearance do not generate native per-vertex point arrays or copy buffers
+ok 22 - cold static camera rays and endpoint clearance do not generate native per-vertex point arrays or copy buffers
+  ---
+  duration_ms: 17.222916
+  type: 'test'
+  ...
+# Subtest: scratch native triangle rays match both sides and finite ranges under reflected affine transforms
+ok 23 - scratch native triangle rays match both sides and finite ranges under reflected affine transforms
+  ---
+  duration_ms: 16.743583
+  type: 'test'
+  ...
+# Subtest: interleaved FLOAT position buffers with a typed-array byteOffset match native picking without deinterleaving
+ok 24 - interleaved FLOAT position buffers with a typed-array byteOffset match native picking without deinterleaving
+  ---
+  duration_ms: 1.674
+  type: 'test'
+  ...
+# Subtest: normalized SHORT position data uses native Float32 conversion semantics
+ok 25 - normalized SHORT position data uses native Float32 conversion semantics
+  ---
+  duration_ms: 1.10625
+  type: 'test'
+  ...
+# Subtest: native nonindexed submesh vertex ranges and indexed material changes remain authoritative
+ok 26 - native nonindexed submesh vertex ranges and indexed material changes remain authoritative
+  ---
+  duration_ms: 1.730042
+  type: 'test'
+  ...
+# Subtest: unsupported morph geometry keeps the native picking fallback
+ok 27 - unsupported morph geometry keeps the native picking fallback
+  ---
+  duration_ms: 1.03875
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2809.018209

@@ -1,0 +1,11 @@
+{
+  "commit": "b0bb9b71c920a3fd855e03189d1a9999cb9519c2",
+  "deploymentId": "dpl_5Eufe7jedjKAwWvhckdT72hFSYPE",
+  "state": "READY",
+  "alias": "https://gpt-gta-6.vercel.app",
+  "entry": "/assets/index-CuPZ81_q.js",
+  "sha256": "c1078f4eb3642dec03b13be669b32fba926ca09ff18c0020029de2a3fd12e2b4",
+  "bytes": 6025424,
+  "checkedAt": "2026-09-29T19:06:25.138813+00:00",
+  "tls": "curl normal certificate verification"
+}

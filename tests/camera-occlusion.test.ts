@@ -220,6 +220,7 @@ test('actual updateVerticesData deformation invalidates in-place native point-ca
   const mutable = wall('damageable-prop', -2, 100); mutable.markVerticesDataAsUpdatable('position', true);
   const before = new Ray(new Vector3(100, -20, 0), new Vector3(0, 0, -1), 6);
   assert.ok((queries.closest(before, mutable) ?? Infinity) < 2);
+  mutable._generatePointsArray(); // Initialize the native oracle independently of the camera query implementation.
   const points = mutable._positions, renderParts = mutable.subMeshes.slice(), positions = mutable.getVerticesData('position')!.slice();
   for (let i = 0; i < positions.length; i += 3) positions[i] -= 100;
   mutable.updateVerticesData('position', positions, true); mutable.computeWorldMatrix(true);
@@ -255,6 +256,7 @@ test('native updatable index buffers cannot retain query bounds for an old trian
 test('replacing an immutable vertex buffer invalidates query bounds even when native points are reused', t => {
   const { scene, target, wall } = fixture(t), queries = new CameraMeshQueries(scene), prop = wall('replaced-buffer', -2, 100);
   assert.ok((queries.closest(new Ray(new Vector3(100,-20,0),new Vector3(0,0,-1),6),prop) ?? Infinity) < 2);
+  prop._generatePointsArray(); // Initialize the native oracle independently of the camera query implementation.
   const points = prop._positions, positions = prop.getVerticesData('position')!.slice();
   for (let i=0;i<positions.length;i+=3) positions[i]-=100;
   prop.setVerticesData('position',positions,false); prop.computeWorldMatrix(true);

@@ -1,10 +1,7 @@
-import { InstancedMesh, Matrix, Mesh, Ray, Vector3, VertexBuffer, type AbstractMesh, type IndicesArray, type Scene, type SubMesh } from '@babylonjs/core';
-import { GetTypeByteLength } from '@babylonjs/core/Buffers/bufferUtils';
-import { FromHalfFloat } from '@babylonjs/core/Misc/halfFloat';
+import { BoundingInfo, InstancedMesh, Matrix, Mesh, Ray, SubMesh, Vector3, type AbstractMesh, type IndicesArray, type Scene } from '@babylonjs/core';
 
-interface Part { minX: number; minY: number; minZ: number; maxX: number; maxY: number; maxZ: number; start: number; count: number; original: SubMesh; }
-interface Positions { data: NonNullable<ReturnType<VertexBuffer['getData']>>; read(index: number, target: Vector3): boolean; }
-interface Entry { positions: Positions; indices: IndicesArray; parts: Part[]; signature: string; positionBuffer: VertexBuffer; indexBuffer: unknown; }
+interface Part { native: SubMesh; bounds: BoundingInfo; start: number; count: number; }
+interface Entry { positions: Vector3[]; indices: IndicesArray; parts: Part[]; signature: string; transient: boolean; positionBuffer: unknown; indexBuffer: unknown; }
 interface CameraVolume { position: Vector3; right: Vector3; up: Vector3; backward: Vector3; horizontal: number; vertical: number; depth: number; }
 
 /** Bounded presentation picking acceleration; original geometry, render submeshes and materials stay intact. */
@@ -15,8 +12,6 @@ export class CameraMeshQueries {
   private readonly inverse = Matrix.Identity();
   private readonly point = Vector3.Zero();
   private readonly vertices = [Vector3.Zero(), Vector3.Zero(), Vector3.Zero()];
-  private readonly minimum = Vector3.Zero();
-  private readonly maximum = Vector3.Zero();
 
   constructor(scene: Scene) { scene.onDisposeObservable.addOnce(() => this.clear()); }
 
@@ -25,30 +20,29 @@ export class CameraMeshQueries {
   }
 
   closest(ray: Ray, mesh: AbstractMesh): number | null {
+    // Damageable geometry changes its existing native point-cache array in place. Native picking
+    // must read the current data; pointer equality is sufficient only for immutable tile geometry.
+    if (this.mutable(mesh)) {
+      const old = this.entries.get(mesh); if (old) this.remove(mesh, old);
+      const hit = ray.intersectsMesh(mesh, false); return hit?.hit ? hit.distance : null;
+    }
     const entry = this.entry(mesh);
     if (!entry || mesh.hasThinInstances) {
       const hit = ray.intersectsMesh(mesh, false);
       return hit?.hit ? hit.distance : null;
     }
     mesh.getWorldMatrix().invertToRef(this.inverse); Ray.TransformToRef(ray, this.inverse, this.localRay);
-    const bounds = mesh.getBoundingInfo();
-    if (!this.localRay.intersectsSphere(bounds.boundingSphere) || !this.localRay.intersectsBox(bounds.boundingBox)) return null;
     let closest: number | null = null;
     for (const part of entry.parts) {
-      if (mesh.subMeshes.length > 1 && !part.original.canIntersects(this.localRay)) continue;
-      this.minimum.set(part.minX, part.minY, part.minZ); this.maximum.set(part.maxX, part.maxY, part.maxZ);
-      if (!this.localRay.intersectsBoxMinMax(this.minimum, this.maximum)) continue;
-      for (let index = part.start; index < part.start + part.count; index += 3) {
-        if (!this.triangle(entry, index)) continue;
-        // Use pinned Babylon's two-sided triangle/epsilon/finite-ray implementation, with three scratch vertices.
-        const hit = this.localRay.intersectsTriangle(this.vertices[0], this.vertices[1], this.vertices[2]);
-        if (hit && (closest === null || hit.distance < closest)) closest = hit.distance;
-      }
+      if (!this.localRay.intersectsBox(part.bounds.boundingBox)) continue;
+      const hit = part.native.intersects(this.localRay, entry.positions, entry.indices, false);
+      if (!hit || hit.distance < 0 || hit.distance > this.localRay.length) continue;
+      this.localRay.direction.scaleToRef(hit.distance, this.point); this.point.addInPlace(this.localRay.origin);
+      Vector3.TransformCoordinatesToRef(this.point, mesh.getWorldMatrix(), this.point);
+      const distance = Vector3.Distance(ray.origin, this.point);
+      if (closest === null || distance < closest) closest = distance;
     }
-    if (closest === null) return null;
-    this.localRay.direction.scaleToRef(closest, this.point); this.point.addInPlace(this.localRay.origin);
-    Vector3.TransformCoordinatesToRef(this.point, mesh.getWorldMatrix(), this.point);
-    return Vector3.Distance(ray.origin, this.point);
+    return closest;
   }
 
   /** Exact triangle/OBB separating-axis test, including tiny geometry between the boom rays. */
@@ -70,18 +64,23 @@ export class CameraMeshQueries {
           min.minimizeInPlace(this.point); max.maximizeInPlace(this.point);
         }
         for (const part of entry.parts) {
-          if (part.maxX < min.x || part.minX > max.x || part.maxY < min.y || part.minY > max.y || part.maxZ < min.z || part.minZ > max.z) continue;
+          const box = part.bounds.boundingBox;
+          if (box.maximum.x < min.x || box.minimum.x > max.x || box.maximum.y < min.y || box.minimum.y > max.y || box.maximum.z < min.z || box.minimum.z > max.z) continue;
           for (let index = part.start; index < part.start + part.count; index += 3) {
-            if (!this.triangle(entry, index)) continue;
+            let valid = true;
             for (let n = 0; n < 3; n++) {
-              Vector3.TransformCoordinatesToRef(this.vertices[n], world, this.point); this.point.subtractInPlace(volume.position);
+              const vertex = entry.positions[entry.indices.length ? entry.indices[index + n] : index + n];
+              if (!vertex || !Number.isFinite(vertex.x + vertex.y + vertex.z)) { valid = false; break; }
+              Vector3.TransformCoordinatesToRef(vertex, world, this.point); this.point.subtractInPlace(volume.position);
               this.vertices[n].set(Vector3.Dot(this.point, volume.right), Vector3.Dot(this.point, volume.up), Vector3.Dot(this.point, volume.backward));
             }
+            if (!valid) continue;
             const correction = triangleBoxCorrection(this.vertices, half);
             if (correction && (!best || Math.abs(correction.distance) > Math.abs(best.distance))) best = correction;
           }
         }
       }
+      if (entry.transient) this.release(entry);
     }
     if (!best) return null;
     // Axial escape always moves toward the subject; lateral/up corrections use the shortest separation.
@@ -93,21 +92,16 @@ export class CameraMeshQueries {
 
   private entry(mesh: AbstractMesh): Entry | null {
     const rendering = mesh instanceof Mesh ? mesh : mesh instanceof InstancedMesh ? mesh.sourceMesh : null;
-    if (!rendering || mesh.skeleton || mesh.morphTargetManager) return null;
-    const positionBuffer = mesh.getVertexBuffer(VertexBuffer.PositionKind), data = positionBuffer?.getData();
-    if (!positionBuffer || !data || positionBuffer.getSize() !== 3) return null;
-    const indices = mesh.getIndices() ?? [];
-    if (!indices.length && !rendering.isUnIndexed) return null;
+    if (!rendering || mesh.skeleton || mesh.morphTargetManager || !mesh._generatePointsArray() || !mesh._positions) return null;
+    const indices = mesh.getIndices() ?? [], positions = mesh._positions;
     const transient = this.mutable(mesh);
-    const indexBuffer = rendering.geometry?.getIndexBuffer() ?? null;
-    const signature = mesh.subMeshes.map(part => `${part.materialIndex}:${part.getMaterial()?.fillMode}:${part.indexStart}:${part.indexCount}:${part.verticesStart}:${part.verticesCount}`).join('|');
+    const positionBuffer = mesh.getVertexBuffer('position'), indexBuffer = rendering.geometry?.getIndexBuffer() ?? null;
+    const signature = mesh.subMeshes.map(part => `${part.materialIndex}:${part.indexStart}:${part.indexCount}:${part.verticesStart}:${part.verticesCount}`).join('|');
     const cached = this.entries.get(mesh);
-    if (!transient && cached && cached.positions.data === data && cached.indices === indices && cached.signature === signature && cached.positionBuffer === positionBuffer && cached.indexBuffer === indexBuffer) {
+    if (!transient && cached && cached.positions === positions && cached.indices === indices && cached.signature === signature && cached.positionBuffer === positionBuffer && cached.indexBuffer === indexBuffer) {
       this.entries.delete(mesh); this.entries.set(mesh, cached); return cached;
     }
     if (cached) this.remove(mesh, cached);
-    const positions = positionReader(positionBuffer, data, mesh.getTotalVertices());
-    if (!positions) return null;
     const parts: Part[] = [];
     for (const original of mesh.subMeshes) {
       const material = original.getMaterial();
@@ -117,19 +111,21 @@ export class CameraMeshQueries {
       if (from % 3 || count % 3) return null;
       for (let start = from; start < from + count; start += 1536) {
         const length = Math.min(1536, from + count - start);
-        const part: Part = { minX: Infinity, minY: Infinity, minZ: Infinity, maxX: -Infinity, maxY: -Infinity, maxZ: -Infinity, start, count: length, original };
+        let min = new Vector3(Infinity, Infinity, Infinity), max = new Vector3(-Infinity, -Infinity, -Infinity);
         for (let i = start; i < start + length; i++) {
-          if (!positions.read(indices.length ? indices[i] : i, this.point)) continue;
-          part.minX = Math.min(part.minX, this.point.x); part.minY = Math.min(part.minY, this.point.y); part.minZ = Math.min(part.minZ, this.point.z);
-          part.maxX = Math.max(part.maxX, this.point.x); part.maxY = Math.max(part.maxY, this.point.y); part.maxZ = Math.max(part.maxZ, this.point.z);
+          const vertex = positions[indices.length ? indices[i] : i];
+          if (!vertex) continue;
+          min.minimizeInPlace(vertex); max.maximizeInPlace(vertex);
         }
-        parts.push(part);
+        const bounds = new BoundingInfo(min, max);
+        const native = new SubMesh(original.materialIndex, indices.length ? 0 : start, indices.length ? positions.length : length, indices.length ? start : 0, indices.length ? length : 0, mesh, rendering, false, false);
+        native.setBoundingInfo(bounds); parts.push({ native, bounds, start, count: length });
       }
     }
-    const entry = { positions, indices, parts, signature, positionBuffer, indexBuffer };
+    const entry = { positions, indices, parts, signature, transient, positionBuffer, indexBuffer };
     if (transient) return entry;
     this.entries.set(mesh, entry); this.partCount += parts.length;
-    // Scalar bounds/index ranges only: at most 128 meshes and 8192 parts. No source buffer copy or native point generation.
+    // Bounds/index ranges only: at most 128 meshes and 8192 native query partitions. No source buffer copy.
     while (this.entries.size > 128 || this.partCount > 8192) {
       const oldest = this.entries.entries().next().value as [AbstractMesh, Entry] | undefined;
       if (!oldest) break; this.remove(...oldest);
@@ -138,11 +134,10 @@ export class CameraMeshQueries {
   }
 
   private remove(mesh: AbstractMesh, entry: Entry) {
+    // SubMesh.dispose() blindly splices index -1 for detached partitions in pinned Babylon 9.25.0.
+    // They never allocate index buffers; release their empty draw caches without touching render subMeshes.
+    this.release(entry);
     this.entries.delete(mesh); this.partCount -= entry.parts.length;
-  }
-  private triangle(entry: Entry, index: number): boolean {
-    for (let n = 0; n < 3; n++) if (!entry.positions.read(entry.indices.length ? entry.indices[index + n] : index + n, this.vertices[n])) return false;
-    return true;
   }
   private mutable(mesh: AbstractMesh): boolean {
     const source = mesh instanceof InstancedMesh ? mesh.sourceMesh : mesh instanceof Mesh ? mesh : null;
@@ -150,53 +145,8 @@ export class CameraMeshQueries {
     const indexUpdatable = (source?.geometry as unknown as { _indexBufferIsUpdatable?: boolean } | null)?._indexBufferIsUpdatable === true;
     return mesh.getVertexBuffer('position')?.isUpdatable() === true || indexUpdatable;
   }
+  private release(entry: Entry) { for (const part of entry.parts) part.native.resetDrawCache(undefined, true); }
   private clear() { for (const [mesh, entry] of this.entries) this.remove(mesh, entry); }
-}
-
-/** Read existing CPU storage without copying/deinterleaving it or populating Geometry's Vector3 cache. */
-function positionReader(buffer: VertexBuffer, data: Positions['data'], count: number): Positions | null {
-  const { byteOffset, byteStride, type, normalized } = buffer;
-  let bytes: number;
-  try { bytes = GetTypeByteLength(type); } catch { return null; }
-  if (byteStride < bytes * 3 || byteOffset < 0 || !Number.isInteger(count) || count < 0) return null;
-  const floats = Array.isArray(data) ? data : data instanceof Float32Array && type === VertexBuffer.FLOAT && byteOffset % 4 === 0 && byteStride % 4 === 0 ? data : null;
-  if (floats) {
-    const offset = byteOffset / 4, stride = byteStride / 4;
-    if (count && offset + (count - 1) * stride + 3 > floats.length) return null;
-    const rounded = Array.isArray(data) && (type !== VertexBuffer.FLOAT || byteStride !== 12);
-    return { data, read(index, target) {
-      if (!Number.isInteger(index) || index < 0 || index >= count) return false;
-      const start = offset + index * stride, x = floats[start], y = floats[start + 1], z = floats[start + 2];
-      target.set(rounded ? Math.fround(x) : x, rounded ? Math.fround(y) : y, rounded ? Math.fround(z) : z);
-      return Number.isFinite(x + y + z);
-    } };
-  }
-  if (Array.isArray(data)) return null;
-  const view = ArrayBuffer.isView(data) ? new DataView(data.buffer, data.byteOffset, data.byteLength) : new DataView(data);
-  const rounded = type !== VertexBuffer.FLOAT || byteStride !== 12;
-  const component = (offset: number): number => {
-    let value: number;
-    switch (type) {
-      case VertexBuffer.BYTE: value = view!.getInt8(offset); if (normalized) value = Math.max(value / 127, -1); break;
-      case VertexBuffer.UNSIGNED_BYTE: value = view!.getUint8(offset); if (normalized) value /= 255; break;
-      case VertexBuffer.SHORT: value = view!.getInt16(offset, true); if (normalized) value = Math.max(value / 32767, -1); break;
-      case VertexBuffer.UNSIGNED_SHORT: value = view!.getUint16(offset, true); if (normalized) value /= 65535; break;
-      case VertexBuffer.INT: value = view!.getInt32(offset, true); break;
-      case VertexBuffer.UNSIGNED_INT: value = view!.getUint32(offset, true); break;
-      case VertexBuffer.HALF_FLOAT: value = FromHalfFloat(view!.getUint16(offset, true)); break;
-      default: value = view!.getFloat32(offset, true); break;
-    }
-    // Match native getFloatData's Float32Array conversion for interleaved/quantized storage.
-    return rounded ? Math.fround(value) : value;
-  };
-  const byteLength = view.byteLength;
-  if (count && byteOffset + (count - 1) * byteStride + bytes * 3 > byteLength) return null;
-  return { data, read(index, target) {
-    if (!Number.isInteger(index) || index < 0 || index >= count) return false;
-    const offset = byteOffset + index * byteStride;
-    target.set(component(offset), component(offset + bytes), component(offset + bytes * 2));
-    return Number.isFinite(target.x + target.y + target.z);
-  } };
 }
 
 function triangleBoxCorrection(vertices: readonly Vector3[], half: Vector3): { axis: Vector3; distance: number; forward: number } | null {

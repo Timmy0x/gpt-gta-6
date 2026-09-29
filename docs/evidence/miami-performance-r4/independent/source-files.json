@@ -1,0 +1,30 @@
+{
+  "scope": "Read-only independent frozen R4 review; synthetic native fixtures only",
+  "files": [
+    {
+      "path": ".local-builds/miami-performance-r4-review/camera-semantics.test.ts",
+      "sha256": "afc3a6e6b7d124ce5d40e6b0ec14d539859077dba39ad5b4245120ebd2a43abd",
+      "bytes": 13630
+    },
+    {
+      "path": ".local-builds/miami-performance-r4-review/tile-view-lifecycle.test.ts",
+      "sha256": "81eee40acf77d8583d003c331523235651211a41ef0ded6d9c11417ed7b0f89e",
+      "bytes": 9107
+    },
+    {
+      "path": ".local-builds/miami-performance-r4-review/dense-resolver-profile.ts",
+      "sha256": "7c6cff4ec824bdc59fcbfd5975e8896234cdfbb374db1ae75c6f773c901ddab2",
+      "bytes": 2884
+    },
+    {
+      "path": ".local-builds/miami-performance-r4-review/dense-resolver-profile.json",
+      "sha256": "2235a759c74848dbe400ac99df62e9333a2fc790181e00300ecd47ad345f190f",
+      "bytes": 1970
+    },
+    {
+      "path": ".local-builds/miami-performance-r4-review/README.md",
+      "sha256": "1a1b8dc805c92cdc17c75617d9df86c26ec7f1e4ed5f77f0d42946ea27d45823",
+      "bytes": 4070
+    }
+  ]
+}

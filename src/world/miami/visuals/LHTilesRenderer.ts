@@ -14,6 +14,15 @@ import { scopePlugin, type Attribution } from './PluginLifetime';
 
 export type LHRendererOptions = {tileToLocal:Matrix;origin?:never} | {origin:EllipsoidOrigin;tileToLocal?:never};
 export interface TileView { inView: boolean; error: number; distanceFromCamera: number; }
+interface ViewSnapshot {
+  width: number;
+  height: number;
+  projectionX: number;
+  projectionY: number;
+  orthographic: boolean;
+  planes: ReturnType<typeof Frustum.GetPlanes>;
+  position: Vector3;
+}
 interface TileBounds {
   obb: { points: Vector3[] } | null;
   sphere: { centerWorld: Vector3; radiusWorld: number } | null;
@@ -59,6 +68,8 @@ export class LHTilesRenderer extends TilesRenderer {
   private rootRequest: AbortController | null = null;
   private rootGeneration = 0;
   private rootErrorGeneration = -1;
+  private updateInProgress = false;
+  private viewSnapshot: ViewSnapshot | null = null;
   constructor(url: string, scene: Scene, options: LHRendererOptions) {
     if (scene.useRightHandedSystem) throw new Error('LHTilesRenderer requires an existing left-handed scene.');
     if(options.tileToLocal)rigid(options.tileToLocal, -1, 'tileToLocal');
@@ -150,7 +161,7 @@ export class LHTilesRenderer extends TilesRenderer {
       container?.dispose(); wrapper?.dispose(); throw error;
     }
   }
-  calculateTileViewError(tile: Tile, target: TileView) {
+  private captureView(): ViewSnapshot {
     const camera = this.localScene.activeCamera!;
     const engine = this.localScene.getEngine();
     // Screen-space error is in actual framebuffer pixels, not logical CSS pixels.
@@ -160,15 +171,30 @@ export class LHTilesRenderer extends TilesRenderer {
     const inverseGroup = this.group.computeWorldMatrix(true).clone().invert();
     const planes = Frustum.GetPlanes(camera.getViewMatrix(true).multiply(camera.getProjectionMatrix())).map(plane => plane.transform(inverseGroup));
     const position = Vector3.TransformCoordinates(camera.globalPosition, inverseGroup);
+    return { width, height, projectionX: Math.abs(projection[0]), projectionY: Math.abs(projection[5]), orthographic: projection[15] === 1, planes, position };
+  }
+  // Pinned 0.5.2 calls this after update-before listeners and immediately before traversal.
+  // The game calls update after Player.render has finished positioning its existing camera.
+  prepareForTraversal() {
+    if (!this.updateInProgress) return;
+    if (this.localScene.useRightHandedSystem) throw new Error('Scene handedness changed while the LH adapter was active.');
+    if (!this.localScene.activeCamera) throw new Error('The LH adapter requires an active local camera.');
+    rigid(this.group.computeWorldMatrix(true), this.frame?1:-1, 'Tile group world transform');
+    this.viewSnapshot = this.captureView();
+  }
+  calculateTileViewError(tile: Tile, target: TileView) {
+    // Standalone calls and event callbacks must see current state, never a previous update's view.
+    const view = this.viewSnapshot ?? this.captureView();
     const bounds = (tile as LHTile).engineData.boundingVolume;
-    const distance = bounds.distanceToPoint(position);
+    const distance = bounds.distanceToPoint(view.position);
     const geometricError=tile.geometricError*(tile as LHTile).engineData.errorScale;
-    target.inView = bounds.intersectsFrustum(planes);
+    target.inView = bounds.intersectsFrustum(view.planes);
     target.distanceFromCamera = distance;
-    if (projection[15] === 1) {
-      target.error = geometricError / Math.max(2 / Math.abs(projection[0]) / width, 2 / Math.abs(projection[5]) / height);
+    if (view.orthographic) {
+      target.error = geometricError / Math.max(2 / view.projectionX / view.width, 2 / view.projectionY / view.height);
     } else {
-      target.error = distance === 0 ? Infinity : geometricError * height * Math.abs(projection[5]) / (2 * distance);
+      // Keep the original arithmetic order so finite errors remain bit-for-bit identical.
+      target.error = distance === 0 ? Infinity : geometricError * view.height * view.projectionY / (2 * distance);
     }
   }
   private beginRootRequest() {
@@ -205,13 +231,16 @@ export class LHTilesRenderer extends TilesRenderer {
   }
   update() {
     if (this.closed) return;
+    this.viewSnapshot = null;
     if (this.localScene.useRightHandedSystem) throw new Error('Scene handedness changed while the LH adapter was active.');
     if (!this.localScene.activeCamera) throw new Error('The LH adapter requires an active local camera.');
     rigid(this.group.computeWorldMatrix(true), this.frame?1:-1, 'Tile group world transform');
     this.localScene.activeCamera.getViewMatrix(true);
     this.localScene.activeCamera.getProjectionMatrix();
     if ((this as unknown as RootState).rootLoadingState === ROOT.unloaded) this.beginRootRequest();
-    super.update();
+    this.updateInProgress = true;
+    try { super.update(); }
+    finally { this.updateInProgress = false; this.viewSnapshot = null; }
   }
   disposeTile(tile: LHTile) {
     const wrapper = tile.engineData.scene;
@@ -238,6 +267,9 @@ export class LHTilesRenderer extends TilesRenderer {
   }
   dispatchEvent(event:{type:string;[key:string]:unknown}){
     if(this.disposalComplete)return;
+    // A listener can move or replace the camera/group. Remaining calls then calculate fresh.
+    // This also clears the cache before update-after, including a plugin-skipped update.
+    this.viewSnapshot = null;
     if(event.type==='load-error'&&event.tile===null&&(this as unknown as RootState).rootLoadingState===ROOT.loading)this.rootErrorGeneration=this.rootGeneration;
     super.dispatchEvent(event);
   }

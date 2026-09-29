@@ -598,8 +598,8 @@ async function boot() {
       if (!await prepareVehicleModels([kind])) return;
       const p = findGroundVehicleSpawn({scene,kind,origin:player.position,heading:player.yaw,obstacles:world.obstacles,vehicles:vehicles.list});
       if(!p){ui.toast("No clear vehicle space nearby.");return;}
-      vehicles.spawn(kind,p,player.yaw);
-      ui.toast(`${VEHICLE_TUNING[kind].label} spawned.`);
+      const spawned = vehicles.spawn(kind,p,player.yaw);
+      ui.toast(`${spawned.tuning.label} spawned.`);
       return;
     }
     if (action === "repair") {

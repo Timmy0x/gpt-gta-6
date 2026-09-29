@@ -1,0 +1,97 @@
+{
+  "baseCommit": "b0bb9b71c920a3fd855e03189d1a9999cb9519c2",
+  "tests": {
+    "native": 393,
+    "pass": 393,
+    "fail": 0,
+    "productionBuild": "PASS",
+    "independentCameraPass": 10,
+    "independentTilePass": 3,
+    "cameraSuite": 27,
+    "tileAndStreamingSuite": 13,
+    "licensedCoupeIntegration": 2
+  },
+  "build": {
+    "entry": "/assets/index-BFXrjmqk.js",
+    "sha256": "5d9f35ebb63ff482166a9b364bcdb51a303d5b3d76b4620069ff6c9f7442480d"
+  },
+  "scope": "Presentation query storage, repeated tile view math and actual spawned-vehicle name. No new map geometry or quality threshold change.",
+  "normalUI": {
+    "status": "Verified fresh launch, memory-only source reconnection, free roam, map travel, movement, named coupe spawn, entry/drive, impact condition89% then80%, witness/one-star/search/cooldown, stopped exit and readable report.",
+    "browser": "Codex in-app browser / Chrome154",
+    "backend": "WebGL2",
+    "quality": "high",
+    "viewport": [
+      793,
+      1344
+    ],
+    "capturedAt": "2026-09-29T19:25:32.468Z",
+    "limits": [
+      "SW5THST source surfaces enclosed the actor/camera immediately after travel; movement cleared part of the view, but source/water mismatch remained.",
+      "Player is still Jason; no full animation, all-region or visual-fidelity acceptance.",
+      "No provider imagery/geometry was exported. Browser captures were displayed inline; no filesystem screenshot path was provided.",
+      "Standalone report download remains unverified; DOM JSON is parseable."
+    ]
+  },
+  "performanceAcceptance": "Not established. Synthetic CPU/heap profiles cannot establish live FPS or total memory; 1080p 30-minute traversal and pursuit gate remains unmet.",
+  "fidelity": "Whole-Miami geographic/surface/terrain parity incomplete; source actor enclosures, photographed static cars and coarse street surfaces remain visible.",
+  "observedLiveSample": {
+    "hardware": {
+      "cpu": "Apple M5 Pro",
+      "logicalProcessors": 15,
+      "ramBytes": 25769803776
+    },
+    "browser": "Chrome154 in-app browser",
+    "backend": "WebGL2",
+    "quality": "high",
+    "resolution": [
+      793,
+      1344
+    ],
+    "activeDurationMs": 252468.39999997616,
+    "frames": 6127,
+    "medianFrameMs": 22.799999982118607,
+    "medianFps": 43.8596491572049,
+    "onePercentLowFps": 1.4122652963139517,
+    "maxFrameMs": 1855,
+    "framesOver33ms": 1702,
+    "framesOver100ms": 409,
+    "jsHeapBytes": {
+      "used": 671783436,
+      "total": 820039324,
+      "limit": 4395630592
+    },
+    "scene": {
+      "meshes": 2247,
+      "activeMeshes": 474,
+      "physicsBodies": 139
+    },
+    "population": {
+      "pedestrians": 38,
+      "drivers": 13,
+      "activeFootPolice": 1
+    },
+    "collision": {
+      "ready": true,
+      "residentChunks": 17,
+      "residentColliders": 96,
+      "activeAnchors": 37,
+      "cpuGeometryBytes": 100370820,
+      "sourceBufferBudgetBytes": 100663296,
+      "failedPackages": 0
+    },
+    "visual": {
+      "visibleTiles": 198,
+      "residentTiles": 520,
+      "hiddenResidentTiles": 322,
+      "cacheEntries": 710,
+      "knownSubtotalBytes": 603557556,
+      "unknownResources": 739,
+      "renderErrors": 0,
+      "rootErrors": 0,
+      "tileErrors": 0,
+      "queuesIdle": true
+    },
+    "scope": "Most recent unpaused raw frames; menu/travel/vehicle-loading pauses excluded, unpaused holds/stalls retained. Approximately4.2active minutes, not1080p/30minutes. Different activities/actors/loading than R3 sample, no matched A/B FPS conclusion. Scene/resource/JS heap values are export-time partial snapshots, not whole-process/VRAM memory. Project60median/30low targets remain unmet."
+  }
+}

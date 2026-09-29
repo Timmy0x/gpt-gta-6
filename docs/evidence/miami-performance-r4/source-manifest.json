@@ -1,0 +1,366 @@
+{
+  "baseCommit": "b0bb9b71c920a3fd855e03189d1a9999cb9519c2",
+  "candidate": "miami-performance-r4-source",
+  "files": [
+    {
+      "path": "docs/continuation.md",
+      "blob": "9e65167d4d36278328164401575aad63d0fa85dc",
+      "sha256": "1449af4466d68f2c3753a7a033f61c89fc485ab1060b97716c69be198158285c",
+      "bytes": 72269,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "docs/evidence/miami-gameplay-r3/deployment.json",
+      "blob": "95e24ca5846105b9bb5895d01dbf0ed0988ff8df",
+      "sha256": "796a33b40ae5b2e050783ec1c807ee037743e8f5ac3123f64922a3442ef80769",
+      "bytes": 416,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/README.md",
+      "blob": "7b89bb40aa6fe2d804e2cbfedaab78e7b7e7bd2b",
+      "sha256": "6a387006c1deb4b5452888b686743ec21d693eb197162d357e92852ad47da97b",
+      "bytes": 2095,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera-handoff.json",
+      "blob": "4c0e5350c6255ede2a8393315109bf66611a208d",
+      "sha256": "486232cb7f7d4533e24b01a7eb05fbc7279abf2168253f1a435c47d7be135375",
+      "bytes": 2021,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/README.md",
+      "blob": "08f7a9dbdd1437de332b0a249a7185d21b18660e",
+      "sha256": "4fb89da0092711a2abc3ebaa4507af43f86be5180c3fef8df0eb39e310971b71",
+      "bytes": 4585,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/before-CameraMeshQueries.ts",
+      "blob": "2f395f4c0a736e9bbc6e71a839869b4f887dad67",
+      "sha256": "2be8412682eafb34cb86d931da01ca7ef04d33cef48061b16866dffcfc57f9e2",
+      "bytes": 11436,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/broad-floor-after.json",
+      "blob": "1823d37f6c86a77fc60e6b16618ee9dcc4096d97",
+      "sha256": "85f8e590170682fcce37be4e5c8f2e4e3ee4ac404469eae6e90a44a13149a478",
+      "bytes": 751,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/broad-floor-before.json",
+      "blob": "4f09ea7eaf996d89758a428eed3a52358104f1db",
+      "sha256": "ae8c47c0146a17ded64279817e378e92a2d2f24e18e384b9aa171255d8c7d8e2",
+      "bytes": 751,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/floor-after-parallel-context.json",
+      "blob": "1823d37f6c86a77fc60e6b16618ee9dcc4096d97",
+      "sha256": "85f8e590170682fcce37be4e5c8f2e4e3ee4ac404469eae6e90a44a13149a478",
+      "bytes": 751,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/floor-before-parallel-context.json",
+      "blob": "4f09ea7eaf996d89758a428eed3a52358104f1db",
+      "sha256": "ae8c47c0146a17ded64279817e378e92a2d2f24e18e384b9aa171255d8c7d8e2",
+      "bytes": 751,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/native-tests.txt",
+      "blob": "31a02cbed6cf6ca89511a880e812b9649f377a2c",
+      "sha256": "f2e5d84dc11bb114d2ad53e876dcf29c55dab2fd58fea3de9c5a7fdfa5789f0c",
+      "bytes": 8060,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/typecheck.txt",
+      "blob": "e8072c22bfdcfefd01c631b3ad1d9ec19046a4ff",
+      "sha256": "d39cc4fb21390899b438cc62ab86252a58aa26826e70a01da7fffc08e33da522",
+      "bytes": 53,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/camera/typed-comparison.json",
+      "blob": "13b0930c8e5ab323aa68eff48b3842e46f28c20a",
+      "sha256": "8a7a650120078943ae125a805819eba642c470987e296c1f7b648cd9c3f067f7",
+      "bytes": 3019,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/fidelity-followup/findings.md",
+      "blob": "ca055c82dcb1dafebeec3fdb8a6069f9854fafd3",
+      "sha256": "35992eb680e588e432203e0ca1c40d39b62da0fb065048a4ffa9f09de81cac99",
+      "bytes": 7581,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/fidelity-followup/review.json",
+      "blob": "c53e9418cc36cd32a160a4e0b2223f13b45f446b",
+      "sha256": "5ef73d07b6b07f22f320a99658f7a004fa045482335972caae51bf4e4881552b",
+      "bytes": 1528,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/README.md",
+      "blob": "cf55cff57f4cffb4f0626a481addd8a5342f61ab",
+      "sha256": "1a1b8dc805c92cdc17c75617d9df86c26ec7f1e4ed5f77f0d42946ea27d45823",
+      "bytes": 4070,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/camera-native.txt",
+      "blob": "0477bb94a3b38a12455b1d43ca07d8cb60cc6c69",
+      "sha256": "ccef8c52f68f117d1ecfe0b734132c0ddc924546f53cf87c2c5034824fd602d8",
+      "bytes": 6519,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/camera-semantics.test.ts",
+      "blob": "0094ecb61b62f9bb8493059071c5f4e4349186bb",
+      "sha256": "afc3a6e6b7d124ce5d40e6b0ec14d539859077dba39ad5b4245120ebd2a43abd",
+      "bytes": 13630,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/dense-resolver-profile.json",
+      "blob": "2e0fb1316c0e25858092a331b3369a2142200110",
+      "sha256": "2235a759c74848dbe400ac99df62e9333a2fc790181e00300ecd47ad345f190f",
+      "bytes": 1970,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/dense-resolver-profile.ts",
+      "blob": "05e0fa1122785220e3a3cf5c569f80d85759ea55",
+      "sha256": "7c6cff4ec824bdc59fcbfd5975e8896234cdfbb374db1ae75c6f773c901ddab2",
+      "bytes": 2884,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/resolver-native.txt",
+      "blob": "77a2e574505776cf5439a4a4b707f478bb013a77",
+      "sha256": "e4d98a80a9b37e3d4fdcd1e74257f949f745864eeb0caac487ec4682fa3c3292",
+      "bytes": 1602,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/source-files.json",
+      "blob": "556a8a3b83873ff6f3f4e816a54be6b1d38e9c77",
+      "sha256": "8ea291ef5015f9eaa7510d2c536f4b2330516074dddf403813ce3b4e5cf30653",
+      "bytes": 1103,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/tile-native.txt",
+      "blob": "83471e52500ec9075d9a4e6980d59585bbb2467b",
+      "sha256": "fb110f5fa26572deb73a5f42392ee1dd937a64564b728226f51b2c1d9bf783d3",
+      "bytes": 1645,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/independent/tile-view-lifecycle.test.ts",
+      "blob": "91142dcac4e49f71d53b1b6841512dd6bcf97ea2",
+      "sha256": "81eee40acf77d8583d003c331523235651211a41ef0ded6d9c11417ed7b0f89e",
+      "bytes": 9107,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/licensed-coupe-exit-native.txt",
+      "blob": "aa11c1f4d26001bc021212b2d062a3fecf081332",
+      "sha256": "7709b99a917408ab2ccd96736964ded6f365210186adc783bd5dd1cf26bf25ba",
+      "bytes": 666,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/native-tests.txt",
+      "blob": "542f79799edda5271dc7efcbb904f0362f0843de",
+      "sha256": "cb61939e92a9a4a92a04dc670699dcf649dda953b071bf39b53f60165fe4c4e4",
+      "bytes": 164673,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/normal-controls-r3.md",
+      "blob": "58070da8af3957216309bf66e65118f73eade8db",
+      "sha256": "9e9cae7ea34f848fa204ee86178184996ba465e3c474fdfd18a282fe4e4d4121",
+      "bytes": 1806,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/production-build.txt",
+      "blob": "1a6975a2f158b6f4fdb5b1a068c85371d1a89e64",
+      "sha256": "5757e38fdf740e607e4837358e1a81c0b5a44172270ed71cf9e79ef962dff4ed",
+      "bytes": 26880,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/tile-view/README.md",
+      "blob": "41e42fa887a106230950aeb36b6261fd52e0065a",
+      "sha256": "423aac9900dcf908ca2771fb132c49f7d255fe1d73521a3fee49ca0cbef96dcf",
+      "bytes": 4523,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/tile-view/native-tests.log",
+      "blob": "2413ac719637b682fa284d6a202d0f24a6609773",
+      "sha256": "0c66f4e7c22abec708ac4a5e9caef007b6d9192af67d8b2b62682f8a0f6bfed0",
+      "bytes": 7107,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/tile-view/profile.json",
+      "blob": "21f9ce03d6af0a4f17637da5d381dab6b970efb7",
+      "sha256": "7cf6526f64713a31fea488b3a0c0a71c4bb663641befc78ebd145c1e8183c8d7",
+      "bytes": 1631,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/tile-view/profile.ts",
+      "blob": "04080c173b81ed622ba29d2ce3f4400670fe3dfd",
+      "sha256": "216b66b5b42f22ef7021c009718446cca6ec8464ecf57b46a69136926fbb66db",
+      "bytes": 4130,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/tile-view/source-files.json",
+      "blob": "4e884ad1fd426955f5e6e1119f07f36a7de09690",
+      "sha256": "1f3752ce08ca9ff5036f48a0f0762d5560df5361a626ae3f9a1d7a1dd7718b05",
+      "bytes": 1181,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/tile-view/typecheck.log",
+      "blob": "e8072c22bfdcfefd01c631b3ad1d9ec19046a4ff",
+      "sha256": "d39cc4fb21390899b438cc62ab86252a58aa26826e70a01da7fffc08e33da522",
+      "bytes": 53,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/evidence/miami-performance-r4/verification.json",
+      "blob": "a961e389ce7151ba5b4f0fd067ff9a04ec1c93aa",
+      "sha256": "9cc99671fe3f7d87179a7e8e13482518cd789077cb2478d88dbaecb36c6c7ead",
+      "bytes": 3681,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "docs/miami/performance-r4.md",
+      "blob": "32428901b860b206dbf6fac06016dcdbd55b33de",
+      "sha256": "05f2d74ced8630bd4a6ade2b8640f9ddd4f2f94314ebd9c80be9759e6331eb70",
+      "bytes": 2451,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "src/core/CameraMeshQueries.ts",
+      "blob": "c90991e94aa681b44c03f6f116de11585f880b9b",
+      "sha256": "a1e9713dc6fd21a76f0ff5925040d634ecdef3a938ec7fc3f5a12fdc1fa4f3eb",
+      "bytes": 14804,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/main.ts",
+      "blob": "28609a0fc74076a07ef0341e500e3cceeeaeb41a",
+      "sha256": "aabafad9a483f28dc906f25e1e49db061b1db5ec172be1ac1c8b84613f3564da",
+      "bytes": 50506,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "src/world/miami/visuals/LHTilesRenderer.ts",
+      "blob": "fb43eed9463b6696a11e626192443595c1a1895a",
+      "sha256": "6ffeed370305f1ab486a10e5ff39ebcc1856765a92071d7f088af7ed0aeb2cab",
+      "bytes": 17270,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/camera-occlusion.test.ts",
+      "blob": "e5791056fd5068ad2776c7a88ec688a777b5bf3d",
+      "sha256": "5998ae094de8ae7ff864c6f217e7651c7efc0d21204f2bc90b125b7e879021f0",
+      "bytes": 17539,
+      "mode": "100644",
+      "status": "modified"
+    },
+    {
+      "path": "tests/camera-typed-queries-profile.ts",
+      "blob": "7685d1c63b39216f093da2264c15603288776762",
+      "sha256": "fb8ac5d6025a43dba50b4d131a5df7ddf9656c72b87a856f8d0ce07c60351cd1",
+      "bytes": 3796,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/camera-typed-queries.test.ts",
+      "blob": "31986f0a139ba40355cee5963f74390f7668897b",
+      "sha256": "23043ae333f511a14904ced427920c79fa309b3cc58c2689fc6a71f025d5b8f1",
+      "bytes": 5352,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/fixtures/miami-tile-view.ts",
+      "blob": "0b13034b965228270dc3c724e411931503cbe834",
+      "sha256": "9886da328f75df9d12f25311949c3dcf906104735d577f297ddbedec29015dfc",
+      "bytes": 4836,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/miami-tile-view.test.ts",
+      "blob": "e2a355f3668a9d5808eb02277b8d333beabcb085",
+      "sha256": "1f13d96a4b34a8a8451a8918a73fcc2a6152e5510d30c984252dc81f1336712e",
+      "bytes": 8008,
+      "mode": "100644",
+      "status": "added"
+    },
+    {
+      "path": "tests/vehicle-exit-clearance.test.ts",
+      "blob": "5bd4ba145c879c5b91b1812851851454ff8fe358",
+      "sha256": "2835b0db061f00fb25c877a1a72ed81660a33362571d92cdb2138fd63507000a",
+      "bytes": 2992,
+      "mode": "100644",
+      "status": "added"
+    }
+  ]
+}
